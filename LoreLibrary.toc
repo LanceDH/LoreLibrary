@@ -1,0 +1,9 @@
+﻿## Interface: 60200
+## Title: LoreLibrary
+## Notes: shtuff
+## Author: LanceDH
+## Version: 0.1
+## SavedVariablesPerCharacter: LoLib_Lore
+LoreLibrary.xml
+LoreLibrary.lua
+ItemData.lua

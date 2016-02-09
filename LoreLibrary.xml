@@ -1,0 +1,809 @@
+ <Ui xmlns="http://www.blizzard.com/wow/ui/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ../../FrameXML/UI.xsd">
+	
+	<Script file="Libs\LibStub\LibStub.lua"/>
+	<Include file="libs\AceAddon-3.0\AceAddon-3.0.xml"/>
+	<Include file="libs\AceDB-3.0\AceDB-3.0.xml"/>
+	
+	<Frame name="LOLIB_MapPinTemplate" virtual="true">
+		<Size x="16" y="16"/>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture parentKey="tex" file="Interface\MINIMAP\ObjectIcons">
+					<TexCoords left="0.125" right="0.25" top="0.375" bottom="0.5"/>
+				</Texture>
+			</Layer>
+			
+		</Layers>
+		
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+				if (self.lore ~= nil) then
+					GameTooltip:SetText(self.lore.title);
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Frame>
+	
+	<StatusBar name="CollectionsProgressBarTemplate" virtual="true">
+		<Size x="196" y="13"/>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString parentKey="text" inherits="TextStatusBarText" justifyH="CENTER">
+					<Size x="0" y="9" />
+					<Anchors>
+						<Anchor point="CENTER" y="1" />
+					</Anchors>
+				</FontString>
+				<Texture parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorder">
+					<Size x="205" y="29" />
+					<Anchors>
+						<Anchor point="LEFT" x="-5" y="0"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer parentKey="background" level="BACKGROUND">
+				<Texture>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="0" y="-1"/>
+						<Anchor point="BOTTOMRIGHT" x="0" y="1"/>
+					</Anchors>
+					<Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<BarTexture file="Interface\PaperDollInfoFrame\UI-Character-Skills-Bar"/>
+		<BarColor r="0.03125" g="0.85" b="0.0" />
+	</StatusBar>
+	
+	<Frame name="InsetTemplate" inherits="InsetFrameTemplate" virtual="true">
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPLEFT" y="-60" x="4"/>
+			<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-6" y="5"/>
+		</Anchors>
+
+		<Layers>
+			<Layer level="OVERLAY">
+				<Texture parentKey="OverlayShadowTopLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="4" y="-4"/>
+					</Anchors>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowTop" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="17" y="-4"/>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-17" y="-4"/>
+					</Anchors>
+					<TexCoords left="0.9999" right="1" top="0" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowTopRight" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-4" y="-4"/>
+					</Anchors>
+					<TexCoords left="1" right="0" top="0" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="4" y="-17"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="17"/>
+					</Anchors>
+					<TexCoords left="0" right="1" top="0.9999" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowBottomLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="4"/>
+					</Anchors>
+					<TexCoords left="0" right="1" top="1" bottom="0"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowRight" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-4" y="-17"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="17"/>
+					</Anchors>
+					<TexCoords left="1" right="0" top="0.9999" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowBottomRight" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="4"/>
+					</Anchors>
+					<TexCoords left="1" right="0" top="1" bottom="0"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowBottom" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="17" y="4"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-17" y="4"/>
+					</Anchors>
+					<TexCoords left="0.9999" right="1" top="1" bottom="0"/>
+				</Texture>
+			</Layer>
+			
+			<Layer level="ARTWORK" textureSubLevel="1">
+				<Texture parentKey="BGCornerFilagreeBottomLeft" atlas="collections-background-filagree" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" x="4" y="4"/>
+					</Anchors>
+					<TexCoords left="0.0" right="1.0" top="0.0" bottom="1.0"/>
+				</Texture>
+
+				<Texture parentKey="BGCornerFilagreeBottomRight" atlas="collections-background-filagree" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
+					</Anchors>
+					<TexCoords left="1.0" right="0.0" top="0.0" bottom="1.0"/>
+				</Texture>
+			</Layer>
+
+			<Layer level="BORDER" textureSubLevel="2">
+				<Texture parentKey="ShadowCornerTopLeft" atlas="collections-background-shadow-large" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="4" y="-4"/>
+					</Anchors>
+				</Texture>
+
+				<Texture parentKey="ShadowCornerTopRight" atlas="collections-background-shadow-large" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-4" y="-4" />
+					</Anchors>
+					<TexCoords left="1.0" right="0.0" top="0.0" bottom="1.0"/>
+				</Texture>
+
+				<Texture parentKey="ShadowCornerBottomLeft" atlas="collections-background-shadow-large" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="4"/>
+					</Anchors>
+					<TexCoords left="0.0" right="1.0" top="1.0" bottom="0.0"/>
+				</Texture>
+
+				<Texture parentKey="ShadowCornerBottomRight" atlas="collections-background-shadow-large" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="4"/>
+					</Anchors>
+					<TexCoords left="1.0" right="0.0" top="1.0" bottom="0.0"/>
+				</Texture>
+
+				<Texture parentKey="ShadowCornerTop" atlas="collections-background-shadow-large" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="149" y="-4"/>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-149" y="-4"/>
+					</Anchors>
+					<TexCoords left="0.9999" right="1" top="0" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="ShadowCornerLeft" atlas="collections-background-shadow-large" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="4" y="-151"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="151"/>
+					</Anchors>
+					<TexCoords left="0" right="1" top="0.9999" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="ShadowCornerRight" atlas="collections-background-shadow-large" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-4" y="-151"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="151"/>
+					</Anchors>
+					<TexCoords left="1" right="0" top="0.9999" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="ShadowCornerBottom" atlas="collections-background-shadow-large" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="149" y="4"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-149" y="4"/>
+					</Anchors>
+					<TexCoords left="0.9999" right="1" top="1" bottom="0"/>
+				</Texture>
+			</Layer>
+		</Layers>
+	</Frame>
+	
+	<Texture name="!WoodFrameTile-Left" file="Interface\BlackMarket\!WoodFrame-TileVertical" virtual="true" vertTile="true" >
+		<Size x="25" y="256"/>	
+		<TexCoords left="0.01562500" right="0.45312500" top="0.00000000" bottom="1.00000000"/>	
+	</Texture>
+	<Texture name="!WoodFrameTile-Right" file="Interface\BlackMarket\!WoodFrame-TileVertical" virtual="true" vertTile="true" >
+		<Size x="25" y="256"/>	
+		<TexCoords left="0.48437500" right="0.92187500" top="0.00000000" bottom="1.00000000"/>	
+	</Texture>
+	<Texture name="_WoodFrameTile-Top" file="Interface\BlackMarket\_WoodFrame-TileHorizontal" virtual="true" horizTile="true" >
+		<Size x="256" y="25"/>	
+		<TexCoords left="0.00000000" right="1.00000000" top="0.01562500" bottom="0.45312500"/>	
+	</Texture>
+	
+	<Frame name="LOLIB_ShelfTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="697" y="170"/>
+		</Size>
+		<Layers>
+		<!--
+			<Layer level="BACKGROUND">
+			
+				<Texture name="$parentBackground" file="Interface\BlackMarket\BlackMarketBackground-Tile" horizTile="true" vertTile="true">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+				</Texture>
+				
+			</Layer>
+			
+			<Layer level="BORDER">
+			
+				<Texture name="$parentLeftBorder" inherits="!WoodFrameTile-Left">
+					<Anchors>
+						<Anchor point="TOPLEFT" />
+						<Anchor point="BOTTOMLEFT" />
+					</Anchors>
+				</Texture>
+				<Texture name="$parentRightBorder" inherits="!WoodFrameTile-Right">
+					<Anchors>
+						<Anchor point="TOPRIGHT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+				</Texture>
+				
+				<Texture name="$parentBottomBorder" inherits="_WoodFrameTile-Top">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentLeftBorder" relativePoint="BOTTOMRIGHT" x="-7" y="-2"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentRightBorder" relativePoint="BOTTOMLEFT" x="7" y="-2"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			
+			<Layer level="ARTWORK">
+				<Texture name="$parentNrBg" file="Interface\Collections\Collections">
+					<Size x="28" y="15"/>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentBottomBorder" x="15" y="5"/>
+					</Anchors>
+					<TexCoords left="0.36328125" right="0.41796875" top="0.103515625" bottom="0.130859375"/>
+				</Texture>
+				<FontString name="$parentNr" inherits="GameFontNormalSmall" maxLines="1" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="nr" text="0">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentNrBg"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentNrBg"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+			-->
+		</Layers>
+		
+		<Frames>
+					<Button name="$parentB5" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" x="-215" y="25"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentB4" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB5" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB3" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB4" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB2" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB3" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB1" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB2" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+
+					<Button name="$parentB10" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" x="0" y="25"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentB9" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB10" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB8" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB9" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB7" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB8" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB6" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB7" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					
+					<Button name="$parentB15" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" x="215" y="25"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentB14" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB15" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB13" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB14" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB12" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB13" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+					<Button name="$parentB11" inherits="LOLIB_BookTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeTo="$parentB12" relativePoint="TOP" />
+						</Anchors>
+					</Button>
+				</Frames>
+		
+	</Frame>
+	
+	<Button name="LOLIB_BookTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="210" y="30"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentBackground" parentKey="bg">	
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color r="1" g="1" b="1" a="1" />
+				</Texture>
+
+				<Texture name="$parentTexture" file="Interface\AddOns\LoreLibrary\Images\BookTexture" alphaMode="MOD">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<TexCoords left="0" right="0.9140625" top="0" bottom="0.5625"/>	
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTitle" inherits="GameFontNormalSmall" maxLines="2" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="title">
+					<Anchors>
+						<Anchor point="TOP"/>
+						<Anchor point="BOTTOM"/>
+					</Anchors>
+				</FontString>
+				
+				<Texture name="$parentBinderLeft" file="Interface\PLAYERACTIONBARALT\Mechanical" parentKey="binderLeft">
+					<Size x="7"/>
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativeTo="$parentTitle" relativePoint="TOPLEFT" x="-7"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentTitle" relativePoint="BOTTOMLEFT" x="-7"/>
+					</Anchors>
+					<TexCoords left="0.21484375" right="0.265625" top="0.525390625" bottom="0.697265625"/>	
+				</Texture>
+				
+				<Texture name="$parentBinderRight" file="Interface\PLAYERACTIONBARALT\Mechanical" parentKey="binderRight">
+					<Size x="7"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentTitle" relativePoint="TOPRIGHT" x="7"/>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentTitle" relativePoint="BOTTOMRIGHT" x="7"/>
+					</Anchors>
+					<TexCoords left="0.21484375" right="0.265625" top="0.525390625" bottom="0.697265625"/>	
+				</Texture>
+				
+			</Layer>
+			<Layer level="OVERLAY">
+				
+				<Texture name="$parentShadows" file="Interface\AddOns\LoreLibrary\Images\BookShadows" alphaMode="MOD">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<TexCoords left="0" right="0.9140625" top="0" bottom="0.5625"/>	
+				</Texture>
+				
+			</Layer>
+		</Layers>
+		
+		<HighlightTexture atlas="PetList-ButtonHighlight">
+			<Color r="1" g="1" b="1" a="0.75"/>
+		</HighlightTexture>
+	</Button>
+	
+	<Frame name="LoreLibraryCore" inherits="PortraitFrameTemplate" movable="true" toplevel="true" frameStrata="HIGH" enableMouse="true" parent="UIParent" hidden="true">
+		<Size x="703" y="606"/>
+		<Anchors>
+			<Anchor point="CENTER" x="0" y="0"/>
+		</Anchors>
+		
+		
+		
+		<Frames>
+			<Frame name="$parentS3" inherits="LOLIB_ShelfTemplate" parentKey="s3">
+				<Anchors>
+					<Anchor point="BOTTOM" x="0" y="3"/>
+				</Anchors>
+				
+			</Frame>
+			<Frame name="$parentS2" inherits="LOLIB_ShelfTemplate" parentKey="s2">
+				<Anchors>
+					<Anchor point="BOTTOM" relativeTo="$parentS3" relativePoint="TOP" x="0" y="0"/>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentS1" inherits="LOLIB_ShelfTemplate" parentKey="s1">
+				<Anchors>
+					<Anchor point="BOTTOM" relativeTo="$parentS2" relativePoint="TOP" x="0" y="0"/>
+				</Anchors>
+			</Frame>
+
+			<StatusBar parentKey="progressBar" inherits="CollectionsProgressBarTemplate">
+				<Anchors>
+					<Anchor point="TOP" x="0" y="-39"/>
+				</Anchors>
+			</StatusBar>	
+			
+			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
+				<Size x="115" y="20"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-107" y="-35"/>
+				</Anchors>
+			</EditBox>
+			
+			<Frame name="$parentInset" inherits="InsetTemplate" >
+				<Scripts>
+					<OnLoad>
+						LoreLibraryCoreInsetBg:Hide();
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			
+			<Button name="$parentPrevButton" parentKey="prev">
+				<Size>
+					<AbsDimension x="64" y="12"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentInset" relativePoint="TOP" y="-8"/>
+				</Anchors>
+				<NormalTexture file="Interface\COMMON\HelpBox" parentKey="normal">
+					<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>	
+					<Color r="1" g="1" b="1" a="0.5"/>
+				</NormalTexture>
+				<PushedTexture file="Interface\COMMON\HelpBox" >
+					<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
+					<Color r="0.7" g="0.7" b="0.7" a="0.5"/>
+				</PushedTexture>
+				<DisabledTexture file="Interface\COMMON\HelpBox"  parentKey="disabled">
+					<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
+					<Color r="1" g="1" b="1" a="0.5"/>
+				</DisabledTexture>
+				<HighlightTexture file="Interface\COMMON\HelpBox" alphaMode="ADD">
+					<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
+					<Color r="1" g="1" b="1" a="0.5"/>
+				</HighlightTexture>
+				<Scripts>
+					<OnLoad>
+						self.disabled:SetDesaturated(true);
+					</OnLoad>
+				</Scripts>
+				
+			</Button>
+			
+			<Button name="$parentNextButton" parentKey="next">
+				<Size>
+					<AbsDimension x="64" y="12"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOM" relativeTo="$parentInset" relativePoint="BOTTOM" y="8"/>
+				</Anchors>
+				<NormalTexture file="Interface\COMMON\HelpBox" parentKey="normal">
+					<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
+					<Color r="1" g="1" b="1" a="0.5"/>
+				</NormalTexture>
+				<PushedTexture file="Interface\COMMON\HelpBox" >
+					<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
+					<Color r="0.7" g="0.7" b="0.7" a="0.5"/>
+				</PushedTexture>
+				<DisabledTexture file="Interface\COMMON\HelpBox"  parentKey="disabled">
+					<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
+					<Color r="1" g="1" b="1" a="0.5"/>
+				</DisabledTexture>
+				<HighlightTexture file="Interface\COMMON\HelpBox" alphaMode="ADD">
+					<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
+					<Color r="1" g="1" b="1" a="0.5"/>
+				</HighlightTexture>
+				<Scripts>
+					<OnLoad>
+						self.disabled:SetDesaturated(true);
+					</OnLoad>
+				</Scripts>
+				
+			</Button>
+			
+		</Frames>
+		
+		<Layers>
+			
+			<Layer level="BACKGROUND" textureSubLevel="1">
+				<Texture name="$parentTopBeam" inherits="_WoodFrameTile-Top">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentInset" relativePoint="TOPLEFT" x="4" y="-5"/>
+						<Anchor point="TOPRIGHT" relativeTo="$parentInset" relativePoint="TOPRIGHT" x="-4" y="-5"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentUpperBeam" inherits="_WoodFrameTile-Top">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentInset" relativePoint="TOPLEFT" x="4" y="-178"/>
+						<Anchor point="TOPRIGHT" relativeTo="$parentInset" relativePoint="TOPRIGHT" x="-4" y="-178"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentLowerBeam" inherits="_WoodFrameTile-Top">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentInset" relativePoint="BOTTOMLEFT" x="4" y="168"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentInset" relativePoint="BOTTOMRIGHT" x="-4" y="168"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentBottomBeam" inherits="_WoodFrameTile-Top">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentInset" relativePoint="BOTTOMLEFT" x="4" y="-3"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentInset" relativePoint="BOTTOMRIGHT" x="-4" y="-3"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="BACKGROUND" textureSubLevel="2">
+				<Texture name="$parentLeftBeam" inherits="!WoodFrameTile-Left">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentInset" relativePoint="TOPLEFT" x="4" />
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentInset" relativePoint="BOTTOMLEFT" x="4"/>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentRightBeam" inherits="!WoodFrameTile-Right">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativeTo="$parentInset" relativePoint="TOPRIGHT" x="-4"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentInset" relativePoint="BOTTOMRIGHT" x="-4"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			
+		</Layers>
+		
+		<Scripts>
+			<OnLoad>
+				self:SetClampedToScreen(true);
+				self.TitleText:SetText("Lore Library");
+				self:RegisterForDrag("LeftButton");
+				self:SetScript("OnDragStart", self.StartMoving );
+				self:SetScript("OnDragStop", self.StopMovingOrSizing);
+				SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="LoreLibraryOverlay" toplevel="true" frameStrata="HIGH" parent="LoreLibraryCore" enableMouse="true" hidden="true">
+		<Anchors>
+			<Anchor point="TOPLEFT" relativeTo="$parentBg"/>
+			<Anchor point="BOTTOMRIGHT" relativeTo="$parentBg"/>
+		</Anchors>
+		<Layers>
+		<Layer level="BACKGROUND">
+			<Texture name="$parentBg">
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+					<Anchor point="BOTTOMRIGHT"/>
+				</Anchors>
+				<Color r="0" g="0" b="0" a="0.6"/>
+			</Texture>
+			
+			</Layer>
+			<Layer level="OVERLAY" textureSubLevel="-1">
+				<Texture name="$parentPortrait" parentKey="portrait">
+					<Size x="60" y="60"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="-8" y="28" />
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<Texture name="$parentPortraitFrame" inherits="UI-Frame-Portrait">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="-16" y="32"/>
+					</Anchors>
+				</Texture>
+		</Layer>
+
+		</Layers>
+		
+		<Scripts>
+			<OnLoad>
+				SetPortraitToTexture(LoreLibraryOverlayPortrait, "Interface\\ICONS\\INV_Misc_Book_07");
+			</OnLoad>
+			<OnShow>
+				LoreLibraryCorePortraitFrame:Hide();
+			</OnShow>
+			<OnHide>
+				LoreLibraryCorePortraitFrame:Show();
+			</OnHide>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="LoreLibraryBook" toplevel="true" frameStrata="HIGH" parent="LoreLibraryOverlay" enableMouse="true"  hidden="false">
+				<Size x="540" y="520"/>
+				<Anchors>
+					<Anchor point="CENTER" x="0" y="0"/>
+				</Anchors>
+				<Backdrop edgeFile="Interface\TUTORIALFRAME\TUTORIALFRAMEBORDER" tile="true">
+					<EdgeSize>
+						<AbsValue val="32"/>
+					</EdgeSize>
+				</Backdrop>
+				
+				
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTitleBg" file="Interface\FrameGeneral\UI-Background-Rock" virtual="true" horizTile="true" >
+							<Size y="17"/>	
+							<Anchors>
+								<Anchor point="TOPLEFT" x="2" y="-3"/>
+								<Anchor point="TOPRIGHT" x="-25" y="-3"/>
+							</Anchors>
+							<TexCoords left="0.00000000" right="1.00000000" top="0.28906250" bottom="0.42187500"/>	
+						</Texture>
+						<Texture name="$parentBg1" file="Interface\SPELLBOOK\Spellbook-Page-1">	
+							<Size x="512" y="512"/>
+							<Anchors>
+								<Anchor point="TOPLEFT" x="6" y="-22" />
+							</Anchors>
+						</Texture>
+						<Texture name="$parentBg2" file="Interface\SPELLBOOK\Spellbook-Page-2">	
+							<Size x="32" y="512"/>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="$parentBg1" relativePoint="TOPRIGHT" />
+							</Anchors>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<FontString name="$parentTitleText" inherits="GameFontNormal" text="" parentKey="TitleText">
+							<Anchors>
+								<Anchor point="TOP" x="0" y="-4"/>
+								<Anchor point="LEFT" x="60"/>
+								<Anchor point="RIGHT" x="-60"/>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				
+				<Frames>
+					<SimpleHTML name="$parentPageText" parentKey="pageText">
+						<Size x="280" y="404"/>
+						<Anchors>
+							<Anchor point="CENTER" x="25" y="-15"/>
+						</Anchors>
+						<FontString inherits="QuestFont"/>
+					</SimpleHTML>
+				
+					<Button name="$parentCloseButton" inherits="UIPanelCloseButton" parentKey="CloseButton">
+						<Size x="37" y="37"/>
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+								<Offset x="6" y="7"/>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								LoreLibraryOverlay:Hide();
+							</OnClick>
+						</Scripts>
+					</Button>
+					
+					<Frame name="$parentNavigationFrame" parentKey="navigation">
+				<Size>
+					<AbsDimension x="100" y="50"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+						<Offset>
+							<AbsDimension x="-20" y="12"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="GameFontBlack" justifyH="RIGHT" parentKey="text">
+							<Size>
+								<AbsDimension x="102" y="0"/>
+							</Size>
+							<Anchors>
+								<Anchor point="BOTTOMRIGHT">
+									<Offset>
+										<AbsDimension x="-79" y="12"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Color r="0.25" g="0.12" b="0"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentPrevPageButton" parentKey="prev">
+						<Size>
+							<AbsDimension x="32" y="32"/>
+						</Size>
+						<Anchors>
+							<Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+								<Offset>
+									<AbsDimension x="-35" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up" parentKey="normal"/>
+						<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
+						<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Disabled"  parentKey="disabled"/>
+						<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+					</Button>
+					<Button name="$parentNextPageButton" parentKey="next">
+						<Size>
+							<AbsDimension x="32" y="32"/>
+						</Size>
+						<Anchors>
+							<Anchor point="BOTTOMRIGHT">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up" parentKey="normal"/>
+						<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+						<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled" parentKey="disabled"/>
+						<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+					</Button>
+				</Frames>
+			</Frame>
+				</Frames>
+				
+			</Frame>
+	<Frame name="LoreLibraryMap" toplevel="false" parent="WorldMapDetailFrame" enableMouse="false" hidden="false">
+		<Anchors>
+			<Anchor point="TOPLEFT"/>
+			<Anchor point="BOTTOMRIGHT"/>
+		</Anchors>
+		<Frames>
+			<StatusBar parentKey="progressBar" inherits="CollectionsProgressBarTemplate" >
+				<Size x="100" y="13"/>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" x="10" y="10"/>
+				</Anchors>
+				<Frames>
+					<Button parentKey="button">
+						<Anchors>
+							<Anchor point="TOPLEFT"/>
+							<Anchor point="BOTTOMRIGHT"/>
+						</Anchors>
+					</Button>
+				</Frames>
+			</StatusBar>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self.progressBar.border:SetWidth(109);
+			</OnLoad>
+		</Scripts>
+	</Frame>
+ </Ui>
