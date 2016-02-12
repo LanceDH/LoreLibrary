@@ -16,21 +16,41 @@ local defaults = {
 }
 
 local _data = {}
-
+local unlockedLoreTitles = {};
 local stuff = {};
 
 local LoreList = {};
 local BinderTextures = {"Mechanical", "ALLIANCE", "Amber", "FANCY", "HORDE", "NATURAL", "WOOD", "Darkmoon"};
+local _playerName = GetUnitName("player", false);
+local _playerClass = UnitClass("player");
+local _playerSex = UnitSex("player");
 
 local BookColors = {
-	["DARKBLUE"] = {["r"] = 0.15, ["g"] = 0.15, ["b"] = 0.5}
-	,["GREEN"] = {["r"] = 0.15, ["g"] = 0.5, ["b"] = 0.15}
-	,["RED"] = {["r"] = 0.5, ["g"] = 0.15, ["b"] = 0.15}
-	,["BLACK"] = {["r"] = 0.15, ["g"] = 0.15, ["b"] = 0.15}
-	,["LOCKED"] = {["r"] = 0.35, ["g"] = 0.35, ["b"] = 0.35}
+		{["name"] = "LOCKED", ["r"] = 0.35, ["g"] = 0.35, ["b"] = 0.35},
+		{["name"] = "DARKBLUE", ["r"] = 0.15, ["g"] = 0.15, ["b"] = 0.5},
+		{["name"] = "GREEN", ["r"] = 0.15, ["g"] = 0.5, ["b"] = 0.15},
+		{["name"] = "RED", ["r"] = 0.5, ["g"] = 0.15, ["b"] = 0.15},
+		{["name"] = "BLACK", ["r"] = 0.15, ["g"] = 0.15, ["b"] = 0.15},
+		{["name"] = "BROWN", ["r"] = 0.36, ["g"] = 0.25, ["b"] = 0.2},
+		
+	}
+	
+local AchievementsToCheck = {
+		1244 -- Well Read
+		,6716 -- Between a Saurok and a Hard Place
+		,6754 -- The Dark Heart of the Mogu
+		,6846 -- Fish Tales
+		,6850 -- Hozen in the Mist
+		,6847 -- The Song of the Yaungol
+		,6855 -- The Seven Burdens of Shaohao
+		,6857 -- Heart of the Mantid Swarm
+		,6856 -- Ballad of Liu Lang
+		,7230 -- Legend of the Brewfathers
+		,7230 -- Legend of the Brewfathers
 	}
 
 local FORMAT_LORE_UNLOCK = "LoreLibrary added: %s";
+local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
 local SIZE_BOOKWIDTH = 210;
 local SIZE_TITLEWIDTH_MAX = 150;
@@ -38,6 +58,11 @@ local SIZE_TITLEWIDTH_MIN = 75;
 local SIZE_BOOKHEIGHT = 29;
 local MAX_SHELVES = 3;
 local MAX_BOOKS_PER_SHELF = 15;
+local MAX_SOURCES = 8;
+local SOURCETYPE_OBJECT = "Object found in this area.";
+local SOURCETYPE_NPC = "Can drop from this npc.";
+local SOURCETYPE_CONTAINER = "Can be found in this container.";
+local SOURCETYPE_STEALTH = "Can pickpocket from this npc.";
 
 local function SortLore(list) 
 	if list == nil then list = LoreList; end
@@ -50,6 +75,8 @@ local function SortLore(list)
 end
 
 function _addon:UpdateMapProgressBar(currentProgress, maxProgress)
+	local level = GetCurrentMapDungeonLevel();
+
 	if maxProgress == 0 then
 		LoreLibraryMap.progressBar:Hide();
 		return;
@@ -67,7 +94,6 @@ end
 function _addon:ShowLoreMapPins(list)
 	local width = WorldMapDetailFrame:GetWidth();
 	local height = WorldMapDetailFrame:GetHeight();
-	
 	local pin = nil;
 	for k, lore in ipairs(list) do
 		pin = LoreLibraryMap.pins[k];
@@ -89,23 +115,31 @@ function _addon:LorePiecesInMap(area)
 
 	if (area == nil or not LoreLibraryMap.pinsEnabled) then return; end
 
-	local all = {};
+	local level = GetCurrentMapDungeonLevel();
+	local levelLore = {};
+	local countAll = 0;
+	local countLocked = 0;
 	local new = {};
 	for k, lore in pairs(_data) do
 		for kl, loc in ipairs(lore.locations) do
-			if string.lower(loc.area) == string.lower(area) then
+			if loc.npc == nil and string.lower(loc.area) == string.lower(area)  then
+				-- If it's the same area, this location becomes the lore's point of interest
 				lore.poi = loc;
-				table.insert(all, lore);
+				countAll = countAll + 1;
 				if not lore.unlocked then
-					table.insert(new, lore);
+					-- Same area and lore is still locked
+					countLocked = countLocked + 1;
+					if tonumber(loc.level) == level then
+						-- Same area, still locked, and on the current map level? Show this one!
+						table.insert(levelLore, lore);
+					end
 				end
 			end
 		end
 	end
-	self:ShowLoreMapPins(new);
-	
-	_addon:UpdateMapProgressBar(#all - #new, #all);
-	--print("There are " .. #all .. " (" .. #new ..") lore pieces in " .. area);
+	self:ShowLoreMapPins(levelLore);
+
+	_addon:UpdateMapProgressBar(countAll - countLocked, countAll);
 end
 
 function _addon:GetNumUnlockedLore()
@@ -183,15 +217,40 @@ function _addon:ChangeCoreShelf(direction)
 	self:UpdateShelfNavigation();
 end
 
+function _addon:FilterPageText(text)
+
+	-- < and >
+	text = text:gsub("&lt;", "<");
+	text = text:gsub("&gt;", ">");
+	
+	-- player name
+	text = text:gsub("<name>", _playerName);
+	
+	-- player class
+	text = text:gsub("<class>", _playerClass);
+	
+	-- sex
+	text = text:gsub("<his/her>", (_playerSex == 3 and "her" or "his"));
+	text = text:gsub("<him/her>", (_playerSex == 3 and "her" or "him"));
+	
+	text = text .. "\n\n";
+	
+	return text;
+end
+
 function _addon:ChangeBookPage(direction)
+	
 	local lastPage = LoreLibraryBook.currentPage;
 	local lore = LoreLibraryBook.currentLore;
+	-- prevent page changing for locked lore
+	if not lore.unlocked then return; end 
+	
 	LoreLibraryBook.currentPage = LoreLibraryBook.currentPage + direction;
 	LoreLibraryBook.currentPage = LoreLibraryBook.currentPage < 1 and 1 or LoreLibraryBook.currentPage;
 	LoreLibraryBook.currentPage = LoreLibraryBook.currentPage > #lore.pages and #lore.pages or LoreLibraryBook.currentPage;
 	
 	if LoreLibraryBook.currentPage ~= lastPage then
-		LoreLibraryBook.pageText:SetText(lore.pages[LoreLibraryBook.currentPage].."\n\n");
+		LoreLibraryBook.pageText:SetText(self:FilterPageText(lore.pages[LoreLibraryBook.currentPage]));
 	end
 	
 	self:UpdateBookNavigation();
@@ -204,27 +263,72 @@ function _addon:OpenBook(lore)
 	LoreLibraryBook.currentPage = 1;
 	LoreLibraryBook.TitleText:SetText(lore.title);
 	
+	for i = 1, MAX_SOURCES do
+	    local button = LoreLibraryBook.sources["s"..i];
+		button:Hide();
+	end	
+	
 	if (lore.unlocked) then
-		LoreLibraryBook.pageText:SetText(lore.pages[1].."\n\n");
+		LoreLibraryBook.pageText:SetText(self:FilterPageText(lore.pages[1]));
 	else
-		local locationString = "<HTML><BODY><BR/><H1 align=\"center\">UNLOCK LORE AT</H1><BR/>";
+		local locationString = "<HTML><BODY><BR/><P align=\"center\">This lore can be found in:</P><BR/></BODY></HTML>";
 		for k, location in ipairs(lore.locations) do
-			locationString = locationString .. " <P>".. location.area .. " (".. location.x .. "," .. location.y .. ")</P>";
+			local button = LoreLibraryBook.sources["s"..k];
+			button:Show();
+			local texture = "Interface/AddOns/LoreLibrary/Images/icon_Object";
+			local text = location.area;
+			local sourceType = SOURCETYPE_OBJECT;
+			
+			if location.npc then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_NPC";
+				text = string.format(FORMAT_SOURCE, location.npc, location.area);
+				sourceType = SOURCETYPE_NPC;
+			elseif location.container then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Container";
+			    text = location.container;
+			    sourceType = SOURCETYPE_CONTAINER;
+			elseif location.pickpocket then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Stealth";
+			    text = string.format(FORMAT_SOURCE, location.pickpocket, location.area);
+			    sourceType = SOURCETYPE_STEALTH;
+			end
+			
+			button.icon:SetNormalTexture(texture);
+			button.icon.sourceType = sourceType;
+			button.text:SetText(text);
+		--[[
+			if location.npc then
+				locationString = locationString .. "<IMG src=\"Interface/AddOns/LoreLibrary/Images/icon_NPC\" />"
+				--locationString = locationString .. "<P align=\"left\">".. string.format(FORMAT_SOURCE, location.npc, location.area) .. "</P>"
+				locationString = locationString .. "<P align=\"left\">|TInterface/AddOns/LoreLibrary/Images/icon_NPC:1:40|t".. string.format(FORMAT_SOURCE, location.npc, location.area) .. "</P><BR/>";
+			elseif location.container then
+				locationString = locationString .. "<IMG src=\"Interface/AddOns/LoreLibrary/Images/icon_Container\" />"
+				locationString = locationString .. "<P align=\"right\">".. string.format(FORMAT_SOURCE, "", location.container) .. "</P><BR/>";
+			elseif location.pickpocket then
+				locationString = locationString .. "<IMG src=\"Interface/AddOns/LoreLibrary/Images/icon_Stealth\" />"
+				locationString = locationString .. "<P align=\"right\">".. string.format(FORMAT_SOURCE, location.area, location.pickpocket) .. "</P><BR/>";
+			else
+				locationString = locationString .. "<IMG src=\"Interface/AddOns/LoreLibrary/Images/icon_Object\" />"
+				locationString = locationString .. "<P align=\"right\">".. string.format(FORMAT_SOURCE, "", location.area) .. "</P><BR/>";
+			end
+			]]--
 		end
-		-- deleteme
-		locationString = locationString .. "<BR/><P>Cat for testing</P><IMG src=\"Interface/Pictures/Winterspring_Memento_256\" align=\"center\" /><BR/>";
-		locationString = locationString .. "</BODY></HTML>";
+	
 		LoreLibraryBook.pageText:SetText(locationString);
 	end
 	
 	self:UpdateBookNavigation();
 end
 
-function _addon:UnlockNewLore(title)
+function _addon:UnlockNewLore(title, silent)
 	print(FORMAT_LORE_UNLOCK:format(title));
-	_data["" .. title].unlocked = true;
+	
+	_data[title].unlocked = true;
+	unlockedLoreTitles[title] = true;
 	SortLore();
-	self:DisplayBooks()
+	if not silent then
+		self:DisplayBooks()
+	end
 end
 
 function _addon:GetFilteredList()
@@ -246,10 +350,25 @@ function _addon:GetFilteredList()
 	return list;
 end
 
+function _addon:BookLooksFromTitle(data)
+	local byteTitle = 0;
+	-- at most 20 chars to keep 'part x' the same
+	local length = data.title:len() > 20 and 20 or data.title:len();
+
+	for i = 1, length do
+		byteTitle = byteTitle + string.byte(data.title, i);
+	end
+	
+	local perc = byteTitle % 21;
+	
+	return (100-perc)/100, (100-(perc/2))/100, BookColors[2 + (byteTitle%(#BookColors-1))];
+	
+end
+
 function _addon:DisplayBooks()
-	--LoreLibraryCore.s1.nr:SetText(LoreLibraryCore.currentPage);
-	--LoreLibraryCore.s2.nr:SetText(LoreLibraryCore.currentPage+1);
-	--LoreLibraryCore.s3.nr:SetText(LoreLibraryCore.currentPage+2);
+	LoreLibraryCore.s1.nr:SetText(LoreLibraryCore.currentPage);
+	LoreLibraryCore.s2.nr:SetText(LoreLibraryCore.currentPage+1);
+	LoreLibraryCore.s3.nr:SetText(LoreLibraryCore.currentPage+2);
 	
 	self:UpdateProgressBar();
 
@@ -263,11 +382,17 @@ function _addon:DisplayBooks()
 	local color = nil;
 	local totalBooks = MAX_SHELVES * MAX_BOOKS_PER_SHELF;
 	local start = (LoreLibraryCore.currentPage-1) * MAX_BOOKS_PER_SHELF + 1;
-	local bookData = nil
+	local bookData = nil;
+	local prec = nil;
+	local fixedLastStack = false;
 	
 	for i = start, start + totalBooks-1 do
 		bookData = list[i];
 		if bookData == nil then break; end
+		--if totalBooks - i < 5 and #list - totalBooks > 0 and not fixedLastStack then
+		--	print(totalBooks - i);
+		--end
+		
 		s = math.ceil(count / MAX_BOOKS_PER_SHELF);
 		b = count % MAX_BOOKS_PER_SHELF;
 		b = (b == 0 and 15 or b);
@@ -278,8 +403,13 @@ function _addon:DisplayBooks()
 		book.title:SetWidth(0);
 		book.title:SetText(bookData.title);
 		
+		hperc, wperc, color = _addon:BookLooksFromTitle(bookData);
+		
+		book:SetWidth(SIZE_BOOKWIDTH * wperc);
+		book:SetHeight(SIZE_BOOKHEIGHT * hperc);
 		if (book.title:GetWidth() > SIZE_TITLEWIDTH_MAX) then
 			book.title:SetWidth(SIZE_TITLEWIDTH_MAX);
+			book:SetHeight(SIZE_BOOKHEIGHT);
 		elseif (book.title:GetWidth() < SIZE_TITLEWIDTH_MIN) then
 			book.title:SetWidth(SIZE_TITLEWIDTH_MIN);
 		end
@@ -291,13 +421,8 @@ function _addon:DisplayBooks()
 		book.binderLeft:SetDesaturated(not bookData.unlocked);
 		book.binderRight:SetDesaturated(not bookData.unlocked);
 		
-		color = BookColors["LOCKED"];
-		if (bookData.unlocked) then
-			color = BookColors[bookData.visual.color];
-			if color == nil then
-				color = BookColors["DARKBLUE"];
-			end
-		end
+		-- not unlocked? use grey
+		color = bookData.unlocked == true and color or BookColors[1];
 		book.bg:SetVertexColor(color.r, color.g, color.b);
 		
 		count = count + 1;
@@ -311,16 +436,17 @@ function _addon:HideAllBooks()
 		for b = 1, 15 do
 			book = LoreLibraryCore.books[s][b];
 			book:Hide();
+			book:SetHeight(0.1);
 		end
 	end
 end
 
-function _addon:CheckWellRead()
-	local _, _, _, overallCompleted = GetAchievementInfo(1244);
-	for i=2, GetAchievementNumCriteria(1244) do 
-		local description, _, completed = GetAchievementCriteriaInfo(1244, i);
+function _addon:CheckWellRead(id)
+	local _, _, _, overallCompleted = GetAchievementInfo(id);
+	for i=2, GetAchievementNumCriteria(id) do 
+		local description, _, completed = GetAchievementCriteriaInfo(id, i);
 		if overallCompleted or completed then
-			self:UnlockNewLore(description);
+			self:UnlockNewLore(description, true);
 		end
 	end
 end
@@ -425,6 +551,15 @@ end
 
 function LoreLibrary:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("LoLibDB", defaults, true);
+	
+	
+	--
+	--
+end
+
+function LoreLibrary:OnEnable()
+	LoreLibrary.db.global.unlockedLore = unlockedLoreTitles;
+	--_addon:AddUnlockedToDB();
 end
 
 _addon.events = CreateFrame("FRAME", "LoLib_EventFrame"); 
@@ -433,6 +568,7 @@ _addon.events:RegisterEvent("ITEM_TEXT_READY");
 _addon.events:RegisterEvent("ADDON_LOADED");
 _addon.events:RegisterEvent("PLAYER_LOGOUT");
 _addon.events:RegisterEvent("WORLD_MAP_UPDATE");
+_addon.events:RegisterEvent("PLAYER_LOGIN");
 _addon.events:SetScript("OnEvent", function(self, event, ...) self[event](self, ...) end)
 
 function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
@@ -464,11 +600,19 @@ local function IsInUnlockSave(list, title)
 	return false;
 end
 
+function _addon:AddUnlockedToDB()
+	for k, lore in pairs(LoreList) do
+		if lore.unlocked then
+			unlockedLoreTitles[lore.title] = true;
+		end
+	end
+end
+
 function _addon.events:ADDON_LOADED(loaded_addon)
 	if (loaded_addon ~= _addonName) then return; end
 	_data = _addon.data;
 	
-	
+	--[[
 	if(LoLib_Lore) then
 		for k, v in pairs(LoLib_Lore.unlocked) do
 			print(v);
@@ -480,62 +624,50 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 			table.insert(LoreList, v);
 		end
 	end
-	--[[
-	for k, v in LoreLibrary.db.global.unlockedLore
-	
-	for k, player in pairs(PlayerRep.db.global.playersMet) do
-		if (player.score == nil) then
-			player.score = 0;
-		end
-		if player.score ~= 0 or currentTime - player.latestStamp < _options.saveTime or (player.note ~= "" and player.note ~= nil) then
-			table.insert(_benefitionalPlayers, player);
-		else
-			
-		end
-		_allSavedPlayers[""..player.name] = player;
-	end
-	PlayerRep.db.global.playersMet = _allSavedPlayers;
-	
-	_options.formatDate = PlayerRep.db.global.options.formatDate;
-	_options.formatTime = PlayerRep.db.global.options.formatTime;
-	_options.showPopup = PlayerRep.db.global.options.showPopup;
-	_options.popupSound = PlayerRep.db.global.options.popupSound;
-	_options.saveTime = PlayerRep.db.global.options.saveTime;
-	_options.version = PlayerRep.db.global.options.version;
-	_options.storageLimit = PlayerRep.db.global.options.storageLimit;
-	PlayerRep.db.global.options = _options;
-
-	PREP_Options.format.date:SetChecked(_options.formatDate);
-	PREP_Options.format.time:SetChecked(_options.formatTime);
-	PREP_Options.showPopup:SetChecked(_options.showPopup);
-	PREP_Options.popupSound:SetChecked(_options.popupSound);
-	PREP_Options.saveTime:SetText(_options.saveTime);
-	PREP_Options.saveTimeText:SetText(FormatSeconds(_options.saveTime)); 
-	PREP_Options.storageLimit:SetText(_options.storageLimit);
 	]]--
+
+	for k, v in pairs(_data) do
+		v.title = k;
+		v.unlocked = false; --IsInUnlockSave(, k);
+		table.insert(LoreList, v);
+	end
+
 	SortLore();
 	_addon:InitCoreFrame();
 	_addon:InitLoreBook();
 	_addon:InitBooks();
 	_addon:InitMap();
-	_addon:CheckWellRead();
 	_addon:DisplayBooks();
 	
+	for k, id in ipairs(AchievementsToCheck) do
+		_addon:CheckWellRead(id);
+	end
+	for k, v in pairs(LoreLibrary.db.global.unlockedLore) do
+		_addon:UnlockNewLore(k);
+	end
+	
 	self:UnregisterEvent("ADDON_LOADED");
+end
+
+function _addon.events:PLAYER_LOGIN(loaded_addon)
+	if (loaded_addon ~= _addonName) then return; end
+	
+	
+	self:UnregisterEvent("PLAYER_LOGIN");
 end
 
 function _addon.events:PLAYER_LOGOUT(loaded_addon)
 	--for k, v in pairs(stuff) do 
 	--	LoLib_books[k] = v;
 	--end
-	LoLib_Lore = {};
-	LoLib_Lore.unlocked = {};
-	for k, v in pairs(LoreList) do
-		if v.unlocked then
-			table.insert(LoLib_Lore.unlocked, v.title);
-		end
-	end
-	LoLib_Lore.gotIt = stuff;
+	--LoLib_Lore = {};
+	--LoLib_Lore.unlocked = {};
+	--for k, v in pairs(LoreList) do
+	--	if v.unlocked then
+	--		table.insert(LoLib_Lore.unlocked, v.title);
+	--	end
+	--end
+	--LoLib_Lore.gotIt = stuff;
 end
 
 
@@ -554,13 +686,13 @@ local function slashcmd(msg, editbox)
 			end
 		end
 	elseif msg == 'list' then
+		for i = 1, 64 do
 		
-		for k, v in pairs(_data)do
-			print(k .. ": " .. #v.pages .." pages");
+			print(i%5 .. " - " .. (i*i)%8);
 		end
 		
 	elseif msg == 'info' then
-		_addon:LorePiecesInMap(GetMapNameByID(GetCurrentMapAreaID()));
+		_addon:CheckWellRead();
 	
 	elseif msg == 'o' then
 		print(ItemTextGetText());

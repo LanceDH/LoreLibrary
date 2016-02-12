@@ -4,6 +4,7 @@
 ## Author: LanceDH
 ## Version: 0.1
 ## SavedVariablesPerCharacter: LoLib_Lore
+## SavedVariables: LoLibDB
 LoreLibrary.xml
 LoreLibrary.lua
 ItemData.lua

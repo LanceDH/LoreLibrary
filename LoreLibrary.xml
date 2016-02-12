@@ -30,7 +30,52 @@
 		</Scripts>
 	</Frame>
 	
-	<StatusBar name="CollectionsProgressBarTemplate" virtual="true">
+	<StatusBar name="LOLIB_CoreStatusTemplate" inherits="LOLIB_ProgressBarTemplate" virtual="true">
+		<Anchors>
+			<Anchor point="TOP" x="0" y="-39"/>
+		</Anchors>
+		<Layers>
+			<Layer level="OVERLAY">
+				<Texture parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorder">
+					<Size x="205" y="29" />
+					<Anchors>
+						<Anchor point="LEFT" x="-5" y="0"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+	</StatusBar>
+	
+	<StatusBar name="LOLIB_MapStatusTemplate" inherits="LOLIB_ProgressBarTemplate" virtual="true">
+		<Size x="100" y="13"/>
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" x="10" y="10"/>
+		</Anchors>
+				
+		<Layers>
+			<Layer level="OVERLAY">
+				<Texture parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorder">
+					<Size x="104" y="29" />
+					<Anchors>
+						<Anchor point="LEFT" x="-3" y="0"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button parentKey="button">
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+					<Anchor point="BOTTOMRIGHT"/>
+				</Anchors>
+				<HighlightTexture atlas="PetList-ButtonHighlight">
+					<Color r="1" g="1" b="1" a="1"/>
+				</HighlightTexture>
+			</Button>
+		</Frames>
+	</StatusBar>
+	
+	<StatusBar name="LOLIB_ProgressBarTemplate" virtual="true">
 		<Size x="196" y="13"/>
 		<Layers>
 			<Layer level="OVERLAY">
@@ -40,12 +85,6 @@
 						<Anchor point="CENTER" y="1" />
 					</Anchors>
 				</FontString>
-				<Texture parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorder">
-					<Size x="205" y="29" />
-					<Anchors>
-						<Anchor point="LEFT" x="-5" y="0"/>
-					</Anchors>
-				</Texture>
 			</Layer>
 			<Layer parentKey="background" level="BACKGROUND">
 				<Texture>
@@ -60,6 +99,89 @@
 		<BarTexture file="Interface\PaperDollInfoFrame\UI-Character-Skills-Bar"/>
 		<BarColor r="0.03125" g="0.85" b="0.0" />
 	</StatusBar>
+	
+	<Frame name="LOLIB_SourceTemplate" virtual="true">
+		<Size y="40"/>
+		<Anchors>
+			<Anchor point="LEFT"/>
+			<Anchor point="RIGHT"/>
+		</Anchors>
+		<Frames>
+			<Button parentKey="icon">
+				<Size x="32" y="32"/>
+				<Anchors>
+					<Anchor point="LEFT" x="4"/>
+				</Anchors>
+				<NormalTexture file="Interface\AddOns\LoreLibrary\Images\icon_Container" />
+				<Scripts>
+					<OnEnter>
+						if (self.sourceType ~= nil) then
+							GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+							GameTooltip:SetText(self.sourceType);
+						end
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+		</Frames>
+		
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString inherits="QuestFont" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="text" text="This is where text goes">
+					<Anchors>
+						<Anchor point="LEFT" relativeKey="$parent.icon" relativePoint="RIGHT" x="7"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+	
+	<Frame name="LOLIB_SourceContainerTemplate" virtual="true">
+		<Frames>
+			<Frame parentKey="s1" inherits="LOLIB_SourceTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOP"/>
+				</Anchors>
+			</Frame>
+			<Frame parentKey="s2" inherits="LOLIB_SourceTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.s1" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Frame>
+			<Frame parentKey="s3" inherits="LOLIB_SourceTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.s2" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Frame>
+			<Frame parentKey="s4" inherits="LOLIB_SourceTemplate" id="4">
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.s3" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Frame>
+			<Frame parentKey="s5" inherits="LOLIB_SourceTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.s4" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Frame>
+			<Frame parentKey="s6" inherits="LOLIB_SourceTemplate" id="6">
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.s5" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Frame>
+			<Frame parentKey="s7" inherits="LOLIB_SourceTemplate" id="7">
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.s6" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Frame>
+			<Frame parentKey="s8" inherits="LOLIB_SourceTemplate" id="8">
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.s7" relativePoint="BOTTOM"/>
+				</Anchors>
+			</Frame>
+		</Frames>
+	</Frame>
 	
 	<Frame name="InsetTemplate" inherits="InsetFrameTemplate" virtual="true">
 		<Anchors>
@@ -126,22 +248,6 @@
 						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-17" y="4"/>
 					</Anchors>
 					<TexCoords left="0.9999" right="1" top="1" bottom="0"/>
-				</Texture>
-			</Layer>
-			
-			<Layer level="ARTWORK" textureSubLevel="1">
-				<Texture parentKey="BGCornerFilagreeBottomLeft" atlas="collections-background-filagree" useAtlasSize="true">
-					<Anchors>
-						<Anchor point="BOTTOMLEFT" x="4" y="4"/>
-					</Anchors>
-					<TexCoords left="0.0" right="1.0" top="0.0" bottom="1.0"/>
-				</Texture>
-
-				<Texture parentKey="BGCornerFilagreeBottomRight" atlas="collections-background-filagree" useAtlasSize="true">
-					<Anchors>
-						<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
-					</Anchors>
-					<TexCoords left="1.0" right="0.0" top="0.0" bottom="1.0"/>
 				</Texture>
 			</Layer>
 
@@ -226,46 +332,11 @@
 			<AbsDimension x="697" y="170"/>
 		</Size>
 		<Layers>
-		<!--
-			<Layer level="BACKGROUND">
-			
-				<Texture name="$parentBackground" file="Interface\BlackMarket\BlackMarketBackground-Tile" horizTile="true" vertTile="true">
-					<Anchors>
-						<Anchor point="TOPLEFT"/>
-						<Anchor point="BOTTOMRIGHT"/>
-					</Anchors>
-				</Texture>
-				
-			</Layer>
-			
-			<Layer level="BORDER">
-			
-				<Texture name="$parentLeftBorder" inherits="!WoodFrameTile-Left">
-					<Anchors>
-						<Anchor point="TOPLEFT" />
-						<Anchor point="BOTTOMLEFT" />
-					</Anchors>
-				</Texture>
-				<Texture name="$parentRightBorder" inherits="!WoodFrameTile-Right">
-					<Anchors>
-						<Anchor point="TOPRIGHT"/>
-						<Anchor point="BOTTOMRIGHT"/>
-					</Anchors>
-				</Texture>
-				
-				<Texture name="$parentBottomBorder" inherits="_WoodFrameTile-Top">
-					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativeTo="$parentLeftBorder" relativePoint="BOTTOMRIGHT" x="-7" y="-2"/>
-						<Anchor point="BOTTOMRIGHT" relativeTo="$parentRightBorder" relativePoint="BOTTOMLEFT" x="7" y="-2"/>
-					</Anchors>
-				</Texture>
-			</Layer>
-			
 			<Layer level="ARTWORK">
 				<Texture name="$parentNrBg" file="Interface\Collections\Collections">
 					<Size x="28" y="15"/>
 					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativeTo="$parentBottomBorder" x="15" y="5"/>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parent" x="35" y="7"/>
 					</Anchors>
 					<TexCoords left="0.36328125" right="0.41796875" top="0.103515625" bottom="0.130859375"/>
 				</Texture>
@@ -276,7 +347,7 @@
 					</Anchors>
 				</FontString>
 			</Layer>
-			-->
+			
 		</Layers>
 		
 		<Frames>
@@ -454,11 +525,7 @@
 				</Anchors>
 			</Frame>
 
-			<StatusBar parentKey="progressBar" inherits="CollectionsProgressBarTemplate">
-				<Anchors>
-					<Anchor point="TOP" x="0" y="-39"/>
-				</Anchors>
-			</StatusBar>	
+			<StatusBar parentKey="progressBar" inherits="LOLIB_CoreStatusTemplate" />
 			
 			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
 				<Size x="115" y="20"/>
@@ -542,6 +609,16 @@
 		<Layers>
 			
 			<Layer level="BACKGROUND" textureSubLevel="1">
+				<!-- atlas="collections-background-tile" useAtlasSize="true" -->
+				<Texture  file="Interface\BlackMarket\BlackMarketBackground-Tile" vertTile="true" horizTile="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" y="-60" x="4"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-6" y="5"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			
+			<Layer level="BACKGROUND" textureSubLevel="2">
 				<Texture name="$parentTopBeam" inherits="_WoodFrameTile-Top">
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parentInset" relativePoint="TOPLEFT" x="4" y="-5"/>
@@ -698,6 +775,13 @@
 						<FontString inherits="QuestFont"/>
 					</SimpleHTML>
 				
+					<Frame parentKey="sources" inherits="LOLIB_SourceContainerTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentPageText" relativePoint="TOPLEFT" y="-45"/>
+							<Anchor point="BOTTOMRIGHT" relativeTo="$parentPageText" relativePoint="BOTTOMRIGHT"/>
+						</Anchors>
+					</Frame>
+				
 					<Button name="$parentCloseButton" inherits="UIPanelCloseButton" parentKey="CloseButton">
 						<Size x="37" y="37"/>
 						<Anchors>
@@ -785,25 +869,8 @@
 			<Anchor point="BOTTOMRIGHT"/>
 		</Anchors>
 		<Frames>
-			<StatusBar parentKey="progressBar" inherits="CollectionsProgressBarTemplate" >
-				<Size x="100" y="13"/>
-				<Anchors>
-					<Anchor point="BOTTOMLEFT" x="10" y="10"/>
-				</Anchors>
-				<Frames>
-					<Button parentKey="button">
-						<Anchors>
-							<Anchor point="TOPLEFT"/>
-							<Anchor point="BOTTOMRIGHT"/>
-						</Anchors>
-					</Button>
-				</Frames>
-			</StatusBar>
+			<StatusBar parentKey="progressBar" inherits="LOLIB_MapStatusTemplate" />
 		</Frames>
-		<Scripts>
-			<OnLoad>
-				self.progressBar.border:SetWidth(109);
-			</OnLoad>
-		</Scripts>
+
 	</Frame>
  </Ui>
