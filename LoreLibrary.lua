@@ -122,7 +122,7 @@ function _addon:LorePiecesInMap(area)
 	local new = {};
 	for k, lore in pairs(_data) do
 		for kl, loc in ipairs(lore.locations) do
-			if loc.npc == nil and string.lower(loc.area) == string.lower(area)  then
+			if loc.sourceType == nil and string.lower(loc.area) == string.lower(area)  then
 				-- If it's the same area, this location becomes the lore's point of interest
 				lore.poi = loc;
 				countAll = countAll + 1;
@@ -279,39 +279,23 @@ function _addon:OpenBook(lore)
 			local text = location.area;
 			local sourceType = SOURCETYPE_OBJECT;
 			
-			if location.npc then
+			if location.sourceType == "npc" then
 				texture = "Interface/AddOns/LoreLibrary/Images/icon_NPC";
-				text = string.format(FORMAT_SOURCE, location.npc, location.area);
+				text = string.format(FORMAT_SOURCE, location.source, location.area);
 				sourceType = SOURCETYPE_NPC;
-			elseif location.container then
+			elseif location.sourceType == "container" then
 				texture = "Interface/AddOns/LoreLibrary/Images/icon_Container";
-			    text = location.container;
+			    text = location.source;
 			    sourceType = SOURCETYPE_CONTAINER;
-			elseif location.pickpocket then
+			elseif location.sourceType == "pickpocket" then
 				texture = "Interface/AddOns/LoreLibrary/Images/icon_Stealth";
-			    text = string.format(FORMAT_SOURCE, location.pickpocket, location.area);
+			    text = string.format(FORMAT_SOURCE, location.source, location.area);
 			    sourceType = SOURCETYPE_STEALTH;
 			end
 			
 			button.icon:SetNormalTexture(texture);
 			button.icon.sourceType = sourceType;
 			button.text:SetText(text);
-		--[[
-			if location.npc then
-				locationString = locationString .. "<IMG src=\"Interface/AddOns/LoreLibrary/Images/icon_NPC\" />"
-				--locationString = locationString .. "<P align=\"left\">".. string.format(FORMAT_SOURCE, location.npc, location.area) .. "</P>"
-				locationString = locationString .. "<P align=\"left\">|TInterface/AddOns/LoreLibrary/Images/icon_NPC:1:40|t".. string.format(FORMAT_SOURCE, location.npc, location.area) .. "</P><BR/>";
-			elseif location.container then
-				locationString = locationString .. "<IMG src=\"Interface/AddOns/LoreLibrary/Images/icon_Container\" />"
-				locationString = locationString .. "<P align=\"right\">".. string.format(FORMAT_SOURCE, "", location.container) .. "</P><BR/>";
-			elseif location.pickpocket then
-				locationString = locationString .. "<IMG src=\"Interface/AddOns/LoreLibrary/Images/icon_Stealth\" />"
-				locationString = locationString .. "<P align=\"right\">".. string.format(FORMAT_SOURCE, location.area, location.pickpocket) .. "</P><BR/>";
-			else
-				locationString = locationString .. "<IMG src=\"Interface/AddOns/LoreLibrary/Images/icon_Object\" />"
-				locationString = locationString .. "<P align=\"right\">".. string.format(FORMAT_SOURCE, "", location.area) .. "</P><BR/>";
-			end
-			]]--
 		end
 	
 		LoreLibraryBook.pageText:SetText(locationString);

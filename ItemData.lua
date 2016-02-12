@@ -4120,9 +4120,9 @@ _addon.data = {
 		"\"Never one like this.\" Raven replied with a wink.\n\n\"We need to work on that grip, it's too tight. Perhaps you have time for some practice?\" Marcus asked, peering into Raven's dark brown eyes.\n\nRaven grinned. \"I'll go tie up your horse...\"\n\n&lt;The remaining pages are not yet written. It appears to be a work in progress.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "Ashran",  ["npc"] = "Crafticus Mindbender",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "Ashran",  ["npc"] = "Dazzerian",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "",  ["container"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "npc", ["area"] = "Ashran",  ["source"] = "Crafticus Mindbender",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "Ashran",  ["source"] = "Dazzerian",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 	},
 },
 ["A Steamy Romance Novel"] = {
@@ -4133,9 +4133,9 @@ _addon.data = {
 		"Marcus stepped toward her, bristling with a mixture of fear and anger. \"The reward is not negotiable!\" He paused for a moment while gathering his nerve, and pressed himself against her diminutive form. Their lips met hotly, melting her frost armor spell in a torrent of sweltering vapor.\n\n\"So, is there another step to this quest?\" she teased, her eyes glittering with excitement.\n\n&lt;This goes on for several hundred more pages, without advancing the plot.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "The Jade Forest",  ["npc"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "",  ["container"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["area"] = "World and instances",  ["pickpocket"] = "Level 61 to 70 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "The Jade Forest",  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "pickpocket", ["area"] = "World and instances",  ["source"] = "Level 61 to 70 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Steamy Romance Novel: Hot and Misty"] = {
@@ -4149,9 +4149,9 @@ _addon.data = {
 		"\"No.  No.  I won't do that... but my sister will!\" the blonde giggled.  The dark-haired one silently raised a single eyebrow, nodding and shrugging her delicate shoulders at the same time.  With a subtle gesture, her body glowed with an intense inner fire, burning away what little clothing she wore.  As Marcus's muscular arms wrapped around her, she whispered something to him.  A symbol, unseen by Marcus, momentarily appeared above his head and surrounded him in a white glow.\n\n\"That... that feels amazing.  What did you do?\" he asked.\n\n\"Fortitude, my lord.  You will need it.\"  It was then that he noticed she was literally levitating off the ground, weightless in his arms.  His mind began to spin as countless scenarios played out in his head.  His strong hands began to...\n\n&lt;The remaining pages are shrouded in mist.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "The Jade Forest",  ["npc"] = "Martar the Not-So-Smart",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["area"] = "",  ["container"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["area"] = "World and instances",  ["pickpocket"] = "Level 90 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "The Jade Forest",  ["source"] = "Martar the Not-So-Smart",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "pickpocket", ["area"] = "World and instances",  ["source"] = "Level 90 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Steamy Romance Novel: Northern Exposure"] = {
@@ -4164,12 +4164,12 @@ _addon.data = {
 		"Gritting his teeth, Marcus gestured as light flashed over him, restoring his strength.\n\nTavi stared anxiously as he rose to his full height, engulfing her in his shadow. He thrust his hand forward, sending a wave of righteous force through her. Eyes rolled back as she wavered for several seconds before regaining consciousness.\n\n\"I've recently taken the path of... retribution.\"\n\nThe mischievous smirk returned to her face, \"Well then, this is going to be fun.\"\n\n&lt;The remaining pages have a level 999 requirement to read.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "Ashran",  ["npc"] = "Dazzerian",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "The Jade Forest",  ["npc"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "Frostwall",  ["npc"] = "Frostdeep Cavedweller",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "Lunarfall",  ["npc"] = "Lunarfall Cavedweller",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "",  ["container"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["area"] = "",  ["container"] = "Bag of Fishing Treasures",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "npc", ["area"] = "Ashran",  ["source"] = "Dazzerian",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "The Jade Forest",  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "Frostwall",  ["source"] = "Frostdeep Cavedweller",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "Lunarfall",  ["source"] = "Lunarfall Cavedweller",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Bag of Fishing Treasures",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 	},
 },
 ["A Steamy Romance Novel: Forbidden Love"] = {
@@ -4180,9 +4180,9 @@ _addon.data = {
 		"Leaning forward, she counted out loud until the invisible bubble dissipated with an audible pop. \"Twelve seconds? I know you have abilities that last longer than that.\"\n\nBony fingers worked effortlessly beneath his armor, unlatching his breastplate and exposing him to the cold air. \"Don't worry my sweet Marcus, that's not a finishing move tonight... I'm just getting started.\" He wrapped his arms around what remained of her waist, forcing an excited giggle as he nibbled at her neck vertebrae.\n\n&lt;The rest of the book has several sections that are apparently worn out from repeated readings.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "The Jade Forest",  ["npc"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "",  ["container"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["area"] = "World and instances",  ["pickpocket"] = "Level 71 to 80 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "The Jade Forest",  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "pickpocket", ["area"] = "World and instances",  ["source"] = "Level 71 to 80 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Steamy Romance Novel: Big Brass Bombs"] = {
@@ -4196,9 +4196,9 @@ _addon.data = {
 		"Jack nodded. \"What about that guy from the motor club you was datin'?\"\n \nThe leather-clad goblin scooped up her bag with one arm, and held up an outstretched hand. \"He never put a ring on it. A girl's gotta have her priorities.\" \n\nJack smiled and shook his head as he watched her walk out of the shop.\n \n&lt;The remaining pages require a secret goblin decoder ring to read.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "The Jade Forest",  ["npc"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "",  ["container"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["area"] = "World and instances",  ["pickpocket"] = "Level 81 to 85 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "The Jade Forest",  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "pickpocket", ["area"] = "World and instances",  ["source"] = "Level 81 to 85 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Steamy Romance Novel: Blue Moon"] = {
@@ -4210,9 +4210,9 @@ _addon.data = {
 		"Despite the statement, her words seemed to do the trick. Marcus smirked roguishly as he adjusted his leg plates, \"Well you aren't the only gifted one.\"\n\nSilence penetrated the room with palpable force as the conversation shifted to the language shared by all races of Azeroth.\n\nMinutes became hours, until their passionate dialog was interrupted by lightning streaking from the cloudless sky, thunderously slamming into the lake's surface and bathing them in steam.\n\n\"Is something wrong?\", Marcus asked.\n\n\"No my Marcus, you're just off to a great start...\"\n\nThe remaining pages have been thoroughly destroyed by the elements.",
 	},
 	["locations"] = {
-		{["area"] = "The Jade Forest",  ["npc"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["area"] = "",  ["container"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["area"] = "Trial of the Champion",  ["pickpocket"] = "Argent Confessor Paletress",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "The Jade Forest",  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "pickpocket", ["area"] = "Trial of the Champion",  ["source"] = "Argent Confessor Paletress",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 
@@ -4230,7 +4230,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["area"] = "World and instances",  ["npc"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Constitution"] = {
@@ -4243,7 +4243,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_nightdragon_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["area"] = "World and instances",  ["npc"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Rumination"] = {
@@ -4255,7 +4255,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["area"] = "World and instances",  ["npc"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Resilience"] = {
@@ -4267,7 +4267,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["area"] = "World and instances",  ["npc"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Rapidity"] = {
@@ -4277,7 +4277,7 @@ _addon.data = {
 		"&lt;You feel a searing pain when glancing at these pages.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "Dire Maul",  ["npc"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "Dire Maul",  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Focus"] = {
@@ -4287,7 +4287,7 @@ _addon.data = {
 		"&lt;You cannot understand anything written on these pages.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "Dire Maul",  ["npc"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "Dire Maul",  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Tenacity"] = {
@@ -4300,7 +4300,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["area"] = "World and instances",  ["npc"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Protection"] = {
@@ -4310,7 +4310,13 @@ _addon.data = {
 		"&lt;The ink swirls and shifts around the page. You get the feeling that the book is mocking you.&gt;",
 	},
 	["locations"] = {
-		{["area"] = "Dire Maul",  ["npc"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "npc", ["area"] = "Dire Maul",  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
+
+------------------------------------------------------------------------------------------
+-- Quest Items
+------------------------------------------------------------------------------------------
+
+
 };
