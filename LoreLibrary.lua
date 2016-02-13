@@ -63,6 +63,7 @@ local SOURCETYPE_OBJECT = "Object found in this area.";
 local SOURCETYPE_NPC = "Can drop from this npc.";
 local SOURCETYPE_CONTAINER = "Can be found in this container.";
 local SOURCETYPE_STEALTH = "Can pickpocket from this npc.";
+local SOURCETYPE_QUEST = "Obtained during a quest.";
 
 local function SortLore(list) 
 	if list == nil then list = LoreList; end
@@ -225,6 +226,7 @@ function _addon:FilterPageText(text)
 	
 	-- player name
 	text = text:gsub("<name>", _playerName);
+	text = text:gsub("$p", _playerName);
 	
 	-- player class
 	text = text:gsub("<class>", _playerClass);
@@ -232,6 +234,7 @@ function _addon:FilterPageText(text)
 	-- sex
 	text = text:gsub("<his/her>", (_playerSex == 3 and "her" or "his"));
 	text = text:gsub("<him/her>", (_playerSex == 3 and "her" or "him"));
+	text = text:gsub("<Brother/Sister>", (_playerSex == 3 and "Sister" or "Brother"));
 	
 	text = text .. "\n\n";
 	
@@ -291,6 +294,18 @@ function _addon:OpenBook(lore)
 				texture = "Interface/AddOns/LoreLibrary/Images/icon_Stealth";
 			    text = string.format(FORMAT_SOURCE, location.source, location.area);
 			    sourceType = SOURCETYPE_STEALTH;
+			elseif location.sourceType == "quest" then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Quest";
+				text = string.format(FORMAT_SOURCE, location.source, location.area);
+				if (location.level == "A") then
+					--text = string.format(FORMAT_SOURCE, "|TInterface/WORLDSTATEFRAME/AllianceIcon:16|t " .. location.source, location.area);
+					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Alliance-Logo:20|t" .. location.source, location.area);
+				elseif  (location.level == "H") then
+					--text = string.format(FORMAT_SOURCE, "|TInterface/WORLDSTATEFRAME/HordeIcon:16|t " .. location.source, location.area);
+					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Horde-Logo:20|t" .. location.source, location.area);
+				end
+			    
+			    sourceType = SOURCETYPE_QUEST;
 			end
 			
 			button.icon:SetNormalTexture(texture);

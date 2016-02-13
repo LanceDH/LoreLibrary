@@ -4111,7 +4111,7 @@ _addon.data = {
 ------------------------------------------------------------------------------------------
 
 ["A Steamy Romance Novel: Savage Passions"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance02\" /></BODY></HTML>",
 		"A trail of dust followed the once-white stallion as he galloped through the garrison gates, stopping abruptly at the stables. Raven, the stable master, rushed to the weary mount and rider.\n\n\"Lord Marcus, let me help.\" Raven's strong, tanned arm took the rider's hand in his own, pulling him off in a quick, smooth motion. He did not immediately let go, staring in disbelief at the paladin's heavily stained armor.\n\nSeeing concern on the man's face, Marcus clasped his shoulder and smiled warmly. \"Fear not old friend, only a little of it is my own.\"\n\nRaven hugged him fiercely. \"That is good to hear!\"",
@@ -4126,7 +4126,7 @@ _addon.data = {
 	},
 },
 ["A Steamy Romance Novel"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance05\" /></BODY></HTML>",
 		"As Nahni glided up, the grizzled warrior gave her a hard stare. \"I suppose you're here to collect the reward for killing those murlocs?\"\n\nHer eyes wandered down to the glowing broadsword at his side. \"That depends on what the reward is, Marcus.\" She twirled her hair playfully, pretending not to notice how he shifted uncomfortably in her presence. \"I may not want it.\"",
@@ -4139,7 +4139,7 @@ _addon.data = {
 	},
 },
 ["A Steamy Romance Novel: Hot and Misty"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance04\"/></BODY></HTML>",
 		"Marcus galloped on his warhorse towards the remote building, bringing an almost imperceptible flush to one of the curvier guards as he passed.  He dismounted and handed his reins to the ever-present stablemaster, placing one hand on her shoulder before speaking.  \"Kama, have you considered our last conversation?\" Marcus asked, furrowing his eyebrows in mock seriousness.\n\nKama rolled her eyes, her Pandaren markings exaggerating the movement.  \"I doubt my life-mate would think much of it.\"\n\nMarcus let out a bellowing laugh, looking over his shoulder as he walked away, \"I'd still like to meet her one day!\"",
@@ -4155,7 +4155,7 @@ _addon.data = {
 	},
 },
 ["A Steamy Romance Novel: Northern Exposure"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance07\" /></BODY></HTML>",
 		"The tiny gnome peered over the railing into the secluded Dalaran courtyard.\n\n\"The view from the balcony is amazing. You have to come see!\"\n\nArmor legplates creaked as Marcus walked over, taking in a deep breath as he absently scratched his scruffy chin.\n\n\"The Hero's Welcome is no slouch. And there's something in the room that might interest you.\"\n\nTavi bounded into the room, pausing only a moment before jumping onto the massive bed. She turned to gaze at Marcus with her huge saucer-like eyes, narrowing them playfully and replacing her glowing smile with a diabolical grin.",
@@ -4173,7 +4173,7 @@ _addon.data = {
 	},
 },
 ["A Steamy Romance Novel: Forbidden Love"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance06\" /></BODY></HTML>",
 		"Ah'tusa crept silently through the massive underground tunnel, nervously looking over her shoulder in anticipation of the fast moving tram. \"Where is he...\" she muttered angrily, stopping suddenly as something moved behind her. Her eyes narrowed dangerously as her dagger slid from its sheath.\n\nA husky voice echoed in the hollow chamber, \"I thought rogues liked to be behind their target.\" She spun quickly, driving her blade into a shield of impenetrable force. \"And I thought paladins were supposed to be chaste.\" she replied with a confident smirk.",
@@ -4186,7 +4186,7 @@ _addon.data = {
 	},
 },
 ["A Steamy Romance Novel: Big Brass Bombs"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance03\" /></BODY></HTML>",
 		"The tough little goblin walked purposefully into the engineering shop, raising her eyebrows at a few items as she approached the shopkeeper.\n \n\"How's it going, Jack?\" Her voice seductively brushed his pointy ears with the rough texture of someone who inhaled too much motorcycle exhaust. \n\nThe goblin called Jack looked up and grinned. \"Revi! It's going much better since you just arrived.\" Jack set his arclight spanner on the table. \"What can I do ya for?\"",
@@ -4202,7 +4202,7 @@ _addon.data = {
 	},
 },
 ["A Steamy Romance Novel: Blue Moon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance01\" /></BODY></HTML>",
 		"Tail swooshing and hips swaying, the curvy figure walked purposefully across the lake toward the man resting by the shore; rising quickly as she approached, he appeared visibly happy to be in her presence. Blue arms flowed over his shoulders as a smooth tail coiled seductively around his waist. \"Why must I travel so far to be meeting man like you?\" Her voice carried a strong, alluring accent.\n\nGrinning wildly, he gently pushed her away, openly staring as the light caught her features.\n\n\"Up here!\", she exclaimed in playful anger.\n\nWith a helpless shrug, he reached into his pack and pulled out a small pouch. \"My wonderful Soola, I've brought you something.\" Confidence wrapped his words like a steel blanket.",
@@ -4221,7 +4221,7 @@ _addon.data = {
 ------------------------------------------------------------------------------------------
 
 ["Libram of Voracity"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4234,7 +4234,7 @@ _addon.data = {
 	},
 },
 ["Libram of Constitution"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4247,7 +4247,7 @@ _addon.data = {
 	},
 },
 ["Libram of Rumination"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4259,7 +4259,7 @@ _addon.data = {
 	},
 },
 ["Libram of Resilience"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4271,7 +4271,7 @@ _addon.data = {
 	},
 },
 ["Libram of Rapidity"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft greater arcanum.\n\nMay our enemies never gain access to these libram.\n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"&lt;You feel a searing pain when glancing at these pages.&gt;",
@@ -4281,7 +4281,7 @@ _addon.data = {
 	},
 },
 ["Libram of Focus"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft greater arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"&lt;You cannot understand anything written on these pages.&gt;",
@@ -4291,7 +4291,7 @@ _addon.data = {
 	},
 },
 ["Libram of Tenacity"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4304,7 +4304,7 @@ _addon.data = {
 	},
 },
 ["Libram of Protection"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft greater arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"&lt;The ink swirls and shifts around the page. You get the feeling that the book is mocking you.&gt;",
@@ -4317,6 +4317,458 @@ _addon.data = {
 ------------------------------------------------------------------------------------------
 -- Quest Items
 ------------------------------------------------------------------------------------------
+
+["\"Creatures That Owe Sal'salabim Golds\""] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"(1) Raliq the Drunk: Ogre. He never leaves cantina. Mean. Ugly. Fat. Mean. Also very fat.\n\n",
+		"(2) Coosh'coosh: This little annoying spore-man from Zangarmarsh has mushroom garden on border of Zangarmarsh and Terokkar. Lost many golds to Sal'salabim in game of \"What's That Smell.\" Tried to pay Sal'salabim with stupid mushroom called glowcap. Say it as good as golds! Hah!\n\n",
+		"(3) Floon: Arakkoa. Lost many golds to Sal'salabim. Sal'salabim killed bird-man for not paying. Now ghost bird-man walks in northwest part of Bone Wastes.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Shattrath City",  ["source"] = "Crackin' Some Skulls",  ["level"] = "",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["A Clue to Sanders' Treasure"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"Good work, matey! Now ye need to head due east. East up the bluffs, east to the road. Look for the ol' chimney ruins near the side of the road. There you'll find an old barrel with your next clue.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Westfall",  ["source"] = "Captain Sanders' Hidden Treasure",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["A Letter to Kasim Sharim"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"Kasim,\n\nHe has returned.\n\n  - Watcher Mahar Ba",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Blasted Lands",  ["source"] = "Kasim Sharim",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["A Missive from Lorewalker Cho"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"$p,\n\nYour companions that survived the battle with the Sha of Doubt are now in the care of Binan Village, home to Pandaria's finest healers. It looks as though they shall recover their physical injuries.\n\nThe journey to Binan will take you up the Veiled Stair to the very doorstep of Kun-Lai Summit. I urge you to bring this missive to Mayor Bramblestaff in Binan Village. There, he can direct you to your companions.\n\nI look forward to our paths crossing again.\n\n-Lorewalker Cho",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Valley of the Four Winds",  ["source"] = "The Road to Kun-Lai",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Albreck's Findings"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"Greetings, learned Antonivich:\n\nI hope this letter finds you in Thrallmar, productive in your studies. My trappings here in Spinebreaker are adequate for my own experiments, though at times I do wish to be back in the Undercity with a full range of implements and servants to aid me...\n\nAh, the laments of a corpse.\n\nPleasantries aside, I have some interesting news -- the blood that &lt;name&gt; gathered from the fel orcs shows a concentration of demonic taints. It is almost identical to the taint of the original fel orcs of Azeroth... the taint of Mannoroth.",
+		"It is impossible for Mannoroth's influence to reach across to Outland -- the beast has been dead for years -- but I fear another Pit Lord may be at play here. A Pit Lord of Mannoroth's power... one able to corrupt the indigenous orcs.\n\nI will continue my studies of Bleeding Hollow Blood, but I urge you to pursue the trail. And, I fear, that trail may lead deep into Hellfire Citadel.\n\nScholarly Yours,\nApothecary Albreck",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Hellfire Peninsula",  ["source"] = "Apothecary Antonivich",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Alicia's Poem"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"Do not stand at my grave and weep, \nI am not there, I do not sleep.\n\nI am in a thousand winds that blow, \nacross Northrend's bright and shining snow.\n\nI am the gentle showers of rain, \non Westfall's fields of golden grain. \n\nI am in the morning hush, \nof Stranglethorn's jungle, green and lush.\n\nI am in the drums loud and grand,\nthe thunderous hooves across Nagrand.\n\nI am the stars warmly gleaming,\nover Darnassus softly dreaming.\n\nI am in the birds that sing,\nI am in each lovely thing.\n\nDo not stand at my grave and cry, \nI am not there. I do not die.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Stormwind City",  ["source"] = "Alicia's Poem",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Alliance Missive"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"Whatever you're up to, &lt;name&gt;, make an end of it.\n\nThe Horde and their savage monkeys are preparing to attack.\n\nThey outnumber our forces considerably and must not be allowed the time to train their forces.\n\nPut an end to whatever distractions you're engaged in and return to Pearlfin Village at once.\n\n- Admiral Taylor",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "The Jade Forest",  ["source"] = "Get Back Here!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Alliance Orders"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"By order of King Wrynn, this land is to be scoured in all haste until the White Pawn is found and returned to safety.\n\nNo expense is to be spared in this effort, including - if necessary - the blood of any subjects who find themselves serving in this foreign land.\n\nThe families of any such heroes lost in this noble endeavor will be well cared for, and the one who secures the asset may name his reward.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "The Jade Forest",  ["source"] = "Orders are Orders",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Ancient Dragonforged Blades"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"Rare indeed are the 'prismatic' blades forged by the combined will of the five dragonflights. Among the greatest of these blades were the sister swords of Quel'Serrar and Quel'Delar.\n\nIn her wisdom, the dragon queen Alexstrasza gifted one of the blades to each of the elven peoples of Azeroth. Quel'Serrar was to be borne by a valiant kaldorei warrior, while Quel'Delar was entrusted to a quel'dorei champion.\n\nEach blade transformed in the hands of its wielder, molding its magic to its master's strengths...",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Dalaran",  ["source"] = "Return To Caladis Brightspear",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Dalaran",  ["source"] = "Return To Myralion Sunblaze",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Another Clue to Sanders' Treasure"] = {
+	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["pages"] = {
+		"Now from this here barrel, face ye North. Straight as the crow flies, keep ye walkin' till you see the empty jug next to the lone windmill on the sea bluffs. If ye poke around that jug, ye just might find what you're lookin' for.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Westfall",  ["source"] = "Captain Sanders' Hidden Treasure",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Apothecary Furrows' Notes"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"&lt;The Apothecary's notes are scribbled in a cramped hand, with complex alchemic formulas interspersed among childlike doodles of skulls and lightning bolts. Squinting, you can make out parts of a recent passage:&gt;\n\n...most magnificent corruption, embedding itself deep within living tissue. Extremely contagious when &lt;several words are smudged&gt; via food chain. Today's tests confirm it is only partially biological in origin. Foulhoof, my &lt;illegible&gt; companion, preoccupied with vengeance and blind to the more 'constructive' applications of his &lt;a greenish ichor stains the remainder of the paragraph.&gt; Research progresses slowly. Hope my companions at Althalaxx fare better.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Darkshore",  ["source"] = "A Troubling Prescription",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Arcane Rune"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Those of us who are agile of mind, but not quite so agile of body, must find... alternative methods of self-preservation. Many such people choose to pursue a career in matters magical.\n\n&lt;name&gt;, I've been observing you, and you have a mind like a steel trap. However, to thrive in this time of upheaval, a person such as yourself will need to master the arcane arts. And to master the arcane arts, you're going to have to talk to me.\n\nCome speak with me in Anvilmar. We've much to discuss.\n\n-Teegli Merrowith",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Coldridge Valley",  ["source"] = "Arcane Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Blood Oath of the Horde"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Lok'tar ogar! Victory or death - it is these words that bind me to the Horde. For they are the most sacred and fundamental of truths to any warrior of the Horde.\n\nI give my flesh and blood freely to the Warchief. I am the instrument of my Warchief's desire. I am a weapon of my Warchief's command.\n\nFrom this moment until the end of days I live and die - For the Horde!",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Dragonblight",  ["source"] = "All Hail Roanauk!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Dragonblight",  ["source"] = "Blood Oath of the Horde",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Brubaker's Report"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Keeshan, if you're reading this note, I'm dead. Likely that my position was compromised.\n\nOrcs are committing unspeakable atrocities against their prisoners. Yes, prisoners, Keeshan. They've got cages full of P.O.W's. If you're gonna blow up this valley, you'll need to free the prisoners first.\n\nTell my wife I love her and to take out the damned trash.\n\n-Brubaker\n\nPS - They've got black dragons.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Redridge Mountains",  ["source"] = "Unspeakable Atrocities",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Calligraphed Letter"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"I am glad you are interested in taking up the ways of the monk. I have come from afar to bring the wisdom of my people to your kind.\nI have taken up residence in the abbey, training any who wish to learn our arts. Come, visit, and I shall train you.\n\nYours,\nBao",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Northshire",  ["source"] = "Calligraphed Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Calligraphed Note"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"I have been visiting with your tribe for a while now, and while some have tried to learn our arts, none have shown the promise that you have. \n\nPlease, come meet me at Camp Narache. I have learned so much from your tribe, I feel it is time I return the favor.\n\n-Shoyu",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Camp Narache",  ["source"] = "Calligraphed Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Calligraphed Parchment"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"I came here from afar to learn of your people's ways, and to teach you mine. You do me a great honor by volunteering to learn the ways of the Monk. In time, there is much I will show you, but for now, we must meet for our first lessons. Come, meet me in the Valley of Trials, and we will begin your training.\n\n-Gato",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Valley of Trials.",  ["source"] = "Calligraphed Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Calligraphed Sigil"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Hello, &lt;class&gt;. I have seen that you are interested in learning the ways of the monk. I would be honored to begin your training, as you seem like quite an auspicious pupil. Come to Aldrassil, on the lower levels.\n\n-Laoxi",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Shadowglen",  ["source"] = "Calligraphed Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Calor's Note"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Master Carevin,\n\nThe bearer of this note has shown &lt;himself/herself&gt; to be upstanding in the Light, capable of battling the undead and demons that plague the borders of Duskwood, and willing to join the Carevin family in their cause of Light.\n\nI would thereby suggest that you give this warrior of the Light further duties--perhaps to investigate some of the townsfolk that are under suspicion of succor to the enemies of the Light.\n\nYours faithfully,\nCalor",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Duskwood",  ["source"] = "Worgen in the Woods",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Cloth Request"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"To the Schneiders,\n\nGood day. I trust business in the canal district is good. We are booming here in the trader's square.\n\nWe are in need of knitted cloth goods, as our supply is all but depleted. Please send the standard load as soon as you are able.\n\nGood fortune, and I hope your son Thurman's studies progress well,\n\n--Harlan Bagley",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Stormwind City",  ["source"] = "Harlan Needs a Resupply",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Consecrated Letter"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"I hope this letter finds you well, &lt;class&gt;. I say that with great pride, because not many can profess such profound faith, but also know that they are among the most elite of Azeroth's protectors.\n\nAlways remember, first and foremost, it is your duty to go to battle against those who seek to harm our world and bring corruption into our homes.\n\nI have been given authority over your training for the time being. When you are ready, seek me out inside Northshire Abbey.\n\n-Brother Sammuel, Paladin Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Northshire",  ["source"] = "Consecrated Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Consecrated Note"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"I have been awaiting your arrival, sunwalker. Chief Hawkwind himself told me of your interest in our order and I have agreed to begin your training. Please meet with me in the circle at the center of Camp Narache when you are ready to begin your instruction.\n\nSunwalker Helaku",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Camp Narache",  ["source"] = "Consecrated Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Consecrated Rune"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Some fear our kind more than dragons. Some envy us more than the most skilled blacksmiths. Some praise our strength in battle. Others revel in our faith. Some are just jealous that we can drink them under the table! But know this, &lt;class&gt;, you are among the most elite protectors in all of Azeroth. The Holy Light gives us strength as much as we strengthen it.\n\nI would tell you more when you've gotten acquainted with the land some. Find me inside Anvilmar above the Valley.\n\n-Bromos Grummner, Paladin Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Coldridge Valley",  ["source"] = "Consecrated Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Control Console Operating Manual"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"The samophlange control console can be used to automatically regulate the flow of fuels, gasses, liquids, and related machinery. Once initial configuration has been completed, it should run worry free with minor maintenance.\n\nBrief listing of control console components (from left to right)\n\nI. Main Power Lever\n\nThe engaged position enables the samophlange. The control mechanism will not automatically disengage when the lever is put in the off position. This will merely",
+		"begin the cooldown process, at which point it will take roughly one to two minutes (depending on the situation) to turn off.\n\nIMPORTANT NOTE: The main power lever can only be manipulated when the three control valves on the actual machinery have been disengaged. These valves can be shut off in any order.\n\nThe first is the MAIN CONTROL VALVE, which can be found at the base of the large, vertical smokestack. Next, the FUEL CONTROL VALVE can be found on the large pipe which leads",
+		"from the fuel tanks (there should be three of them) to the smokestack. Finally, the REGULATOR VALVE can be found on the lower of the two large, cylindrical tanks that flow into the smokestack.\n\nII. Fuel Gauges\n\nDisplays the current pressure in the primary, secondary, and tertiary fuel tanks.\n\nIII. Flow Gauge\n\nDisplays the current rate of flow within the system.",
+		"IV. Flow Controls\n\nIncrease or decrease the flow rates. This is automatically controlled by the samophlange control mechanism.\n\nV. Temperature Gauge\n\nDisplays the operating temperature of the system in general.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Northern Barrens",  ["source"] = "Samophlange",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Crafty's Shopping List"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"<HTML><BODY><BR/><P>Okay, $N, this is a list of all the stuff that I'm going to need for our new super-secret, er..., super weapon. For now, let's just call it \"Crafty's Ultra-Advanced Proto-Typical Shortening Blaster\".</P><BR/><P>Trust me, it's going to be far more revolutionary than that old, hokey world enlarger!</P><BR/><P>Anyway, don't think too hard about it right now. Just get me this stuff and we'll be golden!</P></BODY></HTML>",
+		"<HTML><BODY><BR/><H1 align=\"center\">My Tools</H1><BR/><P>First things first... I need my tools. For a project this intricate no others will do!</P><BR/><P>When we had to run for our lives to escape from the pumping station -- that's a whole different story -- I didn't have time to pick them up. I mean, come on, I was running for my life! But I do remember that I left them under the pumping station to the east.</P></BODY></HTML>",
+		"<HTML><BODY><BR/><H1 align=\"center\">An Overcharged Capacitor</H1><BR/><P>Any engineering hack worth their salt should be able to whip one of these up for you if you can't create it yourself. Hell, I'd make one for you, but I'm missing my tools at the moment, remember?</P><BR/><P>So, do whatever it takes, but get me one. The project's going nowhere without it. If you have to, head back to the southern continents and scour the auction house!</P></BODY></HTML>",
+		"<HTML><BODY><BR/><H1 align=\"center\">A Handful of Rocknar's Grit</H1><BR/><P>This last bit might be a little tricky to get, but it's necessary to fashion the blaster's lens from only the finest sand. That means obtaining it from a top-notch elemental.</P><BR/><P>Rocknar will do nicely. He was spotted to the southeast in the Frozen Reach between Unu'pe and the Wailing Ziggurat. Go break down his icy exterior to get to his rocky core and bring me back a handful.</P></BODY></HTML>",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Borean Tundra",  ["source"] = "Just a Few More Things...",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Crawgol's Silithid Field Guide"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"&lt;Crawgol's handwriting is large and uneven, little better than a childlike scrawl.&gt;\n\nThe sillu- scilla- &lt;Several misspellings are crossed out&gt; silithid are bug-type animals, not vegetables (at least without a fight). They live in the under the ground, except when they are not. Some of them fly? (I think).\n\nThey taste REAL BAD.\n\nMost silithid are made of bug parts. They have between none and eightish legs (depending on how they died?)",
+		"Burning makes them die. They have shells (called cara pieces because they are made from cara obviously) that can't be stabbed unless you do it hard.\n\nThey can dig fast but I don't know how fast because they dig in the dirt.\n\nTHE ORIGIN OF THE SILITHID\n\nAlmost all silithid come from holes, usually in the ground.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Southern Barrens",  ["source"] = "Firestone Point",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Cub's First Toy"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/Winterspring_Memento_256\" /></BODY></HTML>",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Winterspring",  ["source"] = "They Grow Up So Fast",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Daily Report - Hillsbrad Foothills"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Daily Report - Hillsbrad Foothills\n\nSouthshore Under Attack - Worgen Activity Increasing\n\nReports of worgen activity from the south, specifically around Southshore, are increasing in frequency. Our scouts indicate that the terrorist known as Ivar Bloodfang and his renegades are responsible for these recent attacks against our citizens.\n\nRecommendation: Send capable heroes to investigate.",
+		"Trouble at the Sludge Fields\n\nThe area formerly known as Hillsbrad Fields - now known as the Sludge Fields, located in southwestern Hillsbrad - has seen a sharp rise in \"accidents.\" Reports from Warden Stillwater indicate possible contagion outbreak.\n\nRecommendation: Send capable heroes to investigate.",
+		"Azurelode Spider Farm Productivity Issues\n\nOur spider domestication operations in the area near Azurelode Mine, located in the southwest region of Hillsbrad, are seeing extremely low production numbers. Spider-Handler Sarus and Captain Keyton have requested assistance.\n\nRecommendation: Send capable heroes to investigate.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Hillsbrad Foothills",  ["source"] = "Welcome to the Machine",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Dastardly Denizens of the Deep"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"One of the most frightening creatures I've ever seen with my own eyes is Tethyr. I've only laid eyes on the beast once, and I count myself lucky beyond belief to have survived!\n\nIt was a dark and stormy night. Through the swirling seas and driving rain, the beacon of Theramore's lighthouse was barely visible. We did our best to steer toward it. Suddenly, the beast burst from between the waves in front of our ship!",
+		"The mighty creature's maw opened wide, tossing bolts of icy water toward our vessel. Those terrible jaws clamped down upon the bow of our ship, tearing it from the hull. Sailors and cargo were thrown violently into the sea as the remnants of the ship disappeared beneath the waves.\n\nThe last thing I remember was flying from the broken hull, hitting the inky waters, and plunging beneath the waves. The world went dark and I thought for certain I'd drawn my last breath. When I awoke in Theramore's infirmary, I knew someone had to tell our story.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Dustwallow Marsh",  ["source"] = "Dastardly Denizens of the Deep",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Decoded Tablet Transcription"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Day 1\nOur pilgrimage is over. We've finally reached Silithus, where we're to establish contact. We have come from many places to collaborate in what is to be a monumental undertaking.\n\nThere is a tremendous sense of excitement in the air. Tomorrow we shall devote all our energy to building that which will allow communication with THEM. \n\nTomorrow we shall construct a wind stone!",
+		"Day 2\nThe location of the wind stone has been a subject of great debate. Not even the wisest among us can determine with great certainty where the place mentioned in the old prophecy actually refers to.\n\nI've stayed with the original northern group and time will undoubtedly prove us right. The argument that the energy lines intersect at detrimental angles at this location are foolish and naive. \n\nAlready we are gathering the necessary building materials at great speed.",
+		"Day 15\nOur dedication has paid off. We are the first camp to finish the construction of a wind stone. If the other fools had stayed with us we would've completed the task in less than a week! \n\nTomorrow we shall begin the rituals involved in summoning Baron Kazum himself. He demanded to be the first to test the system and we couldn't contradict him as he's quick to anger. \n\nI expect he will be most pleased with us.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Silithus",  ["source"] = "A Terrible Purpose",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Elegant Rune"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Friend, I am honored that you have chosen to learn the ways of the monk, the art of my people. Your interest heartens me, and allows me to return the hospitality that I have been shown by your kind and generous people here. Come, meet me in Anvilmar, and I will train you in our ways.\n\nYours,\nLo",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Coldridge Valley",  ["source"] = "Elegant Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Elegant Scroll"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Hello,\n\nI am Ting, Strong of Stomach. I come from lands far away.\n\nI may not be one of you Forsaken, but it is clear that you are strong in mind and body. Some of my people do not believe that your people can be trained in the arts of the Monk, but I do not share their prejudice. Come to me, and I will teach you to fight!\n\n-Ting, Strong of Stomach",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Deathknell",  ["source"] = "Scribbled Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Empowered Rune"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Know this: a shaman must never demand power; to do so would arouse the anger of the elements, and a shaman without the elements' protection is nothing. Those that follow the path of the shaman must never forget this most vital tenet.\n\nHowever, a shaman that works in a respectful union with the elements wields a power rivaled by few. If you feel you have the humility to do so, come visit with me in Anvilmar. I will teach you - much like I myself was taught - how to work with the elements of fire, earth, wind, water, and the wild.\n\n~Teo Hammerstorm",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Coldridge Valley",  ["source"] = "Empowered Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Encrypted Letter"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Never been more proud to be part of the trade as I am in these last few years. The need for assassins, spies, and scouts has never been more prevalent. You'd think war-time would have had higher demand, but suprisingly, war isn't a time we flourish like we do now--the times after peace starts to deteriorate.\n\nI was told you'd be in the area looking to learn a few things. When you have time, come see me by the stables in back of the abbey.\n\n-Jorik Kerridan, Rogue Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Northshire",  ["source"] = "Encrypted Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Encrypted Parchment"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"I send greetings, &lt;name&gt;. I was lost in thought when it came to my attention that I needed to write to you.\n\nMany in our culture praise our shamans for being our spiritual leaders, like our great Warchief. Others think the sword and axe are even more noble pursuits, but never forget that battles--even wars--are won on the backs of those with more specialized skills. That is what I wish to speak to you about, &lt;name&gt;. Find me among the other orcs in the Valley of Trials.\n\n-Rwag, Rogue Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Valley of Trials",  ["source"] = "Encrypted Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Encrypted Rune"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"&lt;Brother/Sister&gt;, I hope this rune finds you well. I wanted to take a moment to let you know that I'm inside Anvilmar above Coldridge Valley.\n\nI know how important it is we all stick together, and in this time of strained peace it's becoming even more important to have our kind around. Look for me when you have the time. \n\n-Solm Hargrin, Rogue Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Coldridge Valley",  ["source"] = "Encrypted Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Encrypted Scroll"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Take care not to ignore my words, &lt;name&gt;. This is the time for subterfuge and deceit throughout all nations... even our great Undercity. Everyone loyal to Sylvanas is working towards creating a new era, one controlled by the Forsaken. And even though we possess no magical skills, nor will we take up weapons along our borders, we still have our own role to play.\n\nSeek me out in the inn in Deathknell. We'll speak more then.\n\n-David Trias, Rogue Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Deathknell",  ["source"] = "Encrypted Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Encrypted Sigil"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Sael'ah, my friend. I hope this sigil finds you well. I was asked to offer you my services. I too am in Shadowglen, in the great tree of Aldrassil, and I wanted you to know that if you need any training that you could seek me out.\n\nIn these questionable times, I thought it prudent that those dealing in stealth remain even closer to one another. How else will we be able to protect Teldrassil and our ways?\n\nFind me when you can.\n\n-Frahun Shadewhisper, Rogue Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Shadowglen",  ["source"] = "Encrypted Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Etched Letter"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Northshire Valley is a dangerous place, ideally suited to the survival skills of a hunter. Needless to say I have been impressed with your contributions to the valley's defense and I look forward to meeting you. Please look for me by the entrance to the abbey.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Northshire",  ["source"] = "Etched Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Etched Note"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Mighty warriors defend our home. Our shamans guide our spirits and show us our ancestors' past. And our druids help us discover the Earthmother's will.\n\nBut you are one of our hunters, and our hunters learn many aspects of those roles and blend them together. You will find you represent the heart of our people--some of our tribe will look to you for guidance, some for protection. It is my duty to ensure you are prepared for that. Seek me out in Camp Narache.\n\n-Lanka Farshot, Hunter Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Mulgore",  ["source"] = "Etched Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Etched Parchment"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"I've seen you shuffling around the Valley, young one, with your flimsy bow and that shabby armor. You remind me of a young hunter I knew a long time ago...\n\nIf you're interested in learning a bit more about the trade, come visit me. The hunter's path can be a lonely one, and it helps to have allies along the way.\n\n-Karranisha, Hunter Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Valley of Trials",  ["source"] = "Etched Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Etched Rune"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Tamer of beasts, master marskman, proven tracker--what else ya want to accomplish in this lifetime? All those things combined takes quite a bit of intelligence and a great deal of patience.\n\nThe path of the hunter ain't an easy one, that's fer sure. You're gonna need lots of training if you wanna be as good as even our lowest ranking rifleman. But that's why I'm here.\n\nFind me inside Anvilmar overlooking Coldridge Valley. I'll be waiting.\n\n-Thorgas Grimson, Hunter Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Coldridge Valley",  ["source"] = "Etched Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Etched Sigil"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Elune is with you, &lt;name&gt;. The wind whispers it to me, and I'm glad I can directly take part in the shaping of our next generation of hunters.\n\nFrom what I have been told, you are close to Aldrassil. I would meet with you inside the great tree when you have time.\n\nOur elders have charged me with ensuring that new hunters are properly trained for the trials ahead. You being one of the newest students, it would behoove you to visit me. Until then, be well.\n\n-Ayanna Everstride, Hunter Trainer",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Shadowglen",  ["source"] = "Etched Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Evidence Against Samuelson"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Your Holiness: Cho'gall has given us the directive to move forward: We're going to wipe your cathedral off the map. When the spiritual center of Stormwind is reduced to a crater in the center of the city, panic will spread, and disillusioned peasants will flock toward our true religion. I'm sending the explosives your way. For the Hammer! For Deathwing! For the glorious new world to come!  -Samuelson",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Stormwind City",  ["source"] = "A Villain Unmasked",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Faded Treasure Map"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"If the Darkmoon Treasure you wish to find, then begin your search by using your mind.\n\nThe next clue that can be found, is on a home you can take out of town.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Darkmoon Island",  ["source"] = "Silas' Secret Stash",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Father Gustav's Report"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Highlord,\n\n&lt;name&gt; has successfully led the campaign against the Scourge of Scourgeholme and positioned us to march upon Icecrown.\n\nThe masons are equipped with the supplies that they need to begin construction of Justice Keep - thanks once again to &lt;name&gt; for &lt;his/her&gt; assistance in Crystalsong Forest.\n\nThere remains only one last challenge: the taking of Crusader's Pinnacle. For it is there, at the place where we have anguished most, that I wish to begin this final chapter.\n\nWe await your command, sir.\n\nLight protect you.\n\n-Gustav",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Icecrown",  ["source"] = "Into The Frozen Heart Of Northrend",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Field Journal"] = {
+	["visual"] = {["type"] = "Item"},
+	["pages"] = {
+		"Day One:\n\nGot on a ship called Draka's Fury. We're taking the special cargo to a far away place across the ocean. I have the duty to clean stuff on the ship and scout when we get to land.\n\nBetter work than searching for Alliance rogues and druids in Orgrimmar.\n\nThe food is not as good, but the grog tastes the same. Durotar has already slipped out of sight.",
+		"Day Two:\n\nThe food and rocking of the ship do not agree with me!\n\nThere is much to clean as there are many of my brothers who are sick. This does not seem like a good idea to me, but if he needs to go, we will gladly follow him to the bottom of the sea.\n\nLet us hope that it does not come to that.",
+		"Day Three:\n\nThe sea lashes the ship very heavily. The captain had us take down the sails. We are like a child's toy in the middle of gigantic waves.\n\nI may not like the ocean, but I kept my food down today like a true warrior.",
+		"Day Four:\n\nThere are two small islands on the horizon. The captain says that we will sail just past them. He does not want to stop. There is an edge to his voice that I do not like. It sounds like fear.\n\nThere was much to do... what? There are sounds of explosions outside. I am going above deck to see what it is.",
+		"Day ??:\n\nI washed up on the rocky shore of an island. It must be one of the two that I saw before. Most of my brothers are dead. There is no sign of our special cargo. I fear the worst and cannot believe my thoughts.\n\nI do not know how many days have passed. One, possibly two? Surely not more. The Alliance cowards came at us, hiding from behind the larger of the two islands. There were too many of them, though we might have sunk one.\n\nI saw another ship sail right through the battle and get torn apart. Goblins, I think. Fools!",
+		"Day ?? and one:\n\nWe have a makeshift camp atop the island. Aggra has asked me to look for other survivors on the western shore. Kilag is to take a small group across the top looking for Alliance. Already a few have attacked us. They will not stop coming until they are all dead. Or we are.\n\nThere are sounds of goblins off in the distance, and I can see the wreckage of their ship. They are noisy. I will watch them later. First, I have found a cavern and strange sounds like animals and mining coming from within it.\n\nI will investigate.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "The Lost Isles",  ["source"] = "Orcs Can Write?",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "The Lost Isles",  ["source"] = "The Enemy of My Enemy",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+
+
+
+
+
 
 
 };
