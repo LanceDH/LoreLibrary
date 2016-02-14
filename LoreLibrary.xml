@@ -184,11 +184,6 @@
 	</Frame>
 	
 	<Frame name="InsetTemplate" inherits="InsetFrameTemplate" virtual="true">
-		<Anchors>
-			<Anchor point="TOPLEFT" relativePoint="TOPLEFT" y="-60" x="4"/>
-			<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-6" y="5"/>
-		</Anchors>
-
 		<Layers>
 			<Layer level="OVERLAY">
 				<Texture parentKey="OverlayShadowTopLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
@@ -432,6 +427,86 @@
 		
 	</Frame>
 	
+	<Button name="LOLIB_ListBookTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="250" y="40"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture atlas="PetList-ButtonBackground" parentKey="background"/>
+				<!--
+				<Texture name="$parentBackground" parentKey="bg">	
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color r="1" g="1" b="1" a="1" />
+				</Texture>
+
+				<Texture name="$parentTexture" file="Interface\AddOns\LoreLibrary\Images\BookTexture" alphaMode="MOD">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<TexCoords left="0" right="0.9140625" top="0" bottom="0.5625"/>	
+				</Texture>
+				-->
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="2" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title" text="sjklfsdl jkhfsdjklh bfdsajkhlf djhklkjhdfsgb">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="20"/>
+						<Anchor point="BOTTOMRIGHT" x="-20"/>
+					</Anchors>
+				</FontString>
+				
+			</Layer>
+			<Layer level="OVERLAY">
+                <Texture parentKey="selectedTexture" atlas="PetList-ButtonSelect" hidden="true"/>
+			</Layer>
+		</Layers>
+		
+		<HighlightTexture atlas="PetList-ButtonHighlight">
+			<Color r="1" g="1" b="1" a="1"/>
+		</HighlightTexture>
+		
+		
+		<Frames>
+            <Button parentKey="icon" hidden="true">
+                <Size x="38" y="38"/>
+                <Anchors>
+                    <Anchor point="LEFT" x="-42" y="0"/>
+                </Anchors>
+				
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture parentKey="bg" file="Interface\PaperDoll\UI-Backpack-EmptySlot">
+							<Color r="0.5" g="0.5" b="0.5" a="1"/>
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<Texture parentKey="texture" file="Interface\PaperDoll\UI-Backpack-EmptySlot">
+							<Color r="1" g="1" b="1" a="1"/>
+						</Texture>
+					</Layer>
+				</Layers>
+				
+                <Scripts>
+                    <OnEnter>
+
+                    </OnEnter>
+                    <OnLeave>
+                        GameTooltip:Hide();
+                    </OnLeave>
+                </Scripts>
+            </Button>
+        </Frames>
+		
+		<Scripts>
+			<OnClick function="LOLIB_ListBook_OnClick"/>
+		</Scripts>
+	</Button>
+	
 	<Button name="LOLIB_BookTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
 		<Size>
 			<AbsDimension x="210" y="30"/>
@@ -508,6 +583,44 @@
 		
 		
 		<Frames>
+			
+
+			<StatusBar parentKey="progressBar" inherits="LOLIB_CoreStatusTemplate" />
+			
+			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
+				<Size x="115" y="20"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-107" y="-35"/>
+				</Anchors>
+			</EditBox>
+			
+			
+			
+			
+			
+		</Frames>
+		
+		
+		
+		<Scripts>
+			<OnLoad>
+				self:SetClampedToScreen(true);
+				self.TitleText:SetText("Lore Library");
+				self:RegisterForDrag("LeftButton");
+				self:SetScript("OnDragStart", self.StartMoving );
+				self:SetScript("OnDragStop", self.StopMovingOrSizing);
+				SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="LoreLibraryBookcase" parent="LoreLibraryCore" hidden="true">
+		<Size y="540"/>
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" x="0" y="0"/>
+			<Anchor point="BOTTOMRIGHT" x="0" y="0"/>
+		</Anchors>
+		<Frames>
 			<Frame name="$parentS3" inherits="LOLIB_ShelfTemplate" parentKey="s3">
 				<Anchors>
 					<Anchor point="BOTTOM" x="0" y="3"/>
@@ -524,90 +637,83 @@
 					<Anchor point="BOTTOM" relativeTo="$parentS2" relativePoint="TOP" x="0" y="0"/>
 				</Anchors>
 			</Frame>
-
-			<StatusBar parentKey="progressBar" inherits="LOLIB_CoreStatusTemplate" />
-			
-			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
-				<Size x="115" y="20"/>
-				<Anchors>
-					<Anchor point="TOPRIGHT" x="-107" y="-35"/>
-				</Anchors>
-			</EditBox>
-			
-			<Frame name="$parentInset" inherits="InsetTemplate" >
-				<Scripts>
-					<OnLoad>
-						LoreLibraryCoreInsetBg:Hide();
-					</OnLoad>
-				</Scripts>
-			</Frame>
-			
-			<Button name="$parentPrevButton" parentKey="prev">
-				<Size>
-					<AbsDimension x="64" y="12"/>
-				</Size>
-				<Anchors>
-					<Anchor point="TOP" relativeTo="$parentInset" relativePoint="TOP" y="-8"/>
-				</Anchors>
-				<NormalTexture file="Interface\COMMON\HelpBox" parentKey="normal">
-					<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>	
-					<Color r="1" g="1" b="1" a="0.5"/>
-				</NormalTexture>
-				<PushedTexture file="Interface\COMMON\HelpBox" >
-					<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
-					<Color r="0.7" g="0.7" b="0.7" a="0.5"/>
-				</PushedTexture>
-				<DisabledTexture file="Interface\COMMON\HelpBox"  parentKey="disabled">
-					<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
-					<Color r="1" g="1" b="1" a="0.5"/>
-				</DisabledTexture>
-				<HighlightTexture file="Interface\COMMON\HelpBox" alphaMode="ADD">
-					<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
-					<Color r="1" g="1" b="1" a="0.5"/>
-				</HighlightTexture>
-				<Scripts>
-					<OnLoad>
-						self.disabled:SetDesaturated(true);
-					</OnLoad>
-				</Scripts>
-				
-			</Button>
-			
-			<Button name="$parentNextButton" parentKey="next">
-				<Size>
-					<AbsDimension x="64" y="12"/>
-				</Size>
-				<Anchors>
-					<Anchor point="BOTTOM" relativeTo="$parentInset" relativePoint="BOTTOM" y="8"/>
-				</Anchors>
-				<NormalTexture file="Interface\COMMON\HelpBox" parentKey="normal">
-					<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
-					<Color r="1" g="1" b="1" a="0.5"/>
-				</NormalTexture>
-				<PushedTexture file="Interface\COMMON\HelpBox" >
-					<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
-					<Color r="0.7" g="0.7" b="0.7" a="0.5"/>
-				</PushedTexture>
-				<DisabledTexture file="Interface\COMMON\HelpBox"  parentKey="disabled">
-					<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
-					<Color r="1" g="1" b="1" a="0.5"/>
-				</DisabledTexture>
-				<HighlightTexture file="Interface\COMMON\HelpBox" alphaMode="ADD">
-					<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
-					<Color r="1" g="1" b="1" a="0.5"/>
-				</HighlightTexture>
-				<Scripts>
-					<OnLoad>
-						self.disabled:SetDesaturated(true);
-					</OnLoad>
-				</Scripts>
-				
-			</Button>
-			
-		</Frames>
 		
-		<Layers>
+		
+		<Frame name="$parentInset" inherits="InsetTemplate" >
+			<Anchors>
+				<Anchor point="TOPLEFT" relativePoint="TOPLEFT" y="4" x="4"/>
+				<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-6" y="5"/>
+			</Anchors>
+			<Scripts>
+				<OnLoad>
+					LoreLibraryBookcaseInsetBg:Hide();
+				</OnLoad>
+			</Scripts>
+		</Frame>
+		<Button name="$parentPrevButton" parentKey="prev">
+			<Size>
+				<AbsDimension x="64" y="12"/>
+			</Size>
+			<Anchors>
+				<Anchor point="TOP" relativeTo="$parentInset" relativePoint="TOP" y="-8"/>
+			</Anchors>
+			<NormalTexture file="Interface\COMMON\HelpBox" parentKey="normal">
+				<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>	
+				<Color r="1" g="1" b="1" a="0.5"/>
+			</NormalTexture>
+			<PushedTexture file="Interface\COMMON\HelpBox" >
+				<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
+				<Color r="0.7" g="0.7" b="0.7" a="0.5"/>
+			</PushedTexture>
+			<DisabledTexture file="Interface\COMMON\HelpBox"  parentKey="disabled">
+				<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
+				<Color r="1" g="1" b="1" a="0.5"/>
+			</DisabledTexture>
+			<HighlightTexture file="Interface\COMMON\HelpBox" alphaMode="ADD">
+				<TexCoords left="0.21875" right="0.640625" top="0.28125" bottom="0.109375"/>
+				<Color r="1" g="1" b="1" a="0.5"/>
+			</HighlightTexture>
+			<Scripts>
+				<OnLoad>
+					self.disabled:SetDesaturated(true);
+				</OnLoad>
+			</Scripts>
 			
+		</Button>
+		
+		<Button name="$parentNextButton" parentKey="next">
+			<Size>
+				<AbsDimension x="64" y="12"/>
+			</Size>
+			<Anchors>
+				<Anchor point="BOTTOM" relativeTo="$parentInset" relativePoint="BOTTOM" y="8"/>
+			</Anchors>
+			<NormalTexture file="Interface\COMMON\HelpBox" parentKey="normal">
+				<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
+				<Color r="1" g="1" b="1" a="0.5"/>
+			</NormalTexture>
+			<PushedTexture file="Interface\COMMON\HelpBox" >
+				<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
+				<Color r="0.7" g="0.7" b="0.7" a="0.5"/>
+			</PushedTexture>
+			<DisabledTexture file="Interface\COMMON\HelpBox"  parentKey="disabled">
+				<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
+				<Color r="1" g="1" b="1" a="0.5"/>
+			</DisabledTexture>
+			<HighlightTexture file="Interface\COMMON\HelpBox" alphaMode="ADD">
+				<TexCoords left="0.21875" right="0.640625" top="0.109375" bottom="0.28125"/>
+				<Color r="1" g="1" b="1" a="0.5"/>
+			</HighlightTexture>
+			<Scripts>
+				<OnLoad>
+					self.disabled:SetDesaturated(true);
+				</OnLoad>
+			</Scripts>
+			
+		</Button>
+		</Frames>
+		<Layers>
+		
 			<Layer level="BACKGROUND" textureSubLevel="1">
 				<!-- atlas="collections-background-tile" useAtlasSize="true" -->
 				<Texture  file="Interface\BlackMarket\BlackMarketBackground-Tile" vertTile="true" horizTile="true">
@@ -660,19 +766,201 @@
 			</Layer>
 			
 		</Layers>
-		
-		<Scripts>
-			<OnLoad>
-				self:SetClampedToScreen(true);
-				self.TitleText:SetText("Lore Library");
-				self:RegisterForDrag("LeftButton");
-				self:SetScript("OnDragStart", self.StartMoving );
-				self:SetScript("OnDragStop", self.StopMovingOrSizing);
-				SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
-			</OnLoad>
-		</Scripts>
 	</Frame>
-
+	
+	
+	<Frame name="LoreLibraryList" parent="LoreLibraryCore">
+		<Size y="540"/>
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" x="0" y="0"/>
+			<Anchor point="BOTTOMRIGHT" x="0" y="0"/>
+		</Anchors>
+		
+		
+		
+		<Frames>
+			<Frame name="$parentInsetRight" inherits="InsetTemplate" >
+				<Size x="407"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="4" x="-6"/>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-6" y="5"/>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						LoreLibraryBookcaseInsetBg:Hide();
+					</OnLoad>
+				</Scripts>
+				
+				<Layers>
+					
+					
+					<Layer level="BACKGROUND">
+						<Texture name="$parentParchmentBg" file="Interface\QUESTFRAME\QuestBG">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="4" y="-4"/>
+								<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
+							</Anchors>
+							<TexCoords left="0" right="0.587890625" top="0" bottom="0.65625"/>
+						</Texture>
+						<!--
+						<Texture name="$parentParchmentBg" file="Interface\QuestionFrame\question-background" vertTile="true" horizTile="true" >
+							<Anchors>
+								<Anchor point="TOPLEFT" x="4" y="-4"/>
+								<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
+							</Anchors>
+						</Texture>
+						-->
+						<!--
+						<Texture name="$parentParchmentBg" file="Interface\HELPFRAME\Tileable-Parchment" vertTile="true" horizTile="true" >
+							<Anchors>
+								<Anchor point="TOPLEFT" x="4" y="-4"/>
+								<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
+							</Anchors>
+						</Texture>
+						
+						
+						QuestFont_Huge
+						-->
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString name="$parentTitle" inherits="QuestTitleFont" justifyH="CENTER" parentKey="title">
+							<Size y="40"/>
+							<Anchors>
+								<Anchor point="TOPLEFT" x="60" y="-20"/>
+								<Anchor point="TOPRIGHT" x="-60" y="-20"/>
+							</Anchors>
+							<Color r="0" g="0" b="0"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				
+				<Frames>
+					
+					<SimpleHTML name="$parentPageText" parentKey="pageText">
+						<Size x="280" y="404"/>
+						<Anchors>
+							<Anchor point="TOP" x="0" y="-60"/>
+						</Anchors>
+						<FontString inherits="QuestFont"/>
+					</SimpleHTML>
+					
+					<Frame parentKey="sources" inherits="LOLIB_SourceContainerTemplate" hidden="true">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentPageText" relativePoint="TOPLEFT" y="-45"/>
+							<Anchor point="BOTTOMRIGHT" relativeTo="$parentPageText" relativePoint="BOTTOMRIGHT"/>
+						</Anchors>
+					</Frame>
+				
+					<Frame name="$parentNav" parentKey="navigation">
+						<Size>
+							<AbsDimension x="100" y="50"/>
+						</Size>
+						<Anchors>
+							<Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+								<Offset>
+									<AbsDimension x="-20" y="12"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					
+						<Layers>
+							<Layer level="OVERLAY">
+								<FontString name="$parentText" inherits="GameFontBlack" justifyH="RIGHT" parentKey="text" text="Page 1">
+									<Size>
+										<AbsDimension x="102" y="0"/>
+									</Size>
+									<Anchors>
+										<Anchor point="BOTTOMRIGHT">
+											<Offset>
+												<AbsDimension x="-79" y="12"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+									<Color r="0.25" g="0.12" b="0"/>
+								</FontString>
+							</Layer>
+						</Layers>
+						<Frames>
+							<Button name="$parentPrev" parentKey="prev">
+								<Size>
+									<AbsDimension x="32" y="32"/>
+								</Size>
+								<Anchors>
+									<Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+										<Offset>
+											<AbsDimension x="-35" y="0"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up" parentKey="normal"/>
+								<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
+								<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Disabled"  parentKey="disabled"/>
+								<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+							</Button>
+							<Button name="$parentNext" parentKey="next">
+								<Size>
+									<AbsDimension x="32" y="32"/>
+								</Size>
+								<Anchors>
+									<Anchor point="BOTTOMRIGHT">
+										<Offset>
+											<AbsDimension x="0" y="0"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up" parentKey="normal"/>
+								<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+								<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled" parentKey="disabled"/>
+								<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+							</Button>
+						</Frames>
+					</Frame>
+				</Frames>
+				
+			</Frame>
+			
+			<Frame name="$parentInsetLeft" inherits="InsetTemplate" >
+				<Size x="260"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" y="4" x="4"/>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="5"/>
+				</Anchors>
+				
+				<Scripts>
+					<OnLoad>
+						LoreLibraryBookcaseInsetBg:Hide();
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			
+			<ScrollFrame name="$parentScrollFrame" parentKey="scrollFrame" inherits="HybridScrollFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetLeft" x="3" y="-4"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetLeft" x="-2" y="5"/>
+				</Anchors>
+				<Frames>
+					<Slider name="$parentScrollBar" inherits="HybridScrollBarTrimTemplate" parentKey="scrollBar">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="-11"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="4" y="11"/>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								self.trackBG:Show();
+								self.trackBG:SetVertexColor(0, 0, 0, 0.75);
+							</OnLoad>
+						</Scripts>
+					</Slider>
+				</Frames>
+			</ScrollFrame>
+			
+		</Frames>
+		<Layers>
+		
+		</Layers>
+	</Frame>
+	
+	
 	<Frame name="LoreLibraryOverlay" toplevel="true" frameStrata="HIGH" parent="LoreLibraryCore" enableMouse="true" hidden="true">
 		<Anchors>
 			<Anchor point="TOPLEFT" relativeTo="$parentBg"/>
@@ -863,6 +1151,7 @@
 				</Frames>
 				
 			</Frame>
+			
 	<Frame name="LoreLibraryMap" toplevel="false" parent="WorldMapDetailFrame" enableMouse="false" hidden="false">
 		<Anchors>
 			<Anchor point="TOPLEFT"/>

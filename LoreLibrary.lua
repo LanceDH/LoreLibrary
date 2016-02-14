@@ -56,6 +56,7 @@ local SIZE_BOOKWIDTH = 210;
 local SIZE_TITLEWIDTH_MAX = 150;
 local SIZE_TITLEWIDTH_MIN = 75;
 local SIZE_BOOKHEIGHT = 29;
+local SIZE_LISTBOOKHEIGHT = 40;
 local MAX_SHELVES = 3;
 local MAX_BOOKS_PER_SHELF = 15;
 local MAX_SOURCES = 8;
@@ -72,6 +73,16 @@ local function SortLore(list)
 			return a.title < b.title;
 		--end
 		--return (a.unlocked and not b.unlocked);
+	end);
+end
+
+local function SortLoreUnlockFirst(list) 
+	if list == nil then list = LoreList; end
+	table.sort(list, function(a, b) 
+		if (a.unlocked and b.unlocked) or (not a.unlocked and not b.unlocked) then
+			return a.title < b.title;
+		end
+		return (a.unlocked and not b.unlocked);
 	end);
 end
 
@@ -186,32 +197,55 @@ function _addon:UpdateBookNavigation()
 	nav.text:SetText("Page ".. page);
 end
 
-function _addon:UpdateShelfNavigation()
-	local page = LoreLibraryCore.currentPage;
-	-- total shelves - 2 because we show 3 shelves;
- 	local limit = math.ceil(#LoreLibraryCore.displayList / MAX_BOOKS_PER_SHELF) - 2;
+function _addon:UpdateListDisplayNavigation()
+	local display = LoreLibraryListInsetRight;
+	if display.currentLore == nil then return; end;
+
+	local nav = display.navigation;
+	local page = display.currentPage;
+	local pages = #display.currentLore.pages;
 	
-	LoreLibraryCore.prev:Disable();
-	LoreLibraryCore.next:Disable();
+	nav.prev:Disable();
+	nav.next:Disable();
+
+	
+	if display.currentLore.unlocked and page > 1 then
+		nav.prev:Enable();
+	end
+	
+	if display.currentLore.unlocked and page < pages then
+		nav.next:Enable();
+	end
+	
+	nav.text:SetText("Page ".. page);
+end
+
+function _addon:UpdateShelfNavigation()
+	local page = LoreLibraryBookcase.currentPage;
+	-- total shelves - 2 because we show 3 shelves;
+ 	local limit = math.ceil(#LoreLibraryBookcase.displayList / MAX_BOOKS_PER_SHELF) - 2;
+	
+	LoreLibraryBookcase.prev:Disable();
+	LoreLibraryBookcase.next:Disable();
 	
 	if page > 1 then
-		LoreLibraryCore.prev:Enable();
+		LoreLibraryBookcase.prev:Enable();
 	end
 	
 	if page < limit then
-		LoreLibraryCore.next:Enable();
+		LoreLibraryBookcase.next:Enable();
 	end
 end
 
 function _addon:ChangeCoreShelf(direction)
-	local limit = math.ceil(#LoreLibraryCore.displayList / MAX_BOOKS_PER_SHELF) - 2;
-	local lastPage = LoreLibraryCore.currentPage;
-	local lore = LoreLibraryCore.currentLore;
-	LoreLibraryCore.currentPage = LoreLibraryCore.currentPage + direction;
-	LoreLibraryCore.currentPage = LoreLibraryCore.currentPage < 1 and 1 or LoreLibraryCore.currentPage;
-	LoreLibraryCore.currentPage = LoreLibraryCore.currentPage > limit and limit or LoreLibraryCore.currentPage;
+	local limit = math.ceil(#LoreLibraryBookcase.displayList / MAX_BOOKS_PER_SHELF) - 2;
+	local lastPage = LoreLibraryBookcase.currentPage;
+	local lore = LoreLibraryBookcase.currentLore;
+	LoreLibraryBookcase.currentPage = LoreLibraryBookcase.currentPage + direction;
+	LoreLibraryBookcase.currentPage = LoreLibraryBookcase.currentPage < 1 and 1 or LoreLibraryBookcase.currentPage;
+	LoreLibraryBookcase.currentPage = LoreLibraryBookcase.currentPage > limit and limit or LoreLibraryBookcase.currentPage;
 	
-	if LoreLibraryCore.currentPage ~= lastPage then
+	if LoreLibraryBookcase.currentPage ~= lastPage then
 		self:DisplayBooks();
 	end
 	
@@ -257,6 +291,24 @@ function _addon:ChangeBookPage(direction)
 	end
 	
 	self:UpdateBookNavigation();
+end
+
+function _addon:ChangeDisplayPage(direction)
+	local display = LoreLibraryListInsetRight;
+	local lastPage = display.currentPage;
+	local lore = display.currentLore;
+	-- prevent page changing for locked lore
+	if not lore.unlocked then return; end 
+	
+	display.currentPage = display.currentPage + direction;
+	display.currentPage = display.currentPage < 1 and 1 or display.currentPage;
+	display.currentPage = display.currentPage > #lore.pages and #lore.pages or display.currentPage;
+	
+	if display.currentPage ~= lastPage then
+		display.pageText:SetText(self:FilterPageText(lore.pages[display.currentPage]));
+	end
+	
+	self:UpdateListDisplayNavigation();
 end
 
 function _addon:OpenBook(lore)
@@ -327,10 +379,11 @@ function _addon:UnlockNewLore(title, silent)
 	SortLore();
 	if not silent then
 		self:DisplayBooks()
+		self:UpdateBookList()
 	end
 end
 
-function _addon:GetFilteredList()
+function _addon:GetFilteredList(unlockedFirst)
 	local list = {};
 	local search = LoreLibraryCore.searchString;
 	
@@ -343,6 +396,11 @@ function _addon:GetFilteredList()
 			end
 		end
 		
+	end
+	
+	if (unlockedFirst) then
+		SortLoreUnlockFirst(list);
+	else
 		SortLore(list);
 	end
 
@@ -365,22 +423,22 @@ function _addon:BookLooksFromTitle(data)
 end
 
 function _addon:DisplayBooks()
-	LoreLibraryCore.s1.nr:SetText(LoreLibraryCore.currentPage);
-	LoreLibraryCore.s2.nr:SetText(LoreLibraryCore.currentPage+1);
-	LoreLibraryCore.s3.nr:SetText(LoreLibraryCore.currentPage+2);
+	LoreLibraryBookcase.s1.nr:SetText(LoreLibraryBookcase.currentPage);
+	LoreLibraryBookcase.s2.nr:SetText(LoreLibraryBookcase.currentPage+1);
+	LoreLibraryBookcase.s3.nr:SetText(LoreLibraryBookcase.currentPage+2);
 	
 	self:UpdateProgressBar();
 
 	_addon:HideAllBooks();
 	local list = _addon:GetFilteredList();
-	LoreLibraryCore.displayList = list;
+	LoreLibraryBookcase.displayList = list;
 	local count = 1;
 	local s = 1;
 	local b = 1;
 	local book = nil;
 	local color = nil;
 	local totalBooks = MAX_SHELVES * MAX_BOOKS_PER_SHELF;
-	local start = (LoreLibraryCore.currentPage-1) * MAX_BOOKS_PER_SHELF + 1;
+	local start = (LoreLibraryBookcase.currentPage-1) * MAX_BOOKS_PER_SHELF + 1;
 	local bookData = nil;
 	local prec = nil;
 	local fixedLastStack = false;
@@ -395,7 +453,7 @@ function _addon:DisplayBooks()
 		s = math.ceil(count / MAX_BOOKS_PER_SHELF);
 		b = count % MAX_BOOKS_PER_SHELF;
 		b = (b == 0 and 15 or b);
-		book = LoreLibraryCore.books[s][b];
+		book = LoreLibraryBookcase.books[s][b];
 		book.data = bookData;
 		book:Show();
 		book.title:SetFontObject((bookData.unlocked) and "GameFontNormalSmall" or "GameFontDisableSmall");
@@ -433,7 +491,7 @@ end
 function _addon:HideAllBooks()
 	for s = 1, 3 do
 		for b = 1, 15 do
-			book = LoreLibraryCore.books[s][b];
+			book = LoreLibraryBookcase.books[s][b];
 			book:Hide();
 			book:SetHeight(0.1);
 		end
@@ -450,15 +508,132 @@ function _addon:CheckWellRead(id)
 	end
 end
 
-function _addon:InitCoreFrame()
-	LoreLibraryCore.prev:Disable();
-	LoreLibraryCore.currentPage = 1;
+function _addon:UpdateBookDisplay(lore)
+	local display = LoreLibraryListInsetRight;
 	
-	LoreLibraryCore.prev:SetScript("OnClick", function() _addon:ChangeCoreShelf(-1) end);
-	LoreLibraryCore.next:SetScript("OnClick", function() _addon:ChangeCoreShelf(1) end);
-	LoreLibraryCore:SetScript("OnMouseWheel", function(self, delta) _addon:ChangeCoreShelf(-delta) end);
+	for i = 1, MAX_SOURCES do
+	    local button = display.sources["s"..i];
+		button:Hide();
+	end	
+	display.sources:Hide();
+	
+	display.title:SetText(lore.title);
+	
+	if (lore.unlocked) then
+		display.lore = lore;
+		display.pageText:SetText(self:FilterPageText(lore.pages[1]));
+	else
+		local locationString = "<HTML><BODY><BR/><P align=\"center\">This lore can be found in:</P><BR/></BODY></HTML>";
+		display.pageText:SetText(locationString);
+		for k, location in ipairs(lore.locations) do
+			display.sources:Show();
+			local button = display.sources["s"..k];
+			button:Show();
+			local texture = "Interface/AddOns/LoreLibrary/Images/icon_Object";
+			local text = location.area;
+			local sourceType = SOURCETYPE_OBJECT;
+			
+			if location.sourceType == "npc" then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_NPC";
+				text = string.format(FORMAT_SOURCE, location.source, location.area);
+				sourceType = SOURCETYPE_NPC;
+			elseif location.sourceType == "container" then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Container";
+			    text = location.source;
+			    sourceType = SOURCETYPE_CONTAINER;
+			elseif location.sourceType == "pickpocket" then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Stealth";
+			    text = string.format(FORMAT_SOURCE, location.source, location.area);
+			    sourceType = SOURCETYPE_STEALTH;
+			elseif location.sourceType == "quest" then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Quest";
+				text = string.format(FORMAT_SOURCE, location.source, location.area);
+				if (location.level == "A") then
+					--text = string.format(FORMAT_SOURCE, "|TInterface/WORLDSTATEFRAME/AllianceIcon:16|t " .. location.source, location.area);
+					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Alliance-Logo:20|t" .. location.source, location.area);
+				elseif  (location.level == "H") then
+					--text = string.format(FORMAT_SOURCE, "|TInterface/WORLDSTATEFRAME/HordeIcon:16|t " .. location.source, location.area);
+					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Horde-Logo:20|t" .. location.source, location.area);
+				end
+			    
+			    sourceType = SOURCETYPE_QUEST;
+			end
+			
+			button.icon:SetNormalTexture(texture);
+			button.icon.sourceType = sourceType;
+			button.text:SetText(text);
+		end
+	
+		
+	end
+	
+	self:UpdateListDisplayNavigation();
+end
+
+function _addon:UpdateBookList()
+	local scrollFrame = LoreLibraryListScrollFrame;
+	local offset = HybridScrollFrame_GetOffset(scrollFrame);
+	local buttons = scrollFrame.buttons;
+	
+	local list = _addon:GetFilteredList(true);
+	
+	local numMounts = #list;
+	for i=1, #buttons do
+		local button = buttons[i];
+		local displayIndex = i + offset;
+		if ( displayIndex <= #list) then
+			local lore = list[displayIndex];
+			button.lore = lore;
+			button.title:SetFontObject((lore.unlocked) and "GameFontNormal" or "GameFontDisable");
+			button.title:SetText(lore.title);
+			if (button.title:GetText()== LoreLibraryListInsetRight.title:GetText()) then
+				button.selectedTexture:Show();
+			else
+				button.selectedTexture:Hide();
+			end
+		else
+			button.lore = nil;
+			button.title:SetText("");
+			button.selectedTexture:Hide();
+		end
+	end
+	
+	HybridScrollFrame_Update(scrollFrame, #list * SIZE_LISTBOOKHEIGHT, scrollFrame:GetHeight());
+end
+
+function LOLIB_ListBook_OnClick(self, button)
+	if ( button == "LeftButton" ) then
+		if self.lore ~= nil then
+			LoreLibraryListInsetRight.currentLore = self.lore;
+			LoreLibraryListInsetRight.currentPage = 1;
+			_addon:UpdateBookDisplay(self.lore);
+			_addon:UpdateBookList();
+			
+		end
+	end
+end
+
+function _addon:InitCoreFrame()
+	LoreLibraryBookcase.prev:Disable();
+	LoreLibraryBookcase.currentPage = 1;
+	
+	LoreLibraryBookcase.prev:SetScript("OnClick", function() _addon:ChangeCoreShelf(-1) end);
+	LoreLibraryBookcase.next:SetScript("OnClick", function() _addon:ChangeCoreShelf(1) end);
+	LoreLibraryBookcase:SetScript("OnMouseWheel", function(self, delta) _addon:ChangeCoreShelf(-delta) end);
 	LoreLibraryCore.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
 	
+	LoreLibraryListScrollFrame.scrollBar.doNotHide = true;
+	HybridScrollFrame_CreateButtons(LoreLibraryListScrollFrame, "LOLIB_ListBookTemplate", 1, 0);
+	HybridScrollFrame_Update(LoreLibraryListScrollFrame, #LoreList*SIZE_LISTBOOKHEIGHT, LoreLibraryListScrollFrame:GetHeight());
+	
+	LoreLibraryListScrollFrame.update = function() _addon:UpdateBookList() end;
+	
+	local nav = LoreLibraryListInsetRight.navigation;
+	nav.prev:SetScript("OnClick", function() _addon:ChangeDisplayPage(-1) end);
+	nav.next:SetScript("OnClick", function() _addon:ChangeDisplayPage(1) end);
+	LoreLibraryListInsetRight:SetScript("OnMouseWheel", function(self, delta) _addon:ChangeDisplayPage(-delta) end);
+	
+	 _addon:UpdateBookList();
 end
 
 function _addon:InitMap()
@@ -498,14 +673,14 @@ function _addon:InitMap()
 end
 
 function _addon:InitBooks()
-	LoreLibraryCore.books = {{}, {}, {}};
+	LoreLibraryBookcase.books = {{}, {}, {}};
 	--for s = 1, 3 do
 	--	LoreLibraryCore.books[s] = {};
 	--end
 	for s = 1, 3 do
 		for b = 1, 15 do
-			local book = _G["LoreLibraryCoreS" .. s .."B" .. b];
-			LoreLibraryCore.books[s][b] = book;
+			local book = _G["LoreLibraryBookcaseS" .. s .."B" .. b];
+			LoreLibraryBookcase.books[s][b] = book;
 			local width = SIZE_BOOKWIDTH * math.random(90, 100) / 100;
 			book:SetWidth(width);
 			book:SetHeight(SIZE_BOOKHEIGHT * math.random(80, 100) / 100);
@@ -545,6 +720,7 @@ function _addon:SearchChanged(searchBox)
 	if ( oldText ~= LoreLibraryCore.searchString ) then		
 		LoreLibraryCore.currentPage = 1;
 		self:DisplayBooks()
+		self:UpdateBookList();
 	end
 end
 
@@ -630,6 +806,9 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 		v.unlocked = false; --IsInUnlockSave(, k);
 		table.insert(LoreList, v);
 	end
+		for k, v in pairs(LoreLibrary.db.global.unlockedLore) do
+		_addon:UnlockNewLore(k, true);
+	end
 
 	SortLore();
 	_addon:InitCoreFrame();
@@ -640,9 +819,6 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	
 	for k, id in ipairs(AchievementsToCheck) do
 		_addon:CheckWellRead(id);
-	end
-	for k, v in pairs(LoreLibrary.db.global.unlockedLore) do
-		_addon:UnlockNewLore(k);
 	end
 	
 	self:UnregisterEvent("ADDON_LOADED");
