@@ -15,9 +15,23 @@ local defaults = {
 	}
 }
 
+local _filter = {
+			["collected"] = true,
+			["notCollected"] = true,
+			["sources"] = {
+					["Object"] = true,
+					["Quest"] = true,
+					["Drop"] = true,
+					["Container"] = true,
+					["Pickpocket"] = true,
+				}
+			}
+			
+
 local _data = {}
 local unlockedLoreTitles = {};
 local stuff = {};
+
 
 local LoreList = {};
 local BinderTextures = {"Mechanical", "ALLIANCE", "Amber", "FANCY", "HORDE", "NATURAL", "WOOD", "Darkmoon"};
@@ -199,9 +213,11 @@ end
 
 function _addon:UpdateListDisplayNavigation()
 	local display = LoreLibraryListInsetRight;
-	if display.currentLore == nil then return; end;
-
 	local nav = display.navigation;
+
+	if display.currentLore == nil then return; end;
+	nav:Show();
+	
 	local page = display.currentPage;
 	local pages = #display.currentLore.pages;
 	
@@ -298,7 +314,7 @@ function _addon:ChangeDisplayPage(direction)
 	local lastPage = display.currentPage;
 	local lore = display.currentLore;
 	-- prevent page changing for locked lore
-	if not lore.unlocked then return; end 
+	if not lore or not lore.unlocked then return; end 
 	
 	display.currentPage = display.currentPage + direction;
 	display.currentPage = display.currentPage < 1 and 1 or display.currentPage;
@@ -334,7 +350,7 @@ function _addon:OpenBook(lore)
 			local text = location.area;
 			local sourceType = SOURCETYPE_OBJECT;
 			
-			if location.sourceType == "npc" then
+			if location.sourceType == "drop" then
 				texture = "Interface/AddOns/LoreLibrary/Images/icon_NPC";
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 				sourceType = SOURCETYPE_NPC;
@@ -383,21 +399,68 @@ function _addon:UnlockNewLore(title, silent)
 	end
 end
 
+function _addon:HasFilteredSource(lore)
+	for sourceType, fEnabled in pairs(_filter.sources) do
+		if (fEnabled) then
+			for k, location in ipairs(lore.locations) do
+				local loreSource = location.sourceType == nil and "object" or location.sourceType;
+				if (loreSource:lower() == sourceType:lower()) then
+					return true;
+				end
+			end
+		end
+	end
+	
+	return false;
+end
+
 function _addon:GetFilteredList(unlockedFirst)
 	local list = {};
 	local search = LoreLibraryCore.searchString;
 	
-	if (search == nil or search == "") then
+	-- Base list depending on collected or not
+	if (_filter.collected and _filter.notCollected) then
+		-- just copy paste when showing everything
 		list = LoreList;
-	else
+	elseif (_filter.collected) then
 		for k, lore in ipairs(LoreList) do
-			if (string.find(lore.title:lower(), search:lower())) then
+			if (lore.unlocked) then
 				table.insert(list, lore);
 			end
 		end
+	elseif (_filter.notCollected) then
+		for k, lore in ipairs(LoreList) do
+			if (not lore.unlocked) then
+				table.insert(list, lore);
+			end
+		end
+	end
+
+	-- Apply search
+	if (search ~= nil and search ~= "") then
+		local searchList = {}
+		for k, lore in ipairs(list) do
+			if (string.find(lore.title:lower(), search:lower())) then
+				table.insert(searchList, lore);
+			end
+		end
 		
+		list = searchList;
 	end
 	
+	-- Apply filters
+	local sourcelist = {}
+	
+	for lk, lore in ipairs(list) do
+		if (self:HasFilteredSource(lore)) then
+			table.insert(sourcelist, lore);
+		end
+		
+	end
+	list = sourcelist;
+	
+	
+	-- Sort the list
 	if (unlockedFirst) then
 		SortLoreUnlockFirst(list);
 	else
@@ -533,7 +596,7 @@ function _addon:UpdateBookDisplay(lore)
 			local text = location.area;
 			local sourceType = SOURCETYPE_OBJECT;
 			
-			if location.sourceType == "npc" then
+			if location.sourceType == "drop" then
 				texture = "Interface/AddOns/LoreLibrary/Images/icon_NPC";
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 				sourceType = SOURCETYPE_NPC;
@@ -613,6 +676,80 @@ function LOLIB_ListBook_OnClick(self, button)
 	end
 end
 
+function _addon:SetAllSourcesTo(enable)
+	for k, v in pairs(_filter.sources) do
+			_filter.sources[k] = enable;
+	end
+end
+
+function _addon:InitFilter(self, level)
+	local info = UIDropDownMenu_CreateInfo();
+	info.keepShownOnClick = true;	
+
+	if level == 1 then
+		info.text = COLLECTED;
+		info.func = function(_, _, _, value)
+						_filter.collected = value;
+						_addon:UpdateBookList();
+					end 
+		info.checked = _filter.collected;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+
+		info.text = NOT_COLLECTED;
+		info.func = function(_, _, _, value)
+						_filter.notCollected = value;
+						_addon:UpdateBookList();
+					end 
+		info.checked = _filter.notCollected;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+	
+		info.checked = 	nil;
+		info.isNotRadio = nil;
+		info.func =  nil;
+		info.hasArrow = true;
+		info.notCheckable = true;
+		
+		info.text = SOURCES;
+		info.value = 1;
+		UIDropDownMenu_AddButton(info, level)
+	else --if level == 2 then
+		
+		info.hasArrow = false;
+		info.isNotRadio = true;
+		info.notCheckable = true;
+			
+		info.text = CHECK_ALL
+		info.func = function()
+						_addon:SetAllSourcesTo(true);
+						UIDropDownMenu_Refresh(LoreLibraryCoreFilterDropDown, 1, 2);
+						_addon:UpdateBookList();
+					end
+		UIDropDownMenu_AddButton(info, level)
+		
+		info.text = UNCHECK_ALL
+		info.func = function()
+						_addon:SetAllSourcesTo(false);
+						UIDropDownMenu_Refresh(LoreLibraryCoreFilterDropDown, 1, 2);
+						_addon:UpdateBookList();
+					end
+		UIDropDownMenu_AddButton(info, level)
+
+		
+		info.notCheckable = false;
+		for k, v in pairs(_filter.sources) do
+			info.text = k;
+			info.func = function(_, _, _, value)
+								_filter.sources[k] = value;
+								_addon:UpdateBookList();
+							end
+			info.checked = function() return _filter.sources[k] end;
+			UIDropDownMenu_AddButton(info, level);			
+		end
+	end
+end
+
 function _addon:InitCoreFrame()
 	LoreLibraryBookcase.prev:Disable();
 	LoreLibraryBookcase.currentPage = 1;
@@ -633,7 +770,11 @@ function _addon:InitCoreFrame()
 	nav.next:SetScript("OnClick", function() _addon:ChangeDisplayPage(1) end);
 	LoreLibraryListInsetRight:SetScript("OnMouseWheel", function(self, delta) _addon:ChangeDisplayPage(-delta) end);
 	
-	 _addon:UpdateBookList();
+	self:UpdateBookList();
+	
+	UIDropDownMenu_Initialize(LoreLibraryCoreFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
+	
+	
 end
 
 function _addon:InitMap()
