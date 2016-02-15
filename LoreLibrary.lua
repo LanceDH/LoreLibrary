@@ -228,7 +228,7 @@ function _addon:ChangeDisplayPage(direction)
 	
 	if display.currentPage ~= lastPage then
 		display.pageText:SetText(self:FilterPageText(lore.pages[display.currentPage]));
-		PlaySound("SPELLBOOKCHANGEPAGE");
+		PlaySound("igAbiliityPageTurn");
 	end
 	
 	self:UpdateListDisplayNavigation();
@@ -387,7 +387,7 @@ function _addon:UpdateBookDisplay(lore)
 	
 	self:UpdateListDisplayNavigation();
 	
-	PlaySound("igSpellBookOpen");
+	display.soundHandle = select(2, PlaySound("igSpellBookOpen"));
 end
 
 function _addon:UpdateBookList()
@@ -685,8 +685,10 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 LASH_LOLIBSLASH1 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	if msg == 'log' then
-
+	if msg == 'cheats' then
+		for k, l in ipairs(LoreList) do
+			l.unlocked = true;
+		end
 	else
 		if LoreLibraryCore:IsShown() then
 			LoreLibraryCore:Hide();
