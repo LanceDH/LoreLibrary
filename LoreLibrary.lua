@@ -30,24 +30,11 @@ local _filter = {
 
 local _data = {}
 local unlockedLoreTitles = {};
-local stuff = {};
-
-
 local LoreList = {};
-local BinderTextures = {"Mechanical", "ALLIANCE", "Amber", "FANCY", "HORDE", "NATURAL", "WOOD", "Darkmoon"};
 local _playerName = GetUnitName("player", false);
 local _playerClass = UnitClass("player");
 local _playerSex = UnitSex("player");
-
-local BookColors = {
-		{["name"] = "LOCKED", ["r"] = 0.35, ["g"] = 0.35, ["b"] = 0.35},
-		{["name"] = "DARKBLUE", ["r"] = 0.15, ["g"] = 0.15, ["b"] = 0.5},
-		{["name"] = "GREEN", ["r"] = 0.15, ["g"] = 0.5, ["b"] = 0.15},
-		{["name"] = "RED", ["r"] = 0.5, ["g"] = 0.15, ["b"] = 0.15},
-		{["name"] = "BLACK", ["r"] = 0.15, ["g"] = 0.15, ["b"] = 0.15},
-		{["name"] = "BROWN", ["r"] = 0.36, ["g"] = 0.25, ["b"] = 0.2},
-		
-	}
+local _openedDuringCombat = false;
 	
 local AchievementsToCheck = {
 		1244 -- Well Read
@@ -60,33 +47,24 @@ local AchievementsToCheck = {
 		,6857 -- Heart of the Mantid Swarm
 		,6856 -- Ballad of Liu Lang
 		,7230 -- Legend of the Brewfathers
-		,7230 -- Legend of the Brewfathers
 	}
 
 local FORMAT_LORE_UNLOCK = "LoreLibrary added: %s";
 local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
-local SIZE_BOOKWIDTH = 210;
-local SIZE_TITLEWIDTH_MAX = 150;
-local SIZE_TITLEWIDTH_MIN = 75;
-local SIZE_BOOKHEIGHT = 29;
 local SIZE_LISTBOOKHEIGHT = 40;
-local MAX_SHELVES = 3;
-local MAX_BOOKS_PER_SHELF = 15;
-local MAX_SOURCES = 8;
+local MAX_SOURCES = 9;
 local SOURCETYPE_OBJECT = "Object found in this area.";
 local SOURCETYPE_NPC = "Can drop from this npc.";
 local SOURCETYPE_CONTAINER = "Can be found in this container.";
 local SOURCETYPE_STEALTH = "Can pickpocket from this npc.";
 local SOURCETYPE_QUEST = "Obtained during a quest.";
+local ERROR_OPEN_IN_COMBAT = "|cFFFFD100LoLib:|r |cFFFF5555Can't open that during combat. It will open once you leave combat.|r";
 
 local function SortLore(list) 
 	if list == nil then list = LoreList; end
 	table.sort(list, function(a, b) 
-		--if (a.unlocked and b.unlocked) or (not a.unlocked and not b.unlocked) then
 			return a.title < b.title;
-		--end
-		--return (a.unlocked and not b.unlocked);
 	end);
 end
 
@@ -189,28 +167,6 @@ function _addon:UpdateProgressBar()
 	LoreLibraryCore.progressBar.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
 end
 
-function _addon:UpdateBookNavigation()
-	if LoreLibraryBook.currentLore == nil then return; end;
-
-	local nav = LoreLibraryBook.navigation;
-	local page = LoreLibraryBook.currentPage;
-	local pages = #LoreLibraryBook.currentLore.pages;
-	
-	nav.prev:Disable();
-	nav.next:Disable();
-
-	
-	if LoreLibraryBook.currentLore.unlocked and page > 1 then
-		nav.prev:Enable();
-	end
-	
-	if LoreLibraryBook.currentLore.unlocked and page < pages then
-		nav.next:Enable();
-	end
-	
-	nav.text:SetText("Page ".. page);
-end
-
 function _addon:UpdateListDisplayNavigation()
 	local display = LoreLibraryListInsetRight;
 	local nav = display.navigation;
@@ -236,38 +192,6 @@ function _addon:UpdateListDisplayNavigation()
 	nav.text:SetText("Page ".. page);
 end
 
-function _addon:UpdateShelfNavigation()
-	local page = LoreLibraryBookcase.currentPage;
-	-- total shelves - 2 because we show 3 shelves;
- 	local limit = math.ceil(#LoreLibraryBookcase.displayList / MAX_BOOKS_PER_SHELF) - 2;
-	
-	LoreLibraryBookcase.prev:Disable();
-	LoreLibraryBookcase.next:Disable();
-	
-	if page > 1 then
-		LoreLibraryBookcase.prev:Enable();
-	end
-	
-	if page < limit then
-		LoreLibraryBookcase.next:Enable();
-	end
-end
-
-function _addon:ChangeCoreShelf(direction)
-	local limit = math.ceil(#LoreLibraryBookcase.displayList / MAX_BOOKS_PER_SHELF) - 2;
-	local lastPage = LoreLibraryBookcase.currentPage;
-	local lore = LoreLibraryBookcase.currentLore;
-	LoreLibraryBookcase.currentPage = LoreLibraryBookcase.currentPage + direction;
-	LoreLibraryBookcase.currentPage = LoreLibraryBookcase.currentPage < 1 and 1 or LoreLibraryBookcase.currentPage;
-	LoreLibraryBookcase.currentPage = LoreLibraryBookcase.currentPage > limit and limit or LoreLibraryBookcase.currentPage;
-	
-	if LoreLibraryBookcase.currentPage ~= lastPage then
-		self:DisplayBooks();
-	end
-	
-	self:UpdateShelfNavigation();
-end
-
 function _addon:FilterPageText(text)
 
 	-- < and >
@@ -291,24 +215,6 @@ function _addon:FilterPageText(text)
 	return text;
 end
 
-function _addon:ChangeBookPage(direction)
-	
-	local lastPage = LoreLibraryBook.currentPage;
-	local lore = LoreLibraryBook.currentLore;
-	-- prevent page changing for locked lore
-	if not lore.unlocked then return; end 
-	
-	LoreLibraryBook.currentPage = LoreLibraryBook.currentPage + direction;
-	LoreLibraryBook.currentPage = LoreLibraryBook.currentPage < 1 and 1 or LoreLibraryBook.currentPage;
-	LoreLibraryBook.currentPage = LoreLibraryBook.currentPage > #lore.pages and #lore.pages or LoreLibraryBook.currentPage;
-	
-	if LoreLibraryBook.currentPage ~= lastPage then
-		LoreLibraryBook.pageText:SetText(self:FilterPageText(lore.pages[LoreLibraryBook.currentPage]));
-	end
-	
-	self:UpdateBookNavigation();
-end
-
 function _addon:ChangeDisplayPage(direction)
 	local display = LoreLibraryListInsetRight;
 	local lastPage = display.currentPage;
@@ -322,69 +228,10 @@ function _addon:ChangeDisplayPage(direction)
 	
 	if display.currentPage ~= lastPage then
 		display.pageText:SetText(self:FilterPageText(lore.pages[display.currentPage]));
+		PlaySound("SPELLBOOKCHANGEPAGE");
 	end
 	
 	self:UpdateListDisplayNavigation();
-end
-
-function _addon:OpenBook(lore)
-	LoreLibraryOverlay:Show();
-	
-	LoreLibraryBook.currentLore = lore;
-	LoreLibraryBook.currentPage = 1;
-	LoreLibraryBook.TitleText:SetText(lore.title);
-	
-	for i = 1, MAX_SOURCES do
-	    local button = LoreLibraryBook.sources["s"..i];
-		button:Hide();
-	end	
-	
-	if (lore.unlocked) then
-		LoreLibraryBook.pageText:SetText(self:FilterPageText(lore.pages[1]));
-	else
-		local locationString = "<HTML><BODY><BR/><P align=\"center\">This lore can be found in:</P><BR/></BODY></HTML>";
-		for k, location in ipairs(lore.locations) do
-			local button = LoreLibraryBook.sources["s"..k];
-			button:Show();
-			local texture = "Interface/AddOns/LoreLibrary/Images/icon_Object";
-			local text = location.area;
-			local sourceType = SOURCETYPE_OBJECT;
-			
-			if location.sourceType == "drop" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_NPC";
-				text = string.format(FORMAT_SOURCE, location.source, location.area);
-				sourceType = SOURCETYPE_NPC;
-			elseif location.sourceType == "container" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Container";
-			    text = location.source;
-			    sourceType = SOURCETYPE_CONTAINER;
-			elseif location.sourceType == "pickpocket" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Stealth";
-			    text = string.format(FORMAT_SOURCE, location.source, location.area);
-			    sourceType = SOURCETYPE_STEALTH;
-			elseif location.sourceType == "quest" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Quest";
-				text = string.format(FORMAT_SOURCE, location.source, location.area);
-				if (location.level == "A") then
-					--text = string.format(FORMAT_SOURCE, "|TInterface/WORLDSTATEFRAME/AllianceIcon:16|t " .. location.source, location.area);
-					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Alliance-Logo:20|t" .. location.source, location.area);
-				elseif  (location.level == "H") then
-					--text = string.format(FORMAT_SOURCE, "|TInterface/WORLDSTATEFRAME/HordeIcon:16|t " .. location.source, location.area);
-					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Horde-Logo:20|t" .. location.source, location.area);
-				end
-			    
-			    sourceType = SOURCETYPE_QUEST;
-			end
-			
-			button.icon:SetNormalTexture(texture);
-			button.icon.sourceType = sourceType;
-			button.text:SetText(text);
-		end
-	
-		LoreLibraryBook.pageText:SetText(locationString);
-	end
-	
-	self:UpdateBookNavigation();
 end
 
 function _addon:UnlockNewLore(title, silent)
@@ -394,7 +241,6 @@ function _addon:UnlockNewLore(title, silent)
 	unlockedLoreTitles[title] = true;
 	SortLore();
 	if not silent then
-		self:DisplayBooks()
 		self:UpdateBookList()
 	end
 end
@@ -470,98 +316,7 @@ function _addon:GetFilteredList(unlockedFirst)
 	return list;
 end
 
-function _addon:BookLooksFromTitle(data)
-	local byteTitle = 0;
-	-- at most 20 chars to keep 'part x' the same
-	local length = data.title:len() > 20 and 20 or data.title:len();
-
-	for i = 1, length do
-		byteTitle = byteTitle + string.byte(data.title, i);
-	end
-	
-	local perc = byteTitle % 21;
-	
-	return (100-perc)/100, (100-(perc/2))/100, BookColors[2 + (byteTitle%(#BookColors-1))];
-	
-end
-
-function _addon:DisplayBooks()
-	LoreLibraryBookcase.s1.nr:SetText(LoreLibraryBookcase.currentPage);
-	LoreLibraryBookcase.s2.nr:SetText(LoreLibraryBookcase.currentPage+1);
-	LoreLibraryBookcase.s3.nr:SetText(LoreLibraryBookcase.currentPage+2);
-	
-	self:UpdateProgressBar();
-
-	_addon:HideAllBooks();
-	local list = _addon:GetFilteredList();
-	LoreLibraryBookcase.displayList = list;
-	local count = 1;
-	local s = 1;
-	local b = 1;
-	local book = nil;
-	local color = nil;
-	local totalBooks = MAX_SHELVES * MAX_BOOKS_PER_SHELF;
-	local start = (LoreLibraryBookcase.currentPage-1) * MAX_BOOKS_PER_SHELF + 1;
-	local bookData = nil;
-	local prec = nil;
-	local fixedLastStack = false;
-	
-	for i = start, start + totalBooks-1 do
-		bookData = list[i];
-		if bookData == nil then break; end
-		--if totalBooks - i < 5 and #list - totalBooks > 0 and not fixedLastStack then
-		--	print(totalBooks - i);
-		--end
-		
-		s = math.ceil(count / MAX_BOOKS_PER_SHELF);
-		b = count % MAX_BOOKS_PER_SHELF;
-		b = (b == 0 and 15 or b);
-		book = LoreLibraryBookcase.books[s][b];
-		book.data = bookData;
-		book:Show();
-		book.title:SetFontObject((bookData.unlocked) and "GameFontNormalSmall" or "GameFontDisableSmall");
-		book.title:SetWidth(0);
-		book.title:SetText(bookData.title);
-		
-		hperc, wperc, color = _addon:BookLooksFromTitle(bookData);
-		
-		book:SetWidth(SIZE_BOOKWIDTH * wperc);
-		book:SetHeight(SIZE_BOOKHEIGHT * hperc);
-		if (book.title:GetWidth() > SIZE_TITLEWIDTH_MAX) then
-			book.title:SetWidth(SIZE_TITLEWIDTH_MAX);
-			book:SetHeight(SIZE_BOOKHEIGHT);
-		elseif (book.title:GetWidth() < SIZE_TITLEWIDTH_MIN) then
-			book.title:SetWidth(SIZE_TITLEWIDTH_MIN);
-		end
-		
-		--local rngBinder = math.random(1, #BinderTextures);
-		--book.binderLeft:SetTexture("Interface/PLAYERACTIONBARALT/" .. BinderTextures[rngBinder]);
-		--book.binderRight:SetTexture("Interface/PLAYERACTIONBARALT/" .. BinderTextures[rngBinder]);
-		
-		book.binderLeft:SetDesaturated(not bookData.unlocked);
-		book.binderRight:SetDesaturated(not bookData.unlocked);
-		
-		-- not unlocked? use grey
-		color = bookData.unlocked == true and color or BookColors[1];
-		book.bg:SetVertexColor(color.r, color.g, color.b);
-		
-		count = count + 1;
-	end
-	
-	self:UpdateShelfNavigation();
-end
-
-function _addon:HideAllBooks()
-	for s = 1, 3 do
-		for b = 1, 15 do
-			book = LoreLibraryBookcase.books[s][b];
-			book:Hide();
-			book:SetHeight(0.1);
-		end
-	end
-end
-
-function _addon:CheckWellRead(id)
+function _addon:CheckAchievementProgress(id)
 	local _, _, _, overallCompleted = GetAchievementInfo(id);
 	for i=2, GetAchievementNumCriteria(id) do 
 		local description, _, completed = GetAchievementCriteriaInfo(id, i);
@@ -631,6 +386,8 @@ function _addon:UpdateBookDisplay(lore)
 	end
 	
 	self:UpdateListDisplayNavigation();
+	
+	PlaySound("igSpellBookOpen");
 end
 
 function _addon:UpdateBookList()
@@ -662,6 +419,8 @@ function _addon:UpdateBookList()
 	end
 	
 	HybridScrollFrame_Update(scrollFrame, #list * SIZE_LISTBOOKHEIGHT, scrollFrame:GetHeight());
+	
+	_addon:UpdateProgressBar();
 end
 
 function LOLIB_ListBook_OnClick(self, button)
@@ -671,7 +430,6 @@ function LOLIB_ListBook_OnClick(self, button)
 			LoreLibraryListInsetRight.currentPage = 1;
 			_addon:UpdateBookDisplay(self.lore);
 			_addon:UpdateBookList();
-			
 		end
 	end
 end
@@ -750,13 +508,18 @@ function _addon:InitFilter(self, level)
 	end
 end
 
+function _addon:ShowMainFrame()
+	-- prevent opening in combat because blizzard protection
+	if InCombatLockdown() then 
+		_openedDuringCombat = true;
+		print(ERROR_OPEN_IN_COMBAT);
+		return;
+	else
+		LoreLibraryCore:Show();
+	end
+end
+
 function _addon:InitCoreFrame()
-	LoreLibraryBookcase.prev:Disable();
-	LoreLibraryBookcase.currentPage = 1;
-	
-	LoreLibraryBookcase.prev:SetScript("OnClick", function() _addon:ChangeCoreShelf(-1) end);
-	LoreLibraryBookcase.next:SetScript("OnClick", function() _addon:ChangeCoreShelf(1) end);
-	LoreLibraryBookcase:SetScript("OnMouseWheel", function(self, delta) _addon:ChangeCoreShelf(-delta) end);
 	LoreLibraryCore.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
 	
 	LoreLibraryListScrollFrame.scrollBar.doNotHide = true;
@@ -773,8 +536,6 @@ function _addon:InitCoreFrame()
 	self:UpdateBookList();
 	
 	UIDropDownMenu_Initialize(LoreLibraryCoreFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
-	
-	
 end
 
 function _addon:InitMap()
@@ -813,45 +574,6 @@ function _addon:InitMap()
 								
 end
 
-function _addon:InitBooks()
-	LoreLibraryBookcase.books = {{}, {}, {}};
-	--for s = 1, 3 do
-	--	LoreLibraryCore.books[s] = {};
-	--end
-	for s = 1, 3 do
-		for b = 1, 15 do
-			local book = _G["LoreLibraryBookcaseS" .. s .."B" .. b];
-			LoreLibraryBookcase.books[s][b] = book;
-			local width = SIZE_BOOKWIDTH * math.random(90, 100) / 100;
-			book:SetWidth(width);
-			book:SetHeight(SIZE_BOOKHEIGHT * math.random(80, 100) / 100);
-			--book:SetHeight(SIZE_BOOKHEIGHT);
-			--local space = SIZE_BOOKWIDTH - width;
-			--if(space > 2 and b ~= 1 and b ~= 6 and b ~= 11) then
-			--	local point, relativeTo, relativePoint = book:GetPoint(1)
-			--	local offset = math.random(space) - space / 2;
-			--	book:SetPoint(point, relativeTo, relativePoint, offset, 0);
-			--end
-			book.title:SetText("Shelf " .. s .. " book " .. b);
-			
-			book:SetScript("OnClick", function() _addon:OpenBook(book.data); end);
-		end
-	end
-	
-	self:HideAllBooks();
-end
-
-function _addon:InitLoreBook()
-	local nav = LoreLibraryBook.navigation;
-	LoreLibraryBook.currentPage = 1;
-	self:UpdateBookNavigation();
-	
-	nav.prev:SetScript("OnClick", function() _addon:ChangeBookPage(-1) end);
-	nav.next:SetScript("OnClick", function() _addon:ChangeBookPage(1) end);
-	LoreLibraryBook:SetScript("OnMouseWheel", function(self, delta) _addon:ChangeBookPage(-delta) end);
-
-end
-
 function _addon:SearchChanged(searchBox)
 	SearchBoxTemplate_OnTextChanged(searchBox);
 	
@@ -860,31 +582,25 @@ function _addon:SearchChanged(searchBox)
 	
 	if ( oldText ~= LoreLibraryCore.searchString ) then		
 		LoreLibraryCore.currentPage = 1;
-		self:DisplayBooks()
 		self:UpdateBookList();
 	end
 end
 
 function LoreLibrary:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("LoLibDB", defaults, true);
-	
-	
-	--
-	--
 end
 
 function LoreLibrary:OnEnable()
 	LoreLibrary.db.global.unlockedLore = unlockedLoreTitles;
-	--_addon:AddUnlockedToDB();
 end
 
 _addon.events = CreateFrame("FRAME", "LoLib_EventFrame"); 
 _addon.events:RegisterEvent("ITEM_TEXT_BEGIN");
-_addon.events:RegisterEvent("ITEM_TEXT_READY");
 _addon.events:RegisterEvent("ADDON_LOADED");
-_addon.events:RegisterEvent("PLAYER_LOGOUT");
 _addon.events:RegisterEvent("WORLD_MAP_UPDATE");
 _addon.events:RegisterEvent("PLAYER_LOGIN");
+_addon.events:RegisterEvent("PLAYER_REGEN_DISABLED");
+_addon.events:RegisterEvent("PLAYER_REGEN_ENABLED");
 _addon.events:SetScript("OnEvent", function(self, event, ...) self[event](self, ...) end)
 
 function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
@@ -899,12 +615,6 @@ function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)
 	if _data["" .. ItemTextGetItem()] and not _data["" .. ItemTextGetItem()].unlocked then
 		_addon:UnlockNewLore(ItemTextGetItem())
 	end
-end
-
-function _addon.events:ITEM_TEXT_READY(loaded_addon)
-	--if (stuff["" .. ItemTextGetItem()]) then
-	--	stuff["" .. ItemTextGetItem()].pages[ItemTextGetPage()] = ItemTextGetText();
-	--end
 end
 
 local function IsInUnlockSave(list, title)
@@ -927,20 +637,6 @@ end
 function _addon.events:ADDON_LOADED(loaded_addon)
 	if (loaded_addon ~= _addonName) then return; end
 	_data = _addon.data;
-	
-	--[[
-	if(LoLib_Lore) then
-		for k, v in pairs(LoLib_Lore.unlocked) do
-			print(v);
-		end
-	
-		for k, v in pairs(_data) do
-			v.title = k;
-			v.unlocked = IsInUnlockSave(LoLib_Lore.unlocked, k);
-			table.insert(LoreList, v);
-		end
-	end
-	]]--
 
 	for k, v in pairs(_data) do
 		v.title = k;
@@ -953,13 +649,10 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 
 	SortLore();
 	_addon:InitCoreFrame();
-	_addon:InitLoreBook();
-	_addon:InitBooks();
 	_addon:InitMap();
-	_addon:DisplayBooks();
 	
 	for k, id in ipairs(AchievementsToCheck) do
-		_addon:CheckWellRead(id);
+		_addon:CheckAchievementProgress(id);
 	end
 	
 	self:UnregisterEvent("ADDON_LOADED");
@@ -973,57 +666,33 @@ function _addon.events:PLAYER_LOGIN(loaded_addon)
 end
 
 function _addon.events:PLAYER_LOGOUT(loaded_addon)
-	--for k, v in pairs(stuff) do 
-	--	LoLib_books[k] = v;
-	--end
-	--LoLib_Lore = {};
-	--LoLib_Lore.unlocked = {};
-	--for k, v in pairs(LoreList) do
-	--	if v.unlocked then
-	--		table.insert(LoLib_Lore.unlocked, v.title);
-	--	end
-	--end
-	--LoLib_Lore.gotIt = stuff;
+
+end
+
+function _addon.events:PLAYER_REGEN_DISABLED()
+	LoreLibraryCore:Hide();
+end
+
+function _addon.events:PLAYER_REGEN_ENABLED()
+	
+	if _openedDuringCombat then
+		_addon:ShowMainFrame();
+		_openedDuringCombat = false;
+	end
 end
 
 
-
-
 SLASH_LOLIBSLASH1 = '/lolib';
+LASH_LOLIBSLASH1 = '/lorelibrary';
 local function slashcmd(msg, editbox)
 	if msg == 'log' then
-		print("Unlocked Lore");
-		for k, v in pairs(LoreList)do
-			local lore = _data[k];
-			if lore == nil then
-				print("Unknown lore for " .. k);
-			else
-				print(k .. ": " .. #lore.pages .." pages");
-			end
-		end
-	elseif msg == 'list' then
-		for i = 1, 64 do
-		
-			print(i%5 .. " - " .. (i*i)%8);
-		end
-		
-	elseif msg == 'info' then
-		_addon:CheckWellRead();
-	
-	elseif msg == 'o' then
-		print(ItemTextGetText());
-	
+
 	else
 		if LoreLibraryCore:IsShown() then
 			LoreLibraryCore:Hide();
 		else
-			LoreLibraryCore:Show();
+			_addon:ShowMainFrame();
 		end
-		--if ( not InterfaceOptionsFramePanelContainer.displayedPanel ) then
-		--	InterfaceOptionsFrame_OpenToCategory(CONTROLS_LABEL);
-		--end
-		--InterfaceOptionsFrame_OpenToCategory(_addonName) 
-	  
    end
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd
