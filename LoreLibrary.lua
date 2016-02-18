@@ -125,14 +125,14 @@ function _addon:IsValidLocationForMap(location)
 
 end
 
-function _addon:LorePiecesInMap(area) 
+function _addon:LorePiecesInMap() 
 	-- reset pins
 	for k, pin in ipairs(LoreLibraryMap.pins) do
 		pin:Hide();
 		pin.lore = nil;
 	end
-
-	if (area == nil or not LoreLibraryMap.pinsEnabled) then return; end
+	local areaId = GetCurrentMapAreaID();
+	if (areaId == nil or not LoreLibraryMap.pinsEnabled) then return; end
 
 	local level = GetCurrentMapDungeonLevel();
 	local levelLore = {};
@@ -141,7 +141,7 @@ function _addon:LorePiecesInMap(area)
 	local new = {};
 	for k, lore in pairs(_data) do
 		for kl, loc in ipairs(lore.locations) do
-			if (loc.sourceType == nil or loc.sourceType == "chest") and string.lower(loc.area) == string.lower(area)  then
+			if (loc.sourceType == nil or loc.sourceType == "chest") and loc.areaId == areaId  then
 				-- If it's the same area, this location becomes the lore's point of interest
 				lore.poi = loc;
 				countAll = countAll + 1;
@@ -592,6 +592,39 @@ function _addon:InitCoreFrame()
 	UIDropDownMenu_Initialize(LoreLibraryCoreFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
 end
 
+function _addon:CreatePinAnimation(self)
+	self.animationA = self.glow:CreateAnimationGroup();
+	self.animationA.alpha = self.animationA:CreateAnimation("ROTATION");
+	self.animationA.alpha:SetRadians(2*math.pi);
+	self.animationA.alpha:SetSmoothing("NONE");
+	self.animationA:SetLooping("REPEAT")
+end
+
+--[[
+function _addon:CreatePinAnimation(self)
+	self.animationA = self.glow:CreateAnimationGroup();
+	self.animationA.alpha = self.animationA:CreateAnimation("Alpha");
+	self.animationA.alpha:SetChange(-1);
+	self.animationA.alpha:SetSmoothing("NONE");
+	self.animationA:SetLooping("BOUNCE")
+end
+]]--
+
+function _addon:PlayPinAnimations()
+	for k, pin in ipairs(LoreLibraryMap.pins) do
+		pin.glow:Show();
+		pin.animationA.alpha:SetDuration(2);
+		pin.animationA:Play(true);
+	end
+end
+
+function _addon:StopPinAnimations()
+	for k, pin in ipairs(LoreLibraryMap.pins) do
+		pin.glow:Hide();
+		pin.animationA:Stop();
+	end
+end
+
 function _addon:InitMap()
 	LoreLibraryMap.pins = {};
 	LoreLibraryMap.pinsEnabled = true;
@@ -600,6 +633,7 @@ function _addon:InitMap()
 		local pin = CreateFrame("FRAME", nil, LoreLibraryMap, "LOLIB_MapPinTemplate");
 		pin:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", i * 20, -20);
 		pin:Hide();
+		self:CreatePinAnimation(pin);
 		table.insert(LoreLibraryMap.pins, pin)
 	end
 	
@@ -610,13 +644,17 @@ function _addon:InitMap()
 									GameTooltip:AddDoubleLine("Total", LoreLibraryMap.progressBar.maxProg ,1 ,1 ,1 ,1 ,1 ,1);
 									GameTooltip:AddDoubleLine("Pins", LoreLibraryMap.pinsEnabled and "Enabled" or "Disabled",1 ,1 ,1 ,1 ,1 ,1);
 									GameTooltip:Show();
+									
+									_addon:PlayPinAnimations();
 								end)
 	LoreLibraryMap.progressBar.button:SetScript("OnLeave", function(self) 
 									GameTooltip:Hide();
+									
+									_addon:StopPinAnimations();
 								end)		
 	LoreLibraryMap.progressBar.button:SetScript("OnClick", function(self) 
 									LoreLibraryMap.pinsEnabled = not LoreLibraryMap.pinsEnabled;
-									_addon:LorePiecesInMap(GetMapNameByID(GetCurrentMapAreaID()));
+									_addon:LorePiecesInMap();
 									
 									GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
 									GameTooltip:SetText("Lore Library");
@@ -665,7 +703,7 @@ _addon.events:SetScript("OnEvent", function(self, event, ...) self[event](self, 
 function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
 	-- Only update when map is visible
 	if WorldMapFrame:IsShown() then
-		_addon:LorePiecesInMap(GetMapNameByID(GetCurrentMapAreaID()));
+		_addon:LorePiecesInMap();
 	end
 end
 
