@@ -10,9 +10,13 @@
 		<Size x="16" y="16"/>
 		<Layers>
 			<Layer level="ARTWORK">
+			
+				<Texture parentKey="tex" file="Interface\AddOns\LoreLibrary\Images\icon_Object" />
+				<!--
 				<Texture parentKey="tex" file="Interface\MINIMAP\ObjectIcons">
 					<TexCoords left="0.125" right="0.25" top="0.375" bottom="0.5"/>
 				</Texture>
+				-->
 			</Layer>
 			
 		</Layers>

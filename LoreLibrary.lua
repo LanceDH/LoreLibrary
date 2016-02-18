@@ -24,10 +24,13 @@ local _filter = {
 					["Drop"] = true,
 					["Container"] = true,
 					["Pickpocket"] = true,
+					["Vendor"] = true,
+					["Chest"] = true,
+					["Unavailable"] = false,
 				}
 			}
 			
-
+local _completedQuests = nil;
 local _data = {}
 local unlockedLoreTitles = {};
 local LoreList = {};
@@ -59,6 +62,9 @@ local SOURCETYPE_NPC = "Can drop from this npc.";
 local SOURCETYPE_CONTAINER = "Can be found in this container.";
 local SOURCETYPE_STEALTH = "Can pickpocket from this npc.";
 local SOURCETYPE_QUEST = "Obtained during a quest.";
+local SOURCETYPE_VENDOR = "Sold by a vendor.";
+local SOURCETYPE_CHEST = "Found in a type of chest.";
+local SOURCETYPE_UNAVAILABLE = "Can no longer be obtained.";
 local ERROR_OPEN_IN_COMBAT = "|cFFFFD100LoLib:|r |cFFFF5555Can't open that during combat. It will open once you leave combat.|r";
 
 local function SortLore(list) 
@@ -106,8 +112,17 @@ function _addon:ShowLoreMapPins(list)
 			pin:ClearAllPoints();
 			pin:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", width * (lore.poi.x/100), -height * (lore.poi.y/100));
 			pin:Show();
+			if lore.poi.sourceType == "chest" then
+				pin.tex:SetTexture("Interface/AddOns/LoreLibrary/Images/icon_Chest");
+			else
+				pin.tex:SetTexture("Interface/AddOns/LoreLibrary/Images/icon_Object");
+			end
 		end
 	end
+end
+
+function _addon:IsValidLocationForMap(location) 
+
 end
 
 function _addon:LorePiecesInMap(area) 
@@ -126,7 +141,7 @@ function _addon:LorePiecesInMap(area)
 	local new = {};
 	for k, lore in pairs(_data) do
 		for kl, loc in ipairs(lore.locations) do
-			if loc.sourceType == nil and string.lower(loc.area) == string.lower(area)  then
+			if (loc.sourceType == nil or loc.sourceType == "chest") and string.lower(loc.area) == string.lower(area)  then
 				-- If it's the same area, this location becomes the lore's point of interest
 				lore.poi = loc;
 				countAll = countAll + 1;
@@ -235,12 +250,11 @@ function _addon:ChangeDisplayPage(direction)
 end
 
 function _addon:UnlockNewLore(title, silent)
-	print(FORMAT_LORE_UNLOCK:format(title));
-	
 	_data[title].unlocked = true;
 	unlockedLoreTitles[title] = true;
 	SortLore();
 	if not silent then
+		print(FORMAT_LORE_UNLOCK:format(title));
 		self:UpdateBookList()
 	end
 end
@@ -316,6 +330,34 @@ function _addon:GetFilteredList(unlockedFirst)
 	return list;
 end
 
+function _addon:LoreQuestCompleted(lore)
+	for k, loc in ipairs(lore.locations) do
+		if (loc.sourceType == "quest") then 
+			--print(_completedQuests[loc.id]); 
+		if (_completedQuests[loc.id]) then
+			return true;
+		end
+		end
+	end
+	
+	return false;
+end
+
+function _addon:ProcessQuests()
+	-- load all completed quests
+	if (_completedQuests == nil) then
+		_completedQuests = GetQuestsCompleted();
+	end
+	
+	for k, lore in ipairs(LoreList) do
+		if self:LoreQuestCompleted(lore) then
+			self:UnlockNewLore(lore.title, true);
+		end
+	end
+	
+	self:UpdateBookList()
+end
+
 function _addon:CheckAchievementProgress(id)
 	local _, _, _, overallCompleted = GetAchievementInfo(id);
 	for i=2, GetAchievementNumCriteria(id) do 
@@ -363,6 +405,18 @@ function _addon:UpdateBookDisplay(lore)
 				texture = "Interface/AddOns/LoreLibrary/Images/icon_Stealth";
 			    text = string.format(FORMAT_SOURCE, location.source, location.area);
 			    sourceType = SOURCETYPE_STEALTH;
+			elseif location.sourceType == "vendor" then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Vendor";
+			    text = string.format(FORMAT_SOURCE, location.source, location.area);
+			    sourceType = SOURCETYPE_VENDOR;
+			elseif location.sourceType == "chest" then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Chest";
+			    text = string.format(FORMAT_SOURCE, location.source, location.area);
+			    sourceType = SOURCETYPE_CHEST;
+			elseif location.sourceType == "unavailable" then
+				texture = "Interface/AddOns/LoreLibrary/Images/icon_Unavailable";
+			    text = "This lore no longer has any\n available sources.";
+			    sourceType = SOURCETYPE_UNAVAILABLE;
 			elseif location.sourceType == "quest" then
 				texture = "Interface/AddOns/LoreLibrary/Images/icon_Quest";
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
@@ -592,6 +646,11 @@ end
 
 function LoreLibrary:OnEnable()
 	LoreLibrary.db.global.unlockedLore = unlockedLoreTitles;
+	
+	for k, id in ipairs(AchievementsToCheck) do
+		_addon:CheckAchievementProgress(id);
+	end
+	_addon:ProcessQuests();
 end
 
 _addon.events = CreateFrame("FRAME", "LoLib_EventFrame"); 
@@ -651,10 +710,6 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	_addon:InitCoreFrame();
 	_addon:InitMap();
 	
-	for k, id in ipairs(AchievementsToCheck) do
-		_addon:CheckAchievementProgress(id);
-	end
-	
 	self:UnregisterEvent("ADDON_LOADED");
 end
 
@@ -689,6 +744,8 @@ local function slashcmd(msg, editbox)
 		for k, l in ipairs(LoreList) do
 			l.unlocked = true;
 		end
+	elseif msg == 'q' then
+		_addon:ProcessQuests();
 	else
 		if LoreLibraryCore:IsShown() then
 			LoreLibraryCore:Hide();
