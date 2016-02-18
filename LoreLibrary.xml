@@ -414,6 +414,7 @@
 				self:SetScript("OnDragStart", self.StartMoving );
 				self:SetScript("OnDragStop", self.StopMovingOrSizing);
 				SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
+				UIPanelWindows["LoreLibraryCore"] = { area = "left", pushable = 4 }
 			</OnLoad>
 			<OnShow>
 				PlaySound("igCharacterInfoOpen");

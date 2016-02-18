@@ -65,7 +65,6 @@ local SOURCETYPE_QUEST = "Obtained during a quest.";
 local SOURCETYPE_VENDOR = "Sold by a vendor.";
 local SOURCETYPE_CHEST = "Found in a type of chest.";
 local SOURCETYPE_UNAVAILABLE = "Can no longer be obtained.";
-local ERROR_OPEN_IN_COMBAT = "|cFFFFD100LoLib:|r |cFFFF5555Can't open that during combat. It will open once you leave combat.|r";
 
 local function SortLore(list) 
 	if list == nil then list = LoreList; end
@@ -119,10 +118,6 @@ function _addon:ShowLoreMapPins(list)
 			end
 		end
 	end
-end
-
-function _addon:IsValidLocationForMap(location) 
-
 end
 
 function _addon:LorePiecesInMap() 
@@ -564,16 +559,21 @@ end
 
 function _addon:ShowMainFrame()
 	-- prevent opening in combat because blizzard protection
-	if InCombatLockdown() then 
-		_openedDuringCombat = true;
-		print(ERROR_OPEN_IN_COMBAT);
-		return;
-	else
-		LoreLibraryCore:Show();
-	end
+	
+	ShowUIPanel(LoreLibraryCore);
+	
+	--if InCombatLockdown() then 
+	--	_openedDuringCombat = true;
+	--	print(ERROR_OPEN_IN_COMBAT);
+	--	return;
+	--else
+	--	LoreLibraryCore:Show();
+	--end
 end
 
 function _addon:InitCoreFrame()
+	table.insert(UISpecialFrames, "LoreLibraryCore")
+
 	LoreLibraryCore.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
 	
 	LoreLibraryListScrollFrame.scrollBar.doNotHide = true;
@@ -763,7 +763,7 @@ function _addon.events:PLAYER_LOGOUT(loaded_addon)
 end
 
 function _addon.events:PLAYER_REGEN_DISABLED()
-	LoreLibraryCore:Hide();
+	HideUIPanel(LoreLibraryCore);--LoreLibraryCore:Hide();
 end
 
 function _addon.events:PLAYER_REGEN_ENABLED()
@@ -786,7 +786,7 @@ local function slashcmd(msg, editbox)
 		_addon:ProcessQuests();
 	else
 		if LoreLibraryCore:IsShown() then
-			LoreLibraryCore:Hide();
+			HideUIPanel(LoreLibraryCore); --LoreLibraryCore:Hide();
 		else
 			_addon:ShowMainFrame();
 		end
