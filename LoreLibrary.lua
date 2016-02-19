@@ -5,7 +5,7 @@ local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
 
 local _db = nil;
 
-local defaults = {
+local _defaults = {
 	global = {
 		
 		unlockedLore = {},
@@ -32,14 +32,13 @@ local _filter = {
 			
 local _completedQuests = nil;
 local _data = {}
-local unlockedLoreTitles = {};
-local LoreList = {};
+local _unlockedLoreTitles = {};
+local _loreList = {};
 local _playerName = GetUnitName("player", false);
 local _playerClass = UnitClass("player");
 local _playerSex = UnitSex("player");
-local _openedDuringCombat = false;
 	
-local AchievementsToCheck = {
+local _achievementsToCheck = {
 		1244 -- Well Read
 		,6716 -- Between a Saurok and a Hard Place
 		,6754 -- The Dark Heart of the Mogu
@@ -51,12 +50,13 @@ local AchievementsToCheck = {
 		,6856 -- Ballad of Liu Lang
 		,7230 -- Legend of the Brewfathers
 	}
-
+	
 local FORMAT_LORE_UNLOCK = "LoreLibrary added: %s";
 local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
 local SIZE_LISTBOOKHEIGHT = 40;
 local MAX_SOURCES = 9;
+local SOURCE_TITLE = "<HTML><BODY><BR/><P align=\"center\">This lore can be found in:</P><BR/></BODY></HTML>";
 local SOURCETYPE_OBJECT = "Object found in this area.";
 local SOURCETYPE_NPC = "Can drop from this npc.";
 local SOURCETYPE_CONTAINER = "Can be found in this container.";
@@ -66,15 +66,30 @@ local SOURCETYPE_VENDOR = "Sold by a vendor.";
 local SOURCETYPE_CHEST = "Found in a type of chest.";
 local SOURCETYPE_UNAVAILABLE = "Can no longer be obtained.";
 
+local _sourceData = {
+				["object"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Object", ["tooltip"] = SOURCETYPE_OBJECT},
+				["drop"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_NPC", ["tooltip"] = SOURCETYPE_NPC},
+				["container"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Container", ["tooltip"] = SOURCETYPE_CONTAINER},
+				["pickpocket"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Stealth", ["tooltip"] = SOURCETYPE_STEALTH},
+				["vendor"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Vendor", ["tooltip"] = SOURCETYPE_VENDOR},
+				["chest"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Chest", ["tooltip"] = SOURCETYPE_CHEST},
+				["quest"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Quest", ["tooltip"] = SOURCETYPE_QUEST},
+				["unavailable"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Unavailable", ["tooltip"] = SOURCETYPE_UNAVAILABLE},
+	}
+
+----------
+-- Code
+----------
+	
 local function SortLore(list) 
-	if list == nil then list = LoreList; end
+	if list == nil then list = _loreList; end
 	table.sort(list, function(a, b) 
 			return a.title < b.title;
 	end);
 end
 
 local function SortLoreUnlockFirst(list) 
-	if list == nil then list = LoreList; end
+	if list == nil then list = _loreList; end
 	table.sort(list, function(a, b) 
 		if (a.unlocked and b.unlocked) or (not a.unlocked and not b.unlocked) then
 			return a.title < b.title;
@@ -159,7 +174,7 @@ end
 function _addon:GetNumUnlockedLore()
 	SortLore();
 	local count = 0;
-	for k, v in ipairs(LoreList) do
+	for k, v in ipairs(_loreList) do
 		if v.unlocked then
 			count = count + 1;
 		end
@@ -168,7 +183,7 @@ function _addon:GetNumUnlockedLore()
 end
 
 function _addon:UpdateProgressBar()
-	local maxProgress = #LoreList;
+	local maxProgress = #_loreList;
 	local currentProgress = self.GetNumUnlockedLore();
 
 	LoreLibraryCore.progressBar:SetMinMaxValues(0, maxProgress);
@@ -246,7 +261,7 @@ end
 
 function _addon:UnlockNewLore(title, silent)
 	_data[title].unlocked = true;
-	unlockedLoreTitles[title] = true;
+	_unlockedLoreTitles[title] = true;
 	SortLore();
 	if not silent then
 		print(FORMAT_LORE_UNLOCK:format(title));
@@ -276,15 +291,15 @@ function _addon:GetFilteredList(unlockedFirst)
 	-- Base list depending on collected or not
 	if (_filter.collected and _filter.notCollected) then
 		-- just copy paste when showing everything
-		list = LoreList;
+		list = _loreList;
 	elseif (_filter.collected) then
-		for k, lore in ipairs(LoreList) do
+		for k, lore in ipairs(_loreList) do
 			if (lore.unlocked) then
 				table.insert(list, lore);
 			end
 		end
 	elseif (_filter.notCollected) then
-		for k, lore in ipairs(LoreList) do
+		for k, lore in ipairs(_loreList) do
 			if (not lore.unlocked) then
 				table.insert(list, lore);
 			end
@@ -313,7 +328,6 @@ function _addon:GetFilteredList(unlockedFirst)
 		
 	end
 	list = sourcelist;
-	
 	
 	-- Sort the list
 	if (unlockedFirst) then
@@ -344,7 +358,7 @@ function _addon:ProcessQuests()
 		_completedQuests = GetQuestsCompleted();
 	end
 	
-	for k, lore in ipairs(LoreList) do
+	for k, lore in ipairs(_loreList) do
 		if self:LoreQuestCompleted(lore) then
 			self:UnlockNewLore(lore.title, true);
 		end
@@ -378,52 +392,29 @@ function _addon:UpdateBookDisplay(lore)
 		display.lore = lore;
 		display.pageText:SetText(self:FilterPageText(lore.pages[1]));
 	else
-		local locationString = "<HTML><BODY><BR/><P align=\"center\">This lore can be found in:</P><BR/></BODY></HTML>";
-		display.pageText:SetText(locationString);
+		display.pageText:SetText(SOURCE_TITLE);
 		for k, location in ipairs(lore.locations) do
 			display.sources:Show();
 			local button = display.sources["s"..k];
 			button:Show();
-			local texture = "Interface/AddOns/LoreLibrary/Images/icon_Object";
+			local sourceType = location.sourceType == nil and "object" or location.sourceType;
+			local texture = _sourceData[sourceType].icon;
 			local text = location.area;
-			local sourceType = SOURCETYPE_OBJECT;
-			
-			if location.sourceType == "drop" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_NPC";
+			local sourceType = _sourceData[sourceType].tooltip;
+
+			if location.sourceType == "drop" or location.sourceType == "pickpocket" or location.sourceType == "vendor" or location.sourceType == "chest" then
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
-				sourceType = SOURCETYPE_NPC;
 			elseif location.sourceType == "container" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Container";
 			    text = location.source;
-			    sourceType = SOURCETYPE_CONTAINER;
-			elseif location.sourceType == "pickpocket" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Stealth";
-			    text = string.format(FORMAT_SOURCE, location.source, location.area);
-			    sourceType = SOURCETYPE_STEALTH;
-			elseif location.sourceType == "vendor" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Vendor";
-			    text = string.format(FORMAT_SOURCE, location.source, location.area);
-			    sourceType = SOURCETYPE_VENDOR;
-			elseif location.sourceType == "chest" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Chest";
-			    text = string.format(FORMAT_SOURCE, location.source, location.area);
-			    sourceType = SOURCETYPE_CHEST;
 			elseif location.sourceType == "unavailable" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Unavailable";
 			    text = "This lore no longer has any\n available sources.";
-			    sourceType = SOURCETYPE_UNAVAILABLE;
 			elseif location.sourceType == "quest" then
-				texture = "Interface/AddOns/LoreLibrary/Images/icon_Quest";
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 				if (location.level == "A") then
-					--text = string.format(FORMAT_SOURCE, "|TInterface/WORLDSTATEFRAME/AllianceIcon:16|t " .. location.source, location.area);
 					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Alliance-Logo:20|t" .. location.source, location.area);
 				elseif  (location.level == "H") then
-					--text = string.format(FORMAT_SOURCE, "|TInterface/WORLDSTATEFRAME/HordeIcon:16|t " .. location.source, location.area);
 					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Horde-Logo:20|t" .. location.source, location.area);
 				end
-			    
-			    sourceType = SOURCETYPE_QUEST;
 			end
 			
 			button.icon:SetNormalTexture(texture);
@@ -558,17 +549,7 @@ function _addon:InitFilter(self, level)
 end
 
 function _addon:ShowMainFrame()
-	-- prevent opening in combat because blizzard protection
-	
 	ShowUIPanel(LoreLibraryCore);
-	
-	--if InCombatLockdown() then 
-	--	_openedDuringCombat = true;
-	--	print(ERROR_OPEN_IN_COMBAT);
-	--	return;
-	--else
-	--	LoreLibraryCore:Show();
-	--end
 end
 
 function _addon:InitCoreFrame()
@@ -578,7 +559,7 @@ function _addon:InitCoreFrame()
 	
 	LoreLibraryListScrollFrame.scrollBar.doNotHide = true;
 	HybridScrollFrame_CreateButtons(LoreLibraryListScrollFrame, "LOLIB_ListBookTemplate", 1, 0);
-	HybridScrollFrame_Update(LoreLibraryListScrollFrame, #LoreList*SIZE_LISTBOOKHEIGHT, LoreLibraryListScrollFrame:GetHeight());
+	HybridScrollFrame_Update(LoreLibraryListScrollFrame, #_loreList*SIZE_LISTBOOKHEIGHT, LoreLibraryListScrollFrame:GetHeight());
 	
 	LoreLibraryListScrollFrame.update = function() _addon:UpdateBookList() end;
 	
@@ -599,16 +580,6 @@ function _addon:CreatePinAnimation(self)
 	self.animationA.alpha:SetSmoothing("NONE");
 	self.animationA:SetLooping("REPEAT")
 end
-
---[[
-function _addon:CreatePinAnimation(self)
-	self.animationA = self.glow:CreateAnimationGroup();
-	self.animationA.alpha = self.animationA:CreateAnimation("Alpha");
-	self.animationA.alpha:SetChange(-1);
-	self.animationA.alpha:SetSmoothing("NONE");
-	self.animationA:SetLooping("BOUNCE")
-end
-]]--
 
 function _addon:PlayPinAnimations()
 	for k, pin in ipairs(LoreLibraryMap.pins) do
@@ -679,25 +650,27 @@ function _addon:SearchChanged(searchBox)
 end
 
 function LoreLibrary:OnInitialize()
-	self.db = LibStub("AceDB-3.0"):New("LoLibDB", defaults, true);
+	self.db = LibStub("AceDB-3.0"):New("LoLibDB", _defaults, true);
 end
 
 function LoreLibrary:OnEnable()
-	LoreLibrary.db.global.unlockedLore = unlockedLoreTitles;
+	LoreLibrary.db.global.unlockedLore = _unlockedLoreTitles;
 	
-	for k, id in ipairs(AchievementsToCheck) do
+	for k, id in ipairs(_achievementsToCheck) do
 		_addon:CheckAchievementProgress(id);
 	end
 	_addon:ProcessQuests();
 end
 
+----------
+-- Events
+----------
+
 _addon.events = CreateFrame("FRAME", "LoLib_EventFrame"); 
 _addon.events:RegisterEvent("ITEM_TEXT_BEGIN");
 _addon.events:RegisterEvent("ADDON_LOADED");
 _addon.events:RegisterEvent("WORLD_MAP_UPDATE");
-_addon.events:RegisterEvent("PLAYER_LOGIN");
 _addon.events:RegisterEvent("PLAYER_REGEN_DISABLED");
-_addon.events:RegisterEvent("PLAYER_REGEN_ENABLED");
 _addon.events:SetScript("OnEvent", function(self, event, ...) self[event](self, ...) end)
 
 function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
@@ -714,31 +687,14 @@ function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)
 	end
 end
 
-local function IsInUnlockSave(list, title)
-	for k, v in ipairs(list) do
-		if v == title then
-			return true;
-		end
-	end
-	return false;
-end
-
-function _addon:AddUnlockedToDB()
-	for k, lore in pairs(LoreList) do
-		if lore.unlocked then
-			unlockedLoreTitles[lore.title] = true;
-		end
-	end
-end
-
 function _addon.events:ADDON_LOADED(loaded_addon)
 	if (loaded_addon ~= _addonName) then return; end
 	_data = _addon.data;
 
 	for k, v in pairs(_data) do
 		v.title = k;
-		v.unlocked = false; --IsInUnlockSave(, k);
-		table.insert(LoreList, v);
+		v.unlocked = false;
+		table.insert(_loreList, v);
 	end
 		for k, v in pairs(LoreLibrary.db.global.unlockedLore) do
 		_addon:UnlockNewLore(k, true);
@@ -751,46 +707,22 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	self:UnregisterEvent("ADDON_LOADED");
 end
 
-function _addon.events:PLAYER_LOGIN(loaded_addon)
-	if (loaded_addon ~= _addonName) then return; end
-	
-	
-	self:UnregisterEvent("PLAYER_LOGIN");
-end
-
-function _addon.events:PLAYER_LOGOUT(loaded_addon)
-
-end
-
 function _addon.events:PLAYER_REGEN_DISABLED()
-	HideUIPanel(LoreLibraryCore);--LoreLibraryCore:Hide();
+	HideUIPanel(LoreLibraryCore);
 end
 
-function _addon.events:PLAYER_REGEN_ENABLED()
-	
-	if _openedDuringCombat then
-		_addon:ShowMainFrame();
-		_openedDuringCombat = false;
-	end
-end
-
+----------
+-- Slash
+----------
 
 SLASH_LOLIBSLASH1 = '/lolib';
-LASH_LOLIBSLASH1 = '/lorelibrary';
+SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	if msg == 'cheats' then
-		for k, l in ipairs(LoreList) do
-			l.unlocked = true;
-		end
-	elseif msg == 'q' then
-		_addon:ProcessQuests();
+	if LoreLibraryCore:IsShown() then
+		HideUIPanel(LoreLibraryCore);
 	else
-		if LoreLibraryCore:IsShown() then
-			HideUIPanel(LoreLibraryCore); --LoreLibraryCore:Hide();
-		else
-			_addon:ShowMainFrame();
-		end
-   end
+		_addon:ShowMainFrame();
+	end
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd
 
