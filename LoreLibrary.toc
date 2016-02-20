@@ -1,9 +1,8 @@
 ﻿## Interface: 60200
 ## Title: LoreLibrary
-## Notes: shtuff
+## Notes: A collection of all the lore you found.
 ## Author: LanceDH
-## Version: 0.1
-## SavedVariablesPerCharacter: LoLib_Lore
+## Version: 6.2.01
 ## SavedVariables: LoLibDB
 LoreLibrary.xml
 LoreLibrary.lua

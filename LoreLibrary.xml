@@ -25,8 +25,12 @@
 		<Scripts>
 			<OnEnter>
 				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-				if (self.lore ~= nil) then
+				if (self.lore) then
 					GameTooltip:SetText(self.lore.title);
+					if (self.lore.unlocked) then
+						GameTooltip:AddLine("Unlocked" ,1 ,1 ,1 ,true);
+						GameTooltip:Show();
+					end
 				end
 			</OnEnter>
 			<OnLeave>
@@ -51,34 +55,7 @@
 		</Layers>
 	</StatusBar>
 	
-	<StatusBar name="LOLIB_MapStatusTemplate" inherits="LOLIB_ProgressBarTemplate" virtual="true">
-		<Size x="100" y="13"/>
-		<Anchors>
-			<Anchor point="BOTTOMLEFT" x="10" y="10"/>
-		</Anchors>
-				
-		<Layers>
-			<Layer level="OVERLAY">
-				<Texture parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorder">
-					<Size x="104" y="29" />
-					<Anchors>
-						<Anchor point="LEFT" x="-3" y="0"/>
-					</Anchors>
-				</Texture>
-			</Layer>
-		</Layers>
-		<Frames>
-			<Button parentKey="button">
-				<Anchors>
-					<Anchor point="TOPLEFT"/>
-					<Anchor point="BOTTOMRIGHT"/>
-				</Anchors>
-				<HighlightTexture atlas="PetList-ButtonHighlight">
-					<Color r="1" g="1" b="1" a="1"/>
-				</HighlightTexture>
-			</Button>
-		</Frames>
-	</StatusBar>
+	
 	
 	<StatusBar name="LOLIB_ProgressBarTemplate" virtual="true">
 		<Size x="196" y="13"/>
@@ -118,6 +95,33 @@
 					<Anchor point="LEFT" x="4"/>
 				</Anchors>
 				<NormalTexture file="Interface\AddOns\LoreLibrary\Images\icon_Container" />
+				
+				<Frames>
+					<Frame parentKey="factionAlliance" hidden="true">
+						<Size x="18" y="18" />
+						<Anchors>
+							<Anchor point="BOTTOMRIGHT" relativeKey="$parent.icon" x="3"/>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture  file="Interface\FriendsFrame\PlusManz-Alliance" />
+							</Layer>
+						</Layers>
+					</Frame>
+					
+					<Frame parentKey="factionHorde" hidden="true">
+						<Size x="18" y="18" />
+						<Anchors>
+							<Anchor point="BOTTOMRIGHT" relativeKey="$parent.icon" x="3"/>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture  file="Interface\FriendsFrame\PlusManz-Horde" />
+							</Layer>
+						</Layers>
+					</Frame>
+				</Frames>
+				
 				<Scripts>
 					<OnEnter>
 						if (self.sourceType ~= nil) then
@@ -130,6 +134,7 @@
 					</OnLeave>
 				</Scripts>
 			</Button>
+			
 		</Frames>
 		
 		<Layers>
@@ -584,7 +589,49 @@
 			<Anchor point="BOTTOMRIGHT"/>
 		</Anchors>
 		<Frames>
-			<StatusBar parentKey="progressBar" inherits="LOLIB_MapStatusTemplate" />
+			<StatusBar name="$parentProgressBar" inherits="LOLIB_ProgressBarTemplate" parentKey="progressBar">
+			<Size x="100" y="13"/>
+			<Anchors>
+				<Anchor point="BOTTOMLEFT" x="10" y="10"/>
+			</Anchors>
+			<Layers>
+				<Layer level="OVERLAY">
+					<Texture parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorder">
+						<Size x="104" y="29" />
+						<Anchors>
+							<Anchor point="LEFT" x="-3" y="0"/>
+						</Anchors>
+					</Texture>
+				</Layer>
+			</Layers>
+			<Frames>
+				<Button name="$parentOptionsButton" parentKey="button">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Layers>
+						<Layer level="ARTWORK">
+							<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+								<Size x="10" y="12"/>
+								<Anchors>
+									<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5" y="2"/>
+								</Anchors>
+							</Texture>
+						</Layer>
+					</Layers>
+					<Scripts>
+						<OnLoad>
+							self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+						</OnLoad>
+					</Scripts>						
+				</Button>
+				<Frame name="LolibOptionDropDown" inherits="UIDropDownMenuTemplate" />
+				<HighlightTexture atlas="PetList-ButtonHighlight">
+					<Color r="1" g="1" b="1" a="1"/>
+				</HighlightTexture>
+			</Frames>
+		</StatusBar>
 		</Frames>
 	</Frame>
  </Ui>

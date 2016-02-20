@@ -30,6 +30,11 @@ local _filter = {
 				}
 			}
 			
+local _option = {
+		["showPins"] = true,
+		["showCollected"] = false,
+	}
+			
 local _completedQuests = nil;
 local _data = {}
 local _unlockedLoreTitles = {};
@@ -54,6 +59,8 @@ local _achievementsToCheck = {
 local FORMAT_LORE_UNLOCK = "LoreLibrary added: %s";
 local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
+local OPTION_SHOW_PINS = "Show pins";
+local OPTION_SHOW_COLLECTED = "Show collected";
 local SIZE_LISTBOOKHEIGHT = 40;
 local MAX_SOURCES = 9;
 local SOURCE_TITLE = "<HTML><BODY><BR/><P align=\"center\">This lore can be found in:</P><BR/></BODY></HTML>";
@@ -126,7 +133,13 @@ function _addon:ShowLoreMapPins(list)
 			pin:ClearAllPoints();
 			pin:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", width * (lore.poi.x/100), -height * (lore.poi.y/100));
 			pin:Show();
-			if lore.poi.sourceType == "chest" then
+			pin.tex:SetDesaturated(lore.unlocked);
+			pin.tex:SetVertexColor(1, 1, 1, 1);
+			if (lore.unlocked) then
+				pin.tex:SetVertexColor(0.5, 0.5, 0.5, 0.75);
+			end
+			
+			if (lore.poi.sourceType == "chest") then
 				pin.tex:SetTexture("Interface/AddOns/LoreLibrary/Images/icon_Chest");
 			else
 				pin.tex:SetTexture("Interface/AddOns/LoreLibrary/Images/icon_Object");
@@ -142,7 +155,7 @@ function _addon:LorePiecesInMap()
 		pin.lore = nil;
 	end
 	local areaId = GetCurrentMapAreaID();
-	if (areaId == nil or not LoreLibraryMap.pinsEnabled) then return; end
+	if (areaId == nil or not _option.showPins) then return; end
 
 	local level = GetCurrentMapDungeonLevel();
 	local levelLore = {};
@@ -158,11 +171,13 @@ function _addon:LorePiecesInMap()
 				if not lore.unlocked then
 					-- Same area and lore is still locked
 					countLocked = countLocked + 1;
-					if tonumber(loc.level) == level then
-						-- Same area, still locked, and on the current map level? Show this one!
-						table.insert(levelLore, lore);
-					end
 				end
+				
+				if (_option.showCollected or not lore.unlocked) and tonumber(loc.level) == level then
+					-- Same area, still locked, and on the current map level? Show this one!
+					table.insert(levelLore, lore);
+				end
+				
 			end
 		end
 	end
@@ -381,8 +396,10 @@ function _addon:UpdateBookDisplay(lore)
 	local display = LoreLibraryListInsetRight;
 	
 	for i = 1, MAX_SOURCES do
-	    local button = display.sources["s"..i];
-		button:Hide();
+	    local source = display.sources["s"..i];
+		source:Hide();
+		source.icon.factionAlliance:Hide();
+		source.icon.factionHorde:Hide();
 	end	
 	display.sources:Hide();
 	
@@ -395,8 +412,8 @@ function _addon:UpdateBookDisplay(lore)
 		display.pageText:SetText(SOURCE_TITLE);
 		for k, location in ipairs(lore.locations) do
 			display.sources:Show();
-			local button = display.sources["s"..k];
-			button:Show();
+			local source = display.sources["s"..k];
+			source:Show();
 			local sourceType = location.sourceType == nil and "object" or location.sourceType;
 			local texture = _sourceData[sourceType].icon;
 			local text = location.area;
@@ -411,15 +428,15 @@ function _addon:UpdateBookDisplay(lore)
 			elseif location.sourceType == "quest" then
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 				if (location.level == "A") then
-					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Alliance-Logo:20|t" .. location.source, location.area);
+					source.icon.factionAlliance:Show();
 				elseif  (location.level == "H") then
-					text = string.format(FORMAT_SOURCE, "|TInterface/Timer/Horde-Logo:20|t" .. location.source, location.area);
+					source.icon.factionHorde:Show();
 				end
 			end
 			
-			button.icon:SetNormalTexture(texture);
-			button.icon.sourceType = sourceType;
-			button.text:SetText(text);
+			source.icon:SetNormalTexture(texture);
+			source.icon.sourceType = sourceType;
+			source.text:SetText(text);
 		end
 	
 		
@@ -548,6 +565,31 @@ function _addon:InitFilter(self, level)
 	end
 end
 
+function _addon:InitOptionDropdown(self, level)
+	local info = UIDropDownMenu_CreateInfo();
+	info.keepShownOnClick = true;	
+
+	if (level == 1) then
+		info.text = OPTION_SHOW_PINS;
+		info.func = function(_, _, _, value)
+						_option.showPins = value;
+						_addon:LorePiecesInMap();
+					end 
+		info.checked = function() return _option.showPins end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+	
+		info.text = OPTION_SHOW_COLLECTED;
+		info.func = function(_, _, _, value)
+						_option.showCollected = value;
+						_addon:LorePiecesInMap();
+					end 
+		info.checked = function() return _option.showCollected end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+	end
+end
+
 function _addon:ShowMainFrame()
 	ShowUIPanel(LoreLibraryCore);
 end
@@ -583,9 +625,11 @@ end
 
 function _addon:PlayPinAnimations()
 	for k, pin in ipairs(LoreLibraryMap.pins) do
-		pin.glow:Show();
-		pin.animationA.alpha:SetDuration(2);
-		pin.animationA:Play(true);
+		if (pin.lore and not pin.lore.unlocked) then
+			pin.glow:Show();
+			pin.animationA.alpha:SetDuration(2);
+			pin.animationA:Play(true);
+		end
 	end
 end
 
@@ -613,7 +657,7 @@ function _addon:InitMap()
 									GameTooltip:SetText("Lore Library");
 									GameTooltip:AddDoubleLine("Unlocked", LoreLibraryMap.progressBar.currentProg ,1 ,1 ,1 ,1 ,1 ,1);
 									GameTooltip:AddDoubleLine("Total", LoreLibraryMap.progressBar.maxProg ,1 ,1 ,1 ,1 ,1 ,1);
-									GameTooltip:AddDoubleLine("Pins", LoreLibraryMap.pinsEnabled and "Enabled" or "Disabled",1 ,1 ,1 ,1 ,1 ,1);
+									GameTooltip:AddLine("Right click for options" ,1 ,0.83 ,0 ,true);
 									GameTooltip:Show();
 									
 									_addon:PlayPinAnimations();
@@ -622,19 +666,20 @@ function _addon:InitMap()
 									GameTooltip:Hide();
 									
 									_addon:StopPinAnimations();
-								end)		
-	LoreLibraryMap.progressBar.button:SetScript("OnClick", function(self) 
-									LoreLibraryMap.pinsEnabled = not LoreLibraryMap.pinsEnabled;
-									_addon:LorePiecesInMap();
-									
-									GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-									GameTooltip:SetText("Lore Library");
-									GameTooltip:AddDoubleLine("Unlocked", LoreLibraryMap.progressBar.currentProg ,1 ,1 ,1 ,1 ,1 ,1);
-									GameTooltip:AddDoubleLine("Total", LoreLibraryMap.progressBar.maxProg ,1 ,1 ,1 ,1 ,1 ,1);
-									GameTooltip:AddDoubleLine("Pins", LoreLibraryMap.pinsEnabled and "Enabled" or "Disabled",1 ,1 ,1 ,1 ,1 ,1);
-									GameTooltip:Show();
 								end)	
-								
+	
+	LoreLibraryMap.progressBar.button:SetScript("OnClick", function(self, button) 
+									if (button == "LeftButton") then
+										_option.showPins = not _option.showPins;
+										_addon:LorePiecesInMap();
+										UIDropDownMenu_Refresh(LolibOptionDropDown, 1);
+									else
+										PlaySound("igMainMenuOptionCheckBoxOn");
+										ToggleDropDownMenu(1, nil, LolibOptionDropDown, "LoreLibraryMapProgressBarOptionsButton", 74, 13);
+									end
+								end)	
+	
+	UIDropDownMenu_Initialize(LolibOptionDropDown, function(self, level) _addon:InitOptionDropdown(self, level) end, "MENU");
 end
 
 function _addon:SearchChanged(searchBox)
