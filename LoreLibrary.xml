@@ -333,7 +333,7 @@
 				<Texture atlas="PetList-ButtonBackground" parentKey="background"/>
 			</Layer>
 			<Layer level="ARTWORK">
-				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="2" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title" text="sjklfsdl jkhfsdjklh bfdsajkhlf djhklkjhdfsgb">
+				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="2" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title">
 					<Anchors>
 						<Anchor point="TOPLEFT" x="20"/>
 						<Anchor point="BOTTOMRIGHT" x="-20"/>
@@ -343,6 +343,11 @@
 			</Layer>
 			<Layer level="OVERLAY">
                 <Texture parentKey="selectedTexture" atlas="PetList-ButtonSelect" hidden="true"/>
+				<Texture parentKey="favorite" atlas="PetJournal-FavoritesIcon" useAtlasSize="true">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeKey="$parent.icon" x="-2" y="2"/>
+                    </Anchors>
+                </Texture>
 			</Layer>
 		</Layers>
 		
@@ -352,6 +357,9 @@
 
 		<Scripts>
 			<OnClick function="LOLIB_ListBook_OnClick"/>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
 		</Scripts>
 	</Button>
 	
@@ -577,6 +585,7 @@
 				</Frames>
 			</ScrollFrame>
 			
+			<Frame name="$parentFavoriteMenu" inherits="UIDropDownMenuTemplate" enableMouse="true" parentKey="favoriteMenu"/>
 		</Frames>
 		<Layers>
 		

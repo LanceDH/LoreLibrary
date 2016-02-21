@@ -9,6 +9,7 @@ local _defaults = {
 	global = {
 		
 		unlockedLore = {},
+		favorites = {},
 		options = {
 			version = "";
 		}
@@ -38,6 +39,7 @@ local _option = {
 local _completedQuests = nil;
 local _data = {}
 local _unlockedLoreTitles = {};
+local _favoriteLore = {};
 local _loreList = {};
 local _playerName = GetUnitName("player", false);
 local _playerClass = UnitClass("player");
@@ -98,10 +100,13 @@ end
 local function SortLoreUnlockFirst(list) 
 	if list == nil then list = _loreList; end
 	table.sort(list, function(a, b) 
-		if (a.unlocked and b.unlocked) or (not a.unlocked and not b.unlocked) then
-			return a.title < b.title;
+		if (a.favorite and b.favorite) or (not a.favorite and not b.favorite) then
+			if (a.unlocked and b.unlocked) or (not a.unlocked and not b.unlocked) then
+				return a.title < b.title;
+			end
+			return (a.unlocked and not b.unlocked);
 		end
-		return (a.unlocked and not b.unlocked);
+		return a.favorite ;
 	end);
 end
 
@@ -284,6 +289,17 @@ function _addon:UnlockNewLore(title, silent)
 	end
 end
 
+function _addon:SetFavorite(title, value, silent)
+	value = value == nil and true or value;
+	
+	_data[title].favorite = value;
+	_favoriteLore[title] = (value and true or nil);
+	
+	if not silent then
+		self:UpdateBookList();
+	end
+end
+
 function _addon:HasFilteredSource(lore)
 	for sourceType, fEnabled in pairs(_filter.sources) do
 		if (fEnabled) then
@@ -448,9 +464,12 @@ function _addon:UpdateBookDisplay(lore)
 end
 
 function _addon:UpdateBookList()
+	self:HideFavoriteMenu();
+
 	local scrollFrame = LoreLibraryListScrollFrame;
 	local offset = HybridScrollFrame_GetOffset(scrollFrame);
 	local buttons = scrollFrame.buttons;
+	if buttons == nil then return; end
 	
 	local list = _addon:GetFilteredList(true);
 	
@@ -458,6 +477,7 @@ function _addon:UpdateBookList()
 	for i=1, #buttons do
 		local button = buttons[i];
 		local displayIndex = i + offset;
+		button.favorite:Hide();
 		if ( displayIndex <= #list) then
 			local lore = list[displayIndex];
 			button.lore = lore;
@@ -467,6 +487,9 @@ function _addon:UpdateBookList()
 				button.selectedTexture:Show();
 			else
 				button.selectedTexture:Hide();
+			end
+			if (lore.favorite) then
+				button.favorite:Show();
 			end
 		else
 			button.lore = nil;
@@ -480,13 +503,42 @@ function _addon:UpdateBookList()
 	_addon:UpdateProgressBar();
 end
 
+function _addon:HideFavoriteMenu(saveLore)
+	if (UIDropDownMenu_GetCurrentDropDown() == LoreLibraryList.favoriteMenu) then
+		HideDropDownMenu(1);
+	end
+	if not saveLore then
+		LoreLibraryList.favoriteMenu.lore = nil;
+	end
+end
+
+function _addon:ShowFavoriteMenu(anchorTo, lore)
+	-- to make toggle work
+	if LoreLibraryList.favoriteMenu.lore == lore then 
+		LoreLibraryList.favoriteMenu.lore = nil;
+		return; 
+	end
+
+	LoreLibraryList.favoriteMenu.lore = lore;
+	
+	ToggleDropDownMenu(1, nil, LoreLibraryList.favoriteMenu, anchorTo, 50, 0);
+end
+
 function LOLIB_ListBook_OnClick(self, button)
+	-- Only when these conidions are met do we want to save favoriteMenu.lore
+	_addon:HideFavoriteMenu((self.lore ~= nil and (button == "RightButton") and self.lore.unlocked));
+	if self.lore == nil then 
+		return; 
+	end
+	
 	if ( button == "LeftButton" ) then
-		if self.lore ~= nil then
-			LoreLibraryListInsetRight.currentLore = self.lore;
-			LoreLibraryListInsetRight.currentPage = 1;
-			_addon:UpdateBookDisplay(self.lore);
-			_addon:UpdateBookList();
+		LoreLibraryListInsetRight.currentLore = self.lore;
+		LoreLibraryListInsetRight.currentPage = 1;
+		_addon:UpdateBookDisplay(self.lore);
+		_addon:UpdateBookList();
+	elseif (button == "RightButton") then
+		if (self.lore.unlocked) then
+			_addon:ShowFavoriteMenu(self, self.lore);
 		end
 	end
 end
@@ -590,6 +642,34 @@ function _addon:InitOptionDropdown(self, level)
 	end
 end
 
+function _addon:MenuLoreIsFavorite()
+	if LoreLibraryList.favoriteMenu.lore == nil then return false; end
+	return LoreLibraryList.favoriteMenu.lore.favorite;
+end
+
+function _addon:InitFavoriteMenu(self, level)
+	local info = UIDropDownMenu_CreateInfo();
+	info.notCheckable = true;	
+	
+	-- Kill it with fire
+	if (_addon:MenuLoreIsFavorite()) then
+		info.text = BATTLE_PET_UNFAVORITE;
+		info.func = function(_, _, _, value)
+					_addon:SetFavorite(LoreLibraryList.favoriteMenu.lore.title, false);
+				end 
+	else
+		info.text = BATTLE_PET_FAVORITE;
+		info.func = function(_, _, _, value)
+					_addon:SetFavorite(LoreLibraryList.favoriteMenu.lore.title, true);
+				end 
+	end
+	UIDropDownMenu_AddButton(info, level)
+	
+	info.text = CANCEL;
+	info.func = nil;
+	UIDropDownMenu_AddButton(info, level)
+end
+
 function _addon:ShowMainFrame()
 	ShowUIPanel(LoreLibraryCore);
 end
@@ -613,6 +693,7 @@ function _addon:InitCoreFrame()
 	self:UpdateBookList();
 	
 	UIDropDownMenu_Initialize(LoreLibraryCoreFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
+	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
 end
 
 function _addon:CreatePinAnimation(self)
@@ -700,6 +781,7 @@ end
 
 function LoreLibrary:OnEnable()
 	LoreLibrary.db.global.unlockedLore = _unlockedLoreTitles;
+	LoreLibrary.db.global.favorites = _favoriteLore;
 	
 	for k, id in ipairs(_achievementsToCheck) do
 		_addon:CheckAchievementProgress(id);
@@ -741,8 +823,11 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 		v.unlocked = false;
 		table.insert(_loreList, v);
 	end
-		for k, v in pairs(LoreLibrary.db.global.unlockedLore) do
+	for k, v in pairs(LoreLibrary.db.global.unlockedLore) do
 		_addon:UnlockNewLore(k, true);
+	end
+	for k, v in pairs(LoreLibrary.db.global.favorites) do
+		_addon:SetFavorite(k, true);
 	end
 
 	SortLore();
