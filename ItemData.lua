@@ -1,8 +1,10 @@
 ﻿local _addonName, _addon = ...;
 
+local AREA_WORLDDROP = "World and instances";
+
 _addon.data = {
 ["A History of the Veiled Stair"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215855},
 	["pages"] = {
 		"Winding like a snake between the fertile lowlands of the Valley of Four Winds and the rolling steppes of Kun-Lai Summit, the Veiled Stair is truly a pandaren wonder.\n\nIt was hand-chiseled by pandaren slaves during the third mogu dynasty. To the best of our knowledge, this means the steps are over twelve thousand years old!\n\nThe grummles believe that it is very lucky for travellers to count the steps as they ascend. This may be true; but nobody has ever been able to agree on a definitive count.\n\nHow many do YOU see?",
 	},
@@ -11,7 +13,7 @@ _addon.data = {
 	},
 },
 ["A Most Famous Bill of Sale"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213460},
 	["pages"] = {
 		"On this site many generations ago stood Shen-zin's Sundries, a supplier well-liked by the local farmers. One day the first Pandaren explorer, Liu Lang, walked into the store with a most unusual shopping list, records of which have survived to this day:\n\n   One lantern\n   Three liters lamp oil\n   Four packages of dehydrated fruit\n   Two sacks of dried peas\n   Four haunches of salt pork\n   Twelve liters of fresh water\n   One basket of hardtack\n   One compass\n   One spyglass\n\nLiu Lang announced his intention to explore the world. Shen-Zin, humoring his client, suggested that Liu Lang should also bring an umbrella. He generously offered one for free.\n\nBeaming, a grateful Liu Lang told Shen-Zin, \"I shall name my sea turtle after you!\" He happily carted away his supplies, whistling as he headed toward the beach, trailed by dozens of curious onlookers.",
 	},
@@ -20,7 +22,7 @@ _addon.data = {
 	},
 },
 ["A Treatise on Military Ranks"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 179706},
 	["pages"] = {
 		"<HTML><BODY><H1 align=\"center\">A TREATISE ON MILITARY RANKS</H1><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRankAlliance\" align=\"left\" /><BR/><P align=\"right\">What follows are</P><P align=\"right\">the military ranks</P><P align=\"right\">of the Alliance,</P><P align=\"right\">proceeded by such</P><P align=\"right\">information as is</P><P align=\"right\">known for the races</P><P align=\"right\">of the Horde. Each</P><P align=\"right\">is presented in two</P><P align=\"right\">sections, the officers and then the enlisted, with the ranks of each listed in descending order from highest to lowest. Long live the Alliance!</P></BODY></HTML>",
 		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Grand Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Field Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Commander</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Lieutenant Commander</P></BODY></HTML>",
@@ -35,7 +37,7 @@ _addon.data = {
 	},
 },
 ["A Zombie's Guide to Proper Nutrition"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191662},
 	["pages"] = {
 		"Brrrraaaaaiiins. Braaaaaaaaaaaaaiiiiiiiinnnnnnnnns. BRRRRAAAAIIIIIIIIINNNSS!!!\n\n&lt;This goes on for forty more pages.&gt;",
 	},
@@ -44,7 +46,7 @@ _addon.data = {
 	},
 },
 ["Account of the Raising of a Frost Wyrm"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191648},
 	["pages"] = {
 		"Account of the Raising of a Frost Wyrm\n\nThe hulking bones were nearly swallowed by the snow, but there was no mistaking the grim claw that jutted upward, twisted in solemn agony. The necromancers assembled without a word, forming a ring around the dragon's corpse. They stood still for a moment as the wind encircled them with gusts of snow. Then the ritual began.",
 		"Spokes of unholy light emanated from the center of the frozen bones, cracking through the snow and ice until at last the immense remains were fully exposed. With a gesture from Grand Necrolord Antiok, the bones shuddered and lurched above the ground, rotating slowly into place.",
@@ -57,7 +59,7 @@ _addon.data = {
 	},
 },
 ["Adherent Note"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 237843},
 	["pages"] = {
 		"Our search for the chamber rumored to be in this area has been a short one. One of the Bloodmane mongrels had already found it and has been pilfering artifacts from the chamber for weeks!\n\nWe found his den at the base of the mountain, he seems to have been making the trek to the chamber up the hill almost daily.\n\nThe crystals seem to have... altered him in some way. He is more calm than the other saberon. He speaks, though crudely, and has even given himself a new name: Leorajh.\n\nSurely the beast cannot possibly comprehend the true power of the artifacts! I will continue to study its effects on him as I awaken the guardians within the chamber.\n\nThen, I expect, we will dispose of him.\n\n- Sol-Shaper Valarik",
 	},
@@ -66,7 +68,7 @@ _addon.data = {
 	},
 },
 ["Admiral Barean Westwind"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210485},
 	["pages"] = {
 		"Admiral Barean Westwind\nGrand Admiral of the Scarlet Fleet \nCitizen of Kul'Tiras\nLost off the Frozen Coast of Northrend",
 	},
@@ -75,7 +77,7 @@ _addon.data = {
 	},
 },
 ["Admiral Taylor"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 234016},
 	["pages"] = {
 		"In honor of Admiral Taylor\n\nAdmiral Taylor was a true hero of the Alliance. His numerous accomplishments on the battlefield serving his people will not be forgotten.\n\nHe bravely set out to establish a garrison stronghold among these spires to further the Draenor campaign, but was cut down by his own men before his time. \n\nMay he rest in peace.",
 	},
@@ -84,7 +86,7 @@ _addon.data = {
 	},
 },
 ["Aegwynn and the Dragon Hunt"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175738},
 	["pages"] = {
 		"As the politics and rivalries of the seven human nations waxed and waned, the line of Guardians kept its constant vigil against chaos. There were many Guardians over the years, but only one ever held the magical powers of Tirisfal at any given time. One of the last Guardians of the age distinguished herself as a mighty warrior against the shadow.",
 		"Aegwynn, a fiery human girl, won the approbation of the Order and was given the mantle of Guardianship. Aegwynn vigorously worked to hunt down and eradicate demons wherever she found them, but she often questioned the authority of the male-dominated Council of Tirisfal.",
@@ -102,7 +104,7 @@ _addon.data = {
 	},
 },
 ["Aftermath of the Second War"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 21581},
 	["pages"] = {
 		"The devastating Second War against the orcish horde left the Alliance of Lordaeron in a state of shock and disarray. The bloodthirsty orcs, led by the mighty warchief, Orgrim Doomhammer, not only smashed their way through the dwarf-held lands of Khaz Modan, but had razed many of Lordaeron's central provinces as well. The unrelenting orcs even succeeded in ravaging the\nelves' remote kingdom of Quel'Thalas before their rampage was finally stopped.",
 		"The Alliance armies led by Sir Anduin Lothar, Uther the Lightbringer, and Admiral Daelin Proudmoore pushed the orcs south into the shattered land of Azeroth - the first kingdom to fall before the orcs' ruthless onslaught.\n\nThe Alliance forces under Sir Lothar managed to push Doomhammer's clans out of Lordaeron and back into the orc-controlled lands of Azeroth. Lothar's forces surrounded the orcs' volcanic citadel of Blackrock Spire and laid siege to their defenses.",
@@ -118,7 +120,7 @@ _addon.data = {
 	},
 },
 ["Age of a Hundred Kings"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218438},
 	["pages"] = {
 		"Long after the age of the Titans, when the mogu had turned to flesh and fallen on one another, the land was in chaos. Mogu warlords fought for territory and power. It was the Age of a Hundred Kings.\n\nThis was the era of Lei Shen. Young and proud, he saw the ruined works of his forefathers scattered across the war-torn landscape. He lived with a profound sense that his people were not living up to their purpose or potential. \n\nThe titans no longer spoke. Lei Shen took it upon himself to speak for them.",
 	},
@@ -126,17 +128,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "62.4",  ["y"] = "37.7"},
 	},
 },
-["Age of a Hundred Kings"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Long after the age of the Titans, when the mogu had turned to flesh and fallen on one another, the land was in chaos. Mogu warlords fought for territory and power. It was the Age of a Hundred Kings.\n\nThis was the era of Lei Shen. Young and proud, he saw the ruined works of his forefathers scattered across the war-torn landscape. He lived with a profound sense that his people were not living up to their purpose or potential. \n\nThe titans no longer spoke. Lei Shen took it upon himself to speak for them.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["Agents of Order"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218435},
 	["pages"] = {
 		"Mogu legends tell of an age of golden light, when order was brought to a chaotic world. It is said the mogu walked among the titans with skins of earth. Their numbers were legion, and their only will was the will of their masters.\n\nAccording to the stories of this age, mogu hands carved the very mountains and valleys of Pandaria herself. Every river, every lake, every mountaintop was sculpted according to a divine plan.\n\nThe mogu called their titan master \"The Storm.\" He was their keeper. They were an extension of his will: agents of order, obedient and mighty, forging a new world.",
 	},
@@ -144,17 +137,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "35.8",  ["y"] = "54.7"},
 	},
 },
-["Agents of Order"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Mogu legends tell of an age of golden light, when order was brought to a chaotic world. It is said the mogu walked among the titans with skins of earth. Their numbers were legion, and their only will was the will of their masters.\n\nAccording to the stories of this age, mogu hands carved the very mountains and valleys of Pandaria herself. Every river, every lake, every mountaintop was sculpted according to a divine plan.\n\nThe mogu called their titan master \"The Storm.\" He was their keeper. They were an extension of his will: agents of order, obedient and mighty, forging a new world.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["Airbase in a Box Brochure"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 207571},
 	["pages"] = {
 		"Congratulations on your purchase of the patented Bilgewater Airbase-in-a-Box!(TM)\n\nYour new airbase is guaranteed to function for up to ten years of \"pimpin' and blimpin'.\" Simply deploy it on any flat, stable surface.\n\nThe horizon is yours, friend: reach out with both hands, clutch its cloudy blue bosom, and bite bite BITE the sky.",
 		"WARNING: AIRBASE-IN-A-BOX IS NOT UNDER ANY CIRCUMSTANCES TO BE DEPLOYED ON A MOUNTAIN PEAK.",
@@ -164,7 +148,7 @@ _addon.data = {
 	},
 },
 ["Airwyn's Journal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 207199},
 	["pages"] = {
 		"Fascinating! It's some sort of piece of an old god! This is exactly why I was sent here! Our assumptions were right!\n\nCelebratory beers are called for.",
 		"Starting to feel woozy. Something is not right. Perhaps it's the beer? Investigating.",
@@ -175,7 +159,7 @@ _addon.data = {
 	},
 },
 ["Alliance Military Ranks"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 179735}, -- 201518
 	["pages"] = {
 		"<HTML><BODY><H1 align=\"center\">ALLIANCE MILITARY RANKS</H1><BR/><P align=\"center\">OFFICERS</P><BR/><P align=\"center\">Grand Marshal</P><P align=\"center\">Field Marshal</P><P align=\"center\">Marshal</P><P align=\"center\">Commander</P><P align=\"center\">Lieutenant Commander</P><P align=\"center\">Knight-Champion</P><P align=\"center\">Knight-Captain</P><P align=\"center\">Knight-Lieutenant</P><P align=\"center\">Knight</P><BR/><P align=\"center\">ENLISTED</P><BR/><P align=\"center\">Sergeant Major</P><P align=\"center\">Master Sergeant</P><P align=\"center\">Sergeant</P><P align=\"center\">Corporal</P><P align=\"center\">Private</P></BODY></HTML>",
 	},
@@ -183,17 +167,8 @@ _addon.data = {
 		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "75.9",  ["y"] = "66.2"},
 	},
 },
-["Alliance Military Ranks"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"<HTML><BODY><H1 align=\"center\">ALLIANCE MILITARY RANKS</H1><BR/><P align=\"center\">OFFICERS</P><BR/><P align=\"center\">Grand Marshal</P><P align=\"center\">Field Marshal</P><P align=\"center\">Marshal</P><P align=\"center\">Commander</P><P align=\"center\">Lieutenant Commander</P><P align=\"center\">Knight-Champion</P><P align=\"center\">Knight-Captain</P><P align=\"center\">Knight-Lieutenant</P><P align=\"center\">Knight</P><BR/><P align=\"center\">ENLISTED</P><BR/><P align=\"center\">Sergeant Major</P><P align=\"center\">Master Sergeant</P><P align=\"center\">Sergeant</P><P align=\"center\">Corporal</P><P align=\"center\">Private</P></BODY></HTML>",
-	},
-	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "75.7",  ["y"] = "66.5"},
-	},
-},
 ["Altar of Zanza"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 180367},
 	["pages"] = {
 		"We call upon you, Zanza of Zuldazar.\n\nBless those that ask for your help, Loa Zanza. Bless those that would ally with the Zandalarian\npeople.\n\nAid us in this time of need. Aid us Loa. Give us the power to strike down our enemies. Give us the power to once more defeat the Blood God.",
 	},
@@ -202,7 +177,7 @@ _addon.data = {
 	},
 },
 ["Always Remember"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213414},
 	["pages"] = {
 		"Even by mogu standards, Emperor Lao-Fe was a monster among beasts. His favored punishment among pandaren slaves was to separate families. Slaves who displeased him would have their children sent to the Serpent's Spine, to suffer and die as fodder for the mantid swarms.\n\nThis was the fate that befell a young pandaren monk named Kang. Kang was so grief-stricken over the loss of his cub that he chose to wear all black. In a moment of clarity, he saw the mogu overlords for what they were: weak. They possessed dark magics and horrific weapons, but their empire was completely reliant on slave labor.",
 		"The servant races were not permitted to carry weapons during the reign of the mogu, so Kang determined that the pandaren themselves would become the weapons. So it came to pass that pandaren monks began their training in the martial arts, and Kang became known as the Fist of First Dawn.\n\nHistory does not report if Kang and his son ever met again, but it was this father's love that sparked the rebellion that would change the face of Pandaria forever.",
@@ -211,18 +186,8 @@ _addon.data = {
 		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "49.1",  ["y"] = "56.9"},
 	},
 },
-["Always Remember"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Even by mogu standards, Emperor Lao-Fe was a monster among beasts. His favored punishment among pandaren slaves was to separate families. Slaves who displeased him would have their children sent to the Serpent's Spine, to suffer and die as fodder for the mantid swarms.\n\nThis was the fate that befell a young pandaren monk named Kang. Kang was so grief-stricken over the loss of his cub that he chose to wear all black. In a moment of clarity, he saw the mogu overlords for what they were: weak. They possessed dark magics and horrific weapons, but their empire was completely reliant on slave labor.",
-		"The servant races were not permitted to carry weapons during the reign of the mogu, so Kang determined that the pandaren themselves would become the weapons. So it came to pass that pandaren monks began their training in the martial arts, and Kang became known as the Fist of First Dawn.\n\nHistory does not report if Kang and his son ever met again, but it was this father's love that sparked the rebellion that would change the face of Pandaria forever.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["Amber"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213411},
 	["pages"] = {
 		"Amber is the cornerstone of mantid society. They use this material in their architecture, their art, and their technology. \n\nMasters of sound, the mantid long ago found a way to use amber to extend the range of their acoustic casting. In this way they are able to communicate over vast distances. No army has successfully marched on mantid lands undetected, and even lone travellers are urged caution as their movements are no doubt being watched the moment they venture beyond the wall. \n\n The Empress and her council of Klaxxi safeguard the great trees of Townlong Steppes - the \"kypari\" they are called - as the only source of their precious amber. Legend has it that the kypari once flourished east of the wall, but the mogu cut them all down in their never-ending war against the mantid swarm.",
 	},
@@ -230,17 +195,8 @@ _addon.data = {
 		{["area"] = "Dread Wastes", ["areaId"] = 858,  ["id"] = "6138",  ["level"] = "0",  ["x"] = "52.4",  ["y"] = "10.1"},
 	},
 },
-["Amber"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Amber is the cornerstone of mantid society. They use this material in their architecture, their art, and their technology. \n\nMasters of sound, the mantid long ago found a way to use amber to extend the range of their acoustic casting. In this way they are able to communicate over vast distances. No army has successfully marched on mantid lands undetected, and even lone travellers are urged caution as their movements are no doubt being watched the moment they venture beyond the wall. \n\n The Empress and her council of Klaxxi safeguard the great trees of Townlong Steppes - the \"kypari\" they are called - as the only source of their precious amber. Legend has it that the kypari once flourished east of the wall, but the mogu cut them all down in their never-ending war against the mantid swarm.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["Ancient Sap Feeder"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218960},
 	["pages"] = {
 		"The mantid prefer to age Kypari sap before consumption, and they use devices such as these for the process. You can see from this ancient example that the design has not changed very much over time.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -249,7 +205,7 @@ _addon.data = {
 	},
 },
 ["Another Direhorn Casualty"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218186},
 	["pages"] = {
 		"To his mightiness, the War-God Jalak,\n\nThem direhorns gored another training beastcaller. The fool got himself bit by a compy and lost his concentration. The whole fetish he was assembling crumbled and the direhorn ripped him apart.\n\nWe be rushing this too much. Our beastcallers need years of training. I know we need a larger army but it won't be serving us much if our beasts be killing our own people.\n\nWe wish to serve, but you know better than any we cannot be sending children to do a troll's job.",
 	},
@@ -258,7 +214,7 @@ _addon.data = {
 	},
 },
 ["Apothecary Tins of Yao Firmpaw"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214200},
 	["pages"] = {
 		"A complete set of brass apothecary jars, with neatly engraved labels, meant for the storage of a complicated array of powerful medicinal herbs. Although the exact use of most of the herbs remains a mystery, a plaque on the box containing the tins identifies the physician as Yao Firmpaw, a name still associated with health and wellness in the Valley of Four Winds because of his spectacular career. Yao never married - legend has it because his heart was forever broken.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -267,7 +223,7 @@ _addon.data = {
 	},
 },
 ["Arathor and the Troll Wars"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175734},
 	["pages"] = {
 		"As the high elves fought for their lives against the trolls' fierce onslaught, the scattered, nomadic humans of Lordaeron fought to consolidate their own tribal lands. The tribes of early humanity raided each other's settlements with little heed for racial unification or honor.",
 		"Yet one tribe, known as the Arathi, saw that the trolls were becoming too great a threat to ignore. The Arathi wished to bring all of the tribes under its rule so that they could provide a unified front against the troll warbands.",
@@ -287,7 +243,7 @@ _addon.data = {
 	},
 },
 ["Archavon's Log"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 194356},
 	["pages"] = {
 		"&lt;It appears Archavon has been keeping a journal. It appears to be written in multiple languages. A tally has been kept on the cover. &gt;\n\nHorde:  \n Keep Defended: $4024w\n Keep Captured: $4022w\n\nAlliance:\n Keep Defended: $4025w\n Keep Captured: $4023w\n\nDay 10\nThe Makers are gone. I have been left to watch.\n        -ARCHAVON",
 		"Day 10500: \nThe halls are quiet. Empty. \n\nI thought the Makers wanted me to watch the hall, but they never specifically said, \"Archavon, watch the hall...\" Maybe it's okay if I watch outside too? It would probably be less boring outside. It's decided - I am now responsible for watching the hall AND the outside. I shall take on my new responsibility next month.\n        -ARCHAVON\n\nDay 20120:\nThe outside is much more open than the hall. There are convenient cliffs and mountains bordering it. I'm now confident that the Makers meant for me to watch this too. I hope they don't notice that I've only been in the hall for the first decade.\n        -ARCHAVON",
@@ -300,7 +256,7 @@ _addon.data = {
 	},
 },
 ["Archimonde's Return and the Flight to Kalimdor"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175758},
 	["pages"] = {
 		"Once Kel'Thuzad was whole again, Arthas led the Scourge south to Dalaran. There the lich would obtain the powerful spellbook of Medivh, and use it to summon Archimonde back into the world. From that point on, Archimonde himself would begin the Legion's final invasion. Not even the wizards of the Kirin Tor could stop Arthas' forces from stealing Medivh's book, and soon Kel'Thuzad had all he needed to perform his spell.",
 		"After ten thousand years, the mighty demon Archimonde and his host emerged once again upon the world of Azeroth. Yet Dalaran was not their final destination. Under orders from Kil'jaeden himself, Archimonde and his demons followed the undead Scourge to Kalimdor, bent on destroying Nordrassil, the World Tree.",
@@ -321,7 +277,7 @@ _addon.data = {
 	},
 },
 ["Archmage Antonidas"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 193942},
 	["pages"] = {
 		"Archmage Antonidas, Grand Magus of the Kirin Tor\n\nThe great city of Dalaran stands once again - a testament to the tenacity and will of its greatest son.\n\nYour sacrifices will not have been in vain, dearest friend.\n\n\nWith Love and Honor,\n\nJaina Proudmoore",
 	},
@@ -330,26 +286,16 @@ _addon.data = {
 	},
 },
 ["Archmage Khadgar of the Kirin Tor"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 25333},
 	["pages"] = {
 		"Archmage Khadgar of the Kirin Tor\n\nFormer apprentice of Medivh. Supreme Commander of the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nNever did one so selflessly delve into the dark heart of magic and warfare. We wish you well, bold wanderer. Wherever you are.\n\n- Antonidas - Archmage of Dalaran",
 	},
 	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.9",  ["y"] = "84.9"},
-	},
-},
-["Archmage Khadgar of the Kirin Tor"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Archmage Khadgar of the Kirin Tor\n\nFormer apprentice of Medivh. Supreme Commander of the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nNever did one so selflessly delve into the dark heart of magic and warfare. We wish you well, bold wanderer. Wherever you are.\n\n- Antonidas - Archmage of Dalaran",
-	},
-	["locations"] = {
-		{["area"] = "Elwynn Forest", ["areaId"] = 30,  ["id"] = "12",  ["level"] = "0",  ["x"] = "29.6",  ["y"] = "44.9"},
 		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.9",  ["y"] = "84.9"},
 	},
 },
 ["Arellas Fireleaf"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210484},
 	["pages"] = {
 		"Arellas Fireleaf\nHigh Wizard of the Scarlet Crusade \nCitizen of Quel'Thalas \nLocked in eternal combat with the Necromancer Diesalven",
 	},
@@ -358,7 +304,7 @@ _addon.data = {
 	},
 },
 ["ATTENTION: Geists"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191654},
 	["pages"] = {
 		"I warned the lot of you that the next campaign on which I spent more time cleaning my boots than kicking infants, heads would roll! Dung cleanup shifts are henceforth doubled in length and number for all geists!\n\n--Instructor Razuvious",
 	},
@@ -367,7 +313,7 @@ _addon.data = {
 	},
 },
 ["Auberdine Memorial"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 195014},
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><H1 align=\"center\">In Memory</H1><BR/><H1 align=\"center\">Shaldyn, Gershala, Volcor</H1><H1 align=\"center\">and those who never made it home.</H1></BODY></HTML>",
 	},
@@ -376,7 +322,7 @@ _addon.data = {
 	},
 },
 ["Baelog's Journal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 123463},
 	["pages"] = {
 		"I have found a method to enter the Chamber of Khaz'mul!\n\nTake the Medallion of Gni'kiv from my chest.\n\nDefeat the trogg Revelosh in the chamber before the map room and retrieve the Shaft of Tsol.\n\nJoin the medallion and the shaft into the Staff of Prehistoria.\n\nUse the staff in the map room to unlock the door to the Chamber of Khaz'mul.\n\nDo these things, and the chamber will be yours!\n-Baelog",
 	},
@@ -385,7 +331,7 @@ _addon.data = {
 	},
 },
 ["Banner of the Mantid Empire"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218959},
 	["pages"] = {
 		"While the mantid do use windwool and imperial silk, their preferred material is a type of \"fabric\" fashioned from the wings of various insectoid creatures - including themselves. This banner is an example.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -394,7 +340,7 @@ _addon.data = {
 	},
 },
 ["Barely Legible Scroll"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 234057},
 	["pages"] = {
 		"They said it could not be done but soon I will show them! Only a few more days out here and I will prove that any orc brave enough can live off goren eggs.",
 		"The small cold eggs are getting harder to get as the goren eat them as well. Maybe those don't hatch. I will have to go out further and find new nests.",
@@ -405,7 +351,7 @@ _addon.data = {
 	},
 },
 ["Battlelog of Warlord Bloodhilt"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 216459},
 	["pages"] = {
 		"Goblins and elves. These creatures are the very embodiment of selfish pride and narcissism. Not an hour passes I do not question Garrosh's acceptance of their aid in this assault. \n\nTrue, the spell breakers have been invaluable to our defense strategems. And Gallywix's forces have proven an amazing counter to the gnomish inventions being thrown at our walls daily. But I do not trust them. And though they live and die for the Horde, they have given me little reason to trust them.",
 		"I caught one of the elves deciphering a mogu artifact the other day. Was his information shared with me? No. Though I am sure Lor'themar has a full account of these ancient writings. The mogu did not leave behind pots and pans, they left behind weapons and ancient power.\n\nAnd the goblins! Every time I turn around I catch one or two trying to build a new type of bomb. How we have not exploded yet is a mystery to me. Gallywix keeps providing us with new recipes for chemicals that will help in the war but I know he is learning more than he is letting on.",
@@ -416,7 +362,7 @@ _addon.data = {
 	},
 },
 ["Beasts of the Sky"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218189},
 	["pages"] = {
 		"Long ago the Zandalari lost a war with the Pandaren. They trained serpents to cut down our bat riders and change the face of war. We had nothing that could stand against them.\n\nBut the years be long since that day. We looked and we learned and we found our counter. The beasts of the sky! Come the pterrorwings to rip the heavens apart and rain destruction down upon our enemies. The serpents of the pandaren be dexterous, but our pterrorwings be fast and vicious.\n\nSoon we gonna put these little birdies to the test. Be ready, train hard, and show no mercy!",
 	},
@@ -425,7 +371,7 @@ _addon.data = {
 	},
 },
 ["Beyond the Dark Portal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 21582},
 	["pages"] = {
 		"Only a few months after Nethergarde's completion, the energies of the dark portal coalesced and opened up a new gateway to Draenor. The remaining orc clans, under the leadership of the elder shaman, Ner'zhul, charged forth into Azeroth once again. Intent on stealing a number of magical artifacts that would increase Ner'zhul's power, the orcs planned to open up new portals in Draenor that would allow them to escape their doomed red world forever.",
 		"Convinced that Ner'zhul was planning a new offensive against the Alliance, King Terenas of Lordaeron sent his armies into Draenor to end the orcish threat once and for all. Led by Khadgar and General Turalyon, the Alliance forces clashed with the orcs across the burning landscape. Even with the aid of the elven Ranger Alleria, the dwarf Kurdran and the veteran soldier Danath, Khadgar was unable to prevent Ner'zhul from opening his portals to other worlds.",
@@ -440,7 +386,7 @@ _addon.data = {
 	},
 },
 ["Bilgewater Cartel Contract"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 216460},
 	["pages"] = {
 		"The contractee (herein after referred to as \"you\") agrees to execute any and all orders dispatched by the Warchief or his officers. These orders are to be followed to the letter with the following caveats: No interruption of profit to and for the Trade Prince Gallywix, herein after referred to as \"me\".",
 		"Any orders issued from me or my officers are to take priority over any other Horde command. Failure to comply will result in lawsuit and non-payment. By reading this you agree that your life is collateral for this contractual arrangement and all properties there within.",
@@ -452,7 +398,7 @@ _addon.data = {
 	},
 },
 ["Binding Raptors"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218188},
 	["pages"] = {
 		"Since the dawn of our people we have hunted with raptor. These beasts be smart, lethal, and loyal. A troll and his raptor be more than friendship. It be a bond of blood. You each be needing the other.\n\nUsually you be having many years to get better with your raptor. But time is short, and the Zandalari be needing raptors for the war. We have awakened the old ways. Take the blood of the raptors. Bind their essence to the fetishes. There not be time to bond with them the natural way.\n\nSuch be our times.",
 	},
@@ -461,7 +407,7 @@ _addon.data = {
 	},
 },
 ["Bone Pile"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 230580},
 	["pages"] = {
 		"Judging by the bite and acid marks marks left in the bone, this corpse was eaten by Goren. The armor, meat, and most of the bone of whatever this creature was have been eaten away with equal vigor.",
 	},
@@ -470,7 +416,7 @@ _addon.data = {
 	},
 },
 ["Carved Bronze Mirror"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214198},
 	["pages"] = {
 		"While the glass itself is long gone, the reverse of this mirror is an elaborately carved bronze disc depicting the Red Crane of Hope. An inscription reads,\"To my dearest Lin / My beauty, my dove / This picture of perfection / Your reflection / My love - Yao\".\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -479,7 +425,7 @@ _addon.data = {
 	},
 },
 ["Charge of the Dragonflights"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175726},
 	["pages"] = {
 		"Satisfied that the small world had been ordered and that their work was done, the Titans prepared to leave Azeroth. However, before they departed, they charged the greatest species of the world with the task of watching over Kalimdor, lest any force should threaten its perfect tranquility. In that age, there were many dragonflights.",
 		"Yet there were five flights that held dominion over their brethren. It was these five flights that the Titans chose to shepherd the budding world. The greatest members of the Pantheon imbued a portion of their power upon each of the flights' leaders. These majestic dragons (as listed below) became known as the Great Aspects, or the Dragon Aspects.",
@@ -498,7 +444,7 @@ _addon.data = {
 	},
 },
 ["Civil War in the Plaguelands"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175761},
 	["pages"] = {
 		"Ner'zhul, the Lich King, knew that his time was short. Imprisoned within the Frozen Throne, he suspected that Kil'jaeden would send his agents to destroy him. The damage caused by Illidan's spell had ruptured the Frozen Throne; thus, the Lich King was losing his power daily. Desperate to save himself, he called his greatest mortal servant to his side: the death knight Prince Arthas.",
 		"Though his powers were drained by the Lich King's weakness, Arthas had been involved in a civil war in Lordaeron. Half of the standing undead forces, led by the banshee Sylvanas Windrunner, staged a coup for control over the undead empire. Arthas, called by the Lich King, was forced to leave the Scourge in the hands of his lieutenant, Kel'Thuzad, as the war escalated throughout the Plaguelands.",
@@ -515,7 +461,7 @@ _addon.data = {
 	},
 },
 ["Coming of Age"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218427},
 	["pages"] = {
 		"There is no room for weakness among the Zandalari. Strength, ferocity, stamina, power: These are the traits by which success is measured. At adolescence, those Zandalari males not chosen to be priests or scholars must prove their strength to the council, the king, and the gods themselves.\n\nAny display of physical power will do. Tournaments and competitions are held as children come of age. Adolescents prepare for their trials with years of training, communion with the spirits, and by tattooing sigils of power onto their skin. A common rite is to travel to one of the violent, beast-ruled islands near the capital to steal or subdue a wild creature. \n\nThe lesser troll races have their own, humbler versions of this tradition. But the mastery of ravasaurs or raptors is nothing compared to the power required to call upon a devilsaur or direhorn.",
 	},
@@ -523,17 +469,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "35.3",  ["y"] = "70.2"},
 	},
 },
-["Coming of Age"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"There is no room for weakness among the Zandalari. Strength, ferocity, stamina, power: These are the traits by which success is measured. At adolescence, those Zandalari males not chosen to be priests or scholars must prove their strength to the council, the king, and the gods themselves.\n\nAny display of physical power will do. Tournaments and competitions are held as children come of age. Adolescents prepare for their trials with years of training, communion with the spirits, and by tattooing sigils of power onto their skin. A common rite is to travel to one of the violent, beast-ruled islands near the capital to steal or subdue a wild creature. \n\nThe lesser troll races have their own, humbler versions of this tradition. But the mastery of ravasaurs or raptors is nothing compared to the power required to call upon a devilsaur or direhorn.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["Compendium of Fallen Heroes"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191617},
 	["pages"] = {
 		"Tartek the Enraged. One of the most powerful abominations the Scourge has ever created. Assembled by lich Amnennar the Coldbringer to assist in setting up a base at Razorfen Downs. Tartek single-handedly felled more than 1200 quilboar before finally being overcome. His sacrifice provided the corpses for Amnennar to quickly raise an undead quilboar army of his own, ultimately assembling the first major Scourge outpost on Kalimdor. Some of Tartek's remains were reanimated and used to create Glutton, Amnennar's current lieutenant.",
 		"Obrahiim, the Traveler. Brilliant architect, pivotal in the conception of Naxxramas, and mastermind behind the creation of Acherus. Quickly rose up the ranks from lowly skeletal peon to one of Kel'Thuzad's most trusted advisors.\n\nAlways the scholar, Obrahiim traveled the world in search of knowledge, notably taking most of his early inspiration from the architecture of the Nerubians and the magic of the orc warlocks. He was last seen several years ago, headed west to study the Ruins of Zin-Azshari in Kalimdor.",
@@ -545,7 +482,7 @@ _addon.data = {
 	},
 },
 ["Corpulous' Mess Hall Rules"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191646},
 	["pages"] = {
 		"Corpulous great cook of Acherus who make good food for you. He proud to feed mighty Scourge and make stronger. No make Corpulous mad, he no feed you.\n\nRules:\n\nDeath Knight eat first, ghoul wait turn.\n\nNo eat ghoul next to you. Need clean plate first.\n\nOk add own maggots and lice to food. Corpulous not offended.\n\nGot vermin? Bring to Corpulous!\n\nOk eat human or elf. Elf other white meat.",
 		"Mess part of meal. Corpulous see napkin, Corpulous hang head in shame.\n\nOk bring back food not rotten enough. Corpulous got three free armpits.\n\nOk eat with hands or swords. No eat hands or swords.\n\nZombie need try more food. Think outside the brains.\n\nNo eat self.",
@@ -555,7 +492,7 @@ _addon.data = {
 	},
 },
 ["Cursed Gravestone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 223139},
 	["pages"] = {
 		"Here lies the Dread Captain Genest, scourge of the South Seas.",
 	},
@@ -564,7 +501,7 @@ _addon.data = {
 	},
 },
 ["Cycle of the Mantid"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213409},
 	["pages"] = {
 		"Every one hundred years, the mantid young hatch in great numbers. Inevitably the swarm migrates east, devouring everything in their path, until they reach the Serpent's Spine. There, thousands are slain by the pandaren, just as they were slain by the mogu who first erected the wall.\n\nPandaren scholars have tried to understand this cycle, but have reached no consensus. Why do the mantid allow so many of their young to be slaughtered, generation after generation? Only the mantid can say for sure. \n\n This cycle has become so predictable that the guardians of the wall plan for it every century. The Shado-Pan, and the mogu before them, know when the swarms will come, and plan their defenses accordingly. As long as the wall continues to stand, there is hope for Pandaria against the seemingly endless swarms of the mantid.",
 	},
@@ -572,17 +509,8 @@ _addon.data = {
 		{["area"] = "Dread Wastes", ["areaId"] = 858,  ["id"] = "6138",  ["level"] = "0",  ["x"] = "48.4",  ["y"] = "32.9"},
 	},
 },
-["Cycle of the Mantid"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Every one hundred years, the mantid young hatch in great numbers. Inevitably the swarm migrates east, devouring everything in their path, until they reach the Serpent's Spine. There, thousands are slain by the pandaren, just as they were slain by the mogu who first erected the wall.\n\nPandaren scholars have tried to understand this cycle, but have reached no consensus. Why do the mantid allow so many of their young to be slaughtered, generation after generation? Only the mantid can say for sure. \n\n This cycle has become so predictable that the guardians of the wall plan for it every century. The Shado-Pan, and the mogu before them, know when the swarms will come, and plan their defenses accordingly. As long as the wall continues to stand, there is hope for Pandaria against the seemingly endless swarms of the mantid.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["Danath Trollbane"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 25332},
 	["pages"] = {
 		"Danath Trollbane\n\nMilitia Commander of Stromgarde.Tactical Advisor to General Turalyon, Force Commander of the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nWe honor your memory, nephew, and your sacrifice. Since the founding of our glorious empire, the path to valor has always been drenched with the blood of heroes.\n\n- Thoras Trollbane, Lord of Stromgarde",
 	},
@@ -590,18 +518,8 @@ _addon.data = {
 		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "71.6",  ["y"] = "86.9"},
 	},
 },
-["Danath Trollbane"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Danath Trollbane\n\nMilitia Commander of Stromgarde.Tactical Advisor to General Turalyon, Force Commander of the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nWe honor your memory, nephew, and your sacrifice. Since the founding of our glorious empire, the path to valor has always been drenched with the blood of heroes.\n\n- Thoras Trollbane, Lord of Stromgarde",
-	},
-	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "71.6",  ["y"] = "86.3"},
-		{["area"] = "Elwynn Forest", ["areaId"] = 30,  ["id"] = "12",  ["level"] = "0",  ["x"] = "30.5",  ["y"] = "45.9"},
-	},
-},
 ["Dark Keeper Nameplate"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 164820},
 	["pages"] = {
 		"Vorfalk Irongourd\n\nVorfalk works the store room of the Grim Guzzler, and his sacrifice to the Dark Keepers runs deep.\n\nMay his spirit hold strong.",
 	},
@@ -610,7 +528,7 @@ _addon.data = {
 	},
 },
 ["Decorated Gravestone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 181369},
 	["pages"] = {
 		"Here lies the remains of a Peon stout hearted. He tried to fight, but only farted.",
 	},
@@ -619,7 +537,7 @@ _addon.data = {
 	},
 },
 ["Decorated Headstone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175933},
 	["pages"] = {
 		"In loving memory of Jesse Morales",
 	},
@@ -627,17 +545,8 @@ _addon.data = {
 		{["area"] = "Hillsbrad Foothills", ["areaId"] = 24,  ["id"] = "267",  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "68.2"},
 	},
 },
-["Decorated Headstone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"In loving memory of Jesse Morales",
-	},
-	["locations"] = {
-		{["area"] = "Tarren Mill vs Southshore",  ["id"] = "7107",  ["level"] = "0",  ["x"] = "45.3",  ["y"] = "71.7"},
-	},
-},
 ["Devilsaur Calling Tips"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218187},
 	["pages"] = {
 		"A devilsaur not be listening to just anyone now. They be hunters. They be killers. You can't scare a devilsaur. You can't be using a whip and expect the devilsaur to obey your command like a slave.\n\nTo tame the devilsaur, you gotta take its soul. Take it! Bind it! Fuse it with your artifacts. This be the old ways. The ways of blood and power. You are not after the beast's respect! You be after its submission. Break it to your will. Bend its mind to your power.\n\nOnly the greatest of beastcallers be knowing how to do this.",
 	},
@@ -646,7 +555,7 @@ _addon.data = {
 	},
 },
 ["Dominance"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213418},
 	["pages"] = {
 		"Only the strongest, most courageous, most resilient of yaungol may lead the tribes. These traits are of the highest qualities in yaungol society, and are expected of all yaungol leaders.\n\nHowever, with the constant threat from the mantid to their south, the yaungol cannot afford to lose a single warrior in an internal struggle for power.\n\nA surprisingly civilized solution to this problem has been put into place. When a dispute arises between two yaungol, a banner is placed between them. They then fight one another with blunted weapons until one yields or passes out.\n\nSimilarly, new leaders are chosen in ritual combat: a yaungol who aspires to take the place of chief must place his family banner and fight any who would challenge his authority.",
 	},
@@ -654,17 +563,8 @@ _addon.data = {
 		{["area"] = "Townlong Steppes", ["areaId"] = 810,  ["id"] = "5842",  ["level"] = "0",  ["x"] = "65.4",  ["y"] = "50"},
 	},
 },
-["Dominance"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Only the strongest, most courageous, most resilient of yaungol may lead the tribes. These traits are of the highest qualities in yaungol society, and are expected of all yaungol leaders.\n\nHowever, with the constant threat from the mantid to their south, the yaungol cannot afford to lose a single warrior in an internal struggle for power.\n\nA surprisingly civilized solution to this problem has been put into place. When a dispute arises between two yaungol, a banner is placed between them. They then fight one another with blunted weapons until one yields or passes out.\n\nSimilarly, new leaders are chosen in ritual combat: a yaungol who aspires to take the place of chief must place his family banner and fight any who would challenge his authority.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["Doren's Logs"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215882},
 	["pages"] = {
 		"Landfall!\n\nWe engaged a Horde fleet many times our number in a series of sporadic encounters throughout the night. Our losses were high, but we gave more than we got. We took advantage of a dense fog that cloaked our movements; no doubt they thought our numbers were much greater, hence they fled southeast by morning light.\n\nWe were astounded to discover a great cliff wall as the fog burned away. Land! It's not on any of our charts. I've messaged the Skyseeker in order to arrange for air support.",
 		"Day 2\n\nThe Skyseeker has arrived and dispatched its gyrocopters. This is no mere uncharted island - we have discovered an entire continent! I will begin shuttling men and materials up the cliff walls immediately. From this higher ground, we will have a commanding view of the nearby seas.\n\nCommunication among the fleet is sporadic and confusing. The Horde seems to be everywhere at once; we have lost contact with Admiral Taylor's flagship, which likely engaged the Horde fleet we thumped a couple of days ago. Light help him; they were out or blood.\n\nWith no news from Stormwind, I am going to take the initiative and secure this land.",
@@ -679,7 +579,7 @@ _addon.data = {
 	},
 },
 ["Dorgar Stoenbrow"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210486},
 	["pages"] = {
 		"Dorgar Stoenbrow\nWarrior of the Scarlet Crusade \nLord of the Red Caverns \nLast seen in the Mountains of Alterac",
 	},
@@ -688,7 +588,7 @@ _addon.data = {
 	},
 },
 ["Edict of the Thunder King"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218850},
 	["pages"] = {
 		"What has become of my mogu? Look at yourselves. You are little better than the savages we once used to build our cities.\n\nTo be mogu is to rule. It is why we were created. Our words are laced with power! Those who do not bend to our will must be broken by our strength. \n\nThere is no strength without unity. There is no unity without obedience. To obey your Emperor and to demand obedience of your subjects is the natural order.",
 		"When you fight amongst yourselves you fight against your very nature. There is an order to this world, a strength that flows from your emperor down to the very stones of the earth. Do not forget this. \n\nTogether our voices shall echo across the land like the clap of thunder before a storm. You are that storm! \n\nRise mogu! And reclaim your birthright as rightful rulers of this land!",
@@ -697,17 +597,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "44.1",  ["y"] = "57.9"},
 	},
 },
-["Edicts of the Thunder King"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"This code of laws, written in the unified language of the first empire, was carefully chiseled onto the stone tablet. At the top of this list is the command that sedition, insurrection and rebellion be punished by public evisceration.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "83",  ["y"] = "32.3"},
-	},
-},
 ["Embracing the Passions"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214161},
 	["pages"] = {
 		"While some of the more tame forest hozen have chosen to integrate with pandaren culture, they remain at their core a simple race driven by their passions. They love hunting and fishing, and often will assault anyone and everything in their hunting grounds. An unfortunate situation, since the hozen hunting grounds seldom have consistent bordering or signage. Thankfully, most hozen are often kept in check by pandaren monks.",
 	},
@@ -715,17 +606,8 @@ _addon.data = {
 		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
 	},
 },
-["Embracing the Passions"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"While some of the more tame forest hozen have chosen to integrate with pandaren culture, they remain at their core a simple race driven by their passions. They love hunting and fishing, and often will assault anyone and everything in their hunting grounds. An unfortunate situation, since the hozen hunting grounds seldom have consistent bordering or signage. Thankfully, most hozen are often kept in check by pandaren monks.",
-	},
-	["locations"] = {
-		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "83.2",  ["y"] = "21.3"},
-	},
-},
 ["Empires' Fall"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175855},
 	["pages"] = {
 		"Aside from their shadowy origins, it is clear that the night elves came to power soon after their discovery of the Well of Eternity. Despite the trolls' attempts to keep them from expanding their territories, the night elves built up a mighty empire that expanded rapidly across primordial Kalimdor. Wielding fierce magics never before imagined by the superstitious trolls, the night elves had little trouble doing what the evil aqir could never do: topple the two greatest empires in the world.",
 		"The night elves systematically dismantled the troll's defenses and supply chains. The trolls, unable to counter the elves' destructive magics, buckled under the onslaught. The night elves proved to be every bit as cunning and bloodthirsty as the savage trolls -- incurring the latter race's eternal hatred and disdain. The Gurubashi and Amani empires fragmented within only a few short years.",
@@ -740,7 +622,7 @@ _addon.data = {
 	},
 },
 ["Empty Keg of Brewfather Xin Wo Yin"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214197},
 	["pages"] = {
 		"The heart-shaped spigot to this cask reveals it to be an artifact of the late great Brewfather Xin Wo Yin, \"The Brokenhearted\". Generations ago this renowned Brewfather created \"Heartswell Brew\", a concoction that infuses the drinker's entire being with a profound sense of warmth and wellbeing. It was said that Xin Wo Yin so loved the product of his art that he wept tears of heavy sorrow over every keg that left his brewery. It is likely that he wept over this very keg. Being that it's empty, you feel a little morose yourself.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -749,7 +631,7 @@ _addon.data = {
 	},
 },
 ["Engraved Stone Plaque"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 237942},
 	["pages"] = {
 		"In this dark cleft, the true shadows of madness and vengeance took hold, and many faithful Orgrimmar citizens lost their lives.\n\nLet us never forget the lessons that were learned in the siege of Orgrimmar.\n\nApart, we will fall. Together, we are Horde.",
 	},
@@ -758,7 +640,7 @@ _addon.data = {
 	},
 },
 ["Etched Note"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 174746},
 	["pages"] = {
 		"This anvil is the property of Jordan Stilwell - Please do NOT use!\n\n- Jordan",
 	},
@@ -767,7 +649,7 @@ _addon.data = {
 	},
 },
 ["Exhumer's Journal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 241853},
 	["pages"] = {
 		"We have nearly found the lost shrine! The marsh is deadly and we have lost many servants, but it will all be worth it.\n\nOnce we have entered the main hall we can reclaim the holy relics of the Crusader and return them to their rightful place.",
 		"The swamp... it has done something here. We are about to breach the main shrine but we can already feel something emanating. The heat should comfort me that the Light of Rukhmar still burns in the cave, but this is more... malevolent... angry.\n\nI am not sure that the crusader is resting easily...",
@@ -777,7 +659,7 @@ _addon.data = {
 	},
 },
 ["Exile of the High Elves"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175731},
 	["pages"] = {
 		"As the centuries passed, the night elves' new society grew strong and expanded throughout the budding forest that they came to call Ashenvale. Many of the creatures and species that were abundant before the Great Sundering, such as furbolgs and quilboars, reappeared and flourished in the land. Under the druids' benevolent leadership, the night elves enjoyed an era of unprecedented peace and tranquility under the stars.",
 		"However, many of the original Highborne survivors grew restless. Like Illidan before them, they fell victim to the withdrawal that came from the loss of their coveted magics. They were tempted to tap the energies of the Well of Eternity and exult in their magical practices. Dath'Remar, the brash, outspoken leader of the Highborne, began to mock the druids publicly, calling them cowards for refusing to wield the magic that he said was theirs by right.",
@@ -791,17 +673,8 @@ _addon.data = {
 		{["area"] = "Northern Barrens", ["areaId"] = 11,  ["id"] = "17",  ["level"] = "0",  ["x"] = "67.1",  ["y"] = "73.4"},
 	},
 },
-["Faded Note"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"My love... I hope you can forgive me. All I could do was run. If I let them catch us both, there would be no way to save you. Now all I feel is a terrible emptyness for not having stayied by your side. This morning I intend to face the flying beasts the way I should have before. I pledge to seek you endlessly in the afterlife... I desire only to be with you. Whatever the sacrifice...",
-	},
-	["locations"] = {
-		{["area"] = "Spires of Arak", ["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "55.3",  ["y"] = "18.1"},
-	},
-},
 ["Fellari Swiftarrow"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210487},
 	["pages"] = {
 		"Fellari Swiftarrow\nRanger Captain of the Scarlet Crusade \nCitizen of Quel'Thalas \nLost in the forests of Silverpine",
 	},
@@ -810,7 +683,7 @@ _addon.data = {
 	},
 },
 ["Ferren Marcus"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210488},
 	["pages"] = {
 		"Ferren Marcus\nHigh Abbot of the Scarlet Monastery \nCitizen of Stratholme \nKilled defending the Scarlet Monastery at the First Summertide Assault",
 	},
@@ -819,7 +692,7 @@ _addon.data = {
 	},
 },
 ["For Council and King"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218428},
 	["pages"] = {
 		"Zandalari society has remained an unchanging hierarchy for thousands of years. \n\n Hardworking farmers, fishers, and craftsmen form the peasant caste, the foundation of the empire. Zandalari elders tell them what to harvest, when to plant, and how to behave. To disobey the elders is to disobey the gods, an offense punishable by exile or death. \n\n The Zandalari warrior caste sits above the peasantry, acting as the arms of the King and the might of the council. Dexterity is not prized among Zandalari warriors: Brute force, backed by ancient magics, is the preferred combat style.",
 		"Dictating every aspect of Zandalari society down to the very last detail are the scholars and the priesthood. Masters of magic and communing with the spirits, these respected bastions of knowledge stand upon fifteen millennia worth of accumulated knowledge. The highest of these have a seat on the Zanchuli Council, which both advise the King and ensures his every command is executed upon. The council is consulted before every battle or major decision. \n\nFrom a golden throne, lording over all of the Zandalari, rests the great King Rastakhan.\n\nEmpowered by the Zandalari gods themselves to act as their voice, he has ruled for over two hundred years.",
@@ -828,18 +701,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "66",  ["y"] = "44.7"},
 	},
 },
-["For Council and King"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Zandalari society has remained an unchanging hierarchy for thousands of years. \n\n Hardworking farmers, fishers, and craftsmen form the peasant caste, the foundation of the empire. Zandalari elders tell them what to harvest, when to plant, and how to behave. To disobey the elders is to disobey the gods, an offense punishable by exile or death. \n\n The Zandalari warrior caste sits above the peasantry, acting as the arms of the King and the might of the council. Dexterity is not prized among Zandalari warriors: Brute force, backed by ancient magics, is the preferred combat style.",
-		"Dictating every aspect of Zandalari society down to the very last detail are the scholars and the priesthood. Masters of magic and communing with the spirits, these respected bastions of knowledge stand upon fifteen millennia worth of accumulated knowledge. The highest of these have a seat on the Zanchuli Council, which both advise the King and ensures his every command is executed upon. The council is consulted before every battle or major decision. \n\nFrom a golden throne, lording over all of the Zandalari, rests the great King Rastakhan.\n\nEmpowered by the Zandalari gods themselves to act as their voice, he has ruled for over two hundred years.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["Forestlord and the first Druids"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 177205},
 	["pages"] = {
 		"In time, the child, Cenarius, grew to the stature of his proud father. A brother to both the trees and the stars, the great hunter roamed the far places of the world, singing the harmonious songs of the dawning. All creatures bowed before his grace and beauty - there were none so cunning as the son of the moon and the white stag.",
 		"Eventually, Cenarius befriended the Shu'halo and spoke to them of the turning world. The children of the earth knew him as brother and swore to help him care for the fields of life and the favored creatures of their great Earthmother.",
@@ -850,7 +713,7 @@ _addon.data = {
 	},
 },
 ["Forgemaster Deng"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 217763},
 	["pages"] = {
 		"At the peak of Lei Shen's reign, the great Thunder Forge rang day and night with the clamor of hammers and steel. \n\nThe artisan blacksmith, Forgemaster Deng, personally oversaw the forges and crafted thousands of weapons by his own hand. Under the Forgemaster's expert touch, ordinary metals were transformed into exceptional blades - the perfect union of function and form. \n\nJust before his death, the Forgemaster created his finest works - a spear, axe, and helm especially gifted to Lei Shen himself. \n\nAt the official ceremony whereupon Deng was finally laid to rest, Lei Shen uttered the following words. \"Today, a star leaves earth and ascends to the heavens.\"",
 	},
@@ -859,7 +722,7 @@ _addon.data = {
 	},
 },
 ["Fossilized Egg"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175680},
 	["pages"] = {
 		"Found in the sweltering wastes of the Tanaris desert, this peculiar egg remains a mystery to modern ecologists. Dating tests suggest the egg could be up to a thousand years old. Though certain elements denote insectoid structure, its true origins cannot be discerned. The species that lays such distinct eggs still remains to be discovered.",
 	},
@@ -868,7 +731,7 @@ _addon.data = {
 	},
 },
 ["Ga'trul's Logs"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215878},
 	["pages"] = {
 		"Day 12\n\nHonorable Warchief-\n\nI have assumed command of the fleet after Krug fell during battle with the Alliance flagship. He died with great honor, and did not choke his last breath until he learned of the Alliance defeat. \n\nThe battle has taken a heavy toll on the fleet, but one by one our scattered vessels are arriving victoriously to the shores of this strange land. It is not on any of our charts.\n\nI have tasked our peons with the construction of a safe harbor from which we can make repairs.",
 		"Day 13\n\nA fat race of bear-creatures calls this land home. They are the \"pandaren.\" Dalgan tells me that a pandaren was present at the founding of Orgrimmar, but he is always full of grog and lies.\n\nThese pandaren do not appear to be a threat, but they have supplies which will be useful to our campaign: food, wood, stone... If this indicates the wealth of this new land, then it will make a fine prize for the Horde.",
@@ -883,7 +746,7 @@ _addon.data = {
 	},
 },
 ["Garley's Journal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 207200},
 	["pages"] = {
 		"I have remained cautious not to touch the sample, to avoid contamination. This precaution has paid off, as my initial assessments lead me to believe that this item is of old god origin. Any contact with this artifact could have posed a great risk to my own well-being.\n\nI hope I haven't been contaminated already.",
 		"It bears close resemblance to saronite, but lacks several key characteristics. The geography is all wrong, anyhow. Could there be an old god beneath the Eastern Kingdoms? Previous expeditions have never indicated as such, but then again, the cataclysmic events of Deathwing's return have revealed several hidden relics.",
@@ -894,7 +757,7 @@ _addon.data = {
 	},
 },
 ["General Turalyon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 25330},
 	["pages"] = {
 		"General Turalyon\n\nFormer Lieutenant to Lord Anduin Lothar. Knight of the Silver Hand. High General of the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nEsarus thar no'Darador' - By Blood and Honor We Serve.\nYou were the right hand of justice and virtue, old friend. Your name will be honored in our halls always.\n\n- Lord Uther the Lightbringer - Knight of the Silver Hand",
 	},
@@ -902,17 +765,8 @@ _addon.data = {
 		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69",  ["y"] = "82.5"},
 	},
 },
-["General Turalyon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"General Turalyon\n\nFormer Lieutenant to Lord Anduin Lothar. Knight of the Silver Hand. High General of the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nEsarus thar no'Darador' - By Blood and Honor We Serve.\nYou were the right hand of justice and virtue, old friend. Your name will be honored in our halls always.\n\n- Lord Uther the Lightbringer - Knight of the Silver Hand",
-	},
-	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.1",  ["y"] = "82.4"},
-	},
-},
 ["Geru Strider"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175682},
 	["pages"] = {
 		"The largest of the plainstrider birds, the Geru are few in number and rarely encountered.",
 	},
@@ -921,7 +775,7 @@ _addon.data = {
 	},
 },
 ["Gnawed Crate"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 230583},
 	["pages"] = {
 		"Whatever was inside this crate is gone, though the Goren seem to have enjoyed eating the crate itself at least as much as the contents.",
 	},
@@ -930,7 +784,7 @@ _addon.data = {
 	},
 },
 ["Gold-Inlaid Porcelain Funerary Figurine"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214199},
 	["pages"] = {
 		"Commissioned at the time of the death of a loved one, figurines such as this one help the grieved overcome their loss. This statuette depicts a beautiful young Pandaren Lorewalker named Lin. The inscription indicates that she succumbed to a terrible fever that swept through the Valley of Four Winds during the short reign of the Hozen Emperor Rikktik.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -939,16 +793,16 @@ _addon.data = {
 	},
 },
 ["Grand Admiral Daelin Proudmoore"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 177201},
 	["pages"] = {
 		"Commander of the Alliance Fleets\n\nFriend of Stormwind",
 	},
 	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.8",  ["y"] = "29.7"},
+		{["sourceType"]="unavailable", ["area"] = "Stormwind", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.8",  ["y"] = "29.7"},
 	},
 },
 ["Green Hills of Stranglethorn"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 233978},
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><H1 align=\"center\">THE GREEN HILLS OF STRANGLETHORN</H1><BR/><H3 align=\"center\">by Hemet Nesingwary</H3></BODY></HTML>",
 		"Our first day went as well as one can expect first days to go. Most of our time was preoccupied with making the necessary arrangements to establish a base camp. I located an ideal setting by a freshwater river inlet. Judging by the old, abandoned docks nearby, this site was inhabited sometime ago. As for the original inhabitants, only time can tell that tale.",
@@ -986,7 +840,7 @@ _addon.data = {
 	},
 },
 ["Grooming for Ghouls"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191652},
 	["pages"] = {
 		"Grooming for Ghouls\nBeing A Manual on Debridement and Recycling",
 		"Bandages\n\nWounds that bleed more than thrice daily should be bandaged. When selecting a type of cloth for your bandages, go with your preference. Many ghouls prefer Runecloth for its natural purple color which blends to a sickly maroon when soaked with blood. One cannot ignore the supremely stylish yellowing properties of simple linen, however. Experimentation is best!",
@@ -1000,7 +854,7 @@ _addon.data = {
 	},
 },
 ["Guide to the Side Effects of Reanimation"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191650},
 	["pages"] = {
 		"Welcome to the Scourge. Now that you have entered your true service, you may find immense relief in your liberation from various mortal inconveniences. No bothersome sleeping to take up your time anymore, nor any great need for shelter from the elements, and you are even free from the mild irritation of cutting hair and nails! How delightful!",
 		"However, there are a few, almost insignificant, details to being undead:\nKeep an eye on your rotting. Some is all very well to scare your foes, but an arm falling off mid-stab is just embarrassing.\nLearn to love your stench. Some say foul, we say rawrr.\nAvoid living animals, especially dogs.",
@@ -1011,7 +865,7 @@ _addon.data = {
 	},
 },
 ["Gura the Reclaimed"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218081},
 	["pages"] = {
 		"Lord Gura commanded the very power of the storm at his fingertips. With a single word, he could blanket the earth in crackling electricity. Those caught in his storm died a terrible, scorching death.",
 	},
@@ -1020,7 +874,7 @@ _addon.data = {
 	},
 },
 ["Gurthan's Epitaph"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214637},
 	["pages"] = {
 		"Warlord Gurthan, master of beasts and conqueror of men, waits here.\n\nHe waits for the EARTH to LAY before him, as beasts once did.\n\nHe waits for the SUN to KNEEL before him, as men once did.",
 	},
@@ -1029,59 +883,23 @@ _addon.data = {
 	},
 },
 ["Hai-pu"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214421},
 	["pages"] = {
 		"Beware the jinyu\n\nThey are a bunch of dookers\n\nOok'em in the jerb.",
+		"A slicky in hand\n\nIs worth two in the dooker\n\nSo says Chief Ee Ee!",
+		"Ko Ko sniff finger\n\nIt ookin stank of dook\n\nWill not sniff again.",
+		"Banana totem\n\nBest thing ever to exist\n\nTrip all the wikkets!",
+		"Art of Hozen-fu:\n\nGrab, stab, and ookin bite it.\n\nRepeat until win.",
 	},
 	["locations"] = {
 		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "26",  ["y"] = "38.9"},
 		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "31.4",  ["y"] = "28.7"},
 		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "52",  ["y"] = "87.4"},
-	},
-},
-["Hai-pu"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"A slicky in hand\n\nIs worth two in the dooker\n\nSo says Chief Ee Ee!",
-	},
-	["locations"] = {
-		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "52.3",  ["y"] = "87.4"},
-		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "28",  ["y"] = "47.4"},
-		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "31.4",  ["y"] = "28.7"},
-	},
-},
-["Hai-pu"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Ko Ko sniff finger\n\nIt ookin stank of dook\n\nWill not sniff again.",
-	},
-	["locations"] = {
-		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "26",  ["y"] = "38.7"},
-	},
-},
-["Hai-pu"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Banana totem\n\nBest thing ever to exist\n\nTrip all the wikkets!",
-	},
-	["locations"] = {
-		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "28",  ["y"] = "47.4"},
 		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "48",  ["y"] = "73.3"},
 	},
 },
-["Hai-pu"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Art of Hozen-fu:\n\nGrab, stab, and ookin bite it.\n\nRepeat until win.",
-	},
-	["locations"] = {
-		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "26.4",  ["y"] = "37.3"},
-		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "52",  ["y"] = "89.4"},
-		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "45.9",  ["y"] = "62"},
-	},
-},
 ["Half-Eaten Skeleton"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 227705},
 	["pages"] = {
 		"This adventurer seems to have been killed by a long fall.",
 	},
@@ -1090,7 +908,7 @@ _addon.data = {
 	},
 },
 ["Haqin of the Hundred Spears"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 217764},
 	["pages"] = {
 		"In the years before Lei Shen's rise to power, the mogu clashed against the other races of Pandaria. The mogu fought against the jinyu empire in a battle that lasted forty days and forty nights. \n\nFrom behind the frontlines, the jinyu waterspeakers hurled columns of water, drowning the mogu forces. They conjured bubbles that lifted mogu into the air, then sent them plummeting to their deaths. \n\nFinally, with the mogu forces nearly beaten, an unknown foot soldier rose up against the fish men. The foot soldier grabbed a basket of the jinyu's long fishing spears, and hurled them over the field of battle with deadly accuracy. \n\nThe spears pierced through the waterspeakers' shield, putting an end to the resistance. And so it was that the battle was won. \n\nAfterwards, the Thunder King presented Haqin with a hundred of the finest golden spears crafted by mogu forgemasters. He became one of Lei Shen's greatest lieutenants, and after his death, the spears were buried at his side.",
 	},
@@ -1099,7 +917,7 @@ _addon.data = {
 	},
 },
 ["Harthal Truesight"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210489},
 	["pages"] = {
 		"Harthal Truesight\nLord Paladin of the Scarlet Crusade \nCitizen of Azeroth - Knight of the Silver Hand\nLast seen entering the cursed city of Stratholme",
 	},
@@ -1108,7 +926,7 @@ _addon.data = {
 	},
 },
 ["Hatred of the Centaur"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 177209},
 	["pages"] = {
 		"As the mists of dawn faded and the Age of Memory advanced, the demigod, Cenarius, went his own way through the fields of the world. The Shu'halo (tauren) were sorrowful at his passing and forgot much of the druidism he had taught them. As the generations passed, they forgot how to speak with the trees and the wild things of the land. The dark whispers from the deeps of the world drifted up to their ears once again.",
 		"Though the children of the earth closed out the evil whisperings, a terrible curse befell their roaming tribes. Out of the black lands of the west came a horde of murderous creatures - the centaur. Cannibals and ravagers, the centaur fell upon the Shu'halo like a plague. Though the braves and hunters fought with the Earthmother's blessing in their hearts, the centaur could not be defeated.",
@@ -1119,7 +937,7 @@ _addon.data = {
 	},
 },
 ["Heart of Gorgorek"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 229161},
 	["pages"] = {
 		"Inside the chest is the Heart of Gorgorek, the artifact you uncovered from the depths of Cragplume Crater.\n\nThe heart beats slowly. Each pulse rumbles deep and primordial, echoing deep into the earth.\n\nLike a slumbering beast, it waits.",
 	},
@@ -1129,7 +947,7 @@ _addon.data = {
 	},
 },
 ["Hellscream's Command: Blood Elves"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 216462},
 	["pages"] = {
 		"Bloodhilt, I am sending you a contingent of blood elves. Lor'themar has finally decided to honor his agreement with the horde. I do not trust his motives but I would rather use them than waste our orcs on such petty tasks as dealing with Alliance casters.\n\nI leave them for your disposal. Hellscream's eye upon you!",
 	},
@@ -1138,7 +956,7 @@ _addon.data = {
 	},
 },
 ["Hellscream's Command: Goblins"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 216461},
 	["pages"] = {
 		"Gallywix was too lenient in his contract. Watch his goblins like a worg. Use them but know that they are probably receiving orders from the Trade Prince in some fashion. I must know what his end game is. Find this for me. For the horde!",
 	},
@@ -1147,7 +965,7 @@ _addon.data = {
 	},
 },
 ["Here Lies King Terenas Menethil II"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175659},
 	["pages"] = {
 		"Here lies King Terenas Menethil II -- Last True King of Lordaeron.\n\nGreat were his deeds -- long was his reign -- unthinkable was his death. \n\n     \"May the Father lie blameless for the deeds of the son. \n     May the bloodied crown stay lost and forgotten.\"",
 	},
@@ -1156,7 +974,7 @@ _addon.data = {
 	},
 },
 ["Highborne Astrolabe"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175686},
 	["pages"] = {
 		"Recovered from the undersea ruins of Suramar, this functional astrolabe was crafted by the highborne night elves nearly twelve thousand years ago. The highborne, obsessed with magic, the occult and astronomy, developed a series of ingenious apparatuses. This device provides invaluable insights into the ancient night elves' level of scientific understanding.",
 	},
@@ -1165,7 +983,7 @@ _addon.data = {
 	},
 },
 ["Holia Sunshield"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210490},
 	["pages"] = {
 		"Holia Sunshield\nDefender of the Scarlet Crusade\nKilled while slaying the Dreadlord Beltheris",
 	},
@@ -1174,7 +992,7 @@ _addon.data = {
 	},
 },
 ["Horatio Montgomery, M.D."] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 124374},
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><P>In memory of my dear mentor, Horatio M. Montgomery, M.D. Healer, Teacher, Friend.</P><BR/><H1 align=\"center\">50 BTFT - 25 ATFT</H1><BR/><P>\"The world is full of the sick and weary. It is our job, as healers, NAY, as men and women of medicine, to cleanse them ALL of the 'itis.'\" </P><BR/><P>- H.M.M., M.D., PhD, JD, Grandmaster Farmer, Dancer Extraordinaire, Friend to the Animals</P></BODY></HTML>",
 	},
@@ -1183,7 +1001,7 @@ _addon.data = {
 	},
 },
 ["Horde Catapult"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175688},
 	["pages"] = {
 		"This remnant from the Second War serves as a stirring reminder of just how perilously close the Horde came to conquering Ironforge Mountain.",
 	},
@@ -1192,7 +1010,7 @@ _addon.data = {
 	},
 },
 ["Horde Military Ranks"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 179741},
 	["pages"] = {
 		"<HTML><BODY><H1 align=\"center\">HORDE MILITARY RANKS</H1><BR/><P align=\"center\">OFFICERS</P><BR/><P align=\"center\">High Warlord</P><P align=\"center\">Warlord</P><P align=\"center\">General</P><P align=\"center\">Lieutenant General</P><P align=\"center\">Champion</P><P align=\"center\">Centurion</P><P align=\"center\">Legionnaire</P><P align=\"center\">Blood Guard</P><P align=\"center\">Stone Guard</P><BR/><P align=\"center\">ENLISTED</P><BR/><P align=\"center\">First Sergeant</P><P align=\"center\">Senior Sergeant</P><P align=\"center\">Sergeant</P><P align=\"center\">Grunt</P><P align=\"center\">Scout</P></BODY></HTML>",
 	},
@@ -1201,7 +1019,7 @@ _addon.data = {
 	},
 },
 ["Hozen Maturity"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 211993},
 	["pages"] = {
 		"The hozen are a short lived race. Their elders typically are no more than twenty years old. As a result, their relative maturity when compared to the other speaking races is quite minimal.\n\nIn contrast to the very reserved and polite jinyu, the hozen are a passionate people that love to love, love to hate, and love to feel any emotion they can feel, as long as they feel it strongly.",
 	},
@@ -1209,17 +1027,8 @@ _addon.data = {
 		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "52.4",  ["y"] = "87.6"},
 	},
 },
-["Hozen Maturity"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The hozen are a short lived race. Their elders typically are no more than twenty years old. As a result, their relative maturity when compared to the other speaking races is quite minimal.\n\nIn contrast to the very reserved and polite jinyu, the hozen are a passionate people that love to love, love to hate, and love to feel any emotion they can feel, as long as they feel it strongly.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["Hozen Speech"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 211990},
 	["pages"] = {
 		"The language of the hozen is steeped in mystery. While the majority of the hozen are able to speak in a common language, they often include an assortment of other sounds and \"words\" that have yet to be translated by other races.\n\nMost jinyu scholars believe these additional words to be uncharitable or offensive in nature, but the matter is far from closed.\n\nTo quote the great sage Ook Ook, \"you can take the derk out of the jib, but you shouldn't put the jib in the derk.\"\n\nWise words indeed. We think.",
 	},
@@ -1227,17 +1036,8 @@ _addon.data = {
 		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "26.4",  ["y"] = "28.3"},
 	},
 },
-["Hozen Speech"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The language of the hozen is steeped in mystery. While the majority of the hozen are able to speak in a common language, they often include an assortment of other sounds and \"words\" that have yet to be translated by other races.\n\nMost jinyu scholars believe these additional words to be uncharitable or offensive in nature, but the matter is far from closed.\n\nTo quote the great sage Ook Ook, \"you can take the derk out of the jib, but you shouldn't put the jib in the derk.\"\n\nWise words indeed. We think.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["Humble Monument"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 195119},
 	["pages"] = {
 		"&lt;The small grave marker is lovingly inscribed with orcish runes.&gt;\n\n     - BELOVED OLGRA -\n      Wife of Mankrik\n\n   It took forever to find you\n    And now you are gone",
 	},
@@ -1246,7 +1046,7 @@ _addon.data = {
 	},
 },
 ["I.O.U. Note"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 223498},
 	["pages"] = {
 		"1,000,000 Chocolate Chip Cookies\n\n- O.D.G.",
 	},
@@ -1255,7 +1055,7 @@ _addon.data = {
 	},
 },
 ["Icecrown and the Frozen Throne"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175749},
 	["pages"] = {
 		"Kil'jaeden cast Ner'zhul's icy cask back into the world of Azeroth. The hardened crystal streaked across the night sky and smashed into the desolate arctic continent of Northrend, burying itself deep within the Icecrown glacier. The frozen crystal, warped and scarred by its violent descent, came to resemble a throne, and Ner'zhul's vengeful spirit soon stirred within it.",
 		"From the confines of the Frozen Throne, Ner'zhul began to reach out his vast consciousness and touch the minds of Northrend's native inhabitants. With little effort, he enslaved the minds of many indigenous creatures, including ice trolls and fierce wendigo, and he drew their evil brethren into his growing shadow. His psychic powers proved to be almost limitless, and he used them to create a small army that he housed within Icecrown's twisting labyrinths.",
@@ -1271,7 +1071,7 @@ _addon.data = {
 	},
 },
 ["In Loving Memory"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 181062},
 	["pages"] = {
 		"<HTML><BODY><H1 align=\"center\">Anthony Ray Stark</H1><h2 align=\"center\">1961 - 2005</h2></BODY></HTML>",
 	},
@@ -1280,7 +1080,7 @@ _addon.data = {
 	},
 },
 ["Inert Sound Beacon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218962},
 	["pages"] = {
 		"The technology behind mantid sound beacons is incomprehensible for non-mantid races. They seem to rely on mantid physiology. This ancient beacon, while intact, is completely inert without mantid to interact with it.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1289,7 +1089,7 @@ _addon.data = {
 	},
 },
 ["Invar One-Arm"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210491},
 	["pages"] = {
 		"Invar One-Arm\nThe first Chief Assassin of the Scarlet Crusade \nCitizen of Dalaran\nLast seen on the shores of Northrend",
 	},
@@ -1298,7 +1098,7 @@ _addon.data = {
 	},
 },
 ["Invincible"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 192835},
 	["pages"] = {
 		"INVINCIBLE\n\nBeloved steed of Prince Arthas Menethil\n\nLoyal and great of heart in life, may you find peace in death.\n\nPure streams and green pastures, devoted friend.",
 	},
@@ -1307,16 +1107,7 @@ _addon.data = {
 	},
 },
 ["Iron Amulet"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"This huge iron amulet weighs as much as a battle axe. Mogu warriors often wore \"jewelry\" such as this as a demonstration of strength.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.7",  ["y"] = "31.8"},
-	},
-},
-["Iron Amulet"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214187},
 	["pages"] = {
 		"This huge iron amulet weighs as much as a battle axe. Mogu warriors often wore \"jewelry\" such as this as a demonstration of strength.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1325,7 +1116,7 @@ _addon.data = {
 	},
 },
 ["Ironforge - the Awakening of the Dwarves"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175736},
 	["pages"] = {
 		"In the ancient times, after the Titans departed Azeroth, their children, known as the earthen, continued to shape and guard the deep recesses of the world. The earthen were largely unconcerned with the affairs of the surface-dwelling races and longed only to plumb the dark depths of the earth.",
 		"When the world was sundered by the Well of Eternity's implosion, the earthen were deeply affected. Reeling with the pain of the earth itself, the earthen lost much of their identity and sealed themselves within the stone chambers where they were first created. Uldaman, Uldum, Ulduar... these were the names of the ancient Titan cities where the earthen first took shape and form. Buried deep beneath the world, the earthen rested in peace for nearly eight thousand years.",
@@ -1344,7 +1135,7 @@ _addon.data = {
 	},
 },
 ["Jailor's Law Book"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 237886},
 	["pages"] = {
 		"1. Await prisoners sent to prison from our comrades above.\n2. Open the door and approach the prisoner slowly, but with conviction.\n3. Say upon the prisoner, \"You have been found guilty of crimes against the Alliance!\"\n4. Slay the prisoner with righteous conviction.",
 	},
@@ -1353,7 +1144,7 @@ _addon.data = {
 	},
 },
 ["Jar of ashes"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 181573},
 	["pages"] = {
 		"Here is a jar of ashes. These are the ashes of my sanity, my passion, and my drive. All, utterly destroyed by themselves. May all those who look upon these desolated lands of Hellfire remember this fallen peon. He shed blood for the Alliance, and sacrificed for the Horde only to be driven utterly mad by the wicked and soulless ones who devoured what he held most dear. As they feast from his toils, may they suffer his wrath. Maybe not in this world, but in every world hereafter. It is my declaration, my solem oath, and my everlasting promise. I will avenge my suffering.",
 	},
@@ -1362,7 +1153,7 @@ _addon.data = {
 	},
 },
 ["Journal of High Marshal Twinbraid"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 216476},
 	["pages"] = {
 		"One does not get many chances in life to both follow orders and achieve vengeance. I count myself lucky.\n\nThe horde have brought with them Warlord Bloodhilt. That filth was in charge of Desolation Hold during my campaign through the Southern Barrens. It was his command that led to my son's death and the murder of our people at Bael Modan.\n\nNow the High King himself grants me the full might of Stormwind, Ironforge, and Gnomeregan to crush these vermin from this new land. It won't be bringing my boy back, but maybe I can save a pandaren from knowing the pain of outliving their child.",
 	},
@@ -1371,7 +1162,7 @@ _addon.data = {
 	},
 },
 ["Kel'Thuzad and the Forming of the Scourge"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175754},
 	["pages"] = {
 		"There were a handful of powerful individuals scattered throughout the world who heard the Lich King's mental summons from Northrend. Most notable of them was the archmage of Dalaran, Kel'Thuzad, who was one of senior members of the Kirin Tor, Dalaran's ruling council. He had been considered a maverick for years due to his insistence on studying the forbidden arts of necromancy.",
 		"Driven to learn all he could of the magical world and its shadowy wonders, he was frustrated by what he saw as his peers' outmoded and unimaginative precepts. Upon hearing the powerful summons from Northrend, the archmage bent all of his considerable will to communing with the mysterious voice. Convinced that the Kirin Tor was too squeamish to seize the power and knowledge inherent in the dark arts, he resigned himself to learn what he could from the immensely powerful Lich King.",
@@ -1395,7 +1186,7 @@ _addon.data = {
 	},
 },
 ["Kil'jaeden and the Shadow Pact"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175741},
 	["pages"] = {
 		"Around the time of Medivh's birth on Azeroth, Kil'jaeden the Deceiver sat and brooded amongst his followers within the Twisting Nether. The cunning demonlord, under orders of his master, Sargeras, was plotting the Burning Legion's second invasion of Azeroth.",
 		"This time he would not allow any mistakes. Kil'jaeden surmised that he needed a new force to weaken Azeroth's defenses before the Legion even set foot upon the world. If the mortal races, such as the night elves and dragons, were forced to contend with a new threat, they would be too weak to pose any real resistance when the Legion's true invasion arrived.",
@@ -1413,16 +1204,16 @@ _addon.data = {
 	},
 },
 ["King Llane I of the House of Wrynn"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 177200},
 	["pages"] = {
 		"King Llane I of the House of Wrynn\n\nLiege Lord of Stormwind \n\nDefender of Azeroth",
 	},
 	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.3",  ["y"] = "29.6"},
+		{["sourceType"] = "unavailable", ["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.3",  ["y"] = "29.6"},
 	},
 },
 ["King Varian Wrynn"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 190287},
 	["pages"] = {
 		"In tribute to King Varian Wrynn \nknown to some as LO'GOSH the \"Ghost Wolf\"\n\nHis miraculous return from long years of exile and hardship has ignited a new fire of spirit and courage within the Alliance.\n\nWe shall march boldly into these perilous lands holding his valor and his tenacity in our hearts.\n\n\n- Highlord Bolvar Fordragon",
 	},
@@ -1431,7 +1222,7 @@ _addon.data = {
 	},
 },
 ["Kurdran Wildhammer"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 25329},
 	["pages"] = {
 		"Kurdran Wildhammer\n\nRenowned Dragon Fighter. Gryphon Master of the Aerie Peak. Commander of the Gryphon Rider Division attached to the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nWe will hear Sky-Ree's calls upon the winds. We will hear your hammer thunder across the mountaintops. Ride hard into the hereafter, brother. The halls of our ancestors await you.\n\n- High Thane Falstad Wildhammer",
 	},
@@ -1439,18 +1230,8 @@ _addon.data = {
 		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "71.3",  ["y"] = "87.5"},
 	},
 },
-["Kurdran Wildhammer"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Kurdran Wildhammer\n\nRenowned Dragon Fighter. Gryphon Master of the Aerie Peak. Commander of the Gryphon Rider Division attached to the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nWe will hear Sky-Ree's calls upon the winds. We will hear your hammer thunder across the mountaintops. Ride hard into the hereafter, brother. The halls of our ancestors await you.\n\n- High Thane Falstad Wildhammer",
-	},
-	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "30.2",  ["y"] = "46.1"},
-		{["area"] = "Elwynn Forest", ["areaId"] = 30,  ["id"] = "12",  ["level"] = "0",  ["x"] = "30.3",  ["y"] = "46.2"},
-	},
-},
 ["Kypari Sap Container"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218966},
 	["pages"] = {
 		"This container, though amber in color, is actually made from kunchong secretions. This is true of many of the more mundane pieces of mantid furniture.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1459,16 +1240,16 @@ _addon.data = {
 	},
 },
 ["Lady Mara Fordragon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 177202},
 	["pages"] = {
 		"Lady Mara Fordragon\n\nHigh Clerist of Stormwind\n\nPatron of the Refugees who fled to Lordaeron after the First War.\n\nShe was the bright mother of our future. May she rest in the Light.",
 	},
 	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.2",  ["y"] = "30.2"},
+		{["sourceType"] = "unavailable", ["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "69.2",  ["y"] = "30.2"},
 	},
 },
 ["Lei Shen"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218431},
 	["pages"] = {
 		"Young Lei Shen was born the son of a warlord in the terrible Age of a Hundred Kings. Like his brothers, he was strong of arm and fluent in the ways of war. But unlike others of his generation, he spoke of more than conquest. The legends of his forefathers were etched into his heart. \n\nOnce Lei Shen had come of age and commanded his own legions, he announced his intent to awaken the gods. Only his most loyal of followers accompanied him where no mogu had dared tread: into the very heart of the Thundering Mountain, the sacred home of the one the mogu had called their master. \n\nLei Shen descended into the mountain. \n\nBut it was the Thunder King who returned.",
 	},
@@ -1476,17 +1257,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "40.2",  ["y"] = "40.7"},
 	},
 },
-["Lei Shen"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Young Lei Shen was born the son of a warlord in the terrible Age of a Hundred Kings. Like his brothers, he was strong of arm and fluent in the ways of war. But unlike others of his generation, he spoke of more than conquest. The legends of his forefathers were etched into his heart. \n\nOnce Lei Shen had come of age and commanded his own legions, he announced his intent to awaken the gods. Only his most loyal of followers accompanied him where no mogu had dared tread: into the very heart of the Thundering Mountain, the sacred home of the one the mogu had called their master. \n\nLei Shen descended into the mountain. \n\nBut it was the Thunder King who returned.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["Lethargy of the Orcs"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175751},
 	["pages"] = {
 		"Months passed, and more orc prisoners were rounded up and placed within the internment camps. As the camps began to overflow, the Alliance was forced to construct new camps in the plains south of the Alterac Mountains. To properly maintain and supply the growing number of camps, King Terenas levied a new tax on the Alliance nations.",
 		"This tax, along with increased political tensions over border disputes, created widespread unrest. It seemed that the fragile pact that had forged the human nations together in their darkest hour would break at any given moment.",
@@ -1503,7 +1275,7 @@ _addon.data = {
 	},
 },
 ["Liu Lang's Final Rest"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214354},
 	["pages"] = {
 		"\"Goodnight, Shen-zin Su. Do not mourn, old friend. I sleep, and when I awaken, my next great journey begins.\" -Liu Lang\n\n   This location marks the final resting place of Liu Lang, the first pandaren explorer. Weary from a lifetime of travels, he rested under the shade of his trusted bamboo umbrella and drifted to what lies beyond.\n\n   According to legend, the unusual tree growing in this spot sprouted from that very umbrella, and his spirit has merged with the lands on Shen-zin Su's back.\n\n   In the generations that followed, many of the island's elders have followed, each planting his or her staff in the ground to create the \"Wood of Staves.\"",
 	},
@@ -1512,7 +1284,7 @@ _addon.data = {
 	},
 },
 ["Liu Lang, The First Explorer"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214353},
 	["pages"] = {
 		"\"Every horizon is a treasure chest; Every blank map a story waiting to be told.\" -Liu Lang\n\n   The first pandaren explorer, Liu Lang disembarked from the mainland on the back of the great turtle Shen-zin Su. His discoveries proved that the rest of the world had survived the Sundering.\n\n   He would return to Pandaria every five years, gathering more wanderers and explorers with each visit, until his death at the age of 122. The turtle Shen-zin Su has not returned to Pandaria since.",
 	},
@@ -1521,7 +1293,7 @@ _addon.data = {
 	},
 },
 ["Manacles of Rebellion"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214181},
 	["pages"] = {
 		"Forged of iron and imbued with spells of subjugation and pain, these manacles with inward facing spikes were forced onto the slave races of the Mogu. While the spells have long since faded, their cruelty is still chilling.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1529,17 +1301,8 @@ _addon.data = {
 		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.6",  ["y"] = "31.7"},
 	},
 },
-["Manacles of Rebellion"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Forged of iron and imbued with spells of subjugation and pain, these manacles with inward facing spikes were forced onto the slave races of the Mogu. While the spells have long since faded, their cruelty is still chilling.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.7",  ["y"] = "31.7"},
-	},
-},
 ["Mantid Lamp"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218964},
 	["pages"] = {
 		"The glow from this lamp is neither from fire nor magic. Inside, you can see many glowing insects preserved in amber.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1548,7 +1311,7 @@ _addon.data = {
 	},
 },
 ["Mantid Society"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213410},
 	["pages"] = {
 		"Mantid assaults on the Serpent's Spine are a terrible thing to experience. Both as a defender, and as a mantid. Only the smartest, strongest, or most agile of mantid survive this encounter, and pandaren defenders are slaughtered outright in terrible numbers.\n\nMantid survivors make their way back to the great trees, often bearing trophies of their conquests. There, they are welcomed back into the mantid society, and take their place among their civilization according to the level of their deeds.\n\nThe purpose of this rite of passage is unclear, but those who travel beyond the wall are forewarned: any mantid you encounter beyond the wall is a hardened veteran, to be feared and respected.",
 	},
@@ -1556,17 +1319,8 @@ _addon.data = {
 		{["area"] = "Dread Wastes", ["areaId"] = 858,  ["id"] = "6138",  ["level"] = "0",  ["x"] = "59.9",  ["y"] = "55"},
 	},
 },
-["Mantid Society"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Mantid assaults on the Serpent's Spine are a terrible thing to experience. Both as a defender, and as a mantid. Only the smartest, strongest, or most agile of mantid survive this encounter, and pandaren defenders are slaughtered outright in terrible numbers.\n\nMantid survivors make their way back to the great trees, often bearing trophies of their conquests. There, they are welcomed back into the mantid society, and take their place among their civilization according to the level of their deeds.\n\nThe purpose of this rite of passage is unclear, but those who travel beyond the wall are forewarned: any mantid you encounter beyond the wall is a hardened veteran, to be feared and respected.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["Military Ranks of the Horde & Alliance"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 179707},
 	["pages"] = {
 		"<HTML><BODY><H1 align=\"center\">MILITARY RANKS OF THE HORDE &amp; ALLIANCE</H1><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRankHorde\" align=\"left\" /><BR/><P align=\"right\">Throm'ka! In this</P><P align=\"right\">book you will find</P><P align=\"right\">many listings of</P><P align=\"right\">the military ranks</P><P align=\"right\">of the Horde and</P><P align=\"right\">the puny Alliance.</P><P align=\"right\">First will come the</P><P align=\"right\">Horde, then the Alliance,</P><P align=\"right\">each with listings of officers and enlisted ranks. As is fitting, the strongest are listed at the top, with the weaker listed below them.</P></BODY></HTML>",
 		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">High Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Lieutenant General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Champion</P></BODY></HTML>",
@@ -1581,7 +1335,7 @@ _addon.data = {
 	},
 },
 ["Mists of Dawn"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 177207},
 	["pages"] = {
 		"Before the Age of Memory, the gentle Earthmother breathed upon the golden mists of dawn. Where the amber clouds came to rest, there were endless fields of flowing wheat and barley. This was the basin of her works - the great basket of life and hope.",
 		"The Earthmother's eyes shone down upon the lands she had breathed into creation. Her right eye, An'she (the sun), gave warmth and light to the land. Her left eye, Mu'sha (the moon), gave peace and sleep to the stirring creatures of the dawning. Such was the power of her gaze that the Earthmother closed one dreaming eye for every turning of the sky. Thus, her loving gaze turned day into night for the first dawning of the world.",
@@ -1592,16 +1346,7 @@ _addon.data = {
 	},
 },
 ["Mogu Coin"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"This currency was used during the reign of mogu emperor Wai, who is depicted in all his snarling glory. The reverse of the coin depicts the changing of Mogu dynasties, a bloody process wherein the previous regime must be overpowered and executed. In many ways, ancient Mogu government was a meritocracy, based on brutal strength and terrible cunning.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.9",  ["y"] = "31.5"},
-	},
-},
-["Mogu Coin"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215956},
 	["pages"] = {
 		"This currency was used during the reign of mogu emperor Wai, who is depicted in all his snarling glory. The reverse of the coin depicts the changing of Mogu dynasties, a bloody process wherein the previous regime must be overpowered and executed. In many ways, ancient Mogu government was a meritocracy, based on brutal strength and terrible cunning.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1610,7 +1355,7 @@ _addon.data = {
 	},
 },
 ["Mogu Runestone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214182},
 	["pages"] = {
 		"Unlike \"lesser races\" that need schooling in the arts of magic, the ability was innate in the Mogu. From what is known about Mogu usage of magic, it is clear that their magic users did not fall into known categories, such as mage or warlock. Special emphasis was placed on flesh-shaping or spirit-capture magic. The strange residue of the magic that was imbued in this stone is difficult to understand by the modern races of Azeroth. Curiously, some of the markings around the rune resemble the Titan language.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1619,7 +1364,7 @@ _addon.data = {
 	},
 },
 ["Monument of Remembrance"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 181475},
 	["pages"] = {
 		"In remembrance of the Supreme Allied Commander, Anduin Lothar: A man who would sacrifice everything in defense of his king, his people, his home...\n\nLet our enemies know our names. Let our allies honor our passing. We are the Sons of Lothar. \n\n- General Turalyon",
 	},
@@ -1628,7 +1373,7 @@ _addon.data = {
 	},
 },
 ["Monument to Grom Hellscream"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 21004},
 	["pages"] = {
 		"Here lies Grommash Hellscream, Chieftain of the Warsong Clan\n\nIn many ways, the curse of our people began and ended with Grom.\nHis name meant 'giant's heart' in our ancient tongue. He earned that \nname a hundred-fold as he stood alone before the demon Mannoroth \n- and won our freedom with his blood. \n\nLok'Tar ogar, big brother. May the Warsong never fade. \n\n-Thrall, Warchief of the Horde",
 	},
@@ -1637,7 +1382,7 @@ _addon.data = {
 	},
 },
 ["Mount Hyjal and Illidan's Gift"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175729},
 	["pages"] = {
 		"The few night elves that survived the horrific explosion rallied together on crudely made rafts and slowly made their way to the only landmass in sight. Somehow, by the grace of Elune, Malfurion, Tyrande, and Cenarius had survived the Great Sundering. The weary heroes agreed to lead their fellow survivors and establish a new home for their people.",
 		"As they journeyed in silence, they surveyed the wreckage of their world and realized that their passions had wrought the destruction all around them. Though Sargeras and his Legion had been ripped from the world by the Well's destruction, Malfurion and his companions were left to ponder the terrible cost of victory.",
@@ -1655,7 +1400,7 @@ _addon.data = {
 	},
 },
 ["Mysterious Wreckage"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 194155},
 	["pages"] = {
 		"You have found the wreckage of a mysterious object. Beyond the flames, you are able to make out an insignia marked \"M:1815212085\". You wonder what world this object must be from...",
 	},
@@ -1664,43 +1409,19 @@ _addon.data = {
 	},
 },
 ["Ogre Wayguide"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 230621},
 	["pages"] = {
 		"Definitely Not This Way To Secret Lava Pools",
+		"Definitely Only Secret Lava Pool On Mountain\n\nStop Here",
+		"Nothing At The Top Of This Mountain\n\nTurn Around Now",
+		"Ha Ha You Came This Far For Nothing\n\nGo Away\n\nNow",
 	},
 	["locations"] = {
 		{["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["id"] = "6720",  ["level"] = "0",  ["x"] = "32.5",  ["y"] = "27.8"},
 	},
 },
-["Ogre Wayguide"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Definitely Only Secret Lava Pool On Mountain\n\nStop Here",
-	},
-	["locations"] = {
-		{["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["id"] = "6720",  ["level"] = "0",  ["x"] = "35.8",  ["y"] = "31.8"},
-	},
-},
-["Ogre Wayguide"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Nothing At The Top Of This Mountain\n\nTurn Around Now",
-	},
-	["locations"] = {
-		{["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["id"] = "6720",  ["level"] = "0",  ["x"] = "34",  ["y"] = "29.9"},
-	},
-},
-["Ogre Wayguide"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Ha Ha You Came This Far For Nothing\n\nGo Away\n\nNow",
-	},
-	["locations"] = {
-		{["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["id"] = "6720",  ["level"] = "0",  ["x"] = "37.9",  ["y"] = "32.7"},
-	},
-},
 ["Old Hatreds - The Colonization of Kalimdor"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175763},
 	["pages"] = {
 		"Though victory was theirs, the mortal races found themselves in a world shattered by war. The Scourge and the Burning Legion had all but destroyed the civilizations of Lordaeron, and had almost finished the job in Kalimdor. There were forests to heal, grudges to bury, and homelands to settle. The war had wounded each race deeply, but they had selflessly banded together to attempt a new beginning, starting with the uneasy truce between the Alliance and Horde.",
 		"Thrall led the orcs to the continent of Kalimdor, where they founded a new homeland with the help of their tauren brethren. Naming their new land Durotar after Thrall's murdered father, the orcs settled down to rebuild their once-glorious society.",
@@ -1716,7 +1437,7 @@ _addon.data = {
 	},
 },
 ["Old Ri and the Million Souls"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 216757},
 	["pages"] = {
 		"Late one autumn evening, two good friends sat on the deck behind the Lazy Turnip Inn. Below them slumbered the quiet farming town of Halfhill. The midnight air was cool to the skin. A thin misting fog had begun to coat the rolling green hills of the valley below with dew, and the spire of the Imperial Granary stood out as a dark shadow against the brilliant canvas of stars overhead.\n\nAn evening of good food and many hours smoking the native herbs had put the two friends in a contemplative mood.\n\nZhi - the younger and more tightly wound of the two companions - suddenly asked a very pointed question: \"What if none of this is real?\"",
 		"His old friend Ri, who until now had been leaning back with his hat over his eyes, lifted up the straw brim to peer at his friend. \"A serious question?\" he said, his brown eyes gleaming intently.\n\nZhi swept his arm over the horizon, indicating the whole of the valley. \"What if we are just images, drawn into someone's painting?\" he asked. He touched the side of his face, gasping. \"What if we are characters in a book!?\"\n\nOld Ri hugged his belly with both hands and bellowed a deep, contemplative laugh. He took the smoking pipe from his friend Zhi and set it aside.",
@@ -1729,7 +1450,7 @@ _addon.data = {
 	},
 },
 ["Old Wanted Poster"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 233996},
 	["pages"] = {
 		"Dangerous!\n\nThe following humans of Hillsbrad have been deemed dangerous and are marked for bounty by High Executor Darthalia:\n\nClerk Horrace Whitesteed. Wanted for the murder of Deathguard Toma.\n\nCitizen Wilkes. Wanted for the murder of Apothecary Eli.\n\nMiner Hackett. Wanted for the murder of Deathstalker Fry.\n\nFarmer Kalaba. Wanted for the ambush of supplies from the Undercity.\n\nAll of these enemies are hiding and will be hard to find. A reward will be granted upon notice of their death.",
 	},
@@ -1738,7 +1459,7 @@ _addon.data = {
 	},
 },
 ["On Naxxramas"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191658},
 	["pages"] = {
 		"I went to work within a war factory of the mighty Scourge today! Naxxramas bristles with activity. I was saddened to learn that they were using more foolish puzzle mechanisms to power mission-critical teleport devices, but otherwise it seemed to be a tight ship. My thoughts turned toward gainful research, until I ran astray of the perverse nerubian...",
 		"The Nerubian's overtures are without number. Always calling to me in that creepy, droning voice of its. Invitations to study in his 'parlor'. I've taken to sequestering myself in the broken pipe behind Gluth's chambers, as it's the only place he won't follow me. My mind is wearing thin!",
@@ -1750,7 +1471,7 @@ _addon.data = {
 	},
 },
 ["On Scholomance"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191656},
 	["pages"] = {
 		"I have earned the chapter's favor at last and been granted entry to the Scholomance! Today my final ascent into glorious undeath begins!",
 		"Things within the Scholomance are far more rustic than I'd expected. Research materials are strewn in awkward piles, some sealed together with wax dripped from the odd untended candle. Constructs, spirits, and demons roam the halls untended. I must say that I expected more from such practiced necromancers as these!",
@@ -1762,7 +1483,7 @@ _addon.data = {
 	},
 },
 ["On Stratholme"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191657},
 	["pages"] = {
 		"Today I became a Thuzadin Necromancer within Stratholme! I rather wonder why no-one puts out the fires, and I was mortified to learn of the nonsensical system of ziggurrats linked to the slaughterhouse gates. If we need to keep people away from the slaughterhouse, why don't we just lock the gate? Forever?",
 		"I'm beginning to learn why things are backwards around here. This arrogant sod on a rotten horse strolls by and proclaims himself \"Baron\" Rivendare of Stratholme. The man has clearly mistaken the scourge for a petting zoo, as he spends half of every afternoon moving the disciples, minions, and constructs into small groups and stationing them around the city!",
@@ -1774,7 +1495,7 @@ _addon.data = {
 	},
 },
 ["On Undeath"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191659},
 	["pages"] = {
 		"After repeated failures at serving within the Scourge, I found that I held myself to much higher standards than even those within the upper echelons of the organization. Given the inherent inflexibility of social power structures, it is difficult to balance attempts to effect change with extant social challenges.",
 		"It is fortunate, then, that this organization offers low-skill employment opportunities for disaffected individuals or those inconvienced by some malady (such as, in my case, death).",
@@ -1786,7 +1507,7 @@ _addon.data = {
 	},
 },
 ["One Truth in Undeath"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191655},
 	["pages"] = {
 		"Behold the finest of ironies. The living ascribe unto undeath all the most sickly attributes of their own lives--hopeless servitude, savagery, stillness of the spirit. We serve! The living serve, too, though they serve kings, warlords, druids, priests, gods, men, and beasts. We serve only the mighty, unifying will of the Lich King, which compels us unto prosperity and unity!",
 		"For all the endeavours of men, there exist only endless records of tragedy, cruelty, betrayal, and selfishness. For the Scourge, there is only efficiency and totality. Serve the Lich King in life, or serve him in death. His is a way of choice whose roads lead only to fulfilment!",
@@ -1798,16 +1519,7 @@ _addon.data = {
 	},
 },
 ["Origins"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"This early jinyu shrine may provide some insight to the origins of the race. Depicted is a collection of squat, primitive aquatic creatures. They surround a series of pools on a field of gold - perhaps a rendering of the Vale of Eternal Blossoms.\n\nOne of the primitive creatures holds a staff aloft beside the waters, but the symbols that surround his head are of an unknown language that likely predates the first mogu dynasty.\n\nThe exact connection between these early aquatic creatures and the Vale remains unclear.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
-["Origins"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215782},
 	["pages"] = {
 		"This early jinyu shrine may provide some insight to the origins of the race. Depicted is a collection of squat, primitive aquatic creatures. They surround a series of pools on a field of gold - perhaps a rendering of the Vale of Eternal Blossoms.\n\nOne of the primitive creatures holds a staff aloft beside the waters, but the symbols that surround his head are of an unknown language that likely predates the first mogu dynasty.\n\nThe exact connection between these early aquatic creatures and the Vale remains unclear.",
 	},
@@ -1816,7 +1528,7 @@ _addon.data = {
 	},
 },
 ["Orman of Stromgarde"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210492},
 	["pages"] = {
 		"Orman of Stromgarde\nThe first Captain General of the Scarlet Crusade \nCitizen of Stromgarde\nLost at the mouth of Icecrown Glacier",
 	},
@@ -1825,7 +1537,7 @@ _addon.data = {
 	},
 },
 ["Pandaren Fighting Tactics"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213413},
 	["pages"] = {
 		"During the dark days of the mogu dynasties, pandaren slaves were not permitted weapons of any kind. When training in secret, pandaren monks would often use farm tools or simple bamboo staves for practice. Emphasis was also placed on unarmed strikes.\n\nIn contrast, the favored weapons of the mogu were based on fear rather than practicality. They were large, cumbersome, and difficult to wield. Pandaren monks took advantage, developing fast strikes and the skill to quickly move around the battlefield. The larger, slower mogu were often completely disoriented by the speed of the pandaren monks in open combat.\n\nOver the years, fighting styles have changed dramatically, incorporating any number of other abilities, weapons, styles, etc. But the core foundation of pandaren fighting techniques remains the same: Defeat an opponent of any size with your bare paws if you have to.",
 	},
@@ -1833,26 +1545,8 @@ _addon.data = {
 		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "18.8",  ["y"] = "31.8"},
 	},
 },
-["Pandaren Fighting Tactics"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"During the dark days of the mogu dynasties, pandaren slaves were not permitted weapons of any kind. When training in secret, pandaren monks would often use farm tools or simple bamboo staves for practice. Emphasis was also placed on unarmed strikes.\n\nIn contrast, the favored weapons of the mogu were based on fear rather than practicality. They were large, cumbersome, and difficult to wield. Pandaren monks took advantage, developing fast strikes and the skill to quickly move around the battlefield. The larger, slower mogu were often completely disoriented by the speed of the pandaren monks in open combat.\n\nOver the years, fighting styles have changed dramatically, incorporating any number of other abilities, weapons, styles, etc. But the core foundation of pandaren fighting techniques remains the same: Defeat an opponent of any size with your bare paws if you have to.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["Pandaren Game Board"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Pandaren love games. This game in particular has been a favorite among the Pandaren since the time of the first Pandaren emperor. This is a fine example of an ancient set.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "83.4",  ["y"] = "30.7"},
-	},
-},
-["Pandaren Game Board"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214194},
 	["pages"] = {
 		"Pandaren love games. This game in particular has been a favorite among the Pandaren since the time of the first Pandaren emperor. This is a fine example of an ancient set.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1861,16 +1555,7 @@ _addon.data = {
 	},
 },
 ["Pandaren Tea Set"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The Pandaren have a rich history of tea. While much care is given to its brewing, the secrets to properly enjoying tea have always been equally valued. This simple tea set was made during the reign of the Mogu, and provided solace and respite to the owner during a time of great pain and tyranny. Although it is cracked and broken, it serves as a reminder to take comfort in the simple pleasures of life.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "83.8",  ["y"] = "30.8"},
-	},
-},
-["Pandaren Tea Set"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214193},
 	["pages"] = {
 		"The Pandaren have a rich history of tea. While much care is given to its brewing, the secrets to properly enjoying tea have always been equally valued. This simple tea set was made during the reign of the Mogu, and provided solace and respite to the owner during a time of great pain and tyranny. Although it is cracked and broken, it serves as a reminder to take comfort in the simple pleasures of life.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1879,7 +1564,7 @@ _addon.data = {
 	},
 },
 ["Path of the Huojin"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214413},
 	["pages"] = {
 		"\"Always challenge. Always question. In the pursuit of a greater good, inaction is the only wrong.\" -Master Zurong\n\nThe path of the Huojin is marked by practical and decisive action. Followers of this discipline believe that morals and ideals are not absolute, but change with circumstances.\n\nAs such, a Huojin Master must remain flexible in his or her thinking, always evaluating the greater good.",
 	},
@@ -1888,7 +1573,7 @@ _addon.data = {
 	},
 },
 ["Path of the Tushui"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214409},
 	["pages"] = {
 		"\"Discipline is not a war that is won. It is a battle, constantly fought.\" -Master Feng\n\nThe way of the Tushui is one of a principled life. Followers of this discipline believe there is a moral certainty to the world: one correct path of right and wrong.\n\nThese values are immutable, and must be preserved no matter what the cost, even if it means self-sacrifice, or painful losses in the pursuit of a higher ideal.",
 	},
@@ -1897,16 +1582,7 @@ _addon.data = {
 	},
 },
 ["Pearl of Yu'lon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Etched around the center of this orb of jade is a serpent eating its own tail. Inscriptions on either hemisphere read: 'There is but one certainty - every end marks a new beginning.' This orb, carved during the reign of Pandaren Emperor Shu Blindeye in honor of the Jade Serpent, is a representation of his rebirth into a new body every hundred years. Yu'lon still bestows wisdom and insight from his temple in the Jade Forest.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "83.7",  ["y"] = "30.8"},
-	},
-},
-["Pearl of Yu'lon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214201},
 	["pages"] = {
 		"Etched around the center of this orb of jade is a serpent eating its own tail. Inscriptions on either hemisphere read: 'There is but one certainty - every end marks a new beginning.' This orb, carved during the reign of Pandaren Emperor Shu Blindeye in honor of the Jade Serpent, is a representation of his rebirth into a new body every hundred years. Yu'lon still bestows wisdom and insight from his temple in the Jade Forest.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1915,7 +1591,7 @@ _addon.data = {
 	},
 },
 ["Pestilence with Teeth"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218834},
 	["pages"] = {
 		"Compies are a plague. They be gnawing at our food, poisoning our waters, hunting our children, eating our wounded. They not better than the rats of a sewer.\n\nBut these rats be trainable. We Zandalari see these compies as a menace. But our enemies, they not be knowing. They not be growing up with the threat of these little things and their poisons. It is time we turn these vermin into weapons. \n\nTake them! Train them! Sick them upon our enemies and watch how they be the ones squirming. Have these compies eat their food, poison their waters, hunt their children, and eat their wounded. Prove how even the vermin of Zandalar are a weapon in our arsenal!",
 	},
@@ -1924,16 +1600,7 @@ _addon.data = {
 	},
 },
 ["Petrified Bone Whip"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"This whip was fashined from the spine of some large and ancient creature. The blood of many Mogu slaves was shed by this instrument of pain.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.9",  ["y"] = "31.4"},
-	},
-},
-["Petrified Bone Whip"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215951},
 	["pages"] = {
 		"This whip was fashined from the spine of some large and ancient creature. The blood of many Mogu slaves was shed by this instrument of pain.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1942,7 +1609,7 @@ _addon.data = {
 	},
 },
 ["Pollen Collector"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218965},
 	["pages"] = {
 		"It is difficult to discern the purpose of this object, but it seems to be a pollen collector of some sort.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -1951,7 +1618,7 @@ _addon.data = {
 	},
 },
 ["Prototype Reaper Instruction Manual"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 207290},
 	["pages"] = {
 		"Prototype Reaper Instruction Manual v.1.28.92\n\n1. To start the Prototype Reaper, simply enter the vehicle and engage the control-unlocking mechanism next to the red button. Do not, under any circumstances, push the red button.\n\n2. The Prototype Reaper has been designed to withstand the severe heat of the slag pot. Do not attempt to move slag barrels without the Reaper!\n\n3. The Prototype Reaper's main steam valve builds steam power during regular exertion. Steam power can be used to activate the hydraulic servos for a quick burst of speed, or a pressurized pump for heavy lifting.",
 	},
@@ -1960,7 +1627,7 @@ _addon.data = {
 	},
 },
 ["Pteradon Skeleton"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175685},
 	["pages"] = {
 		"This intact pteradon skeleton was recovered from the remote Un'Goro Crater. Based on the skeletal structure, it is clear that this specific genus has not yet been encountered. This skeleton could have been preserved for any number of centuries beneath the region's rich soil.",
 	},
@@ -1969,7 +1636,7 @@ _addon.data = {
 	},
 },
 ["Quan Tou Kuo the Two Fisted"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213407},
 	["pages"] = {
 		"Father of Dichotomy Dark and Pale Ale and the school of Balanced Inebriation.\n\nSeeking to mitigate negative effects of beer without diminishing its virtues, Quan Tou Kuo developed a two part system of drinking designed to result in a state of balanced inebriation. When imbibed separately in the proper ratios, the Pale Ale of the spirit and the Dark Ale of the mind combine in the drinker's stomach to achieve a state of enlightenment and goodwill without the loss of judgment and self-control typically experienced by heavy drinkers.",
 	},
@@ -1978,7 +1645,7 @@ _addon.data = {
 	},
 },
 ["Ranger Captain Alleria Windrunner"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 25331},
 	["pages"] = {
 		"Ranger Captain Alleria Windrunner\n\nRenowned Troll Hunter of Quel'Thalas. Lead Scout and Intelligence Agent for the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nYour heart flew straight as any arrow upon the wind, sister. You were the brightest of our Order. You were the most beloved of our kin.\n\n- Sylvanas Windrunner - Ranger General of Quel'Thalas",
 	},
@@ -1986,26 +1653,8 @@ _addon.data = {
 		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "70.3",  ["y"] = "84.3"},
 	},
 },
-["Ranger Captain Alleria Windrunner"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Ranger Captain Alleria Windrunner\n\nRenowned Troll Hunter of Quel'Thalas. Lead Scout and Intelligence Agent for the Alliance Expedition that marched into the orc homeworld of Draenor. Presumed deceased.\n\nYour heart flew straight as any arrow upon the wind, sister. You were the brightest of our Order. You were the most beloved of our kin.\n\n- Sylvanas Windrunner - Ranger General of Quel'Thalas",
-	},
-	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "29.8",  ["y"] = "44.6"},
-	},
-},
 ["Remains of a Paragon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Apparently the amber preservation process is not without risk. Only the head of this paragon remains. It appears to predate the pandaren revolution, although pinning down the precise era is impossible.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "83.8",  ["y"] = "30.8"},
-	},
-},
-["Remains of a Paragon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218963},
 	["pages"] = {
 		"Apparently the amber preservation process is not without risk. Only the head of this paragon remains. It appears to predate the pandaren revolution, although pinning down the precise era is impossible.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -2014,7 +1663,7 @@ _addon.data = {
 	},
 },
 ["Ren Yun the Blind"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213438},
 	["pages"] = {
 		"Father of the individual sensory beers and the Four Senses Brew.\n\nRen Yun, his other senses heightened by his blindness, suffered for years with what he considered to be the harsh taste of normal Pandaren brews. After years of wandering and experimentation he developed separate brews that delighted each of his four senses but, though he had perfected these individual beers, the combination of the separate elements into one perfect unifying brew eluded him. For a lifetime more he wandered on until he found at last the secret to bind all of his sensory beers into one master recipe, the Four Senses Brew.",
 	},
@@ -2023,7 +1672,7 @@ _addon.data = {
 	},
 },
 ["Report from the Frontlines: Dragonblight"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191632},
 	["pages"] = {
 		"DRAGONBLIGHT - Prince Valanar is looking for an exceptional death knight to travel into Dragonblight, Northrend's frozen central plain, and lead an elite cadre of soldiers in a strike against the red dragonflight. \"Your training is nearly complete,\" he said in a recent public address. \"The time has come to strike against those who would protect the living! We shall show them the true meaning of Dragonblight!\"",
 		"Alexstrasza, red dragonqueen and arguably the Scourge's most powerful enemy in Northrend, has been seen building up her own army as of late, though it is assumed that her efforts are aimed at the rogue blue dragonflight.",
@@ -2033,7 +1682,7 @@ _addon.data = {
 	},
 },
 ["Report from the Frontlines: Eastern Kingdoms"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191631},
 	["pages"] = {
 		"DEATH'S BREACH, EASTERN KINGDOMS - Instructor Razuvious spoke out earlier this week, reiterating his policy on mutiny and insubordination. \"Any death knight who dares desert the Scourge will meet a fate far worse than death. Their suffering shall see no end - I will see to it personally.\"",
 	},
@@ -2042,7 +1691,7 @@ _addon.data = {
 	},
 },
 ["Report from the Frontlines: Undercity"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191633},
 	["pages"] = {
 		"UNDERCITY - Our sources inside the Undercity report that the Horde is mobilizing to stage an assault on Northrend. \"The Horde's troops, most of whom are returning from deployment in Outland, are now gathering and preparing to strike at Icecrown.\"",
 		"Furthermore, covert agents report that the Forsaken's Royal Apothecary Society has ramped up activity lately. \"While nothing is confirmed at this point, rumors fly that the Society has had a breakthrough in their plague research. Again, this is only hearsay, but all forces are advised to give Forsaken alchemists a wide berth.\"",
@@ -2052,7 +1701,7 @@ _addon.data = {
 	},
 },
 ["Report from the Frontlines: Western Northrend"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191618},
 	["pages"] = {
 		"WESTERN NORTHREND - Reports from the Aerial Surveillance Squadron in Icecrown Glacier show that communication with the lich-lord, Chillwinter, has been cut sharply cut off. \"Chillwinter was last seen piloting the necropolis, Talramas, over Borean Tundra on a confidential mission,\" reports Scourge Engineer Karomon, the Squadron's chief information officer. \"Our diagnostics show that his communication crystals are fully operational... it's just... dead silent.\"",
 	},
@@ -2061,7 +1710,7 @@ _addon.data = {
 	},
 },
 ["Rise of the Blood Elves"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175760},
 	["pages"] = {
 		"At this time, the undead Scourge had essentially transformed Lordaeron and Quel'Thalas into the toxic Plaguelands. There were only a few pockets of Alliance resistance forces left. One such group, consisting primarily of high elves, was led by the last of the Sunstrider dynasty: Prince Kael'thas.",
 		"Kael, an accomplished wizard himself, grew wary of the failing Alliance. The high elves grieved for the loss of their homeland and decided to call themselves blood elves in honor of their fallen people. Yet as they worked to keep the Scourge at bay, they suffered greatly at being cut off from the Sunwell that had empowered them.",
@@ -2075,7 +1724,7 @@ _addon.data = {
 	},
 },
 ["Rise of the Horde"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175742},
 	["pages"] = {
 		"The orcs became increasingly aggressive under the secret control of Gul'dan and his Shadow Council. They constructed massive arenas where the orcs honed their warrior skills in trials of combat and death. During this period, a few clan chieftains spoke out against the growing depravity in their race.",
 		"One such chieftain, Durotan of the Frostwolf clan, warned against the orcs' losing themselves to hate and fury. His words fell on deaf ears, however, as stronger chieftains such as Grom Hellscream of the Warsong clan stepped forward to champion the new age of warfare and dominance.",
@@ -2093,7 +1742,7 @@ _addon.data = {
 	},
 },
 ["Roc Talon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175681},
 	["pages"] = {
 		"This petrified talon was found off of the southern coasts of Stranglethorn. Ecologists believe this talon to be that of an ancient sun roc. Though the creatures feature prominently in primitive tauren mythological cycles, the existence of this talon suggests the creatures truly existed at some point.",
 	},
@@ -2102,25 +1751,16 @@ _addon.data = {
 	},
 },
 ["Rock of Durotan"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 179909},
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><P align=\"left\">Here lies Durotan - first Chieftain of the Frostwolf Clan, and father of our honored Warchief, Thrall. He was the bravest of our kind - betrayed by those who would see our people enslaved. Durotan gave his life that our freedom might be gained. We honor him - and the legacy he passed on to us through his son.</P><BR/><P align=\"left\">Drek'Thar, Far Seer of the Frostwolves </P></BODY></HTML>",
 	},
 	["locations"] = {
-		{["area"] = "Alterac Valley",  ["id"] = "2597",  ["level"] = "0",  ["x"] = "54.3",  ["y"] = "70.8"},
+		{["area"] = "Alterac Valley", ["areaId"] = 401, ["id"] = "2597",  ["level"] = "0",  ["x"] = "54.3",  ["y"] = "70.8"},
 	},
 },
 ["Role Call"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The jinyu operate in a strict caste society, clearly evidenced by this stone tablet engraved with names. Eggs are sorted early on based on the needs of the community.\n\nMany jinyu are cast as workers, diligently put to work building dams or other structures. Others are selected to be craftsmen, and immediately undergo a rigid apprenticeship on hatching.\n\nOnly warriors and priests are given access to the most food and finest shelters, and only the most successful of priests can ascend to the role of elder or waterspeaker. It is a taboo for the jinyu castes to intermingle.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
-["Role Call"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215783},
 	["pages"] = {
 		"The jinyu operate in a strict caste society, clearly evidenced by this stone tablet engraved with names. Eggs are sorted early on based on the needs of the community.\n\nMany jinyu are cast as workers, diligently put to work building dams or other structures. Others are selected to be craftsmen, and immediately undergo a rigid apprenticeship on hatching.\n\nOnly warriors and priests are given access to the most food and finest shelters, and only the most successful of priests can ascend to the role of elder or waterspeaker. It is a taboo for the jinyu castes to intermingle.",
 	},
@@ -2129,7 +1769,7 @@ _addon.data = {
 	},
 },
 ["Sargeras and the Betrayal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175724},
 	["pages"] = {
 		"Over time, demonic entities made their way into the Titans' worlds from the Twisting Nether, and the Pantheon elected its greatest warrior, Sargeras, to act as its first line of defense. A noble giant of molten bronze, Sargeras carried out his duties for countless millennia, seeking out and destroying these demons wherever he could find them. Over the eons, Sargeras encountered two powerful demonic races, both of which were bent on gaining power and dominance over the physical universe.",
 		"The eredar, an insidious race of devilish sorcerers, used their warlock magics to invade and enslave a number of worlds. The indigenous races of those worlds were mutated by the eredar's malevolent powers and turned into demons themselves.",
@@ -2153,7 +1793,7 @@ _addon.data = {
 	},
 },
 ["Saurial Egg"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175684},
 	["pages"] = {
 		"Found in the remote rainforest of the Un'Goro Crater, this egg once held an embryonic Devilsaur. The saurial's genetic material has proven invaluable to League ecologists who are closer than ever to devising a serum for the devilsaurs' debilitating venom.",
 	},
@@ -2162,7 +1802,7 @@ _addon.data = {
 	},
 },
 ["Scroll of Auspice"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 212388},
 	["pages"] = {
 		"When the horror comes a-rising\nAnd the heavens hum with war\nOur great vessel of salvation\nMust be broken from its core.\n\nRending daggers of the great ones\nShall be bound with wood and shade\nIf the fiery wings of sunset kings\nAre ever to be stayed.",
 		"Incantations fae and primal\nBought on promises of gold\nBind the glamour to the thing\nThat quenches fires and fears of old\n\nComprehend this sacred recipe\nPerform it as I've penned\nDrive its fruit through Blood of Ancients\nAnd your terror-war shall end.",
@@ -2172,7 +1812,7 @@ _addon.data = {
 	},
 },
 ["Sea-kissed Scroll"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 241770},
 	["pages"] = {
 		"Today was a day of great dishonor. After a good journey raiding up the coast we came to drop off our share of the loot at our stash cave.\n\nThis time First Mate Torglork had other ideas, he and some of the crew wanted a larger share of the loot, so they jumped Captain Ironbeard in the cave and killed him! By the time the rest of us knew it was all too late. I did not want to be killed so I went along with it...\n\nTo make sure our leaders don't know, Torglork has taken the mantle of Ironbeard and serves as the new captain. Everytime I see him I want to put an axe in him, and then myself for letting this dishonor go on for so long...",
 		"With the invasion fully underway we have been reassigned to Ironfist Harbor in Nagrand, and will likely not see Tanaan again for some time.\n\nI managed to bribe a warlock for some help. He swore this ritual and enchanted thing would bring back Ironbeard... mostly. I will head back to the cave and try to bring him back. Perhaps together we can put this misdeed to right.",
@@ -2183,7 +1823,7 @@ _addon.data = {
 	},
 },
 ["Secret Lab Tourism Brochure"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 201400},
 	["pages"] = {
 		"Welcome to the Secret Lab, Azshara's most engaging new tourist destination!\n\n\nHave you ever wondered where secrets come from?\n\n\nDeep in the resource-rich forests of scenic Azshara, goblin scientists are hard at work inventing the secrets of tomorrow for you to enjoy today! For just a small up-front fee you and the whole family can get a front-row seat and watch as skilled goblin engineers probe and taunt the very fabric of the cosmos.",
 		"Why are we here? What makes us intelligent? How many kilo-fraps of volatile energy can we compress into a cubic ounce of dangerously explosive rocket fuel before it goes critical and unleashes a shockwave capable of tipping the planet off its axis? We can find out together. Your secret lab awaits!\n\n\n&lt;The remaining 36-pages of the brochure consist of complicated legal waivers and a gift shop ordering form.&gt;",
@@ -2193,7 +1833,7 @@ _addon.data = {
 	},
 },
 ["Shadow, Storm, and Stone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218436},
 	["pages"] = {
 		"Across mogu art and literature, one legend is found, repeated and embellished again and again. It is the legend of Shadow, Storm, and Stone. Here is a rough translation of the earliest known transcript of the story:",
 		"The beast of seven heads \nFumed seven breaths.\nThe land wept shadow \nAnd the swarm blackened the sky.\nSupreme was the ancient one; \nNone dared waken its wrath.\nUntil the coming of the Storm.\nFirst came thunder, then came Stone.\nThe thunder Storm's voice, \nThe Stone his weapon.\nLightning seared the sky. \nThe swarm fled from its light.\nStone struck at the heads of the beast.\nThe shadow bled into land and sky -\nFear and rage that would not die.\nStorm's will was done.\nStone's purpose fulfilled.",
@@ -2202,18 +1842,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "59.3",  ["y"] = "26.4"},
 	},
 },
-["Shadow, Storm, and Stone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Across mogu art and literature, one legend is found, repeated and embellished again and again. It is the legend of Shadow, Storm, and Stone. Here is a rough translation of the earliest known transcript of the story:",
-		"The beast of seven heads \nFumed seven breaths.\nThe land wept shadow \nAnd the swarm blackened the sky.\nSupreme was the ancient one; \nNone dared waken its wrath.\nUntil the coming of the Storm.\nFirst came thunder, then came Stone.\nThe thunder Storm's voice, \nThe Stone his weapon.\nLightning seared the sky. \nThe swarm fled from its light.\nStone struck at the heads of the beast.\nThe shadow bled into land and sky -\nFear and rage that would not die.\nStorm's will was done.\nStone's purpose fulfilled.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["Shadows of the Loa"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218429},
 	["pages"] = {
 		"The Zandalari worship \"loa,\" powerful spirits who have been a part of the world predating even the titans. Countless loa exist, most weak, but some very powerful. Most are shapeless, whereas others have animal or creature forms. \n\n Zandalari families often worship their own family loas, cities usually have their own civic deities, and the greatest loa are worshipped by the nation as a whole. Powerful, enlightened Zandalari can become loas upon their death - or so it is believed. \n\n These spirits are central to the Zandalari worldview: so say the loa, so go the Zandalari.",
 	},
@@ -2221,17 +1851,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "36.4",  ["y"] = "70.3"},
 	},
 },
-["Shadows of the Loa"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The Zandalari worship \"loa,\" powerful spirits who have been a part of the world predating even the titans. Countless loa exist, most weak, but some very powerful. Most are shapeless, whereas others have animal or creature forms. \n\n Zandalari families often worship their own family loas, cities usually have their own civic deities, and the greatest loa are worshipped by the nation as a whole. Powerful, enlightened Zandalari can become loas upon their death - or so it is believed. \n\n These spirits are central to the Zandalari worldview: so say the loa, so go the Zandalari.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["Sorrow of the Earthmother"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 177204},
 	["pages"] = {
 		"As the children of the earth roamed the fields of dawn, they harkened to dark whispers from deep beneath the world. The whispers told the children of the arts of war and deceit. Many of the Shu'halo fell under the shadow's sway and embraced the ways of malice and wickedness. They turned upon their pure brethren and left their innocence to drift upon the plains.",
 		"The Earthmother, her heart heavy with her children's' plight, could not bear to watch them fall from grace. In her grief, she tore out her eyes and set them spinning across the endless, starry skies. An'she and Mu'sha, seeking to ease the other's sorrow, could only chase each other's faint glow across the sky. The twins still chase one another with every turning of the world.",
@@ -2242,7 +1863,7 @@ _addon.data = {
 	},
 },
 ["Sparkmancer Vu"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218600},
 	["pages"] = {
 		"Sparkmancer Vu served as the Thunder King's most trusted advisor.\n\nBorn into the same tribe, the two mogu grew as close as brothers. As children, they played, quarreled, and challenged one another. It is said that this early rivalry was instrumental in developing Lei Shen's thirst for power. Vu, however, fought fiercely to help Lei Shen win the throne of Pandaria.\n\nNot long after Lei Shen gained reknown, the Sparkmancer was captured by enemy assassins and his tongue was cut. Popular opinion suspected the Thunder King himself was ultimately behind this plot, a political move to silence the one mogu who knew his deepest secrets. \n\nTheir brotherhood was also the source of much conjecture and fiction. The peasant masses enjoyed writing stories, including a famous saga about their feud over a woman.\n\nDespite these rumors, history shows that Sparkmancer Vu never wavered from his commitment to his Emperor; he served his friend and brother loyally to the end of his days.",
 	},
@@ -2251,7 +1872,7 @@ _addon.data = {
 	},
 },
 ["Spirit Binders"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213333},
 	["pages"] = {
 		"For many ages, the mogu used flesh as a weapon: warped, bent, and twisted to their malevolent will. But after their failures in creating the saurok race, the mogu sought to create another weapon... this time forged with total obedience.\n\nTheir ancient research delivered to them methods of turning flesh to stone, and back again. Lifeless rock could be animated, providing a willing (or unwilling) soul could be captured within.\n\nThese dark rituals created the Stoneborn, soldiers of jade and dark magic forged from the living essence of conquered victims. These creations were powerful, terrible to behold, and above all else, one hundred percent loyal to their mogu masters.",
 	},
@@ -2259,17 +1880,8 @@ _addon.data = {
 		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "42.2",  ["y"] = "17.4"},
 	},
 },
-["Spirit Binders"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"For many ages, the mogu used flesh as a weapon: warped, bent, and twisted to their malevolent will. But after their failures in creating the saurok race, the mogu sought to create another weapon... this time forged with total obedience.\n\nTheir ancient research delivered to them methods of turning flesh to stone, and back again. Lifeless rock could be animated, providing a willing (or unwilling) soul could be captured within.\n\nThese dark rituals created the Stoneborn, soldiers of jade and dark magic forged from the living essence of conquered victims. These creations were powerful, terrible to behold, and above all else, one hundred percent loyal to their mogu masters.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["Spy's Logbook"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 236156},
 	["pages"] = {
 		"I have set up a small camp in a spot far enough from my target to avoid detection. The Laughing Skull we have \"persuaded\" to give us information call this one Drov the Ruiner.\n\nThese magnaron can be used for the Iron Horde, I know it!",
 		"The beast stands there most days tracing runes in the earth, almost if it is casting spells. Other magnaron wander about killing and destroying the earth but this one watches.\n\nIt may have some way to talk to the others I cannot understand.",
@@ -2282,7 +1894,7 @@ _addon.data = {
 	},
 },
 ["Standard of Niuzao"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214202},
 	["pages"] = {
 		"A spool of thick canvas that, when held aloft, unfurls to reveal a proud emblem of the Pandaren Empire. Heavy iron rings dangle from long ribbons of leather affixed along the bottom, pulling the banner taut. Stitched into each strip of leather is a reminder for the standard-bearer: \"Fear seeks to diminish you. / Instead, let it reveal you.\"\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -2291,7 +1903,7 @@ _addon.data = {
 	},
 },
 ["Sunwell - The Fall of Quel'Thalas"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175757},
 	["pages"] = {
 		"Though he had defeated all of the people he now saw as his enemies, Arthas was still haunted by the ghost of Kel'Thuzad. The ghost told Arthas that he needed to be revived for the next phase of the Lich King's plan. To revive him, Arthas needed to bring Kel'Thuzad's remains to the mystical Sunwell, hidden within the high elves' eternal kingdom of Quel'Thalas.",
 		"Arthas and his Scourge invaded Quel'Thalas and laid siege to the elves' crumbling defenses. Sylvanas Windrunner, the Ranger-General of Silvermoon, put up a valiant fight, but Arthas eventually eradicated the high elf army and battled through to the Sunwell. In a cruel gesture of his dominance, he even raised Sylvanas' defeated body as a banshee, cursed to endless undeath in the service of Quel'Thalas' conqueror.",
@@ -2305,7 +1917,7 @@ _addon.data = {
 	},
 },
 ["Tanaan's Fallen"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 237369},
 	["pages"] = {
 		"Dedicated to those that lost their lives securing the shores of Tanaan Jungle.",
 	},
@@ -2314,7 +1926,7 @@ _addon.data = {
 	},
 },
 ["Terracotta Arm"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214183},
 	["pages"] = {
 		"When the Mogu had exhausted their options for enslaved mortal warriors, they turned their attention to creating armies of animated constructs to do their fighting for them. Because these terracotta warriors would sometimes sit dormant for centuries, it is hard to pinpoint exactly when this one was constructed or used. However, scoring at the base of the severed arm indicates that it was felled in combat.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -2323,7 +1935,7 @@ _addon.data = {
 	},
 },
 ["The Alliance of Lordaeron"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175746},
 	["pages"] = {
 		"Lord Lothar rallied the remnants of Azeroth's armies after their defeat at Stormwind Keep, and then launched a massive exodus across the sea to the northern kingdom of Lordaeron. Convinced that the Horde would overcome all of humanity if left unchecked, the leaders of the seven human nations met and agreed to unite in what would become known as the Alliance of Lordaeron.",
 		"For the first time in nearly three thousand years, the disparate nations of Arathor were once again united under a common banner. Appointed as Supreme Commander of the Alliance forces, Lord Lothar prepared his armies for the coming of the Horde.",
@@ -2352,7 +1964,7 @@ _addon.data = {
 	},
 },
 ["The Angler and the Monks"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214411},
 	["pages"] = {
 		"Two wise monks gathered beneath the Temple of the Jade Serpent to discuss the nature of truth. Because the seas were glassy and calm, they decided to hire an Angler to row them out beyond the spires so that they may admire the view as they talked. \"Glassy waters mean storms ahead,\" the Angler cautioned, but the wise monks trusted their eyes and insisted on the voyage.\n\n\"Truth is absolute,\" said the first monk, as the little boat emerged into open water. \"The universe has but one truth, and we must work tirelessly to reveal it.\"",
 		"\"Truth is relative!\" countered the second monk, as clouds gathered overhead. \"The universe has many truths, and only the fool insists that his truth is true for all.\"\n\nThe Angler said nothing as the monks debated, until at last one turned to him and asked for his opinion on the nature of truth. \"I never thought much about it,\" he admitted.\n\nThe two monks shook their heads and clicked their tongues. They were alarmed to discover that the Angler did not even know how to read or write. \"It would seem to us that you have wasted your life,\" they said to him.",
@@ -2369,7 +1981,7 @@ _addon.data = {
 	},
 },
 ["The Armor of Mannoroth"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175658},
 	["pages"] = {
 		"These demon plates were worn by the creature that first cursed our people with bloodlust. By the heroic act of one brave orc - he was defeated. Mannoroth the Destructor is no more. Let these plates always remind us of how far we've come and how hard we fought to regain our honor.\n\n- Thrall, Warchief of the Horde",
 	},
@@ -2378,7 +1990,7 @@ _addon.data = {
 	},
 },
 ["The Battle of Grim Batol"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175750},
 	["pages"] = {
 		"Meanwhile, in the war-torn lands of the south, the scattered remnants of the Horde fought for their very survival. Though Grom Hellscream and his Warsong clan managed to evade capture, Deadeye and his Bleeding Hollow clan were rounded up and placed in the internment camps in Lordaeron. Notwithstanding these costly uprisings, the camps' wardens soon re-established control over their brutish charges.",
 		"However, unknown to the Alliance, a large force of orcs still roamed free in the northern wastes of Khaz Modan. The Dragonmaw clan, led by the infamous warlock Nekros, was using an ancient artifact known as the Demon Soul to control the Dragonqueen, Alexstrasza, and her dragonflight. With the Dragonqueen as his hostage, Nekros built up a secret army within the abandoned - some say cursed - Wildhammer stronghold of Grim Batol.",
@@ -2392,7 +2004,7 @@ _addon.data = {
 	},
 },
 ["The Betrayer Ascendant"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175759},
 	["pages"] = {
 		"During the Legion's invasion of Ashenvale, Illidan was released from his barrow prison after ten thousand years of captivity. Though he sought to appease his comrades, he soon reverted to true form and consumed the energies of a powerful warlock artifact known as the Skull of Gul'dan.",
 		"By doing so, Illidan developed demonic features and vastly magnified power. He also gained some of Gul'dan's old memories - especially those of the Tomb of Sargeras, the island dungeon rumored to hold the remains of the Dark Titan, Sargeras.",
@@ -2411,7 +2023,7 @@ _addon.data = {
 	},
 },
 ["The Birth of the Lich King"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175748},
 	["pages"] = {
 		"Ner'zhul and his followers entered the Twisting Nether, the ethereal plane that connects all of the worlds scattered throughout the Great Dark Beyond. Unfortunately Kil'jaeden and his demonic minions were waiting for them. Kil'jaeden, who had sworn to take vengeance on Ner'zhul for his prideful defiance, slowly tore the old shaman's body apart, piece by piece.",
 		"Kil'jaeden kept the shaman's spirit alive and intact, thus leaving Ner'zhul painfully aware of his body's gross dismemberment. Though Ner'zhul pleaded with the demon to release his spirit and grant him death, the demon grimly replied that the Blood Pact they had made long ago was still binding, and that Ner'zhul still had a purpose to serve.",
@@ -2431,7 +2043,7 @@ _addon.data = {
 	},
 },
 ["The Birthplace of Liu Lang"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213459},
 	["pages"] = {
 		"The famed pandaren explorer Liu Lang was born and raised here, in Stoneplow, on a small ranch near this very spot.\n\nWhile he should have been helping to manage the family farm, Liu Lang often wandered to the cliffs south of here and stared out across the ocean. \"I want to see what's out there,\" he famously declared to the derision of his peers (it was widely assumed the world had been destroyed in the Sundering.)\n\nLiu Lang made inquiries about purchasing a boat, but local Anglers pointed out no boat could find its way home through the mists.\n\nHe later proclaimed he would explore the world on the back of a sea turtle, because sea turtles always return to the beach where they were born.\n\nAfterwards, locals began to suspect that Liu Lang had eaten one too many bad turnips, and was no longer right in the head.",
 	},
@@ -2439,17 +2051,8 @@ _addon.data = {
 		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "20.3",  ["y"] = "55.9"},
 	},
 },
-["The Birthplace of Liu Lang"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The famed pandaren explorer Liu Lang was born and raised here, in Stoneplow, on a small ranch near this very spot.\n\nWhile he should have been helping to manage the family farm, Liu Lang often wandered to the cliffs south of here and stared out across the ocean. \"I want to see what's out there,\" he famously declared to the derision of his peers (it was widely assumed the world had been destroyed in the Sundering.)\n\nLiu Lang made inquiries about purchasing a boat, but local Anglers pointed out no boat could find its way home through the mists.\n\nHe later proclaimed he would explore the world on the back of a sea turtle, because sea turtles always return to the beach where they were born.\n\nAfterwards, locals began to suspect that Liu Lang had eaten one too many bad turnips, and was no longer right in the head.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["The Condensation of Electra-Atrocity"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 202732},
 	["pages"] = {
 		"For those accustomed to the arcane arts or the channeling of fel energies, mastery of the elements presents unique complexities that often prove daunting or even fatal to inexperienced practitioners.\n\nThose who wish to dabble in the rewarding science of elemental channeling would do well to remember that, even divorced from the arcane energies responsible for the summoning and animation of their form, the elements present a formidable danger in and of themselves.",
 		"I reiterate this caution as we turn our attention to the subject of this tome, the channeling of the mysterious and ephemeral substance I have dubbed \"Electra-atrocity.\"\n\nThis curious, odorless material is generated within the swirling currents of air elementals, presumably to perform the function that blood or mucous serves among more flesh-bound analogues. Lightning clouds are known to discharge this substance, in much the same way you or I may discharge excess fluids.",
@@ -2463,7 +2066,7 @@ _addon.data = {
 	},
 },
 ["The Curse and the Silence"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218437},
 	["pages"] = {
 		"For many ages the mogu guarded the great works of the titans. Always they listened to their master. Always they were obedient. With stony determination, they stood in ageless vigil.\n\nEven as their master fell silent.\n\nNo mogu writings survive from the era when their stone turned to flesh. How terrifying it must have been for the mogu to breathe, to bleed, to die.\n\nThey turned to their master for guidance, but still, he was silent.",
 		"With flesh came the other curses of mortality: pride and greed, fear and anger. No longer united in purpose, the mogu fought amongst themselves.\n\nPowerful mogu warlords gathered up followers and made war on one another. Their battles scorched the land, terrifying the other mortal races. \n\nAnd still, their master said nothing.",
@@ -2472,18 +2075,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "49.9",  ["y"] = "20.4"},
 	},
 },
-["The Curse and the Silence"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"For many ages the mogu guarded the great works of the titans. Always they listened to their master. Always they were obedient. With stony determination, they stood in ageless vigil.\n\nEven as their master fell silent.\n\nNo mogu writings survive from the era when their stone turned to flesh. How terrifying it must have been for the mogu to breathe, to bleed, to die.\n\nThey turned to their master for guidance, but still, he was silent.",
-		"With flesh came the other curses of mortality: pride and greed, fear and anger. No longer united in purpose, the mogu fought amongst themselves.\n\nPowerful mogu warlords gathered up followers and made war on one another. Their battles scorched the land, terrifying the other mortal races. \n\nAnd still, their master said nothing.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["The Dark Portal and the Fall of Stormwind"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175745},
 	["pages"] = {
 		"As Kil'jaeden prepared the Horde for its invasion of Azeroth, Medivh continued to fight for his soul against Sargeras. King Llane, the noble monarch of Stormwind, grew wary of the darkness which seemed to taint the spirit of his former friend.",
 		"King Llane shared his concerns with Anduin Lothar, the last descendent of the Arathi bloodline, whom he named his lieutenant-at-arms. Even so, neither man could have imagined that Medivh's slow descent into madness would bring about the horrors that were to come.",
@@ -2511,7 +2104,7 @@ _addon.data = {
 	},
 },
 ["The Dark Prophet Zul"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218430},
 	["pages"] = {
 		"Among the Zanchuli Council are many priests and mages of incredible power and forbidden knowledge. One of the most respected of these is Zul. Even as a child his dark and terrible visions had come true down to the last horrifying detail. He commanded fear and respect as one of the dark prophets: seers capable of witnessing great tragedies before they came to pass.",
 		"In the months before the Cataclysm, Zul's nightmares were haunted by terrible visions of a world torn asunder. He consulted all the signs and was convinced that the Zandalari homeland would be destroyed in the coming apocalypse. He advised the council and the king to unite with the other troll tribes and to abandon their doomed homeland.",
@@ -2521,19 +2114,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "52.7",  ["y"] = "41.4"},
 	},
 },
-["The Dark Prophet Zul"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Among the Zanchuli Council are many priests and mages of incredible power and forbidden knowledge. One of the most respected of these is Zul. Even as a child his dark and terrible visions had come true down to the last horrifying detail. He commanded fear and respect as one of the dark prophets: seers capable of witnessing great tragedies before they came to pass.",
-		"In the months before the Cataclysm, Zul's nightmares were haunted by terrible visions of a world torn asunder. He consulted all the signs and was convinced that the Zandalari homeland would be destroyed in the coming apocalypse. He advised the council and the king to unite with the other troll tribes and to abandon their doomed homeland.",
-		"Despite Zul's infamy, the council refused to believe in the scope of the disaster to come. Many felt that Zul was grandstanding to increase his own status and power. They scoffed as he and his followers began assembling a war fleet and reaching out to the lesser troll races. \n\n But Zul's visions were visions of the truth. Deathwing's Cataclysm rocked Zandalar to its foundations. Even now the mighty and enigmatic troll empire slides inexorably into the sea, and Zandalari peasants and warriors alike flock to Zul for guidance on what to do next.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["The Death Knights of Acherus"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191634},
 	["pages"] = {
 		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 1</H1></BODY></HTML>",
 		"Name: Jayde\nStatus: Alive\nComment: Bloodthirsty",
@@ -2581,7 +2163,7 @@ _addon.data = {
 	},
 },
 ["The Decree of the Scourge "] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191664},
 	["pages"] = {
 		"The Decree of the Scourge\nChapter 1\nBy Kel'Thuzad\n\nThe roots of the Scourge are sewn in the folly of all races. Our rise to power is the product of the sins of those who mean our end. The so called 'heroes' of the land fall before us by resorting to a measure of our ideals to bring forth their envisioned victory. Their victory is a vehicle to the realization that without resorting to what they define as deplorability to achieve it, we would have overcome them instead. In both outcomes, win or lose, the Scourge invariably wins. When this is recognized, submission to our will is inevitable.",
 		"The Master, our Lich King, was born under this very same doctrine.\n\nTo conquer is to corrupt. To corrupt is to take what it is to be righteous and hopeful, to be living, and invert it through any means in your arsenal. The attributes of the living all have synonyms with fatal flaws that are their undoing: hope is dogma, righteousness is zealotry, living is empathy. Recognize what makes that which lives desire to live, and turn it upon itself.",
@@ -2599,7 +2181,7 @@ _addon.data = {
 	},
 },
 ["The Defiant"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213328},
 	["pages"] = {
 		"The saurok were originally dispatched to maintain order in the far edges of the mogu empire. A sauroken culture of superiority and hatred for weakness developed, fueled by the ego of their mogu masters.\n\nSoon, saurok guards began to plunder the very people they were supposed to police. They grew disobedient, turning on their own mogu commanders whenever they were displeased with the spoils of war.\n\nEmperor Dojan responded in the traditional mogu way: the souls were ripped from every living saurok in the Vale of Eternal Blossoms, and he demanded the same fate for the legions still in the field. So began the great Purge.",
 	},
@@ -2607,17 +2189,8 @@ _addon.data = {
 		{["area"] = "The Veiled Stair", ["areaId"] = 873,  ["id"] = "6006",  ["level"] = "0",  ["x"] = "45.9",  ["y"] = "4.1"},
 	},
 },
-["The Defiant"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The saurok were originally dispatched to maintain order in the far edges of the mogu empire. A sauroken culture of superiority and hatred for weakness developed, fueled by the ego of their mogu masters.\n\nSoon, saurok guards began to plunder the very people they were supposed to police. They grew disobedient, turning on their own mogu commanders whenever they were displeased with the spoils of war.\n\nEmperor Dojan responded in the traditional mogu way: the souls were ripped from every living saurok in the Vale of Eternal Blossoms, and he demanded the same fate for the legions still in the field. So began the great Purge.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["The Deserters"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213329},
 	["pages"] = {
 		"When the mogu declared the purging of the saurok, a number of legions were still deployed in the field. Word reached the saurok of their masters' treachery, and so they turned on their officers, and vanished behind enemy lines in the mantid lands. Many legions of mogu and their slaves were dispatched to hunt down and destroy these deserters. None ever returned.",
 	},
@@ -2625,17 +2198,8 @@ _addon.data = {
 		{["area"] = "Dread Wastes", ["areaId"] = 858,  ["id"] = "6138",  ["level"] = "0",  ["x"] = "67.4",  ["y"] = "60.9"},
 	},
 },
-["The Deserters"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"When the mogu declared the purging of the saurok, a number of legions were still deployed in the field. Word reached the saurok of their masters' treachery, and so they turned on their officers, and vanished behind enemy lines in the mantid lands. Many legions of mogu and their slaves were dispatched to hunt down and destroy these deserters. None ever returned.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["The Duel of Thunder and Strength"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218852},
 	["pages"] = {
 		"Long ago the armies of Lei Shen marched on Kun-Lai Summit. What free folk lived there rallied as best they could, strong and defiant to the end. They would not give up their land for this Thunder King.\n\nBut Lei Shen was not there for the land, he had come for its people. His empire was growing, and slaves were required for the building of its cities and fortresses.",
 		"So rather than attack the summit, Lei Shen boomed with his mighty voice: \"Choose the greatest warrior among you and have him face me in one on one combat. Should I win, your people will submit to my rule. Should he win, I shall leave these lands in peace.\"\n\n\"Challenge accepted!\" came a voice that boomed across the mountains almost as strong as the thunderous presence of Lei Shen.\n\nFrom the mountains descended Xuen, the White Tiger. The August Celestial had seen the plight of the free peoples and could bear it no more.",
@@ -2648,7 +2212,7 @@ _addon.data = {
 	},
 },
 ["The Dungeons of Dojan"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210758},
 	["pages"] = {
 		"--Translationed by Lorekeeper Vaeldrin--\n\nIt was the Sovereign Emperor, Dojan Firecrown, who brought the legions down upon the Krasarang Jungle, crushing its defenses and adding it to the empire.\n\nKrasarang was the last of the freeholds, a festering jungle of brigands and rebels, seeking to hide from his grace's wrath.\n\nThe true prize though was the legendary Pools of Youth. The Firecrown was late in his years and dreamed of the power such pools could provide if under his sway.",
 		"With this conquest, the Firecrown used his new thralls to construct the Dungeons of Dojan. It quickly became one of the most feared and renowned dungeons in the known world. Fortified with countless traps and weaponry, it showed the empire that the Firecrown would not endure the insult of rebellion.\n\nTo ensure their reputation, the Imperial Magisters crafted wards and arcanic oubliettes in great number. Those foolish enough to try and use a magic portal to assault the seat of the empire would quickly find themselves redirected to an arcanic oubliette or worse.\n\nIn time, the only successful teleportation magics of the region were limited to the nearby port of Korja.",
@@ -2658,7 +2222,7 @@ _addon.data = {
 	},
 },
 ["The Emperor's Burden - Part 1"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215799},
 	["pages"] = {
 		"Ten thousand years ago, the day Shaohao was crowned Emperor of Pandaria, he followed the tradition of all the emperors before him and sought the counsel of the great Waterspeaker of the jinyu. With a light heart the young emperor stood before the prophet and awaited to hear what he presumed would be good news.\n\nThe Waterspeaker listened to the song of the great river, but his eyes widened with terror.\n\nFrom the Book of Burdens, Chapter 1:\n\n\"And the Waterspeaker saw before him a kingdom of sorcerers surrounding a great well, and from this well they called forth a host of demons. Green fire rained from the skies, and all the world's continents shattered.\"\n\nTerrified by the vision presented before him, Emperor Shaohao realized that he was not to live a life of luxury. From the humble town of Dawn's Blossom, his journey to save Pandaria began.",
 	},
@@ -2667,7 +2231,7 @@ _addon.data = {
 	},
 },
 ["The Emperor's Burden - Part 2"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215797},
 	["pages"] = {
 		"It was at this location ten thousand years ago that Shaohao, the last emperor of Pandaria, sought out the counsel of the Jade Serpent.\n\nFrom the Book of Burdens, Chapter 3:\n\n\"Forlorn and without hope, the Last Emperor ascended the sheer slope of Mount Neverest. Daggers of cold sliced through his silken robes, and the biting wind heaped scorn on his journey.\"\n\n\"Only at the very peak of the mountain did the Emperor find quiet and solace, and here he spoke with the Jade Serpent, the spirit of wisdom.\"\n\nThe Jade Serpent urged Shaohao to divest himself of his burdens, to purify his spirit, and to become one with the land.\n\nThe Emperor was perplexed by the Jade Serpent's counsel, but no further answers were to be found atop the frigid peak. Dejected, Emperor Shaohao trudged back down the mountain to consult his companion, the Monkey King, and determine his next move.",
 	},
@@ -2676,7 +2240,7 @@ _addon.data = {
 	},
 },
 ["The Emperor's Burden - Part 3"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213421},
 	["pages"] = {
 		"It was at this very location ten thousand years ago that Shaohao, the last emperor of Pandaria, defeated the Sha of Doubt and imprisoned it within the land.\n\nFrom the Book of Burdens, Chapter 5:\n\n\"Shaohao meditated for three days and three nights, for the counsel of the Jade Serpent was unclear. How could one purge oneself of all doubt?\"\n\n\"Weary of waiting, Shaohao's travelling companion the Monkey King whittled a strange grimacing visage out of bamboo. He urged the Emperor to place the mask of doubt on his face...\"\n\nWhile mischief was the Monkey King's motivation, the mask worked - As Shaohao pulled the mask away, his doubts took on a physical form. For seven hours they fought, until the Sha of Doubt was buried.\n\nFrom that day onward, the last emperor had no doubt that he would save Pandaria from the Sundering. He became a creature of faith.",
 	},
@@ -2685,7 +2249,7 @@ _addon.data = {
 	},
 },
 ["The Emperor's Burden - Part 4"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213422},
 	["pages"] = {
 		"It was at this very location ten thousand years ago that Shaohao, the Last Emperor of Pandaria, defeated the Sha of Despair and imprisoned it within the land.\n\nFrom the Book of Burdens, Chapter 9:\n\n\"After his success in the Jade Forest, Emperor Shaohao was filled with courage but fretted over an uncertain future. He sought the counsel of the Red Crane, the spirit of hope, deep within the Krasarang Wilds.\"\n\n\"The Red Crane told the Emperor that hope was within all of us, if we looked deep enough. With that, the Monkey King presented Emperor Shaohao with a mask of Despair, a forlorn visage of terrible sadness. The Emperor donned the mask and drew out his own hopelessness...\"\n\nThe battle against the Sha of Despair lasted four days and five nights in a pouring rain, but with the help of the Red Crane and the Monkey King, all of Shaohao's despair was extinguished.\n\nFrom that day forth the Emperor knew the future was bright. He became a creature of hope.",
 	},
@@ -2694,7 +2258,7 @@ _addon.data = {
 	},
 },
 ["The Emperor's Burden - Part 5"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213445},
 	["pages"] = {
 		"It was at this very location ten thousand years ago that Shaohao, the Last Emperor of Pandaria, defeated the Sha of Fear and imprisoned it within the land.\n\nFrom the Book of Burdens, Chapter 14:\n\n\"Although purged of doubt and despair, Emperor Shaohao was still overcome by fear. He sought the counsel of the Black Ox, spirit of bravery and fortitude, who lived in the steppes beyond the wall.\"\n\n\"The Black Ox, Red Crane, Emperor, and Monkey King discussed the nature of fear at great length, until at last the Monkey King was inspired to act. A mask of fear was created, terrifying to behold. With trembling hands, the Emperor donned the horrific mask, so as to draw forth his own fears...\"\n\nThe battle against the Sha of Fear lasted a week and a day, during which time legend has it that the sun never rose. When the Sha was at last defeated and imprisoned in the earth, Emperor Shaohao was forever changed, for he no longer felt his own fears. He became a creature of courage.",
 	},
@@ -2703,7 +2267,7 @@ _addon.data = {
 	},
 },
 ["The Emperor's Burden - Part 6"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213443},
 	["pages"] = {
 		"It was at this very location ten thousand years ago that Shaohao, the Last Emperor of Pandaria, defeated the Sha of Anger, the Sha of Hatred, and the Sha of Violence.\n\nFrom the Book of Burdens, Chapter 19:\n\n\"Confident and fearless, Emperor Shaohao thought nothing could stop him. But at the urging of the Red Crane, he sought out the counsel of the White Tiger, the spirit of strength.\"\n\n\"The White Tiger saw in Shaohao a dangerous recklessness that often accompanies those with no fear. He gathered together the greatest warriors of Pandaria to test the Emperor.\"\n\n\"Emperor Shaohao was given a ten-foot pole, and was challenged to strike one of the warriors. For hours they fought, but the warriors were too quick and too nimble for the untrained Emperor. He grew angry, he cursed, and finally, broke the staff over his knee.\"",
 		"Humbled, the Emperor asked the White Tiger what was wrong, and learned that his own passions made him weak. To save Pandaria, Shaohao would have to combat his own anger, hatred, and violence.\n\nThe Monkey King sprang into action, and carved three masks. The Emperor wore each mask in turn, and with the help of his friends, as well as all the greatest warriors of Pandaria, the Sha of Anger, the Sha of Hatred, and the Sha of Violence were defeated and imprisoned beneath the ground.\n\nThe Emperor was forever changed, and as he set forth on the final leg of his adventure, he was a creature of patience, love, and peace.",
@@ -2713,7 +2277,7 @@ _addon.data = {
 	},
 },
 ["The Emperor's Burden - Part 7"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213455},
 	["pages"] = {
 		"The Shado-Pan order was founded ten thousand years ago under a charter from Shaohao, the Last Emperor of Pandaria.\n\nEmperor Shaohao knew that the dark energy of the Sha - the physical embodiment of negative emotions like anger, fear, hatred or doubt - represented a great threat to the pandaren if allowed to fester beneath the land. He tasked the greatest warriors of Pandaria with the duty to restrain and control the Sha.\n\nOn this very location, mere hours after Emperor Shaohao bested his own anger, hatred, and violence, the first of the Shado-Pan took their knee and spoke an oath to the Last Emperor. The same words have been spoken by every Shado-Pan initiate ever since, for the last ten thousand years.",
 	},
@@ -2722,7 +2286,7 @@ _addon.data = {
 	},
 },
 ["The Emperor's Burden - Part 8"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213456},
 	["pages"] = {
 		"Ten thousand years ago, Emperor Shaohao, the Last Emperor of Pandaria, used the power of these sacred waters to spare Pandaria from the devastation of the Sundering that destroyed the rest of the world.\n\nFrom the Book of Burdens, Epilogue:\n\n\"At the dusk of the final day, the sky was bathed in green fire, and the very ground trembled in terror. But the Emperor was not afraid. His mind was clear of any doubt or despair. He feasted and he sang as the sky tore open.\"\n\n\"Seeing fear and doubt in his subject's eyes, Emperor Shaohao delivered a proclamation: That one should live each day to its fullest, and sleep each night with the peace of a mind unburdened.\"",
 		"Legend tells that he ascended to the Terrace of Endless Spring, there to separate Pandaria from the rest of the world. But try as he might, he was unable; the ground trembled, but did not move. Soon, he began to doubt, and the Sha of Doubt began to emerge from the east. He began to fear, and the Sha of Fear began ripping out of its shackles to the west. Desperately, he called out to the Jade Serpent for help.\n\nThe Jade Serpent circled the Vale, and spoke to the beleaguered Emperor. \"Pandaria is more than just the Pandaren Empire,\" she told Shaohao. \"Your enemies to the west are as much a part of this land as your empire behind the wall.\"",
@@ -2733,7 +2297,7 @@ _addon.data = {
 	},
 },
 ["The Empress"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213412},
 	["pages"] = {
 		"The Empress of the mantid is a force to be feared throughout Pandaria. From her, the nearly endless hosts of the mantid are spawned. \n\nThough mantid empresses are long-lived, they are not immortal. A council of mantid elders, known as the Klaxxi, see to the organized transfer of power from one empress to the next. The exact nature of the exchange is extremely secretive, but it appears to involve a trial by combat. Remains of the previous empress are fed to her successor. For this reason, an unbroken line of power has extended throughout the entire history of the mantid civilization. \n\nThough few in number, the Klaxxi evidently play a pivotal role in shaping and protecting mantid culture. It is unclear if they can directly countermand the will of the Empress, however.",
 	},
@@ -2741,17 +2305,8 @@ _addon.data = {
 		{["area"] = "Dread Wastes", ["areaId"] = 858,  ["id"] = "6138",  ["level"] = "0",  ["x"] = "29.1",  ["y"] = "62.1"},
 	},
 },
-["The Empress"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The Empress of the mantid is a force to be feared throughout Pandaria. From her, the nearly endless hosts of the mantid are spawned. \n\nThough mantid empresses are long-lived, they are not immortal. A council of mantid elders, known as the Klaxxi, see to the organized transfer of power from one empress to the next. The exact nature of the exchange is extremely secretive, but it appears to involve a trial by combat. Remains of the previous empress are fed to her successor. For this reason, an unbroken line of power has extended throughout the entire history of the mantid civilization. \n\nThough few in number, the Klaxxi evidently play a pivotal role in shaping and protecting mantid culture. It is unclear if they can directly countermand the will of the Empress, however.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["The First Monks"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213415},
 	["pages"] = {
 		"In the days of the mogu dynasties, slaves were the lifeblood of the empire. Pandaren, hozen, and jinyu worked fields, dug mines, and built the mighty fortresses of their masters.\n\nTo help combat fatigue, maintain morale, and return the wounded to work, the mogu permitted a pandaren caste of slaves that specialized in the brewing of remedies. Simple teas and poultices were their specialty at first. Over the years these specialists became healers, community leaders, and brewmasters.\n\nA noble tradition was born, and these early \"monks\" became symbols of hope and pride amongst the pandaren.\n\nIt was these heroes who first learned how to fight without weapons. In secret, monks taught the other slaves the secrets of martial arts. When the revolution came, the monks were the first into battle, inspiring the humble farmers, smiths, and masons to follow...",
 	},
@@ -2759,17 +2314,8 @@ _addon.data = {
 		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "35.7",  ["y"] = "30.4"},
 	},
 },
-["The First Monks"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"In the days of the mogu dynasties, slaves were the lifeblood of the empire. Pandaren, hozen, and jinyu worked fields, dug mines, and built the mighty fortresses of their masters.\n\nTo help combat fatigue, maintain morale, and return the wounded to work, the mogu permitted a pandaren caste of slaves that specialized in the brewing of remedies. Simple teas and poultices were their specialty at first. Over the years these specialists became healers, community leaders, and brewmasters.\n\nA noble tradition was born, and these early \"monks\" became symbols of hope and pride amongst the pandaren.\n\nIt was these heroes who first learned how to fight without weapons. In secret, monks taught the other slaves the secrets of martial arts. When the revolution came, the monks were the first into battle, inspiring the humble farmers, smiths, and masons to follow...",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["The Founding of Quel'Thalas"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175733},
 	["pages"] = {
 		"The high elves, led by Dath'Remar, left Kalimdor behind them and challenged the storms of the Maelstrom. Their fleets wandered the wreckage of the world for many long years, and they discovered mysteries and lost kingdoms along their sojourn. Dath'Remar, who had taken the name Sunstrider (or \"he who walks the day\"), sought out places of considerable ley power upon which to build a new homeland for his people.",
 		"His fleet finally landed on the beaches of the kingdom men would later call Lordaeron. Forging inland, the high elves founded a settlement within the tranquil Tirisfal Glades. After a few years, many of them began to go mad. It was theorized that something evil slept beneath that particular part of the world, but the rumors were never proven to be true. The high elves packed up their encampment and moved northward towards another land rich with ley energies.",
@@ -2788,7 +2334,7 @@ _addon.data = {
 	},
 },
 ["The Founding of the Order of the Cloud Serpent"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214425},
 	["pages"] = {
 		"During the Zandalari Wars just after the founding of the Pandaren Empire, a young girl named Jiang was walking through the Arboretum when she heard a noise. A small cloud serpent lay there on the ground, injured and near death. With a mother's gentleness, Jiang took this small creature in to her arms and in to her care. She named him Lo, and they became fast friends.",
 		"This was much to the lament of the common people. Serpents, you see, were feared as monsters and wild animals, both cunning and dangerous. The townsfolk shunned Jiang, and begged for her to get rid of Lo before he became old enough to hurt her.\n\nOne day, the Zandalari army had pushed as far south as the Jade Forest. Monsters from the sea, these trolls launched an attack against Pandaria. Jiang answered the call to arms, and defended her people on the beaches.",
@@ -2805,7 +2351,7 @@ _addon.data = {
 	},
 },
 ["The General and the Grummle"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214408},
 	["pages"] = {
 		"Many generations ago, a Shado-Pan General stood on the Serpent's Spine wall, awaiting the mantid swarm. A young grummle approached him to drop off the last of his supplies, and asked if the General thought the battle would go well.\n\n\"If fortune favors us, we will win the day,\" the General answered, scanning the horizon.\n\nHere, he spoke of matters the grummle knew intimately well. \"Fortune is so fickle! How do you know it will favor you?\" he asked.",
 		"Nodding, the General withdrew a coin from his pocket. \"Let us see how the winds blow!\" he said, tossing the coin into the air. \"If it is heads, our defense will hold. If it is tails, the wall will be overrun.\"\n\nBy now, many of his men had gathered to see the outcome, and a crowd of soldiers eagerly pressed forward to watch the coin land. It bounced, spun, and came to rest. Heads! Cheers erupted.\n\nThe next day battle was fought. The mantid swarmed and the defenders prevailed. Outnumbered thirty to one, the defenders were victorious.",
@@ -2820,7 +2366,7 @@ _addon.data = {
 	},
 },
 ["The Gods of Arak"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 237809},
 	["pages"] = {
 		"The ancient skies of Arak were once shared by three gods...",
 		"Rukhmar was strong, youthful and ambitious. She flew higher, ever higher, for she loved to feel the sun's warmth upon her feathers. She would climb until she caught fire, but she did not burn. The flames cascaded off of her in long stokes of brilliant red and gold.\n\nThe sky was her canvas, and her children were the kaliri.",
@@ -2836,48 +2382,8 @@ _addon.data = {
 		{["area"] = "Spires of Arak", ["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "45.9",  ["y"] = "45.7"},
 	},
 },
---[[
-["Green Hills of Stranglethorn"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">THE GREEN HILLS OF STRANGLETHORN</H1><BR/><H3 align=\"center\">by Hemet Nesingwary</H3></BODY></HTML>",
-		"Our first day went as well as one can expect first days to go. Most of our time was preoccupied with making the necessary arrangements to establish a base camp. I located an ideal setting by a freshwater river inlet. Judging by the old, abandoned docks nearby, this site was inhabited sometime ago. As for the original inhabitants, only time can tell that tale.",
-		"For this expedition I have assembled Ajeck Rouack and Sir S. J Erlgadin, along with my trusted servant, Barnil Stonepot. I fought alongside Ajeck's father's side in many battles in defense of the Alliance. Seeing her grown is quite special. Her father schooled her well in the ways of weaponry. Her skills with a bow make me wonder if there is elven blood running through those veins.",
-		"Sir S. J. Erlgadin comes from human aristocracy. His father, Count Erlgadin, was renowned for his generosity. It was the Count who lobbied for improved working conditions for the Stonemasons' Guild during the restoration of Stormwind after the Second Great War.",
-		"In the years that followed, after Stormwind betrayed the Stonemasons' Guild, Sir Erlgadin grew bitter about the role of the nobles within the Kingdom. He no longer wished to uphold the position that his father's bloodline had earned for him in the House of Nobles.\n\nBut I digress. The purpose of this story is not to act as a political treatise or a biography. This is the account of my experiences hunting big game in the green hills of Stranglethorn....",
-		"We rose with the sun. Barnil began to prepare the morning meal. I noticed Ajeck's attention was somewhat distracted. The day's trek would be long and our hunt would bring us close to danger. A lack of focus could easily lead to an errant mishap. Yet Ajeck seemed unable to divert her gaze from Barnil who stood by the edge of the river rinsing out his mess kit.",
-		"Just as I was about to question Ajeck's lack of interest in the day's hunting strategy, she reached for her quiver, drew an arrow and unleashed a shot right towards poor Barnil. But it was not Barnil that Ajeck was shooting at. For when Barnil stepped aside, mouth agape, a large river crocilisk floated to the surface with Ajeck's arrow perfectly placed between his two large eyes.",
-		"We set out toward the west, through the thick overgrowth of the tangled jungle. Moving with slow, deliberate steps we paced through thick foliage in search of prey. The morning passed in frustrated silence. Nothing was stirring in the Vale, not even a breeze. By the afternoon, the expedition had grown restless. Barnil no longer strode with the cautious steps of a predator tracking prey. Rather he clumsily clomped along the path often stepping noisily on dried leaves or fallen branches.",
-		"During one such misstep, Erlgadin laid a heavy hand on Barnil's shoulder. Ajeck and I gave a casual glance, assuming the man was simply giving Barnil a much-needed scolding for his carelessness. Erlgadin, however, gestured slowly with his head toward a nearby fallen tree. Gazing back at us were two piercing black eyes just above a mouthful of razor sharp fangs.",
-		"The beast was a male Stranglethorn Tiger. Before I could cock my rifle, Erlgadin raised his crossbow and fired upon the beast. The bolt missed its mark and caught the beast heavily in the left flank. The tiger made a futile attempt to flee but its wound was too grave. The beast stumbled for a few tragic seconds until Barnil finished the kill with a thrown axe.",
-		"The kill brought about a festive mood amongst the expedition. Barnil poured mead for all to enjoy. But our festivities were short-lived. As we were preparing the corpse for transport back to base camp we were all caught off guard by a horrendous growl. In all my years I have never heard anything so blood curdling.",
-		"On a rocky precipice above, silhouetted by the setting sun, I could make out the largest cat of prey I have ever laid eyes upon. I was able to loose one clumsy volley with my rifle, but the cat held his ground. He growled once again, this time louder than the first, and vanished.\n\nWe gathered our belongings and headed solemnly back to camp.",
-		"I had promised the expedition that we would spend the next day hunting panthers, as their furs are in high demand throughout Azeroth. It only makes sense that such demand should exist with all of the able-bodied hunters, trappers and fur-traders off giving their lives so valiantly in the name of the Alliance.",
-		"Ajeck and Sir Erlgadin were anxious to learn how to hunt effectively with a Dwarven Rifle. I had the two humans leave their primitive range weapons at base camp. Barnil and I outfitted them with some of Ironforge's finest firearms.",
-		"On this day we ventured to the south, following some fresh panther tracks. Soon we reached a ravine spanned by a tremendous rope bridge. I could not help but to think of Brann's descriptive writings of this region when I saw the engineering marvel. So often it was assumed that the native Trolls were a primitive and uneducated race yet as I gazed upon the master craftsmanship of the bridge I was able to recognize the skill with which the Troll builders overcame the seemingly impossible feat.",
-		"Before long, Ajeck tracked the panther to the southwest. We walked quietly, guns at the ready, in anticipation of our prey. A snapping of twigs from a nearby copse of trees drew our attention immediately. Something was in there. One stern glance at Barnil was enough to convey my thoughts. Barnil slowly lowered his rifle. This kill was not for us; it was for our Human companions. Countless panthers had lost their lives in front of our smoking barrels. This kill would be for the Humans.",
-		"Both Ajeck and Sir Erlgadin stood poised, guns leveled at the bristling overgrowth at the base of the swaying trees. The midday sun beat heavily upon us. A slow trickle of perspiration trailed down from Elrgadin's temple as he pulled the pin back. Upon the sound of the click, the thick flora parted and a large black panther -- a beautiful specimen -- darted out onto the plain.",
-		"The Humans trained their sights on the panther as it ran along the edge of the tree line. The barrels of their guns moved in perfect parallel tandem. Barnil gave me an urging glance but I shook my head no. This hunt was for the Humans, not Barnil or me. Erlgadin fired a booming shot, missing the panther altogether. Apparently he was unprepared for the violent kickback of the rifle blast.",
-		"His gun tossed back violently in his arms. The barrel swooped sideways and came up beneath Ajeck's rifle. Ajeck had chosen that exact moment to pull her trigger. The rifle, the aim now knocked clumsily toward the tree line, went off with a distinct boom. A flock of birds screamed out of the canopy, scattering in every direction. A plume of smoke rose from the tree. We watched in awe as a tremendous branch fell squarely on the fleeing panther, breaking its back",
-		"As the weeks passed our stockpile of panther and tiger skins grew immense. I decided it was time for the expedition to shift our focus to a new challenge: Raptors.\n\nThe Humans, while appreciative of the training Barnil and I offered, decided to refrain from hunting with firearms. Ajeck was much more comfortable with a finely strung bow and Sir Erlgadin never left camp without his sturdy crossbow.",
-		"We set out at first light, heading south past the Tkashi Ruins. Barnil voiced concern that we might encounter members of the Bloodscalp Tribe. I reminded Barnil that the Bloodscalps were more concerned with destroying their tribal enemy, the Skullsplitters. Needless to say, Barnil was not comforted in the least. I, however, had a loaded rifle, a satchel full of gunpowder and three deadly hunters with me to ease any concerns of an unfriendly ambush.",
-		"I've stood before a towering Infernal on the battlefield, the army of the Burning Legion advancing from all directions. An unruly band of Trolls seems as harmless as a jackrabbit in the hills of Dun Morogh.\n\nWe passed the Tkashi Ruins without event, much to Barnil's relief. The party proceeded to head westward, toward the Great Sea, skirting the Ruins of Zul'Kunda just to the south. As we ascended the high sea bluffs we spotted our first Raptor.",
-		"The beast never so much as detected our presence. In fact, the only greeting he received from the expedition was a bullet between the eyes.\n\nSir Erlgadin let out a hearty *hurrah* as Ajeck nodded toward me with keen approval. I sifted through my pack in search of my pipe, hoping to enjoy a celebratory smoke. Barnil began to scurry up the hillside to retrieve the Raptor's corpse. I stared at the fallen beast with the satisfaction that accompanies every big kill.",
-		"But I could not bask in the glory of the kill for long. For when I turned my eyes toward the horizon, several silhouettes appeared cresting the hill, just above poor Barnil.\n\n*Flee, Barnil!* I shouted. Ajeck, Sir Erlgadin and myself loosed a volley of bullets, arrows and bolts over Barnil and toward the pursuing raptors. One of us landed a kill amidst the confusion.",
-		"Our hastily aimed shots were enough to buy Barnil's escape. Barnil clamored back down the hill and rejoined the party. We scurried off into the jungle; a pack of ferocious Lashtail Raptors stalking our every move. \n\nThe hunters were now the hunted.",
-		"I led the party toward the sea, hoping the shoreline would provide refuge from the Raptors. In our haste we had drifted too far north, to a precariously high elevation. The mistake was made. The fault was mine. We stopped just short of a sheer cliff, the Raptors just a few paces behind.",
-		"I stepped slowly forward, gun raised. I had led these brave hunters to their death. I would die defending them. Lashtail Raptors are particularly fierce, known for their unrelenting blood-thirst. They far outnumbered us. But I would be damned if I let them kill me and my comrades without shedding some of their own blood first.",
-		"Ajeck and Sir Erlgadin readied their weapons, flanking me on either side, our backs to the sea. Barnil let out a defeated sigh and drew his axe. The Lashtails were almost upon us. Their steady stride had slowed. They were stalking their prey now for they knew they had us trapped.",
-		"And then something miraculous happened. From off to our side we heard the distinct and terrifying roar of the great white tiger. Despite their numbers, the Raptors turned and scattered in all directions. We saw but a brief white flash as the tiger darted past us and pounced on one of the Raptors. No command needed to be given. All four members of our party knew it was time to run.",
-		"We sprinted all the way back to base camp, never slowing. Later that night we sat quietly around the campfire, knowing our lives had been saved by a bizarre twist of fate. Such are the risks of the big game hunter. We toy with fate by delivering it. Yet each of us, at some point, will face fate's razor sharp teeth. This Dwarf is just glad that moment did not come upon the green hills of Stranglethorn.\n\n--The End--",
-	},
-	["locations"] = {
-		{["area"] = "Nagrand", ["areaId"] = 950,  ["id"] = "3518",  ["level"] = "0",  ["x"] = "71.4",  ["y"] = "40.8"},
-	},
-},
-]]--
 ["The Green Hills of Stranglethorn"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 182203},
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><H1 align=\"center\">THE GREEN HILLS OF STRANGLETHORN</H1><BR/><H3 align=\"center\">by Hemet Nesingwary</H3></BODY></HTML>",
 		"Our first day went as well as one can expect first days to go. Most of our time was preoccupied with making the necessary arrangements to establish a base camp. I located an ideal setting by a freshwater river inlet. Judging by the old, abandoned docks nearby, this site was inhabited sometime ago. As for the original inhabitants, only time can tell that tale.",
@@ -2916,7 +2422,7 @@ _addon.data = {
 	},
 },
 ["The Guardians of Tirisfal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175735},
 	["pages"] = {
 		"With the absence of trolls in the northlands, the elves of Quel'Thalas bent their efforts towards rebuilding their glorious homeland. The victorious armies of Arathor returned home to southlands of Strom.",
 		"The human society of Arathor grew and prospered, yet Thoradin, fearful that his kingdom would splinter apart if it overextended itself, maintained that Strom was the center of the Arathorian empire. After many peaceful years of growth and commerce, mighty Thoradin died of old age, leaving Arathor's younger generation free to expand the empire beyond the lands of Strom.",
@@ -2941,7 +2447,7 @@ _addon.data = {
 	},
 },
 ["The Hozen Ravage"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 211994},
 	["pages"] = {
 		"The hozen of the Kun-Lai mountains are unusually aggressive, even by hozen standards. Food and supplies are often scarce in this hostile terrain. When times are hard, the hozen leadership may declare a \"ravage\" on nearby settlements.\n\nDuring a ravage, every hozen strong enough to walk joins in on a massive swarm attack on nearby villages. In this way, they either acquire enough food to last the winter, or they lose enough of their weakest to ensure their current supplies are enough.\n\nFor years, the Shado-Pan and grummles have maintained an uneasy peace with the hozen in exchange for food tributes. Fear of the Shado-Pan keeps the local tribes in check... Usually.",
 	},
@@ -2949,17 +2455,8 @@ _addon.data = {
 		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "45.7",  ["y"] = "61.9"},
 	},
 },
-["The Hozen Ravage"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The hozen of the Kun-Lai mountains are unusually aggressive, even by hozen standards. Food and supplies are often scarce in this hostile terrain. When times are hard, the hozen leadership may declare a \"ravage\" on nearby settlements.\n\nDuring a ravage, every hozen strong enough to walk joins in on a massive swarm attack on nearby villages. In this way, they either acquire enough food to last the winter, or they lose enough of their weakest to ensure their current supplies are enough.\n\nFor years, the Shado-Pan and grummles have maintained an uneasy peace with the hozen in exchange for food tributes. Fear of the Shado-Pan keeps the local tribes in check... Usually.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["The Invasion of Draenor"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175747},
 	["pages"] = {
 		"As the fires of the Second War died down, the Alliance took aggressive steps to contain the orcish threat. A number of large internment camps, meant to house the captive orcs, were constructed in southern Lordaeron. Guarded by both the paladins and the veteran soldiers of the Alliance, the camps proved to be a great success.",
 		"Though the captive orcs were tense and anxious to do battle once more, the various camp wardens, based at the old prison-fortress of Durnholde, kept the peace and maintained a strong semblance of order.",
@@ -2977,7 +2474,7 @@ _addon.data = {
 	},
 },
 ["The Journal of Lin (I)"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214427},
 	["pages"] = {
 		"To whom it may concern:\n\nThe sticky quality of this note is a very special type of toxin I have developed over the last year. If you are mantid, and physically touching this, you now have two minutes left to live. Goodbye.\n\nFor anyone else, my name is Lin, and I am dying. Please, get this information to the Shado-Pan. I have gathered intelligence on the mantid and their culture that will prove vitally important to renewing our understanding of this enemy.\n\nEven now I see my journal pages drifting on the wind across the Dread Wastes. I would chase after them but I have lost too much blood.\n\nThe mantid are ancient. Much more so than we ever believed. And organized.",
 		"My squad was dispatched to learn what we could of their queen and, if possible, kill her. But... she isn't a queen. She is an Empress in every sense of the word. Legions of mantid from each of the trees march under her banner. Entire kingdoms worth of skittering shadows answer her call. And she is more than a mindless egg laying beast.\n\nShe is a ruler. And one who keeps councilors.",
@@ -2987,7 +2484,7 @@ _addon.data = {
 	},
 },
 ["The Journal of Lin (II)"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214428},
 	["pages"] = {
 		"We always knew there was a connection between the mantid and their trees. We assumed this connection was purely instinctual, like a bee's bond with a flower.\n\nThey mean much more though. To the mantid, their trees are sacred. Living shrines steeped in mantid culture. They are the foundation of mantid society.\n\nEach tree carries with it a name bestowed upon it by the mantid. The mantid who live at that tree, be it in the roots, in the branches, in the nooks and crannies, share a name with that tree.",
 		"These are less \"tribal\" by traditional sense and more of a localized kingdom. Each has its own hierarchy of rule and day to day life.\n\nI say day to day life. The mantid are a genuine people, as much as any pandaren or jinyu or hozen. Their culture is violently different than our own but the mantid within the trees do have a culture. Not saying I understand it, but I do acknowledge it's there.",
@@ -2997,7 +2494,7 @@ _addon.data = {
 	},
 },
 ["The Kaldorei and the Well of Eternity"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 21583},
 	["pages"] = {
 		"Ten thousand years before the orcs and humans clashed in their First War, the world of Azeroth cradled only one massive continent surrounded by the infinite, raging seas. That land mass, known as Kalimdor, was home to a number of disparate races and creatures, all vying for survival amongst the savage elements of the waking world. At the dark continent's center was a mysterious lake of incandescent energies.",
 		"The lake, which would later be called the Well of Eternity, was the true heart of the world's magic and natural power. Drawing its energies from the infinite Great Dark beyond the world, the Well acted as a mystical fount, sending its potent energies out across the world to nourish life in all its wondrous forms.\n\nIn time, a primitive tribe of nocturnal humanoids cautiously made their way to the edges of the mesmerizing, enchanted lake.",
@@ -3018,7 +2515,7 @@ _addon.data = {
 	},
 },
 ["The Last Guardian"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175740},
 	["pages"] = {
 		"The Guardian Aegwynn grew powerful over the years and used the Tirisfal energies to greatly extend her life. Foolishly believing that she had defeated Sargeras for good, she continued to safeguard the world from the demon king's minions for nearly nine hundred years. However, the Council of Tirisfal finally decreed that her stewardship had come to an end.",
 		"The Council ordered Aegwynn to return to Dalaran so that they could choose a new successor for the Guardian power. Yet Aegwynn, ever distrustful of the Council, decided to choose a successor on her own.",
@@ -3037,7 +2534,7 @@ _addon.data = {
 	},
 },
 ["The Last Stand"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213330},
 	["pages"] = {
 		"Defiant to the last, the saurok stood their ground against the mogu in the swamps of Krasarang. It was here they had a fighting chance, drawing the imperial forces deeper in to unfamiliar territory.\n\nThe mogu death toll began to climb as the rebels poisoned water supplies and sabotaged structures.\n\nIn his fury, the Emperor Dojan continued to send troops, slaves, and weapons to Krasarang in an effort to eradicate what remained of the saurok.\n\nThey were never successful.",
 	},
@@ -3045,17 +2542,8 @@ _addon.data = {
 		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "32.8",  ["y"] = "29.4"},
 	},
 },
-["The Last Stand"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Defiant to the last, the saurok stood their ground against the mogu in the swamps of Krasarang. It was here they had a fighting chance, drawing the imperial forces deeper in to unfamiliar territory.\n\nThe mogu death toll began to climb as the rebels poisoned water supplies and sabotaged structures.\n\nIn his fury, the Emperor Dojan continued to send troops, slaves, and weapons to Krasarang in an effort to eradicate what remained of the saurok.\n\nThey were never successful.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["The Legacy of Emperor Tsao"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214372},
 	["pages"] = {
 		"Emperor Tsao's short reign was unremarkable by the standards of the ordinarily bloodthirsty mogu dynasties, notable mostly for administrative reorganization.\n\nHe did, however, leave a lasting legacy to the pandaren people. By imperial edict, pandaren slaves were permitted to read, write and establish their own schools.\n\nWhile many mogu monuments were removed after the revolution, Emperor Tsao's likeness remains here on the coast, greeting the sun every morning and looking over the people he helped to save.",
 	},
@@ -3064,7 +2552,7 @@ _addon.data = {
 	},
 },
 ["The Lich King Triumphant"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175762},
 	["pages"] = {
 		"Even weakened as he was, Arthas ultimately outmaneuvered Illidan and reached the Frozen Throne first. Using his runeblade, Frostmourne, Arthas shattered the Lich King's icy prison and thereby released Ner'zhul's enchanted helm and breastplate.",
 		"Arthas placed the unimaginably powerful helm on his head and became the new Lich King. Ner'zhul and Arthas' spirits fused into a single mighty being, just as Ner'zhul had always planned. Illidan and his troops were forced to flee back to Outland in disgrace, while Arthas became one of the most powerful entities the world had ever known.",
@@ -3075,7 +2563,7 @@ _addon.data = {
 	},
 },
 ["The Lost Dynasty"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213332},
 	["pages"] = {
 		"Even by mogu standards, the reign of Emperor Dojan II was short and brutish. His maniacal drive to finish his father's work and complete the great purge against the rebellious saurok legions drove him to leave his court in disarray while he set out on a doomed military campaign.\n\nFrom his perch high on the cliffs overlooking the Krasarang Wilds he oversaw the slow clear-cutting of the jungle, the establishment of Dojanni Dungeons, and the gradual genocide of the saurok race.\n\nWhat he didn't expect was for the remains of the saurok fifth and seventh legions to scale the enormity of the cliffs in the dead of night, ambushing his imperial pavilion from the Valley of Four Winds and forcing him over the edge. His body was never found, and the resulting disarray in the capitol left the empire in chaos for over two years while the saurok melted back into the wilds and disappeared...",
 	},
@@ -3083,17 +2571,8 @@ _addon.data = {
 		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "51",  ["y"] = "31.7"},
 	},
 },
-["The Lost Dynasty"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Even by mogu standards, the reign of Emperor Dojan II was short and brutish. His maniacal drive to finish his father's work and complete the great purge against the rebellious saurok legions drove him to leave his court in disarray while he set out on a doomed military campaign.\n\nFrom his perch high on the cliffs overlooking the Krasarang Wilds he oversaw the slow clear-cutting of the jungle, the establishment of Dojanni Dungeons, and the gradual genocide of the saurok race.\n\nWhat he didn't expect was for the remains of the saurok fifth and seventh legions to scale the enormity of the cliffs in the dead of night, ambushing his imperial pavilion from the Valley of Four Winds and forcing him over the edge. His body was never found, and the resulting disarray in the capitol left the empire in chaos for over two years while the saurok melted back into the wilds and disappeared...",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["The Memoirs of Lord Thorval"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191649},
 	["pages"] = {
 		"It has reached my attention that some new death knights may be troubled by memories of their former lives. I entreat these restless minds to brood no longer, as no one can be filled with more loathing of his previous errors than I. Yet in the Scourge I have found absolution.",
 		"In my ignorance, I was once a paladin pledged to the hateful Light. Blinded with lies about hope, I left my wife and two young daughters at home whilst I scouted for Scourge presence in our area. Our petty band searched the woods for weeks, but every trail went cold. Winter set in and still we had learned nothing about the enemy. Frustrated, we turned homeward.",
@@ -3109,7 +2588,7 @@ _addon.data = {
 	},
 },
 ["The Mogu and the Trogg"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214424},
 	["pages"] = {
 		"Long ago and under hill, there lived a creature called a trogg. It wandered inside the mountain caves and tunnels, exploring and sniffing, and it was content. Then one day it met a mogu.\n\n\"What strong arms you have,\" said the mogu to the trogg. \"I shall use my magic to make them stronger, so they may crush my enemies.\"\n\n\"And what a mighty nose you have,\" said the mogu to the trogg, \"I shall use my magic to make it powerful, so that it may sniff out my enemies.\"",
 		"\"And what a good sense of direction you have, said the mogu to the trogg, \"I shall use my magic to make you never forget a trail, so that you may learn the paths of my enemies.\"\n\nThe mogu used the very waters of the Vale of Eternal Blossoms to shape this creature in to a weapon.\n\nWhen the smoke cleared and the dust settled, what should the mogu see? But a grummle, standing there gleefully.\n\n\"With strong arms, and powerful nose and mind that never forgets a trail,\" said the mogu to the grummle, \"take this food from the farms of the east to the wall of the west. Find every trail in between and tell me of the enemies you see.\"",
@@ -3125,7 +2604,7 @@ _addon.data = {
 	},
 },
 ["The Nature of Peace"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214416},
 	["pages"] = {
 		"Peace is like a river. Sometimes the waters are calm and flow smoothly for great distances. Sometimes it must fight with the shape of the land, bucking with rapids and carving through stone to reach its destination.",
 	},
@@ -3137,7 +2616,7 @@ _addon.data = {
 	},
 },
 ["The New Horde"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175752},
 	["pages"] = {
 		"The chief warden of the internment camps, Aedelas Blackmoore, watched over the captive orcs from his prison-stronghold, Durnholde. One orc in particular had always held his interest: the orphaned infant he had found nearly eighteen years before. Blackmoore had raised the young male as a favored slave and named him Thrall. Blackmoore taught the orc about tactics, philosophy, and combat. Thrall was even trained as a gladiator. All the while, the corrupt warden sought to mold the orc into a weapon.",
 		"Despite his harsh upbringing, young Thrall grew into a strong, quick-witted orc, and he knew in his heart that a slave's life was not for him. As he grew to maturity, he learned about his people, the orcs, whom he had never met: after their defeat, most of them had been placed in internment camps. Rumor had it that Doomhammer, the orc leader, had escaped from Lordaeron and gone into hiding. Only one rogue clan still operated in secret, trying to evade the watchful eyes of the Alliance.",
@@ -3156,7 +2635,7 @@ _addon.data = {
 	},
 },
 ["The Old Gods and the Ordering of Azeroth"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175725},
 	["pages"] = {
 		"Unaware of Sargeras' mission to undo their countless works, the Titans continued to move from world to world, shaping and ordering each planet as they saw fit. Along their journey they happened upon a small world that its inhabitants would later name Azeroth.",
 		"As the Titans made their way across the primordial landscape, they encountered a number of hostile elemental beings. These elementals, who worshipped a race of unfathomably evil beings known only as the Old Gods, vowed to drive the Titans back and keep their world inviolate from the invaders' metallic touch.",
@@ -3175,7 +2654,7 @@ _addon.data = {
 	},
 },
 ["The Pandaren Problem"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218434},
 	["pages"] = {
 		"Even in the ages before the old empire, there is evidence that the pandaren love of learning had created epic poems, agriculture, and medicine. \n\n The Thunder King saw great potential in the pandaren, and for this reason he did not trust them. \n\nAfter he conquered the land, the pandaren were forbidden to learn to read or write. Their leaders and philosophers were executed. All pandaren art and literature was burned. Anyone caught speaking anything but the mogu tongue was considered to be a conspirator, a charge often punished with death.",
 		"All of the work of the earliest pandaren artists and writers has been lost forever. \n\n Ages later, other great pandaren scholars would be born... but the language they spoke was not truly their own.",
@@ -3184,18 +2663,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "60.7",  ["y"] = "68.7"},
 	},
 },
-["The Pandaren Problem"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Even in the ages before the old empire, there is evidence that the pandaren love of learning had created epic poems, agriculture, and medicine. \n\n The Thunder King saw great potential in the pandaren, and for this reason he did not trust them. \n\nAfter he conquered the land, the pandaren were forbidden to learn to read or write. Their leaders and philosophers were executed. All pandaren art and literature was burned. Anyone caught speaking anything but the mogu tongue was considered to be a conspirator, a charge often punished with death.",
-		"All of the work of the earliest pandaren artists and writers has been lost forever. \n\n Ages later, other great pandaren scholars would be born... but the language they spoke was not truly their own.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["The Praying Mantid"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218961},
 	["pages"] = {
 		"This Klaxxi'va statue dates back almost to the arrival of the Titans. Inscribed around the base of this statue is a prayer to \"the seven headed one\". The word \"klaxxi\" meant \"priest\" in the old tongue.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -3204,7 +2673,7 @@ _addon.data = {
 	},
 },
 ["The Royal Chamberlain"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218115},
 	["pages"] = {
 		"\"Behold the Royal Chamberlain. Long may he stand as the defender of his majesty's vast and sacred treasures. As long as this statue stands, none but the Emperor himself may lay claim to the royal treasury.\"",
 	},
@@ -3213,7 +2682,7 @@ _addon.data = {
 	},
 },
 ["The Sacred Mount"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218432},
 	["pages"] = {
 		"In the days before Lei Shen founded the old empire, there stood a high plateau shrouded in perpetual storm. It was called the \"Thundering Mountain,\" and was the ancestral seat of the one the mogu once called \"master.\"\n\nHistory does not record what Lei Shen found when he ascended the mountain and disappeared into its vaults. But when he returned, he wielded the power of a thousand storms and declared the mount to be his seat of power. Atop its summit he built a majestic and forbidden city.",
 		"It is said that after Lei Shen's death, the mountain listened to no other, and the storms battered it unceasingly. Future emperors moved the seat of imperial power to the Vale of Eternal Blossoms. \n\n Even in the time of the last pandaren emperor, Shaohao, the Thundering Mountain was still viewed from below with awe and terror. The Sundering that shattered the world nearly sunk the mountain into the sea, but perhaps the last emperor thought that it was worth saving. Or maybe he feared the mountain's secret so much that he wanted to hide it away. Like the rest of Pandaria, the mountaintop city - now an island - was hidden away in the mists.",
@@ -3222,18 +2691,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "47",  ["y"] = "59.9"},
 	},
 },
-["The Sacred Mount"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"In the days before Lei Shen founded the old empire, there stood a high plateau shrouded in perpetual storm. It was called the \"Thundering Mountain,\" and was the ancestral seat of the one the mogu once called \"master.\"\n\nHistory does not record what Lei Shen found when he ascended the mountain and disappeared into its vaults. But when he returned, he wielded the power of a thousand storms and declared the mount to be his seat of power. Atop its summit he built a majestic and forbidden city.",
-		"It is said that after Lei Shen's death, the mountain listened to no other, and the storms battered it unceasingly. Future emperors moved the seat of imperial power to the Vale of Eternal Blossoms. \n\n Even in the time of the last pandaren emperor, Shaohao, the Thundering Mountain was still viewed from below with awe and terror. The Sundering that shattered the world nearly sunk the mountain into the sea, but perhaps the last emperor thought that it was worth saving. Or maybe he feared the mountain's secret so much that he wanted to hide it away. Like the rest of Pandaria, the mountaintop city - now an island - was hidden away in the mists.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["The Saurok"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213327},
 	["pages"] = {
 		"Manufactured as a race of warrior slaves for the mogu empire, the saurok have always been a violent and brutish race. For many centuries after the Purge, they remained hidden deep in the wilds of Krasarang or lurked in the treacherous swamps beyond the Serpent's Spine.\n\nIn recent generations, the saurok have grown bold, assaulting towns and cities along the Pandaren coast, then disappearing to the sea with their plunder.\n\nIf you encounter a saurok in the wild, assume it is not alone and take immediate action to protect yourself.",
 	},
@@ -3241,17 +2700,8 @@ _addon.data = {
 		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "67.7",  ["y"] = "29.4"},
 	},
 },
-["The Saurok"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Manufactured as a race of warrior slaves for the mogu empire, the saurok have always been a violent and brutish race. For many centuries after the Purge, they remained hidden deep in the wilds of Krasarang or lurked in the treacherous swamps beyond the Serpent's Spine.\n\nIn recent generations, the saurok have grown bold, assaulting towns and cities along the Pandaren coast, then disappearing to the sea with their plunder.\n\nIf you encounter a saurok in the wild, assume it is not alone and take immediate action to protect yourself.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["The Saurok and the Jinyu"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214415},
 	["pages"] = {
 		"A jinyu once sat by the side of a river, contemplating this and that, when along came a saurok. The jinyu was nervous at first, and prepared to lunge in to the river to get away.\n\nBut the saurok raised his hands and said \"I wish only to cross the river, but I do not know how to swim. You are a swimmer. Perhaps I could ride on your back to the other side.\"\n\nAt this the jinyu replied: \"but you will stab me, or bite me, or try to eat my head.\"",
 		"The saurok laughed at this and claimed: \"and this would kill us both. For if I kill you I would drown.\"\n\nThe jinyu thought on this and then agreed. With some effort the heavy saurok climbed on the back of the jinyu and the two began to swim across the river.\n\nBut as they travelled deeper in to the water, the saurok, without thinking, slew the jinyu with a simple, practiced move of his claws.\n\nAs the jinyu sank to the bottom of the river, so did the heavy saurok.\n\nEven at the risk of his own life, the saurok could not escape his nature.",
@@ -3266,7 +2716,7 @@ _addon.data = {
 	},
 },
 ["The Scourge of Lordaeron"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175756},
 	["pages"] = {
 		"After preparing for many long months, Kel'Thuzad and his Cult of the Damned finally struck the first blow by releasing the plague of undeath upon Lordaeron. Uther and his fellow paladins investigated the infected regions in the hope of finding a way to stop the plague. Despite their efforts, the plague continued to spread and threatened to tear the Alliance apart.",
 		"As the ranks of the undead swept across Lordaeron, Terenas' only son, Prince Arthas, took up the fight against the Scourge. Arthas succeeded in killing Kel'Thuzad, but even so, the undead ranks swelled with every soldier that fell defending the land. Frustrated and stymied by the seemingly unstoppable enemy, Arthas took increasingly extreme steps to conquer them. Finally Arthas' comrades warned him that he was losing his hold on his humanity.",
@@ -3282,7 +2732,7 @@ _addon.data = {
 	},
 },
 ["The Sentinels and the Long Vigil"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175732},
 	["pages"] = {
 		"With the departure of their wayward cousins, the night elves turned their attention back to the safekeeping of their enchanted homeland. The druids, sensing that their time of hibernation was drawing near, prepared to sleep and leave their loved ones and families behind.",
 		"Tyrande, who had become the High Priestess of Elune, asked her love, Malfurion, not to leave her for Ysera's Emerald Dream. But Malfurion, honor bound to enter the changing Dreamways, bid the priestess farewell and swore that they would never be apart so long as they held true to their love.",
@@ -3297,7 +2747,7 @@ _addon.data = {
 	},
 },
 ["The Seven Kingdoms"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175737},
 	["pages"] = {
 		"Strom continued to act as the central hub of Arathor, but as with Dalaran, many new city-states arose across the continent of Lordaeron. Gilneas, Alterac, and Kul Tiras were the first city-states to arise, and although they each had their own customs and commercial workings, they all held to the unifying authority of Strom.",
 		"Under the vigilant watch of the Order of Tirisfal, Dalaran became the chief center of learning for magicians throughout the land. The Magocrats who ruled Dalaran founded the Kirin Tor, a specialized sect that was charged with cataloguing and researching every spell, artifact, and magic item known to mankind at the time.",
@@ -3313,7 +2763,7 @@ _addon.data = {
 	},
 },
 ["The Skull of Tyrannistrasz"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175679},
 	["pages"] = {
 		"The remains of the gargantuan red dragon were found in the Wetlands shortly after the Battle of Grim Batol. Tyrannistrasz was rumored to have been the elder consort of the Dragonqueen, Alexstrasza.",
 	},
@@ -3322,7 +2772,7 @@ _addon.data = {
 	},
 },
 ["The Thunder King"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213334},
 	["pages"] = {
 		"It has been written that when the great Lei Shen first looked upon the lands of the mantid, he did not feel fear, but inspiration.\n\nAs he began to unify his people under a single banner and subjugate the other races of Pandaria, he knew that the mantid would never succumb to his authority. They spoke his language: the language of strength. He commanded his slaves to construct the Serpent's Spine, a magnificent wall that spanned the length of his empire.\n\nIt would take many generations to build, but Lei Shen knew how to motivate his subjects. Fear. Fear of the mantid moved mountains, raised armies, secured his empire, and built his wall.",
 	},
@@ -3330,17 +2780,8 @@ _addon.data = {
 		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "40.1",  ["y"] = "77.4"},
 	},
 },
-["The Thunder King"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"It has been written that when the great Lei Shen first looked upon the lands of the mantid, he did not feel fear, but inspiration.\n\nAs he began to unify his people under a single banner and subjugate the other races of Pandaria, he knew that the mantid would never succumb to his authority. They spoke his language: the language of strength. He commanded his slaves to construct the Serpent's Spine, a magnificent wall that spanned the length of his empire.\n\nIt would take many generations to build, but Lei Shen knew how to motivate his subjects. Fear. Fear of the mantid moved mountains, raised armies, secured his empire, and built his wall.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["The Tiller and the Monk"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214410},
 	["pages"] = {
 		"A young farmhand was once unfortunate enough to share a room at the inn with an old monk, who talked incessantly from evening's light to morning glow about matters of philosophy and science. Bored of the one-sided conversation, the monk soon proposed a challenge of wits.\n\nThe farmhand was uninterested in testing his wits against the monk, no matter how much his roommate raised the stakes. Finally the monk offered the farmhand substantial odds: \"I will give you 50 gold coins for every question of yours I cannot answer, if you will give me 5 gold coins for every question YOU cannot answer.\"",
 		"At this, the farmhand agreed.\n\n\"Very well!\" exclaimed the monk. He eagerly tried to think of a question sufficient to challenge the farmhand, but simple enough to keep the game interesting. \"How would one measure the volume of an irregularly shaped object?\" he asked, his eyes gleaming.\n\nWithout even bothering to think about it, the farmhand handed the monk 5 gold coins.\n\nThe monk was disappointed, but prepared himself for the farmhand's challenge.",
@@ -3357,7 +2798,7 @@ _addon.data = {
 	},
 },
 ["The Twin Empires"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175854},
 	["pages"] = {
 		"About 16,000 years ago (long before the night elves foolishly called down the wrath of the Burning Legion), trolls lorded over much of Kalimdor (then a single continent). There were twin troll empires -- the Gurubashi Empire of the southeastern jungles -- and the Amani Empire of the middle forestlands.",
 		"There were smaller tribes that lived far to the north (in the region now known as Northrend). These tribes founded a small nation known as Gundrak, but never achieved the size or prosperity of the southern empires.",
@@ -3374,7 +2815,7 @@ _addon.data = {
 	},
 },
 ["The Wandering Widow"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213461},
 	["pages"] = {
 		"Many generations ago, Liu Lang the explorer returned to Pandaria every five years on the back of a giant sea turtle, collecting more and more explorers with each visit. Locals had taken to naming it \"The Wandering Isle,\" for the turtle had grown so large as to have a small town and temple built upon its back.\n\nOne year, local widow Mab Stormstout was grief-stricken over the loss of her husband to a tragic grape-press accident. She declared that Pandaria no longer had anything to offer her. With that, she and her young son Liao Stormstout climbed aboard the turtle, among the first brewmasters to do so.\n\nThe Wandering Isle has not returned to Pandaria in many generations. It is presumed that the turtle, Shen-zin Su, stopped returning to the mainland shortly after the death of his beloved friend Liu Lang.",
 	},
@@ -3382,17 +2823,8 @@ _addon.data = {
 		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "34.4",  ["y"] = "63.8"},
 	},
 },
-["The Wandering Widow"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Many generations ago, Liu Lang the explorer returned to Pandaria every five years on the back of a giant sea turtle, collecting more and more explorers with each visit. Locals had taken to naming it \"The Wandering Isle,\" for the turtle had grown so large as to have a small town and temple built upon its back.\n\nOne year, local widow Mab Stormstout was grief-stricken over the loss of her husband to a tragic grape-press accident. She declared that Pandaria no longer had anything to offer her. With that, she and her young son Liao Stormstout climbed aboard the turtle, among the first brewmasters to do so.\n\nThe Wandering Isle has not returned to Pandaria in many generations. It is presumed that the turtle, Shen-zin Su, stopped returning to the mainland shortly after the death of his beloved friend Liu Lang.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["The War of the Ancients"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175727},
 	["pages"] = {
 		"The Highborne's reckless use of magic sent ripples of energy spiraling out from the Well of Eternity and into the Great Dark Beyond. The streaming ripples of energy were felt by terrible alien minds. Sargeras - the Great Enemy of all life, the Destroyer of Worlds - felt the potent ripples and was drawn to their distant point of origin.",
 		"Spying the primordial world of Azeroth and sensing the limitless energies of the Well of Eternity, Sargeras was consumed by an insatiable hunger. The great dark god of the Nameless Void resolved to destroy the fledgling world and claim its energies as his own.",
@@ -3416,7 +2848,7 @@ _addon.data = {
 	},
 },
 ["The Warlord and the Monk"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214414},
 	["pages"] = {
 		"Once, a marauding mogu warlord rose in power to threaten the Jade Forest.\n\n\"I will rebuild the mogu empire!\" He proclaimed before the gates of the Temple of the Jade Serpent. \"And your kind will again be made to serve.\" \n\nFrom the battlements, a single monk's voice called down: \"How many mogu do you bring to challenge us?\" \n\n\"I have brought my army of one hundred mogu!\" the warlord proudly challenged. \n\n \"But behind these walls we have five hundred,\" spoke the monk with confidence. \n\n The mogu army shuffled and began to question their leader. Doubt filled their hearts and the army ran away.",
 		"The Warlord was furious! He left the temple and sought out his mogu allies. After long arguments, threats, promises, and praises, the mogu again raised their army.\n\nBefore the gates of the Temple of the Jade Serpent the mogu warlord called out: \"I bring six hundred mogu to challenge your pitiful five hundred defenders.\"\n\nFrom the battlements, a single monk voice called out: \"Did we mention that for each of our monks, we have one full grown, mogu-eating serpent? They are ever so hungry.\" \n\nAt this the mogu army broke apart again, doubting their resolve and running deep into the land.",
@@ -3435,7 +2867,7 @@ _addon.data = {
 	},
 },
 ["The White Stag and the Moon"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 177208},
 	["pages"] = {
 		"Into the brave hearts of her pure children, the Earthmother placed the love of the hunt. For the creatures of the first dawn were savage and fierce. They hid from the Earthmother, finding solace in the shadows and the wild places of the land. The Shu'halo hunted these beasts wherever they could be found and tamed them with the Earthmother's blessing.",
 		"One great spirit eluded them, however. Apa'ro (known as Malorne to the night elves), was a proud stag of snow white fur. His antlers scraped the roof of the heavens and his mighty hooves stamped out the deep places of the world. The Shu'halo hunted Apa'ro to the corners of the dawning world - and closed in to snare the proud stag.",
@@ -3447,7 +2879,7 @@ _addon.data = {
 	},
 },
 ["The World Tree and the Emerald Dream"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175730},
 	["pages"] = {
 		"For many years, the night elves worked tirelessly to rebuild what they could of their ancient homeland. Leaving their broken temples and roads to be overgrown, they constructed their new homes amidst the verdant trees and shadowed hills at Hyjal's base. In time, the dragons that had survived the great Sundering came forth from their secret abodes.",
 		"Alexstrasza the red, Ysera the green, and Nozdormu the bronze descended upon the druids' tranquil glades and surveyed the fruits of the night elves' labors. Malfurion, who had become an arch-druid of immense power, greeted the mighty dragons and told them about the creation of the new Well of Eternity.",
@@ -3464,7 +2896,7 @@ _addon.data = {
 	},
 },
 ["The Zandalar Agreement"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218851},
 	["pages"] = {
 		"Hear now the edict of the Thunder King!\n\nWith my resurrection the Zandalari have repaid an ancient debt. Our fates are ever intertwined. As their empire falls, so ours shall rise again. They have pledged ships, soldiers, and beasts to our cause. Once we have reclaimed our lands, they will be granted generous holdings along the northern coast.\n\nOur allies may be small, but do not dismiss their strength or skills with the arcane arts. They have experience fighting these \"Horde\" and \"Alliance\" invaders that will be of use to us.\n\nUnited, the trolls and mogu will achieve untold power over the lesser creatures. We will build the world as it once was, and was always destined to be!",
 	},
@@ -3473,7 +2905,7 @@ _addon.data = {
 	},
 },
 ["This is my Runeblade..."] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191663},
 	["pages"] = {
 		"This is my Runeblade: There Are Many Like It But This One Is Mine\nBy Lady Blaumeux\n\nGreetings, death knight. By now, Instructor Razuvious has likely begun teaching you the first lessons of what it means to be a death knight. Allow me to begin your instruction on what is perhaps the most guarded treasure in a death knight's possession; the runeblade.",
 		"Without your hand to guide it, your runeblade is but a hollow shell. Separate, you are both broken entities; weak and powerless. Should you ever find yourself without possession of a runeblade, know then that your only task should be the acquisition of another with all due haste.",
@@ -3489,16 +2921,7 @@ _addon.data = {
 	},
 },
 ["Thunder King Insignia"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The symbol of a crown and crossed lightning bolts emblazon this jade emblem. It was a badge once worn by soldiers of the first Mogu emperor, Lei Shen.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "83.1",  ["y"] = "30.4"},
-	},
-},
-["Thunder King Insignia"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214185},
 	["pages"] = {
 		"The symbol of a crown and crossed lightning bolts emblazon this jade emblem. It was a badge once worn by soldiers of the first Mogu emperor, Lei Shen.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -3507,16 +2930,16 @@ _addon.data = {
 	},
 },
 ["Tiffin Ellerian Wrynn Memorial"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 206500},
 	["pages"] = {
 		"Tiffin Ellerian Wrynn \nQueen of Stormwind \nFair and just, a wit as quick as her smile. \nMay the Light inherit your warmth, for our world grows cold in your absence.",
 	},
 	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "42.4",  ["y"] = "71.5"},
+		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "46.6",  ["y"] = "20.9"},
 	},
 },
 ["Together, We Are Strong"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213416},
 	["pages"] = {
 		"The strength of the mogu empire was not in numbers, but in fear. Using fear they controlled vast cities of slaves and maintained a chokehold over the old empire.\n\nWhile it was the pandaren who first rebelled against the mogu, they were not the only ones to do so. The hozen soon lent their ferocity, the jinyu their wisdom, and the grummles acted as messengers for the rebels while simultaneously stopping delivery of food and news to their mogu slavemasters. \n\nImperial armies starved, messages of vital importance were no longer delivered, and the entire foundation of the empire cracked. The mogu knew nothing of growing their own food or distributing resources to their troops. Entire armies sat in their barracks oblivious to the rebellion taking place until it was too late. \n\nIn essence, the very strength of the empire was turned against itself. The races of Pandaria were united in a single purpose, and discovered that they were strong.",
 	},
@@ -3524,27 +2947,17 @@ _addon.data = {
 		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "26.4",  ["y"] = "21.3"},
 	},
 },
-["Together, We Are Strong"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The strength of the mogu empire was not in numbers, but in fear. Using fear they controlled vast cities of slaves and maintained a chokehold over the old empire.\n\nWhile it was the pandaren who first rebelled against the mogu, they were not the only ones to do so. The hozen soon lent their ferocity, the jinyu their wisdom, and the grummles acted as messengers for the rebels while simultaneously stopping delivery of food and news to their mogu slavemasters. \n\nImperial armies starved, messages of vital importance were no longer delivered, and the entire foundation of the empire cracked. The mogu knew nothing of growing their own food or distributing resources to their troops. Entire armies sat in their barracks oblivious to the rebellion taking place until it was too late. \n\nIn essence, the very strength of the empire was turned against itself. The races of Pandaria were united in a single purpose, and discovered that they were strong.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["Tombstone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 207257},
 	["pages"] = {
 		"Here Lies &lt;name&gt;",
 	},
 	["locations"] = {
 		{["area"] = "Deathknell", ["areaId"] = 892,  ["id"] = "6454",  ["level"] = "0",  ["x"] = "40.3",  ["y"] = "78.2"},
-		{["area"] = "Tirisfal Glades", ["areaId"] = 20,  ["id"] = "85",  ["level"] = "0",  ["x"] = "29.4",  ["y"] = "70.8"},
 	},
 },
 ["Toothgnasher's Skeleton"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175683},
 	["pages"] = {
 		"This is a scale replica of Toothgnasher's skeleton. The legendary ram was a wonder of Khaz Modan and the subject of many tales of dwarven folklore. To this day, ecologists have been unable to account for the ram's freakish size or physical stamina.",
 	},
@@ -3553,7 +2966,7 @@ _addon.data = {
 	},
 },
 ["Touch of the Banshee"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191616},
 	["pages"] = {
 		"Skor'zad nervously peered around the corner of the column. As he had planned, he saw her floating there, alone in her chamber. Had he made the right decision, visiting the banshee's private chamber so late at night? The necromancers would surely put him back into the ground if he was discovered. What's worse, he didn't even know if his feelings were requited, and Madame Sidnari was known for her short temper.",
 		"What few doubts the zombie had were quickly tossed aside once he caught a full glimpse of her beauty. Her distinctly elven features - a reminder of her form in a past life - were now only enhanced by the oozing wounds and scabs that dotted her face. Purple, almost translucent skin was frugally covered by necrotic wrappings that hugged her waifish figure. Cold flesh neatly fused with the ephemeral as her legless torso sat upon a bluish sphere of energy, drifting a few inches above the cold granite floor. Skor'zad allowed himself to relax a bit and wiped the sweat and ichor that dripped alternatingly from his prominent brow.",
@@ -3567,7 +2980,7 @@ _addon.data = {
 	},
 },
 ["Trans-dimensional Ship Repair for Simpletons"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 181895},
 	["pages"] = {
 		"Trans-dimensional Ship Repair for Simpletons, by Jamus Kaesi\n\n&lt;The thin pages of this book are made from a shimmering material and are filled with highly technical diagrams of how to maintain and repair a trans-dimensional ship. This particular copy is open to a chapter entitled 'Vector Coil Breaches and How to Avoid Them.'&gt;",
 	},
@@ -3576,7 +2989,7 @@ _addon.data = {
 	},
 },
 ["Transcription: A Most Famous Bill of Sale"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214110},
 	["pages"] = {
 		"On this site many generations ago stood Shen-zin's Sundries, a supplier well-liked by the local farmers. One day the first Pandaren explorer, Liu Lang, walked into the store with a most unusual shopping list, records of which have survived to this day:\n\n   One lantern\n   Three liters lamp oil\n   Four packages of dehydrated fruit\n   Two sacks of dried peas\n   Four haunches of salt pork\n   Twelve liters of fresh water\n   One basket of hardtack\n   One compass\n   One spyglass\n\nLiu Lang announced his intention to explore the world. Shen-Zin, humoring his client, suggested that Liu Lang should also bring an umbrella. He generously offered one for free.\n\nBeaming, a grateful Liu Lang told Shen-Zin, \"I shall name my sea turtle after you!\" He happily carted away his supplies, whistling as he headed toward the beach, trailed by dozens of curious onlookers.",
 	},
@@ -3585,7 +2998,7 @@ _addon.data = {
 	},
 },
 ["Transcription: The Emperor's Burden - Part 1"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214119},
 	["pages"] = {
 		"Ten thousand years ago, the day Shaohao was crowned Emperor of Pandaria, he followed the tradition of all the emperors before him and sought the counsel of the great Waterspeaker of the jinyu. With a light heart the young emperor stood before the prophet and awaited to hear what he presumed would be good news.\n\nThe Waterspeaker listened to the song of the great river, but his eyes widened with terror.\n\nFrom the Book of Burdens, Chapter 1:\n\n\"And the Waterspeaker saw before him a kingdom of sorcerers surrounding a great well, and from this well they called forth a host of demons. Green fire rained from the skies, and all the world's continents shattered.\"\n\nTerrified by the vision presented before him, Emperor Shaohao realized that he was not to live a life of luxury. From the humble town of Dawn's Blossom, his journey to save Pandaria began.",
 	},
@@ -3594,7 +3007,7 @@ _addon.data = {
 	},
 },
 ["Transcription: The Emperor's Burden - Part 2"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214118},
 	["pages"] = {
 		"It was at this location ten thousand years ago that Shaohao, the last emperor of Pandaria, sought out the counsel of the Jade Serpent.\n\nFrom the Book of Burdens, Chapter 3:\n\n\"Forlorn and without hope, the Last Emperor ascended the sheer slope of Mount Neverest. Daggers of cold sliced through his silken robes, and the biting wind heaped scorn on his journey.\"\n\n\"Only at the very peak of the mountain did the Emperor find quiet and solace, and here he spoke with the Jade Serpent, the spirit of wisdom.\"\n\nThe Jade Serpent urged Shaohao to divest himself of his burdens, to purify his spirit, and to become one with the land.\n\nThe Emperor was perplexed by the Jade Serpent's counsel, but no further answers were to be found atop the frigid peak. Dejected, Emperor Shaohao trudged back down the mountain to consult his companion, the Monkey King, and determine his next move.",
 	},
@@ -3603,7 +3016,7 @@ _addon.data = {
 	},
 },
 ["Transcription: The Emperor's Burden - Part 3"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214117},
 	["pages"] = {
 		"It was at this very location ten thousand years ago that Shaohao, the last emperor of Pandaria, defeated the Sha of Doubt and imprisoned it within the land.\n\nFrom the Book of Burdens, Chapter 5:\n\n\"Shaohao meditated for three days and three nights, for the counsel of the Jade Serpent was unclear. How could one purge oneself of all doubt?\"\n\n\"Weary of waiting, Shaohao's travelling companion the Monkey King whittled a strange grimacing visage out of bamboo. He urged the Emperor to place the mask of doubt on his face...\"\n\nWhile mischief was the Monkey King's motivation, the mask worked - As Shaohao pulled the mask away, his doubts took on a physical form. For seven hours they fought, until the Sha of Doubt was buried.\n\nFrom that day onward, the last emperor had no doubt that he would save Pandaria from the Sundering. He became a creature of faith.",
 	},
@@ -3612,7 +3025,7 @@ _addon.data = {
 	},
 },
 ["Transcription: The Emperor's Burden - Part 4"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214116},
 	["pages"] = {
 		"It was at this very location ten thousand years ago that Shaohao, the Last Emperor of Pandaria, defeated the Sha of Despair and imprisoned it within the land.\n\nFrom the Book of Burdens, Chapter 9:\n\n\"After his success in the Jade Forest, Emperor Shaohao was filled with courage but fretted over an uncertain future. He sought the counsel of the Red Crane, the spirit of hope, deep within the Krasarang Wilds.\"\n\n\"The Red Crane told the Emperor that hope was within all of us, if we looked deep enough. With that, the Monkey King presented Emperor Shaohao with a mask of Despair, a forlorn visage of terrible sadness. The Emperor donned the mask and drew out his own hopelessness...\"\n\nThe battle against the Sha of Despair lasted four days and five nights in a pouring rain, but with the help of the Red Crane and the Monkey King, all of Shaohao's despair was extinguished.\n\nFrom that day forth the Emperor knew the future was bright. He became a creature of hope.",
 	},
@@ -3621,7 +3034,7 @@ _addon.data = {
 	},
 },
 ["Transcription: The Emperor's Burden - Part 5"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214478},
 	["pages"] = {
 		"It was at this very location ten thousand years ago that Shaohao, the Last Emperor of Pandaria, defeated the Sha of Fear and imprisoned it within the land.\n\nFrom the Book of Burdens, Chapter 14:\n\n\"Although purged of doubt and despair, Emperor Shaohao was still overcome by fear. He sought the counsel of the Black Ox, spirit of bravery and fortitude, who lived in the steppes beyond the wall.\"\n\n\"The Black Ox, Red Crane, Emperor, and Monkey King discussed the nature of fear at great length, until at last the Monkey King was inspired to act. A mask of fear was created, terrifying to behold. With trembling hands, the Emperor donned the horrific mask, so as to draw forth his own fears...\"\n\nThe battle against the Sha of Fear lasted a week and a day, during which time legend has it that the sun never rose. When the Sha was at last defeated and imprisoned in the earth, Emperor Shaohao was forever changed, for he no longer felt his own fears. He became a creature of courage.",
 	},
@@ -3630,7 +3043,7 @@ _addon.data = {
 	},
 },
 ["Transcription: The Emperor's Burden - Part 6"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214115},
 	["pages"] = {
 		"It was at this very location ten thousand years ago that Shaohao, the Last Emperor of Pandaria, defeated the Sha of Anger, the Sha of Hatred, and the Sha of Violence.\n\nFrom the Book of Burdens, Chapter 19:\n\n\"Confident and fearless, Emperor Shaohao thought nothing could stop him. But at the urging of the Red Crane, he sought out the counsel of the White Tiger, the spirit of strength.\"\n\n\"The White Tiger saw in Shaohao a dangerous recklessness that often accompanies those with no fear. He gathered together the greatest warriors of Pandaria to test the Emperor.\"\n\n\"Emperor Shaohao was given a ten-foot pole, and was challenged to strike one of the warriors. For hours they fought, but the warriors were too quick and too nimble for the untrained Emperor. He grew angry, he cursed, and finally, broke the staff over his knee.\"",
 		"Humbled, the Emperor asked the White Tiger what was wrong, and learned that his own passions made him weak. To save Pandaria, Shaohao would have to combat his own anger, hatred, and violence.\n\nThe Monkey King sprang into action, and carved three masks. The Emperor wore each mask in turn, and with the help of his friends, as well as all the greatest warriors of Pandaria, the Sha of Anger, the Sha of Hatred, and the Sha of Violence were defeated and imprisoned beneath the ground.\n\nThe Emperor was forever changed, and as he set forth on the final leg of his adventure, he was a creature of patience, love, and peace.",
@@ -3640,7 +3053,7 @@ _addon.data = {
 	},
 },
 ["Transcription: The Emperor's Burden - Part 7"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214114},
 	["pages"] = {
 		"The Shado-Pan order was founded ten thousand years ago under a charter from Shaohao, the Last Emperor of Pandaria.\n\nEmperor Shaohao knew that the dark energy of the Sha - the physical embodiment of negative emotions like anger, fear, hatred or doubt - represented a great threat to the pandaren if allowed to fester beneath the land. He tasked the greatest warriors of Pandaria with the duty to restrain and control the Sha.\n\nOn this very location, mere hours after Emperor Shaohao bested his own anger, hatred, and violence, the first of the Shado-Pan took their knee and spoke an oath to the Last Emperor. The same words have been spoken by every Shado-Pan initiate ever since, for the last ten thousand years.",
 	},
@@ -3649,7 +3062,7 @@ _addon.data = {
 	},
 },
 ["Transcription: The Emperor's Burden - Part 8"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214113},
 	["pages"] = {
 		"Ten thousand years ago, Emperor Shaohao, the Last Emperor of Pandaria, used the power of these sacred waters to spare Pandaria from the devastation of the Sundering that destroyed the rest of the world.\n\nFrom the Book of Burdens, Epilogue:\n\n\"At the dusk of the final day, the sky was bathed in green fire, and the very ground trembled in terror. But the Emperor was not afraid. His mind was clear of any doubt or despair. He feasted and he sang as the sky tore open.\"\n\n\"Seeing fear and doubt in his subject's eyes, Emperor Shaohao delivered a proclamation: That one should live each day to its fullest, and sleep each night with the peace of a mind unburdened.\"",
 		"Legend tells that he ascended to the Terrace of Endless Spring, there to separate Pandaria from the rest of the world. But try as he might, he was unable; the ground trembled, but did not move. Soon, he began to doubt, and the Sha of Doubt began to emerge from the east. He began to fear, and the Sha of Fear began ripping out of its shackles to the west. Desperately, he called out to the Jade Serpent for help.\n\nThe Jade Serpent circled the Vale, and spoke to the beleaguered Emperor. \"Pandaria is more than just the Pandaren Empire,\" she told Shaohao. \"Your enemies to the west are as much a part of this land as your empire behind the wall.\"",
@@ -3660,7 +3073,7 @@ _addon.data = {
 	},
 },
 ["Transcription: Waiting for the Turtle"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213462},
 	["pages"] = {
 		"On this site many generations ago, equipped with little more than an umbrella and pack full of food, the young pandaren explorer Liu Lang set forth to explore the world on the back of a sea turtle.\n\nAt the time it was widely believed that the rest of the world had been destroyed in the Sundering. Common wisdom also had it that Liu Lang was... \"damaged\" in the head.\n\nEveryone was proven wrong when Liu Lang returned five years later, spouting tales of mysterious lands beyond the sea. He would go on to return to Pandaria every five years for the rest of his days, his turtle growing bigger and bigger with each visit, until it was large enough to house an entire colony.\n\nPandaren afflicted with the wanderlust often stared out across the sea awaiting his return. To this day, when someone is caught gazing off to the horizon for any reason, they are often asked if they are \"Waiting for the turtle.\"",
 	},
@@ -3669,7 +3082,7 @@ _addon.data = {
 	},
 },
 ["Trapped in a Strange Land"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213420},
 	["pages"] = {
 		"The origins of the yaungol are unclear. The earliest historical record of the race dates back to the time of the mogu emperor Qiang the Merciless. His scholars describe nomadic tribes of \"intelligent bovine hunters\" who roamed \"expansive hunting grounds beyond the western reaches of the empire.\"\n\nIt is thought that several tribes of these hunters were trapped in pandaria when the continent was separated from the mainland during the Sundering.\n\nImprisoned in the dangerous Townlong Steppes, the hardy yaungol were forced to adapt, weaponizing local supplies of oil and developing their own aggressive culture.\n\nFew races can stand toe-to-toe against the mantid in open ground. For this reason alone, the yaungol survivors are to be feared and respected.",
 	},
@@ -3677,26 +3090,8 @@ _addon.data = {
 		{["area"] = "Townlong Steppes", ["areaId"] = 810,  ["id"] = "5842",  ["level"] = "0",  ["x"] = "84.1",  ["y"] = "72.8"},
 	},
 },
-["Trapped in a Strange Land"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The origins of the yaungol are unclear. The earliest historical record of the race dates back to the time of the mogu emperor Qiang the Merciless. His scholars describe nomadic tribes of \"intelligent bovine hunters\" who roamed \"expansive hunting grounds beyond the western reaches of the empire.\"\n\nIt is thought that several tribes of these hunters were trapped in pandaria when the continent was separated from the mainland during the Sundering.\n\nImprisoned in the dangerous Townlong Steppes, the hardy yaungol were forced to adapt, weaponizing local supplies of oil and developing their own aggressive culture.\n\nFew races can stand toe-to-toe against the mantid in open ground. For this reason alone, the yaungol survivors are to be feared and respected.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["Twin Steins of Brewfather Quan Tou Kuo"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"A matching set of drinking steins, made of ebony and jade. Brewfather Quan Tou Kuo, \"The Two-Fisted\", sought to mitigate the side effects of strong drink by creating the perfect duality of brews. When imbibed together in the proper ratios, the Pale Ale of Spirit and the Dark Stout of the Mind combine in the drinker's stomach to achieve a state of enlightenment and goodwill without the loss of judgment and self-control so often experienced by less refined brews. Sadly, the Brewfather's secrets have been lost to time, but these lovingly crafted steins serve as a permanent reminder of his expertise.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "83.2",  ["y"] = "31.9"},
-	},
-},
-["Twin Steins of Brewfather Quan Tou Kuo"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215917},
 	["pages"] = {
 		"A matching set of drinking steins, made of ebony and jade. Brewfather Quan Tou Kuo, \"The Two-Fisted\", sought to mitigate the side effects of strong drink by creating the perfect duality of brews. When imbibed together in the proper ratios, the Pale Ale of Spirit and the Dark Stout of the Mind combine in the drinker's stomach to achieve a state of enlightenment and goodwill without the loss of judgment and self-control so often experienced by less refined brews. Sadly, the Brewfather's secrets have been lost to time, but these lovingly crafted steins serve as a permanent reminder of his expertise.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -3705,7 +3100,7 @@ _addon.data = {
 	},
 },
 ["Uldaman Relics"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175687},
 	["pages"] = {
 		"These ancient pieces of earthenware were recovered from the Uldaman excavation. Though they hold little in the way of suggestive runes or hieroglyphs, they do provide a telling look at the craftsmanship and day to day accessories of the ancient dwarven race.",
 	},
@@ -3714,7 +3109,7 @@ _addon.data = {
 	},
 },
 ["Uldaman Reliefs"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175689},
 	["pages"] = {
 		"These etched relief runners were perhaps the most significant find within the first chambers of Uldaman. The etchings clearly suggest a tie between the golem-like earthen and the dwarven race. Should further evidence arise, the theories of our supposed creation by the mythic titans could prove to be true.",
 	},
@@ -3723,7 +3118,7 @@ _addon.data = {
 	},
 },
 ["Unity at a Price"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 218433},
 	["pages"] = {
 		"Armed with the power of storms, the Thunder King gathered together his followers and began the systematic conquest of the other mogu warlords. Most did not submit to his authority: the lucky ones were vaporized by lightning or trampled by his growing legions. The others were dragged off in chains until he deemed them \"broken.\"",
 		"But many mogu saw in Lei Shen the unity of purpose that had been lacking in the generations since their masters had fallen silent. They flocked around the Thunder King's banner. They eagerly did his bidding as he enslaved the other races, believing - as Lei Shen did - that the \"lesser\" races should serve the mogu, just as the mogu had once served their masters.",
@@ -3733,19 +3128,8 @@ _addon.data = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "34.9",  ["y"] = "65.4"},
 	},
 },
-["Unity at a Price"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Armed with the power of storms, the Thunder King gathered together his followers and began the systematic conquest of the other mogu warlords. Most did not submit to his authority: the lucky ones were vaporized by lightning or trampled by his growing legions. The others were dragged off in chains until he deemed them \"broken.\"",
-		"But many mogu saw in Lei Shen the unity of purpose that had been lacking in the generations since their masters had fallen silent. They flocked around the Thunder King's banner. They eagerly did his bidding as he enslaved the other races, believing - as Lei Shen did - that the \"lesser\" races should serve the mogu, just as the mogu had once served their masters.",
-		"Lei Shen unified the language, established a single currency, standardized weights and measures, and founded an empire. \n\nFor the first time, the races of the land were united. The Thunder King considered their suffering a small price to pay... a mere weakness of the flesh.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.4"},
-	},
-},
 ["Unknown Crusader's Diary"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 191653},
 	["pages"] = {
 		"Entry 1:\n\nThe High General's fervor is ablaze in the peasantry! The Crusade's fleet grows mightier with each day and our ranks swell with able men. At our bow, a mighty sword sits poised to strike at Northrend and free us from this endless battle. Our stern is unsteady, though. With the Scarlet Bastion in flames, I cannot help smelling death on the wind at our backs.",
 		"Entry 15:\n\nAbbendis has lost her senses. She seeks to form a schism within the Crusade and attack the Lich King's very citadel with but a fraction of our most faithful! Does she mean to leave New Avalon and Tyr's Hand to burn as she sails over the edge of the world with our last defenders?",
@@ -3757,7 +3141,7 @@ _addon.data = {
 	},
 },
 ["Unmarked Journal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 229304},
 	["pages"] = {
 		"An arakkoa sun priestess has come to our home, seeking dominion over our lands. She brings dust and wind and death, scorching our fields with sunfire.",
 		"&lt;There are a few pages missing.&gt;",
@@ -3772,16 +3156,7 @@ _addon.data = {
 	},
 },
 ["Uther the Lightbringer"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Here lies Uther the Lightbringer\nFirst Paladin - Founder of the Order of the Silver Hand\n\nUther lived and died to defend the kingdom of Lordaeron. Though he was betrayed by his most beloved student, we believe that his spirit lives on. He continues to watch over us, even as the shadows close in around our ruined land. His light is the light of all humanity - and so long as we honor his example, it shall never fade. \n									- Anonymous",
-	},
-	["locations"] = {
-		{["area"] = "Western Plaguelands", ["areaId"] = 22,  ["id"] = "28",  ["level"] = "0",  ["x"] = "52.1",  ["y"] = "83.2"},
-	},
-},
-["Uther the Lightbringer"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 202003},
 	["pages"] = {
 		"Uther the Lightbringer\n\nA righteous paladin, an honorable man, and a dear friend.\n\nYou will never be forgotten, brother.",
 	},
@@ -3789,8 +3164,17 @@ _addon.data = {
 		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "55.4",  ["y"] = "55.4"},
 	},
 },
+["Uther the Lightbringer"] = {
+	["info"] = {["type"] = "object", ["id"] = 2082},
+	["pages"] = {
+		"Here lies Uther the Lightbringer\nFirst Paladin - Founder of the Order of the Silver Hand\n\nUther lived and died to defend the kingdom of Lordaeron. Though he was betrayed by his most beloved student, we believe that his spirit lives on. He continues to watch over us, even as the shadows close in around our ruined land. His light is the light of all humanity - and so long as we honor his example, it shall never fade. \n									- Anonymous",
+	},
+	["locations"] = {
+		{["area"] = "Western Plaguelands", ["areaId"] = 22,  ["id"] = "28",  ["level"] = "0",  ["x"] = "52.1",  ["y"] = "83.2"},
+	},
+},
 ["Vaeldrin's Journal"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210610},
 	["pages"] = {
 		"Entry 1\n\nFor the first time in the last decade I feel like I have a proper lead. There was an ancient scroll written in a strange language that talked about the Pools of Youth. It would appear to pre-date Azshara's rule.\n\nThe odd part is the language is neither elves nor trolls. This fascinating bit of news would imply that there were societies older than that of our own on Azeroth.\n\nFrom what I could decipher, the Pools of Youth were actually the property of an ancient dynasty. What race comprised this dynasty still remains a mystery.\n\nThere is something sinister about the writings of this \"Dojani dynasty\" however. There are also references to an imperial seat and a valley of golden blossoms. \n\nThe choice bit of news is that they included coordinates to their kingdom's \"heart of power.\" I should be able to have one of our new arcane mages provide us a portal if I can convince Tyrande to approve the mission.",
 		"Entry 2\n\nTyrande is a stubborn unruly woman! Far be it for me to speak against my high priestess but she is a buffoon, unwilling to take even the most minor of risks.\n\nI showed her my research! I showed her how to find the Pools of Youth and the legacy of this ancient empire. What does she do? Deems the mission \"too risky.\" \n\nHow is the mortality of our people to be dismissed as \"too risky\"? Oh she insists that we made the right choice setting aside our immortality when we had to save Azeroth. But I believe that is a fixable issue. \n\nThere is more than one way to live forever!",
@@ -3803,7 +3187,7 @@ _addon.data = {
 	},
 },
 ["Valea Twinblades"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210493},
 	["pages"] = {
 		"Valea Twinblades \nWarrior of the Scarlet Crusade\nCitizen of Alterac \nLast seen deep in the Eastern Plaguelands",
 	},
@@ -3812,7 +3196,7 @@ _addon.data = {
 	},
 },
 ["Valley of the Emperors"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213331},
 	["pages"] = {
 		"The mogu view their dead as a collection of parts. Souls could be bound to stone for later use. Flesh and blood could be reforged to extend the lives of those loyal to the emperor. To be buried intact was a symbol of great power and respect.\n\nHere lies the Valley of Emperors, the resting grounds of a hundred generations of warlords, kings, and emperors who once ruled this land.\n\nGrave-rob at your own risk!",
 	},
@@ -3820,17 +3204,8 @@ _addon.data = {
 		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "50.6",  ["y"] = "48.1"},
 	},
 },
-["Valley of the Emperors"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"The mogu view their dead as a collection of parts. Souls could be bound to stone for later use. Flesh and blood could be reforged to extend the lives of those loyal to the emperor. To be buried intact was a symbol of great power and respect.\n\nHere lies the Valley of Emperors, the resting grounds of a hundred generations of warlords, kings, and emperors who once ruled this land.\n\nGrave-rob at your own risk!",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["Victory in Kun-Lai"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213511},
 	["pages"] = {
 		"Having failed to create an obedient army with the saurok, the mogu devised other ways to create the \"perfect\" fighting force. Using dark magics of unknown origin, they captured living souls and imprisoned them within constructs of stone.\n\nOver the course of several dynasties, a vast army of these living statues was constructed and housed within an enormous vault carved into the mountains of Kun-Lai.\n\nKnowing that this secret weapon would be their downfall, pandaren monks attempted to seize control of the vaults immediately after the revolution began. They struck quickly, ambushing the mogu by rappelling down the mountain from the Peak of Serenity. The battle for the vaults lasted four days before a snowstorm forced the mogu from the mountain.\n\nBy depriving the mogu of their secret weapon, the rebellious slaves forced the mogu to fight on more balanced terms.",
 	},
@@ -3838,35 +3213,17 @@ _addon.data = {
 		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "63.1",  ["y"] = "40.8"},
 	},
 },
-["Victory in Kun-Lai"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Having failed to create an obedient army with the saurok, the mogu devised other ways to create the \"perfect\" fighting force. Using dark magics of unknown origin, they captured living souls and imprisoned them within constructs of stone.\n\nOver the course of several dynasties, a vast army of these living statues was constructed and housed within an enormous vault carved into the mountains of Kun-Lai.\n\nKnowing that this secret weapon would be their downfall, pandaren monks attempted to seize control of the vaults immediately after the revolution began. They struck quickly, ambushing the mogu by rappelling down the mountain from the Peak of Serenity. The battle for the vaults lasted four days before a snowstorm forced the mogu from the mountain.\n\nBy depriving the mogu of their secret weapon, the rebellious slaves forced the mogu to fight on more balanced terms.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
 ["Waiting for the Turtle"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215765},
 	["pages"] = {
 		"On this site many generations ago, equipped with little more than an umbrella and pack full of food, the young pandaren explorer Liu Lang set forth to explore the world on the back of a sea turtle.\n\nAt the time it was widely believed that the rest of the world had been destroyed in the Sundering. Common wisdom also had it that Liu Lang was... \"damaged\" in the head.\n\nEveryone was proven wrong when Liu Lang returned five years later, spouting tales of mysterious lands beyond the sea. He would go on to return to Pandaria every five years for the rest of his days, his turtle growing bigger and bigger with each visit, until it was large enough to house an entire colony.\n\nPandaren afflicted with the wanderlust often stared out across the sea awaiting his return. To this day, when someone is caught gazing off to the horizon for any reason, they are often asked if they are \"Waiting for the turtle.\"",
 	},
 	["locations"] = {
-		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "59.2",  ["y"] = "75"},
+		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "72.2",  ["y"] = "31.1"},
 	},
 },
 ["Walking Cane of Brewfather Ren Yun"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"A long cane tipped with a head of carved whalebone, once used by the enigmatic Brewfather, Ren Yun. Blind since birth, Ren Yun's other senses were heightened. As a result, he found the brews of his time to be harsh or bitter. Years of experimentation allowed him to perfect four perfect brews that appealed to each of his other senses. And yet, the \"one brew\" that would appeal to all four senses at the same time eluded him. It was only at the end of his long life that he perfected the one master recipe, \"The Four Senses Brew\", that was the most magnificent discovery of his generation. Sadly the recipe was lost to time, because Ren Yun's handwriting was pretty much illegible.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "83.6",  ["y"] = "31.5"},
-	},
-},
-["Walking Cane of Brewfather Ren Yun"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214196},
 	["pages"] = {
 		"A long cane tipped with a head of carved whalebone, once used by the enigmatic Brewfather, Ren Yun. Blind since birth, Ren Yun's other senses were heightened. As a result, he found the brews of his time to be harsh or bitter. Years of experimentation allowed him to perfect four perfect brews that appealed to each of his other senses. And yet, the \"one brew\" that would appeal to all four senses at the same time eluded him. It was only at the end of his long life that he perfected the one master recipe, \"The Four Senses Brew\", that was the most magnificent discovery of his generation. Sadly the recipe was lost to time, because Ren Yun's handwriting was pretty much illegible.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -3875,7 +3232,7 @@ _addon.data = {
 	},
 },
 ["Wanderer's Festival Announcement"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 223184},
 	["pages"] = {
 		"- WANDERER'S FESTIVAL -\n\nAll are welcome to the Wanderer's Festival, a salute to the dreamers among us! Join us here on Turtle Beach Sunday nights just after sunset. For more information, look for Wandering Heralds the day of the event.",
 	},
@@ -3884,7 +3241,7 @@ _addon.data = {
 	},
 },
 ["Wanted: Hemet Nesingwary, Enemy of Nature"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 187915},
 	["pages"] = {
 		"<HTML><BODY><H1 align=\"center\">WANTED: HEMET NESINGWARY</H1><H1 align=\"center\">FOR CRIMES AGAINST NATURE!</H1><BR/><IMG src=\"Interface/Pictures/obj_nesingwary_256\" align=\"center\" /></BODY></HTML>",
 		"<HTML><BODY><H1 align=\"center\">Artist's rendition of \"The Extinctionator\" in his natural habitat: the burning hellfire of the underworld.</H1><BR/><H1 align=\"left\">Last Wildlife Holocaust Location: Nagrand, Outland</H1><BR/><H1 align=\"left\">Also Known As: The Great Game Hunter, The Butcher of Badlands, The Stranglethorn Ripper, Old Man Death, Hemet, Nessie, Ol' Dirty, Ol' Dirty D, Father of the Bounty, The Extinctionator</H1></BODY></HTML>",
@@ -3894,7 +3251,7 @@ _addon.data = {
 	},
 },
 ["War of the Spider"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175753},
 	["pages"] = {
 		"While Thrall was liberating his brethren in Lordaeron, Ner'zhul continued to build up his power base in Northrend. A great citadel was erected above the Icecrown Glacier and manned by the growing legions of the dead. Yet as the Lich King extended his influence over the land, one shadowy empire stood against his power.",
 		"The ancient subterranean kingdom of Azjol-Nerub, which had been founded by a race of sinister humanoid spiders, sent their elite warrior-guard to attack Icecrown and end the Lich King's mad bid for dominance. Much to his frustration, Ner'zhul found that the evil nerubians were immune not only to the plague, but to his telepathic domination as well.",
@@ -3908,7 +3265,7 @@ _addon.data = {
 	},
 },
 ["War of the Three Hammers"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175739},
 	["pages"] = {
 		"The dwarves of Ironforge Mountain lived in peace for many long centuries. However, their society grew too large within the confines of their mountain cities. Though the mighty High King, Modimus Anvilmar, ruled over all dwarves with justice and wisdom, three powerful factions had arisen amongst the dwarven society.",
 		"The Bronzebeard clan, ruled by Thane Madoran Bronzebeard, held close ties to the High King and stood as the traditional defenders of Ironforge Mountain. The Wildhammer clan, ruled by Thane Khardros Wildhammer, inhabited the foothills and crags around the base of the mountain and sought to gain more control within the city.",
@@ -3939,16 +3296,7 @@ _addon.data = {
 	},
 },
 ["Warlord's Branding Iron"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"This branding iron emblazoned with the symbol of a minor Mogu warlord was used not on cattle, but on enslaved humanoids.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.7",  ["y"] = "31.7"},
-	},
-},
-["Warlord's Branding Iron"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214188},
 	["pages"] = {
 		"This branding iron emblazoned with the symbol of a minor Mogu warlord was used not on cattle, but on enslaved humanoids.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -3957,7 +3305,7 @@ _addon.data = {
 	},
 },
 ["WARNING"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 236423},
 	["pages"] = {
 		"This area has been flagged as too dangerous for casual explorers. \n\nProceed with extreme caution. \n\n- H.J.",
 	},
@@ -3966,16 +3314,7 @@ _addon.data = {
 	},
 },
 ["Watersmithing"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Unlike the fire and heat forges of the pandaren and mogu, the jinyu have mastered the art of water forging. They shape stone and metal by using the pressures and currents of water.\n\nOriginally they would scavange for polished stone and materials in the river. They developed an eye for the places that would provide the best quality baubles and rocks.\n\nOver the ages they have learned to manipulate water through their magics to craft exceptional edifices of rock and stone that defy rivalry. Their weapons and armor are as hard as any forged steel, and their walls often appear to be constructed without seams.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
-["Watersmithing"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215779},
 	["pages"] = {
 		"Unlike the fire and heat forges of the pandaren and mogu, the jinyu have mastered the art of water forging. They shape stone and metal by using the pressures and currents of water.\n\nOriginally they would scavange for polished stone and materials in the river. They developed an eye for the places that would provide the best quality baubles and rocks.\n\nOver the ages they have learned to manipulate water through their magics to craft exceptional edifices of rock and stone that defy rivalry. Their weapons and armor are as hard as any forged steel, and their walls often appear to be constructed without seams.",
 	},
@@ -3984,16 +3323,7 @@ _addon.data = {
 	},
 },
 ["Waterspeakers"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"In the days before the Sundering, legend has it that all rivers flowed to Pandaria. Few were more aware of this than the clever jinyu. Over time the wisest of their people learned to commune with the waters of the river, and listen for the future and news it would bring. These elders were respected by most races and earned their title of \"Waterspeakers\".",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "28.7"},
-	},
-},
-["Waterspeakers"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215780},
 	["pages"] = {
 		"In the days before the Sundering, legend has it that all rivers flowed to Pandaria. Few were more aware of this than the clever jinyu. Over time the wisest of their people learned to commune with the waters of the river, and listen for the future and news it would bring. These elders were respected by most races and earned their title of \"Waterspeakers\".",
 	},
@@ -4002,7 +3332,7 @@ _addon.data = {
 	},
 },
 ["We Are Yaungol"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214426},
 	["pages"] = {
 		"Before we are a tribe, before we are rivals, before we are a father or a mother or a child, we are first yaungol.\n\nA yaungol is strength!\n\nA yaungol is courage!\n\nAnd a yaungol is resilient!\n\nWe stand in the shadow of the greatest enemies of Azeroth, and we thrive. We thrive together.\n\nLet no yaungol declare war on any other yaungol. Let no tribe war with any other tribe. In this we must remain brave.\n\nLet those who would fight each other fight alone. Let he who would rule, place a banner, and defend it alone. So we remain strong. So we remain united. So we remain Yaungol!",
 	},
@@ -4012,7 +3342,7 @@ _addon.data = {
 	},
 },
 ["We Were Warriors"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214423},
 	["pages"] = {
 		"Remember the fields of flame.\n\nRemember the strength we wielded. \n\nRemember the champions we served. \n\nRemember the kingdoms we burned. \n\n\"Yaungol, yaungol, yaungol,\" they cried,\n\nUntil they were out of breath.\n\n\"Yaungol, yaungol, yaungol,\" they cried,\n\nIn fear and flame and death.",
 	},
@@ -4022,7 +3352,7 @@ _addon.data = {
 	},
 },
 ["Worn Monument Ledger"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 214190},
 	["pages"] = {
 		"Even with powerful magic at their disposal, the Mogu often preferred to use slaves to build their massive monuments. This ledger documents the cost, in slaves, during the construction of one such monument.\n\nThis specimen was donated by the esteemed &lt;class&gt;, &lt;name&gt;.",
 	},
@@ -4031,7 +3361,7 @@ _addon.data = {
 	},
 },
 ["Wrath of Soulflayer"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 175856},
 	["pages"] = {
 		"The long centuries following the Great Sundering of the world were difficult ones for the troll race. Famine and terror were commonplace within the broken kingdoms. The Gurubashi trolls, driven to desperate ends, sought aid from ancient, mystical forces. Though both of the troll kingdoms shared a central belief in a great pantheon of primitive gods, the Gurubashi fell under the sway of the darkest one.",
 		"Hakkar the Soulflayer, a vile, bloodthirsty spirit, heard the trolls' call and decided to aid them. Hakkar gave his secrets of blood to the Gurubashi and helped them extend their civilization across most of Stranglethorn Vale and certain islands of the South Seas. Though he brought them great power, Hakkar wanted more and more for his efforts.",
@@ -4047,7 +3377,7 @@ _addon.data = {
 	},
 },
 ["Xin Wo Yin the Broken Hearted"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213512},
 	["pages"] = {
 		"Father of the Heartswell Brew.\n\nThe Heartswell Brew infuses the drinker's entire being with a profound sense of warmth and wellbeing. It is said that Xin Wo Yin so loved the product of his art that he wept tears of heavy sorrow over every keg that left his brewery.",
 	},
@@ -4056,7 +3386,7 @@ _addon.data = {
 	},
 },
 ["Yana Bloodspear"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 210494},
 	["pages"] = {
 		"Yana Bloodspear\nThe Second Chief Assassin of the Scarlet Crusade \nCitizen of Dalaran \nLost in the Tirisfal Glades",
 	},
@@ -4065,16 +3395,7 @@ _addon.data = {
 	},
 },
 ["Yaungoil"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Burning oil is the cornerstone of yaungol warfare. In the days of their greatest warriors, this weapon was more deadly than magic. This burning substance would scar foes, scorch lands, burn away the cover provided by trees, and could rout even a terrifying mantid assault.\n\nIt is also an old tactic of the yaungol to light more campfires each night than people they have. In this way enemy spying in the darkness would assume larger numbers of yaungol existed, while their true positions and numbers remained masked.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
-["Yaungoil"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 215798},
 	["pages"] = {
 		"Burning oil is the cornerstone of yaungol warfare. In the days of their greatest warriors, this weapon was more deadly than magic. This burning substance would scar foes, scorch lands, burn away the cover provided by trees, and could rout even a terrifying mantid assault.\n\nIt is also an old tactic of the yaungol to light more campfires each night than people they have. In this way enemy spying in the darkness would assume larger numbers of yaungol existed, while their true positions and numbers remained masked.",
 	},
@@ -4083,7 +3404,7 @@ _addon.data = {
 	},
 },
 ["Yaungol Tactics"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 213417},
 	["pages"] = {
 		"Forced to survive in the harsh terrain of the Townlong Steppes since the time of the last pandaren emperor, the yaungol have adapted their tactics accordingly.\n\nThe race is constantly on the move, establishing short-lived \"Fire Camps\" in areas of abundant natural resources (specifically oil and game) before moving on. Where to set up camp, how long to stay, and when to move out remains the sole discretion of the chieftain.\n\nIn combat, the yaungol prefer to hit hard and fast, making heavy use of cavalry to flank and harass the enemy while hard-hitting infantry assaults the weakest parts of the enemy line. Fire sorcery and flaming siege weapons back this initial assault.\n\nYaungol are known to retreat as quickly as they charge, always reading the enemy and only fully committing their forces to sure victories.",
 	},
@@ -4091,17 +3412,8 @@ _addon.data = {
 		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "50.4",  ["y"] = "79.2"},
 	},
 },
-["Yaungol Tactics"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
-	["pages"] = {
-		"Forced to survive in the harsh terrain of the Townlong Steppes since the time of the last pandaren emperor, the yaungol have adapted their tactics accordingly.\n\nThe race is constantly on the move, establishing short-lived \"Fire Camps\" in areas of abundant natural resources (specifically oil and game) before moving on. Where to set up camp, how long to stay, and when to move out remains the sole discretion of the chieftain.\n\nIn combat, the yaungol prefer to hit hard and fast, making heavy use of cavalry to flank and harass the enemy while hard-hitting infantry assaults the weakest parts of the enemy line. Fire sorcery and flaming siege weapons back this initial assault.\n\nYaungol are known to retreat as quickly as they charge, always reading the enemy and only fully committing their forces to sure victories.",
-	},
-	["locations"] = {
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "82.4",  ["y"] = "29"},
-	},
-},
 ["Yuriv's Tombstone"] = {
-	["visual"] = {["type"] = "Book", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "object", ["id"] = 24777},
 	["pages"] = {
 		"The word BETRAYER is crudely scratched over the finely etched epitaph that reads:\n\nYuriv lies here.\nFather, Husband, Paladin.\nLet his children bear witness to the fact that his dedication to the Light was unquestionable.\nHe would never ask anything of them that he himself would not do.",
 	},
@@ -4115,7 +3427,7 @@ _addon.data = {
 ------------------------------------------------------------------------------------------
 
 ["A Steamy Romance Novel: Savage Passions"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 108649},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance02\" /></BODY></HTML>",
 		"A trail of dust followed the once-white stallion as he galloped through the garrison gates, stopping abruptly at the stables. Raven, the stable master, rushed to the weary mount and rider.\n\n\"Lord Marcus, let me help.\" Raven's strong, tanned arm took the rider's hand in his own, pulling him off in a quick, smooth motion. He did not immediately let go, staring in disbelief at the paladin's heavily stained armor.\n\nSeeing concern on the man's face, Marcus clasped his shoulder and smiled warmly. \"Fear not old friend, only a little of it is my own.\"\n\nRaven hugged him fiercely. \"That is good to hear!\"",
@@ -4130,7 +3442,7 @@ _addon.data = {
 	},
 },
 ["A Steamy Romance Novel"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 29571},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance05\" /></BODY></HTML>",
 		"As Nahni glided up, the grizzled warrior gave her a hard stare. \"I suppose you're here to collect the reward for killing those murlocs?\"\n\nHer eyes wandered down to the glowing broadsword at his side. \"That depends on what the reward is, Marcus.\" She twirled her hair playfully, pretending not to notice how he shifted uncomfortably in her presence. \"I may not want it.\"",
@@ -4139,11 +3451,11 @@ _addon.data = {
 	["locations"] = {
 		{["sourceType"] = "drop", ["area"] = "The Jade Forest", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["sourceType"] = "pickpocket", ["area"] = "World and instances",  ["source"] = "Level 61 to 70 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 61 to 70 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Steamy Romance Novel: Hot and Misty"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 87530},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance04\"/></BODY></HTML>",
 		"Marcus galloped on his warhorse towards the remote building, bringing an almost imperceptible flush to one of the curvier guards as he passed.  He dismounted and handed his reins to the ever-present stablemaster, placing one hand on her shoulder before speaking.  \"Kama, have you considered our last conversation?\" Marcus asked, furrowing his eyebrows in mock seriousness.\n\nKama rolled her eyes, her Pandaren markings exaggerating the movement.  \"I doubt my life-mate would think much of it.\"\n\nMarcus let out a bellowing laugh, looking over his shoulder as he walked away, \"I'd still like to meet her one day!\"",
@@ -4155,11 +3467,11 @@ _addon.data = {
 	["locations"] = {
 		{["sourceType"] = "drop", ["area"] = "The Jade Forest", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["sourceType"] = "pickpocket", ["area"] = "World and instances",  ["source"] = "Level 90 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 90 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Steamy Romance Novel: Northern Exposure"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 46023},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance07\" /></BODY></HTML>",
 		"The tiny gnome peered over the railing into the secluded Dalaran courtyard.\n\n\"The view from the balcony is amazing. You have to come see!\"\n\nArmor legplates creaked as Marcus walked over, taking in a deep breath as he absently scratched his scruffy chin.\n\n\"The Hero's Welcome is no slouch. And there's something in the room that might interest you.\"\n\nTavi bounded into the room, pausing only a moment before jumping onto the massive bed. She turned to gaze at Marcus with her huge saucer-like eyes, narrowing them playfully and replacing her glowing smile with a diabolical grin.",
@@ -4177,7 +3489,7 @@ _addon.data = {
 	},
 },
 ["A Steamy Romance Novel: Forbidden Love"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 37467},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance06\" /></BODY></HTML>",
 		"Ah'tusa crept silently through the massive underground tunnel, nervously looking over her shoulder in anticipation of the fast moving tram. \"Where is he...\" she muttered angrily, stopping suddenly as something moved behind her. Her eyes narrowed dangerously as her dagger slid from its sheath.\n\nA husky voice echoed in the hollow chamber, \"I thought rogues liked to be behind their target.\" She spun quickly, driving her blade into a shield of impenetrable force. \"And I thought paladins were supposed to be chaste.\" she replied with a confident smirk.",
@@ -4186,11 +3498,11 @@ _addon.data = {
 	["locations"] = {
 		{["sourceType"] = "drop", ["area"] = "The Jade Forest", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["sourceType"] = "pickpocket", ["area"] = "World and instances",  ["source"] = "Level 71 to 80 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 71 to 80 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Steamy Romance Novel: Big Brass Bombs"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 63271},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance03\" /></BODY></HTML>",
 		"The tough little goblin walked purposefully into the engineering shop, raising her eyebrows at a few items as she approached the shopkeeper.\n \n\"How's it going, Jack?\" Her voice seductively brushed his pointy ears with the rough texture of someone who inhaled too much motorcycle exhaust. \n\nThe goblin called Jack looked up and grinned. \"Revi! It's going much better since you just arrived.\" Jack set his arclight spanner on the table. \"What can I do ya for?\"",
@@ -4202,11 +3514,11 @@ _addon.data = {
 	["locations"] = {
 		{["sourceType"] = "drop", ["area"] = "The Jade Forest", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 		{["sourceType"] = "container", ["area"] = "",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["sourceType"] = "pickpocket", ["area"] = "World and instances",  ["source"] = "Level 81 to 85 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 81 to 85 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Steamy Romance Novel: Blue Moon"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 54291},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance01\" /></BODY></HTML>",
 		"Tail swooshing and hips swaying, the curvy figure walked purposefully across the lake toward the man resting by the shore; rising quickly as she approached, he appeared visibly happy to be in her presence. Blue arms flowed over his shoulders as a smooth tail coiled seductively around his waist. \"Why must I travel so far to be meeting man like you?\" Her voice carried a strong, alluring accent.\n\nGrinning wildly, he gently pushed her away, openly staring as the light caught her features.\n\n\"Up here!\", she exclaimed in playful anger.\n\nWith a helpless shrug, he reached into his pack and pulled out a small pouch. \"My wonderful Soola, I've brought you something.\" Confidence wrapped his words like a steel blanket.",
@@ -4225,7 +3537,7 @@ _addon.data = {
 ------------------------------------------------------------------------------------------
 
 ["Libram of Voracity"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 11737},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4234,11 +3546,11 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Constitution"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 11733},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4247,11 +3559,11 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_nightdragon_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Rumination"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 11732},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4259,11 +3571,11 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Resilience"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 11736},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4271,11 +3583,11 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Rapidity"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 18332},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft greater arcanum.\n\nMay our enemies never gain access to these libram.\n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"&lt;You feel a searing pain when glancing at these pages.&gt;",
@@ -4285,7 +3597,7 @@ _addon.data = {
 	},
 },
 ["Libram of Focus"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 18333},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft greater arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"&lt;You cannot understand anything written on these pages.&gt;",
@@ -4295,7 +3607,7 @@ _addon.data = {
 	},
 },
 ["Libram of Tenacity"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 11734},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft lesser arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
@@ -4304,11 +3616,11 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = "World and instances",  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 50 to 58 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Libram of Protection"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 18334},
 	["pages"] = {
 		"&lt;The pages are covered in ancient elven runes.&gt;\n\nThe pages herein contain memories of events that transpired in the collection and creation of the reagents required to craft greater arcanum.\n\nMay our enemies never gain access to these libram. \n\nMay I live to see the pallid light of the moon shine upon Quel'Thalas once again.\n\nMay I die but for the grace of Kael'thas.\n\nMay I kill for the glory of Illidan.\n\n-Master Kariel Winthalus",
 		"&lt;The ink swirls and shifts around the page. You get the feeling that the book is mocking you.&gt;",
@@ -4323,7 +3635,7 @@ _addon.data = {
 ------------------------------------------------------------------------------------------
 
 ["\"Creatures That Owe Sal'salabim Golds\""] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 25766},
 	["pages"] = {
 		"(1) Raliq the Drunk: Ogre. He never leaves cantina. Mean. Ugly. Fat. Mean. Also very fat.\n\n",
 		"(2) Coosh'coosh: This little annoying spore-man from Zangarmarsh has mushroom garden on border of Zangarmarsh and Terokkar. Lost many golds to Sal'salabim in game of \"What's That Smell.\" Tried to pay Sal'salabim with stupid mushroom called glowcap. Say it as good as golds! Hah!\n\n",
@@ -4334,7 +3646,7 @@ _addon.data = {
 	},
 },
 ["A Clue to Sanders' Treasure"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 1358},
 	["pages"] = {
 		"Good work, matey! Now ye need to head due east. East up the bluffs, east to the road. Look for the ol' chimney ruins near the side of the road. There you'll find an old barrel with your next clue.",
 	},
@@ -4343,7 +3655,7 @@ _addon.data = {
 	},
 },
 ["A Letter to Kasim Sharim"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 57136},
 	["pages"] = {
 		"Kasim,\n\nHe has returned.\n\n  - Watcher Mahar Ba",
 	},
@@ -4352,7 +3664,7 @@ _addon.data = {
 	},
 },
 ["A Missive from Lorewalker Cho"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 85688}, -- 85694
 	["pages"] = {
 		"$p,\n\nYour companions that survived the battle with the Sha of Doubt are now in the care of Binan Village, home to Pandaria's finest healers. It looks as though they shall recover their physical injuries.\n\nThe journey to Binan will take you up the Veiled Stair to the very doorstep of Kun-Lai Summit. I urge you to bring this missive to Mayor Bramblestaff in Binan Village. There, he can direct you to your companions.\n\nI look forward to our paths crossing again.\n\n-Lorewalker Cho",
 	},
@@ -4362,7 +3674,7 @@ _addon.data = {
 	},
 },
 ["Albreck's Findings"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 31550},
 	["pages"] = {
 		"Greetings, learned Antonivich:\n\nI hope this letter finds you in Thrallmar, productive in your studies. My trappings here in Spinebreaker are adequate for my own experiments, though at times I do wish to be back in the Undercity with a full range of implements and servants to aid me...\n\nAh, the laments of a corpse.\n\nPleasantries aside, I have some interesting news -- the blood that &lt;name&gt; gathered from the fel orcs shows a concentration of demonic taints. It is almost identical to the taint of the original fel orcs of Azeroth... the taint of Mannoroth.",
 		"It is impossible for Mannoroth's influence to reach across to Outland -- the beast has been dead for years -- but I fear another Pit Lord may be at play here. A Pit Lord of Mannoroth's power... one able to corrupt the indigenous orcs.\n\nI will continue my studies of Bleeding Hollow Blood, but I urge you to pursue the trail. And, I fear, that trail may lead deep into Hellfire Citadel.\n\nScholarly Yours,\nApothecary Albreck",
@@ -4372,7 +3684,7 @@ _addon.data = {
 	},
 },
 ["Alicia's Poem"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 34089},
 	["pages"] = {
 		"Do not stand at my grave and weep, \nI am not there, I do not sleep.\n\nI am in a thousand winds that blow, \nacross Northrend's bright and shining snow.\n\nI am the gentle showers of rain, \non Westfall's fields of golden grain. \n\nI am in the morning hush, \nof Stranglethorn's jungle, green and lush.\n\nI am in the drums loud and grand,\nthe thunderous hooves across Nagrand.\n\nI am the stars warmly gleaming,\nover Darnassus softly dreaming.\n\nI am in the birds that sing,\nI am in each lovely thing.\n\nDo not stand at my grave and cry, \nI am not there. I do not die.",
 	},
@@ -4381,7 +3693,7 @@ _addon.data = {
 	},
 },
 ["Alliance Missive"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 86068},
 	["pages"] = {
 		"Whatever you're up to, &lt;name&gt;, make an end of it.\n\nThe Horde and their savage monkeys are preparing to attack.\n\nThey outnumber our forces considerably and must not be allowed the time to train their forces.\n\nPut an end to whatever distractions you're engaged in and return to Pearlfin Village at once.\n\n- Admiral Taylor",
 	},
@@ -4390,7 +3702,7 @@ _addon.data = {
 	},
 },
 ["Alliance Orders"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 85507},
 	["pages"] = {
 		"By order of King Wrynn, this land is to be scoured in all haste until the White Pawn is found and returned to safety.\n\nNo expense is to be spared in this effort, including - if necessary - the blood of any subjects who find themselves serving in this foreign land.\n\nThe families of any such heroes lost in this noble endeavor will be well cared for, and the one who secures the asset may name his reward.",
 	},
@@ -4399,7 +3711,7 @@ _addon.data = {
 	},
 },
 ["Ancient Dragonforged Blades"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 49698},
 	["pages"] = {
 		"Rare indeed are the 'prismatic' blades forged by the combined will of the five dragonflights. Among the greatest of these blades were the sister swords of Quel'Serrar and Quel'Delar.\n\nIn her wisdom, the dragon queen Alexstrasza gifted one of the blades to each of the elven peoples of Azeroth. Quel'Serrar was to be borne by a valiant kaldorei warrior, while Quel'Delar was entrusted to a quel'dorei champion.\n\nEach blade transformed in the hands of its wielder, molding its magic to its master's strengths...",
 	},
@@ -4409,7 +3721,7 @@ _addon.data = {
 	},
 },
 ["Another Clue to Sanders' Treasure"] = {
-	["visual"] = {["type"] = "Item", ["color"] = "DARKBLUE"},
+	["info"] = {["type"] = "item", ["id"] = 1361},
 	["pages"] = {
 		"Now from this here barrel, face ye North. Straight as the crow flies, keep ye walkin' till you see the empty jug next to the lone windmill on the sea bluffs. If ye poke around that jug, ye just might find what you're lookin' for.",
 	},
@@ -4418,7 +3730,7 @@ _addon.data = {
 	},
 },
 ["Apothecary Furrows' Notes"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 45898},
 	["pages"] = {
 		"&lt;The Apothecary's notes are scribbled in a cramped hand, with complex alchemic formulas interspersed among childlike doodles of skulls and lightning bolts. Squinting, you can make out parts of a recent passage:&gt;\n\n...most magnificent corruption, embedding itself deep within living tissue. Extremely contagious when &lt;several words are smudged&gt; via food chain. Today's tests confirm it is only partially biological in origin. Foulhoof, my &lt;illegible&gt; companion, preoccupied with vengeance and blind to the more 'constructive' applications of his &lt;a greenish ichor stains the remainder of the paragraph.&gt; Research progresses slowly. Hope my companions at Althalaxx fare better.",
 	},
@@ -4427,7 +3739,7 @@ _addon.data = {
 	},
 },
 ["Arcane Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49759},
 	["pages"] = {
 		"Those of us who are agile of mind, but not quite so agile of body, must find... alternative methods of self-preservation. Many such people choose to pursue a career in matters magical.\n\n&lt;name&gt;, I've been observing you, and you have a mind like a steel trap. However, to thrive in this time of upheaval, a person such as yourself will need to master the arcane arts. And to master the arcane arts, you're going to have to talk to me.\n\nCome speak with me in Anvilmar. We've much to discuss.\n\n-Teegli Merrowith",
 	},
@@ -4436,7 +3748,7 @@ _addon.data = {
 	},
 },
 ["Blood Oath of the Horde"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 35784},
 	["pages"] = {
 		"Lok'tar ogar! Victory or death - it is these words that bind me to the Horde. For they are the most sacred and fundamental of truths to any warrior of the Horde.\n\nI give my flesh and blood freely to the Warchief. I am the instrument of my Warchief's desire. I am a weapon of my Warchief's command.\n\nFrom this moment until the end of days I live and die - For the Horde!",
 	},
@@ -4446,7 +3758,7 @@ _addon.data = {
 	},
 },
 ["Brubaker's Report"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 59157},
 	["pages"] = {
 		"Keeshan, if you're reading this note, I'm dead. Likely that my position was compromised.\n\nOrcs are committing unspeakable atrocities against their prisoners. Yes, prisoners, Keeshan. They've got cages full of P.O.W's. If you're gonna blow up this valley, you'll need to free the prisoners first.\n\nTell my wife I love her and to take out the damned trash.\n\n-Brubaker\n\nPS - They've got black dragons.",
 	},
@@ -4455,7 +3767,7 @@ _addon.data = {
 	},
 },
 ["Calligraphed Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 85160},
 	["pages"] = {
 		"I am glad you are interested in taking up the ways of the monk. I have come from afar to bring the wisdom of my people to your kind.\nI have taken up residence in the abbey, training any who wish to learn our arts. Come, visit, and I shall train you.\n\nYours,\nBao",
 	},
@@ -4464,7 +3776,7 @@ _addon.data = {
 	},
 },
 ["Calligraphed Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 85203},
 	["pages"] = {
 		"I have been visiting with your tribe for a while now, and while some have tried to learn our arts, none have shown the promise that you have. \n\nPlease, come meet me at Camp Narache. I have learned so much from your tribe, I feel it is time I return the favor.\n\n-Shoyu",
 	},
@@ -4473,7 +3785,7 @@ _addon.data = {
 	},
 },
 ["Calligraphed Parchment"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 85196},
 	["pages"] = {
 		"I came here from afar to learn of your people's ways, and to teach you mine. You do me a great honor by volunteering to learn the ways of the Monk. In time, there is much I will show you, but for now, we must meet for our first lessons. Come, meet me in the Valley of Trials, and we will begin your training.\n\n-Gato",
 	},
@@ -4482,7 +3794,7 @@ _addon.data = {
 	},
 },
 ["Calligraphed Sigil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 85205},
 	["pages"] = {
 		"Hello, &lt;class&gt;. I have seen that you are interested in learning the ways of the monk. I would be honored to begin your training, as you seem like quite an auspicious pupil. Come to Aldrassil, on the lower levels.\n\n-Laoxi",
 	},
@@ -4491,7 +3803,7 @@ _addon.data = {
 	},
 },
 ["Calor's Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2113},
 	["pages"] = {
 		"Master Carevin,\n\nThe bearer of this note has shown &lt;himself/herself&gt; to be upstanding in the Light, capable of battling the undead and demons that plague the borders of Duskwood, and willing to join the Carevin family in their cause of Light.\n\nI would thereby suggest that you give this warrior of the Light further duties--perhaps to investigate some of the townsfolk that are under suspicion of succor to the enemies of the Light.\n\nYours faithfully,\nCalor",
 	},
@@ -4500,7 +3812,7 @@ _addon.data = {
 	},
 },
 ["Cloth Request"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2724},
 	["pages"] = {
 		"To the Schneiders,\n\nGood day. I trust business in the canal district is good. We are booming here in the trader's square.\n\nWe are in need of knitted cloth goods, as our supply is all but depleted. Please send the standard load as soon as you are able.\n\nGood fortune, and I hope your son Thurman's studies progress well,\n\n--Harlan Bagley",
 	},
@@ -4509,7 +3821,7 @@ _addon.data = {
 	},
 },
 ["Consecrated Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9570},
 	["pages"] = {
 		"I hope this letter finds you well, &lt;class&gt;. I say that with great pride, because not many can profess such profound faith, but also know that they are among the most elite of Azeroth's protectors.\n\nAlways remember, first and foremost, it is your duty to go to battle against those who seek to harm our world and bring corruption into our homes.\n\nI have been given authority over your training for the time being. When you are ready, seek me out inside Northshire Abbey.\n\n-Brother Sammuel, Paladin Trainer",
 	},
@@ -4518,7 +3830,7 @@ _addon.data = {
 	},
 },
 ["Consecrated Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60752},
 	["pages"] = {
 		"I have been awaiting your arrival, sunwalker. Chief Hawkwind himself told me of your interest in our order and I have agreed to begin your training. Please meet with me in the circle at the center of Camp Narache when you are ready to begin your instruction.\n\nSunwalker Helaku",
 	},
@@ -4527,7 +3839,7 @@ _addon.data = {
 	},
 },
 ["Consecrated Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9563},
 	["pages"] = {
 		"Some fear our kind more than dragons. Some envy us more than the most skilled blacksmiths. Some praise our strength in battle. Others revel in our faith. Some are just jealous that we can drink them under the table! But know this, &lt;class&gt;, you are among the most elite protectors in all of Azeroth. The Holy Light gives us strength as much as we strengthen it.\n\nI would tell you more when you've gotten acquainted with the land some. Find me inside Anvilmar above the Valley.\n\n-Bromos Grummner, Paladin Trainer",
 	},
@@ -4536,7 +3848,7 @@ _addon.data = {
 	},
 },
 ["Control Console Operating Manual"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 5088},
 	["pages"] = {
 		"The samophlange control console can be used to automatically regulate the flow of fuels, gasses, liquids, and related machinery. Once initial configuration has been completed, it should run worry free with minor maintenance.\n\nBrief listing of control console components (from left to right)\n\nI. Main Power Lever\n\nThe engaged position enables the samophlange. The control mechanism will not automatically disengage when the lever is put in the off position. This will merely",
 		"begin the cooldown process, at which point it will take roughly one to two minutes (depending on the situation) to turn off.\n\nIMPORTANT NOTE: The main power lever can only be manipulated when the three control valves on the actual machinery have been disengaged. These valves can be shut off in any order.\n\nThe first is the MAIN CONTROL VALVE, which can be found at the base of the large, vertical smokestack. Next, the FUEL CONTROL VALVE can be found on the large pipe which leads",
@@ -4548,7 +3860,7 @@ _addon.data = {
 	},
 },
 ["Crafty's Shopping List"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 34801},
 	["pages"] = {
 		"<HTML><BODY><BR/><P>Okay, $N, this is a list of all the stuff that I'm going to need for our new super-secret, er..., super weapon. For now, let's just call it \"Crafty's Ultra-Advanced Proto-Typical Shortening Blaster\".</P><BR/><P>Trust me, it's going to be far more revolutionary than that old, hokey world enlarger!</P><BR/><P>Anyway, don't think too hard about it right now. Just get me this stuff and we'll be golden!</P></BODY></HTML>",
 		"<HTML><BODY><BR/><H1 align=\"center\">My Tools</H1><BR/><P>First things first... I need my tools. For a project this intricate no others will do!</P><BR/><P>When we had to run for our lives to escape from the pumping station -- that's a whole different story -- I didn't have time to pick them up. I mean, come on, I was running for my life! But I do remember that I left them under the pumping station to the east.</P></BODY></HTML>",
@@ -4560,7 +3872,7 @@ _addon.data = {
 	},
 },
 ["Crawgol's Silithid Field Guide"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 50162},
 	["pages"] = {
 		"&lt;Crawgol's handwriting is large and uneven, little better than a childlike scrawl.&gt;\n\nThe sillu- scilla- &lt;Several misspellings are crossed out&gt; silithid are bug-type animals, not vegetables (at least without a fight). They live in the under the ground, except when they are not. Some of them fly? (I think).\n\nThey taste REAL BAD.\n\nMost silithid are made of bug parts. They have between none and eightish legs (depending on how they died?)",
 		"Burning makes them die. They have shells (called cara pieces because they are made from cara obviously) that can't be stabbed unless you do it hard.\n\nThey can dig fast but I don't know how fast because they dig in the dirt.\n\nTHE ORIGIN OF THE SILITHID\n\nAlmost all silithid come from holes, usually in the ground.",
@@ -4570,7 +3882,7 @@ _addon.data = {
 	},
 },
 ["Cub's First Toy"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 69986},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/Winterspring_Memento_256\" /></BODY></HTML>",
 	},
@@ -4579,7 +3891,7 @@ _addon.data = {
 	},
 },
 ["Daily Report - Hillsbrad Foothills"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 62932},
 	["pages"] = {
 		"Daily Report - Hillsbrad Foothills\n\nSouthshore Under Attack - Worgen Activity Increasing\n\nReports of worgen activity from the south, specifically around Southshore, are increasing in frequency. Our scouts indicate that the terrorist known as Ivar Bloodfang and his renegades are responsible for these recent attacks against our citizens.\n\nRecommendation: Send capable heroes to investigate.",
 		"Trouble at the Sludge Fields\n\nThe area formerly known as Hillsbrad Fields - now known as the Sludge Fields, located in southwestern Hillsbrad - has seen a sharp rise in \"accidents.\" Reports from Warden Stillwater indicate possible contagion outbreak.\n\nRecommendation: Send capable heroes to investigate.",
@@ -4590,7 +3902,7 @@ _addon.data = {
 	},
 },
 ["Dastardly Denizens of the Deep"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 33127},
 	["pages"] = {
 		"One of the most frightening creatures I've ever seen with my own eyes is Tethyr. I've only laid eyes on the beast once, and I count myself lucky beyond belief to have survived!\n\nIt was a dark and stormy night. Through the swirling seas and driving rain, the beacon of Theramore's lighthouse was barely visible. We did our best to steer toward it. Suddenly, the beast burst from between the waves in front of our ship!",
 		"The mighty creature's maw opened wide, tossing bolts of icy water toward our vessel. Those terrible jaws clamped down upon the bow of our ship, tearing it from the hull. Sailors and cargo were thrown violently into the sea as the remnants of the ship disappeared beneath the waves.\n\nThe last thing I remember was flying from the broken hull, hitting the inky waters, and plunging beneath the waves. The world went dark and I thought for certain I'd drawn my last breath. When I awoke in Theramore's infirmary, I knew someone had to tell our story.",
@@ -4600,18 +3912,33 @@ _addon.data = {
 	},
 },
 ["Decoded Tablet Transcription"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 20405},
 	["pages"] = {
 		"Day 1\nOur pilgrimage is over. We've finally reached Silithus, where we're to establish contact. We have come from many places to collaborate in what is to be a monumental undertaking.\n\nThere is a tremendous sense of excitement in the air. Tomorrow we shall devote all our energy to building that which will allow communication with THEM. \n\nTomorrow we shall construct a wind stone!",
 		"Day 2\nThe location of the wind stone has been a subject of great debate. Not even the wisest among us can determine with great certainty where the place mentioned in the old prophecy actually refers to.\n\nI've stayed with the original northern group and time will undoubtedly prove us right. The argument that the energy lines intersect at detrimental angles at this location are foolish and naive. \n\nAlready we are gathering the necessary building materials at great speed.",
 		"Day 15\nOur dedication has paid off. We are the first camp to finish the construction of a wind stone. If the other fools had stayed with us we would've completed the task in less than a week! \n\nTomorrow we shall begin the rituals involved in summoning Baron Kazum himself. He demanded to be the first to test the system and we couldn't contradict him as he's quick to anger. \n\nI expect he will be most pleased with us.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["area"] = "Silithus", ["id"] = 8287,  ["source"] = "A Terrible Purpose",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Silithus", ["id"] = 8287, ["source"] = "A Terrible Purpose",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Diabolical Plans"] = {
+	["info"] = {["type"] = "item", ["id"] = 23780}, -- 23798
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
+		"Diathorus,\n\nI trust that this letter will eventually make its way to you. These demons are mindless. All they think about is their nails, their whips, or goring something with their head spikes. And I dare not use one of the infernals lest it be burned to ashes!\n\nSadly, I long for the days when we could use the orcs. At least they had half a brain and could follow orders. Perhaps there is an opportunity to take some new thralls from nearby?",
+		"The reports of the night elves assisting the draenei are true. They're attempting to setup a new base of operations at Forest Song to the north near Satyrnaar. We should confer on combining our forces for an attack before the next full moon of this pathetic world. If we crush them now they will never gain a toehold on our doorstep!\n\nRegards,\n\nGorgannon\n\np.s. - Stop using up all of the blood ink on love letters to my lashers! Night elf virgins are in short supply these days.",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Horde Version</H1></BODY></HTML>",
+		"Diathorus,\n\nI trust that this letter will eventually make its way to you. These demons are mindless. All they think about is their nails, their whips, or goring something with their head spikes. And I dare not use one of the infernals lest it be burned to ashes!\n\nSadly, I long for the days when we could use the orcs. At least they had half a brain and could follow orders. Perhaps there is a chance to take some new thralls from nearby?",
+		"The time has come to retake a few of the lesser races, I think. Splintertree Post to the northwest makes a tempting target. We should confer on combining our forces for an attack before the next full moon of this pathetic world. If we subjugate them now they will come to remember what the word 'Horde' truly used to mean!\n\nRegards,\n\nGorgannon\n\np.s. - Stop using up all of the blood ink on love letters to my lashers! Night elf virgins are in short supply these days.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Ashenvale", ["id"] = 26443, ["source"] = "Diabolical Plans",  ["level"] = "A", },
+		{ ["sourceType"] = "quest",  ["area"] = "Ashenvale", ["id"] = 23798, ["source"] = "Diabolical Plans",  ["level"] = "H", },
 	},
 },
 ["Elegant Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 85174},
 	["pages"] = {
 		"Friend, I am honored that you have chosen to learn the ways of the monk, the art of my people. Your interest heartens me, and allows me to return the hospitality that I have been shown by your kind and generous people here. Come, meet me in Anvilmar, and I will train you in our ways.\n\nYours,\nLo",
 	},
@@ -4620,7 +3947,7 @@ _addon.data = {
 	},
 },
 ["Elegant Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 85164},
 	["pages"] = {
 		"Hello,\n\nI am Ting, Strong of Stomach. I come from lands far away.\n\nI may not be one of you Forsaken, but it is clear that you are strong in mind and body. Some of my people do not believe that your people can be trained in the arts of the Monk, but I do not share their prejudice. Come to me, and I will teach you to fight!\n\n-Ting, Strong of Stomach",
 	},
@@ -4629,7 +3956,7 @@ _addon.data = {
 	},
 },
 ["Empowered Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49758},
 	["pages"] = {
 		"Know this: a shaman must never demand power; to do so would arouse the anger of the elements, and a shaman without the elements' protection is nothing. Those that follow the path of the shaman must never forget this most vital tenet.\n\nHowever, a shaman that works in a respectful union with the elements wields a power rivaled by few. If you feel you have the humility to do so, come visit with me in Anvilmar. I will teach you - much like I myself was taught - how to work with the elements of fire, earth, wind, water, and the wild.\n\n~Teo Hammerstorm",
 	},
@@ -4638,7 +3965,7 @@ _addon.data = {
 	},
 },
 ["Encrypted Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9555},
 	["pages"] = {
 		"Never been more proud to be part of the trade as I am in these last few years. The need for assassins, spies, and scouts has never been more prevalent. You'd think war-time would have had higher demand, but suprisingly, war isn't a time we flourish like we do now--the times after peace starts to deteriorate.\n\nI was told you'd be in the area looking to learn a few things. When you have time, come see me by the stables in back of the abbey.\n\n-Jorik Kerridan, Rogue Trainer",
 	},
@@ -4647,7 +3974,7 @@ _addon.data = {
 	},
 },
 ["Encrypted Parchment"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9560},
 	["pages"] = {
 		"I send greetings, &lt;name&gt;. I was lost in thought when it came to my attention that I needed to write to you.\n\nMany in our culture praise our shamans for being our spiritual leaders, like our great Warchief. Others think the sword and axe are even more noble pursuits, but never forget that battles--even wars--are won on the backs of those with more specialized skills. That is what I wish to speak to you about, &lt;name&gt;. Find me among the other orcs in the Valley of Trials.\n\n-Rwag, Rogue Trainer",
 	},
@@ -4656,7 +3983,7 @@ _addon.data = {
 	},
 },
 ["Encrypted Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9550},
 	["pages"] = {
 		"&lt;Brother/Sister&gt;, I hope this rune finds you well. I wanted to take a moment to let you know that I'm inside Anvilmar above Coldridge Valley.\n\nI know how important it is we all stick together, and in this time of strained peace it's becoming even more important to have our kind around. Look for me when you have the time. \n\n-Solm Hargrin, Rogue Trainer",
 	},
@@ -4665,7 +3992,7 @@ _addon.data = {
 	},
 },
 ["Encrypted Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9559},
 	["pages"] = {
 		"Take care not to ignore my words, &lt;name&gt;. This is the time for subterfuge and deceit throughout all nations... even our great Undercity. Everyone loyal to Sylvanas is working towards creating a new era, one controlled by the Forsaken. And even though we possess no magical skills, nor will we take up weapons along our borders, we still have our own role to play.\n\nSeek me out in the inn in Deathknell. We'll speak more then.\n\n-David Trias, Rogue Trainer",
 	},
@@ -4674,7 +4001,7 @@ _addon.data = {
 	},
 },
 ["Encrypted Sigil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9551},
 	["pages"] = {
 		"Sael'ah, my friend. I hope this sigil finds you well. I was asked to offer you my services. I too am in Shadowglen, in the great tree of Aldrassil, and I wanted you to know that if you need any training that you could seek me out.\n\nIn these questionable times, I thought it prudent that those dealing in stealth remain even closer to one another. How else will we be able to protect Teldrassil and our ways?\n\nFind me when you can.\n\n-Frahun Shadewhisper, Rogue Trainer",
 	},
@@ -4683,7 +4010,7 @@ _addon.data = {
 	},
 },
 ["Etched Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60677},
 	["pages"] = {
 		"Northshire Valley is a dangerous place, ideally suited to the survival skills of a hunter. Needless to say I have been impressed with your contributions to the valley's defense and I look forward to meeting you. Please look for me by the entrance to the abbey.",
 	},
@@ -4692,7 +4019,7 @@ _addon.data = {
 	},
 },
 ["Etched Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9565},
 	["pages"] = {
 		"Mighty warriors defend our home. Our shamans guide our spirits and show us our ancestors' past. And our druids help us discover the Earthmother's will.\n\nBut you are one of our hunters, and our hunters learn many aspects of those roles and blend them together. You will find you represent the heart of our people--some of our tribe will look to you for guidance, some for protection. It is my duty to ensure you are prepared for that. Seek me out in Camp Narache.\n\n-Lanka Farshot, Hunter Trainer",
 	},
@@ -4701,7 +4028,7 @@ _addon.data = {
 	},
 },
 ["Etched Parchment"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9553},
 	["pages"] = {
 		"I've seen you shuffling around the Valley, young one, with your flimsy bow and that shabby armor. You remind me of a young hunter I knew a long time ago...\n\nIf you're interested in learning a bit more about the trade, come visit me. The hunter's path can be a lonely one, and it helps to have allies along the way.\n\n-Karranisha, Hunter Trainer",
 	},
@@ -4710,7 +4037,7 @@ _addon.data = {
 	},
 },
 ["Etched Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9566},
 	["pages"] = {
 		"Tamer of beasts, master marskman, proven tracker--what else ya want to accomplish in this lifetime? All those things combined takes quite a bit of intelligence and a great deal of patience.\n\nThe path of the hunter ain't an easy one, that's fer sure. You're gonna need lots of training if you wanna be as good as even our lowest ranking rifleman. But that's why I'm here.\n\nFind me inside Anvilmar overlooking Coldridge Valley. I'll be waiting.\n\n-Thorgas Grimson, Hunter Trainer",
 	},
@@ -4719,7 +4046,7 @@ _addon.data = {
 	},
 },
 ["Etched Sigil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9567},
 	["pages"] = {
 		"Elune is with you, &lt;name&gt;. The wind whispers it to me, and I'm glad I can directly take part in the shaping of our next generation of hunters.\n\nFrom what I have been told, you are close to Aldrassil. I would meet with you inside the great tree when you have time.\n\nOur elders have charged me with ensuring that new hunters are properly trained for the trials ahead. You being one of the newest students, it would behoove you to visit me. Until then, be well.\n\n-Ayanna Everstride, Hunter Trainer",
 	},
@@ -4728,7 +4055,7 @@ _addon.data = {
 	},
 },
 ["Evidence Against Samuelson"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60819},
 	["pages"] = {
 		"Your Holiness: Cho'gall has given us the directive to move forward: We're going to wipe your cathedral off the map. When the spiritual center of Stormwind is reduced to a crater in the center of the city, panic will spread, and disillusioned peasants will flock toward our true religion. I'm sending the explosives your way. For the Hammer! For Deathwing! For the glorious new world to come!  -Samuelson",
 	},
@@ -4737,7 +4064,7 @@ _addon.data = {
 	},
 },
 ["Faded Treasure Map"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 127143},
 	["pages"] = {
 		"If the Darkmoon Treasure you wish to find, then begin your search by using your mind.\n\nThe next clue that can be found, is on a home you can take out of town.",
 	},
@@ -4746,7 +4073,7 @@ _addon.data = {
 	},
 },
 ["Father Gustav's Report"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 43290},
 	["pages"] = {
 		"Highlord,\n\n&lt;name&gt; has successfully led the campaign against the Scourge of Scourgeholme and positioned us to march upon Icecrown.\n\nThe masons are equipped with the supplies that they need to begin construction of Justice Keep - thanks once again to &lt;name&gt; for &lt;his/her&gt; assistance in Crystalsong Forest.\n\nThere remains only one last challenge: the taking of Crusader's Pinnacle. For it is there, at the place where we have anguished most, that I wish to begin this final chapter.\n\nWe await your command, sir.\n\nLight protect you.\n\n-Gustav",
 	},
@@ -4755,7 +4082,7 @@ _addon.data = {
 	},
 },
 ["Field Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49090},
 	["pages"] = {
 		"Day One:\n\nGot on a ship called Draka's Fury. We're taking the special cargo to a far away place across the ocean. I have the duty to clean stuff on the ship and scout when we get to land.\n\nBetter work than searching for Alliance rogues and druids in Orgrimmar.\n\nThe food is not as good, but the grog tastes the same. Durotar has already slipped out of sight.",
 		"Day Two:\n\nThe food and rocking of the ship do not agree with me!\n\nThere is much to clean as there are many of my brothers who are sick. This does not seem like a good idea to me, but if he needs to go, we will gladly follow him to the bottom of the sea.\n\nLet us hope that it does not come to that.",
@@ -4770,7 +4097,7 @@ _addon.data = {
 	},
 },
 ["Final Clue to Sanders' Treasure"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 1362},
 	["pages"] = {
 		"Now that ye found me ol' whiskey jug, you're almost to the treasure! Just face West from the bottle and walk down to the shore. Once ye get to the water, keep going! Swim straight west till you find the island with me treasure chest!",
 	},
@@ -4779,7 +4106,7 @@ _addon.data = {
 	},
 },
 ["Fishing Tournament!"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 19978},
 	["pages"] = {
 		"Stranglethorn Fishing Tournament!\nSunday Afternoon - 2pm to 4pm.\n\nFish anywhere along the coast of Stranglethorn (except for Booty Bay) and look for the schools of Tastyfish that will appear along the coast! Make sure your fishing bobber lands in the school and you will be catching special fish instead of the normal Stranglethorn variety. The first person to catch forty Tastyfish can turn them into Fishmaster Bassbait in Booty Bay for a prize!  \n\nEven if you are not the first person to catch forty tastyfish you can still turn them in for cash and there are special fish to be caught as well that will reward special prizes!",
 	},
@@ -4789,7 +4116,7 @@ _addon.data = {
 	},
 },
 ["For the Light!"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 20009},
 	["pages"] = {
 		"His name brought Light to darkest Azeroth.\n\nHis valor tore the walls of mis'ry down.\n\nThe Silver Hand would ne'er do better more\n\nthan give the world the knight who'd give himself.",
 		"His fame was not that which he sought to grow,\n\nnor was the lordship over his own kind.\n\nInstead he chose to fight for Lordaeron\n\nto hope his kin would have to fight no more.",
@@ -4800,7 +4127,7 @@ _addon.data = {
 	},
 },
 ["Forbidden Sigil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60400},
 	["pages"] = {
 		"I hope this sigil finds you well, &lt;name&gt;. The Archmage told me of your coming and I sent word immediately.\n\nWith all that has happened in the past years to bring arcane magic back to our race, you may find struggles and trials ahead. I can help with such things. When you are ready, find me inside Aldrassil, on the second level.\n\n-Rhyanda, Mage Trainer",
 	},
@@ -4809,7 +4136,7 @@ _addon.data = {
 	},
 },
 ["Furlbrow's Deed"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 1971},
 	["pages"] = {
 		"This is a deed to an expanse of land within the region of Westfall. It entitles the persons below with ownership rights of the designated area, as well as all items produced and any structures built within its borders.\n\nThe document is signed by:\n\n  Theodore Furlbrow\n  Verna Furlbrow",
 		"[The words below were quickly scrawled on the back of the deed]\n\nWe leaned on Furlbrow and got his deed. Thought it might be handy if you wanted to forge one of these for your own place. The Furlbrows won't give us trouble. Last I saw them they were on their way out of Westfall, stuck with a broken wagon.",
@@ -4819,7 +4146,7 @@ _addon.data = {
 	},
 },
 ["Galaen's Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 24237},
 	["pages"] = {
 		"I watched as they beat him without mercy. Their ruthless lieutenant acted as if such cruelty was an act of normalcy. Through the savage beatings, I could feel myself breaking.\n\nAs I watched Vindicator Saruan take their blows, I began to weep. Not out of fear... I wept out of sadness. To see a draenei of the Triumvirate treated in such a manner. If only I could have broken free of my bonds. If only...",
 		"After what seemed an eternity, the Vindicator lost consciousness. The torture was too much, even for him. The cruel one - Matis as I found out he was called - attempted to wake Saruan by splashing contagion laced water across his ravaged body. But Saruan did not wake.",
@@ -4831,7 +4158,7 @@ _addon.data = {
 	},
 },
 ["Glyphic Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9571},
 	["pages"] = {
 		"There are four rules to magic:\n\n  Magic is powerful.\n  Magic is corrupting.\n  Magic is addicting.\n  Magic draws the denizens of the Twisting Nether to those who wield the arcane.\n\nThose rules you can always guarantee. Those rules will govern your destiny if you chose to continue down the path as a mage.\n\nIf you're foolish enough to ignore this warning, then come speak to me inside the library wing of the abbey in Northshire. I'll be waiting for you upstairs.\n\n-Khelden Bremen, Mage Trainer",
 	},
@@ -4840,7 +4167,7 @@ _addon.data = {
 	},
 },
 ["Glyphic Parchment"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 52513},
 	["pages"] = {
 		"The others don't understand us. They pretend to get along with us, but they don't. Even the warlocks are afraid of us.\n\nThat's alright, because we've got each other. Orc mages unite! Me and you! Acrypha and... whatever your name is! Ha!\n\nWe'll show them what we're made of. Pay me a visit, and I'll share with you some of the secrets of the arcane that I've managed to master.",
 	},
@@ -4849,7 +4176,7 @@ _addon.data = {
 	},
 },
 ["Glyphic Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9574},
 	["pages"] = {
 		"The corruption and evil that rumor says travels with the arcane is nothing compared to the pain we've already felt. We are no longer victims, &lt;name&gt;. We are the ones who control our fate. Sylvanas has paved the way for us--she has proven that our will is our own; that we are no longer thralls to that bastard Arthas.\n\nSeek me out in the church, I shall instruct you further... if that is your desire.\n\n- Isabella, Mage Trainer",
 	},
@@ -4858,7 +4185,7 @@ _addon.data = {
 	},
 },
 ["Gordawg's Imprint"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 24475},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/24475_gordawg_256\" /></BODY></HTML>",
 	},
@@ -4867,7 +4194,7 @@ _addon.data = {
 	},
 },
 ["Gramma Stonefield's Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 1252},
 	["pages"] = {
 		"Hello William,\n\nIt's been years since we've spoken, but I trust you and your brother are well, and that your apothecary thrives.\n\nI must ask a favor of you, William. In short, my grandson Tommy Joe has lost his heart to young Maybell Maclure. And although they adore each other... our families, well our families have been feuding for years.",
 		"I fear the war between the Stonefields and the Maclures will kill Tommy Joe and Maybell's blossoming romance, and in times like these - where dark news and rumors of war loom over us - youth and love must be nurtured.\n\nSo, the favor: I ask that you use your skills and concoct a potion or elixir to aid these young lovers in their quest for each other.\n\nThank you, William. And please, when you have some time away from work, come visit. We'll have a few chuckles over the past.\n\n-Mildred",
@@ -4877,7 +4204,7 @@ _addon.data = {
 	},
 },
 ["Greatmother's List of Herbs"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 25866},
 	["pages"] = {
 		"The Olemba root is a fairly common root found in the Terokkar Forest. Search near the Olemba trees that comprise the bulk of Terokkar's forests for upturned roots.\n\nThe marshberry only grows in Zangarmarsh. It can only be found at the Ango'rosh Stronghold, located in the northwestern region of the marsh. Beware the ogres that fervently guard the precious berries.\n\nThe Telaari frond is perhaps the most easily attainable of the herbs on this list. South of Garadar in the Talaari basin, you will find the fronds. They grow near the water.\n\nThe last herb on the list is unique to the Blade's Edge mountains. You will find Blade's Edge north of Zangarmarsh. Dragonspine grows upon the ends of the jagged rock formations that guard the canyons of Blade's Edge. You will know what I speak of when you first see Blade's Edge. The rock formations look like row upon row of sharp and pointed teeth.",
 	},
@@ -4886,7 +4213,7 @@ _addon.data = {
 	},
 },
 ["Gremlock's List"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 16310},
 	["pages"] = {
 		"Below is the list of students who obtained a Platinum Star grade at Gremlock's School of Caterers, earning them an Honorary Chef's Cleaver:\n\nMelia Stoneshaker\nBardin Ironband\nUmi Togglevolt\nRumi Togglevolt\nVorel Steelspire",
 	},
@@ -4896,7 +4223,7 @@ _addon.data = {
 	},
 },
 ["Gryshka's Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 16307},
 	["pages"] = {
 		"Dear Grimtak,\n\nThe steaks you sent are fine. Well marbled, thickly sliced and packed in boar fat. They're just how I like them. When I eat them later, I will think of you as I gnaw on the last bits of bone and grisle. I will close my eyes and see your strong, scarred hands chopping and cutting...\n\nHah! That reminds me of when you had your accident and lost a finger... Oh, Grimtak! Thinking of that day makes me giggle like a little girl.\n\nYou're so cute when you're bleeding!\n\n-Gryshka",
 	},
@@ -4906,7 +4233,7 @@ _addon.data = {
 	},
 },
 ["Hallowed Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9548},
 	["pages"] = {
 		"Your connection to the world, and its connection to you, are paramount to your success as a priest. Wisdom and compassion will allow you to help those who have a true need. Overeagerness and clumsy decisions only prevent others from becoming stronger or cause harm.\n\nAs you begin to understand what this means, you will need new abilities and spells to help you. That is where my role begins: find me in the library wing of Northshire Abbey when you are ready to train.\n\n-Priestess Anetta, Priest Trainer",
 	},
@@ -4915,7 +4242,7 @@ _addon.data = {
 	},
 },
 ["Hallowed Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60751},
 	["pages"] = {
 		"The way of the priest is a new one for our people, but it draws on the ancient traditions of our seers. In your lessons, you will learn the wisdom of the Earthmother as illuminated by the Light. Meet with me in the circle at the center of Camp Narache and we will begin your lessons.\n\nSeer Ravenfeather",
 	},
@@ -4924,7 +4251,7 @@ _addon.data = {
 	},
 },
 ["Hallowed Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9556},
 	["pages"] = {
 		"With the Holy Light warmin' our backs and new discoveries being made every day, 'tis an exciting time to be one of Ironforge's &lt;sons/daughters&gt;. The Explorer's League makes headway every day in its search for long-lost answers to even older questions. And now we have you among our faithful to aid in the battle against the troggs and any other threat to our borders.\n\nFind me when ya have the time. I'll be in the back of Anvilmar, just up the hill. \n\n- Branstock Khalder, Priest Trainer",
 	},
@@ -4933,7 +4260,7 @@ _addon.data = {
 	},
 },
 ["Hallowed Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9569},
 	["pages"] = {
 		"Feel blessed that your spirit was not released to the Nether, &lt;name&gt;. Feel even more blessed that I decided you were worth the effort to write this scroll for.\n\nThe people you once knew, perhaps even cared for, are no longer! You must learn to \"live\" with that for the rest of your now unnatural life. I suggest you learn to deal with that first.\n\nIf you think you're ready for the trials ahead, then seek me out in the church in Deathknell.\n\n- Dark Cleric Duesten, Priest Trainer",
 	},
@@ -4942,7 +4269,7 @@ _addon.data = {
 	},
 },
 ["Hallowed Sigil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9557},
 	["pages"] = {
 		"I hope this sigil finds you well, &lt;name&gt;. The spirits told me of your coming and I sent word immediately. I look forward to sharing my experiences with you, and helping guide you as you prepare to leave Teldrassil for more important matters.\n\nWith all that has happened in the last few years, there is much we can do to aid the other races of Azeroth. When you are ready, find me inside Aldrassil, on the second level.\n\n-Shanda, Priest Trainer",
 	},
@@ -4951,7 +4278,7 @@ _addon.data = {
 	},
 },
 ["Hastily Written Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 45546},
 	["pages"] = {
 		"Durak,\n\nThis &lt;race&gt; has assisted me in collecting enough fel fire to launch an assault on the elves.\n\nThe projectiles will be devastating - but impossible to control. I need a way to direct their trajectory.\n\nI'm sure to be forgiven for meddling with demonic powers once Splintertree is saved...\n\nDraaka",
 	},
@@ -4960,7 +4287,7 @@ _addon.data = {
 	},
 },
 ["Hildelve's Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 3117},
 	["pages"] = {
 		"Day 1\n\nMy tank is broken, but I know the chiron ore is in these hills somewhere. I told Hammerfoot to stay and watch our tanks.\n\nI'm continuing the search alone. If I don't make it back, then this journal is my last testament.\n\n--Buron Hildelve, Pilot\nIronforge Steam Brigade",
 		"Day 2\n\nMy search continues, and no ore. I'm wondering if Stonegear was just making up the rumor of that ore as a joke. Well if he did then he's getting a cracked skull when I get back to Steelgrill's Depot!\n\nTonight as I prepared my camp, I heard a growl echoing through the canyons. \n\nIt isn't a wolf. It may be a bear.",
@@ -4974,7 +4301,7 @@ _addon.data = {
 	},
 },
 ["Horde Missive"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 86067},
 	["pages"] = {
 		"Enough frolicking around, &lt;name&gt;!\n\nHave you forgotten our directive?\n\nFinal preparations must be made for our offensive, and I need you here.\n\nPut an end to whatever distractions you're engaged in and return to Grookin' Hill at once.\n\n- General Nazgrim",
 	},
@@ -4983,7 +4310,7 @@ _addon.data = {
 	},
 },
 ["Illidari Lord Balthas' Instructions"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 32823},
 	["pages"] = {
 		"In the name of our great master... For the glory of Illidan!\n\nThe common components for the soul cannon are obtained through various trades. Engineers and miners should be able to provide you with the felsteel bars, khorium power core and adamantite frame.\n\nFor the flawless arcane essence you must travel to Terokkar Forest. In the center of the forest, above the Horde outpost of Stonebreaker Hold, you will find the home of Sar'this, an arakkoa heretic. The area is known as Lake Jorune.\n\nSpeak with Sar'this and tell him what it is that you seek. Be certain to mention that I sent you as he owes me a favor or two.\n\nDo as Sar'this asks and you should have the essence.\n\n-Balthas",
 	},
@@ -4992,7 +4319,7 @@ _addon.data = {
 	},
 },
 ["Illidari Service Papers"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 32469},
 	["pages"] = {
 		"In the name of our great master... For the glory of Illidan!\n\nMor'ghor,\n\nI send this wretch to you now as a servant of Illidan. While he has no future as a death knight, you may find that he has skills suitable to your liking. Beat him into submission. Shape him into a warrior of the Illidari. \n\nAnd should he fail... Should he show weakness... Discard him. To the pits!\n\nLord Teron Gorefiend",
 	},
@@ -5001,7 +4328,7 @@ _addon.data = {
 	},
 },
 ["Ironband's Progress Report"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2637},
 	["pages"] = {
 		"Honorable Colleagues and Truthseekers\n\nThe site's excavation continues, but it is slowed by the Troggs mentioned in my last report. I am confident they can be dealt with, even if some of these Troggs are more aggressive than usual.\n\nMore artifacts were found recently, though in all cases but one (which I will discuss below), recent findings are of the same caliber as before - interesting, if not enlightening.",
 		"There has been one exception. The peculiarly carved idols found recently (a brief description of these was included in my last report) seem to have an effect on the Troggs at the site. They are drawn to the stone carvings, and some Troggs are driven berserk by them!\n\nMore study is required for any conclusions regarding these idols, but I remain hopeful that they will shed light on a link between the Troggs and the Titans.",
@@ -5012,7 +4339,7 @@ _addon.data = {
 	},
 },
 ["Jubeka's Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 92471},
 	["pages"] = {
 		"Jubeka's Journal\n\nThis document contains the daily journal of one of the master Warlock trainers. The pages are filled with random notes, the occasional drawing of an imp's internal organs and the occasional tidbit on the preferred diet of felhunters.\n\nNear the end, an entry catches your eye...",
 		"Day 26:\n\nIt has been nearly two weeks since Kanrethad and I arrived in Outland. Almost immediately afterwards, he departed for Shadowmoon Valley. I didn't bother to ask why, as long as he doesn't get himself killed. \n\nMy research here in this dusty wasteland continues as drudgingly expected. While the Legion's onslaught has subsided, a number of the rarer demon specimens remain.",
@@ -5032,7 +4359,7 @@ _addon.data = {
 	},
 },
 ["Legacy of the Masters (Part 1)"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 83078},
 	["pages"] = {
 		"Read, pupil, and know that I am called Jubeka Shadowbreaker, and it is my duty to share some of the wisdom of our order with those who have the skill to read this document.\n\nAfter the fall of Deathwing, it was clear that the sorcery of the warlocks was sorely lacking in bite when compared to the threats facing Azeroth. So our council of six warlocks gathered to discuss how best to investigate the new magics witnessed by these threats.",
 		"At first, the six of us refused to cooperate, tossing blame and bickering as easily as shadowbolts and curses. Finally, after several nights, the human Kanrethad spoke out:\n\n\"In the wake of the Cataclysm, the rising tensions between the Horde and Alliance have driven the greatest heroes of Azeroth to train for war. Warriors have readied their war banners, the Death Knights of Acherus have learned to control the undead and it is even said the Mages are researching ways to undo time itself.\"\n\n\"The relentless darkness which bathed Azeroth has been pushed back. Cho'gall is slain and the remnants of the Twilight's Hammer cult have been scattered. Ragnaros is defeated and his armies forced back into the Firelands. Deathwing lies torn apart and his Twilight drakes obliterated. However, the powers they commanded are not so easily forgotten... powers untapped and ripe for the taking.\"",
@@ -5048,7 +4375,7 @@ _addon.data = {
 	},
 },
 ["Legends of the Gurubashi, Volume 3"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 3899},
 	["pages"] = {
 		"LEGENDS OF THE TROLLS, VOLUME III\nStone of the Tides\n\nBy the hand of\nArchmage Ansirem Runeweaver\nDalaran\n\nINTRODUCTION\n\nThe ancient Gurubashi Empire was a source of many fascinating and intriguing legends that can be no doubt traced to their environs, as examinations of their belief systems and societal practices have pointed to a great reverence for their natural surroundings.\n\nWhile I have delved into many",
 		"aspects of their snake-worship in previous volumes of this study, I put forth here an examination of the trolls' interesting and unique relationship with the sea.\n\n\nTHE GREAT SEA\n\nThe Gurubashi Empire was surrounded on three sides by the sea, so it comes as little surprise that water would figure prominently as an aspect of their society. While the trolls were able to roam and control the large areas of their jungle empire, the sea eluded them. It was vast and immeasurable, no",
@@ -5067,7 +4394,7 @@ _addon.data = {
 	},
 },
 ["Letter from Lor'themar Theron"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 23929},
 	["pages"] = {
 		"Esteemed leaders of the Horde,\n\nIt is with great pleasure that I - Lor'themar Theron, Regent Lord of Quel'Thalas - announce the fall of the Scourge commander known to us as Dar'Khan Drathir.\n\nDar'Khan's foothold in our lands was brought up by critics of the sin'dorei race at numerous previous negotiations. We hope this event addresses any and all previous objections your graces might have harbored.\n\n&lt;Signed&gt;Lor'themar Theron",
 		"\n\nPS - Our grand magister has received word back from Outland regarding Thrall's question. The answer is, with great certainty, yes.",
@@ -5077,7 +4404,7 @@ _addon.data = {
 	},
 },
 ["Letter from Saurfang"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 35941},
 	["pages"] = {
 		"&lt;name&gt;,\n\nIf you are reading this letter then you are alive and in one piece - or at least you still have your eyes.\n\nI must apologize for the secrecy. Agmar demands that all mail is read before delivery - too many traitors and thieves there, as the wanted poster no doubt displays. There are delicate matters herein that could easily be misconstrued by the new guard.\n\nFor a soldier of the Horde, loss is absolute. Loss means death and there is no negotiation or interpretation with death. One can only hope that the manner of their death was honorable.",
 		"But victory... Victory can mean many things. As you have probably noticed, the Kor'kron are there in full force. The Warchief has sent his elite guard to help secure victory in Northrend. They, along with you and other heroes, are pushing the Lich King and his forces towards an inevitable conclusion. With each challenge you overcome, we are one step closer to ridding our world of Arthas and the Scourge.\n\nAnd therein lays the dilemma. For you see, our forces in Northrend work under the auspices of young Hellscream. Each victory bolsters the morale of the Horde forces here, which carries through to the rest of Azeroth.",
@@ -5088,7 +4415,7 @@ _addon.data = {
 	},
 },
 ["Letter of Introduction to Wyrmrest Temple"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 36832}, -- 36833
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
 		"My queen,\n\nIt has been discovered that the ley line intersection at Moonrest Gardens was unfettered by the blue dragonflight. Their forces used a surge needle to destroy the capstone, but instead of flowing the power back to the Nexus, they utilized a series of foci to clumsily run and augment the power under the land to the Azure Dragonshrine.\n\nNeedless to say, this has had dire consequences wherever the magic shot up through the ground. The Ancients of the woodlands, the Kalu'ak, and other creatures in the region have been adversely affected. Luckily for us, &lt;name&gt;, the &lt;race&gt; who stands before you, was instrumental in tracking down and dealing with all of these problems.\n\nIn my opinion, &lt;name&gt; could be a great asset to Wyrmrest in helping to deal with the problems that the temple currently faces. I humbly ask that you consider &lt;him/her&gt; a resource, one which I found to be invaluable.\n\nYours ever respectfully,\n\nModera\nArchmage and Member of the Six",
@@ -5104,7 +4431,7 @@ _addon.data = {
 },
 
 ["Letter Sealed by Sylvanas"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 23930},
 	["pages"] = {
 		"Esteemed leaders of the Horde,\n\nIt is with great pleasure that I - Lor'themar Theron, Regent Lord of Quel'Thalas - announce the fall of the Scourge commander known to us as Dar'Khan Drathir.\n\nDar'Khan's foothold in our lands was brought up by critics of the sin'dorei race at numerous previous negotiations. We hope this event addresses any and all previous objections your graces might have harbored.\n\n&lt;Signed&gt;Lor'themar Theron",
 		"PS - Our grand magister has received word back from Outland regarding Thrall's question. The answer is, with great certainty, yes.\n\n&lt;This letter bears the additional seal of Lady Sylvanas Windrunner&gt;",
@@ -5114,7 +4441,7 @@ _addon.data = {
 	},
 },
 ["Letter to Ello"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 1637},
 	["pages"] = {
 		"The letters on this note seem to flicker and dance across its surface. It is impossible to glean meaning from them...",
 	},
@@ -5123,7 +4450,7 @@ _addon.data = {
 	},
 },
 ["Magister Duskwither's Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 21783},
 	["pages"] = {
 		"It is my fervent hope that through my research I may find a supplemental source of magical energy that will be safe for my people. With the Sunwell gone, we must find a way to continue our way of life without succumbing to the lure of arcane magic.\n\nI believe the future of the sin'dorei can once again serve as a shining example to all!",
 		"No luck yet. What little magic I have ready access to must be channeled through the Spire. I do have a number of intriguing ideas though. I will set my brightest apprentices to following these paths of inquiry, and see what we come up with.",
@@ -5139,7 +4466,7 @@ _addon.data = {
 	},
 },
 ["Marshal McBride's Documents"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 745},
 	["pages"] = {
 		"REPORT: Kobolds\n\nThe activity of kobolds has decreased in Northshire Valley. All kobolds were driven off by the rampaging Blackrock orcs.",
 		"REPORT: BLACKROCK ORCS\n\nAn invasion force of Blackrock orcs has emerged in the valley. This attack seems to be a precursor to something far more insidious. Warn Magistrate Solomon of Lakeshire.",
@@ -5150,7 +4477,7 @@ _addon.data = {
 	},
 },
 ["Maybell's Love Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 1208},
 	["pages"] = {
 		"Tommy Joe -\n\nWith each passing hour, my heart withers from your absence. Oh, if only our folks could see beyond the silly crimes they have done to each other, and know that the only true crime is hate. Hate consumes, and I fear in these dimming times that hate will take hold of more than just our families.\n\nIf they realized this then we could, at long last, be together. It is for that day I hope, and for that day I live.\n\nYour love,\nMaybell",
 	},
@@ -5159,7 +4486,7 @@ _addon.data = {
 	},
 },
 ["Morris's Order"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 16209},
 	["pages"] = {
 		"By order of Executor Zygand, below are the items deemed necessary in order to maintain the stock of Brill:\n\n12 Long swords\n9 Daggers\n8 Round Shields\n15 Axes\n1000 Arrows\n\nFulfillment of this order is to be considered a direct command of the Dark Lady, and those responsible will be brought to Her attention, as will any who oppose or otherwise hamper Her wishes.",
 	},
@@ -5169,7 +4496,7 @@ _addon.data = {
 	},
 },
 ["Netherologist's Notes"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 28359},
 	["pages"] = {
 		"&lt;After a number of pages of mind-numbing 'science' that seem to make absolutely no sense, there is a note scribbled at the bottom of the last page....&gt;\n\nSorry, boss. It looks like the Netherstorm's gonna blow pretty soon. It'll probably take most of the rest of Outland with it.\n\nI'm not 100% certain, but I think the problem is related to whatever those blood elves are doing at the mana forges.\n\n Good thing you're building that rocket!\n\n-- Coppernickels\n\np.s. - do you think I could get a seat on the rocket? You're certain to need a netherologist while you're crusing through the Twisting Nether!",
 	},
@@ -5178,7 +4505,7 @@ _addon.data = {
 	},
 },
 ["Nitrin's Instructions"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 28664},
 	["pages"] = {
 		"To grant the imbiber of the tincture vision to see the dead, certain material components must be gathered.\n\nFirst, an eyeball from the mountain gronn of western Nagrand, near the cursed forge camps of the Burning Legion, south of Warmaul Hill.\n\nAlso found in western Nagrand are the greater windrocs. Only a flawless specimen will do!\n\nLastly, from both western and southwestern Nagrand is the blubber from the aged clefthoof.\n\nGather these items and return them to me! Make haste!\n\n-Nitrin",
 	},
@@ -5187,7 +4514,7 @@ _addon.data = {
 	},
 },
 ["Orders From Drakuru"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 41262},
 	["pages"] = {
 		"Minions be hearin' da call of your masta! Da Lich King be givin' Drakuru full control of da armies of da Scourge in Zul'Drak. We be commanded ta kill everyting.\n\nEVERYTING MUST DIE!\n\nWe be processin' all da corpses in da Dead Fields and sendin' em up ta Prince Navarius' crew in Zeramas for Scourgin'! Notin' goes ta waste on Drakuru's watch!\n\nSoon we be drinkin' da blood of da prophets ta become stronger dan eva before! Zul'Drak and Gundrak gonna fall to da Scourge!",
 	},
@@ -5197,7 +4524,7 @@ _addon.data = {
 	},
 },
 ["Orion's Report"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 28024},
 	["pages"] = {
 		"General,\n\nWe're holding the line at the Stair of Destiny, but the Legion sends wave after wave to assault our ranks. They must have a staging area nearby that our scouts have yet to locate. Though the Alliance forces here stand by our side, I fear the Legion's superior numbers will overrun our defenses. Send what help you can, lest the Portal fall - and we become trapped in this nightmare world forever.\n\nLieutenant General Orion",
 	},
@@ -5207,7 +4534,7 @@ _addon.data = {
 	},
 },
 ["Pandaren Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 76761},
 	["pages"] = {
 		"Well done, stranger.\n\nBy befriending the hozen, it is clear that you have followed the path I set you upon when last we spoke.\n\nBe diligent in your meditations, and perhaps our land will reveal other secrets to you as well.\n\nI invite you to join me in our village of Dawn's Blossom. Many of my people will be thrilled to meet one from outside the mists.\n\n- Lorewalker Cho",
 	},
@@ -5216,7 +4543,7 @@ _addon.data = {
 	},
 },
 ["Partially Soaked Pages"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 73410},
 	["pages"] = {
 		"&lt;Most of the pages are soaked in water. You can make out a few passages.&gt;",
 		"The battle is more fearsome than I could have imagined.\n\nAll around us, I hear the booming of Horde artillery.\n\nTheir shells rain upon the deck above, and the screams of the crew are drowned out only by the roar of return fire.\n\nAdmiral Taylor bade me hide here, in the hold, until the fighting ceases.\n\nThey have posted guards outside my door.\n\nI feel restless. I should be out there, helping them!",
@@ -5229,7 +4556,7 @@ _addon.data = {
 	},
 },
 ["Peeling the Onion"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 19483},
 	["pages"] = {
 		"Peeling the Onion\nThe How-to Guide On Dismantling the Stormpike \n-By Drek'Thar\n\nWithin these pages you will find a wealth of knowledge on battle tactics and politics. The learned soldier is the soldier that leans on the shoulder of experience. Let this book serve as a guide in your battle for Alterac Valley.",
 		"Chapter 1 - The Front Line\n\nDismantling the Stormpike army is very much like peeling an onion. To get to the core, you must start by removing the outermost layers.\n\nThe front lines, comprised mostly of Stormpike Mountaineers and Alliance Sentinels, are tied to the Captain's bunker. It is Captain Balinda Stonehearth who empowers these units and provides for reinforcements when the lines are under siege. Strike at the Captain and the front line forces will crumble.",
@@ -5245,7 +4572,7 @@ _addon.data = {
 	},
 },
 ["Recruitment Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 4992},
 	["pages"] = {
 		"Horde Conscription Registration\n\nThis person has demonstrated incredible feats of strength and skill in the name of the Horde. They should immediately be assigned to work in the Crossroads.\n\nRespectfully yours,\nTakrin Pathseeker",
 	},
@@ -5254,7 +4581,7 @@ _addon.data = {
 	},
 },
 ["Reliquary Papers"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 57196},
 	["pages"] = {
 		"To Whom It May Concern:\n\nRohan Sunveil, a Reliquary member in high standing and leader of the Sunveil Excursion, seeks able-bodied adventurers to assist him in an archaeological study in the southern Blasted Lands. Participants will be compensated for their work.\n\nThe Sunveil Excursion is focused on the acquisition, cataloguing, and preservation of any and all magical artifacts found in the Tainted Forest region. Formerly known as the Tainted Scar, the area has recently been rejuvenated by a worgen druid, and is mostly covered with trees and brush. For further details, please contact Rohan or Clarya Sunveil.",
 	},
@@ -5263,7 +4590,7 @@ _addon.data = {
 	},
 },
 ["Rune-Inscribed Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9552},
 	["pages"] = {
 		"I greet you, young &lt;class&gt;. The winds told me of your coming. The earth gave praise of your strength. And now the ancient spirits whisper of your accomplishments to come. Our people always need wise and great leaders. They often turn to our kind for both virtues. If you are willing, I would teach you more of our ways.\n\nSeek me out in Camp Narache on Red Cloud Mesa--we will speak more then.\n\n-Meela Dawnstrider, Shaman Trainer",
 	},
@@ -5272,7 +4599,7 @@ _addon.data = {
 	},
 },
 ["Rune-Inscribed Parchment"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9568},
 	["pages"] = {
 		"Lok'tar, &lt;brother/sister&gt;. The elements beckon you closer and bid me to show you the path of the shaman. The spirits of our ancestors watch from beyond and swell with pride knowing you have joined our ranks.\n\nWhen you are ready, seek me out near the entrance to the Den. It is there that I will be training others of our kind. Until then, may the wind be at your back.\n\n-Shikrik, Shaman Trainer",
 	},
@@ -5281,7 +4608,7 @@ _addon.data = {
 	},
 },
 ["Scroll of Auspice"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 84586},
 	["pages"] = {
 		"When the horror comes a-rising\nAnd the heavens hum with war\nOur great vessel of salvation\nMust be broken from its core.\n\nRending daggers of the great ones\nShall be bound with wood and shade\nIf the fiery wings of sunset kings\nAre ever to be stayed.",
 		"Incantations fae and primal\nBought on promises of gold\nBind the glamour to the thing\nThat quenches fires and fears of old\n\nComprehend this sacred recipe\nPerform it as I've penned\nDrive its fruit through Blood of Ancients\nAnd your terror-war shall end.",
@@ -5291,7 +4618,7 @@ _addon.data = {
 	},
 },
 ["Sealed Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 93019},
 	["pages"] = {
 		"&lt;name&gt;,\n\nFirst, I would like to apologize for the cryptic note - but discretion is imperative.\n\nAs past events have taught us, others in the Horde may act without proper planning, or restraint. \n\nWe plan to move first towards our next objective and avoid further pointless losses.\n\nYou have shown yourself to be a highly skilled and reliable ally. We would like to invite you to join us - as soon as possible - at the Valley of the Emperors in Kun-Lai Summit.\n\nWe hope you will meet us with all due haste.\n\n-A Friend from Silvermoon",
 	},
@@ -5300,7 +4627,7 @@ _addon.data = {
 	},
 },
 ["Senir's Report"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2628},
 	["pages"] = {
 		"A Report on the State of the Frostmane Trolls in the General Area of Dun Morogh\n\nThe trolls situated in Dun Morogh are largely centralized in Frostmane Hold, a mountain cave on the western border. They have sufficient numbers to cause some concern, however, they seem more than content to stay in their cave. This is, no doubt, because they do not wish to incur the wrath of the dwarves again, and risk total extermination. Their actions can be considered territorial, if anything, and it is",
 		"my belief that they pose no real threat to us, so long as we do not encroach upon their territory. This may be a situation unappealing to the dwarven populace, but given the dispersal of military resources, it may be prudent to relegate the extermination of the trolls to a lower level of importance, and continue to focus on the threat posed by the troggs and the Dark Irons.\n\nEnclosed, you will also find a copy of my brother Grelin's report on Anvilmar.\n\nSigned,\nSenir Whitebeard",
@@ -5312,7 +4639,7 @@ _addon.data = {
 	},
 },
 ["Simple Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9542},
 	["pages"] = {
 		"Tell me, &lt;class&gt;, have you heard an orc scream yet? Perhaps defended your home from gnolls as they seek to tear your throat out? Yeah, sounds harsh, doesn't it?\n\nWell, you're gonna need my help if you want to protect your loved ones. You'll find me inside the abbey in Northshire. My knowledge doesn't come cheap, but if you're experienced enough, I can give you training that will help you fight off the threats to Stormwind and beyond.\n\nLlane Beshere, Warrior Trainer",
 	},
@@ -5321,7 +4648,7 @@ _addon.data = {
 	},
 },
 ["Simple Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9547},
 	["pages"] = {
 		"Many tribes claim that it is a gift to be blessed with the aptitude to use magic or to talk to our ancestors, but you should know this as well, &lt;class&gt;, you are just as gifted. Some do not have the strength in their arms to wield mighty weapons. Some do not have the skill to parry a blow from an assassin, or to even suffer the physical punishments from an arcane spellcaster, but you do. You are strong. And I will help you become stronger. Find me in Camp Narache.\n\n-Harutt Thunderhorn, Warrior Trainer",
 	},
@@ -5330,7 +4657,7 @@ _addon.data = {
 	},
 },
 ["Simple Parchment"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 12635},
 	["pages"] = {
 		"Throm-Ka, warrior. I won't fawn over your deeds of strength and valor. They're old news. Killed any humans lately? Not many, I wager. You're slowing down. Getting soft without a challenge.\n\nI need another pair of hands, and no matter what your toadies say, you need the training I can give you. Whenever you get that through your thick skull, I'll be waiting under the canopy just outside the Den.\n\n-Frang, Warrior Trainer",
 	},
@@ -5339,7 +4666,7 @@ _addon.data = {
 	},
 },
 ["Simple Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9543},
 	["pages"] = {
 		"By Magni's beard, there's much to discuss, and little time to do it, &lt;name&gt;. Find me in Anvilmar overlooking Coldridge Valley as soon as you can. We gotta get started.\n\nThere's a mess of things I can tell you about to get you caught up to speed, but all that's got nothing to do with us... for now. What we need to focus on is the grip of an axe, the weight of our armor, and the smell of our own sweat beadin' down our foreheads as we fight our enemies. We'll start with that.\n\n-Thran Khorman, Warrior Trainer",
 	},
@@ -5348,7 +4675,7 @@ _addon.data = {
 	},
 },
 ["Simple Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9546},
 	["pages"] = {
 		"Many of our kind resort to the arcane and divine as a means to give themselves strength, but we know better, don't we, &lt;class&gt;? We know that our weapons are our holy symbols, our shield is our spell book, and our mail is our wisdom.\n\nEven in undeath we are strong, and we will only become stronger.\n\nFind me in the inn in Deathknell. I will speak to you more of these matters and other things.\n\n-Dannal Stern, Warrior Trainer",
 	},
@@ -5357,7 +4684,7 @@ _addon.data = {
 	},
 },
 ["Simple Sigil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9545},
 	["pages"] = {
 		"I hope my sigil finds you well, &lt;class&gt;. I write to you because our people have need for those strong with the blade, the glaive, and all other weapons. So much has happened since our people have been reintroduced to the other races of Azeroth that we have an even greater need for protectors of all kinds.\n\nThis is where you come in. I would tell you more, but I feel it should be in person. Find me inside Aldrassil... on the lower levels.\n\n-Alyissia, Warrior Trainer",
 	},
@@ -5366,7 +4693,7 @@ _addon.data = {
 	},
 },
 ["Sister Aquinne's Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 16263},
 	["pages"] = {
 		"Nyoma,\n\nYou can't imagine how surprised I was to receive the recipe book! Everything you included is just as I remember from home. I can't wait to try out the new recipes.\n\nWhen you have some time, you should come visit me in Darnassus. I'll even cook for you!\n\nYour friend,\nAquinne",
 	},
@@ -5376,7 +4703,7 @@ _addon.data = {
 	},
 },
 ["Splintertree Post Report"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 46091},
 	["pages"] = {
 		"Grimfang,\n\nI report to you from Splintertree, and the news is unpleasant.\n\nThe post was recently attacked by the kaldorei, which prevented any reports from being delivered.\n\nThe siege has been broken, but many were lost and another attack looks imminent.\n\nWe shall continue sending elves to their graves as long as fate permits.\n\n- Kadrak",
 	},
@@ -5385,7 +4712,7 @@ _addon.data = {
 	},
 },
 ["Spy's Report"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 5917},
 	["pages"] = {
 		"--Day 13\nTroop movement near Theramore has increased. Large numbers of humans left the city and move west, in haste.\n\n--Day 14\nMore troops leaving the city. I followed a small group and watched them remove their uniforms after leaving bowshot of Theramore. Perhaps they are deserters?\n\n--Day 15\nI overheard some Theramore troops talk today of guards leaving their posts. My suspicions of the deserters must be true",
 		"--Day 16\nUleg and Thargil returned from their mission to the Theramore docks. They saw a new ship in port: the Bleeding Sparrow. The ship arrived from Menethil Harbor in Azeroth.\n\nTomorrow Uleg and Thargil will return to the docks and steal aboard the ship. They hope to find political documents, ones that reveal the relations between Theramore and the Alliance.",
@@ -5398,7 +4725,7 @@ _addon.data = {
 	},
 },
 ["Stormpike's Request"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 5998},
 	["pages"] = {
 		"Master Longbeard,\n\nAs you know, we Stormpikes have an eye for excellence, and so the quality of your shields is no mystery to us.\n\nI, therefore, am keen to commission you for such a shield. I have included specifications on the following page:",
 		"-Perfectly round, spanning from fist to elbow.\n\n-Studs along the edge. Silver.\n\n-One large stud in the center, spanning three finger widths. Silver.\n\n-Oaken, and reinforced with iron.\n\n-My name, Gringer Stormpike, etched across the top rim.",
@@ -5409,7 +4736,7 @@ _addon.data = {
 	},
 },
 ["Stormwind Armor Marker"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 748},
 	["pages"] = {
 		"This Armor Marker is good for one piece of leather or cloth armor, redeemable at the Timberlain household within the Eastvale Logging Camp.",
 	},
@@ -5418,7 +4745,7 @@ _addon.data = {
 	},
 },
 ["Tainted Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9576},
 	["pages"] = {
 		"Too often people like the followers of the Holy Light scare those curious about true power into thinking they cannot investigate any form of the arcane--not all things from outside this world are evil. Not all entities seek to dominate or subjugate others. If you are powerful enough, those same entities can become the followers.\n\nThis is something I would like to discuss more with you. Seek me out in the graveyard on the right side of the abbey.\n\n-Drusilla La Salle, Warlock Trainer",
 	},
@@ -5427,7 +4754,7 @@ _addon.data = {
 	},
 },
 ["Tainted Parchment"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9579},
 	["pages"] = {
 		"I write this message in the most powerful inks I can create, &lt;name&gt;. It would instantly curse anyone who would dare read it besides yourself. I am that powerful. I summon demons from the Twisting Nether at my leisure. I plague my enemies in their sleep and in the field of battle. And now you too have seen the power of my path. My brothers are pleased by that.\n\nSeek me out near the entrance to the Den once you've found your way around. I would speak to you about important matters.\n\n-Nartok, Warlock Trainer",
 	},
@@ -5436,7 +4763,7 @@ _addon.data = {
 	},
 },
 ["Tainted Rune"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9577},
 	["pages"] = {
 		"ATTENTION:\n\nRemain Silent! Don't look around at anyone! Someone could be watching you this very moment.\n\nMy name is Saripal Smolderbrew, &lt;name&gt;. I train those willing to seek knowledge and greater power from... worlds beyond. I've been asked to get in touch with you discretely and inform you that I can train you further in a real form of magic.\n\nWhen you can, come find me in the back of Anvilmar.\n\n-Saripal Smolderbrew, Warlock Trainer",
 	},
@@ -5445,7 +4772,7 @@ _addon.data = {
 	},
 },
 ["Tainted Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9578},
 	["pages"] = {
 		"An awful predicament to find ourselves in, isn't it, &lt;name&gt;? Plagued by the Foul Prince. Ostracized and spurned by our own loved ones. We finally have our own will thanks to the beautiful Sylvanas, but what does that afford us now? Slaves to a different master is still a slave, or so I say.\n\nBut what if we were the masters? Yes, you know what I mean, don't you?\n\nWe are even more separated from the rest of the Forsaken, &lt;name&gt;. And that is why we must speak further. Find me in the church in Deathknell.",
 	},
@@ -5454,7 +4781,7 @@ _addon.data = {
 	},
 },
 ["The Baroness' Missive"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 61377},
 	["pages"] = {
 		"Karthis, Omasum,\n\nThe time has come for the ritual of which we spoke. I will be leaving Stratholme to deal with the prisoner in Plaguewood's central slaughterhouse. Make certain that security is tight. Fail, and my lord will have both of your heads. Succeed, and you will have a new dwarven brother to join your ranks.\n\n- Anastari",
 	},
@@ -5463,7 +4790,7 @@ _addon.data = {
 	},
 },
 ["The Battle for Hillsbrad"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 63249},
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Journal of Clerk Horrace Whitesteed</H1><BR/><H1 align=\"center\">The Battle for Hillsbrad</H1></BODY></HTML>",
 		"Day 12\n\nWe just received word that Southshore has been lost. The Forsaken war machine is too powerful. We are no match for their chemical weapons.\n\nI will attempt, however futilely, to keep this journal updated. I must record these atrocities for posterity.",
@@ -5486,7 +4813,7 @@ _addon.data = {
 	},
 },
 ["The Collector's Schedule"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2223},
 	["pages"] = {
 		"Below is the process and schedule of gold collection from the mines of Elwynn.\n \nCollection Schedule:\n\nSunday: 12:30pm\nWednesday: 12:30pm\n\nBy each specified day, gold gained from the Elwynn mines will be gathered at the Brackwell pumpkin patch. The agent in charge of these gatherings, \"The Collector,\" will be known by the engraved ring he possesses.",
 	},
@@ -5495,7 +4822,7 @@ _addon.data = {
 	},
 },
 ["The Durnholde Challenge"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 64666},
 	["pages"] = {
 		"Zephyrus, minion of Al'Akir\n\nResides in the ruins of the barracks.",
 		"Teracula, minion of Therazane\n\nWalks the path outside of the old barracks.",
@@ -5508,7 +4835,7 @@ _addon.data = {
 	},
 },
 ["The Feast of Winter Veil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 17735},
 	["pages"] = {
 		"The Feast of Winter Veil\n\nThe later seasons of Azeroth are marked as a time of change in many cultures. The dwarves and the tauren especially look to a legend of the coming Winter Veil - the blanketing of the land in snow, thus heralding a time of renewal - as a time for celebration. Though the understanding of the legends that the races of Azeroth share are not dissimilar, the ways they choose to acknowledge them are as diverse as the races themselves.",
 		"The Legend of Greatfather Winter\n\nThe term \"Winter Veil\" is said to stem from a supernatural being referred in many cultures to as Greatfather Winter. As he would walk the land late in the seasons, winter itself would be his billowing cloak. In his wake was the blanketing of the land in snow, and thus it is said that Greatfather Winter would cast his wintry veil over the land. Though parts of Azeroth may lie in snow, it gives the land time for rebirth and renewal.",
@@ -5523,7 +4850,7 @@ _addon.data = {
 	},
 },
 ["The Frostwolf Artichoke"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 19484},
 	["pages"] = {
 		"The Frostwolf Artichoke: Tales of Stormpike Glory\n-By Vanndar Stormpike\n\nWhat is Frostwolf? The answer is simple: The Frostwolf are savages trying to halt our sovereign imperialistic imperative.\n\nMuch like an artichoke, the Frostwolf have a prickly, shielded set of defenses and much like an artichoke, once the outer layer is peeled away, the heart is exposed, ready to be eaten with a fine garlic dip.\n\nDelicious!",
 		"Chapter 1 - The Front Line\n\nThe front lines of the Frostwolf defenses are comprised of Frostwolf Warriors. The warriors are deployed to the front lines from Captain Galvangar's fortress: Iceblood Garrison. The most efficient manner in which to take out this layer of the defenses is to destroy Iceblood Garrison.\n\nLay siege to the fortress and destroy Captain Galvangar. Once this is done, the front lines will crumble.",
@@ -5537,7 +4864,7 @@ _addon.data = {
 	},
 },
 ["The Horde's Hellscream"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 20010},
 	["pages"] = {
 		"His name will not die.\nHis sacrifice will always\nserve to show the way.\n\nShackles once that choked\nthe inhale of honor's breath\nno longer bind us.",
 		"Can you hear his scream?\nA battle wail for the Horde:\nVictory or death!\n\nWe must remember\nhis strength in the face of death.\nHis dream, now made real.",
@@ -5548,7 +4875,7 @@ _addon.data = {
 	},
 },
 ["The Legend of Stalvan"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 59362},
 	["pages"] = {
 		"To the Honorable Headmaster Crillian,\n\nMy former Master, I write to you so that you might know what your apprentice has been doing of late. Paying heed to your advice, I sought to build my knowledge and wisdom through travel outside the gates of our beloved Stormwind. My journeys took me to many places but I have decided to take up residence here in the lovely town of Moonbrook. The surrounding fields of Westfall are most beautiful as the harvest approaches.",
 		"Within just a few days of my visit I found myself tutoring the local children from the nearby farmlands. The lessons went so well that the town mayor commissioned me to run a school and construction has begun on a brand new schoolhouse! From Silverpine to Stormwind and now Moonbrook -- who would have guessed I would see so much of Azeroth!\n\nWarm regards,\n\nStalvan Mistmantle",
@@ -5565,7 +4892,7 @@ _addon.data = {
 	},
 },
 ["The Legend of the Horn"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 34960},
 	["pages"] = {
 		"Long had the tale of the Horn of Elemental Fury been told at the campfires of the taunka. Generations of warriors grew up hearing the stories and sought the horn's hiding place in vain. Like the others, mighty Stormhoof vowed to seek the horn, leaving behind his village and his family.\n\nBraving the biting cold and fierce elementals of Frostblade Peak, Stormhoof climbed the mountain alone. Upon reaching the summit, Stormhoof was greeted by the North Wind itself. Knowing the wind would not give up the horn without a fight, the mighty warrior issued his challenge.",
 		"For five days, Stormhoof struggled against the wind. As the sixth day dawned, he banished the wind from Frostblade Peak and took possession of the horn. Battered and injured, Stormhoof departed the mountain for his village.\n\nThe North Wind gathered a host of lesser elementals and attacked Stormhoof as he neared home. The weakened warrior could not defend himself against the onslaught and the North Wind took its revenge. It broke the horn into two pieces, encased them in shiny baubles, and gave them to two powerful gorloc chieftains as tokens of their authority.\n\n&lt;The original text ends abruptly, but someone, perhaps Windtamer Barah, seems to have made an addendum below.&gt;\n\nAs they were instructed by the North Wind, the gorloc chieftains passed down these precious relics to their sons and grandsons. To this day, the horn's pieces remain with Chieftain Burblegobble and Chieftain Gurgleboggle.",
@@ -5575,7 +4902,7 @@ _addon.data = {
 	},
 },
 ["The Path of Redemption"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 39654},
 	["pages"] = {
 		"<HTML><BODY><BR/><H1 align=\"center\">The Path of Redemption</H1><BR/><IMG src=\"Interface/FlavorImages/ScarletCrusadeLogo\" /></BODY></HTML>",
 		"<HTML><BODY><BR/><P>The voice whispered, \"Come to me.\" From the very beginning I knew that it was the Holy Light speaking to me in dreams. At last! After all of my years of prayers and good deeds, the cleansing of the blight of the unliving from the face of Azeroth. After all of the failures and resurrections.</P><BR/><P>Finally!</P></BODY></HTML>",
@@ -5591,7 +4918,7 @@ _addon.data = {
 	},
 },
 ["The Story of Morgan Ladimore"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2154},
 	["pages"] = {
 		"Morgan Ladimore was a great and noble knight who fought in defense of the innocent, the poor, and the afflicted. For many years, he worked diligently throughout the outlying areas of Azeroth, bringing relief to the suffering and swift justice to evildoers.\n\nHe was married to a young girl named Lys in the summer of his eighteenth year. They were much in love with each other and would eventually produce three children, a son and two daughters.\n\nMorgan was thirty-two when war broke out in",
 		"Lordaeron. Morgan was called to the side of the legendary paladin Uther the Lightbringer to fight against the orcs and the undead. Leaving his wife and children in the safety of his home, Morgan left for war.\n\nThe years passed and the war dragged on, and Morgan would witness many horrific events, including the disbanding of the Paladins of the Silver Hand, the death of Uther and the spread of the plague. The only thing that kept him from the brink of madness was the knowledge that he would",
@@ -5609,7 +4936,7 @@ _addon.data = {
 	},
 },
 ["Time-Worn Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 103977},
 	["pages"] = {
 		"The Barnacle has been stranded in the thick mists for nine days now. The wind is dead, stagnant, almost frozen in place.\n\nWhat follows are, presumably, the last words of myself, explorer J. M. Harrington, as I have been chosen to accompany a small group of sailors on a rowboat to scout out the mists.\n\nI eagerly await the dragon-sized fish that will undoubtedly swallow our small vessel and save me from the horror of returning to a ship with only one place to relieve oneself.",
 		"Land! Glorious landfall! \n\nWe have found a small, peculiar island that does not appear to exist on any known map of the area. The sailors were jubilant, and several of the younger men immediately set out in search of the gold and riches that would surely be awaiting them in a skull-covered chest. They have not been seen in several hours.\n\nWe begin exploration immediately. If we cannot find food, we will all perish in a matter of days. Though I have my trusty hunting rifle, I fear for my safety. I do not think that humans have set foot on this island in hundreds, perhaps thousands, of years.\n\nI will do my duty as a proper explorer and document all that I see, in the hopes that someday these pages find their way into the hands of another ambitious adventurer with far more courage than sense.",
@@ -5645,7 +4972,7 @@ _addon.data = {
 	},
 },
 ["To King Varian Wrynn of the Alliance"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 43440},
 	["pages"] = {
 		"Majesty,\n\nO' merciful king, may the Light stay your hand and steady your heart. Hold your judgment upon this fallen champion - if only for a moment - and hear my words.\n\nThe bearer of this letter is a former hero of the Alliance. Though &lt;he/she&gt; carries with &lt;him/her&gt; the stench of death and the look of the Scourge, &lt;he/she&gt; has the soul of a champion. A soul that has only recently been reunited with the body.",
 		"&lt;name&gt; represents a new, united front against the Lich King known as the Knights of the Ebon Blade. Yes, majesty, death knights turned against their former master. They are led by the son of Lord Alexandros Mograine - the Ashbringer. They seek what we seek, what we all seek: the end of the Scourge.\n\nI ask not that you accept &lt;name&gt; and the Knights of the Ebon Blade into the Alliance, but only that you show tolerance.",
@@ -5656,7 +4983,7 @@ _addon.data = {
 	},
 },
 ["To the Warchief of the Horde"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 43441},
 	["pages"] = {
 		"Warchief,\n\nMighty Warchief, may the Light stay your hand and steady your heart. Hold your judgment upon this fallen champion - if only for a moment - and hear my words.\n\nThe bearer of this letter is a former hero of the Horde. Though &lt;he/she&gt; carries with &lt;him/her&gt; the stench of death and the look of the Scourge, &lt;he/she&gt; has the soul of a champion. A soul that has only recently been reunited with the body.",
 		"&lt;name&gt; represents a new, united front against the Lich King known as the Knights of the Ebon Blade. Yes, Warchief, death knights turned against their former master. They are led by the son of Lord Alexandros Mograine - the Ashbringer. They seek what we seek, what we all seek: the end of the Scourge.\n\nI ask not that you accept &lt;name&gt; and the Knights of the Ebon Blade into the Horde, but only that you show tolerance.",
@@ -5667,7 +4994,7 @@ _addon.data = {
 	},
 },
 ["Tome of Thomas Thomson"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 33277},
 	["pages"] = {
 		"Kids: Joel and Gina. Wife: Suzannah",
 	},
@@ -5677,7 +5004,7 @@ _addon.data = {
 	},
 },
 ["Trail-Worn Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 52051},
 	["pages"] = {
 		"As Forsaken, we fight against the Lich King, we fight against the Alliance... sometimes we even quarrel with the other races of the Horde. We are few, and we face great obstacles... but we will survive and prevail.\n\nAs a fellow hunter, you will do so from afar, with a bow in your hand and an animal companion at your side. Your power comes not from arcane wizardry or martial prowess, but your ability to live off the land.\n\nThe path of the hunter lies before you. It starts with me, your trainer. Where it ends... we do not know that yet.",
 	},
@@ -5686,7 +5013,7 @@ _addon.data = {
 	},
 },
 ["Translated Sunhawk Missive"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 24323},
 	["pages"] = {
 		"Declaration from the Sun King\n\nSunhawks - my precious, loyal children - your king commends you. Your presence on Azeroth is of the utmost importance to both myself and the Master.\n\nSoon, the sun portal will be ready to transport reinforcements from Tempest Keep directly to Bloodmyst Isle. \n\nWe will reclaim the Exodar. We will slay the blue skinned mongrels where they stand. Velen will pay for his crimes.\n\n-King Kael'thas Sunstrider",
 	},
@@ -5695,7 +5022,7 @@ _addon.data = {
 	},
 },
 ["Venture Co. Documents"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 4834},
 	["pages"] = {
 		"Supervisor Fizsprocket, please find enclosed a list of the equipment you have requisitioned, approved by President Razdunk.\n\nHe has asked me to remind and to emphasize to you of the Venture Company's vested interest in setting up operations throughout Kalimdor. Our drilling and mining outposts in the Barrens have proven profitable and efficient, but we still await sufficient production numbers from Mulgore, your jurisdiction.\n\nThe advisory board understands the difficulties in establishing",
 		"a large scale operation so close to the tauren homeland, but do not feel that they pose a large impediment to our overall business plan in the area.\n\nWe are pleased to hear that mining has begun in the mineral rich plains of Mulgore. Because of this the board has approved your equipment request. In addition to mining, we feel that Mulgore also has much to offer in the way of lumber, thus you will also be provided with several of our newest model shredders and raw materials to construct a mill.",
@@ -5705,7 +5032,7 @@ _addon.data = {
 	},
 },
 ["Verdant Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9581},
 	["pages"] = {
 		"The spirits came to me in my dreams last night. They told me of your coming, and that it would be my task to aid you. We have much to go over in our short time together--discussions about nature, the spirits, the Earthmother, and even the night elves. But I will save the lessons for your arrival, and I will do all that is in my power to ensure that you are ready for the trials ahead.\n\nMay wisdom guide you. I will be waiting.\n\n-Gart Mistrunner, Druid Trainer",
 	},
@@ -5714,7 +5041,7 @@ _addon.data = {
 	},
 },
 ["Verdant Sigil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9580},
 	["pages"] = {
 		"When word reached me that you were ready, I sent this sigil immediately. All of Cenarius' druids take great satisfaction in seeing our numbers bolster. The spirits even seem to have become stronger with our enhanced presence. In time, and with some patience, hopefully our strength will return to its former grandeur. Find me within Aldrassil when you are ready. I will be your guide as long as you are in Shadowglen.\n\n- Mardant Strongoak, Druid Trainer",
 	},
@@ -5723,7 +5050,7 @@ _addon.data = {
 	},
 },
 ["Weaponization Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 116909},
 	["pages"] = {
 		"Raz,\n\nYour orders are to capture four additional gronn for weaponization.\n\nOf your first group, only one survived the entire process.\n\nOne attacked our soldiers relentlessly and had to be put down. Another fell victim to a misfire while being fitted. Yet another rolled onto its cannons in its sleep. We're still cleaning up that mess.\n\nRest assured, your efforts are not in vain.\n\n- Captain Brak",
 	},
@@ -5732,7 +5059,7 @@ _addon.data = {
 	},
 },
 ["Venomous Tome"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 38579},
 	["pages"] = {
 		"1. If you don't like the potency of a poison, double the ingredients or halve them.\n2. If a poison doesn't work the way you want, you're always more wrong than you think you are.\n3. Prototype, Prototype, Prototype (gnomes make great test subjects).\n4. Poisons should be easy to start using, hard to stop using.\n5. Simple ingredients work together to create interesting complexity.",
 	},
@@ -5743,10 +5070,11 @@ _addon.data = {
 
 ------------------------------------------------------------------------------------------
 -- Other junk
+-- http://www.wowhead.com/items?filter=cr=14:128;crs=1:4;crv=0:0;eb=1#0+1-2
 ------------------------------------------------------------------------------------------
 
 ["A Collection of Poems"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 116071},
 	["pages"] = {
 		"My poems\nby Uratok\n\nold puddle...\na newt hops in\nwater's sound\n\nthe wind of Frostfire\nI've cloak on my shoulder!\na gift from Erda",
 	},
@@ -5755,7 +5083,7 @@ _addon.data = {
 	},
 },
 ["A Mysterious Message"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 1381},
 	["pages"] = {
 		"Blacknails--\n\nThe Sea awaits us. We need your supplies from the North. Strip everything: every railroad pike, every waterbucket. We need metal. A shipment is due from BB but long overdue. Come through for me, Blacknails. Send your supplies directly to the \"barn\" this time. No time to squander.\n\n--VanCleef",
 	},
@@ -5764,7 +5092,7 @@ _addon.data = {
 	},
 },
 ["A Slashed Bundle of Letters"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 59357},
 	["pages"] = {
 		"To the Honorable Headmaster Crillian,\n\nMy former Master, I write to you so that you might know what your apprentice has been doing of late. Paying heed to your advice, I sought to build my knowledge and wisdom through travel outside the gates of our beloved Stormwind. My journeys took me to many places but I have decided to take up residence here in the lovely town of Moonbrook. The surrounding fields of Westfall are most beautiful as the harvest approaches.",
 		"Within just a few days of my visit I found myself tutoring the local children from the nearby farmlands. The lessons went so well that the town mayor commissioned me to run a school and construction has begun on a brand new schoolhouse! From Silverpine to Stormwind and now Moonbrook -- who would have guessed I would see so much of Azeroth!\n\nWarm regards,\n\nStalvan Mistmantle",
@@ -5776,7 +5104,7 @@ _addon.data = {
 	},
 },
 ["A Torn Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 59361},
 	["pages"] = {
 		". . .Giles, the boy, seems a bit rambunctious and will be a challenge to educate. However the elder daughter, Tilloa, seems exceptionally smart. I couldn't help but to notice her captivating beauty as well. She is on the cusp of womanhood now. Supposedly the Lord has arranged her marriage for next year. But I digress. This week I will accompany the family to their summer cottage near the Eastvale Logging Camp in Elwynn, close to the Red Ridge Mountains. I hope to write more while there.",
 		". . .most strange and uncontrollable feeling. Never have I felt the way I did today. Whilst assisting Giles with his history lesson, Tilloa was outside tending to the flower garden. After a few minutes she came inside and placed a scarlet begonia in my open palm and smiled at me in such a way that my heart felt as though it was trembling within my chest. . . .",
@@ -5786,7 +5114,7 @@ _addon.data = {
 	},
 },
 ["Admiral Taylor's Garrison Log"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 119348},
 	["pages"] = {
 		"Day 0 \nArrived on the coast with most of our gear intact. Finn assures me this is an ideal location. Edward and Claudia constantly bickering since that last arakkoa attack. Ephial is obsessing over \"ley lines\" (whatever they are.) Can't even agree on the date since we went through the portal - feels like autumn? I'm calling this day 0.",
 		"Day 2\nAbout a dozen lumberjacks have disappeared. The one who made it back had a wasp stinger in his gut the length of my arm. Dumberlin and Ephial offered to go out with a war party and clear out the place. I dispatched them with a couple followers. We desperately need the lumber.",
@@ -5804,7 +5132,7 @@ _addon.data = {
 	},
 },
 ["Adventuring Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 127408},
 	["pages"] = {
 		"Now that I found a S.E.L.F.I.E. camera I'm going to chronicle what I find in Tanaan behind the Iron Horde lines. I had to use a dozen potions and a few engineering tools but I finally managed to sneak past all the patrols and ships along the coast to make it in to the thick of Tanaan. The wilds are dangerous and even the Iron Horde seems content to leave them alone. I think I've found a place where the Ravagers just keep coming - I'm going to stay here for a while and stockpile hides before hearthing back to Ashran.",
 		"&lt;The writing becomes increasingly frantic as the page goes on.&gt;\n\nHuge mistake - remembered my S.E.L.F.I.E. camera, somehow didn't bring my hearthstone.\n\nRavagers keep coming\n\nBackpack full\n\nTell my story",
@@ -5814,7 +5142,7 @@ _addon.data = {
 	},
 },
 ["An Unopened Tome of Advice"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 37674},
 	["pages"] = {
 		"Table of Contents\n\nChapter 1 - The Dead and You\n\nChapter 2 - Maintaining a Ghoulish Figure: Seven Easy Exercises\n\nChapter 3 - Keeping the Chill Out: Choosing a Coordinated Coffin\n\nChapter 4 - Graveyard Guarantees: Fifty Sure Signs of Love\n\n&lt;The tome is in pristine condition and appears to be completely unread&gt;",
 	},
@@ -5823,7 +5151,7 @@ _addon.data = {
 	},
 },
 ["Ancient Korune Tablet"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 92425},
 	["pages"] = {
 		"In the one-hundred-and-seventieth year of the Thunder King's reign, the Korune spellweavers came to Lei Shen with their greatest creation. \n\nA bell cast from the makers' flesh, shaped by stars' fire, and bound by the breath of darkest shadow. This bell, when rung, could shake the world and call to the heavens.\n\nTaken to war, the bell's cacophonous tones stirred the hearts of Lei Shen's warriors. It fueled their hatred and anger, lending them strength on the field of battle. The bell's screaming voice struck fear and doubt into the hearts of the Emperor's enemies, sending them fleeing in his path.\n\nAwed by its power, the Thunder King described the instrument as \"the voice of the gods,\" and named it Shenqing, the Divine Bell.",
 	},
@@ -5832,7 +5160,7 @@ _addon.data = {
 	},
 },
 ["Ancient Tablet"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9242},
 	["pages"] = {
 		"The Mallet of Zul'Farrak\n\nTo create the Mallet of Zul'Farrak, one must first travel to the Altar of Zul and obtain the sacred mallet from a troll Keeper.\n\nNext, one must bring the sacred mallet to the altar atop of the troll city of Jintha'alor.\n\nUsing the sacred mallet at the altar will infuse it with power, and transform it into the Mallet of Zul'Farrak.",
 	},
@@ -5842,7 +5170,7 @@ _addon.data = {
 	},
 },
 ["Artificer Maatun's Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 122154},
 	["pages"] = {
 		"My father called the stone the Dream of Argus, though I've come to understand it has been known by other names in the past. It was a crystal of great power, capable of sustaining an entire village on its energy alone. Some say that it was a gift passed on to our family by the naaru during the exodus from Argus - a connection that would explain its fabled power. \n\nSuch speculation is for naught, however, since the crystal has been broken for as long as I can remember. The Shards of the Dream, as I call them, appear as powerless as any of the latent crystals found in the deep mines of Shadowmoon. I continue to seek a means of rejoining them in hopes that one day the Dream of Argus can be reborn, and that the draenei people could use it to flourish on our home of Draenor.",
 		"On a prospecting mission with some of the local Rangari, we happened upon a small enclave of Shadowmoon orcs, who were investigating the same mineral deposits. In idle discussion, the orcs spoke of rituals that they use to fuse smaller crystals together into large structures that can be stored with magical energy. I had never held previous interest in the Shadowmoon orcs' strange magics, but it seems it may hold the key to restoring the Dream of Argus.\n\nI must investigate this further.",
@@ -5862,7 +5190,7 @@ _addon.data = {
 	},
 },
 ["Barely Readable Diary"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 39204},
 	["pages"] = {
 		"Pa set me taking care of Ol' Bess again. I think he likes watching her try to kick me to pieces. It's not my fault that she doesn't like me as much as the others - it was only the once that I ate the apple intended for her. I don't even know how she knew.",
 	},
@@ -5871,7 +5199,7 @@ _addon.data = {
 	},
 },
 ["Beginnings of the Undead Threat"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 5861},
 	["pages"] = {
 		"The undead's beginnings upon Azeroth did not truly begin with the corruption of Prince Arthas-it began long before that event. The events that brought downfall of Lordaeron were long set in motion before that point; it began with the coming of the orcish clans and the Burning Legion.",
 		"The orcs of Draenor (the world which they originally came from) were noble and shamanistic. They were powerful warriors, strong of body and will. It was for these reasons that the Burning Legion sought them out. Kil'jaeden, a demon of great power among the Legion, wished to enslave the orcish clans and use them as his army against the worlds the Burning Legion had yet to conquer.",
@@ -5893,7 +5221,7 @@ _addon.data = {
 	},
 },
 ["Belamoore's Research Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 3711},
 	["pages"] = {
 		"Kegan Darkmar, leader of the small group of undead who came to us in search of asylum from their \"brethren,\" defies our common attitudes toward his kind. His skin may be rotting and blood may have long stopped flowing through his veins, but he acts very nobly and seems to care more for his compatriots' safety than his own.\n\nIndeed, there is a humanity within him that, I confess, I sometimes see lacking in the humans around me.",
 		"But why do I mention this? I do so to give credence to what I am about to write, for these words came from Kegan's lips and it is my hope that my colleagues will, upon reading this journal, know why I believe what he said:\n\n\"Remnants of the Old Gods still linger in the deep hollows of the world. New forces seek to harness that ancient power, and those who succeed will have a terrible weapon against their enemies.\"",
@@ -5920,16 +5248,7 @@ _addon.data = {
 	},
 },
 ["Blackrock Invasion Plans"] = {
-	["visual"] = {["type"] = "Item"},
-	["pages"] = {
-		"Shadowhide gnolls and Blackrock orcs are setting up a massive offensive to attack Stormwind.",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "drop",  ["area"] = "",  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-	},
-},
-["Blackrock Invasion Plans"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 58937},
 	["pages"] = {
 		"Shadowhide gnolls and Blackrock orcs are setting up a massive offensive to attack Stormwind.",
 	},
@@ -5938,7 +5257,7 @@ _addon.data = {
 	},
 },
 ["Blackrock Orc Missive"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 58936},
 	["pages"] = {
 		"&lt;This entire page is written in orcish. You can't understand anything on the document.&gt;",
 	},
@@ -5947,7 +5266,7 @@ _addon.data = {
 	},
 },
 ["Blood-Spattered Zandalari Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 95410},
 	["pages"] = {
 		"I tell them others the loa don't speak to me, but I see them all over, I hear them talk about me, I hear them tell me to give up. They hungry for flesh, them loa. They hungry for hate. They give up on me. I learn fast I better take what I want because no spirit going to give me nothing.\n\nI tell the elders I want put in the ring, they tell me I crazy, going to get killed. Tell me to take the rock test. Lift them heavy stones over my head, show my back is strong, get a job pushing plow living on dirt. Them elders don't see the real me. But I see the spirits, all around their heads, even the ones they don't see. Them spirits see right through me. Hate me. Gotta prove them wrong.",
 		"I get in the ring, get them heavy hammers in each hand. They feel good. Feel better when I smash some heads. Feel best slick with blood. When a troll got nothing to lose they see it, I don't care how big they are. They don't show the fear but the spirits see. Can't hide fear from the spirits.\n\nI ain't supposed to draw blood but I go for the head, that's where the hate feels best. Spirits abandon them others once I done with them. Now they afraid of me. Better that way. I see you, spirits. I know you best.",
@@ -5958,7 +5277,7 @@ _addon.data = {
 	},
 },
 ["Bloodsail Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 59145},
 	["pages"] = {
 		"Bloodsail Orders\n\nPay close attention to these here words, me hearties. This be our final shot at Booty Bay.\n\nPretty-Boy has failed me for the last time. His replacement remains in the north. He'll lead the invasion by land, through that blasted tunnel.\n\nCaptain Keelhaul and the Riptide will come in from the southwest and negate any cannon fire from the tip of the Cape. He'll need men, gunpowder, and plenty of extra ropes.",
 		"The Damsel's Luck will drive directly into the harbor and open fire. Her captain will be ordered to take no prisoners - any man, woman, or child found consorting with the Blackwater Raiders of Booty Bay will be sent straight to Neptulon's locker.\n\nI'll lead the attack from the rear, with the Crimson Veil. We'll offer cannon support and protect from any raiders that come to defend their precious Booty Bay.",
@@ -5969,7 +5288,7 @@ _addon.data = {
 	},
 },
 ["Bloodscalp Lore Tablet"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60295},
 	["pages"] = {
 		"Moon Over the Vale",
 		"A Moon over the Vale shines\nCasting its glow upon the jungle\nWhere proud Warriors heed the call\nTo defend our Nation and sacred grounds. \n\nA Moon over the Vale shines\nFar above the cries of battle\nWhere blood is spilled\nOf foe and comrade alike.",
@@ -5994,7 +5313,7 @@ _addon.data = {
 	},
 },
 ["Boulderfist Plans"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 25468},
 	["pages"] = {
 		"Stupid,\n\nFind food. Blue taste good. Lantresor say it ok. Bring food back to Lump. Lump eat first then stupid eat. Ok? Go fast or Lump eat you.\n\n-Lump",
 	},
@@ -6003,7 +5322,7 @@ _addon.data = {
 	},
 },
 ["Brazie's Dictionary of Devilish Draenei Damsels"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49922},
 	["pages"] = {
 		"Are your tastes more exotic? \nDo you desire someone a little out of this world? \nAre hooves your thing, but succubi a little too much for you?\n\nRead on, my friend...",
 		"I'd just arrived off the boat to Azuremyst when I stopped a group of Draenei dames around the ripe young age of 230. They were laughing and having a great time. What luck, still on the docks and I'd found exactly the type of fun, energetic Draenei women I wanted to meet on this trip. \n\nAt first a bit anxious, I breathed deeply and reminded myself, \"they too are here in Azeroth on vacation, looking to meet new people and have a great time.\"\n\nSure enough, they were delighted to see one devilishly charming Gnome like myself in the Exodar. It even turned out we were both staying near the Vault of Lights. We exchanged deep, penetrating glances into each others eyes, promising to meet again near A'dal later that night.",
@@ -6016,7 +5335,7 @@ _addon.data = {
 	},
 },
 ["Brazie's Document on Dwarven Dates in Dun Morogh"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49923},
 	["pages"] = {
 		"How to date a Dwarven woman:\n\n1. Ask her to buy you a drink.",
 	},
@@ -6026,7 +5345,7 @@ _addon.data = {
 	},
 },
 ["Brazie's Guide to Getting Good with Gnomish Girls"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49918},
 	["pages"] = {
 		"\"Roleplaying\"\n\nGood roleplaying skills are essential. No Genius Gnomish gal wants a giant bore. Regale her with tales of your future cross-continental adventures:\n\n \"You and me, babe, we're gonna fly to Kalimdor, etch our names into the side of Teldrassil and spend the rest of our lives swinging from the trees in Un'goro Crater.\"\n\n\"Storytelling\"\n\nShare stores of your exciting future together! The more implausible, the better. Nothing gets a Gnomish girl excited like an ambitious plan. It also makes for great conversation starters!\n\n \"With our brilliant minds combined, we could retake Gnomeregan. ... why haven't we retaken Gnomeregan anyways?\"",
 		"\"Teasing\"\n\nTeasing is the art of making fun of a woman in a humorous way. Be careful, you can easily go too far. Calling her a \"Goblin Ganking Gnat\" will leave you walking home wearing that Green Gordok Grog you just bought. Try something a bit more subtle. \n\nIf she acts childish and refuses to stop jumping onto tables in the middle of the bar try:\n\n\"I hear there's an opening for star entertainer at the Stormwind orphanage.\"\n\nIf she won't stop talking about herself playfully try:\n\n\"Where's your off switch?\"\n\nIMPORTANT NOTE: Gnomish girls do NOT have an off switch. Attempting to find it may result in the loss of life, limbs or wallet.",
@@ -6037,7 +5356,7 @@ _addon.data = {
 	},
 },
 ["Brazie's Handbook to Handling Human Hunnies"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49925},
 	["pages"] = {
 		"There's nothing like wooing the heart of a human girl. Infinitely forgiving, endlessly caring and fantastically fun, human girls have been the downfall of countless heroes throughout the ages. (See Chapter 3: \"Jaina Proudmoore and the men who loved her\")\n\nHowever, generation after generation has proven it takes something more than just money, looks or an epic suit of armor to attract the woman of your dreams. Not even the power of Gnomish invention can help you here. \n\nTo truly charm the heart of another, you should possess these qualities.\n\n* Be Fun & Friendly\n* Be a Challenge\n* Be a Man",
 		"Be Fun & Friendly\n\nEver have at friend who shows up at your house and brings everybody down? Yep. Everyone does. Does he get invited back to the parties? Not unless he's bringing the ale. If you want to be an attractive person, live an attractive lifestyle. \n\nYou'll find that the more you enjoy socializing with others, the more they will enjoy socializing with you! \n\nThere's no faster way to ruin a girl's night than bringing in that needy, apologetic vibe. Let it go, embrace the fun and your confidence will soar.",
@@ -6051,7 +5370,7 @@ _addon.data = {
 	},
 },
 ["Brazie's Notes on Naughty Night Elves"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49924},
 	["pages"] = {
 		"Let's be honest. Since the end of the Third War, Night Elf girls have heard it all. In fact, they'd already heard it all long before you or I was born. \n\nIf you want to engage the mind of a Night Elf girl, you're going to have to stand out. Sure, we've all heard the tales of Night Elf lasses dancing on mailboxes and stripping to pay for Nightsaber training. True or not, if you want to light that lovely lady's lips up with a smile, you gotta be unique, memorable and confident. \n\nStart off by showing that you're looking for more than a gal with looks. Sure, she can bounce, she can dance, but can she hold a decent conversation? Does she even understand the proper use of a samophlange? Does she know how to have a fun time?\n\nThere's nothing worse than bringing a Night Elf to a party, only to watch her stand awkwardly by herself, breaking conversation only to lament the loss of her Highborne sister during the War of the Ancients.",
 	},
@@ -6061,7 +5380,7 @@ _addon.data = {
 	},
 },
 ["Compendium of the Fallen"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 5535},
 	["pages"] = {
 		"With Kel'Thuzad's success in Lordaeron, the Lich King made the final preparations for his assault against human civilization. Placing his plague energies into a number of portable artifacts called plague cauldrons, Ner'zhul ordered Kel'Thuzad to transport the cauldrons to Lordaeron where they would be hidden within various cult-controlled villages.",
 		"The cauldrons, protected by the loyal cultists, would then act as plague generators, sending the plague seeping out across the unsuspecting farmlands and cities of northern Lordaeron.\n\nThe Lich King's plan worked perfectly. Many of Lordaeron's northern villages were contaminated almost immediately. Just as in Northrend, the citizens who contracted the plague died and arose as the Lich King's willing slaves.",
@@ -6072,7 +5391,7 @@ _addon.data = {
 	},
 },
 ["Crulgorosh's Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 111066},
 	["pages"] = {
 		"I am nearing a breakthrough on imbuing armor with Felbreaker magic. If I accomplish this we can equip any soldier with this magic. We will be unstoppable! I am not to be disturbed for any reason. The Sorcerer King is already angry at how expensive and time consuming this is, we cannot afford any mistakes!\n\nReglaak",
 	},
@@ -6082,7 +5401,7 @@ _addon.data = {
 	},
 },
 ["Crumpled Bill of Sale"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 81231},
 	["pages"] = {
 		"Darkmoon Faire Bill of Sale\n\n6x Super-effective Gnoll Decoy*\n60g 20s 300c",
 		"*Effectiveness of Super-effective Gnoll Decoy may depend on intelligence of opponent. Not warranted for use against Humanoids, Dragonkin, or other semi-sentient creatures.",
@@ -6092,7 +5411,7 @@ _addon.data = {
 	},
 },
 ["Crumpled Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 4100},
 	["pages"] = {
 		"Fleeing from the Zanzil in that rotting boat seemed wise at the time, but I start to think death would have been a more suitable fate.\n\nI thought my ancestors had granted me a boon by allowing me to escape their wrath. But now I wonder what wisdom I shall gain if I live through my imprisonment.",
 	},
@@ -6100,8 +5419,22 @@ _addon.data = {
 		{ ["sourceType"] = "chest",  ["area"] = "The Cape of Stranglethorn", ["areaId"] = 673,  ["source"] = "Half-Buried Bottle",  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "75.9"},
 	},
 },
+["Crystallized Note"] = {
+	["info"] = {["type"] = "item", ["id"] = 10839},
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Note A</H1></BODY></HTML>",
+		"To Whom It May Concern:\n\nIf you are reading this note, then you are in one of two places:\n\n(1) On the southern peninsula of Azshara.\n\n(2) Inside the belly of a Cliff Giant.\n\nBoth equally undesirable. \n\nIt should be noted that I was the former at one time and as of the writing of this letter, the latter.",
+		"Being inside the belly of a giant gives one time for reflection. \n\nAs my body slowly crystallizes, I recall my days in Eversong, contemplating a life of adventure on the savage frontiers across the great sea. I was young. And stupid. If I somehow get out of here, I'm taking up gardening or whittling instead.\n\n- Windan Shay",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Note B</H1></BODY></HTML>",
+		"What was I thinking? \n\nPerhaps a better question would be: What am I doing writing a note while I'm sitting captive inside the stomach of a giant?\n\nBoth good questions that I have no immediate answer for...\n\nAdmittedly, mine was not a mission of good will. I came in search of Azsharite, a unique crystal to southern Azshara. Oh the riches I would have had!\n\nBah! Now look at me...",
+		"Should any manner of intelligent life find this note, they must ask themselves something: \"Why in the hell are they romping around with violent thirty foot tall giants?\"\n\n- Mook",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "chest",  ["area"] = "Azshara",  ["source"] = "Azsharite Formation",  ["level"] = "0",  ["x"] = "49.5",  ["y"] = "77.4", },
+	},
+},
 ["Damp Diary Page (Day 4)"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 6304},
 	["pages"] = {
 		"Diary - Day 4\n\nI have been stranded on the Island now for 4 days, left alone with my thoughts.  Bananas are pretty tasty, but what a long climb to reach them. When I am not getting food or protecting myself from the periodic rain, all my thoughts are of rescue.\n\nI would not be so hopeful if it were not for the boxes of paper and bottles that washed ashore with me. I laugh now to think of all the time I spent on that ship cursing that I was stuck with a boatload of Alchemists and Scribes.",
 	},
@@ -6110,7 +5443,7 @@ _addon.data = {
 	},
 },
 ["Damp Diary Page (Day 512)"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 6306},
 	["pages"] = {
 		"Diary - Day 512\n\nThe bananas have started talking to me and I have learned a great deal about their culture. I have ceased my senseless destruction of their homes and consumption of the young. How little I knew then of the great civilization that I was destroying. \n\nOn another topic I seem to be running low on bottles and paper. When I first looked at those huge stacks of paper that washed ashore I thought they would be inexhaustible. Woe with me, my diary must end soon.",
 	},
@@ -6119,7 +5452,7 @@ _addon.data = {
 	},
 },
 ["Damp Diary Page (Day 87)"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 6305},
 	["pages"] = {
 		"These months have given me time to ponder, to shuffle loose my old beliefs and bigotries. Alliance? Horde? Good? Evil? The meanings of these words, once so clear, now blur as my eyes gaze across the boundless sea.\n\nI now know what matters. The bananas are after me. \n\nPerched high in their tree, they eye me with cool malevolence. And the last one I tried to eat nearly gagged me! I could almost hear it scream as I smashed it, half bitten, on sea rocks.\n\nIt's war, and I will win it.",
 	},
@@ -6128,16 +5461,16 @@ _addon.data = {
 	},
 },
 ["Damp Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 127144},
 	["pages"] = {
 		"You've found my note and an ocean breeze, but the next clue won't come with such ease.\n\nTo find the spot where your hint hides, go to the place where four cats ride.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island",  ["source"] = "Barnacle-Covered Bag",  ["level"] = "0",  ["x"] = "42.0",  ["y"] = "91.5"},
+		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island", ["areaId"] = 974,["source"] = "Barnacle-Covered Bag",  ["level"] = "0",  ["x"] = "42.0",  ["y"] = "91.5"},
 	},
 },
 ["Dark Iron Memo"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 62807},
 	["pages"] = {
 		"Gravius,\n\nStarting today, you are to redouble your efforts. The scope of our project has just expanded severalfold. Your archaeological studies and geological studies can wait.\n\nMoving forward, you are to dig downward as quickly as possible. Crews within the Slag Pit will be working from the other direction to connect their tunnels to yours. The underground empire of the Dark Iron dwarves is growing, Gravius, and we are at the forefront.",
 		"Succeed in this task, and you will be rewarded. You should know, these orders do not come from me, but from Overseer Maltorius and the Archduke themselves.\n\nDig deep,\nDig-Boss Dinwhisker",
@@ -6147,7 +5480,7 @@ _addon.data = {
 	},
 },
 ["Decoded Twilight Text"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 20541},
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 1</H1></BODY></HTML>",
 		"For immediate dissemination to all Twilight's Hammer members.\n\nThe search for the traitor, Ortell, is progressing at a most satisfactory pace. Our scouts have narrowed his location to a network of caverns in Westfall.\n\nOrtell's betrayal shall not be forgiven and his escape presents a great security risk to our organization.\n\nAny individual found to be withholding information on Ortell's whereabouts will be duly punished.\n\n-Twilight Lord Everun",
@@ -6174,7 +5507,7 @@ _addon.data = {
 	},
 },
 ["Defias Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 33037},
 	["pages"] = {
 		"Garn,\n\nI needn't remind you of the importance of your mission -- protect your precious cargo at any cost. As I have promised, success and discretion will be richly rewarded. \n\nKeep the tongue-wagging of your \"associates\" to a minimum, heed the crew and all will be well. I shall await word of your success.",
 	},
@@ -6183,7 +5516,7 @@ _addon.data = {
 	},
 },
 ["Diary of Weavil"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 21130},
 	["pages"] = {
 		"Dear Diary,\n\nToday, my arch-enemy, Narain Soothfancy, attempted to deceive me by sending cronies to fill his spot at the execution. HIS execution. Can you believe it?\n\nI had gone through all the trouble of devising this diabolical plan to lure him out of that damnable hut and he pulls this? Whatever... Too angry to keep writing. I'll be back later.",
 		"Dear Diary,\n\nI left my hide-out in a rage after my last entry. Boy was I angry. I decided to redesign my minions' uniforms to better reflect my angst. I feel a little better but something is missing. I'll be right back...",
@@ -6200,16 +5533,16 @@ _addon.data = {
 	},
 },
 ["Dirty Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 127146},
 	["pages"] = {
 		"To find the next, don't follow the signs, just listen to the very next rhyme.\n\nWhat you seek is a penitent man, the smaller of two, if you can.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island",  ["source"] = "Crystallized Note",  ["level"] = "0",  ["x"] = "52.3",  ["y"] = "85.2"},
+		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island", ["areaId"] = 974,["source"] = "Crystallized Note",  ["level"] = "0",  ["x"] = "52.3",  ["y"] = "85.2"},
 	},
 },
 ["Diving Log"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 38520},
 	["pages"] = {
 		"Day 1: The human scum seem blissfully unaware of my presence here, as intended. They're ripe for bombing, and it should only be a matter of time before I've charted out their position.\n\nDay 2: Charting complete - a trivial task for such an accomplished fellow as myself. Why I got stuck with this job is beyond me - they should have J-Y C. do it. That ridiculous accent should have been justification enough. \n\nDay 3: First breath of air is finally getting a bit stale. Perhaps I should surface momentarily for another in a few days. Still bored to tears - where is that blasted signal?\n\n&lt; The ranting continues ... &gt;",
 		"Day 12: Ah, sweet relief. The second breath tasted like the purest orphan tears I've ever had. The signal remains puzzlingly absent, and I could swear that one of the crabs is attempting to play drums on my big toe. \n\n&lt; The rants grow more disassociated ... &gt;",
@@ -6220,7 +5553,7 @@ _addon.data = {
 	},
 },
 ["Doctor Kohler's Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 47048},
 	["pages"] = {
 		"Doctor Kohler,\n\nThe Black Knight has not yet served his purpose. Retrieve his remains from the tournament grounds and use your arts to return him to life. We will use the strength of the crusaders and their followers against them.\n\nTake prisoners and use their souls to empower my servant. Capture Crusader Kul, called reckless by his fellows, and sacrifice him upon your altar. His spirit will imbue the Black Knight with terrible strength and power. Then, deliver the Black Knight to me.",
 	},
@@ -6229,7 +5562,7 @@ _addon.data = {
 	},
 },
 ["Dog-Eared Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 107275},
 	["pages"] = {
 		"Magra, my huntress,\n\nAnother dull day at Stonefang outpost. As I stare across the flats, I cannot help but think of you. Do you remember the day we met? I hurled my axe at your mount, and you nearly impaled me with a spear.\n\nIt was love at first sight.\n\nClans be damned! My mind is made up. I will leave it all to be with you. Choose the place. I will come. We'll leave Frostfire and make a life somewhere. I hear Nagrand is beautiful.\n\nYour future mate,\n\nKarash\n\nP.S. I have enclosed Longhowl's first-fang. I was wearing it around my neck that day. I hope it will guide me to you once again.",
 	},
@@ -6238,7 +5571,7 @@ _addon.data = {
 	},
 },
 ["Fur-Lined Scroll"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 107277},
 	["pages"] = {
 		"Karash, my wolf,\n\nI was so happy to find your note, I had to bite my knuckle to keep from yelling and waking up the other trappers.\n\nOf course I remember that day! You and Longhowl prowling the flats, looking so fierce. My unsteady aim, that pitiful throw. Can you believe we almost killed each other? Now I want nothing more than to live beside you for all my days.\n\nI know a place. North across the flats, behind the volcano overlooking Colossal's Fall. I will leave bones to mark the way. Come find me, and we can be free together.\n\nYours forever,\n\nMagra\n\nP.S. I will keep Longhowl's fang safe. Attached is my own good luck charm - the foot from my first successful snare. Bring it safely to me, or I will gut you like a hare!",
 	},
@@ -6247,7 +5580,7 @@ _addon.data = {
 	},
 },
 ["Dojani Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 78917},
 	["pages"] = {
 		"The Reclamation\n\nBy order of his exalted, the reclaimers shall be dispatched to the ruins of Dojan. There they are to recover any artifacts that may be used to arm our people.\n\nWe need guardian statues, scrolls, any arcane devices that will help us rekindle our ancient glory.\n\nPriority must be given to the Pools of Youth on the north side of Dojan. Those waters are vital to the continued strength of the empire.\n\n-Groundbreaker Brojai,\n\n The Lord Reclaimer",
 	},
@@ -6257,7 +5590,7 @@ _addon.data = {
 	},
 },
 ["Durrin's Archaeological Findings"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 50410},
 	["pages"] = {
 		"Emperor Thaurissan,\n\nBelow is my account of my most recent finding here in Un'Goro Crater. After the Cataclysm hit, I stopped my current project and began sweeping the Crater for new potential dig sites. Curiously, the Crater wasn't hard hit by the Cataclysm, but I did find what appeared to be a monstrous mandible peeking out of the ground in Terror Run!",
 		"It appears to be an ancestor of the dinosaurs that live here. I've spent the last several weeks digging it out, and it has been my most exciting dig yet. By my calculations, this beast must be nearly 300 feet long, from tip to tail. That's longer than some of the largest dragons, and FAR larger than any dino that currently exists here in the Crater.",
@@ -6269,7 +5602,7 @@ _addon.data = {
 },
 
 ["Dusty Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 45058}, -- 45062
 	["pages"] = {
 		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
 		"The first half of the journal seems to be nothing more than the ledger for Mr. Cooper's business. Handwritten columns of figures note the production and sale of barrels to the inhabitants of Moonbrook and even a few clients in Stormwind itself.\n\nThe back half of the book seems to have been Mr. Cooper's journal, where he discusses leaving the family business to his younger brother. You find no mention of children.",
@@ -6282,7 +5615,7 @@ _addon.data = {
 	},
 },
 ["Envoy's Log"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 110536},
 	["pages"] = {
 		"&lt;It appears that the envoy has been keeping a journal.&gt;\n\nDay 3,\n\nWe have arrived at the Bloodmaul camp. Their chief Borgal refused to talk with with me unless I promised to buy a few cartloads of slaves. The charge was of course way higher then I should have paid but I need their goodwill on this mission.\n\nBorgal has agreed, at a ridiculous price, to have his slaves mine into the sites we have indicated and turn over to us anything that may be found.\n\nEven though the prophet Garrosh says that an artifact lays buried under this mountain I question the wisdom of employing the Bloodmaul to find it. Orders are orders nonetheless...",
 		"Day 7,\n\nOur digging results so far have resulted in just rocks and dirt. The ogres are starting to mumble about getting rid of us. Another pouch full of coins in Borgal's hand seemed to smooth things over.",
@@ -6294,17 +5627,8 @@ _addon.data = {
 		{ ["sourceType"] = "chest",  ["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["source"] = "Envoy's Satchel",  ["level"] = "0",  ["x"] = "40.9",  ["y"] = "20.1"},
 	},
 },
-["Faded Note"] = {
-	["visual"] = {["type"] = "Item"},
-	["pages"] = {
-		"Son,\n\nIf you are reading this, then you have completed the rite of om'riggor. You are no longer a child. You are a warrior.\n\nThis trinket belonged to your mother, rest her spirit. She never got to meet you, but she loved you with all her heart.\n\nHer memory kept me safe in countless battles - kept me coming home so I could raise you into the orc you are today.\n\nTake it with you, that you may serve our clan with honor.\n\n- Your father",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "chest",  ["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["source"] = "Dusty Chest",  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
-	},
-},
 ["Folded Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 36877},
 	["pages"] = {
 		"Hi!\n\nI'm not good at letters and so the matron helped me write this down for you. I just want to say THANKS because you're a hero and maybe someday I can save people like you do.\n\nOk, I have to go play so THANKS AGAIN for being good and strong and and you're &lt;handsome/pretty&gt; too!\n\n--Your secret admirer",
 	},
@@ -6313,7 +5637,7 @@ _addon.data = {
 	},
 },
 ["Frayed Zandalari Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 95412},
 	["pages"] = {
 		"A direhorn! Little Talak thinks he's got the rocks to tame a direhorn.\n\nI tried to convince him a raptor would be fine. A beast caller with a good sturdy raptor - that's a good life. Commands a lot of respect. Raptors take naturally to the spirits. I think it's their brains. Smart. You can tell by the way they watch you.\n\nBut no, Talak wants a direhorn. Carved the sigils into his arm with one of the ceremonial horns, then spoke to the great bestial loa we brought aboard the ship with us. He drank the wild draught, wore the twin-tusk mask, and roared with the inner voice. The spirits are with this one. They like strength, yes, but sometimes they flock toward courage.",
 		"So! I helped Talak, frail as he is. I spoke to my spirits. The old loa Grimath, who entered my chest as a child, who guided my hand when I bent the neck of my own direhorn. I drank deep from the well of blood, saw the furies in the air, and whispered Talak's name.\n\nHe's on the Isle of Giants now. Little Talak. Not so little anymore. He'll come back a hero or not at all. Spirits be with him.",
@@ -6324,7 +5648,7 @@ _addon.data = {
 	},
 },
 ["Frostfire Mission Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113492},
 	["pages"] = {
 		"Research and engineering efforts must be doubled at the Iron Siegeworks in Frostfire Ridge. Do so with any means necessary. With superior technology, the Iron Horde can crush any foe.\n\n\n-- Warchief Grommash Hellscream",
 	},
@@ -6334,7 +5658,7 @@ _addon.data = {
 	},
 },
 ["Give to the Church and the Light Will Provide"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 39358},
 	["pages"] = {
 		"From the desk of High Abbot Landgren: \n\nIt may seem that in dark times of strife and turmoil that one must turn inward, protecting family and loved ones to the exclusion of all else. But these feelings are false - without the beacon of hope that is the Church, despair will quickly inundate the very pores of your family's soul. All the full stomachs, warm toes, and happy smiles that worldly goods may purchase will not save your family from the creeping inner emptiness that shirking your fiduciary responsibilities to the Light will induce.",
 		"Give to the church. The hardships endured through lack of worldly goods act as a forge for the soul, burning out impurities and raising you up to a higher plane of being. Be not ashamed at the rumbling of an empty stomach, the bite of a sharp rock upon your bare foot, or the chill of the winter wind. These are but means by which the Light communicates its inspiration to the soul. These sacrifices ensure that the arching, gold-appointed paeans to the Light which so inspire you at worship are well-maintained. \n\nEschew the comforts of the flesh, and come ever closer to the Light.",
@@ -6344,7 +5668,7 @@ _addon.data = {
 	},
 },
 ["Gnoll Attack Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 58111},
 	["pages"] = {
 		"Minions, our leader has spoken. You are to sack Sentinel Hill and free the admiral. You may keep anything that you find in your rampage.\n\n-Helix",
 	},
@@ -6353,7 +5677,7 @@ _addon.data = {
 	},
 },
 ["Gnoll Battle Plans"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 58887},
 	["pages"] = {
 		"Step 1: KILL\nStep 4: Sleep?\nStep 2: EAT\nStep 1: Poop",
 	},
@@ -6362,7 +5686,7 @@ _addon.data = {
 	},
 },
 ["Gnoll Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 58888},
 	["pages"] = {
 		"You attack from down there!\nWe attack from up here!\nMeet in middle at humie town.\n\n-Yowler, Son of Yowler",
 	},
@@ -6371,7 +5695,7 @@ _addon.data = {
 	},
 },
 ["Gnoll Strategy Guide"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 58889},
 	["pages"] = {
 		"&lt;This document is blank.&gt;\n\n&lt;Correction. This document was used recently as toilet paper.&gt;",
 	},
@@ -6380,7 +5704,7 @@ _addon.data = {
 	},
 },
 ["Gorick's Stash List"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 45079},
 	["pages"] = {
 		"<HTML><BODY><P>Detailed herein are all of the locations used to secret our information within Loch Modan while awaiting pickup. Should you manage to obtain any documents from the Explorers' League or their allies, place them in one of these locations and one of our messengers will pick the package up within the week for delivery to our base of operations.</P><BR/><P>Once you have memorized all of the locations within this book, burn it so that it cannot be obtained by our enemies. Should you suspect for any reason that our enemies might be suspicious of your activities, burn the book immediately. By no means should this ever fall into enemy hands, lest our routes of communication be compromised.</P><BR/><P>For Ragnaros!</P></BODY></HTML>",
 		"<HTML><BODY><H1 align=\"center\">Location 1: Western Loch Dock</H1><BR/><P>Northeast of Thelsamar, there is a small dwelling and a dock that are utilized by dwarves on occasion during fishing season. Store the package in a watertight container under the dock, out of sight.</P><BR/><P>Drop offs and pickups from this location should occur only at night as to reduce risk of being witnessed by fishermen in the area. This dropoff point will receive reduced priority during the fishing season for obvious reasons.</P></BODY></HTML>",
@@ -6395,7 +5719,7 @@ _addon.data = {
 	},
 },
 ["Green Hills of Stranglethorn - Page 14"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2738},
 	["pages"] = {
 		"On this day we ventured to the south, following some fresh panther tracks. Soon we reached a ravine spanned by a tremendous rope bridge. I could not help but to think of Brann's descriptive writings of this region when I saw the engineering marvel. So often it was assumed that the native Trolls were a primitive and uneducated race yet as I gazed upon the master craftsmanship of the bridge I was able to recognize the skill with which the Troll builders overcame the seemingly impossible feat.",
 	},
@@ -6404,7 +5728,7 @@ _addon.data = {
 	},
 },
 ["Grelin Whitebeard's Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2004},
 	["pages"] = {
 		"DAY ONE\n\nThe apprentice and I have arrived in Coldridge Valley today. The trip through the cave was mostly uneventful. We made camp a good distance away from the cave we're told the trolls have gathered in.\n\nDAY TWO\n\nBloody wolf howling almost kept me up all night.\n\nI will have new wolfhide clothing in a few days.\n\nThe lad got tangled up with a trogg today, put up a fight, and",
 		"managed to get the better of the ugly brute, but he's now nursing a nasty cut on his arm. Looks like I'll have to do the chores for a while.\n\nDAY THREE\n\nCold. Snowed a bit around noon.\n\nDAY FOUR\n\nThe lad was back and in good spirits today, so we took our first look at the trolls. Frostmane, I'd say, judging by the markings on their skin and the various trinkets they wore on their bodies.",
@@ -6417,7 +5741,7 @@ _addon.data = {
 	},
 },
 ["Grinning Tolg's Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 122147},
 	["pages"] = {
 		"The Skulltaker lives!\n\nI cannot mistake the twisted horns of his cursed mask, nor the demon-eyes that peer from within. He had thought himself escaped from the fury of the Laughing Skull, but none take the lives of our clan without retribution. \n\nNot even one of our own.",
 		"Long has the Skulltaker hunted his fellow orcs without reprisal. I saw the day he donned the bloodthirsty skull that consumed his savage heart. None know where he found the cursed thing, only that it had claimed the warrior's soul. He now lives only to take the skulls of the living - a silent specter of death.\n\nNow the Skulltaker hunts in Everbloom, and I have caught his scent. No longer will he be the hunter. \nSoon it will be his skull that is taken.",
@@ -6435,7 +5759,7 @@ _addon.data = {
 	},
 },
 ["Grom'kar Dispatch"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 114963},
 	["pages"] = {
 		"General Orgrim,\n\nThe ogron have taken a squad of our men - snatched them from what we thought was a safe zone in broad daylight. \n\nThat's not the worst of it. Among the missing is Corporal Thukmar. He's gone, along with all of his latest notes. \n\nI have dispatched a squad into the Fissure of Fury to recover the notes, and perhaps our troops.\n\nI'll update you as soon as there is news.\n\n- Commander Gar",
 	},
@@ -6445,7 +5769,7 @@ _addon.data = {
 	},
 },
 ["Illidan's Command"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 31271},
 	["pages"] = {
 		"My Dear Chancellor,\n\nThe task of bringing the giants of Shadowmoon into the fold is now in your capable hands. Use your blood elf charm to make them see things my way. If that does not work, exterminate each and every last one of them...\n\n-Lord Illidan Stormrage",
 	},
@@ -6455,7 +5779,7 @@ _addon.data = {
 	},
 },
 ["Informational Pamphlet"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 58113},
 	["pages"] = {
 		"Give a man a tabard and he will pledge his undying loyalty to your cause. These men are now government sheep who care not for your hardships. They wear the tabard of their leader and care only for what he desires.\n\n-V",
 	},
@@ -6464,7 +5788,7 @@ _addon.data = {
 	},
 },
 ["Iron-Bound Zandalari Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 95409},
 	["pages"] = {
 		"I never liked soothsayers. Especially never liked the dark ones. Those eyes all sunken, telling me things I don't want to hear but know will come true. And Zul, he was the worst of them. Worst because he always saw the worst things. Worst because there's never anything you can do to stop it.\n\nWhen King Rastakhan ordered me to join Zul's fleet, I thought I'd done something to offend the Council. I thought he was sacrificing me and the others just to get Zul off his back and away from Zandalar. I cursed my luck: ferrying that old prophet all around the oceans, meeting with those disgusting Sandfury trolls or crazed Drakkari.",
 		"That was weeks ago. Before I heard what happened to the capitol.\n\nI see now why the spirits sent me here. We Zandalari got to find a new home, and Zul was the only one looking. Zul, and his cursed, cursed eyes.\n\nCan you see a future for us, dark prophet? What now, old troll? What now?",
@@ -6475,7 +5799,7 @@ _addon.data = {
 	},
 },
 ["Issue of the Moonbrook Times"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 58114},
 	["pages"] = {
 		"<HTML><BODY><body><H1>Group of Homeless Samaritans Brutally Murdered Behind Furlbrow Farm </H1><BR/><P>Witnesses state that the four men killed at the Furlbrow's farm were on their way to delivering dirt pies to a shelter on the east coast when attacked. Jimb \"Candles\" McHannigan, an eyewitness on the scene, had this to say, \"Yep, I saw the whole thing go down with my own two eyes. Was a $g male:female; $c. $g He:She; looked like $g he:she; may have been on something. $g He:She; slaughtered the poor bums in broad daylight while shouting obscenities and proclaiming $g his:her; love for Stormwind and King Varian Wrynn. I think $g he:she; may have killed Lou immediately afterward. I was too shaken up to see.\"</P></body></BODY></HTML>",
 	},
@@ -6483,26 +5807,8 @@ _addon.data = {
 		{ ["sourceType"] = "quest",  ["area"] = "Westfall", ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
-["Secret Journal"] = {
-	["visual"] = {["type"] = "Item"},
-	["pages"] = {
-		"I can hardly believe it. We've endured this torment for four long years, but soon it will be over. The Brotherhood will be reborn and we will then wash across this land as a flood to cleanse it of its filth and corruption.",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "quest",  ["area"] = "Westfall", ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-	},
-},
-["Mysterious Propaganda"] = {
-	["visual"] = {["type"] = "Item"},
-	["pages"] = {
-		"The hour of our redemption draws ever closer, brothers and sisters! Tonight we will shed the shell of our former lives and be reborn as heroes!\n\n-V",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "quest",  ["area"] = "Westfall", ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-	},
-},
 ["Khazgorm's Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 5006},
 	["pages"] = {
 		"The Excavation of Bael Modan\n\nThe original survey crew sent by the Explorers' League was indeed correct in their findings. The ground here holds artifacts of unlimited value to our people. No doubt we will find many answers in our quest for knowledge beneath the sand and rock of Bael Modan.\n\nThe geology of the region dictates we use extreme measures however. Many of the sand deposits have solidified under the harsh conditions and varying climate.",
 		"The solution is quite simple however. Using wood pulp as an absorbent, we can combine traces of nitroglycerin with sodium nitrate to develop a strong blasting charge, capable of breaking through even the most dense masses.\n\nThe work will be noisy and disruptive but our search is of far greater importance than the comfort of the local inhabitants. In fact, we've already had to drive a band of bull-men out of the area who were proving to be a nuisance.",
@@ -6513,7 +5819,7 @@ _addon.data = {
 	},
 },
 ["Kurzen Compound Officers' Dossier"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60215},
 	["pages"] = {
 		"KURZEN OFFICERS' DOSSIER\n\nDo not disseminate",
 		"CHIEF ANDERS\n\nLeads the commandos and jungle fighters. Responsible for maintaining the compound's militia and protecting the compound resources from rebel attacks.",
@@ -6526,7 +5832,7 @@ _addon.data = {
 	},
 },
 ["Kurzen Compound Prison Records"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60214},
 	["pages"] = {
 		"KURZEN PRISON RECORDS\n\nDo not disseminate",
 		"BERRIN BURNQUILL\n\nCrimes: Disobedience, Disorderly Conduct\n\nPunishment: Incarceration, 50 years",
@@ -6540,7 +5846,7 @@ _addon.data = {
 	},
 },
 ["Lorgalis Manuscript"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 5359},
 	["pages"] = {
 		"Our world brims with history. History of races new and old. History behind wars long dead, and those which still smolder. \n\nHistory of gods visiting from the skies. And history of older gods who sleep in the earth.\n\nI speak now of those beings - the Old Gods. They who dwelt and raged across Azeroth when the world was new.",
 		"The Old Gods are the will of our world. In every storm there roars the laughter of an Old God. The blaze of a wildfire is the heat of their gaze. As Old Gods walk, the earth trembles and breaks, and lesser things scream and tear at their own flesh in despair.\n\nAnd despair they should, for just as fire shows no mercy to a child's curious hand, the Old Gods have no care for those beneath them. At best, we are pawns. At worst, we are playthings.",
@@ -6552,7 +5858,7 @@ _addon.data = {
 	},
 },
 ["Mariner's Log"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 34838},
 	["pages"] = {
 		"First Watch, Seven Bells\nCedric found in rum closet again. Disciplined.",
 		"First Watch, Eight Bells\nWatches changed. All is well.",
@@ -6569,7 +5875,7 @@ _addon.data = {
 	},
 },
 ["Megacharge's Cookbook"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 121837},
 	["pages"] = {
 		"This heavy book contains recipes and uses for various types of explosives, from conventional to exotic. You quickly flip through to the section entitled \"Anti-Magical Ordnance\"\n\n\"If you've ever gotta take down some kind of magic barrier, then you might have to get a bit unconventional with your munitions. You could stack an ogre-sized heap of dynamite against one and you're only likely to end up with some scorched ground, and maybe a missing limb or two.\n\n\"Fortunately, Megacharge has got you covered there, with the Arcane Bunker Buster (patent pending)!\"",
 		"\"To make one, you'll first need to acquire some high grade, precision blasting powder. Here in Blackfuse Company, it's pretty easy to come by, since they use it for all of the cannons. \n\n\"If you're elsewhere in the world, though, you'll need to find a top-of-the-line producer, as only the finest blasting powder will work in this application.\"",
@@ -6581,7 +5887,7 @@ _addon.data = {
 	},
 },
 ["Metzen's Letters and Notes"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 21314},
 	["pages"] = {
 		"On behalf of Smokywood Pastures, thanks again for looking into this. We're not sure which group has Metzen, but investigating either would be a good place to start!\n\nTime is money friend, and we have very precious little of it in this case. Be swift in your efforts to rescue, as these groups are not to be taken lightly in what they are capable of.\n\nAnyway, the next two pages are the ransom notes we received. Good luck...",
 		"If you want the reindeer back alive, then you'll be quick with the ransom. The Southsea Pirates don't take kindly to delays in payment, and we know how valuable the beast is to YOUR form of piracy.\n\nBring the sum of 1000 gold in to the mouth of Lost Rigger Cove in Tanaris. Any attempt to rescue the reindeer will result in Metzen taking a very long walk off of a very short plank.\n\nYeargh...\n\nThe Southsea Pirates",
@@ -6593,16 +5899,16 @@ _addon.data = {
 	},
 },
 ["Moonlit Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 127147},
 	["pages"] = {
 		"This is it, the final one! We hope you've had a lot of fun!\n\nYou seek a sail, not white or black, it must be the color of Silas' hat.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island",  ["source"] = "Disturbed Dirt",  ["level"] = "0",  ["x"] = "52.0",  ["y"] = "30.2"},
+		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island", ["areaId"] = 974,["source"] = "Disturbed Dirt",  ["level"] = "0",  ["x"] = "52.0",  ["y"] = "30.2"},
 	},
 },
 ["Moonrest Gardens Plans"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 35783},
 	["pages"] = {
 		"Goramosh,\n\nI am sending a representative of the Ethereum to you. Ambassador Duyheen tells me that there are more of his kind who would like to join the cause. Feel him out, see if you can find a use for him.\n\nIf he proves helpful, I may consider accepting more of his kind into the fold.\n\nDon't be an idiot; burn this letter once you've read it!\n\nM",
 	},
@@ -6612,7 +5918,7 @@ _addon.data = {
 	},
 },
 ["Muddy Journal Pages"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 938},
 	["pages"] = {
 		". . .most certain that she shares the same feelings for me now. She even placed her hand on mine this morning. When she smiles, her eyes light up like glittering diamonds. Unspoken words pass between us. I can feel her in my pounding heart and heated veins.",
 		". . .anger and fury the likes of which I never knew existed! How dare she. As I was instructing Giles in the meaning of numbers, Tilloa appears before me with a suitor, holding hands in public nonetheless! What an uncouth young man. Rather than introduce me properly, Tilloa simply said, \"Oh that's just my tutor, Uncle Stalvan. He's a nice old man.\" Old! At that word my cheeks flushed with heat. I am but a few years older and yet she betrays. . .",
@@ -6622,7 +5928,7 @@ _addon.data = {
 	},
 },
 ["Murloc Clue"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 57756},
 	["pages"] = {
 		"&lt;The letter is missing entries as the ink has washed away in many places.&gt;\n\n... every form of ... has been based ... on the antagonism of oppressing and oppressed ...\n\n... nothing to lose, but your chains ...\n\n... the past cannot be forgotten ...\n\n... cannot be forgiven ...\n\n... will RISE AGAIN!",
 	},
@@ -6631,7 +5937,7 @@ _addon.data = {
 	},
 },
 ["Musings of the High General"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 39360},
 	["pages"] = {
 		"Purify the body with labor. Purify the soul with prayer. Purify your enemies with fire. Pain is not an enemy, but an ally to be embraced, held close, and delivered to unbeliever and believer alike. \n\nResistance to the ways of the Light is a sign of impurity, and should be excised from the flesh of the community.",
 	},
@@ -6639,8 +5945,17 @@ _addon.data = {
 		{ ["sourceType"] = "drop",  ["area"] = "Plaguelands: The Scarlet Enclave", ["areaId"] = 502,  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
+["Mysterious Propaganda"] = {
+	["info"] = {["type"] = "item", ["id"] = 58116},
+	["pages"] = {
+		"The hour of our redemption draws ever closer, brothers and sisters! Tonight we will shed the shell of our former lives and be reborn as heroes!\n\n-V",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Westfall", ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
 ["Mythology of the Titans"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 5536},
 	["pages"] = {
 		"No one knows exactly how the universe began. Some theorize that a catastrophic cosmic explosion sent the infinite worlds spinning out into the vastness of the Great Dark - worlds that would one day bear life-forms of wondrous and terrible diversity. Others believe that the universe, as it exists, was created as a whole by a singular, all-powerful entity.",
 		"Though the exact origins of the chaotic universe remain unclear, it is clear that a race of powerful beings arose to bring order to the various worlds and ensure a safe future for the beings that would follow in their footsteps.\n\nThe Titans, colossal, metallic-skinned gods from the far reaches of the cosmos, came forward and set to work on the worlds they encountered. They shaped the form of their worlds by raising mighty mountains and dredging out vast seas.",
@@ -6652,7 +5967,7 @@ _addon.data = {
 	},
 },
 ["Of Love and Family"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 14679},
 	["pages"] = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/14679_Tirion_256\" /></BODY></HTML>",
 	},
@@ -6661,7 +5976,7 @@ _addon.data = {
 	},
 },
 ["Orders from High Command"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 60977},
 	["pages"] = {
 		"Zaren,\n\nYour first objective is to take and hold the Cathedral Quarter of Gilneas City. From there I want you to work with Lord Crowley's worgen to push forward into enemy territory. Take out their near outposts and cut their lines of communication.\n\nKing Wrynn has assured me that a full armada of warships is en route and should be arriving any day. Once the rest of the fleet is here, we will launch an all out assault on Forsaken Forward Command and beat those worthless maggots back into Silverpine Forest\n\nOnce Gilneas is securely in Alliance control, we will begin preparations for retaking Lordaeron.\n\nFor the glory of the Alliance!\n\n-High Commander Halford Wyrmbane\n\nP.S. We will launch a signal flare when we are ready to attack Forsaken Forward Command. Keep your soldiers on high alert.",
 	},
@@ -6670,7 +5985,7 @@ _addon.data = {
 	},
 },
 ["Priestly Preening: Be Like Your Betters"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 39357},
 	["pages"] = {
 		"1. Cultivate a fulsome beard, for it conceals the imperfections of the face from the Light. \n\n2. Purify your hands in the milk of the mare, that they be soft and supple when handling the offertory. \n\n3. Bathe in the rivers, allowing the glorious natural gifts of the Light to cleanse your skin.",
 		"4. Replace regularly your holy raiment, that your appearance and odours not offend the servants of the Light. \n\n5. Maintain at all times an upright posture - let not fatigue nor sloth curl the spine. \n\n&lt;The list continues for several more pages of minutiae&gt;",
@@ -6680,7 +5995,7 @@ _addon.data = {
 	},
 },
 ["Purchase Order Receipt"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49229},
 	["pages"] = {
 		"Attn: Mrs. Gadgetspring\n\nThe industrial-strength laxative agent you requested is enclosed. My condolences on the fate of Mr. Blimo Gadgetspring after his encounter with the cliff giant. I'm curious why you're opting for a laxative in an effort to recover him, as opposed to some sort of vomit-inducing agent? It seems to me you're doing Mr. Gadgetspring a disservice. Good luck with your endeavor!\n\n- Lomac Gearstrip",
 	},
@@ -6689,7 +6004,7 @@ _addon.data = {
 	},
 },
 ["Ripped Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 4101},
 	["pages"] = {
 		"That beast that reigns over this island is terribly powerful indeed. The other creatures here cower before him: Skyman and Jaguero alike. Even now I can hear his roars and they cause me to flinch.\n\nThese creatures will surely stop any who come to the island. I must have faith in my ancestors.",
 	},
@@ -6698,7 +6013,7 @@ _addon.data = {
 	},
 },
 ["Salt-Crusted Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 52279},
 	["pages"] = {
 		"We barely escaped from Kezan with our lives! The volcano took everything...my house, my car, my pet boar, my pet boar's house, my pet boar's car...\n\nBut at least we got safely onto the ships! We'll sail straight for Durotar, sucker a few orcs after we get onto dry land again, and be rolling in money again within a week!",
 		"We've been on the ocean for what seems like forever. I don't think anyone knows where we are.\n\nOur supplies are dwindling, and we used up half our water trying to run the pump for the makeshift desalinator. We tried throwing a few people overboard to gain speed, but we kept all their gold so it didn't help that much.\n\nIt was kinda fun, though.",
@@ -6713,7 +6028,7 @@ _addon.data = {
 	},
 },
 ["Scarlet Courier's Message"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 39647},
 	["pages"] = {
 		"High General,\n\nThe armies of Hearthglen and Tirisfal are less than a day's ride from New Avalon. We ride with the Light shining upon our backs and the wind at our heels. Soon the Scourge will have to contend with the full might of the Scarlet Crusade!\n\nLight Bless You,\n\nHigh Commander Galvar Pureblood",
 	},
@@ -6723,7 +6038,7 @@ _addon.data = {
 	},
 },
 ["Scarlet Crusade Documents"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 2885},
 	["pages"] = {
 		"Disperse information as you deem necessary.\n\nTirisfal Regional Command\nCaptain Melrache\nCaptain Vachon\nCaptain Perrine\n\nDirectives by the order of the Highlord.\n\nCaptain Perrine, further fortify your position at the southwest tower (as designated). Additional supplies will be dispatched at a later date. In the meantime, materiel should be obtainable from the surrounding farms. Also, further reconnaissance and information",
 		"should be gathered about the organization of the undead in Brill.\n\nCaptain Vachon, there appears to be increased movement by the undead near the northern tower. This insurgence must be quickly and decisively dealt with.\n\nCaptain Melrache, there are concerns about the level of organization of the undead near the borders of the Plaguelands. A fresh group of men will be dispatched to your position in the coming weeks.\n\nGlory under the Light",
@@ -6732,8 +6047,17 @@ _addon.data = {
 		{ ["sourceType"] = "quest",  ["area"] = "Deathknell", ["areaId"] = 892, ["id"] = 24972,  ["source"] = "Vital Intelligence",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
+["Secret Journal"] = {
+	["info"] = {["type"] = "item", ["id"] = 58115},
+	["pages"] = {
+		"I can hardly believe it. We've endured this torment for four long years, but soon it will be over. The Brotherhood will be reborn and we will then wash across this land as a flood to cleanse it of its filth and corruption.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Westfall", ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
 ["Shadowmoon Mission Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113494},
 	["pages"] = {
 		"The Iron Horde must gain greater air superiority if we are to conquer our enemies. A large population of wild rylak live in Shadowmoon Valley. Force these creatures to submit to our will. I want to see an air fleet of thousands darken the skies on Azeroth.\n\n\n-- Warlord Grommash Hellscream",
 	},
@@ -6743,7 +6067,7 @@ _addon.data = {
 	},
 },
 ["Silver Covenant Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49872},
 	["pages"] = {
 		"You must meet with Arcanist Tybalin on the top floor of the Silver Enclave. He will entrust you with a book that is beyond value. Be discreet in your movements and guard this book with your life. Carry it back to Caladis Brightspear at Quel'Delar's rest with all haste.",
 	},
@@ -6752,7 +6076,7 @@ _addon.data = {
 	},
 },
 ["Song of the Vale"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 79875},
 	["pages"] = {
 		"There is a valley where dreamers sleep,\nWhere flowers bloom and willows weep,\nWhere loamy earth springs life anew,\nAnd waters sparkle, clear and blue,\nWhere every hearth brings peaceful ease,\nAnd beauty sings on every breeze.\n\nHere the Sacred Pools spring pure\nHere, seek any who desire cure\nHoly, nature, powers divine,\nTurn death to life, death to life.",
 	},
@@ -6761,7 +6085,7 @@ _addon.data = {
 	},
 },
 ["Spires of Arak Mission Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113493},
 	["pages"] = {
 		"The arakkoa are a powerful ally and a dangerous foe. Through persuasion or force - it matters not which - we must subdue and subvert their magic.\n\n\n-- Warlord Grommash Hellscream",
 	},
@@ -6771,7 +6095,7 @@ _addon.data = {
 	},
 },
 ["Stormrage Missive"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 30617},
 	["pages"] = {
 		"Commander,\n\nThe Cipher is to be delivered to Zuluhed. It will remain in his custody until further notice.\n\n-Lord Illidan Stormrage",
 	},
@@ -6780,7 +6104,7 @@ _addon.data = {
 	},
 },
 ["Sunreaver Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 49536},
 	["pages"] = {
 		"You must meet with Magister Hathorel inside The Filthy Animal. He will entrust you with a book that is beyond value. Be discreet in your movements and guard this book with your life. Deliver it to Myralion Sunblaze at Quel'Delar's rest with all haste.",
 	},
@@ -6789,7 +6113,7 @@ _addon.data = {
 	},
 },
 ["Syndicate Missive"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 3601},
 	["pages"] = {
 		"Valik,\nGuard the slave until our return. It's not safe to keep IT here any longer. We'll be moving it north, farther away from any possibility of being seen. \n\nThey're animals, but brutal animals nonetheless--given enough of them, we'd have reason to be concerned. Better to hide any signs that would provoke them altogether. The last thing we want to give them is a reason to rally and attack us in force.",
 	},
@@ -6798,7 +6122,7 @@ _addon.data = {
 	},
 },
 ["Tear-stained Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 110667},
 	["pages"] = {
 		"Kaelynara,\n\n   It is with some regret that I must inform you that I am relieving you of your duties as my apprentice. I blame myself for being mistaken of your potential; I hope you can understand that even the most talented of mages sometimes make mistakes. At least now you can put your ineptitude behind you and pursue a reasonable goal. Perhaps basket weaving may prove more suitable for your...talents.\n\n   Unfortunately I do not associate myself with any basket weavers specifically and am too busy to write you a recommendation. Please return to Azeroth at your soonest convenience.\n\n   -Astalor",
 	},
@@ -6807,7 +6131,7 @@ _addon.data = {
 	},
 },
 ["The Book of Ur"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 6283},
 	["pages"] = {
 		"The land of Azeroth is host to no end of wonders. Flora, fauna, cultures and magic all teem across its surface. Indeed, the curious will find limitless variety on this world. One merely has to look.\n\nBut if one looks deeply enough then windows to entire new worlds are found, and each world is home to its own wonders.\n\nJust as each is home to its own horrors.",
 		"This is the purpose of my book: to catalogue those beings, those otherworldly fiends who would destroy our lands, so that explorers who happen upon them will know what they face.\n\nSo if you consider yourself a guardian of Azeroth, then read on. And know your enemy.\n\n-Ur\nMage of Dalaran",
@@ -6823,7 +6147,7 @@ _addon.data = {
 	},
 },
 ["The Diary of High General Abbendis"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 37540},
 	["pages"] = {
 		"<HTML><BODY><H1 align=\"center\">The Diary of High General Abbendis</H1><BR/><IMG src=\"Interface/FlavorImages/ScarletCrusadeLogo\" /></BODY></HTML>",
 		"<HTML><BODY><P>The voice whispered, \"Come to me.\" From the very beginning I knew that it was the Holy Light speaking to me in dreams. At last! After all of my years of prayers and good deeds, the cleansing of the blight of the unliving from the face of Azeroth. After all of the failures and resurrections.</P><BR/><P>Finally!</P></BODY></HTML>",
@@ -6856,7 +6180,7 @@ _addon.data = {
 	},
 },
 ["The Path of Redemption"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 37931},
 	["pages"] = {
 		"<HTML><BODY><H1 align=\"center\">The Diary of High General Abbendis</H1><BR/><IMG src=\"Interface/FlavorImages/ScarletCrusadeLogo\" /></BODY></HTML>",
 		"<HTML><BODY><P>The voice whispered, \"Come to me.\" From the very beginning I knew that it was the Holy Light speaking to me in dreams. At last! After all of my years of prayers and good deeds, the cleansing of the blight of the unliving from the face of Azeroth. After all of the failures and resurrections.</P><BR/><P>Finally!</P></BODY></HTML>",
@@ -6889,7 +6213,7 @@ _addon.data = {
 	},
 },
 ["Thukmar's Intel"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113629},
 	["pages"] = {
 		"This is magnificent!\n\nI have unearthed an artifact of unknown origin. Touching it instantly floods my mind with a vision of every magnaron, gronn and the like that walks Gorgrond.\n\nWhat's more, I am overcome with a sense that each of these creatures are an appendage to me. I have found myself able to commune with them, manipulate them and even shape their thoughts.\n\nI am returning to the foundry to inform Blackhand directly. This discovery will hasten our purging of draenor, and many more worlds to come!",
 	},
@@ -6899,7 +6223,7 @@ _addon.data = {
 	},
 },
 ["Thulgork's Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 111065},
 	["pages"] = {
 		"This fortress is in a sorry state of disrepair. It will be hard to improve the Felbreaker's armor here until we get this place into shape. We need space in case of arcane mishaps and safe areas to store our materials. Make this happen quickly!\n\nReglaak",
 	},
@@ -6909,7 +6233,7 @@ _addon.data = {
 	},
 },
 ["Torn Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 4102},
 	["pages"] = {
 		"I miss my tribe, and my home. I would gladly welcome the wind on the open plains or the sunset over Thunder Bluff to the heat of this jungle.\n\nI can see the ocean water not far from me, but it does nothing to cool my body or my temper. It only reminds me of my imprisonment.",
 	},
@@ -6918,7 +6242,7 @@ _addon.data = {
 	},
 },
 ["Torn Zandalari Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 95411},
 	["pages"] = {
 		"I take back everything I said about this place. When Zul landed us on the northern shores of the mainland, I thought this was the promised land, the salvation of the Zandalari. The fishing villages fell easily. Nobody put up a battle 'til those dark ones came along - the \"Shado-Pan.\" They don't stand up and fight. They come at us from the trees. Sometimes I swear they walk through walls. Always behind us, always out of the corner of our eyes - never fighting from the front.\n\nOnce we had that old mogu king's corpse, we were out of there. Mogu, mogu, mogu. I could see why Zul wanted them as our allies: I saw the glory of their ancient empire firsthand when we fought our way through the Valley of Emperors.",
 		"But that was weeks ago. Now I'm slogging through a swamp, digging up statues in the rain. The mogu look down on us. I can see it, at least in the ones that have eyes. Some of them are just stones, with stones for hearts and stones for brains.\n\nThey're using us. But Zul says they'll keep their word once they're in power again. And Zul... he just seems to KNOW things.",
@@ -6930,7 +6254,7 @@ _addon.data = {
 	},
 },
 ["Traitor's Communication"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 23899},
 	["pages"] = {
 		"Servant,\n \nSeveral years worth of planning has been lost. The draenei and their pitiful leader have escaped the Master's grasp once again! What's more, they have stolen MY vessel and crashed it upon Azeroth! \n\nWhile it is true that the Master's eredar agent has failed, she was able to transmit the Exodar's location to us. Fortuitously, her identity is still a mystery to the draenei. We may still be able to use her for our purposes.",
 		"Contact our spy and prepare for a full scale assault upon the draenei. Kill them all and recover my vessel. You are the only link I have on Azeroth that is able to repair the damage the brutes inflicted upon the Exodar.\n\nDo not fail me, gnome. Should your lust for riches interfere with my orders, you will spend eternity in prayer. You'll pray for death to come and release you from the tortures I'll unleash should you falter.\n\n-King Sunstrider",
@@ -6941,7 +6265,7 @@ _addon.data = {
 	},
 },
 ["Troubles From Without"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 90174},
 	["pages"] = {
 		"Brothers and Sisters,\n\nWe need to keep our eyes beyond our shores. The mists have fallen. We, the Shado-Pan are the next and final line of defense.\n\nThe first to come, as you know, were the Horde and Alliance. While they have not shown themselves to be hostile, we continue to follow them with a wary eye.\n\nThe next to come did not arrive by air, but from beneath the sea. The makrura have shown increased activity on our shores, which suggests a possible future attack. I will highlight a few high-priority targets to look out for.",
 		"AKKALOU\nThis female has been known to attack the fishermen of Sri-La Village in times of hunger. Reports vary whether she is simply a nuisance or an outright menace. Last seen on the rocks southwest of Windward Isle, in the Jade Forest.\n\nAKKALAR\nAkkalar is renowned among his kind for his thick carapace. His brazen attacks on the jinyu of the Jade Forest suggest either arrogance or strength. Potentially both. Last seen on the southern tip of the Jade Forest, south of Pearlfin Village.",
@@ -6954,7 +6278,7 @@ _addon.data = {
 	},
 },
 ["Turning the Other Cheek"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 39361},
 	["pages"] = {
 		"The topic of indulgences is a difficult one, but at times in our lives, it becomes a necessary evil. A lapse of judgment, a harsh word too quickly spoken, a punch or kick thrown in anger - all these things are failings of mortal men, and the Church must acknowledge that. \n\nHowever, such acknowledgement does not come without a price. For sins of harsh words, a mere handful of silver will cleanse the soul. For sins of physical force, a handful of gold will expurgate the failings of mortal flesh. For those other sins, a full confession and a more generous contribution will be necessary.",
 		"Punching: \n Punch to the Face : 2 gold\n Punch to the Groin: 3 gold\n Punch in the Chest: 1 gold 45 silver\n \n&lt;A detailed list of prices and sins continues for pages&gt;",
@@ -6964,7 +6288,7 @@ _addon.data = {
 	},
 },
 ["Twilight Correspondence"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 35277},
 	["pages"] = {
 		"Loyal servants of the elemental lords, OUR TIME IS NOW.\n\nToo long we have languished in the shadows, biding our time, serving our masters, seeking the end we know must come. Now, as the flames of Ragnaros' Appeasement burn brightly through the night, we have in our grasp the tools to incite war and chaos on a cataclysmic scale!\n\nThe Firelord is imprisoned in our world. He is not at his full power, but his might is formidable. Given an equally formidable opponent in this realm, the resulting clash would begin the great elemental war that will bring about the end we have sought.",
 		"In Neptulon's service is a great frost lord by the name of Ahune. Even now he is marshalling his power to wage war against Ragnaros. All he requires is a gateway into our world; a gateway we will provide. We have the allies. We have the location. We have the strength and the will.\n\nFinal negotiations with our new faithful allies and guests will be conducted in a safe, out of the way location northwest of our primary location in Ashenvale.\n\nBefore this \"festival\" of the ignorant masses comes to a close, Ahune shall face Ragnaros in the shadow of Blackrock. The world will quake with the forces unleashed.",
@@ -6975,7 +6299,7 @@ _addon.data = {
 	},
 },
 ["Ur's Treatise on Shadow Magic"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 7266},
 	["pages"] = {
 		"The swirling symbols and pictograms that fill the pages of this manual are esoteric beyond comprehension.",
 	},
@@ -6984,7 +6308,7 @@ _addon.data = {
 	},
 },
 ["Urgent Scarlet Memorandum"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 52077},
 	["pages"] = {
 		"An Urgent Message to all Scarlet Officers and Enlistees:\nThe Scourge agent known as Lilian Voss has escaped from her captivity at the Scarlet Palisade. She is to be considered highly dangerous, and should be killed on sight. She has already slain 15 of our men. None were left wounded.\n\nDo NOT try to apprehend her. Doing so will likely result in death. She is an enemy to the Crusade and must be crushed immediately.\n\nThe crusader who returns her head to the High Priest will be rewarded with 1,000 gold. Refer any questions to your commanding officer.\n\n\n~BV",
 	},
@@ -6993,7 +6317,7 @@ _addon.data = {
 	},
 },
 ["Warchief's Orders"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 8463},
 	["pages"] = {
 		"Commander,\n\nReturn to Orgrimmar. Your forces inadequate. Must reanalyze our position based upon new information.\n\nLarge number of Shadowsworn and Ogres present. Demons guard the Dark Portal.\n\n-Thrall, Warchief of the Horde",
 	},
@@ -7002,7 +6326,7 @@ _addon.data = {
 	},
 },
 ["Water Soaked Letter"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 44468},
 	["pages"] = {
 		"Years and years I have been locked away in this magical prison. Tonight, I make my escape. I have everything I need to make my break.\n\n&lt;Water smeared ink has ruined this section of the letter&gt;\n\nWhy have I been here so long? What did I do to deserve this? Days and days of these thoughts running through my head. What could someone do to deserve this?\n\n&lt;Water smeared ink has ruined this section of the letter&gt;\n\nPerhaps I will find out in another life.",
 	},
@@ -7011,7 +6335,7 @@ _addon.data = {
 	},
 },
 ["Waterlogged Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 111407},
 	["pages"] = {
 		"Day 1. The Thunderlords have begun their seasonal migration. Should they turn toward our lands, runners will relay this journal to the chieftain.\nDay 3. Our scouting party was captured in a canyon ambush by the Warmaul ogres. Det'rak and Kelorr are dead, and Pettra is surely to follow. The rest of us have been hauled to the lower hold of a huge ogre vessel loaded with slaves from every tribe I've heard of, and some I have not. I have managed to hide this journal from the ogres for now.\nDay 8. Pettra held on longer than we expected. The ogres dragged his body out of the hold and fed him to their foul boars. Malaise is starting to spread among the remaining slaves. We must act soon or we will be broken before we arrive wherever it is the ogres are taking us.",
 		"Day 11. Though we are outnumbered I have managed to convince at least a dozen other orcs to attempt to take the boat tonight. Telmek has found a length of chain that he believes we can use to quietly kill the overnight guard before attempting to rush the deck.\nDay 12. The escape did not work. The ogres are simply too strong and too numerous. Several slaves were killed in the attempt, and those who survived had our knees broken. My fighting days are over. I will be lucky to walk again someday.\nDay 19. Land has been sighted. I must abandon this journal now or it will surely be taken. Should this journal find its way home - Palleae, I love you.",
@@ -7021,7 +6345,7 @@ _addon.data = {
 	},
 },
 ["Waterlogged Zandalari Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 95408},
 	["pages"] = {
 		"I can still see it, still remember how I felt when I laid eyes on it. Blinking to wake up, telling myself I was already awake. The great palace listing to one side, like a drunk hunched against the wall. Still gleaming and gold. Was Rastakhan still inside? King of a crooked throne.\n\nThe morning sun glimmering off the seawater that crept into the forum. Pretty but for the jagged fissure tearing up the tile. We thought that was the worst of it. But the Cataclysm had only begun.",
 		"Water up a foot by the next evening. A week later, high tide came up to the market awnings. Still the sun shone. Like the world was saying it was sorry. Sorry to take your home. Sorry to give it to the sea.\n\nWorld don't get off that easy.",
@@ -7032,7 +6356,7 @@ _addon.data = {
 	},
 },
 ["Weathered Journal"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 92804},
 	["pages"] = {
 		"In the one-hundred-and-seventieth year of the Thunder King's reign, the Korune spellweavers came to Lei Shen with their greatest creation. \n\nA bell cast from the makers' flesh, shaped by stars' fire, and bound by the breath of darkest shadow. This bell, when rung, could shake the world and call to the heavens.\n\nTaken to war, the bell's cacophonous tones stirred the hearts of Lei Shen's warriors. It fueled their hatred and anger, lending them strength on the field of battle. The bell's screaming voice struck fear and doubt into the hearts of the Emperor's enemies, sending them fleeing in his path.\n\nAwed by its power, the Thunder King described the instrument as \"the voice of the gods,\" and named it Shenqing, the Divine Bell.",
 	},
@@ -7041,7 +6365,7 @@ _addon.data = {
 	},
 },
 ["White Punch Card"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 9279},
 	["pages"] = {
 		"SUPER CRITICAL TRIPLE-ENCODED DATA CARD\n\n01010100 01101000 01110010 01100001 01101100 01101100 00100000 01100001 01101110 01100100 00100000 01001010 01100001 01101001 01101110 01100001 00100000 01110011 01101001 01110100 01110100 01101001 01101110 01100111 00100000 01101001 01101110 00100000 01100001 00100000 01110100 01110010 01100101 01100101 00101100 00100000 01001011 00101101 01001001 00101101 01010011 00101101 01010011 00101101 01001001 00101101 01001110 00101101 01000111",
 	},
@@ -7051,11 +6375,126 @@ _addon.data = {
 },
 
 ------------------------------------------------------------------------------------------
+-- More Junk
+-- http://www.wowhead.com/items=15.0?filter=cr=14;crs=1;crv=0;eb=1
+------------------------------------------------------------------------------------------
+
+["An Exotic Cookbook"] = {
+	["info"] = {["type"] = "item", ["id"] = 5428},
+	["pages"] = {
+		"1. Get one or eight man\n2. Hit man hard\n3. Hit man more\n4. Put man in fire\n5. Eat man",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "drop",  ["area"] = AREA_WORLDDROP,  ["source"] = "Level 47 to 58 npcs",  ["level"] = " ", },
+	},
+},
+["Journal Page"] = {
+	["info"] = {["type"] = "item", ["id"] = 5839},
+	["pages"] = {
+		"It never ceases to amaze me how easily hatred can be used to bend people to your will. The orcs and trolls were easiest, their hatred of the Alliance making them willing subjects to hear the message of the Dark Strand. Do they have any inkling of the greater power they serve?\n\nThat infuriating paladin, Delgren the Purifier, has been poking into our affairs in Ashenvale Forest, while his lackey, Balthule, spies on my tower, thinking his presence unknown to me. Delgren believes us a minor",
+		"threat, just another death cult, perhaps. Little does he know that we are but one of the... strands of the Shadow Council.\n\nAs a child, I was once told of an insect whose bite could kill with ease, though it looked nothing more than a fly, a speck barely worthy of recognition. It is the things you dismiss which will hurt you the most, left to fester.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+["Crystal Pylon User's Manual"] = {
+	["info"] = {["type"] = "item", ["id"] = 11482},
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">CRYSTAL PYLON USER'S MANUAL</H1><BR/><P align=\"center\"> \"A guide to collecting and using the power crystals of Un'Goro Crater\" </P><BR/><BR/><P align=\"left\">Chapter 1: The Northern Pylon </P><BR/><P align=\"left\">Chapter 2: The Eastern Pylon </P><BR/><P align=\"left\">Chapter 3: The Western Pylon </P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Chapter 1: THE NORTHERN PYLON</H1><BR/><BR/><IMG src=\"Interface/Pictures/11482_crystals_mini_north\" align=\"left\" /><P align=\"right\">The Northern<BR/>Pylon accepts<BR/>yellow, red,<BR/>and green<BR/>crystals.</P><BR/><BR/><BR/><BR/><P align=\"left\">The Pylon focuses on the energy that can be created using yellow crystals as the main source of power.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Northern Crystal Combinations</H1><BR/><P align=\"left\">There are two possible effects: one that will produce damage, and one that will negate damage. </P><BR/><P align=\"left\">CRYSTAL CHARGE: Requires red and yellow crystals. <BR/>This will produce a large explosion.</P><BR/><P align=\"left\">CRYSTAL RESTORE: Requires yellow and green crystals. <BR/>This will provide you with a healing aura.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">NORTHERN PYLON TABLE DIAGRAM</H1><BR/><IMG src=\"Interface/Pictures/11482_crystals_north\" /></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Chapter 2: THE EASTERN PYLON</H1><BR/><BR/><IMG src=\"Interface/Pictures/11482_crystals_mini_east\" align=\"left\" /><P align=\"right\">The Eastern<BR/>Pylon accepts<BR/>blue, yellow,<BR/>and green<BR/>crystals.</P><BR/><BR/><BR/><BR/><P align=\"left\">The Pylon focuses on the energy that can be created using blue crystals as the main source of power.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Eastern Crystal Combinations</H1><BR/><P align=\"left\">There are two possible effects: one provides bonus to spirit, and one that creates a damaging shield.</P><BR/><P align=\"left\">CRYSTAL FORCE: Requires blue and green crystals.<BR/>This will provide you with an increase in spirit.</P><BR/><P align=\"left\">CRYSTAL SPIRE: Requires blue and yellow crystals.<BR/>This will create a shield that does damage to attackers.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">EASTERN PYLON TABLE DIAGRAM</H1><BR/><IMG src=\"Interface/Pictures/11482_crystals_east\" /></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Chapter 3: THE WESTERN PYLON</H1><BR/><BR/><IMG src=\"Interface/Pictures/11482_crystals_mini_west\" align=\"left\" /><P align=\"right\">The Western<BR/>Pylon accepts<BR/>red, green,<BR/>and blue<BR/>crystals.</P><BR/><BR/><BR/><BR/><P align=\"left\">The Pylon focuses on the energy that can be created using red crystals as the main source of power.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Western Crystal Combinations</H1><BR/><P align=\"left\">There are two possible effects: one that increases your protection from damage, and one that weakens an enemy's defenses.</P><BR/><P align=\"left\">CRYSTAL WARD: Requires red and green crystals.<BR/>This will provide you with an increase to armor.</P><BR/><P align=\"left\">CRYSTAL YIELD: Requires blue and red crystals.<BR/>This can lower the armor of a specific target.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">WESTERN PYLON TABLE DIAGRAM</H1><BR/><IMG src=\"Interface/Pictures/11482_crystals_west\" /></BODY></HTML>",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+["Nat Pagle's Guide to Extreme Anglin'"] = {
+	["info"] = {["type"] = "item", ["id"] = 18229},
+	["pages"] = {
+		"... and so that's where you'll find the legendary sword of the Scarlet Highlord, Ashbringer.\n\nAin't it amazin' what you run into in an ordinary day of fishin'?",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+["Featherbeard's Map"] = {
+	["info"] = {["type"] = "item", ["id"] = 23695},
+	["pages"] = {
+		"The sketch shows Shadra'Alor and its three temples, with a number of 'x' marks, corresponding to the locations of the stolen eggs. The marks appear at the southern end of the eastern temple, close to a hut to the northeast of the eastern temple, near an altar to the east of the central lake, and on the slope of the southern temple near the word 'exile.'\n\nFeatherbeard's notes indicate that he was planning on delivering this information to Falstad Wildhammer, whom he hoped would dispatch a band of warriors to rescue the eggs.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+["Bloodvalor's Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 24223},
+	["pages"] = {
+		"&lt;name&gt;,\n\nThe creation of the blood-tempered ranseur requires a variety of rare and volatile materials, resulting in a fearsome weapon of superior craftsmanship. I will list the materials in order from easiest to most difficult to obtain.\n\nDo not forget that you must also secure your Blood Knight insignia before the materials will be accepted and the forging process can begin.",
+		"Blood of the wrathful - In order to properly temper the metal of your weapon, it must be quenched in the blood of the wrathful. Though the blood of most demons holds a substantial amount of power, common blood is not sufficient for the forging of your ranseur.\n\nDiscreet inquiries with the warlocks of Orgrimmar have proven helpful in locating a supply of the blood. The Searing Blade cultists within Ragefire Chasm possess an orb filled with the kind of blood we'll need for your weapon. I am told the orb is guarded by an orc calling himself Jergosh the Invoker.\n\nExercise caution, as in all your dealings with demonic powers. You can never tell what might happen when handling such a powerful substance.",
+		"Crate of bloodforged ingots - On its own, steel is a fine metal, but a weapon forged from it is unremarkable. Bloodforged ingots represent a superior material created in a process that is a well-kept secret. Rumor has it that any smith bold enough to handle and work the metal becomes cursed, but our craftsmen have proven this false.\n\nThe metal's reputation increases its scarcity, but the Forsaken have sent word that a supply may exist within Shadowfang Keep. A skilled smith by the name of Landen Stilwell grew curious enough to smuggle a crate of ingots into the keep. It is not known where Stilwell keeps his stash, but our informant tells us the smith is being held prisoner in the keep's dungeon. Use any means at your disposal to obtain the ingots.",
+		"A corrupted kor gem - The magisters' tomes record that these gems are used by some spell casters to hold energy for their magics, making them even deadlier. Although purified versions of the gem can be safely used by journeyman spellcasters, they are too weak for our purposes.\n\nIn the caves of Blackfathom Deeps, naga spellcasters have imbued kor gems with their own dark powers, augmenting them in a way that makes them perfect for use in your ranseur. Slay them mercilessly until you have secured the gem you will need.",
+		"The insignia that you will wear as an adept was last carried by a brave and fearless Blood Knight from the Dawnstar family. His exemplary service is a good omen for your own life in the order.\n\nBlood Knight Dawnstar led a daring, but unsuccessful attack on the Scourge stronghold of Deatholme. His body rests where he died, locked in combat with our greatest foes. Find him, &lt;name&gt;, and return his insignia to me. Your success will bring honor to him, to you, and to all true Blood Knights.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+["Items for Magister Astalor Bloodsworn"] = {
+	["info"] = {["type"] = "item", ["id"] = 24277},
+	["pages"] = {
+		"Lady Liadrin,\n\nThe recent trouble with the captive creature has damaged some of our most vital equipment. Reestablishing control over it has stretched both my magisters and resources entirely too thin. I've submitted reports of the incident to Grand Magister Rommath, but he has been slow to respond. I am afraid that without the following materials, we may be forced to scale back our operations and you know what that would mean for your knights.\n\nIf there is anything you can do to help, I've included a list of materials on the following page. Any assistance your order can provice would be greatly appreciated.\n\nMagister Astalor Bloodsworn",
+		"* 40 Runecloth\n* 6 Arcanite Bars\n* 10 Sungrass\n* 5 Dark Runes\n* 150 Gold",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+["The Relics of Terokk"] = {
+	["info"] = {["type"] = "item", ["id"] = 32888},
+	["pages"] = {
+		"When I was last in the halls, Talon King Ikiss carried Terokk's Quill with him, as a sign of his authority. He probably still carries it to convince his followers that he is Terokk reborn.\n\nMy brother, Darkweaver Syth, wore Terokk's Mask while leading the Sethekk rituals.\n\nAs for the Saga of Terokk, it is kept within a circle of runes in the great vaulted chamber just outside Talon King Ikiss's own.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+["McCarty's Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 38605},
+	["pages"] = {
+		"&lt;The handwriting is unintelligible chicken scratch, but you can make out references to the color pink...&gt;",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+["News From The North"] = {
+	["info"] = {["type"] = "item", ["id"] = 39317},
+	["pages"] = {
+		"To High General Abbendis\nNew Avalon, Scarlet Lands\n\nHigh General Abbendis,\n\nI hope this letter finds you in good health. My name is Dansel Adams, hunter by trade, Scarlet Crusader by blood. I am writing this letter to inform you that I have witnessed a miracle.",
+		"During a routine purging of heathens in the Scourge infested Plaguewood, my party and I were interrupted by a deafening screech coming from the sky. When we looked to the heavens, towards Naxxramas, our jaws dropped to the floor. I tell you this now, High General, 'twas a sight not to be believed! The dread citadel was moving. Slowly at first and then with a thunderous roar - poof - it was gone!\n\nThat's right, High General, Naxxramas is gone! No more! Could it be anything other than a miracle of the Light? I say not!",
+		"May it be that the impure, unkempt barbarians, are judged and sentenced next. Praise be the Light!\n\nPlease let our brothers and sisters know of this miracle, High General.\n\nMay the Light preserve you for all eternity so that you may spread the good word until the end of days.\n\nRespectfully,\n\nD. Adams\n\"The Closer\"",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "unavailable",  ["area"] = "",  ["source"] = "",  ["level"] = " ", },
+	},
+},
+
+
+
+------------------------------------------------------------------------------------------
 -- Decoded messages
 ------------------------------------------------------------------------------------------
 
 ["Decoded Message 001-003"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113994},
 	["pages"] = {
 		"Unidentified threats have attacked Peacekeeper 011 units in deepest caves of the Magnetic Chasm. Initiate protocol 54.",
 	},
@@ -7064,7 +6503,7 @@ _addon.data = {
 	},
 },
 ["Decoded Message 001-014"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113995},
 	["pages"] = {
 		"121,172 robo-units have been assembled and now march to face unknown threat in the Magnetic Chasm below the Molten Eternium Sea. Increase generosity circuits in all Blingtron units to minimize organic awareness.",
 	},
@@ -7073,7 +6512,7 @@ _addon.data = {
 	},
 },
 ["Decoded Message 001-107"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113996},
 	["pages"] = {
 		"Allied destruction total has increased to 64%. Request supplies.",
 	},
@@ -7082,7 +6521,7 @@ _addon.data = {
 	},
 },
 ["Decoded Message 001-111"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113997},
 	["pages"] = {
 		"Massive shipment of Alarm-o-Bots received, disassembled, and reconstructed as frag grenades.",
 	},
@@ -7091,7 +6530,7 @@ _addon.data = {
 	},
 },
 ["Decoded Message 001-119"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113998},
 	["pages"] = {
 		"The virus infecting our units has been identified: a clockwork assembly system hack. Because it appears to be beneficial in many ways, the robot will accept it readily, until it begins to corrupt their AI by overloading generosity circuits. There is no known way to nullify the effect without destroying the host. Do not hesitate.\n\nYour Leader (0x0001)",
 	},
@@ -7100,7 +6539,7 @@ _addon.data = {
 	},
 },
 ["Decoded Message 001-150"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 113999},
 	["pages"] = {
 		"A single de-weaponized companion unit was fitted with a Stealthman 54z, enabling it to appear harmless and bypass the enemy's significant security systems. It has identified the enemy's leader with a 73.4% accuracy. The enemy leader is monstrous in size and calls itself iR-T0. No further information was obtained.",
 	},
@@ -7109,7 +6548,7 @@ _addon.data = {
 	},
 },
 ["Decoded Message 001-159"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 114000},
 	["pages"] = {
 		"Organic awareness of The War is growing too quickly. Above-ground units possibly infected. Seed plans for next-gen Blingtron remote to call on veteran units that can assess and destroy.",
 	},
@@ -7118,12 +6557,35 @@ _addon.data = {
 	},
 },
 ["Decoded Message 001-168"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 114001},
 	["pages"] = {
 		"Gift supply decreasing to inadequate levels. Use of war surplus authorized.",
 	},
 	["locations"] = {
 		{ ["sourceType"] = "container",  ["area"] = "",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+	},
+},
+
+------------------
+-- Faded Note Horror
+------------------
+
+
+["Faded Note"] = {
+	["info"] = {["type"] = "item", ["id"] = 106902},
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">These 3 items share the same name but are completely unrelated.</H1></BODY></HTML>",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Frostfire Ridge</H1></BODY></HTML>",
+		"Son,\n\nIf you are reading this, then you have completed the rite of om'riggor. You are no longer a child. You are a warrior.\n\nThis trinket belonged to your mother, rest her spirit. She never got to meet you, but she loved you with all her heart.\n\nHer memory kept me safe in countless battles - kept me coming home so I could raise you into the orc you are today.\n\nTake it with you, that you may serve our clan with honor.\n\n- Your father",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Spires of Arak</H1></BODY></HTML>",
+		"My love... I hope you can forgive me. All I could do was run. If I let them catch us both, there would be no way to save you. Now all I feel is a terrible emptyness for not having stayied by your side. This morning I intend to face the flying beasts the way I should have before. I pledge to seek you endlessly in the afterlife... I desire only to be with you. Whatever the sacrifice...",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Darkmoon Island</H1></BODY></HTML>",
+		"Another note, another tease, it's enough to make you weak in the knees!\n\nYou're almost there, look for your next hint, next to a fellow that was negligent.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "chest",  ["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["source"] = "Dusty Chest",  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
+		{ ["area"] = "Spires of Arak", ["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "55.3",  ["y"] = "18.1"},
+		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island", ["areaId"] = 974, ["source"] = "242519",  ["level"] = "0",  ["x"] = "53.2",  ["y"] = "60.4", },
 	},
 },
 
@@ -7133,23 +6595,44 @@ _addon.data = {
 
 
 --[[
-Darkmoon Isle
-Alterac Valley
-Tarren Mill vs South Shore
-
-
-
-List of duplicate names
-
 ["Faded Note"] = {
-	["visual"] = {["type"] = "Item"},
+	["info"] = {["type"] = "item", ["id"] = 127145},
 	["pages"] = {
 		"Another note, another tease, it's enough to make you weak in the knees!\n\nYou're almost there, look for your next hint, next to a fellow that was negligent.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island",  ["source"] = "Suspicious Mound",  ["level"] = "0",  ["x"] = "53.2",  ["y"] = "60.4"},
+		{ ["sourceType"] = "chest",  ["area"] = "",  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = "", },
 	},
 },
+["Faded Note"] = {
+	["info"] = {["type"] = "object", ["id"] = 237697},
+	["pages"] = {
+		"My love... I hope you can forgive me. All I could do was run. If I let them catch us both, there would be no way to save you. Now all I feel is a terrible emptyness for not having stayied by your side. This morning I intend to face the flying beasts the way I should have before. I pledge to seek you endlessly in the afterlife... I desire only to be with you. Whatever the sacrifice...",
+	},
+	["locations"] = {
+		{["area"] = "Spires of Arak", ["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "55.3",  ["y"] = "18.1"},
+	},
+},
+["Faded Note"] = {
+	["info"] = {["type"] = "item", ["id"] = 106902},
+	["pages"] = {
+		"Son,\n\nIf you are reading this, then you have completed the rite of om'riggor. You are no longer a child. You are a warrior.\n\nThis trinket belonged to your mother, rest her spirit. She never got to meet you, but she loved you with all her heart.\n\nHer memory kept me safe in countless battles - kept me coming home so I could raise you into the orc you are today.\n\nTake it with you, that you may serve our clan with honor.\n\n- Your father",
+	
+		
+	},
+	["locations"] = {
+		{ ["sourceType"] = "chest",  ["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["source"] = "Dusty Chest",  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
+	},
+},
+]]--
 
+--[[
+Need area Ids for:
 
+Darkmoon Island 974 ?
+Alterac Valley
+Tarren Mill vs South Shore
+
+Total: 577
+Legit: 556
 ]]--

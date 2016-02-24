@@ -1,5 +1,6 @@
 ﻿
 local _addonName, _addon = ...;
+_addon.translations = {};
 
 local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
 
@@ -35,9 +36,11 @@ local _option = {
 		["showPins"] = true,
 		["showCollected"] = false,
 	}
-			
-local _completedQuests = nil;
+
+local _localization = GetLocale();
 local _data = {}
+local _translations = {};
+local _completedQuests = nil;
 local _unlockedLoreTitles = {};
 local _favoriteLore = {};
 local _loreList = {};
@@ -59,6 +62,7 @@ local _achievementsToCheck = {
 	}
 	
 local FORMAT_LORE_UNLOCK = "LoreLibrary added: %s";
+local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
 local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
 local OPTION_SHOW_PINS = "Show pins";
@@ -102,7 +106,11 @@ local function SortLoreUnlockFirst(list)
 	table.sort(list, function(a, b) 
 		if (a.favorite and b.favorite) or (not a.favorite and not b.favorite) then
 			if (a.unlocked and b.unlocked) or (not a.unlocked and not b.unlocked) then
-				return a.title < b.title;
+				if (a.localized and b.localized) then
+					return a.localized < b.localized;
+				else
+					return a.title < b.title;
+				end
 			end
 			return (a.unlocked and not b.unlocked);
 		end
@@ -202,9 +210,28 @@ function _addon:GetNumUnlockedLore()
 	return count;
 end
 
+function _addon:IsStillObtainable(lore)
+	for k, source in ipairs(lore.locations) do
+		if (source.sourceType ~= "unavailable") then
+			return true;
+		end
+	end
+	return false;
+end
+
+function _addon:GetNumAvailableLore()
+	local count = 0;
+	for k, lore in ipairs(_loreList) do
+		if (self:IsStillObtainable(lore)) then
+			count = count + 1;
+		end
+	end
+	return count;
+end
+
 function _addon:UpdateProgressBar()
-	local maxProgress = #_loreList;
-	local currentProgress = self.GetNumUnlockedLore();
+	local maxProgress = self:GetNumAvailableLore();
+	local currentProgress = self:GetNumUnlockedLore();
 
 	LoreLibraryCore.progressBar:SetMinMaxValues(0, maxProgress);
 	LoreLibraryCore.progressBar:SetValue(currentProgress);
@@ -279,12 +306,29 @@ function _addon:ChangeDisplayPage(direction)
 	self:UpdateListDisplayNavigation();
 end
 
+function _addon:GetEnglishTitle(title)
+	if _translations and _translations[title] then
+		return _translations[title].english;
+	end
+		
+	return title;
+end
+
 function _addon:UnlockNewLore(title, silent)
+	local origional = nil;
+	if not (_localization == "enGB" or _localization == "enUS") then
+		origional = title;
+		title = self:GetEnglishTitle(title);
+	end
+
+	-- Not in database or already unlocked
+	if not title or not _data[title] or _data[title].unlocked then return; end
+
 	_data[title].unlocked = true;
 	_unlockedLoreTitles[title] = true;
 	SortLore();
 	if not silent then
-		print(FORMAT_LORE_UNLOCK:format(title));
+		print(FORMAT_LORE_UNLOCK:format((origional or title)));
 		self:UpdateBookList()
 	end
 end
@@ -341,7 +385,7 @@ function _addon:GetFilteredList(unlockedFirst)
 	if (search ~= nil and search ~= "") then
 		local searchList = {}
 		for k, lore in ipairs(list) do
-			if (string.find(lore.title:lower(), search:lower())) then
+			if (string.find(string.lower(lore.localized or lore.title), search:lower())) then
 				table.insert(searchList, lore);
 			end
 		end
@@ -400,9 +444,11 @@ end
 
 function _addon:CheckAchievementProgress(id)
 	local _, _, _, overallCompleted = GetAchievementInfo(id);
-	for i=2, GetAchievementNumCriteria(id) do 
+	for i=1, GetAchievementNumCriteria(id) do 
 		local description, _, completed = GetAchievementCriteriaInfo(id, i);
 		if overallCompleted or completed then
+			-- Because french uses a different ' in their achievements
+			description = description:gsub("’", "'");
 			self:UnlockNewLore(description, true);
 		end
 	end
@@ -419,7 +465,7 @@ function _addon:UpdateBookDisplay(lore)
 	end	
 	display.sources:Hide();
 	
-	display.title:SetText(lore.title);
+	display.title:SetText(lore.localized or lore.title);
 	
 	if (lore.unlocked) then
 		display.lore = lore;
@@ -482,7 +528,7 @@ function _addon:UpdateBookList()
 			local lore = list[displayIndex];
 			button.lore = lore;
 			button.title:SetFontObject((lore.unlocked) and "GameFontNormal" or "GameFontDisable");
-			button.title:SetText(lore.title);
+			button.title:SetText((lore.localized and lore.localized or lore.title));
 			if (button.title:GetText()== LoreLibraryListInsetRight.title:GetText()) then
 				button.selectedTexture:Show();
 			else
@@ -681,7 +727,7 @@ function _addon:InitCoreFrame()
 	
 	LoreLibraryListScrollFrame.scrollBar.doNotHide = true;
 	HybridScrollFrame_CreateButtons(LoreLibraryListScrollFrame, "LOLIB_ListBookTemplate", 1, 0);
-	HybridScrollFrame_Update(LoreLibraryListScrollFrame, #_loreList*SIZE_LISTBOOKHEIGHT, LoreLibraryListScrollFrame:GetHeight());
+	HybridScrollFrame_Update(LoreLibraryListScrollFrame, #_loreList * SIZE_LISTBOOKHEIGHT, LoreLibraryListScrollFrame:GetHeight());
 	
 	LoreLibraryListScrollFrame.update = function() _addon:UpdateBookList() end;
 	
@@ -808,16 +854,67 @@ function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
 end
 
 function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)
-	-- Check if existing data and if not yet unlocked
-	if _data["" .. ItemTextGetItem()] and not _data["" .. ItemTextGetItem()].unlocked then
-		_addon:UnlockNewLore(ItemTextGetItem())
+	_addon:UnlockNewLore(ItemTextGetItem())
+end
+
+function _addon:LoadTranslation()
+	_translations = _addon.translations[_localization];
+	if not _translations then 
+		print(FORMAT_LOC_NOSUPPORT:format(_localization));
+		return;
 	end
+	for localized, data in pairs(_translations) do
+		if _data[data.english] then
+			_data[data.english].localized = localized;
+		end
+	end
+end
+
+function _addon:ShowLocalizationMessage()
+	local display = LoreLibraryListInsetRight;
+	local FORMAT_LOC_GREETING = "Greetings %s users.";
+	local displayText = "<HTML><BODY>";
+	local users = "non-English";
+	local message = "Basic language support for your language has been added!<BR/>This means all titles are now in your language, allowing you to collect lore.<BR/>However, currently all lore text is still in English.<BR/>I hope to fully support all languages ,but as you can understand, this will take some time.<BR/><BR/>Until then, happy lore hunting!";
+	local issues = nil;
+	if _translations ~= nil then
+		if _localization == "deDE" then
+			users = "German";
+			issues = "<P>Due to Blizzard using incorrect capitalization in their achievements, some previously collected lore might not be unlocked and will have to be collected again.</P>";
+		elseif _localization == "frFR" then
+			users = "French";
+		elseif _localization == "esES" or _localization == "esMX" then
+			users = "Spanish";
+		elseif _localization == "itIT" then
+			users = "Itallian";
+		elseif _localization == "ptBR" then
+			users = "Portuguese";
+		elseif _localization == "ruRU" then
+			users = "Russian";
+			issues = "<P>I am unable to connect using the Russian client so sadly I can't test if your language works correctly.</P>";
+		end
+	else
+		message = "Sadly Lore Library currently does not support your language.<BR/>This means you will not be able to collect any lore.<BR/><BR/>My apologies for the inconvenience."
+	end
+	displayText = displayText .. "<BR/><BR/><H1 align=\"center\">" .. FORMAT_LOC_GREETING:format(users) .."</H1><BR/>";
+	displayText = displayText .. "<P>" .. message .. "</P>";
+	if issues then
+		displayText = displayText .. "<BR/><P>Your language currently has the following issues:</P>";
+		displayText = displayText .. issues;
+	end
+	displayText = displayText .. "</BODY></HTML>";
+	
+	display.pageText:SetText(displayText);
 end
 
 function _addon.events:ADDON_LOADED(loaded_addon)
 	if (loaded_addon ~= _addonName) then return; end
 	_data = _addon.data;
-
+	if not (_localization == "enGB" or _localization == "enUS") then
+		_localization = _localization == "esMX" and "esES" or _localization;
+		_addon:LoadTranslation();
+		_addon:ShowLocalizationMessage();
+	end
 	for k, v in pairs(_data) do
 		v.title = k;
 		v.unlocked = false;

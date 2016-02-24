@@ -2,8 +2,14 @@
 ## Title: LoreLibrary
 ## Notes: A collection of all the lore you found.
 ## Author: LanceDH
-## Version: 6.2.02
+## Version: 6.2.03
 ## SavedVariables: LoLibDB
 LoreLibrary.xml
 LoreLibrary.lua
 ItemData.lua
+Localization/deDE.lua
+Localization/ruRU.lua
+Localization/frFR.lua
+Localization/esES.lua
+Localization/ptBR.lua
+Localization/itIT.lua
