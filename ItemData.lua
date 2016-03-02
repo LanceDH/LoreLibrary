@@ -3,6 +3,214 @@
 local AREA_WORLDDROP = "World and instances";
 
 _addon.data = {
+["A Treatise on Military Ranks"] = {
+	["info"] = {["type"] = "object", ["id"] = 179706},
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">A TREATISE ON MILITARY RANKS</H1><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRankAlliance\" align=\"left\" /><BR/><P align=\"right\">What follows are</P><P align=\"right\">the military ranks</P><P align=\"right\">of the Alliance,</P><P align=\"right\">proceeded by such</P><P align=\"right\">information as is</P><P align=\"right\">known for the races</P><P align=\"right\">of the Horde. Each</P><P align=\"right\">is presented in two</P><P align=\"right\">sections, the officers and then the enlisted, with the ranks of each listed in descending order from highest to lowest. Long live the Alliance!</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Grand Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Field Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Commander</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Lieutenant Commander</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Knight-Champion</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Knight-Captain</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Knight-Lieutenant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Knight</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ENLISTED RANKS OF THE ALLIANCE</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">Sergeant Major</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Master Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Corporal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Private</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">High Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Lieutenant General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Champion</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Centurion</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Legionnaire</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Blood Guard</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Stone Guard</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ENLISTED RANKS OF THE HORDE</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">First Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Senior Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Grunt</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Scout</P></BODY></HTML>",
+	},
+	["locations"] = {
+		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "74.8",  ["y"] = "67.7"},
+	},
+},
+["Military Ranks of the Horde & Alliance"] = {
+	["info"] = {["type"] = "object", ["id"] = 179707},
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">MILITARY RANKS OF THE HORDE &amp; ALLIANCE</H1><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRankHorde\" align=\"left\" /><BR/><P align=\"right\">Throm'ka! In this</P><P align=\"right\">book you will find</P><P align=\"right\">many listings of</P><P align=\"right\">the military ranks</P><P align=\"right\">of the Horde and</P><P align=\"right\">the puny Alliance.</P><P align=\"right\">First will come the</P><P align=\"right\">Horde, then the Alliance,</P><P align=\"right\">each with listings of officers and enlisted ranks. As is fitting, the strongest are listed at the top, with the weaker listed below them.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">High Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Lieutenant General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Champion</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Centurion</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Legionnaire</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Blood Guard</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Stone Guard</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">HORDE ENLISTED RANKS</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">First Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Senior Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Grunt</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Scout</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Grand Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Field Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Commander</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Lieutenant Commander</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Knight-Champion</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Knight-Captain</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Knight-Lieutenant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Knight</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ALLIANCE ENLISTED RANKS</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">Sergeant Major</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Master Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Corporal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Private</P></BODY></HTML>",
+	},
+	["locations"] = {
+		{["area"] = "Orgrimmar", ["areaId"] = 321,  ["id"] = "1637",  ["level"] = "1",  ["x"] = "38.9",  ["y"] = "71.4"},
+	},
+},
+["Dusty Journal"] = {
+	["info"] = {["type"] = "item", ["id"] = 45058}, -- 45062
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
+		"The first half of the journal seems to be nothing more than the ledger for Mr. Cooper's business. Handwritten columns of figures note the production and sale of barrels to the inhabitants of Moonbrook and even a few clients in Stormwind itself.\n\nThe back half of the book seems to have been Mr. Cooper's journal, where he discusses leaving the family business to his younger brother. You find no mention of children.",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Horde Version</H1></BODY></HTML>",
+		"Leafing through the book's crumbling pages reveals nothing more than descriptions of life on the Valgan farm. The changing of seasons, planting and harvesting of crops are noted, along with the births and deaths of children.\n\nThe entries end abruptly with a short description of the plague. None of the children described could have been old enough to complete training as a knight, if any survived the plague at all.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Icecrown", ["id"] = 13633,  ["source"] = "The Black Knight of Westfall?",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Icecrown", ["id"] = 13634,  ["source"] = "The Black Knight of Silverpine?",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Letter of Introduction to Wyrmrest Temple"] = {
+	["info"] = {["type"] = "item", ["id"] = 36832}, -- 36833
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
+		"My queen,\n\nIt has been discovered that the ley line intersection at Moonrest Gardens was unfettered by the blue dragonflight. Their forces used a surge needle to destroy the capstone, but instead of flowing the power back to the Nexus, they utilized a series of foci to clumsily run and augment the power under the land to the Azure Dragonshrine.\n\nNeedless to say, this has had dire consequences wherever the magic shot up through the ground. The Ancients of the woodlands, the Kalu'ak, and other creatures in the region have been adversely affected. Luckily for us, &lt;name&gt;, the &lt;race&gt; who stands before you, was instrumental in tracking down and dealing with all of these problems.\n\nIn my opinion, &lt;name&gt; could be a great asset to Wyrmrest in helping to deal with the problems that the temple currently faces. I humbly ask that you consider &lt;him/her&gt; a resource, one which I found to be invaluable.\n\nYours ever respectfully,\n\nModera\nArchmage and Member of the Six",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Horde Version</H1></BODY></HTML>",
+		"My queen,\n\nIt has been discovered that the ley line intersection at Moonrest Gardens was unfettered by the blue dragonflight. Their forces used a surge needle to destroy the capstone, but instead of flowing the power back to the Nexus, they utilized a series of foci to clumsily run and augment the power under the land to the Azure Dragonshrine.\n\nNeedless to say, this has had dire consequences wherever the magic shot up through the ground. The Ancients of the woodlands, the Kalu'ak, and other creatures in the region have been adversely affected. &lt;name&gt;, the &lt;race&gt; who stands before you, was very helpful in tracking down and dealing with these issues.\n\nIn my opinion, &lt;name&gt; could be useful for Wyrmrest in dealing with the problems that the temple currently faces. I humbly ask that you consider &lt;him/her&gt; an asset, one which I found to be quite acceptable.\n\nYours ever respectfully,\n\nAethas Sunreaver\nArchmage and Member of the Six",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Dragonblight", ["id"] = 12122,  ["source"] = "Gaining an Audience",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Dragonblight", ["id"] = 12124,  ["source"] = "Informing the Queen",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Dragonblight", ["id"] = 12119,  ["source"] = "Gaining an Audience",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Dragonblight", ["id"] = 12123,  ["source"] = "Informing the Queen",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["Faded Note"] = {
+	["info"] = {["type"] = "item", ["id"] = 106902},
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">These 3 items share the same name but are completely unrelated.</H1></BODY></HTML>",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Frostfire Ridge</H1></BODY></HTML>",
+		"Son,\n\nIf you are reading this, then you have completed the rite of om'riggor. You are no longer a child. You are a warrior.\n\nThis trinket belonged to your mother, rest her spirit. She never got to meet you, but she loved you with all her heart.\n\nHer memory kept me safe in countless battles - kept me coming home so I could raise you into the orc you are today.\n\nTake it with you, that you may serve our clan with honor.\n\n- Your father",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Spires of Arak</H1></BODY></HTML>",
+		"My love... I hope you can forgive me. All I could do was run. If I let them catch us both, there would be no way to save you. Now all I feel is a terrible emptyness for not having stayied by your side. This morning I intend to face the flying beasts the way I should have before. I pledge to seek you endlessly in the afterlife... I desire only to be with you. Whatever the sacrifice...",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Darkmoon Island</H1></BODY></HTML>",
+		"Another note, another tease, it's enough to make you weak in the knees!\n\nYou're almost there, look for your next hint, next to a fellow that was negligent.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "chest",  ["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["source"] = "Dusty Chest",  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
+		{ ["area"] = "Spires of Arak", ["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "55.3",  ["y"] = "18.1"},
+		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island", ["areaId"] = 974, ["source"] = "242519",  ["level"] = "0",  ["x"] = "53.2",  ["y"] = "60.4", },
+	},
+},
+["Diabolical Plans"] = {
+	["info"] = {["type"] = "item", ["id"] = 23780}, -- 23798
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
+		"Diathorus,\n\nI trust that this letter will eventually make its way to you. These demons are mindless. All they think about is their nails, their whips, or goring something with their head spikes. And I dare not use one of the infernals lest it be burned to ashes!\n\nSadly, I long for the days when we could use the orcs. At least they had half a brain and could follow orders. Perhaps there is an opportunity to take some new thralls from nearby?",
+		"The reports of the night elves assisting the draenei are true. They're attempting to setup a new base of operations at Forest Song to the north near Satyrnaar. We should confer on combining our forces for an attack before the next full moon of this pathetic world. If we crush them now they will never gain a toehold on our doorstep!\n\nRegards,\n\nGorgannon\n\np.s. - Stop using up all of the blood ink on love letters to my lashers! Night elf virgins are in short supply these days.",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Horde Version</H1></BODY></HTML>",
+		"Diathorus,\n\nI trust that this letter will eventually make its way to you. These demons are mindless. All they think about is their nails, their whips, or goring something with their head spikes. And I dare not use one of the infernals lest it be burned to ashes!\n\nSadly, I long for the days when we could use the orcs. At least they had half a brain and could follow orders. Perhaps there is a chance to take some new thralls from nearby?",
+		"The time has come to retake a few of the lesser races, I think. Splintertree Post to the northwest makes a tempting target. We should confer on combining our forces for an attack before the next full moon of this pathetic world. If we subjugate them now they will come to remember what the word 'Horde' truly used to mean!\n\nRegards,\n\nGorgannon\n\np.s. - Stop using up all of the blood ink on love letters to my lashers! Night elf virgins are in short supply these days.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "quest",  ["area"] = "Ashenvale", ["id"] = 26443, ["source"] = "Diabolical Plans",  ["level"] = "A", },
+		{ ["sourceType"] = "quest",  ["area"] = "Ashenvale", ["id"] = 23798, ["source"] = "Diabolical Plans",  ["level"] = "H", },
+	},
+},
+["Crystallized Note"] = {
+	["info"] = {["type"] = "item", ["id"] = 10839},
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Note A</H1></BODY></HTML>",
+		"To Whom It May Concern:\n\nIf you are reading this note, then you are in one of two places:\n\n(1) On the southern peninsula of Azshara.\n\n(2) Inside the belly of a Cliff Giant.\n\nBoth equally undesirable. \n\nIt should be noted that I was the former at one time and as of the writing of this letter, the latter.",
+		"Being inside the belly of a giant gives one time for reflection. \n\nAs my body slowly crystallizes, I recall my days in Eversong, contemplating a life of adventure on the savage frontiers across the great sea. I was young. And stupid. If I somehow get out of here, I'm taking up gardening or whittling instead.\n\n- Windan Shay",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Note B</H1></BODY></HTML>",
+		"What was I thinking? \n\nPerhaps a better question would be: What am I doing writing a note while I'm sitting captive inside the stomach of a giant?\n\nBoth good questions that I have no immediate answer for...\n\nAdmittedly, mine was not a mission of good will. I came in search of Azsharite, a unique crystal to southern Azshara. Oh the riches I would have had!\n\nBah! Now look at me...",
+		"Should any manner of intelligent life find this note, they must ask themselves something: \"Why in the hell are they romping around with violent thirty foot tall giants?\"\n\n- Mook",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "chest",  ["area"] = "Azshara",  ["source"] = "Azsharite Formation",  ["level"] = "0",  ["x"] = "49.5",  ["y"] = "77.4", },
+	},
+},
+["Hai-pu"] = {
+	["info"] = {["type"] = "object", ["id"] = 214417},
+	["pages"] = {
+		"Beware the jinyu\n\nThey are a bunch of dookers\n\nOok'em in the jerb.",
+		"A slicky in hand\n\nIs worth two in the dooker\n\nSo says Chief Ee Ee!",
+		"Ko Ko sniff finger\n\nIt ookin stank of dook\n\nWill not sniff again.",
+		"Banana totem\n\nBest thing ever to exist\n\nTrip all the wikkets!",
+		"Art of Hozen-fu:\n\nGrab, stab, and ookin bite it.\n\nRepeat until win.",
+	},
+	["locations"] = {
+		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "26",  ["y"] = "38.9"},
+		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "31.4",  ["y"] = "28.7"},
+		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "52",  ["y"] = "87.4"},
+		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "48",  ["y"] = "73.3"},
+	},
+},
+["Decoded Twilight Text"] = {
+	["info"] = {["type"] = "item", ["id"] = 20541},
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 1</H1></BODY></HTML>",
+		"For immediate dissemination to all Twilight's Hammer members.\n\nThe search for the traitor, Ortell, is progressing at a most satisfactory pace. Our scouts have narrowed his location to a network of caverns in Westfall.\n\nOrtell's betrayal shall not be forgiven and his escape presents a great security risk to our organization.\n\nAny individual found to be withholding information on Ortell's whereabouts will be duly punished.\n\n-Twilight Lord Everun",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 2</H1></BODY></HTML>",
+		"For immediate dissemination to all Twilight Hammer members.\n\nGiven the current state of affairs in Silithus, all distribution of True Believer texts are to be made under the escort of no less than two armed Twilight Hammer personnel.\n\nAny members found in violation of this new policy will be summarily punished.\n\n-Twilight Lord D'Sak",	
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 3</H1></BODY></HTML>",
+		"For immediate dissemination to all Twilight's Hammer members.\n\nThe following information describes the use of wind stones for communication with our masters in the Abyssal Council.\n\nAll frivolous use of wind stones will be punished in a most painful manner.\n\n-Twilight Keeper Havunth",
+		"Abyssal Templars\n\nAs an initiate you are permitted to establish contact with Abyssal Templars for routine rituals. Remember to always don the proper garb when utilizing wind stones to avoid activating our defensive enchantments.\n\nShould an unforeseen emergency arise with no overseers present, you are granted permission to summon an Abyssal Templar.\n\nFor details on the summoning rituals involved, refer to last month's True Believer.",
+		"Abyssal Dukes\n\nOnly acolytes in possession of a medallion of station are permitted to establish contact with the Abyssal Dukes. Medallions of station are only to be used by the individuals to whom they were originally issued.\n\nMembers of the Twilight's Hammer involved in unapproved communication with Abyssal Dukes or unauthorized use of medallions of station will be disciplined with by myself personally.",
+		"The High Council of Abyssal Lords\n\nOnly Twilight Lords are permitted to contact Prince Skaldrenox, High Marshal Whirlaxis, Baron Kazum or Lord Skwol. \n\nUnder no circumstances are any low ranking members of the Twilight's Hammer allowed to initiate communication with the High Council. Any outsiders found using a wind stone in this manner will be reduced to ashes on the spot.",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 4</H1></BODY></HTML>",
+		"The State of the Cult, Volume 92\n\nIt is with a joyous heart that I greet you, my brethren, for the state of our cult could not be more grand. We are legion, and our goals grow ever closer to fruition.\n\nNew recruits continue to gather. They sing praise to our lords in Darkshore, they bow in jubilant reverie within the Searing Gorge, they embrace our masters' servant, Aku'mai, in Blackfathom Deeps. Indeed, my brothers and sisters, soon a swarm of the faithful will blanket all of Azeroth!",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 5</H1></BODY></HTML>",
+		"State of the Cult, Volume 127\n\nIt is truly a happy day! We have been tested in Silithus, and we have passed!\n\nReports of the destruction of our northernmost camp may challenge the hearts of the unfaithful, but this slaughter should not be seen as tragedy. No!",
+		"The spilling of our blood by one of the Abyssal High Council is a blessing! We must envy our fallen comrades, for their spirits now reside in the belly of a most righteous beast! \n\nPraise to the Old Gods! Praise to their servants! Praise to the Twilight's Hammer!",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 6</H1></BODY></HTML>",
+		"State of the Cult, Volume 233\n\nOpportunity knocks yet again, my brothers and sisters! The Cenarion Circle, a vile cult of nature lovers, now sends agents against us. They must want to stop us from summoning red luring stones. We cannot allow it!\n\nThe red stones are critical to our new allies. We mustn't let the Cenarion Circle's lapdogs succeed. Stand firm, my faithful friends. Stand firm!",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 7</H1></BODY></HTML>",
+		"How Do We Know They Love Us?\n\nSome may wonder how the Old Gods and their minions can love us. Do they not kill us? Do they not cause pain and suffering to all? How could beings so bent on malevolence know love in their hearts?\n\nThere is a simple answer to this question. So simple it need not be uttered.",
+		"Faith. Faith is the wellspring from which the joy of servitude showers us. Faith will keep us warm on the coldest Silithus nights. Faith will keep us in our Lords' good graces when the Ending Days arrive.\n\nFaith will save us.",
+	},
+	["locations"] = {
+		{ ["sourceType"] = "container",  ["area"] = "",  ["source"] = "Decoded True Believer Clippings",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+	},
+},
+["The Death Knights of Acherus"] = {
+	["info"] = {["type"] = "object", ["id"] = 191634},
+	["pages"] = {
+		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 1</H1></BODY></HTML>",
+		"Name: Jayde\nStatus: Alive\nComment: Bloodthirsty",
+		"Name: Sixen\nStatus: Alive\nComment: Chatty",
+		"Name: Munch\nStatus: Alive\nComment: Destructive",
+		"Name: Cobalt\nStatus: Deceased\nComment: Fell to his death. Not much upstairs. Probably saved him a lifetime of suffering.",
+		"Name: Harmony\nStatus: Deceased\nComment: The name of this death knight was found in violation of common Scourge decency. Struck down by the Lich King.",
+		"Name: Melt\nStatus: Alive*\nComment: Turned into a ghoul.",
+		"Name: Milton\nStatus: Alive\nComment: Rambles",
+		"Name: Minitalis\nStatus: Alive\nComment: Sees things that do not exist.",
+		"Name: &lt;name&gt;\nStatus: Alive\nComment: Needs more cowbell.\n\n&lt;The book goes on for hundreds of pages.&gt;",
+		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 2</H1></BODY></HTML>",
+		"Name: Jayde\nStatus: Alive\nComment: Unstoppable.",
+		"Name: Sixen\nStatus: Deceased\nComment: Died with his mouth open.",
+		"Name: Munch\nStatus: Alive\nComment: Angry. Hateful. Will do well.",
+		"Name: Cobalt\nStatus: Deceased\nComment: Fell to his death. Not much upstairs. Probably saved him a lifetime of suffering.",
+		"Name: Harmony\nStatus: Deceased\nComment: The name of this death knight was found in violation of common Scourge decency. Struck down by the Lich King.",
+		"Name: Melt\nStatus: Deceased\nComment: Turned into a ghoul. Killed by a Scarlet peasant.",
+		"Name: Milton\nStatus: MIA\nComment: Cowardly gnome.",
+		"Name: Minitalis\nStatus: Alive\nComment: Chasing butterflies.",
+		"Name: &lt;name&gt;\nStatus: Alive\nComment: Personally responsible for the massacre of hundreds of Scarlet Crusaders. Hungers for more.\n\n&lt;The book goes on for hundreds of pages.&gt;",
+		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 3</H1></BODY></HTML>",
+		"Name: Jayde\nStatus: Alive\nComment: Power growing. Superior tactician. Only ranks behind &lt;name&gt; in sheer brutality.",
+		"Name: Sixen\nStatus: Deceased\nComment: Died with his mouth open.",
+		"Name: Munch\nStatus: Alive\nComment: Shows no hesitation. Harbinger of doom.",
+		"Name: Cobalt\nStatus: Alive*\nComment: Pieces of this death knight were finally found. Used most to stitch together a rampaging abomination. Incinerated head and brain.",
+		"Name: Harmony\nStatus: Deceased\nComment: The name of this death knight was found in violation of common Scourge decency. Struck down by the Lich King.",
+		"Name: Melt\nStatus: Alive*\nComment: Turned into a ghoul. Killed by a Scarlet peasant. Reanimated by Munch as a ghoul servant.",
+		"Name: Milton\nStatus: Executed\nComment: Caught. Was found without armor or runeblade asleep next to his deathcharger. The deathcharger was returned to Salanar without any serious injury. Death knights are not permitted to sleep.",
+		"Name: Minitalis\nStatus: MIA\nComment: Whereabouts unknown. The hunt is on.",
+		"Name: &lt;name&gt;\nStatus: Alive\nComment: Soulless killing machine. No remorse. No regrets. Has killed more Scarlet Crusaders, destroyed more lives, and caused more chaos than any death knight before &lt;him/her&gt;. Promoted to Scourge Commander.\n\n&lt;The book goes on for hundreds of pages.&gt;",
+		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 4</H1></BODY></HTML>",
+		"Name: Jayde\nStatus: Alive\nComment: Champion of Mograine. En route to Light's Hope Chapel. Destruction will undoubtedly follow.",
+		"Name: Sixen\nStatus: Deceased\nComment: Died with his mouth open.",
+		"Name: Munch\nStatus: Alive\nComment: Promoted to Scourge Commander. Will accompany me to Northrend.",
+		"Name: Cobalt\nStatus: Deceased\nComment: The rampaging abomination that was stitched together with pieces of this death knight was slain by the armies of Tirisfal. Was the most action he had seen since rebirth.",
+		"Name: Harmony\nStatus: Deceased*\nComment: The name of this death knight was found in violation of common Scourge decency. Struck down by the Lich King. \n\n*The Lich King demanded this death knight's remains be turned to ashes and left in a human outhouse. The Lich King takes his names very seriously.",
+		"Name: Melt\nStatus: Alive*\nComment: Turned into a ghoul. Killed by a Scarlet peasant. Reanimated by Munch as a ghoul servant. Incredibly, Melt is faring well as a ghoul servant of Munch. He is also an excellent cook.",
+		"Name: Milton\nStatus: Executed*\nComment: Caught. Was found without armor or runeblade asleep next to his deathcharger. The deathcharger was returned to Salanar without any serious injury.\n\n*The deathcharger didn't make it.",
+		"Name: Minitalis\nStatus: Traitor\nComment: We will find her and end her miserable existence.",
+		"Name: &lt;name&gt;\nStatus: Alive\nComment: Scourge Commander &lt;name&gt; was granted the Greathelm of the Scourge by the Lich King for &lt;his/her&gt; complete and utter domination of the armies of Tirisfal and Hearthglen. There were no survivors left from &lt;name&gt;'s brutal attacks. Currently en route to end the Argent Dawn.\n\n&lt;The book goes on for hundreds of pages.&gt;",
+	},
+	["locations"] = {
+		{["area"] = "Plaguelands: The Scarlet Enclave", ["areaId"] = 502,  ["id"] = "4298",  ["level"] = "0",  ["x"] = "47.3",  ["y"] = "30.4"},
+	},
+},
+["Wanted: Hemet Nesingwary, Enemy of Nature"] = {
+	["info"] = {["type"] = "object", ["id"] = 187915},
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">WANTED: HEMET NESINGWARY</H1><H1 align=\"center\">FOR CRIMES AGAINST NATURE!</H1><BR/><IMG src=\"Interface/Pictures/obj_nesingwary_256\" align=\"center\" /></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Artist's rendition of \"The Extinctionator\" in his natural habitat: the burning hellfire of the underworld.</H1><BR/><H1 align=\"left\">Last Wildlife Holocaust Location: Nagrand, Outland</H1><BR/><H1 align=\"left\">Also Known As: The Great Game Hunter, The Butcher of Badlands, The Stranglethorn Ripper, Old Man Death, Hemet, Nessie, Ol' Dirty, Ol' Dirty D, Father of the Bounty, The Extinctionator</H1></BODY></HTML>",
+	},
+	["locations"] = {
+		{["area"] = "Borean Tundra", ["areaId"] = 486,  ["id"] = "3537",  ["level"] = "0",  ["x"] = "57.2",  ["y"] = "43.7"},
+	},
+},
+
+-----------------------------------------------------
+
 ["A History of the Veiled Stair"] = {
 	["info"] = {["type"] = "object", ["id"] = 215855},
 	["pages"] = {
@@ -19,21 +227,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "55",  ["y"] = "47.3"},
-	},
-},
-["A Treatise on Military Ranks"] = {
-	["info"] = {["type"] = "object", ["id"] = 179706},
-	["pages"] = {
-		"<HTML><BODY><H1 align=\"center\">A TREATISE ON MILITARY RANKS</H1><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRankAlliance\" align=\"left\" /><BR/><P align=\"right\">What follows are</P><P align=\"right\">the military ranks</P><P align=\"right\">of the Alliance,</P><P align=\"right\">proceeded by such</P><P align=\"right\">information as is</P><P align=\"right\">known for the races</P><P align=\"right\">of the Horde. Each</P><P align=\"right\">is presented in two</P><P align=\"right\">sections, the officers and then the enlisted, with the ranks of each listed in descending order from highest to lowest. Long live the Alliance!</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Grand Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Field Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Commander</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Lieutenant Commander</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Knight-Champion</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Knight-Captain</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Knight-Lieutenant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Knight</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">ENLISTED RANKS OF THE ALLIANCE</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">Sergeant Major</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Master Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Corporal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Private</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">High Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Lieutenant General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Champion</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Centurion</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Legionnaire</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Blood Guard</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Stone Guard</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">ENLISTED RANKS OF THE HORDE</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">First Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Senior Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Grunt</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Scout</P></BODY></HTML>",
-	},
-	["locations"] = {
-		{["area"] = "Stormwind City", ["areaId"] = 301,  ["id"] = "1519",  ["level"] = "0",  ["x"] = "74.8",  ["y"] = "67.7"},
 	},
 },
 ["A Zombie's Guide to Proper Nutrition"] = {
@@ -882,22 +1075,6 @@ _addon.data = {
 		{["area"] = "Dread Wastes", ["areaId"] = 858,  ["id"] = "6138",  ["level"] = "0",  ["x"] = "66.3",  ["y"] = "31.6"},
 	},
 },
-["Hai-pu"] = {
-	["info"] = {["type"] = "object", ["id"] = 214421},
-	["pages"] = {
-		"Beware the jinyu\n\nThey are a bunch of dookers\n\nOok'em in the jerb.",
-		"A slicky in hand\n\nIs worth two in the dooker\n\nSo says Chief Ee Ee!",
-		"Ko Ko sniff finger\n\nIt ookin stank of dook\n\nWill not sniff again.",
-		"Banana totem\n\nBest thing ever to exist\n\nTrip all the wikkets!",
-		"Art of Hozen-fu:\n\nGrab, stab, and ookin bite it.\n\nRepeat until win.",
-	},
-	["locations"] = {
-		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "26",  ["y"] = "38.9"},
-		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "31.4",  ["y"] = "28.7"},
-		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "52",  ["y"] = "87.4"},
-		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "48",  ["y"] = "73.3"},
-	},
-},
 ["Half-Eaten Skeleton"] = {
 	["info"] = {["type"] = "object", ["id"] = 227705},
 	["pages"] = {
@@ -1317,21 +1494,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["area"] = "Dread Wastes", ["areaId"] = 858,  ["id"] = "6138",  ["level"] = "0",  ["x"] = "59.9",  ["y"] = "55"},
-	},
-},
-["Military Ranks of the Horde & Alliance"] = {
-	["info"] = {["type"] = "object", ["id"] = 179707},
-	["pages"] = {
-		"<HTML><BODY><H1 align=\"center\">MILITARY RANKS OF THE HORDE &amp; ALLIANCE</H1><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRankHorde\" align=\"left\" /><BR/><P align=\"right\">Throm'ka! In this</P><P align=\"right\">book you will find</P><P align=\"right\">many listings of</P><P align=\"right\">the military ranks</P><P align=\"right\">of the Horde and</P><P align=\"right\">the puny Alliance.</P><P align=\"right\">First will come the</P><P align=\"right\">Horde, then the Alliance,</P><P align=\"right\">each with listings of officers and enlisted ranks. As is fitting, the strongest are listed at the top, with the weaker listed below them.</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">High Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Warlord</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Lieutenant General</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Champion</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE HORDE</H1><BR/><P align=\"center\">Part 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Centurion</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Legionnaire</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Blood Guard</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Stone Guard</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">HORDE ENLISTED RANKS</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">First Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Senior Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Grunt</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Scout</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Grand Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Field Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Marshal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Commander</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Lieutenant Commander</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">OFFICER RANKS OF THE ALLIANCE</H1><BR/><P align=\"center\">Part 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Knight-Champion</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Knight-Captain</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Knight-Lieutenant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Knight</P></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">ALLIANCE ENLISTED RANKS</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">Sergeant Major</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Master Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Sergeant</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Corporal</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Private</P></BODY></HTML>",
-	},
-	["locations"] = {
-		{["area"] = "Orgrimmar", ["areaId"] = 321,  ["id"] = "1637",  ["level"] = "1",  ["x"] = "38.9",  ["y"] = "71.4"},
 	},
 },
 ["Mists of Dawn"] = {
@@ -2112,54 +2274,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["area"] = "Isle of Thunder", ["areaId"] = 921,  ["id"] = "6507",  ["level"] = "0",  ["x"] = "52.7",  ["y"] = "41.4"},
-	},
-},
-["The Death Knights of Acherus"] = {
-	["info"] = {["type"] = "object", ["id"] = 191634},
-	["pages"] = {
-		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 1</H1></BODY></HTML>",
-		"Name: Jayde\nStatus: Alive\nComment: Bloodthirsty",
-		"Name: Sixen\nStatus: Alive\nComment: Chatty",
-		"Name: Munch\nStatus: Alive\nComment: Destructive",
-		"Name: Cobalt\nStatus: Deceased\nComment: Fell to his death. Not much upstairs. Probably saved him a lifetime of suffering.",
-		"Name: Harmony\nStatus: Deceased\nComment: The name of this death knight was found in violation of common Scourge decency. Struck down by the Lich King.",
-		"Name: Melt\nStatus: Alive*\nComment: Turned into a ghoul.",
-		"Name: Milton\nStatus: Alive\nComment: Rambles",
-		"Name: Minitalis\nStatus: Alive\nComment: Sees things that do not exist.",
-		"Name: &lt;name&gt;\nStatus: Alive\nComment: Needs more cowbell.\n\n&lt;The book goes on for hundreds of pages.&gt;",
-		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 2</H1></BODY></HTML>",
-		"Name: Jayde\nStatus: Alive\nComment: Unstoppable.",
-		"Name: Sixen\nStatus: Deceased\nComment: Died with his mouth open.",
-		"Name: Munch\nStatus: Alive\nComment: Angry. Hateful. Will do well.",
-		"Name: Cobalt\nStatus: Deceased\nComment: Fell to his death. Not much upstairs. Probably saved him a lifetime of suffering.",
-		"Name: Harmony\nStatus: Deceased\nComment: The name of this death knight was found in violation of common Scourge decency. Struck down by the Lich King.",
-		"Name: Melt\nStatus: Deceased\nComment: Turned into a ghoul. Killed by a Scarlet peasant.",
-		"Name: Milton\nStatus: MIA\nComment: Cowardly gnome.",
-		"Name: Minitalis\nStatus: Alive\nComment: Chasing butterflies.",
-		"Name: &lt;name&gt;\nStatus: Alive\nComment: Personally responsible for the massacre of hundreds of Scarlet Crusaders. Hungers for more.\n\n&lt;The book goes on for hundreds of pages.&gt;",
-		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 3</H1></BODY></HTML>",
-		"Name: Jayde\nStatus: Alive\nComment: Power growing. Superior tactician. Only ranks behind &lt;name&gt; in sheer brutality.",
-		"Name: Sixen\nStatus: Deceased\nComment: Died with his mouth open.",
-		"Name: Munch\nStatus: Alive\nComment: Shows no hesitation. Harbinger of doom.",
-		"Name: Cobalt\nStatus: Alive*\nComment: Pieces of this death knight were finally found. Used most to stitch together a rampaging abomination. Incinerated head and brain.",
-		"Name: Harmony\nStatus: Deceased\nComment: The name of this death knight was found in violation of common Scourge decency. Struck down by the Lich King.",
-		"Name: Melt\nStatus: Alive*\nComment: Turned into a ghoul. Killed by a Scarlet peasant. Reanimated by Munch as a ghoul servant.",
-		"Name: Milton\nStatus: Executed\nComment: Caught. Was found without armor or runeblade asleep next to his deathcharger. The deathcharger was returned to Salanar without any serious injury. Death knights are not permitted to sleep.",
-		"Name: Minitalis\nStatus: MIA\nComment: Whereabouts unknown. The hunt is on.",
-		"Name: &lt;name&gt;\nStatus: Alive\nComment: Soulless killing machine. No remorse. No regrets. Has killed more Scarlet Crusaders, destroyed more lives, and caused more chaos than any death knight before &lt;him/her&gt;. Promoted to Scourge Commander.\n\n&lt;The book goes on for hundreds of pages.&gt;",
-		"<HTML><BODY><BR/><H1 align=\"center\">The Death Knights of Acherus</H1><BR/><H1 align=\"center\">entry 4</H1></BODY></HTML>",
-		"Name: Jayde\nStatus: Alive\nComment: Champion of Mograine. En route to Light's Hope Chapel. Destruction will undoubtedly follow.",
-		"Name: Sixen\nStatus: Deceased\nComment: Died with his mouth open.",
-		"Name: Munch\nStatus: Alive\nComment: Promoted to Scourge Commander. Will accompany me to Northrend.",
-		"Name: Cobalt\nStatus: Deceased\nComment: The rampaging abomination that was stitched together with pieces of this death knight was slain by the armies of Tirisfal. Was the most action he had seen since rebirth.",
-		"Name: Harmony\nStatus: Deceased*\nComment: The name of this death knight was found in violation of common Scourge decency. Struck down by the Lich King. \n\n*The Lich King demanded this death knight's remains be turned to ashes and left in a human outhouse. The Lich King takes his names very seriously.",
-		"Name: Melt\nStatus: Alive*\nComment: Turned into a ghoul. Killed by a Scarlet peasant. Reanimated by Munch as a ghoul servant. Incredibly, Melt is faring well as a ghoul servant of Munch. He is also an excellent cook.",
-		"Name: Milton\nStatus: Executed*\nComment: Caught. Was found without armor or runeblade asleep next to his deathcharger. The deathcharger was returned to Salanar without any serious injury.\n\n*The deathcharger didn't make it.",
-		"Name: Minitalis\nStatus: Traitor\nComment: We will find her and end her miserable existence.",
-		"Name: &lt;name&gt;\nStatus: Alive\nComment: Scourge Commander &lt;name&gt; was granted the Greathelm of the Scourge by the Lich King for &lt;his/her&gt; complete and utter domination of the armies of Tirisfal and Hearthglen. There were no survivors left from &lt;name&gt;'s brutal attacks. Currently en route to end the Argent Dawn.\n\n&lt;The book goes on for hundreds of pages.&gt;",
-	},
-	["locations"] = {
-		{["area"] = "Plaguelands: The Scarlet Enclave", ["areaId"] = 502,  ["id"] = "4298",  ["level"] = "0",  ["x"] = "47.3",  ["y"] = "30.4"},
 	},
 },
 ["The Decree of the Scourge "] = {
@@ -3240,16 +3354,6 @@ _addon.data = {
 		{["area"] = "Krasarang Wilds", ["areaId"] = 857,  ["id"] = "6134",  ["level"] = "0",  ["x"] = "72.4",  ["y"] = "31.1"},
 	},
 },
-["Wanted: Hemet Nesingwary, Enemy of Nature"] = {
-	["info"] = {["type"] = "object", ["id"] = 187915},
-	["pages"] = {
-		"<HTML><BODY><H1 align=\"center\">WANTED: HEMET NESINGWARY</H1><H1 align=\"center\">FOR CRIMES AGAINST NATURE!</H1><BR/><IMG src=\"Interface/Pictures/obj_nesingwary_256\" align=\"center\" /></BODY></HTML>",
-		"<HTML><BODY><H1 align=\"center\">Artist's rendition of \"The Extinctionator\" in his natural habitat: the burning hellfire of the underworld.</H1><BR/><H1 align=\"left\">Last Wildlife Holocaust Location: Nagrand, Outland</H1><BR/><H1 align=\"left\">Also Known As: The Great Game Hunter, The Butcher of Badlands, The Stranglethorn Ripper, Old Man Death, Hemet, Nessie, Ol' Dirty, Ol' Dirty D, Father of the Bounty, The Extinctionator</H1></BODY></HTML>",
-	},
-	["locations"] = {
-		{["area"] = "Borean Tundra", ["areaId"] = 486,  ["id"] = "3537",  ["level"] = "0",  ["x"] = "57.2",  ["y"] = "43.7"},
-	},
-},
 ["War of the Spider"] = {
 	["info"] = {["type"] = "object", ["id"] = 175753},
 	["pages"] = {
@@ -3922,21 +4026,6 @@ _addon.data = {
 		{ ["sourceType"] = "quest",  ["area"] = "Silithus", ["id"] = 8287, ["source"] = "A Terrible Purpose",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
-["Diabolical Plans"] = {
-	["info"] = {["type"] = "item", ["id"] = 23780}, -- 23798
-	["pages"] = {
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
-		"Diathorus,\n\nI trust that this letter will eventually make its way to you. These demons are mindless. All they think about is their nails, their whips, or goring something with their head spikes. And I dare not use one of the infernals lest it be burned to ashes!\n\nSadly, I long for the days when we could use the orcs. At least they had half a brain and could follow orders. Perhaps there is an opportunity to take some new thralls from nearby?",
-		"The reports of the night elves assisting the draenei are true. They're attempting to setup a new base of operations at Forest Song to the north near Satyrnaar. We should confer on combining our forces for an attack before the next full moon of this pathetic world. If we crush them now they will never gain a toehold on our doorstep!\n\nRegards,\n\nGorgannon\n\np.s. - Stop using up all of the blood ink on love letters to my lashers! Night elf virgins are in short supply these days.",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Horde Version</H1></BODY></HTML>",
-		"Diathorus,\n\nI trust that this letter will eventually make its way to you. These demons are mindless. All they think about is their nails, their whips, or goring something with their head spikes. And I dare not use one of the infernals lest it be burned to ashes!\n\nSadly, I long for the days when we could use the orcs. At least they had half a brain and could follow orders. Perhaps there is a chance to take some new thralls from nearby?",
-		"The time has come to retake a few of the lesser races, I think. Splintertree Post to the northwest makes a tempting target. We should confer on combining our forces for an attack before the next full moon of this pathetic world. If we subjugate them now they will come to remember what the word 'Horde' truly used to mean!\n\nRegards,\n\nGorgannon\n\np.s. - Stop using up all of the blood ink on love letters to my lashers! Night elf virgins are in short supply these days.",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "quest",  ["area"] = "Ashenvale", ["id"] = 26443, ["source"] = "Diabolical Plans",  ["level"] = "A", },
-		{ ["sourceType"] = "quest",  ["area"] = "Ashenvale", ["id"] = 23798, ["source"] = "Diabolical Plans",  ["level"] = "H", },
-	},
-},
 ["Elegant Rune"] = {
 	["info"] = {["type"] = "item", ["id"] = 85174},
 	["pages"] = {
@@ -4429,7 +4518,6 @@ _addon.data = {
 		{ ["sourceType"] = "quest",  ["area"] = "Dragonblight", ["id"] = 12123,  ["source"] = "Informing the Queen",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
-
 ["Letter Sealed by Sylvanas"] = {
 	["info"] = {["type"] = "item", ["id"] = 23930},
 	["pages"] = {
@@ -5419,20 +5507,6 @@ _addon.data = {
 		{ ["sourceType"] = "chest",  ["area"] = "The Cape of Stranglethorn", ["areaId"] = 673,  ["source"] = "Half-Buried Bottle",  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "75.9"},
 	},
 },
-["Crystallized Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 10839},
-	["pages"] = {
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Note A</H1></BODY></HTML>",
-		"To Whom It May Concern:\n\nIf you are reading this note, then you are in one of two places:\n\n(1) On the southern peninsula of Azshara.\n\n(2) Inside the belly of a Cliff Giant.\n\nBoth equally undesirable. \n\nIt should be noted that I was the former at one time and as of the writing of this letter, the latter.",
-		"Being inside the belly of a giant gives one time for reflection. \n\nAs my body slowly crystallizes, I recall my days in Eversong, contemplating a life of adventure on the savage frontiers across the great sea. I was young. And stupid. If I somehow get out of here, I'm taking up gardening or whittling instead.\n\n- Windan Shay",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Note B</H1></BODY></HTML>",
-		"What was I thinking? \n\nPerhaps a better question would be: What am I doing writing a note while I'm sitting captive inside the stomach of a giant?\n\nBoth good questions that I have no immediate answer for...\n\nAdmittedly, mine was not a mission of good will. I came in search of Azsharite, a unique crystal to southern Azshara. Oh the riches I would have had!\n\nBah! Now look at me...",
-		"Should any manner of intelligent life find this note, they must ask themselves something: \"Why in the hell are they romping around with violent thirty foot tall giants?\"\n\n- Mook",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "chest",  ["area"] = "Azshara",  ["source"] = "Azsharite Formation",  ["level"] = "0",  ["x"] = "49.5",  ["y"] = "77.4", },
-	},
-},
 ["Damp Diary Page (Day 4)"] = {
 	["info"] = {["type"] = "item", ["id"] = 6304},
 	["pages"] = {
@@ -5477,33 +5551,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{ ["sourceType"] = "quest",  ["area"] = "Searing Gorge", ["id"] = 27963,  ["source"] = "A New Master... But Who?",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-	},
-},
-["Decoded Twilight Text"] = {
-	["info"] = {["type"] = "item", ["id"] = 20541},
-	["pages"] = {
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 1</H1></BODY></HTML>",
-		"For immediate dissemination to all Twilight's Hammer members.\n\nThe search for the traitor, Ortell, is progressing at a most satisfactory pace. Our scouts have narrowed his location to a network of caverns in Westfall.\n\nOrtell's betrayal shall not be forgiven and his escape presents a great security risk to our organization.\n\nAny individual found to be withholding information on Ortell's whereabouts will be duly punished.\n\n-Twilight Lord Everun",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 2</H1></BODY></HTML>",
-		"For immediate dissemination to all Twilight Hammer members.\n\nGiven the current state of affairs in Silithus, all distribution of True Believer texts are to be made under the escort of no less than two armed Twilight Hammer personnel.\n\nAny members found in violation of this new policy will be summarily punished.\n\n-Twilight Lord D'Sak",	
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 3</H1></BODY></HTML>",
-		"For immediate dissemination to all Twilight's Hammer members.\n\nThe following information describes the use of wind stones for communication with our masters in the Abyssal Council.\n\nAll frivolous use of wind stones will be punished in a most painful manner.\n\n-Twilight Keeper Havunth",
-		"Abyssal Templars\n\nAs an initiate you are permitted to establish contact with Abyssal Templars for routine rituals. Remember to always don the proper garb when utilizing wind stones to avoid activating our defensive enchantments.\n\nShould an unforeseen emergency arise with no overseers present, you are granted permission to summon an Abyssal Templar.\n\nFor details on the summoning rituals involved, refer to last month's True Believer.",
-		"Abyssal Dukes\n\nOnly acolytes in possession of a medallion of station are permitted to establish contact with the Abyssal Dukes. Medallions of station are only to be used by the individuals to whom they were originally issued.\n\nMembers of the Twilight's Hammer involved in unapproved communication with Abyssal Dukes or unauthorized use of medallions of station will be disciplined with by myself personally.",
-		"The High Council of Abyssal Lords\n\nOnly Twilight Lords are permitted to contact Prince Skaldrenox, High Marshal Whirlaxis, Baron Kazum or Lord Skwol. \n\nUnder no circumstances are any low ranking members of the Twilight's Hammer allowed to initiate communication with the High Council. Any outsiders found using a wind stone in this manner will be reduced to ashes on the spot.",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 4</H1></BODY></HTML>",
-		"The State of the Cult, Volume 92\n\nIt is with a joyous heart that I greet you, my brethren, for the state of our cult could not be more grand. We are legion, and our goals grow ever closer to fruition.\n\nNew recruits continue to gather. They sing praise to our lords in Darkshore, they bow in jubilant reverie within the Searing Gorge, they embrace our masters' servant, Aku'mai, in Blackfathom Deeps. Indeed, my brothers and sisters, soon a swarm of the faithful will blanket all of Azeroth!",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 5</H1></BODY></HTML>",
-		"State of the Cult, Volume 127\n\nIt is truly a happy day! We have been tested in Silithus, and we have passed!\n\nReports of the destruction of our northernmost camp may challenge the hearts of the unfaithful, but this slaughter should not be seen as tragedy. No!",
-		"The spilling of our blood by one of the Abyssal High Council is a blessing! We must envy our fallen comrades, for their spirits now reside in the belly of a most righteous beast! \n\nPraise to the Old Gods! Praise to their servants! Praise to the Twilight's Hammer!",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 6</H1></BODY></HTML>",
-		"State of the Cult, Volume 233\n\nOpportunity knocks yet again, my brothers and sisters! The Cenarion Circle, a vile cult of nature lovers, now sends agents against us. They must want to stop us from summoning red luring stones. We cannot allow it!\n\nThe red stones are critical to our new allies. We mustn't let the Cenarion Circle's lapdogs succeed. Stand firm, my faithful friends. Stand firm!",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Message 7</H1></BODY></HTML>",
-		"How Do We Know They Love Us?\n\nSome may wonder how the Old Gods and their minions can love us. Do they not kill us? Do they not cause pain and suffering to all? How could beings so bent on malevolence know love in their hearts?\n\nThere is a simple answer to this question. So simple it need not be uttered.",
-		"Faith. Faith is the wellspring from which the joy of servitude showers us. Faith will keep us warm on the coldest Silithus nights. Faith will keep us in our Lords' good graces when the Ending Days arrive.\n\nFaith will save us.",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "container",  ["area"] = "",  ["source"] = "Decoded True Believer Clippings",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Defias Orders"] = {
@@ -5598,20 +5645,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{ ["sourceType"] = "quest",  ["area"] = "Un'Goro Crater", ["id"] = 24709,  ["source"] = "A Tale of Two Shovels",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-	},
-},
-
-["Dusty Journal"] = {
-	["info"] = {["type"] = "item", ["id"] = 45058}, -- 45062
-	["pages"] = {
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
-		"The first half of the journal seems to be nothing more than the ledger for Mr. Cooper's business. Handwritten columns of figures note the production and sale of barrels to the inhabitants of Moonbrook and even a few clients in Stormwind itself.\n\nThe back half of the book seems to have been Mr. Cooper's journal, where he discusses leaving the family business to his younger brother. You find no mention of children.",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Horde Version</H1></BODY></HTML>",
-		"Leafing through the book's crumbling pages reveals nothing more than descriptions of life on the Valgan farm. The changing of seasons, planting and harvesting of crops are noted, along with the births and deaths of children.\n\nThe entries end abruptly with a short description of the plague. None of the children described could have been old enough to complete training as a knight, if any survived the plague at all.",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "quest",  ["area"] = "Icecrown", ["id"] = 13633,  ["source"] = "The Black Knight of Westfall?",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["area"] = "Icecrown", ["id"] = 13634,  ["source"] = "The Black Knight of Silverpine?",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Envoy's Log"] = {
@@ -6566,31 +6599,6 @@ _addon.data = {
 	},
 },
 
-------------------
--- Faded Note Horror
-------------------
-
-
-["Faded Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 106902},
-	["pages"] = {
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">These 3 items share the same name but are completely unrelated.</H1></BODY></HTML>",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Frostfire Ridge</H1></BODY></HTML>",
-		"Son,\n\nIf you are reading this, then you have completed the rite of om'riggor. You are no longer a child. You are a warrior.\n\nThis trinket belonged to your mother, rest her spirit. She never got to meet you, but she loved you with all her heart.\n\nHer memory kept me safe in countless battles - kept me coming home so I could raise you into the orc you are today.\n\nTake it with you, that you may serve our clan with honor.\n\n- Your father",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Spires of Arak</H1></BODY></HTML>",
-		"My love... I hope you can forgive me. All I could do was run. If I let them catch us both, there would be no way to save you. Now all I feel is a terrible emptyness for not having stayied by your side. This morning I intend to face the flying beasts the way I should have before. I pledge to seek you endlessly in the afterlife... I desire only to be with you. Whatever the sacrifice...",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Darkmoon Island</H1></BODY></HTML>",
-		"Another note, another tease, it's enough to make you weak in the knees!\n\nYou're almost there, look for your next hint, next to a fellow that was negligent.",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "chest",  ["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["source"] = "Dusty Chest",  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
-		{ ["area"] = "Spires of Arak", ["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "55.3",  ["y"] = "18.1"},
-		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island", ["areaId"] = 974, ["source"] = "242519",  ["level"] = "0",  ["x"] = "53.2",  ["y"] = "60.4", },
-	},
-},
-
-
-
 };
 
 
@@ -6627,6 +6635,18 @@ _addon.data = {
 ]]--
 
 --[[
+Lore that needs special care:
+"A Treatise on Military Ranks"
+"Military Ranks of the Horde & Alliance"
+"Dusty Journal"
+"Letter of Introduction to Wyrmrest Temple"
+"Faded Note"
+"Diabolical Plans"
+"Crystallized Note"
+"Hai-pu"
+"Decoded Twilight Text"
+"The Death Knights of Acherus"
+
 Need area Ids for:
 
 Darkmoon Island 974 ?

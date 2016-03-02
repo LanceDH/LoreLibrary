@@ -1,1742 +1,4620 @@
 ﻿local _addonName, _addon = ...;
 
 _addon.translations["ruRU"] = {
-	["Самая известная расписка"] = {
-	["english"] = "A Most Famous Bill of Sale",
-},
 ["Трактат о военных рангах"] = {
 	["english"] = "A Treatise on Military Ranks",
-},
-["\"Диета зомби: секреты правильного питания\""] = {
-	["english"] = "A Zombie's Guide to Proper Nutrition",
-},
-["Повесть о создании ледяного змея"] = {
-	["english"] = "Account of the Raising of a Frost Wyrm",
-},
-["Записка приверженца"] = {
-	["english"] = "Adherent Note",
-},
-["Адмирал Бареан Вествинд"] = {
-	["english"] = "Admiral Barean Westwind",
-},
-["Адмирал Тейлор"] = {
-	["english"] = "Admiral Taylor",
-},
-["Эгвин и Драконья Охота"] = {
-	["english"] = "Aegwynn and the Dragon Hunt",
-},
-["Последствия Второй войны"] = {
-	["english"] = "Aftermath of the Second War",
-},
-["\"Эпоха сотни королей\""] = {
-	["english"] = "Age of a Hundred Kings",
-},
-["\"Агенты порядка\""] = {
-	["english"] = "Agents of Order",
-},
-["Инструкция по использованию воздушной базы в коробке"] = {
-	["english"] = "Airbase in a Box Brochure",
-},
-["Дневник Айрвин"] = {
-	["english"] = "Airwyn's Journal",
-},
-["Воинские звания Альянса"] = {
-	["english"] = "Alliance Military Ranks",
-},
-["Алтарь Занзы"] = {
-	["english"] = "Altar of Zanza",
-},
-["Выучить наизусть"] = {
-	["english"] = "Always Remember",
-},
-["Янтарь"] = {
-	["english"] = "Amber",
-},
-["Древний сборник сока"] = {
-	["english"] = "Ancient Sap Feeder",
-},
-["Очередная жертва дикорога"] = {
-	["english"] = "Another Direhorn Casualty",
-},
-["Аптекарские склянки Яо Мягкой Лапы"] = {
-	["english"] = "Apothecary Tins of Yao Firmpaw",
-},
-["Аратор и Тролльские Войны"] = {
-	["english"] = "Arathor and the Troll Wars",
-},
-["Дневник Аркавона"] = {
-	["english"] = "Archavon's Log",
-},
-["Возвращение Архимонда и побег в Калимдор"] = {
-	["english"] = "Archimonde's Return and the Flight to Kalimdor",
-},
-["Верховный маг Антонидас"] = {
-	["english"] = "Archmage Antonidas",
-},
-["Верховный маг Кадгар из Кирин-Тора"] = {
-	["english"] = "Archmage Khadgar of the Kirin Tor",
-},
-["Ареллас Огненный Лист"] = {
-	["english"] = "Arellas Fireleaf",
-},
-["ВНИМАНИЕ: привидения"] = {
-	["english"] = "ATTENTION: Geists",
-},
-["Аубердинский памятник"] = {
-	["english"] = "Auberdine Memorial",
-},
-["Дневник Бейлога"] = {
-	["english"] = "Baelog's Journal",
-},
-["Знамя империи богомолов"] = {
-	["english"] = "Banner of the Mantid Empire",
-},
-["Трудночитаемый свиток"] = {
-	["english"] = "Barely Legible Scroll",
-},
-["Боевой журнал полководца Кровавого Эфеса"] = {
-	["english"] = "Battlelog of Warlord Bloodhilt",
-},
-["Небесные чудища"] = {
-	["english"] = "Beasts of the Sky",
-},
-["За Темным порталом"] = {
-	["english"] = "Beyond the Dark Portal",
-},
-["Договор картеля Трюмных Вод"] = {
-	["english"] = "Bilgewater Cartel Contract",
-},
-["Обуздание ящеров"] = {
-	["english"] = "Binding Raptors",
-},
-["Груда костей"] = {
-	["english"] = "Bone Pile",
-},
-["Резное бронзовое зеркальце"] = {
-	["english"] = "Carved Bronze Mirror",
-},
-["Создание Драконов"] = {
-	["english"] = "Charge of the Dragonflights",
-},
-["Гражданская война в Чумных землях"] = {
-	["english"] = "Civil War in the Plaguelands",
-},
-["\"Взросление\""] = {
-	["english"] = "Coming of Age",
-},
-["Перечень павших героев"] = {
-	["english"] = "Compendium of Fallen Heroes",
-},
-["Правила столовки Трупеуса"] = {
-	["english"] = "Corpulous' Mess Hall Rules",
-},
-["Проклятый надгробный камень"] = {
-	["english"] = "Cursed Gravestone",
-},
-["Жизненный цикл богомола"] = {
-	["english"] = "Cycle of the Mantid",
-},
-["Данат Троллебой"] = {
-	["english"] = "Danath Trollbane",
-},
-["Табличка с именем темного хранителя"] = {
-	["english"] = "Dark Keeper Nameplate",
-},
-["Резная могильная плита"] = {
-	["english"] = "Decorated Gravestone",
-},
-["Резное надгробие"] = {
-	["english"] = "Decorated Headstone",
-},
-["Советы по призыву дьявозавра"] = {
-	["english"] = "Devilsaur Calling Tips",
-},
-["Покорение"] = {
-	["english"] = "Dominance",
-},
-["Записи Дорена"] = {
-	["english"] = "Doren's Logs",
-},
-["Доргар Камнелоб"] = {
-	["english"] = "Dorgar Stoenbrow",
-},
-["Эдикт Властелина Грома"] = {
-	["english"] = "Edict of the Thunder King",
-},
-["Обуздание страстей"] = {
-	["english"] = "Embracing the Passions",
-},
-["Падение Империи"] = {
-	["english"] = "Empires' Fall",
-},
-["Пустой бочонок старшего хмелевара Синь Во Иня"] = {
-	["english"] = "Empty Keg of Brewfather Xin Wo Yin",
-},
-["Каменная табличка с гравировкой"] = {
-	["english"] = "Engraved Stone Plaque",
-},
-["Нацарапанная записка"] = {
-	["english"] = "Etched Note",
-},
-["Дневник эксгуматора"] = {
-	["english"] = "Exhumer's Journal",
-},
-["Изгнание высших эльфов"] = {
-	["english"] = "Exile of the High Elves",
-},
-["Феллари Быстрая Стрела"] = {
-	["english"] = "Fellari Swiftarrow",
-},
-["Феррен Маркус"] = {
-	["english"] = "Ferren Marcus",
-},
-["\"За короля и совет\""] = {
-	["english"] = "For Council and King",
-},
-["Владыка лесов и первые друиды"] = {
-	["english"] = "Forestlord and the first Druids",
-},
-["Главный кузнец Дэн"] = {
-	["english"] = "Forgemaster Deng",
-},
-["Окаменелое яйцо"] = {
-	["english"] = "Fossilized Egg",
-},
-["Записи Га'трула"] = {
-	["english"] = "Ga'trul's Logs",
-},
-["Записи Гарли"] = {
-	["english"] = "Garley's Journal",
-},
-["Генерал Туралион"] = {
-	["english"] = "General Turalyon",
-},
-["Геру-Странник"] = {
-	["english"] = "Geru Strider",
-},
-["Погрызенный ящик"] = {
-	["english"] = "Gnawed Crate",
-},
-["Позолоченная фарфоровая похоронная статуэтка"] = {
-	["english"] = "Gold-Inlaid Porcelain Funerary Figurine",
-},
-["Великий адмирал Даэлин Праудмур"] = {
-	["english"] = "Grand Admiral Daelin Proudmoore",
-},
-["Зеленые холмы Тернистой долины"] = {
-	["english"] = "Green Hills of Stranglethorn",
-},
-["Уход за вурдалаками"] = {
-	["english"] = "Grooming for Ghouls",
-},
-["Справочник по побочным эффектам воскрешения"] = {
-	["english"] = "Guide to the Side Effects of Reanimation",
-},
-["Гура Освобожденный"] = {
-	["english"] = "Gura the Reclaimed",
-},
-["Эпитафия Гуртана"] = {
-	["english"] = "Gurthan's Epitaph",
-},
-["\"Хай-пу\""] = {
-	["english"] = "Hai-pu",
-},
-["Полусъеденный скелет"] = {
-	["english"] = "Half-Eaten Skeleton",
-},
-["Хацинь из Сотни Копий"] = {
-	["english"] = "Haqin of the Hundred Spears",
-},
-["Хартал Проницательный"] = {
-	["english"] = "Harthal Truesight",
-},
-["Ненависть Кентавра"] = {
-	["english"] = "Hatred of the Centaur",
-},
-["Сердце Горгорека"] = {
-	["english"] = "Heart of Gorgorek",
-},
-["Приказ Адского Крика: эльфы крови"] = {
-	["english"] = "Hellscream's Command: Blood Elves",
-},
-["Приказ Адского Крика: гоблины"] = {
-	["english"] = "Hellscream's Command: Goblins",
-},
-["Здесь покоится Теренас Менетил II"] = {
-	["english"] = "Here Lies King Terenas Menethil II",
-},
-["Астролябия высокорожденных"] = {
-	["english"] = "Highborne Astrolabe",
-},
-["Холия Солнечный Щит"] = {
-	["english"] = "Holia Sunshield",
-},
-["Доктор Горацио Монтгомери"] = {
-	["english"] = "Horatio Montgomery, M.D.",
-},
-["Катапульта Орды"] = {
-	["english"] = "Horde Catapult",
-},
-["Военные звания Орды"] = {
-	["english"] = "Horde Military Ranks",
-},
-["Зрелость хозенов"] = {
-	["english"] = "Hozen Maturity",
-},
-["Речь хозенов"] = {
-	["english"] = "Hozen Speech",
-},
-["Скромный памятник"] = {
-	["english"] = "Humble Monument",
-},
-["Долговая расписка"] = {
-	["english"] = "I.O.U. Note",
-},
-["Ледяная Корона и Ледяной Трон"] = {
-	["english"] = "Icecrown and the Frozen Throne",
-},
-["С вечной любовью"] = {
-	["english"] = "In Loving Memory",
-},
-["Бездействующий звуковой маяк"] = {
-	["english"] = "Inert Sound Beacon",
-},
-["Инвар Однорукий"] = {
-	["english"] = "Invar One-Arm",
-},
-["Непобедимый"] = {
-	["english"] = "Invincible",
-},
-["Железный амулет"] = {
-	["english"] = "Iron Amulet",
-},
-["Стальгорн – Пробуждение дворфов"] = {
-	["english"] = "Ironforge - the Awakening of the Dwarves",
-},
-["Кодекс тюремщика"] = {
-	["english"] = "Jailor's Law Book",
-},
-["Урна с прахом"] = {
-	["english"] = "Jar of ashes",
-},
-["Дневник верховного маршала Двукоссы"] = {
-	["english"] = "Journal of High Marshal Twinbraid",
-},
-["Кел'Тузад и создание Плети"] = {
-	["english"] = "Kel'Thuzad and the Forming of the Scourge",
-},
-["Кил'джеден и Пакт Тьмы"] = {
-	["english"] = "Kil'jaeden and the Shadow Pact",
-},
-["Король Ллейн I из рода Риннов"] = {
-	["english"] = "King Llane I of the House of Wrynn",
-},
-["Король Вариан Ринн"] = {
-	["english"] = "King Varian Wrynn",
-},
-["Курдран Громовой Молот"] = {
-	["english"] = "Kurdran Wildhammer",
-},
-["Резервуар для сока кипари"] = {
-	["english"] = "Kypari Sap Container",
-},
-["Леди Мара Фордрагон"] = {
-	["english"] = "Lady Mara Fordragon",
-},
-["Лэй Шэнь"] = {
-	["english"] = "Lei Shen",
-},
-["Долгий сон орков"] = {
-	["english"] = "Lethargy of the Orcs",
-},
-["Место упокоения Лю Лана"] = {
-	["english"] = "Liu Lang's Final Rest",
-},
-["Первопроходец Лю Лан"] = {
-	["english"] = "Liu Lang, The First Explorer",
-},
-["Оковы мятежника"] = {
-	["english"] = "Manacles of Rebellion",
-},
-["Лампа богомолов"] = {
-	["english"] = "Mantid Lamp",
-},
-["Сообщество богомолов"] = {
-	["english"] = "Mantid Society",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">НАСТАВЛЕНИЕ ПО ВОИНСКИМ ЗВАНИЯМ</H1><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRankAlliance\" align=\"left\" /><BR/><P align=\"right\">Ниже перечислены</P><P align=\"right\">воинские звания</P><P align=\"right\">Альянса,</P><P align=\"right\">снабженные</P><P align=\"right\">пояснениями,</P><P align=\"right\">касающимися народов</P><P align=\"right\">Орды. Звания</P><P align=\"right\">представлены в двух</P><P align=\"right\">разделах – офицерский и рядовой состав – и перечислены в каждом разделе в убывающем порядке, от старших к младшим. Да здравствует Альянс!</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ОФИЦЕРСКИЕ ЗВАНИЯ АЛЬЯНСА</H1><BR/><P align=\"center\">Часть 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Главнокомандующий</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Фельдмаршал</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Маршал</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Командир</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Лейтенант-командор</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ОФИЦЕРСКИЕ ЗВАНИЯ АЛЬЯНСА</H1><BR/><P align=\"center\">Часть 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Рыцарь-защитник</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Рыцарь-капитан</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Рыцарь-лейтенант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Рыцарь</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">РЯДОВЫЕ ЗВАНИЯ АЛЬЯНСА</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">Старший Сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Младший Сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Капрал</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank/PvPRank01\" align=\"left\" /><P align=\"right\">Рядовой</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ОФИЦЕРСКИЕ ЗВАНИЯ ОРДЫ</H1><BR/><P align=\"center\">Часть 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Верховный Вождь</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Вождь</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Генерал</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Генерал-лейтенант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Защитник</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ОФИЦЕРСКИЕ ЗВАНИЯ ОРДЫ</H1><BR/><P align=\"center\">Часть 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Центурион</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Легионер</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Кровавый страж</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Каменный страж</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">РЯДОВОЙ И СЕРЖАНТСКИЙ СОСТАВ ОРДЫ</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">Старшина</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Старший сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Рубака</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Разведчик</P></BODY></HTML>",
+	},
 },
 ["Табель о рангах Орды и Альянса"] = {
 	["english"] = "Military Ranks of the Horde & Alliance",
-},
-["Рассветные Туманы"] = {
-	["english"] = "Mists of Dawn",
-},
-["Монета могу"] = {
-	["english"] = "Mogu Coin",
-},
-["Рунный камень могу"] = {
-	["english"] = "Mogu Runestone",
-},
-["Монумент Воспоминаний"] = {
-	["english"] = "Monument of Remembrance",
-},
-["Памятник Грому Адскому Крику"] = {
-	["english"] = "Monument to Grom Hellscream",
-},
-["Гора Хиджал и Дар Иллидана"] = {
-	["english"] = "Mount Hyjal and Illidan's Gift",
-},
-["Странные обломки"] = {
-	["english"] = "Mysterious Wreckage",
-},
-["Огрский путевой указатель"] = {
-	["english"] = "Ogre Wayguide",
-},
-["Древняя ненависть – Колонизация Калимдора"] = {
-	["english"] = "Old Hatreds - The Colonization of Kalimdor",
-},
-["\"Старик Жи и миллион душ\""] = {
-	["english"] = "Old Ri and the Million Souls",
-},
-["Старый плакат \"Разыскивается\""] = {
-	["english"] = "Old Wanted Poster",
-},
-["В Наксрамасе"] = {
-	["english"] = "On Naxxramas",
-},
-["В Некроситете"] = {
-	["english"] = "On Scholomance",
-},
-["В Стратхольме"] = {
-	["english"] = "On Stratholme",
-},
-["В Нежити"] = {
-	["english"] = "On Undeath",
-},
-["Одна правда в нежитии"] = {
-	["english"] = "One Truth in Undeath",
-},
-["Истоки"] = {
-	["english"] = "Origins",
-},
-["Орман из Стромгарда"] = {
-	["english"] = "Orman of Stromgarde",
-},
-["Пандаренская тактика боя"] = {
-	["english"] = "Pandaren Fighting Tactics",
-},
-["Пандаренская игральная доска"] = {
-	["english"] = "Pandaren Game Board",
-},
-["Пандаренский чайный набор"] = {
-	["english"] = "Pandaren Tea Set",
-},
-["\"Путь Хоцзинь\""] = {
-	["english"] = "Path of the Huojin",
-},
-["\"Путь Тушуй\""] = {
-	["english"] = "Path of the Tushui",
-},
-["Жемчужина Юй-лун"] = {
-	["english"] = "Pearl of Yu'lon",
-},
-["\"Зубастая погибель\""] = {
-	["english"] = "Pestilence with Teeth",
-},
-["Окаменевший костяной хлыст"] = {
-	["english"] = "Petrified Bone Whip",
-},
-["Сборник пыльцы"] = {
-	["english"] = "Pollen Collector",
-},
-["Руководство по эксплуатации опытной модели жнеца"] = {
-	["english"] = "Prototype Reaper Instruction Manual",
-},
-["Скелет птерадона"] = {
-	["english"] = "Pteradon Skeleton",
-},
-["Цюань Тоу Ко \"Двойной Кулак\""] = {
-	["english"] = "Quan Tou Kuo the Two Fisted",
-},
-["Капитан следопытов Аллерия Ветрокрылая"] = {
-	["english"] = "Ranger Captain Alleria Windrunner",
-},
-["Останки Идеала"] = {
-	["english"] = "Remains of a Paragon",
-},
-["Слепец Жэнь Юнь"] = {
-	["english"] = "Ren Yun the Blind",
-},
-["Отчеты с передовой: Драконий Погост"] = {
-	["english"] = "Report from the Frontlines: Dragonblight",
-},
-["Отчеты с передовой: Восточные королевства"] = {
-	["english"] = "Report from the Frontlines: Eastern Kingdoms",
-},
-["Отчеты с передовой: Подгород"] = {
-	["english"] = "Report from the Frontlines: Undercity",
-},
-["Отчеты с передовой: Западный Нордскол"] = {
-	["english"] = "Report from the Frontlines: Western Northrend",
-},
-["Возвышение эльфов крови"] = {
-	["english"] = "Rise of the Blood Elves",
-},
-["Возвышение Орды"] = {
-	["english"] = "Rise of the Horde",
-},
-["Коготь руха"] = {
-	["english"] = "Roc Talon",
-},
-["Обелиск Дуротана"] = {
-	["english"] = "Rock of Durotan",
-},
-["Выбор роли"] = {
-	["english"] = "Role Call",
-},
-["Саргерас и Предательство"] = {
-	["english"] = "Sargeras and the Betrayal",
-},
-["Яйцо завра"] = {
-	["english"] = "Saurial Egg",
-},
-["Свиток с предсказанием"] = {
-	["english"] = "Scroll of Auspice",
-},
-["Омытый морем свиток"] = {
-	["english"] = "Sea-kissed Scroll",
-},
-["Туристическая брошюрка секретной лаборатории"] = {
-	["english"] = "Secret Lab Tourism Brochure",
-},
-["\"Тень, Шторм и Камень\""] = {
-	["english"] = "Shadow, Storm, and Stone",
-},
-["\"Тени лоа\""] = {
-	["english"] = "Shadows of the Loa",
-},
-["Скорбь Матери-Земли"] = {
-	["english"] = "Sorrow of the Earthmother",
-},
-["Высекатель искр Ву"] = {
-	["english"] = "Sparkmancer Vu",
-},
-["Пленители душ"] = {
-	["english"] = "Spirit Binders",
-},
-["Дневник шпиона"] = {
-	["english"] = "Spy's Logbook",
-},
-["Штандарт Нюцзао"] = {
-	["english"] = "Standard of Niuzao",
-},
-["Солнечный Колодец – Падение Кель'Таласа"] = {
-	["english"] = "Sunwell - The Fall of Quel'Thalas",
-},
-["Воинам, павшим в Танаане"] = {
-	["english"] = "Tanaan's Fallen",
-},
-["Терракотовая рука"] = {
-	["english"] = "Terracotta Arm",
-},
-["Альянс Лордерона"] = {
-	["english"] = "The Alliance of Lordaeron",
-},
-["\"Рыболов и монахи\""] = {
-	["english"] = "The Angler and the Monks",
-},
-["Броня Маннорота"] = {
-	["english"] = "The Armor of Mannoroth",
-},
-["Битва при Грим Батол"] = {
-	["english"] = "The Battle of Grim Batol",
-},
-["Восход Предателя"] = {
-	["english"] = "The Betrayer Ascendant",
-},
-["Рождение Короля-лича"] = {
-	["english"] = "The Birth of the Lich King",
-},
-["\"Место рождения Лю Лана\""] = {
-	["english"] = "The Birthplace of Liu Lang",
-},
-["Конденсация электро-ичества"] = {
-	["english"] = "The Condensation of Electra-Atrocity",
-},
-["\"Проклятие и молчание\""] = {
-	["english"] = "The Curse and the Silence",
-},
-["Темный портал и падение Штормграда"] = {
-	["english"] = "The Dark Portal and the Fall of Stormwind",
-},
-["\"Темный пророк Зул\""] = {
-	["english"] = "The Dark Prophet Zul",
-},
-["Рыцари смерти Акеруса"] = {
-	["english"] = "The Death Knights of Acherus",
-},
-["Указ Плети"] = {
-	["english"] = "The Decree of the Scourge ",
-},
-["\"Отважные\""] = {
-	["english"] = "The Defiant",
-},
-["\"Дезертиры\""] = {
-	["english"] = "The Deserters",
-},
-["\"Поединок грома и силы\""] = {
-	["english"] = "The Duel of Thunder and Strength",
-},
-["Подземелья Доцзян"] = {
-	["english"] = "The Dungeons of Dojan",
-},
-["\"Бремя императора\", ч. I"] = {
-	["english"] = "The Emperor's Burden - Part 1",
-},
-["\"Бремя императора\", ч. II"] = {
-	["english"] = "The Emperor's Burden - Part 2",
-},
-["\"Бремя императора\", ч. III"] = {
-	["english"] = "The Emperor's Burden - Part 3",
-},
-["\"Бремя императора\", ч. IV"] = {
-	["english"] = "The Emperor's Burden - Part 4",
-},
-["\"Бремя императора\", ч. V"] = {
-	["english"] = "The Emperor's Burden - Part 5",
-},
-["\"Бремя императора\", ч. VI"] = {
-	["english"] = "The Emperor's Burden - Part 6",
-},
-["\"Бремя императора\", ч. VII"] = {
-	["english"] = "The Emperor's Burden - Part 7",
-},
-["\"Бремя императора\", ч. VIII"] = {
-	["english"] = "The Emperor's Burden - Part 8",
-},
-["\"Императрица\""] = {
-	["english"] = "The Empress",
-},
-["\"Первые монахи\""] = {
-	["english"] = "The First Monks",
-},
-["Основание Кель'Таласа"] = {
-	["english"] = "The Founding of Quel'Thalas",
-},
-["\"Основание ордена Облачного Змея\""] = {
-	["english"] = "The Founding of the Order of the Cloud Serpent",
-},
-["\"Генерал и груммель\""] = {
-	["english"] = "The General and the Grummle",
-},
-["Боги Арака"] = {
-	["english"] = "The Gods of Arak",
-},
-["Зеленые холмы Тернистой долины"] = {
-	["english"] = "The Green Hills of Stranglethorn",
-},
-["Хранители Тирисфаля"] = {
-	["english"] = "The Guardians of Tirisfal",
-},
-["\"Нашествие хозенов\""] = {
-	["english"] = "The Hozen Ravage",
-},
-["Вторжение в Дренор"] = {
-	["english"] = "The Invasion of Draenor",
-},
-["Дневник Линя (ч. I)"] = {
-	["english"] = "The Journal of Lin (I)",
-},
-["Дневник Линя (ч. II)"] = {
-	["english"] = "The Journal of Lin (II)",
-},
-["Калдорай и Источник Вечности"] = {
-	["english"] = "The Kaldorei and the Well of Eternity",
-},
-["Последний хранитель"] = {
-	["english"] = "The Last Guardian",
-},
-["\"Последняя битва\""] = {
-	["english"] = "The Last Stand",
-},
-["\"Наследие императора Цао\""] = {
-	["english"] = "The Legacy of Emperor Tsao",
-},
-["Триумф Короля-лича"] = {
-	["english"] = "The Lich King Triumphant",
-},
-["\"Забытая династия\""] = {
-	["english"] = "The Lost Dynasty",
-},
-["Мемуары лорда Торваля"] = {
-	["english"] = "The Memoirs of Lord Thorval",
-},
-["\"Могу и трогг\""] = {
-	["english"] = "The Mogu and the Trogg",
-},
-["\"Природа спокойствия\""] = {
-	["english"] = "The Nature of Peace",
-},
-["Новая Орда"] = {
-	["english"] = "The New Horde",
-},
-["Древние боги и формирование Азерота"] = {
-	["english"] = "The Old Gods and the Ordering of Azeroth",
-},
-["\"Пандаренский вопрос\""] = {
-	["english"] = "The Pandaren Problem",
-},
-["Молящийся богомол"] = {
-	["english"] = "The Praying Mantid",
-},
-["\"Императорский хранитель ключей\""] = {
-	["english"] = "The Royal Chamberlain",
-},
-["\"Священная гора\""] = {
-	["english"] = "The Sacred Mount",
-},
-["\"Сауроки\""] = {
-	["english"] = "The Saurok",
-},
-["\"Саурок и цзинь-юй\""] = {
-	["english"] = "The Saurok and the Jinyu",
-},
-["Плеть Лордерона"] = {
-	["english"] = "The Scourge of Lordaeron",
-},
-["Часовые и долгое бдение"] = {
-	["english"] = "The Sentinels and the Long Vigil",
-},
-["Семь королевств"] = {
-	["english"] = "The Seven Kingdoms",
-},
-["Череп Тираннистраса"] = {
-	["english"] = "The Skull of Tyrannistrasz",
-},
-["\"Властелин Грома\""] = {
-	["english"] = "The Thunder King",
-},
-["\"Земледелец и монах\""] = {
-	["english"] = "The Tiller and the Monk",
-},
-["Империи-близнецы"] = {
-	["english"] = "The Twin Empires",
-},
-["\"Странствующая вдова\""] = {
-	["english"] = "The Wandering Widow",
-},
-["Война древних"] = {
-	["english"] = "The War of the Ancients",
-},
-["\"Военачальник и монах\""] = {
-	["english"] = "The Warlord and the Monk",
-},
-["Белый Олень и Луна"] = {
-	["english"] = "The White Stag and the Moon",
-},
-["Древо Жизни и Изумрудный Сон"] = {
-	["english"] = "The World Tree and the Emerald Dream",
-},
-["\"Зандаларское соглашение\""] = {
-	["english"] = "The Zandalar Agreement",
-},
-["Мой рунический меч."] = {
-	["english"] = "This is my Runeblade...",
-},
-["Знак Властелина Грома"] = {
-	["english"] = "Thunder King Insignia",
-},
-["Мемориал Тиффин Эллериан Ринн"] = {
-	["english"] = "Tiffin Ellerian Wrynn Memorial",
-},
-["\"В единстве – наша сила!\""] = {
-	["english"] = "Together, We Are Strong",
-},
-["Надгробный камень"] = {
-	["english"] = "Tombstone",
-},
-["Скелет Щелкозуба"] = {
-	["english"] = "Toothgnasher's Skeleton",
-},
-["Прикосновение банши"] = {
-	["english"] = "Touch of the Banshee",
-},
-["Ремонт межпространственного корабля для начинающих"] = {
-	["english"] = "Trans-dimensional Ship Repair for Simpletons",
-},
-["Экземпляр книги \"Самая известная расписка\""] = {
-	["english"] = "Transcription: A Most Famous Bill of Sale",
-},
-["Экземпляр книги \"Бремя императора\", ч. I"] = {
-	["english"] = "Transcription: The Emperor's Burden - Part 1",
-},
-["Экземпляр книги \"Бремя императора\", ч. II"] = {
-	["english"] = "Transcription: The Emperor's Burden - Part 2",
-},
-["Экземпляр книги \"Бремя императора\", ч. III"] = {
-	["english"] = "Transcription: The Emperor's Burden - Part 3",
-},
-["Экземпляр книги \"Бремя императора\", ч. IV"] = {
-	["english"] = "Transcription: The Emperor's Burden - Part 4",
-},
-["Экземпляр книги \"Бремя императора\", ч. V"] = {
-	["english"] = "Transcription: The Emperor's Burden - Part 5",
-},
-["Экземпляр книги \"Бремя императора\", ч. VI"] = {
-	["english"] = "Transcription: The Emperor's Burden - Part 6",
-},
-["Экземпляр книги \"Бремя императора\", ч. VII"] = {
-	["english"] = "Transcription: The Emperor's Burden - Part 7",
-},
-["Экземпляр книги \"Бремя императора\", ч. VIII"] = {
-	["english"] = "Transcription: The Emperor's Burden - Part 8",
-},
-["Экземпляр книги \"Бремя императора, ч. V\""] = {
-	["english"] = "Transcription: Waiting for the Turtle",
-},
-["\"Затерявшись в неизведанных землях\""] = {
-	["english"] = "Trapped in a Strange Land",
-},
-["Парные кружки старшего хмелевара Цюань Тоу Ко"] = {
-	["english"] = "Twin Steins of Brewfather Quan Tou Kuo",
-},
-["Ульдаманские реликвии"] = {
-	["english"] = "Uldaman Relics",
-},
-["Ульдаманские барельефы"] = {
-	["english"] = "Uldaman Reliefs",
-},
-["\"Цена единства\""] = {
-	["english"] = "Unity at a Price",
-},
-["Дневник неизвестного рыцаря"] = {
-	["english"] = "Unknown Crusader's Diary",
-},
-["Неподписанный дневник"] = {
-	["english"] = "Unmarked Journal",
-},
-["Утер Светоносный"] = {
-	["english"] = "Uther the Lightbringer",
-},
-["Утер Светоносный"] = {
-	["english"] = "Uther the Lightbringer",
-},
-["Дневник Ваэлдрина"] = {
-	["english"] = "Vaeldrin's Journal",
-},
-["Валея Два Клинка"] = {
-	["english"] = "Valea Twinblades",
-},
-["Долина Императоров"] = {
-	["english"] = "Valley of the Emperors",
-},
-["\"Победа на Кунь-Лай\""] = {
-	["english"] = "Victory in Kun-Lai",
-},
-["\"В ожидании черепахи\""] = {
-	["english"] = "Waiting for the Turtle",
-},
-["Трость старшего хмелевара Жэнь Юня"] = {
-	["english"] = "Walking Cane of Brewfather Ren Yun",
-},
-["Объявление о Фестивале странника"] = {
-	["english"] = "Wanderer's Festival Announcement",
-},
-["Разыскивается: Хеминг Эрнестуэй, враг Природы"] = {
-	["english"] = "Wanted: Hemet Nesingwary, Enemy of Nature",
-},
-["Война пауков"] = {
-	["english"] = "War of the Spider",
-},
-["Война Трех Кланов"] = {
-	["english"] = "War of the Three Hammers",
-},
-["Тавро вождя"] = {
-	["english"] = "Warlord's Branding Iron",
-},
-["ВНИМАНИЕ"] = {
-	["english"] = "WARNING",
-},
-["\"Водоковка\""] = {
-	["english"] = "Watersmithing",
-},
-["\"Говорящие с водой\""] = {
-	["english"] = "Waterspeakers",
-},
-["\"Мы – яунголы\""] = {
-	["english"] = "We Are Yaungol",
-},
-["\"О том, как мы были великими воинами\""] = {
-	["english"] = "We Were Warriors",
-},
-["Потертый гроссбух"] = {
-	["english"] = "Worn Monument Ledger",
-},
-["Гнев Свежевателя Душ"] = {
-	["english"] = "Wrath of Soulflayer",
-},
-["Синь Во Инь Разбитое Сердце"] = {
-	["english"] = "Xin Wo Yin the Broken Hearted",
-},
-["Яна Кровавое Копье"] = {
-	["english"] = "Yana Bloodspear",
-},
-["\"Огонь яунголов\""] = {
-	["english"] = "Yaungoil",
-},
-["\"Тактика яунголов\""] = {
-	["english"] = "Yaungol Tactics",
-},
-["Надгробная плита Юрива"] = {
-	["english"] = "Yuriv's Tombstone",
-},
-["Скабрезный любовный роман: \"Необузданные страсти\""] = {
-	["english"] = "A Steamy Romance Novel: Savage Passions",
-},
-["Скабрезный любовный роман"] = {
-	["english"] = "A Steamy Romance Novel",
-},
-["Скабрезный любовный роман \"Любовный туман\""] = {
-	["english"] = "A Steamy Romance Novel: Hot and Misty",
-},
-["Скабрезный любовный роман \"Нагишом в сугроб\""] = {
-	["english"] = "A Steamy Romance Novel: Northern Exposure",
-},
-["Скабрезный любовный роман \"Запретная любовь\""] = {
-	["english"] = "A Steamy Romance Novel: Forbidden Love",
-},
-["Скабрезный любовный роман \"Бомба\""] = {
-	["english"] = "A Steamy Romance Novel: Big Brass Bombs",
-},
-["Скабрезный любовный роман \"Тринадцатое полнолуние\""] = {
-	["english"] = "A Steamy Romance Novel: Blue Moon",
-},
-["Манускрипт ненасытности"] = {
-	["english"] = "Libram of Voracity",
-},
-["Манускрипт здоровья"] = {
-	["english"] = "Libram of Constitution",
-},
-["Манускрипт размышления"] = {
-	["english"] = "Libram of Rumination",
-},
-["Манускрипт устойчивости"] = {
-	["english"] = "Libram of Resilience",
-},
-["Манускрипт скорости"] = {
-	["english"] = "Libram of Rapidity",
-},
-["Манускрипт средоточия"] = {
-	["english"] = "Libram of Focus",
-},
-["Манускрипт упорства"] = {
-	["english"] = "Libram of Tenacity",
-},
-["Манускрипт защиты"] = {
-	["english"] = "Libram of Protection",
-},
-["\"Должники Сальсалабима\""] = {
-	["english"] = "\"Creatures That Owe Sal'salabim Golds\"",
-},
-["Ключ к сокровищу Сандера"] = {
-	["english"] = "A Clue to Sanders' Treasure",
-},
-["Письмо Касыму Шариму"] = {
-	["english"] = "A Letter to Kasim Sharim",
-},
-["Послание от хранителя истории Чо"] = {
-	["english"] = "A Missive from Lorewalker Cho",
-},
-["Послание Албрека"] = {
-	["english"] = "Albreck's Findings",
-},
-["Стишок Алисии"] = {
-	["english"] = "Alicia's Poem",
-},
-["Послание Альянса"] = {
-	["english"] = "Alliance Missive",
-},
-["Приказы Альянса"] = {
-	["english"] = "Alliance Orders",
-},
-["Древние клинки драконьей ковки"] = {
-	["english"] = "Ancient Dragonforged Blades",
-},
-["Еще один ключ к сокровищу Сандерса."] = {
-	["english"] = "Another Clue to Sanders' Treasure",
-},
-["Заметки аптекаря Ферроу"] = {
-	["english"] = "Apothecary Furrows' Notes",
-},
-["Чародейская руна"] = {
-	["english"] = "Arcane Rune",
-},
-["Клятва крови Орды"] = {
-	["english"] = "Blood Oath of the Horde",
-},
-["Донесение Сухопека"] = {
-	["english"] = "Brubaker's Report",
-},
-["Каллиграфическое письмо"] = {
-	["english"] = "Calligraphed Letter",
-},
-["Каллиграфическая записка"] = {
-	["english"] = "Calligraphed Note",
-},
-["Покрытый письменами пергамент"] = {
-	["english"] = "Calligraphed Parchment",
-},
-["Покрытый письменами знак"] = {
-	["english"] = "Calligraphed Sigil",
-},
-["Записка Калора"] = {
-	["english"] = "Calor's Note",
-},
-["Заказ на ткани"] = {
-	["english"] = "Cloth Request",
-},
-["Благословенное письмо"] = {
-	["english"] = "Consecrated Letter",
-},
-["Освященная записка"] = {
-	["english"] = "Consecrated Note",
-},
-["Священная руна"] = {
-	["english"] = "Consecrated Rune",
-},
-["Руководство пользователя панели управления"] = {
-	["english"] = "Control Console Operating Manual",
-},
-["Список Умейки"] = {
-	["english"] = "Crafty's Shopping List",
-},
-["Полевой справочник Крогола по силитидам"] = {
-	["english"] = "Crawgol's Silithid Field Guide",
-},
-["Первая игрушка детеныша ледопарда"] = {
-	["english"] = "Cub's First Toy",
-},
-["Ежедневный отчет: предгорья Хилсбрада"] = {
-	["english"] = "Daily Report - Hillsbrad Foothills",
-},
-["Подлые обитатели глубин"] = {
-	["english"] = "Dastardly Denizens of the Deep",
-},
-["Переписанный с таблички расшифрованный текст"] = {
-	["english"] = "Decoded Tablet Transcription",
-},
-["Демонические планы"] = {
-	["english"] = "Diabolical Plans",
-},
-["Изящная руна"] = {
-	["english"] = "Elegant Rune",
-},
-["Изящный свиток"] = {
-	["english"] = "Elegant Scroll",
-},
-["Наделенная силой руна"] = {
-	["english"] = "Empowered Rune",
-},
-["Зашифрованное письмо"] = {
-	["english"] = "Encrypted Letter",
-},
-["Зашифрованный пергамент"] = {
-	["english"] = "Encrypted Parchment",
-},
-["Зашифрованная руна"] = {
-	["english"] = "Encrypted Rune",
-},
-["Зашифрованный свиток"] = {
-	["english"] = "Encrypted Scroll",
-},
-["Зашифрованный знак"] = {
-	["english"] = "Encrypted Sigil",
-},
-["Запечатанное письмо"] = {
-	["english"] = "Etched Letter",
-},
-["Нацарапанная записка"] = {
-	["english"] = "Etched Note",
-},
-["Пергамент с письменами"] = {
-	["english"] = "Etched Parchment",
-},
-["Гравированная руна"] = {
-	["english"] = "Etched Rune",
-},
-["Выгравированный знак"] = {
-	["english"] = "Etched Sigil",
-},
-["Свидетельства против Самуэльсона"] = {
-	["english"] = "Evidence Against Samuelson",
-},
-["Выцветшая карта сокровищ"] = {
-	["english"] = "Faded Treasure Map",
-},
-["Доклад отца Густава"] = {
-	["english"] = "Father Gustav's Report",
-},
-["Полевой дневник"] = {
-	["english"] = "Field Journal",
-},
-["Последний ключ к сокровищу Сандерса."] = {
-	["english"] = "Final Clue to Sanders' Treasure",
-},
-["Состязание рыбаков!"] = {
-	["english"] = "Fishing Tournament!",
-},
-["Во имя Света!"] = {
-	["english"] = "For the Light!",
-},
-["Запретная печать"] = {
-	["english"] = "Forbidden Sigil",
-},
-["Документ Хмуроброва"] = {
-	["english"] = "Furlbrow's Deed",
-},
-["Записи Галена"] = {
-	["english"] = "Galaen's Journal",
-},
-["Письмо мага"] = {
-	["english"] = "Glyphic Letter",
-},
-["Покрытый письменами пергамент"] = {
-	["english"] = "Glyphic Parchment",
-},
-["Покрытый письменами свиток"] = {
-	["english"] = "Glyphic Scroll",
-},
-["Отпечаток Гордауга"] = {
-	["english"] = "Gordawg's Imprint",
-},
-["Записка бабули Стоунфилд"] = {
-	["english"] = "Gramma Stonefield's Note",
-},
-["Список трав Великой Матери"] = {
-	["english"] = "Greatmother's List of Herbs",
-},
-["Список Гремлока"] = {
-	["english"] = "Gremlock's List",
-},
-["Письмо Гришки"] = {
-	["english"] = "Gryshka's Letter",
-},
-["Благословенное письмо"] = {
-	["english"] = "Hallowed Letter",
-},
-["Благословенное послание"] = {
-	["english"] = "Hallowed Note",
-},
-["Благословенная руна"] = {
-	["english"] = "Hallowed Rune",
-},
-["Священный свиток"] = {
-	["english"] = "Hallowed Scroll",
-},
-["Благословенный знак"] = {
-	["english"] = "Hallowed Sigil",
-},
-["Торопливо написанная записка"] = {
-	["english"] = "Hastily Written Note",
-},
-["Записи Хилдельва"] = {
-	["english"] = "Hildelve's Journal",
-},
-["Послание Орды"] = {
-	["english"] = "Horde Missive",
-},
-["Указания Балтаза, повелителя Иллидари"] = {
-	["english"] = "Illidari Lord Balthas' Instructions",
-},
-["Служебные бумаги Иллидари"] = {
-	["english"] = "Illidari Service Papers",
-},
-["Отчет о достижениях Железняка"] = {
-	["english"] = "Ironband's Progress Report",
-},
-["Дневник Джубеки"] = {
-	["english"] = "Jubeka's Journal",
-},
-["Наследие мастеров (ч. I)"] = {
-	["english"] = "Legacy of the Masters (Part 1)",
-},
-["\"Легенды Гурубаши\", том 3"] = {
-	["english"] = "Legends of the Gurubashi, Volume 3",
-},
-["Письмо Лор'темара Терона"] = {
-	["english"] = "Letter from Lor'themar Theron",
-},
-["Письмо от Саурфанга"] = {
-	["english"] = "Letter from Saurfang",
-},
-["Приглашение в Храм Драконьего Покоя"] = {
-	["english"] = "Letter of Introduction to Wyrmrest Temple",
-},
-["Письмо с печатью Сильваны"] = {
-	["english"] = "Letter Sealed by Sylvanas",
-},
-["Письмо к Элло"] = {
-	["english"] = "Letter to Ello",
-},
-["Записи магистра Блеклых Сумерек"] = {
-	["english"] = "Magister Duskwither's Journal",
-},
-["Документы маршала Макбрайда"] = {
-	["english"] = "Marshal McBride's Documents",
-},
-["Любовное послание Мейбелл"] = {
-	["english"] = "Maybell's Love Letter",
-},
-["Заказ Морриса"] = {
-	["english"] = "Morris's Order",
-},
-["Записки Пустолога"] = {
-	["english"] = "Netherologist's Notes",
-},
-["Указания Нитрина"] = {
-	["english"] = "Nitrin's Instructions",
-},
-["Приказы Дракуру"] = {
-	["english"] = "Orders From Drakuru",
-},
-["Донесение Ориона"] = {
-	["english"] = "Orion's Report",
-},
-["Пандаренский свиток"] = {
-	["english"] = "Pandaren Scroll",
-},
-["Подмоченные страницы"] = {
-	["english"] = "Partially Soaked Pages",
-},
-["Очищая луковицу"] = {
-	["english"] = "Peeling the Onion",
-},
-["Письмо о найме"] = {
-	["english"] = "Recruitment Letter",
-},
-["Бумаги реликвария"] = {
-	["english"] = "Reliquary Papers",
-},
-["Руническая записка"] = {
-	["english"] = "Rune-Inscribed Note",
-},
-["Рунический пергамент"] = {
-	["english"] = "Rune-Inscribed Parchment",
-},
-["Свиток с предсказанием"] = {
-	["english"] = "Scroll of Auspice",
-},
-["Запечатанная записка"] = {
-	["english"] = "Sealed Note",
-},
-["Донесение Сенира"] = {
-	["english"] = "Senir's Report",
-},
-["Обычное письмо"] = {
-	["english"] = "Simple Letter",
-},
-["Простая записка"] = {
-	["english"] = "Simple Note",
-},
-["Пергамент"] = {
-	["english"] = "Simple Parchment",
-},
-["Простая руна"] = {
-	["english"] = "Simple Rune",
-},
-["Простой свиток"] = {
-	["english"] = "Simple Scroll",
-},
-["Простой знак"] = {
-	["english"] = "Simple Sigil",
-},
-["Записка сестры Аквинны"] = {
-	["english"] = "Sister Aquinne's Note",
-},
-["Отчет с Заставы Расщепленного Дерева"] = {
-	["english"] = "Splintertree Post Report",
-},
-["Донесение шпиона"] = {
-	["english"] = "Spy's Report",
-},
-["Грозовая Вершина: требование"] = {
-	["english"] = "Stormpike's Request",
-},
-["Знак брони Штормграда"] = {
-	["english"] = "Stormwind Armor Marker",
-},
-["Запачканное письмо"] = {
-	["english"] = "Tainted Letter",
-},
-["Гниющий пергамент"] = {
-	["english"] = "Tainted Parchment",
-},
-["Оскверненная руна"] = {
-	["english"] = "Tainted Rune",
-},
-["Грязный свиток"] = {
-	["english"] = "Tainted Scroll",
-},
-["Послание баронессы"] = {
-	["english"] = "The Baroness' Missive",
-},
-["Битва за Хилсбрад"] = {
-	["english"] = "The Battle for Hillsbrad",
-},
-["Расписание Вымогателя"] = {
-	["english"] = "The Collector's Schedule",
-},
-["Вызов Дарнхольда"] = {
-	["english"] = "The Durnholde Challenge",
-},
-["Праздник Зимнего Покрова"] = {
-	["english"] = "The Feast of Winter Veil",
-},
-["Артишок Северного Волка"] = {
-	["english"] = "The Frostwolf Artichoke",
-},
-["Зычный глас Орды"] = {
-	["english"] = "The Horde's Hellscream",
-},
-["Легенда о Сталване"] = {
-	["english"] = "The Legend of Stalvan",
-},
-["Легенда о Роге"] = {
-	["english"] = "The Legend of the Horn",
-},
-["Путь искупления"] = {
-	["english"] = "The Path of Redemption",
-},
-["\"Повесть о Моргане Ладиморе\""] = {
-	["english"] = "The Story of Morgan Ladimore",
-},
-["Потрепанный дневник"] = {
-	["english"] = "Time-Worn Journal",
-},
-["Королю Вариану Ринну, предводителю Альянса"] = {
-	["english"] = "To King Varian Wrynn of the Alliance",
-},
-["Вождю Орды"] = {
-	["english"] = "To the Warchief of the Horde",
-},
-["Книга Томаса Томсона"] = {
-	["english"] = "Tome of Thomas Thomson",
-},
-["Истрепавшийся свиток"] = {
-	["english"] = "Trail-Worn Scroll",
-},
-["Переведенное послание Солнечных Ястребов"] = {
-	["english"] = "Translated Sunhawk Missive",
-},
-["Бумаги Торговой Компании"] = {
-	["english"] = "Venture Co. Documents",
-},
-["Зеленая записка"] = {
-	["english"] = "Verdant Note",
-},
-["Зеленый знак"] = {
-	["english"] = "Verdant Sigil",
-},
-["Приказы по вооружению"] = {
-	["english"] = "Weaponization Orders",
-},
-["Ядовитый фолиант"] = {
-	["english"] = "Venomous Tome",
-},
-["Сборник стихов"] = {
-	["english"] = "A Collection of Poems",
-},
-["Таинственное послание"] = {
-	["english"] = "A Mysterious Message",
-},
-["Пачка изрезанных писем"] = {
-	["english"] = "A Slashed Bundle of Letters",
-},
-["Разорванный дневник"] = {
-	["english"] = "A Torn Journal",
-},
-["Журнал гарнизона адмирала Тейлора"] = {
-	["english"] = "Admiral Taylor's Garrison Log",
-},
-["Дневник искателя приключений"] = {
-	["english"] = "Adventuring Journal",
-},
-["Закрытый фолиант мудрости"] = {
-	["english"] = "An Unopened Tome of Advice",
-},
-["Древняя табличка клана Корун"] = {
-	["english"] = "Ancient Korune Tablet",
-},
-["Древняя табличка"] = {
-	["english"] = "Ancient Tablet",
-},
-["Дневник механолога Маатуна"] = {
-	["english"] = "Artificer Maatun's Journal",
-},
-["Неразборчиво написанный дневник"] = {
-	["english"] = "Barely Readable Diary",
-},
-["\"Истоки угрозы нежити\""] = {
-	["english"] = "Beginnings of the Undead Threat",
-},
-["Научные записи Беламур"] = {
-	["english"] = "Belamoore's Research Journal",
-},
-["Планы вторжения клана Черной горы"] = {
-	["english"] = "Blackrock Invasion Plans",
-},
-["Послание орков Черной горы"] = {
-	["english"] = "Blackrock Orc Missive",
-},
-["Окровавленный зандаларский дневник"] = {
-	["english"] = "Blood-Spattered Zandalari Journal",
-},
-["Приказы пиратов Кровавого Паруса"] = {
-	["english"] = "Bloodsail Orders",
-},
-["Легенды и предания племени Кровавого Скальпа"] = {
-	["english"] = "Bloodscalp Lore Tablet",
-},
-["Планы Тяжелого Кулака"] = {
-	["english"] = "Boulderfist Plans",
-},
-["\"Добиться дренейской девушки.\" Сочинение Брейзи."] = {
-	["english"] = "Brazie's Dictionary of Devilish Draenei Damsels",
-},
-["\"Документ о дворфийских дамах.\" Сочинение Брейзи."] = {
-	["english"] = "Brazie's Document on Dwarven Dates in Dun Morogh",
-},
-["\"Гномские голубки: гляди в оба!\" Сочинение Брейзи."] = {
-	["english"] = "Brazie's Guide to Getting Good with Gnomish Girls",
-},
-["\"Жертвы ради женщин.\" Сочинение Брейзи."] = {
-	["english"] = "Brazie's Handbook to Handling Human Hunnies",
-},
-["\"Эти эксцентричные ночные эльфийки!..\" Сочинение Брейзи."] = {
-	["english"] = "Brazie's Notes on Naughty Night Elves",
-},
-["\"Компендиум павших\""] = {
-	["english"] = "Compendium of the Fallen",
-},
-["Приказы Крулгорошу"] = {
-	["english"] = "Crulgorosh's Orders",
-},
-["Смятая расписка"] = {
-	["english"] = "Crumpled Bill of Sale",
-},
-["Мятая записка"] = {
-	["english"] = "Crumpled Note",
-},
-["Записка в кристалле"] = {
-	["english"] = "Crystallized Note",
-},
-["Отсыревшая страница дневника (день 4)"] = {
-	["english"] = "Damp Diary Page (Day 4)",
-},
-["Отсыревшая страница дневника (день 512)"] = {
-	["english"] = "Damp Diary Page (Day 512)",
-},
-["Отсыревшая страница дневника (день 87)"] = {
-	["english"] = "Damp Diary Page (Day 87)",
-},
-["Отсыревшая записка"] = {
-	["english"] = "Damp Note",
-},
-["Докладная записка Черного Железа"] = {
-	["english"] = "Dark Iron Memo",
-},
-["Расшифрованный текст культа Сумеречного Молота"] = {
-	["english"] = "Decoded Twilight Text",
-},
-["Приказы Братства Справедливости"] = {
-	["english"] = "Defias Orders",
-},
-["Дневник доктора Жло"] = {
-	["english"] = "Diary of Weavil",
-},
-["Грязная записка"] = {
-	["english"] = "Dirty Note",
-},
-["Записи водолаза"] = {
-	["english"] = "Diving Log",
-},
-["Приказы доктора Колера"] = {
-	["english"] = "Doctor Kohler's Orders",
-},
-["Потрепанная записка"] = {
-	["english"] = "Dog-Eared Note",
-},
-["Отделанный мехом свиток"] = {
-	["english"] = "Fur-Lined Scroll",
-},
-["Приказы Доцзяни"] = {
-	["english"] = "Dojani Orders",
-},
-["Археологические находки Даррина"] = {
-	["english"] = "Durrin's Archaeological Findings",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">ВОИНСКИЕ ЗВАНИЯ ОРДЫ И АЛЬЯНСА</H1><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRankHorde\" align=\"left\" /><BR/><P align=\"right\">Тром'ка! В этой</P><P align=\"right\">книге ты найдешь</P><P align=\"right\">подробный перечень</P><P align=\"right\">воинских званий</P><P align=\"right\">Орды и</P><P align=\"right\">жалкого Альянса.</P><P align=\"right\">Сначала в списках идет</P><P align=\"right\">Орда, а затем Альянс,</P><P align=\"right\">и для обеих сторон перечислены офицерские и рядовые звания. Как и подобает, вверху списка располагаются старшие чины, а младшие – ниже.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ОФИЦЕРСКИЕ ЗВАНИЯ ОРДЫ</H1><BR/><P align=\"center\">Часть 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Верховный Вождь</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Вождь</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Генерал</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Генерал-лейтенант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Защитник</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ОФИЦЕРСКИЕ ЗВАНИЯ ОРДЫ</H1><BR/><P align=\"center\">Часть 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Центурион</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Легионер</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Кровавый страж</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Каменный Страж</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">РЯДОВЫЕ ЗВАНИЯ ОРДЫ</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">Старшина</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Старший Сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Рубака</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Разведчик</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ОФИЦЕРСКИЕ ЗВАНИЯ АЛЬЯНСА</H1><BR/><P align=\"center\">Часть 1</P><IMG src=\"Interface/PvPRankBadges/PvPRank14\" align=\"left\" /><P align=\"right\">Главнокомандующий</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank13\" align=\"left\" /><P align=\"right\">Фельдмаршал</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank12\" align=\"left\" /><P align=\"right\">Маршал</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank11\" align=\"left\" /><P align=\"right\">Командор</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank10\" align=\"left\" /><P align=\"right\">Лейтенант-командор</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\"> ОФИЦЕРСКИЕ ЗВАНИЯ АЛЬЯНСА</H1><BR/><P align=\"center\">Часть 2</P><IMG src=\"Interface/PvPRankBadges/PvPRank09\" align=\"left\" /><P align=\"right\">Рыцарь-защитник</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank08\" align=\"left\" /><P align=\"right\">Рыцарь-капитан</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank07\" align=\"left\" /><P align=\"right\">Рыцарь-лейтенант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank06\" align=\"left\" /><P align=\"right\">Рыцарь</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">РЯДОВОЙ И СЕРЖАНТСКИЙ СОСТАВ АЛЬЯНСА</H1><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank05\" align=\"left\" /><P align=\"right\">Старший сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank04\" align=\"left\" /><P align=\"right\">Сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank03\" align=\"left\" /><P align=\"right\">Младший сержант</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank02\" align=\"left\" /><P align=\"right\">Капрал</P><BR/><BR/><IMG src=\"Interface/PvPRankBadges/PvPRank01\" align=\"left\" /><P align=\"right\">Рядовой</P></BODY></HTML>",
+	},
 },
 ["Пыльный дневник"] = {
 	["english"] = "Dusty Journal",
-},
-["Записи посланника"] = {
-	["english"] = "Envoy's Log",
-},
-["Сложенное письмо"] = {
-	["english"] = "Folded Letter",
-},
-["Потертый зандаларский дневник"] = {
-	["english"] = "Frayed Zandalari Journal",
-},
-["Приказы для воинов на Хребте Ледяного Огня"] = {
-	["english"] = "Frostfire Mission Orders",
-},
-["Пожертвуйте на благо церкви и да освятит вас благодать"] = {
-	["english"] = "Give to the Church and the Light Will Provide",
-},
-["Гнолльские приказы атаковать"] = {
-	["english"] = "Gnoll Attack Orders",
-},
-["Военные планы гноллов"] = {
-	["english"] = "Gnoll Battle Plans",
-},
-["Приказы гноллов"] = {
-	["english"] = "Gnoll Orders",
-},
-["Стратегическое руководство гноллов"] = {
-	["english"] = "Gnoll Strategy Guide",
-},
-["Список тайников Горика"] = {
-	["english"] = "Gorick's Stash List",
-},
-["Зеленые холмы Тернистой долины: стр. 14"] = {
-	["english"] = "Green Hills of Stranglethorn - Page 14",
-},
-["Записи Грелина Белоборода"] = {
-	["english"] = "Grelin Whitebeard's Journal",
-},
-["Дневник Ухмыляющегося Толга"] = {
-	["english"] = "Grinning Tolg's Journal",
-},
-["Гром'карское сообщение"] = {
-	["english"] = "Grom'kar Dispatch",
-},
-["Приказ Иллидана"] = {
-	["english"] = "Illidan's Command",
-},
-["Информационный буклет"] = {
-	["english"] = "Informational Pamphlet",
-},
-["Зандаларский дневник в железном переплете"] = {
-	["english"] = "Iron-Bound Zandalari Journal",
-},
-["Выпуск Луноречского вестника"] = {
-	["english"] = "Issue of the Moonbrook Times",
-},
-["Дневник Хазгорма"] = {
-	["english"] = "Khazgorm's Journal",
-},
-["Досье офицеров Лагеря Курцена"] = {
-	["english"] = "Kurzen Compound Officers' Dossier",
-},
-["Тюремные дела Лагеря Курцена"] = {
-	["english"] = "Kurzen Compound Prison Records",
-},
-["Манускрипт Лоргалиса"] = {
-	["english"] = "Lorgalis Manuscript",
-},
-["Дневник моряка"] = {
-	["english"] = "Mariner's Log",
-},
-["\"Поваренная книга\" Мегавзрыва"] = {
-	["english"] = "Megacharge's Cookbook",
-},
-["Письма и записки о Метцене"] = {
-	["english"] = "Metzen's Letters and Notes",
-},
-["Записка, читаемая в лунном свете"] = {
-	["english"] = "Moonlit Note",
-},
-["Планы из Садов Лунного Покоя"] = {
-	["english"] = "Moonrest Gardens Plans",
-},
-["Испачканные страницы записей"] = {
-	["english"] = "Muddy Journal Pages",
-},
-["Улика против мурлоков"] = {
-	["english"] = "Murloc Clue",
-},
-["Размышления верховного генерала"] = {
-	["english"] = "Musings of the High General",
-},
-["Таинственное воззвание"] = {
-	["english"] = "Mysterious Propaganda",
-},
-["\"Мифология Титанов\""] = {
-	["english"] = "Mythology of the Titans",
-},
-["Символ семейной любви"] = {
-	["english"] = "Of Love and Family",
-},
-["Приказы верховного командования"] = {
-	["english"] = "Orders from High Command",
-},
-["Служение богу"] = {
-	["english"] = "Priestly Preening: Be Like Your Betters",
-},
-["Квитанция заказа на товары"] = {
-	["english"] = "Purchase Order Receipt",
-},
-["Рваная записка"] = {
-	["english"] = "Ripped Note",
-},
-["Покрытый слоем соли дневник"] = {
-	["english"] = "Salt-Crusted Journal",
-},
-["Депеша курьера Алого ордена"] = {
-	["english"] = "Scarlet Courier's Message",
-},
-["Бумаги Алого ордена"] = {
-	["english"] = "Scarlet Crusade Documents",
-},
-["Тайный дневник"] = {
-	["english"] = "Secret Journal",
-},
-["Приказы для воинов в Долине Призрачной Луны"] = {
-	["english"] = "Shadowmoon Mission Orders",
-},
-["Приказы Серебряного союза"] = {
-	["english"] = "Silver Covenant Orders",
-},
-["Песнь Долины"] = {
-	["english"] = "Song of the Vale",
-},
-["Приказы для воинов на Пиках Арака"] = {
-	["english"] = "Spires of Arak Mission Orders",
-},
-["Послание Ярости Бури"] = {
-	["english"] = "Stormrage Missive",
-},
-["Приказы Похитителей Солнца"] = {
-	["english"] = "Sunreaver Orders",
-},
-["Послание Синдиката"] = {
-	["english"] = "Syndicate Missive",
-},
-["Залитое слезами письмо"] = {
-	["english"] = "Tear-stained Letter",
-},
-["Книга Ура"] = {
-	["english"] = "The Book of Ur",
-},
-["Дневник верховного генерала Аббендис"] = {
-	["english"] = "The Diary of High General Abbendis",
-},
-["Путь искупления"] = {
-	["english"] = "The Path of Redemption",
-},
-["Сведения Тукмара"] = {
-	["english"] = "Thukmar's Intel",
-},
-["Приказы Тулгорку"] = {
-	["english"] = "Thulgork's Orders",
-},
-["Порванная записка"] = {
-	["english"] = "Torn Note",
-},
-["Изорванный зандаларский дневник"] = {
-	["english"] = "Torn Zandalari Journal",
-},
-["Переписка предателя"] = {
-	["english"] = "Traitor's Communication",
-},
-["Неприятности из ниоткуда"] = {
-	["english"] = "Troubles From Without",
-},
-["Подставь другую щеку"] = {
-	["english"] = "Turning the Other Cheek",
-},
-["Сумеречная корреспонденция"] = {
-	["english"] = "Twilight Correspondence",
-},
-["Трактат Ура по темной магии"] = {
-	["english"] = "Ur's Treatise on Shadow Magic",
-},
-["Докладная записка Алого ордена"] = {
-	["english"] = "Urgent Scarlet Memorandum",
-},
-["Приказы военного вождя"] = {
-	["english"] = "Warchief's Orders",
-},
-["Вымокшее письмо"] = {
-	["english"] = "Water Soaked Letter",
-},
-["Промокший дневник"] = {
-	["english"] = "Waterlogged Journal",
-},
-["Промокший зандаларский дневник"] = {
-	["english"] = "Waterlogged Zandalari Journal",
-},
-["Потрепанный дневник"] = {
-	["english"] = "Weathered Journal",
-},
-["Белая перфокарта"] = {
-	["english"] = "White Punch Card",
-},
-["Поваренная книга экзотической кухни"] = {
-	["english"] = "An Exotic Cookbook",
-},
-["Страница из дневника"] = {
-	["english"] = "Journal Page",
-},
-["Инструкция по эксплуатации пилонов"] = {
-	["english"] = "Crystal Pylon User's Manual",
-},
-["\"Продвинутая рыбалка\" Ната Пэгла"] = {
-	["english"] = "Nat Pagle's Guide to Extreme Anglin'",
-},
-["Карта Пероборода"] = {
-	["english"] = "Featherbeard's Map",
-},
-["Записки Доблестной Крови"] = {
-	["english"] = "Bloodvalor's Notes",
-},
-["Предметы для магистра Асталора Кровавой Клятвы"] = {
-	["english"] = "Items for Magister Astalor Bloodsworn",
-},
-["Реликвии Терокка"] = {
-	["english"] = "The Relics of Terokk",
-},
-["Записки Маккарти"] = {
-	["english"] = "McCarty's Notes",
-},
-["Новости с севера"] = {
-	["english"] = "News From The North",
-},
-["Расшифрованное сообщение 001-003"] = {
-	["english"] = "Decoded Message 001-003",
-},
-["Расшифрованное сообщение 001-014"] = {
-	["english"] = "Decoded Message 001-014",
-},
-["Расшифрованное сообщение 001-107"] = {
-	["english"] = "Decoded Message 001-107",
-},
-["Расшифрованное сообщение 001-111"] = {
-	["english"] = "Decoded Message 001-111",
-},
-["Расшифрованное сообщение 001-119"] = {
-	["english"] = "Decoded Message 001-119",
-},
-["Расшифрованное сообщение 001-150"] = {
-	["english"] = "Decoded Message 001-150",
-},
-["Расшифрованное сообщение 001-159"] = {
-	["english"] = "Decoded Message 001-159",
-},
-["Расшифрованное сообщение 001-168"] = {
-	["english"] = "Decoded Message 001-168",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Альянс</H1></BODY></HTML>",
+		"Первая половина дневника – всего лишь амбарная книга мистера Купера. Колонки цифр, относящихся к производству и сбыту товаров жителям Луноречья и даже нескольким штормградским горожанам.\n\nво второй половине тетради – дневник Купера, где он говорит о том, что оставляет семейное дело младшему брату. Здесь упоминаются и дети.",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Орда</H1></BODY></HTML>",
+		"Ветхие страницы книги хранят лишь хозяйственные записи с фермы Валган. Смена времен года, проращивание семян и укоренение саженцев, рождение и смерть детей.\n\nЗаписи неожиданно прерываются, оканчиваясь сумбурным описанием чумы. Вряд ли хоть один из ребятишек успел пройти рыцарское обучение, если даже и пережил чуму.",
+	},
+},
+["Приглашение в Храм Драконьего Покоя"] = {
+	["english"] = "Letter of Introduction to Wyrmrest Temple",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Альянс</H1></BODY></HTML>",
+		"Моя Королева!\n\nМы обнаружили, что синие драконы более не блокируют пересечение силовых линий в Садах Лунного Покоя. Они пытались разрушить замковый камень с помощью волноловов, но вместо того, чтобы отвести энергию назад, в нексус, они воспользовались ей, чтобы сбежать назад, в Лазуритовое святилище драконов, заключив в земле остатки силы.\n\nПолагаю, вы понимаете, какое ужасное воздействие оказали пучки магической энергии, пронзившие почву. Пострадали древние обитатели лесов, Калу'аки и прочие существа, обитающие в этих краях. К счастью для нас, &lt;стоящий перед вами/стоящая перед вами:r&gt; |3-6(&lt;раса&gt;) по имени &lt;имя&gt;, уже &lt;разобрался/разобралась&gt; с источником этих бед.\n\nПо моему скромному мнению, &lt;имя&gt; может пригодится Храму Драконьего Покоя в решении проблем, с которыми мы сейчас столкнулись. Нижайше прошу рассмотреть &lt;его/ее&gt; кандидатуру в качестве нашего союзника.\n\nС глубочайшим уважением,\n\nМодера\nВерховный маг и член Шести",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Орда</H1></BODY></HTML>",
+		"Моя Королева!\n\nМы обнаружили, что синие драконы более не блокируют пересечение силовых линий в Садах Лунного Покоя. Они пытались разрушить замковый камень с помощью волноловов, но вместо того, чтобы отвести энергию назад, в нексус, они воспользовались ей, чтобы сбежать назад, в Лазуритовое святилище драконов, заключив в земле остатки силы.\n\nПолагаю, вы понимаете, какое ужасное воздействие оказали пучки магической энергии, пронзившие землю. Пострадали древние обитатели лесов, Калу'аки и прочие существа, обитающие в этих краях. К счастью для нас, &lt;стоящий перед вами/стоящая перед вами:r&gt; |3-6(&lt;раса&gt;) по имени &lt;имя&gt;, уже &lt;разобрался/разобралась&gt; с источником этих бед.\n\nПо моему скромному мнению, &lt;имя&gt; может пригодится Храму Драконьего Покоя в решении проблем, с которыми мы сейчас столкнулись. Нижайше прошу рассмотреть &lt;его/ее&gt; кандидатуру в качестве нашего союзника.\n\nС глубочайшим уважением,\n\nЭтас Похититель Солнца\nВерховный маг и член Шести",
+	},
 },
 ["Выцветшая записка"] = {
 	["english"] = "Faded Note",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Хребет Ледяного Огня</H1></BODY></HTML>",
+		"Сын мой!\n\nЕсли ты читаешь эти строки, значит, ритуал ом'риггор тобой успешно пройден. Ты больше не ребенок. Ты воин.\n\nЭта реликвия принадлежала твоей матери, да упокоится с миром ее дух. Вам не довелось встретиться, но знай: она любила тебя всем сердцем.\n\nВ бесчисленных битвах, через которые я прошел, лишь память о ней хранила меня от ран и помогала вернуться домой, чтобы я мог вырастить из тебя истинного орка. Настоящего воина!\n\nВозьми же ее и служи нашему клану с честью!\n\nТвой отец",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Пики Арака</H1></BODY></HTML>",
+		"Любовь моя… Надеюсь, ты простишь меня. Мне пришлось бежать. Если они поймают нас обоих, я не смогу тебя спасти. Теперь в сердце воцарилась страшная пустота. Это оттого, что я не остался с тобой. Сегодня утром я сражусь с летучими тварями – как и должен был сделать раньше. Клянусь, я буду вечно искать тебя на небесах. Я мечтаю только об одном – быть с тобой. Любой ценой...",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Остров Новолуния</H1></BODY></HTML>",
+		"Подсказка нашлась? Вот же ты молодец! И пусть это все же еще не конец,\n\nТеперь остается совсем уж немного – к тому, кто небрежен, выводит дорога.",
+	},
+},
+["Демонические планы"] = {
+	["english"] = "Diabolical Plans",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Альянс</H1></BODY></HTML>",
+		"Диатор!\n\nНадеюсь, это письмо все-таки дойдет до тебя. Эти демоны невероятно глупы. Они способны думать лишь о своих когтях, хлыстах и шипах на головах, которыми они то и дело норовят что-нибудь проткнуть. И я не мог положиться на инферналов, иначе бы письмо сгорело!\n\nКак я скучаю по тем временам, когда мы использовали орков. У них была хоть капля мозгов, и они могли подчиняться приказам. Быть может, нам удастся завладеть несколькими местными рабами?",
+		"Слухи о том, что ночные эльфы помогают дренеям, оказались правдой. Они хотят соорудить новую базу в Лесной Песне, к северу от Сатирнаара. Нам нужно приготовиться к нападению до того, как полная луна озарит своим светом этот никчемный мир. Если мы сейчас сокрушим их, они никогда больше не посмеют топтать наши земли!\n\nС уважением,\n\nГорганнон\n\np.s. – И хватит тратить кровавые чернила на любовные письма моим суккубам! В наши дни непорочные ночные эльфийки – большая редкость.",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Орда</H1></BODY></HTML>",
+		"Диатор!\n\nНадеюсь, это письмо все-таки дойдет до тебя. Эти демоны невероятно глупы. Они способны думать лишь о своих когтях, хлыстах и шипах на головах, которыми они то и дело норовят что-нибудь проткнуть. И я не мог положиться на инферналов, иначе бы письмо сгорело!\n\nКак я скучаю по тем временам, когда мы использовали орков. У них была хоть капля мозгов, и они могли подчиняться приказам. Быть может, нам удастся завладеть несколькими местными рабами?",
+		"Думаю, пришло время начать завоевание младших рас. Застава Расщепленного Дерева на северо-западе – весьма заманчивая добыча. Нам нужно приготовиться к нападению до того, как полная луна озарит своим светом этот никчемный мир. Если мы сейчас подчиним их себе, они навсегда запомнят, что значило слово 'Орда' в былые времена.\n\nГорганнон\n\np.s. – И хватит тратить кровавые чернила на любовные письма моим суккубам! В наши дни непорочные ночные эльфийки – большая редкость.",
+	},
+},
+["Записка в кристалле"] = {
+	["english"] = "Crystallized Note",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка A</H1></BODY></HTML>",
+		"Уважаемый получатель!\n\nЕсли ты читаешь это письмо, то я могу предположить, что ты находишься в одном из двух мест:\n\n(1) На южном полуострове Азшары. \n\n(2) В брюхе скального великана.\n\nИ то, и другое одинаково нежелательно. \n\nСледует заметить, что я некогда был в первом, а теперь – во втором.",
+		"Пребывание в брюхе великана способствует размышлению.\n\nПока мое тело постепенно кристаллизируется, я размышляю над своей жизнью в Вечной Песне, вспоминая бесконечные приключения на диких просторах великого моря. Я был молод. И глуп. Если я как-нибудь отсюда выберусь, то займусь фермерством или резьбой по дереву.\n\n- Ветран Шей",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка B</H1></BODY></HTML>",
+		"О чем я думал?\n\nВозможно, более лучшим был бы вопрос: о чем я думаю, когда пишу письмо, находясь в брюхе великана?\n\nОба вопроса хороши, и ни на один у меня нет сейчас ответа…\n\nСледует признать, что моя миссия была не миссией доброй воли. Я пришел сюда в поисках азшарита, уникального кристалла из южной Азшары. О, я был бы так богат!\n\nБа! А теперь посмотрите на меня...",
+		"Если какой-нибудь представитель разумной формы жизни найдет это письмо, пусть он спросит себя:\"Какого черта они возятся с этими злобными десятиметровыми великанами?\"\n\n-Муук",
+	},
+},
+["\"Хай-пу\""] = {
+	["english"] = "Hai-pu",
+	["pages"] = {
+		"Цзинь-юй опасно.\n\nДукеров куча-куча.\n\nГрокать дукеры.",
+		"Грязня в руке\n\nЛучше кучи грязень в дукер.\n\nТак сказать вождь И-И!",
+		"Ко-Ко палец нюхать.\n\nВоняй как дукер.\n\nБольше не нюх-нюх.",
+		"Тотема банана.\n\nШтука лучшее нет!\n\nУгрокай все шнуропсы!",
+		"Скутство хозен-фу:\n\nГрабать, чикать, жевать дукер.\n\nПовтори, пока грокнуть все-все.",
+	},
+},
+["Расшифрованный текст культа Сумеречного Молота"] = {
+	["english"] = "Decoded Twilight Text",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка 1</H1></BODY></HTML>",
+		"Для немедленного распространения среди всех членов Сумеречного Молота.\n\nПоиски предателя Ортелла продвигаются наилучшим образом. Наши разведчики узнали, что он скрывается в лабиринте пещер Западного Края.\n\nПредательство Ортелла прощать нельзя, а его побег ставит под угрозу всю нашу организацию.\n\nЛюбой, кто станет утаивать сведения о местонахождении Ортелла, будет должным образом наказан.\n\n-Эверан Сумеречный Владыка",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка 2</H1></BODY></HTML>",
+		"Для немедленного распространения среди всех членов Сумеречного Молота.\n\nВ связи с текущим положением дел в Силитусе, всякое распространение текстов Истинно Верующего отныне должно проводиться в сопровождении не менее чем четырех вооруженных бойцов Сумеречного Молота.\n\nВсе, уличенные в нарушении этого нового приказа, будут без промедления наказаны.\n\n-Д'Сак Сумеречный Владыка.",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка 3</H1></BODY></HTML>",
+		"Для немедленного распространения среди всех членов Сумеречного Молота.\n\nНиже описан порядок применения Ветровых Камней для связи с нашими повелителями из Совета Бездны.\n\nВсякое неподобающее использование Ветровых Камней будет караться самым жестоким образом.\n\n-Хранитель Хавунт из культа Сумеречного Молота",
+		"Храмовники Бездны\n\nТебе, как новичку, разрешается обращаться к Храмовникам Бездны для проведения обычных ритуалов. Не забывай надевать подобающее убранство при обращении с Ветровыми Камнями, чтобы на тебя не подействовали наши защитные чары.\n\nЕсли вдруг случится нечто непредвиденное в отсутствие старших, тебе разрешается вызвать Храмовника Бездны.\n\nЗа подробностями о проведении соответствующих ритуалов призыва обращайся к выпуску Истинно Верующего за прошлый месяц.",
+		"Герцоги Бездны\n\nТолько послушникам, имеющим медальон статуса, разрешено обращаться к Герцогам Бездны. Медальоны статуса могут использовать лишь те, кому они были выданы изначально.\n\nЧлены Сумеречного Молота, замешанные в неправомерном общении с Герцогами бездны либо в использовании без разрешения медальонов статуса будут наказаны мной лично.",
+		"Высокий Совет Лордов Бездны\n\nОбращаться к Принцу Скальдреноксу, Верховному маршалу Круговерту, Барону Казуму или Лорду Скволу позволено лишь Сумеречным Лордам.\n\nНи при каких обстоятельствах нижние чины Сумеречного Молота не могут начать общение с Высоким Советом. Любой чужак, застигнутый за использованием с этой целью ветровых камней, будет испепелен на месте.",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка 4</H1></BODY></HTML>",
+		"Дела культа, том 92\n\nС радостным сердцем приветствую я вас, братья мои, ибо дела нашего культа идут сейчас наилучшим образом. Имя нам – легион, и всякие замыслы наши все ближе к воплощению.\n\nВ ряды наши встает все больше новичков. Хвалебная песнь возносится к нашим господам на Темных берегах, и склоняются они в радостных грезах среди Тлеющего ущелья, и обретают они единение со слугой наших господ, Аку'маем, в Непроглядной Пучине. Поистине, братья мои и сестры, скоро вера наша разнесется по всему Азероту!",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка 5</H1></BODY></HTML>",
+		"Дела культа, том 127\n\nВоистину, это счастливый день! Нас испытали в Силитусе, и мы прошли испытание!\n\nРассказы о разгроме нашего северного лагеря могут наполнить страхом сердца неверных, но для нас эта резня эта не должна быть несчастьем, нет!",
+		"Пролитие крови нашей одним из Высокого Совета Бездны есть благословение! Мы должны завидовать нашим павшим товарищам, ибо души их теперь покоятся во чреве самого добродетельного зверя!\n\nВосславим же древних богов! Восславим слуг их! Восславим Сумеречный Молот!",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка 6</H1></BODY></HTML>",
+		"Дела культа, том 233\n\nНам снова выпала редкая возможность, о братья мои и сестры! Круг Кенария, мерзостный культ почитателей природы, посылает на нас своих приспешников. Они хотят воспрепятствовать нам добыть красные камни-приманки. Мы не можем этого допустить!\n\nКрасные камни очень нужны нашим новым союзникам. Нельзя, чтобы шавки из Круга Кенария добились своего. Держитесь, преданные друзья мои. Держитесь!",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">заметка 7</H1></BODY></HTML>",
+		"Как узнать, что они любят нас?\n\nНекоторым непонятно, как могут древние боги и их приспешники любить нас. Не они ли нас убивают? Не они ли причиняют всем нам боль и страдания? Разве есть в сердцах таких жестоких существ место любви?\n\nОтвет на эти вопросы очень прост. Так прост, что его излишне даже произносить.",
+		"Вера. Вера – вот наш неиссякаемый источник радости порабощения. Вера согреет нас в самые холодные ночи Силитуса. Вера дарует нам благодать Господ, когда настанут Последние Дни.\n\nВера спасет нас.",
+	},
+},
+["Рыцари смерти Акеруса"] = {
+	["english"] = "The Death Knights of Acherus",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">запись 1</H1></BODY></HTML>",
+		"Рыцари смерти Акеруса\n\nИмя: Джейд\nСтатус: жива\nПримечание: крайне жестока",
+		"Имя: Сикстен\nСтатус: жив\nПримечание: много болтает",
+		"Имя: Мюнх\nСтатус: жив\nПримечание: очень агрессивен",
+		"Имя: Кобальт\nСтатус: мертв\nПримечание: упал с лестницы, разбился насмерть. Жаль, мог бы еще помучиться.",
+		"Имя: Гармония\nСтатус: мертва\nПримечание: имя этого рыцаря смерти противоречило обычаям Плети. Была убита лично Королем-личом.",
+		"Имя: Мелт\nСтатус: жив*\nПримечание: обращен в вурдалака.",
+		"Имя: Милтон\nСтатус: жив\nПримечание: любит долгие прогулки",
+		"Имя: Миниталис\nСтатус: жива\nПримечание: видит несуществующее.",
+		"Имя: &lt;имя&gt;\nСтатус: &lt;жив/жива&gt;\nПримечание: требует присмотра\n\n&lt;В книге несколько сотен страниц.&gt;",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">запись 1</H1></BODY></HTML>",
+		"Рыцари смерти Акеруса\n\nИмя: Джейд\nСтатус: жива\nПримечание: неудержимая",
+		"Имя: Сикстен\nСтатус: мертв\nПримечание: умер, пока ловил ворон.",
+		"Имя: Мюнх\nСтатус: жив\nПримечание: жестокий. Может нам пригодиться.",
+		"Имя: Кобальт\nСтатус: мертв\nПримечание: упал с лестницы, разбился насмерть. Жаль, мог бы еще помучиться.",
+		"Имя: Гармония\nСтатус: мертва\nПримечание: имя этого рыцаря смерти противоречило обычаям Плети. Была убита лично Королем-личом.",
+		"Имя: Мелт\nСтатус: мертв\nПримечание: обращен в вурдалака. Убит крестьянином из Алого Натиска.",
+		"Имя: Милтон\nСтатус: пропал без вести\nПримечание: трусливый гном.",
+		"Имя: Миниталис\nСтатус: жива\nПримечание: любит гоняться за бабочками.",
+		"Имя: &lt;имя&gt;\nСтатус: &lt;жив/жива&gt;\nПримечание: несет отвественность за смерть сотен крестоносцев Алого ордена. Все всякого сомнения, это только начало.\n\n&lt;В книге несколько сотен страниц.&gt;",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">запись 1</H1></BODY></HTML>",
+		"Рыцари смерти Акеруса\n\nИмя: Джейд\nСтатус: жива\nПримечание: превосходный тактик. Уступает лишь |3-2(&lt;имя&gt;) по своей жестокости.",
+		"Имя: Сикстен\nСтатус: мертв\nПримечание: умер, пока ловил ворон.",
+		"Имя: Мюнх\nСтатус: жив\nПримечание: вестник судьбы. Не ведает жалости.",
+		"Имя: Кобальт\nСтатус: жив*\nПримечание: наконец-то мы нашли останки этого рыцаря. Большая их часть пошла на создание озлобленного поганища. Мозг и голова сожжены.",
+		"Имя: Гармония\nСтатус: мертва\nПримечание: имя этого рыцаря смерти противоречило обычаям Плети. Была убита лично Королем-личом.",
+		"Имя: Мелт\nСтатус: мертв\nПримечание: обращен в вурдалака. Убит крестьянином из Алого Натиска, оживлен Мюнхом в качестве личного прислужника.",
+		"Имя: Милтон\nСтатус: казнен\nПримечание: был обнаружен спящим без брони и клинка рядом с черным боевым конем смерти. Конь возвращен в Саланар целым и невредимым. Рыцарям смерти не полагается спать.",
+		"Имя: Миниталис\nСтатус: пропала без вести\nПримечание: местонахождение неизвестно. Поиски продолжаются.",
+		"Имя: &lt;имя&gt;\nСтатус: &lt;жив/жива&gt;\nПримечание:бездушная машина смерти. Не знает пощады и жалости. &lt;Убил/Убила&gt; больше крестоносцев Алого ордена, чем все вышеперечисленные рыцари смерти. &lt;Повышен/Повышена&gt; в звании до командира Плети.\n\n&lt;В книге несколько сотен страниц.&gt;",
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">запись 1</H1></BODY></HTML>",
+		"Рыцари смерти Акеруса\n\nИмя: Джейд\nСтатус: жива\nПримечание: защитник Могрейна. Отправлена в Часовню Последней Надежды. Стоит ожидать от нее страшных разрушений.",
+		"Имя: Сикстен\nСтатус: мертв\nПримечание: умер, пока ловил ворон.",
+		"Имя: Мюнх\nСтатус: жив\nПримечание: повышен в звании до командира Плети. Назначен в мой отряд, будет сопровождать меня в Нордсколе.",
+		"Имя: Кобальт\nСтатус: мертв\nПримечание: Озлобленное поганище, сделанное из кусков плоти этого рыцаря смерти, было повержено армией Тирисфальских лугов. Был бесполезен как в жизни, так и после смерти.",
+		"Имя: Гармония\nСтатус: мертва\nПримечание: имя этого рыцарь смерти упоминается в связи с нарушением правил поведения солдата Плети. Была убита лично Королем-личом.\n\n*Король-лич потребовал, чтобы ее останки были сожжены и развеяны в человеческом отхожем месте. Он очень серьезно подходит к вопросам дисциплины.",
+		"Имя: Мелт\nСтатус: жив*\nПримечание: обращен в вурдалака. Убит крестьянином из Алого Натиска, оживлен Мюнхом в качестве личного прислужника. На удивление неплохо готовит.",
+		"Имя: Милтон\nСтатус: казнен*\nПримечание: Был обнаружен спящим без брони и клинка рядом с черным боевым конем смерти. Скакун возвращен в Саланар целым и невредимым.\n\n*Конь в итоге скончался.",
+		"Имя: Миниталис\nСтатус: изменница\nПримечание: будет найдена и казнена.",
+		"Имя: &lt;имя&gt;\nСтатус: &lt;жив/жива&gt;\nПримечание: главнокомандующий Плети &lt;имя&gt; &lt;получил/получила&gt; Великий шлем Плети из рук самого Короля-лича в награду за полное уничтожение войск Тирисфальских лугов и Дольного Очага. &lt;имя&gt; не &lt;оставил/оставила&gt; камня на камне от двух великих армий. В настоящий момент собирается покончить с Серебряным Рассветом.\n\n&lt;В книге несколько сотен страниц.&gt;",
+	},
+},
+["Разыскивается: Хеминг Эрнестуэй, враг Природы"] = {
+	["english"] = "Wanted: Hemet Nesingwary, Enemy of Nature",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">Разыскивается: Хеминг Эрнестуэй</H1><H1 align=\"center\">ЗА ПРЕСТУПЛЕНИЯ ПРОТИВ ПРИРОДЫ!</H1><BR/><IMG src=\"Interface/Pictures/obj_nesingwary_256\" align=\"center\" /></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Фоторобот Уничтожителя в естественной среде обитания: среди адского пламени подземного мира.</H1><BR/><H1 align=\"left\">Последнее известное местонахождение: Награнд, Запределье</H1><BR/><H1 align=\"left\">Также известен как: Участник Великой Охоты, Мясник Бесплодных земель, Потрошитель Тернистой долины, Убийца стариков, Хеминг, Эрни, Дуцл, Дядька-добытчик, Уничтожитель.</H1></BODY></HTML>",
+	},
+},
+
+-----------------------------------------------------------
+
+["История Сокрытой лестницы"] = {
+	["english"] = "A History of the Veiled Stair",
+	["pages"] = {
+		"Извилистая Сокрытая лестница – это чудо пандаренской мысли – петляет между плодородными низинами Долины Четырех Ветров и степями, раскинувшимися вокруг вершины Кунь-Лай.\n\nЛестница была создана руками пандаренов-рабов во времена правления могу. Это значит, что ей, по меньшей мере, двенадцать тысяч лет!\n\nГруммели верят, что если подсчитать ступени во время подъема по лестнице, то это обязательно принесет удачу. Вот только никому еще не удавалось назвать точную цифру.\n\nА сколько ступеней удалось насчитать ТЕБЕ?",
+	},
+},
+["Самая известная расписка"] = {
+	["english"] = "A Most Famous Bill of Sale",
+	["pages"] = {
+		"На этом самом месте много веков назад стояла лавка Шень-Цзыня, которого так любили местные фермеры. Однажды первый пандарийский исследователь Лю Лан пришел к нему с весьма неожиданным списком покупок, который сохранился и по сей день:\n\n Один фонарь\n\n Три литра лампового масла\n\n Четыре упаковки сушеных фруктов\n\n Два мешка сушеных бобов\n\n Четыре окорока солонины\n\n Двенадцать литров пресной воды\n\n Одна корзина сухарей\n\n Один компас\n\n Одна подзорная труба\n\nЛю Лан объявил, что собирается отправиться в путь, чтобы исследовать мир. Шэнь-Цзынь, посмеявшись над покупателем, предложил Лю Лану захватить с собой зонтик, и даже сказал, что не возьмет за него плату.\n\nПоклонившись, благодарный Лю Лан сказал Шэнь-Цзыню: \"В твою честь я назову свою морскую черепаху!\" И, довольный, ушел с полной тележкой покупок, насвистывая на ходу и ловя на себе любопытные взгляды.",
+	},
+},
+["\"Диета зомби: секреты правильного питания\""] = {
+	["english"] = "A Zombie's Guide to Proper Nutrition",
+	["pages"] = {
+		"Моооооооооззззг. Моооооооосссссзззззг. МОООЗЗЗЗЗССССГ!!!\n\n&lt;И так еще на сорок страниц.&gt;",
+	},
+},
+["Повесть о создании ледяного змея"] = {
+	["english"] = "Account of the Raising of a Frost Wyrm",
+	["pages"] = {
+		"Свидетельство воскрешения ледяного змея\n\nГигантские кости были практически полностью скрыты под толстой шапкой снегов, но их принадлежность можно было безошибочно определить по выступающим вперед черным когтям, сжатым в предсмертной агонии. Вокруг тела дракона беззвучно собирались некроманты, образовывая широкий круг. Несколько мгновений они молча стояли, словно бы прислушиваясь к завываниям ветра, вздымавшего клубы снежной пыли вокруг их неподвижных фигур. Затем Ритуал начался.",
+		"Всполохи нечестивого пламени срывались с заледеневших костей, вспахивая снег и обнажая громадный скелет. Наконец, повинуясь жесту верховного некролорда Антиока, кости содрогнулись и медленно воспарили над землей, собираясь в нечто единое.",
+		"Голоса некромантов усилились, вплетая эфемерную ткань заклинаний в останки великого существа. По телу ледяного змея пробегали страшные судороги, словно плоть его отказывалась принимать дар порочного воскрешения. Наконец, тонкий крик хлыстом прорезал застывший воздух, и зверь покорился своей судьбе. Ледяное сияние окружало его обнаженные ребра, окутывая конечности и отражаясь в пустых глазницах зловещим отблеском тайных знаний.",
+		"Вперед вышел верховный некролорд и обратился к змею: \"Король-лич счел нужным воскресить тебя, дабы ты служил Плети. Ты станешь величественным символом ужаса, источником страданий, грозой для наших врагов, ты будешь питаться самой жизнью, и с гордостью переносить на себе наших лучших рыцарей смерти\".",
+		"Ледяной змей внимал его словам, покорно склоняя голову. Обращение было завершено. Встав на дыбы, он распахнул крылья, и они заслонили небо подобно двум стальным веерам.",
+	},
+},
+["Записка приверженца"] = {
+	["english"] = "Adherent Note",
+	["pages"] = {
+		"Поиски помещения заняли совсем немного времени. Один из прихвостней Кровавой Гривы уже нашел его и уже несколько недель выносил оттуда артефакты!\n\nМы обнаружили его логово у подножия горы – похоже, он взбирался на холм почти каждый день.\n\nКристаллы, кажется... изменили его. Он спокойнее, чем другие саблероны, и может говорить, хоть и не очень внятно. Он даже дал себе новое имя – Леорадж.\n\nЭто животное, разумеется, не могло понять, какая сила заключена в артефактах! Я продолжу наблюдать за тем, какой эффект они произвели на него. А когда я разбужу стражей в камере, мы, скорее всего, от него избавимся.\n\nСолнечный ваятель Валарик",
+	},
+},
+["Адмирал Бареан Вествинд"] = {
+	["english"] = "Admiral Barean Westwind",
+	["pages"] = {
+		"Адмирал Бареан Вествинд\nКомандующий флотом Алого марша\nГражданин Кул-Тираса\nПропал без вести у берегов Нордскола",
+	},
+},
+["Адмирал Тейлор"] = {
+	["english"] = "Admiral Taylor",
+	["pages"] = {
+		"Памяти адмирала Тейлора\n\nАдмирал Тейлор был настоящим героем Альянса. Он одержал немало побед, и его подвиги на поле боя не будут забыты.\n\nВ ходе Дренорской кампании он, не зная страха, отправился сюда, чтобы основать здесь базу, но был зарублен собственными людьми.\n\nДа упокоится он с миром.",
+	},
+},
+["Эгвин и Драконья Охота"] = {
+	["english"] = "Aegwynn and the Dragon Hunt",
+	["pages"] = {
+		"Пока политические споры и соперничество семи людских государств разгорались и утихали, Хранители постоянно оставались на страже в своей войне против хаоса. За годы сменилось немало Хранителей. Одна из последних Хранителей того времени прославилась как могучая воительница, отважно противостоявшая тьме.",
+		"Эгвин, девушка из народа людей, заслужила одобрение Ордена и получила титул Хранителя. Эгвин эффективно выслеживала и уничтожала демонов, но она очень часто подвергала сомнениям действия патриархального совета Тирисфаля.",
+		"Она верила, что древние эльфы и люди-старейшины, возглавлявшие совет, были слишком непреклонны в своих решениях и не смотрели в будущее достаточно далеко, чтобы положить конец войне против хаоса. Раздраженная слишком долгим обсуждением и дебатами, она жаждала показать своим завистникам и старшим по званию, на что она способна, и предпочла храбрость мудрости.",
+		"Власть Эгвин над космическими силами Тирисфаля росла, и однажды она узнала, что на ледяном северном континенте Нордскол обитает несколько могущественных демонов. Отправившись на дальний север, Эгвин выследила демонов в горах. Там она обнаружила, что демоны охотились на последних драконов и вытягивали из древних существ их магическую силу.",
+		"Могучие драконы, бежавшие от быстро распространявшихся по миру людей, обнаружили, что они не могут противостоять могуществу темной магии Легиона. Эгвин сразилась с демонами и с помощью благородных драконов победила их. Но как только последний демон был изгнан из мира, ужасная буря разразилась на севере.",
+		"Огромная тень появилась в небе Нордскола. Саргерас, король демонов и повелитель Пылающего Легиона, явился перед Эгвин, горя адским пламенем. Он сказал юной Хранительнице, что время Тирисфаля истекло и мир скоро падет перед натиском Легиона.",
+		"Гордая Эгвин, веря, что она сможет противостоять грозному богу, использовала свои силы против аватары Саргераса. С необыкновенной легкостью Эгвин одолела лорда демонов и убила его физическую оболочку. Опасаясь, что дух Саргераса выжил, наивная Эгвин сокрыла изуродованные останки в одном из древних дворцов Калимдора, утонувшего в море во время разрушения Источника Вечности.",
+		"Эгвин никогда так и не узнала, что она поступила именно так, как хотел Саргерас. Она неосознанно подписала приговор смертному миру, так как Саргерас во время своей физической смерти вселился духом в ослабленное тело Эгвин. Без ведома юной Хранительницы Саргерас оставался скрытым в темных уголках ее души многие годы.",
+	},
+},
+["Последствия Второй войны"] = {
+	["english"] = "Aftermath of the Second War",
+	["pages"] = {
+		"Опустошительная Вторая война против орочьей орды оставила Альянс Лордерона в потрясении и беспорядке. Кровожадные орки, которых возглавлял могущественный вождь, Оргрим Молот Рока, не только силой проложили себе путь через дворфийские земли Каз Модана, но и стерли с лица земли множество центральных провинций Лордерона. Жестокие орки разграбили даже\nотдаленное эльфийское королевство Кель'Талас, прежде чем их разрушительный поход был остановлен.",
+		"Армии Альянса под предводительством сэра Андуина Лотара, Утера Светоносного и адмирала Даэлина Праудмура отбросили орков к югу, в разоренные земли Азерота – первого королевства, павшего под яростным напором орков.\n\nСилам Альянса под командованием сэра Лотара удалось оттеснить кланы, которыми предводительствовал Молот Рока, из Лордерона обратно в подконтрольные оркам области Азерота. Войска Лотара окружили вулканическую орочью цитадель – Пик Черной горы – и осадили ее.",
+		"В последней отчаянной попытке Молот Рока и его командиры храбро ринулись в атаку с Пика и схлестнулись с паладинами Лотара прямо посреди Пылающих степей. Молот Рока и Лотар сошлись в яростном бою, который изрядно измотал обоих могучих бойцов. И хотя Оргрим в итоге смог одолеть Лотара, смерть прославленного героя не возымела того эффекта, на который надеялся орочий вождь.",
+		"Туралион, наиболее приближенный к Лотару командир, поднял его окровавленный щит и призвал своих пораженных горем собратьев нанести со всей яростью ответный удар. Под истрепанными знаменами Лордерона и Азерота воинство Туралиона разбило почти всю армию Молота Рока в славной, но жестокой сече.",
+		"Потрепанным и обескровленным оркам оставалось лишь спешно сбежать в последний оплот орочьей силы – в Темный портал.\n\nТуралион и его воины гнались за остатками войска орков по зловонному Болоту Печали в мрачные Выжженные земли, где стояли Темный портал. Там, у подножия колоссального портала, обессиленная Орда и измотанный Альянс схлестнулись в схватке – той, что должна была стать последней, самой кровавой битвой Второй войны.",
+		"Орки, уступавшие противнику числом и обезумевшие от собственной жажды крови, пали пред гневом Альянса. Молот Рока был взят в плен и препровожден обратно в Лордерон, как и его разбитые кланы.",
+	},
+},
+["\"Эпоха сотни королей\""] = {
+	["english"] = "Age of a Hundred Kings",
+	["pages"] = {
+		"Спустя много лет после того, как подошла к концу эпоха титанов, могу подверглись воздействию проклятия плоти и принялись убивать друг друга. В мире воцарился хаос. Военачальники могу бились за власть и новые земли. Это была эпоха сотни королей.\n\nЭто были времена Лэй Шэня. Молодой и гордый могу увидел, как на истерзанной войнами земле пошли прахом плоды труда его предков. Всю свою жизнь он чувствовал, что его сородичи живут бесцельно и не думают о своем предназначении в этом мире. \n\nТитаны безмолвствовали, и Лэй Шэнь решил, что будет говорить вместо них.",
+	},
+},
+["\"Агенты порядка\""] = {
+	["english"] = "Agents of Order",
+	["pages"] = {
+		"В легендах могу говорится об эпохе золотого света, когда среди хаоса мироздания наконец был установлен порядок. Там также сказано, что могу, кожа которых была сделана из земли, жили бок о бок с титанами, и не было им в те времена числа. Единственным их желанием было исполнение воли хозяев.\n\nСогласно повестям, в которых говорится о тех далеких временах, могу своими собственными руками вырезали из камня горы и долины Пандарии. Каждая речка, каждое озеро, каждая вершина была создана согласно божественному замыслу.\n\nМогу называли своего повелителя-титана \"Штормом\". Он был их хранителем, а они – исполнителями его воли, послушными и могучими стражами порядка, строящими новый мир.",
+	},
+},
+["Инструкция по использованию воздушной базы в коробке"] = {
+	["english"] = "Airbase in a Box Brochure",
+	["pages"] = {
+		"Поздравляем вас с приобретением запатентованной воздушной базы Трюмных Вод в коробке!(TM)\n\nМы гарантируем, что ваша воздушная база будет работать без перебоев до десяти лет. Просто установите ее на любую ровную плоскую поверхность.\n\nВозможности, которые у вас появятся, будут поистине удивительными – вы сможете в буквальном смысле слова обнять небо.",
+		"ВНИМАНИЕ: ВОЗДУШНУЮ БАЗУ В КОРОБКЕ КАТЕГОРИЧЕСКИ НИ ПОД КАКИМ ВИДОМ НЕЛЬЗЯ УСТАНАВЛИВАТЬ НА ГОРНЫХ ВЕРШИНАХ.",
+	},
+},
+["Дневник Айрвин"] = {
+	["english"] = "Airwyn's Journal",
+	["pages"] = {
+		"Умопомрачительно! Образец оказался частью древнего божества! Именно за этим меня сюда и прислали! Наши предположения подтвердились!\n\nМы все заслужили по пиву.",
+		"Меня подташнивает. Что-то не так. Может, из-за пива? Ищу причину.",
+		"Нет, причина не в пиве, а в артефакте. Мне следовало догадаться. Высылаю его в Стальгорн для дальнейших исследований.\n\nЛюбопытная Гарли Легкая Наездница постоянно следит за мной… Боюсь, она что-то подозревает. Я прячу этот журнал в месте, где она его ни за что не найдет.\n\nТак, пора за пивом.",
+	},
+},
+["Воинские звания Альянса"] = {
+	["english"] = "Alliance Military Ranks",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">ВОЕННЫЕ ЗВАНИЯ АЛЬЯНСА</H1><BR/><P align=\"center\">ОФИЦЕРЫ</P><BR/><P align=\"center\">Главнокомандующий</P><P align=\"center\">Фельдмаршал</P><P align=\"center\">Маршал</P><P align=\"center\">Командор</P><P align=\"center\">Лейтенант-командор</P><P align=\"center\">Рыцарь-защитник</P><P align=\"center\">Рыцарь-капитан</P><P align=\"center\">Рыцарь-лейтенант</P><P align=\"center\">Рыцарь</P><BR/><P align=\"center\">РЯДОВЫЕ</P><BR/><P align=\"center\">Старшина</P><P align=\"center\">Старший сержант</P><P align=\"center\">Сержант</P><P align=\"center\">Младший сержант</P><P align=\"center\">Капрал</P><P align=\"center\">Рядовой</P></BODY></HTML>",
+	},
+},
+["Алтарь Занзы"] = {
+	["english"] = "Altar of Zanza",
+	["pages"] = {
+		"Мы призываем тебя, Занза Зулдазара.\n\nБлагослови тех, что помощи твоей ищут, Лоа Занза. Благослови тех, что хотят помочь Зандаларскому\nнароду.\n\nПомоги нам в эти трудные времена. Помоги нам, Лоа. Дай нам силу сразить врагов наших. Дай нам силу сокрушить Кровавого Бога еще раз.",
+	},
+},
+["Выучить наизусть"] = {
+	["english"] = "Always Remember",
+	["pages"] = {
+		"Император Лао-Фэ был настоящим чудовищем даже по меркам самих могу. Его излюбленной карой рабов-пандаренов было разделение семей. Детей провинившихся отправляли на Змеиный Хребет, где их разрывали в клочья стаи богомолов.\n\nТакая участь постигла и юного пандаренского монаха по имени Кан. После того, как у него отняли любимого сына, он был убит горем и с тех пор облачался лишь в черные одеяния. Ему открылось прозрение, и он понял, насколько немощны владыки могу. Они владели темной магией создавали жуткое оружие, но империя их полностью зависела от труда рабов.",
+		"Во времена правления могу покоренным народам не разрешалось иметь оружие, но Кан решил, что оно пандаренам и не нужно. Боевые искусства позволили пандаренским монахам самим стать оружием. Кана же нарекли Десницей Первой Зари.\n\nНе сохранилось сведений о том, удалось ли Кану встретиться с сыном. Но истина остается неизменной: именно отеческая любовь явилась первой искрой восстания, изменившего лик Пандарии навечно.",
+	},
+},
+["Янтарь"] = {
+	["english"] = "Amber",
+	["pages"] = {
+		"Янтарь – основа общества богомолов. На нем основаны их архитектура, искусство и технологии.\n\nБогомолы издавна славились мастерством управления звуком. Они нашли способ расширить диапазон слышимости с помощью янтарной смолы и теперь могут переговариваться на огромном расстоянии. Ни одна армия не могла подойти к землям богомолов незамеченной, и даже одинокие путники, пересекающие стену, находятся под пристальным наблюдением.\n\nИмператрица и Совет клакси бережно хранят великие деревья кипари из Танлунских степей, единственный источник драгоценного янтаря. Предание гласит, что некогда кипари можно было встретить и к востоку от стены, но могу вырезали их под корень, стремясь избавиться от всего, что связано с богомолами, их извечными врагами.",
+	},
+},
+["Древний сборник сока"] = {
+	["english"] = "Ancient Sap Feeder",
+	["pages"] = {
+		"Перед употреблением сока кипари богомолы любят дать ему вызреть. Для этого используют сборники сока. Присмотревшись к этому древнему сборнику сока, вы поймете, что с течением времени внешний вид этой утвари мало изменился.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Очередная жертва дикорога"] = {
+	["english"] = "Another Direhorn Casualty",
+	["pages"] = {
+		"Его могуществу, Богу войны Джалаку.\n\nДикороги сожрали очередного заклинателя зверей. Глупец был укушен компсогнатом и потерял концентрацию. Фетиш, который он собирал, развалился, и дикорог разорвал его на части.\n\nМы слишком торопимся. Нашим заклинателям зверей нужны годы для обучения. Я знаю, что мы должны собрать великую армию, но она не будет боеспособна, если звери будут пожирать наших собственных солдат.\n\nМы хотим служить, но вам, как никому другому, должно быть известно: нельзя посылать детей выполнять работу троллей.",
+	},
+},
+["Аптекарские склянки Яо Мягкой Лапы"] = {
+	["english"] = "Apothecary Tins of Yao Firmpaw",
+	["pages"] = {
+		"В этом наборе медных баночек с аккуратно выгравированными наименованиями хранились обширные запасы мощных целебных трав. Назначение большинства растений неизвестно, но судя по дощечке на коробке, куда были упакованы баночки, набор принадлежал Яо Мягкой Лапе. Имя этого пандаренского лекаря жители долины Четырех Ветров до сих пор связывают со здоровьем и долголетием, а о его успехах на поприще медицины ходят легенды. Яо не был женат, говорят, несчастная любовь тому виной.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Аратор и Тролльские Войны"] = {
+	["english"] = "Arathor and the Troll Wars",
+	["pages"] = {
+		"В то время как высшие эльфы сражались не на жизнь, а на смерть против яростного натиска троллей, разрозненные, ведущие кочевой образ жизни люди Лордерона боролись за объединение своих земель. Изначально племена людей постоянно совершали набеги на другие людские поселения, пренебрегая честью и не заботясь об объединении расы.",
+		"Но одно племя, известное как Арати, поняло, что тролли сделались слишком серьезной угрозой, чтобы продолжать их игнорировать. Арати хотели подчинить себе все племена, чтобы выступить единым фронтом против троллей.",
+		"За шесть лет хитрые Арати победили и перехитрили все вражеские племена. После каждой победы Арати предлагали завоеванным людям мир и равноправие, таким образом получая верность побежденных. В конце концов племя Арати включило в себя много других племен, а мощь их армии росла с огромной скоростью.",
+		"Убежденные в том, что они могут самостоятельно противостоять троллям или даже эльфам, военачальники Арати решили построить могучий город-крепость в южных регионах Лордерона. Город, названный Cтром, стал столицей государства Арати, Аратора. В то время как Аратор процветал, люди со всего огромного континента шли на юг, дабы жить под защитой Cтрома.",
+		"Объединенные под одним знаменем, людские племена создали сильную, жизнерадостную культуру. Торадин, король Аратора, знал, что таинственные эльфы на севере постоянно сражались с троллями, но отказался рисковать безопасностью своих людей ради скрытных незнакомцев. Много месяцев прошло, прежде чем слухи о близком поражении эльфов распространились с севера. Только тогда, когда измученные послы Кель'Таласа добрались до Cтрома, Торадин осознал истинную угрозу, идущую от троллей.",
+		"Эльфы сказали Торадину, что армия троллей неисчислима, что, уничтожив Кель'Талас, они двинутся на юг. Будучи в отчаянии, эльфы, нуждавшиеся в военной помощи, быстро согласились обучить некоторых избранных людей искусству магии в обмен на помощь.",
+		"Торадин, не доверявший любой магии, согласился помочь эльфам исключительно по необходимости. Практически немедленно эльфийские волшебники прибыли в Аратор и начали обучать группу людей магии.",
+		"Эльфы обнаружили, что хотя люди были неловки в обращении с магией, у них была потрясающая природная связь с ней. Эльфы обучили сотню людей самым азам своих магических тайн: не больше, чем было нужно для битвы с троллями. Убежденные в том, что их ученики-люди готовы вступить в бой, эльфы покинули Cтром и пошли на север вместе с могучей армией короля Торадина.",
+		"Объединившиеся эльфийские и человеческие армии вступили в схватку с огромной армией троллей у подножья Альтеракских гор. Битва продолжалась много дней, но неослабевавшая армия Аратора не уставала и не отступала под натиском троллей. Эльфийские властители решили, что пришло время ниспослать силы магии на врага.",
+		"Сотня людских магов и множество эльфийских волшебников вызвали ярость небес и напустили пламя на армию троллей. Огонь стихий лишал троллей возможности исцеления ран, сжигая их изнутри и снаружи.",
+		"Когда натиск армии троллей был сломлен и они попытались сбежать, армия Торадина начала преследование, беспощадно убивая всех троллей, которых удалось настичь. Тролли так никогда и не оправились от этого поражения, а в истории больше не будет единого народа троллей. Убежденные в том, что Кель'Талас спасен от разрушения, эльфы поклялись в верности и дружбе Аратору и семье его короля Торадина. Люди и эльфы с тех пор были в мирных отношениях.",
+	},
+},
+["Дневник Аркавона"] = {
+	["english"] = "Archavon's Log",
+	["pages"] = {
+		"&lt;Похоже, что Аркавон вел дневник на нескольких языках. На обложке записаны подсчеты.&gt;\n\nОрда: \n Защитили: $4024w\n Захватили: $4022w\n\nАльянс:\n Защитили: $4025w\n Захватили: $4023w\n\nДень 10:\nТворцы ушли. Я остался сторожить.\n - АРКАВОН",
+		"День 10500: \nВ коридоре тихо. Пусто. \n\nЯ думал, Творцы хотели, чтобы я присматривал за коридором, но они же никогда не говорили мне: \"Аркавон, присматривай за коридором...\" Может быть, можно и за улицей присматривать? Там, наверное, не так скучно. Все, я решил. Теперь я буду присматривать за коридором и улицей! Со следующего месяца займусь.\n -АРКАВОН\n\nДень 20120:\nУлица гораздо просторнее, чем коридор. Утесы и скалы удобно стоят. Точно, Творцы оставили меня присматривать и за улицей. Надеюсь, они не заметят, что я сначала сидел только в коридоре.\n - АРКАВОН",
+		"День 1051213:\nПридумал новую игру, называется \"Пни призрака.\" Сегодня дошел от крепости до главной дороги. До конца года хочу перебраться через реку.\n -АРКАВОН\n\nДень 2145617:\nСегодня пришел зеленый народец. Буду за ними приглядывать.\n -АРКАВОН\n\nДень 2145657:\nЗеленый народец продолжает строить домишки. Много домишек – это хорошо. Вот поговорю с ними на этой неделе и скажу спасибо.\n -АРКАВОН\n\nДень 2145666:\nСегодня сказал спасибо за домишки одному зеленому. Он ответил, что приведет еще народец, чтобы я приглядел. Много народца.\n\nУра! Скоро буду много приглядывать.\n - АРКАВОН",
+		"День 2145866:\nЗеленые привели какой-то другой народец, потом показали друг на друга, и вдруг все начали драться!\n\nСпасаю свою шкуру, присматриваю только за коридором, ну и еще утащил у этих немного погремушек, с ними будет не скучно.\n -АРКАВОН\n\nДень 2146240:\nСтало еще хуже. Я не знаю, чего от меня хотят Творцы. Не высовываюсь из коридора, но злая мелюзга набегает сюда по нескольку раз на дню. Отбирают погремушки.\n - АРКАВОН",
+		"День 2147021:\nБратцы вернулись! Они, оказывается, спали в закрытых коридорах!\n\nЯ немножко зол, что они бросили меня одного присматривать за всем, но все равно отдал им немного блестящих погремушек, потому что я устал быть один и еще набегают постоянно.\n -АРКАВОН\n\nДень 2147060:\nЗлая мелюзга бьет моих братцев, это плохо. Теперь, правда, они не трогают меня, и это хорошо.\n\nНаверное, им нужны блестящие погремушки, которые я подарил братцам. Это все я виноват...\n - АРКАВОН",
+	},
+},
+["Возвращение Архимонда и побег в Калимдор"] = {
+	["english"] = "Archimonde's Return and the Flight to Kalimdor",
+	["pages"] = {
+		"Как только Кел'Тузад вернулся к жизни, Артас повел Плеть на юг, к Даларану. Там лич должен был найти книгу заклинаний Медива и с ее помощью вернуть в этот мир Архимонда. После этого Архимонд должен был возглавить Легион и повести его в решающий бой. Даже волшебники Кирин-Тора не смогли помешать Артасу завладеть книгой Медива, и Кел'Тузаду оставалось лишь прочесть заклинание.",
+		"Спустя десять тысяч лет могучий демон Архимонд вновь ступил на Азерот. Но в Даларне их путешествие не закончилось. По приказу самого Кил'джедена Архимонд и его демоны последовали за Плетью в Калимдор, чтобы уничтожить Нордрассил, Древо Жизни.",
+		"Среди всего этого хаоса появился таинственный пророк, который стал для смертных спасителем и наставником. Этим пророком оказался не кто иной, как сам Медив, последний Страж, чудесным образом вернувшийся из Бездны, чтобы искупить все свои грехи. Медив поведал Орде и Альянсу о смертельной опасности, которая им грозит, и убеждал их объединить свои силы.",
+		"Орки и люди, враждовавшие не одно поколение, не хотели и слушать его. Медиву пришлось общаться с каждой расой по отдельности, обманом заставить их пересечь море и ступить на легендарную землю Калимдора. Вскоре орки и люди обнаружили скрывавшуюся долгое время цивилизацию калдорай.",
+		"Орков, отправившихся в путь через Степи Калимдора под предводительством Тралла, преследовали неудачи. Они заключили союз с Кэрном Кровавым Копытом и его могучими тауренами-воинами, но при этом многих орков стала одолевать жажда крови, мучившая их на протяжении многих лет. Гром Адский Крик, лучший лейтенант Тралла, предал Орду и позволил своим самым низменным инстинктам взять верх над собой.",
+		"Пробираясь через Ясеневый лес, Адский Крик и его верные воины Песни Войны наткнулись на древних ночных эльфов-Часовых. Полубог Кенарий решил, что орки вновь возжаждали войны, и хотел прогнать их из своих земель. Но Адский Крик со своими воинами, преисполненные сверхъестественной ярости и злобы, убили Кенария и осквернили древние леса.",
+		"В конечном итоге Адский Крик сумел восстановить свою честь, победив вместе с Траллом Маннорота – демона, обрекшего орков на вечную жажду крови. Смерть Маннорота положила конец ужасному проклятию орков.",
+		"В то время как Медив пытался убедить орков и людей в необходимости объединить силы, ночные эльфы сами боролись с Легионом. Тиранда Шелест Ветра, бессмертная верховная жрица ночных эльфов-часовых, отчаянно сражалась с демонами и мертвецами, чтобы не дать им захватить Ясеневый лес. Тиранда поняла, что одной ей не справиться, и велела пробудить друидов ночных эльфов от многовекового сна, чтобы просить их о помощи.",
+		"Призвав на помощь Малфуриона Ярость Бури, свою давнюю любовь, Тиранда укрепила оборону и вынудила Легион отступить. Малфурион заставил саму природу восстать против армий Легиона и Плети.",
+		"В поисках друидов, которых еще не удалось пробудить, Малфурион наткнулся на древнюю тюрьму, в которой он заточил своего брата Иллидана. Тиранда освободила его в надежде, что он присоединится к ним в битве с Легионом. Некоторое время Иллидан помогал им, но затем бежал, решив, что личные цели для него важнее.",
+		"Ночные эльфы собрались с силами и, полные решимости, вступили в сражение с Пылающим Легионом. Легион всегда желал завладеть Источником Вечности, который питал Древо Жизни и был сердцем королевства ночных эльфов. Если бы Легиону удалось захватить Древо, демоны могли бы в буквальном смысле разорвать мир на части.",
+	},
+},
+["Верховный маг Антонидас"] = {
+	["english"] = "Archmage Antonidas",
+	["pages"] = {
+		"Верховному магу Антонидасу, Великому волхву Кирин-Тора\n\nВеликий город Даларан обязан жизнью величайшему и мудрейшему из своих сынов.\n\nДруг мой, твоя жертва была не напрасной.\n\n\nС любовью и уважением,\n\nДжайна Праудмур",
+	},
+},
+["Верховный маг Кадгар из Кирин-Тора"] = {
+	["english"] = "Archmage Khadgar of the Kirin Tor",
+	["pages"] = {
+		"Верховный маг Кадгар из Кирин-Тора\n\nБывший ученик Медива. Верховный главнокомандующий экспедиции Альянса, которая отправилась в Дренор, родной мир орков. Предположительно погиб.\n\nНикто и никогда так самоотверженно не погружался в темные глубины магии и войны. Мы желаем тебе добра, смелый странник. Где бы ты ни был.\n\n- Антонидас, верховный маг Даларана",
+	},
+},
+["Ареллас Огненный Лист"] = {
+	["english"] = "Arellas Fireleaf",
+	["pages"] = {
+		"Ареллас Огненный Лист\nГлавный волшебник Алого ордена\nГражданин Кель'Таласа\nОбречен на вечную битву с некромантом Дисальвеном",
+	},
+},
+["ВНИМАНИЕ: привидения"] = {
+	["english"] = "ATTENTION: Geists",
+	["pages"] = {
+		"Я вас предупреждал: если в следующем походе мне снова придется проводить большую часть времени за чисткой сапог, кому-то придется за это ответить! С этого момента дежурства в отхожих местах будут удвоены как по времени, так и по количеству служащих! \n\n--Инструктор Разувий",
+	},
+},
+["Аубердинский памятник"] = {
+	["english"] = "Auberdine Memorial",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">В память о</H1><BR/><H1 align=\"center\">Шальдине, Гершале и Волкоре</H1><H1 align=\"center\">а также всех, кто никогда больше не увидит родного неба.</H1></BODY></HTML>",
+	},
+},
+["Дневник Бейлога"] = {
+	["english"] = "Baelog's Journal",
+	["pages"] = {
+		"Я нашел способ проникнуть в Чертог Хаз'Мула!\n\nВозьми медальон Вогникив из моего сундука.\n\nПобеди трогга Ревлоша в зале перед комнатой с картой и забери у него стержень Хыннещихоп.\n\nСоедини медальон и стержень – и получишь посох Древнейшей Истории.\n\nИспользуй посох в комнате с картой, чтобы открыть двери, ведущие в чертог Хаз'Мула.\n\nСделай это, и комната будет принадлежать нам!\n-Бейлог",
+	},
+},
+["Знамя империи богомолов"] = {
+	["english"] = "Banner of the Mantid Empire",
+	["pages"] = {
+		"Хотя богомолы часто используют ветрошерсть и императорский шелк, предпочтение они отдают нетканым материалам, созданным из крыльев насекомых, включая их собственные. Это знамя создано из такого материала.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;\".",
+	},
+},
+["Трудночитаемый свиток"] = {
+	["english"] = "Barely Legible Scroll",
+	["pages"] = {
+		"Они говорили, что это невозможно! Но я им докажу! Еще несколько дней, и я докажу, что любой достаточно смелый орк может выжить, питаясь только яйцами горенов.",
+		"Маленькие холодные яйца доставать все сложнее – горены их тоже едят. Может, потому, что из них никто не вылупляется. Нужно идти дальше на поиски новых гнезд.",
+		"Мне удалось найти два сияющих яйца! Первое легко разбилось, а я был так голоден, что выпил все содержимое за пару глотков. Мне попались большие кусочки чего-то, но я все съел – как настоящий орк! Сейчас мне нехорошо, но, по крайней мере, я не голоден.",
+	},
+},
+["Боевой журнал полководца Кровавого Эфеса"] = {
+	["english"] = "Battlelog of Warlord Bloodhilt",
+	["pages"] = {
+		"Гоблины и эльфы. Эти существа – просто олицетворение нарциссизма и самолюбия. И часа не проходит, чтобы я не спросил себя, зачем Гаррош согласился на их помощь в этой атаке.\n\nДа, их разрушители чар оказались просто бесценными для нашей защиты. А войска Галливикса отлично противостояли всем тем гномским изобретениям, которыми они нас забрасывали каждый день. Но я им не доверяю. Даже несмотря на то, что они живут и умирают во имя Орды. У меня нет ни малейшей причины доверять им.",
+		"А недавно я застал одного из эльфов в тот момент, когда он расшифровывал артефакт могу. Поделился ли он со мной полученной информацией? Как же. А в том, что Лор'темар получил подробнейший отчет об этих древних надписях, я ни минуты не сомневаюсь. Могу оставили после себя не только горшки и битые черепки. Нет, после них осталось еще и оружие, и древняя сила.\n\nА гоблины! Куда бы я ни пошел, тут же натыкаюсь на еще одного или двух умельцев, которые пытаются изобрести очередную бомбу. Просто удивительно, что мы тут еще не взлетели на воздух. Галливикс продолжает снабжать нас алхимическими рецептами, которые помогут нам вести войну, но я-то знаю, что сам он извлекает из этого куда больше выгоды.",
+		"Я не потерплю этой подрывной деятельности. Если все это будет продолжаться, придется \"освободить\" главных виновников от их обязанностей.",
+	},
+},
+["Небесные чудища"] = {
+	["english"] = "Beasts of the Sky",
+	["pages"] = {
+		"Давным-давно зандалары проиграли войну с пандаренами. Они приручили змей, чтобы те сбивали наездников на нетопырях, и переломили ход битвы. Нам нечего было им противопоставить.\n\nНо те времена давно миновали. Мы помнили ошибки наших предков и учились на них. Мы нашли ответ! На нашей стороне будут сражаться крылатые звери – террокрылы! Они обрушат гнев небес на наших врагов! Змеи пандаренов проворны, но террокрылы быстры и безжалостны.\n\nСкоро мы испытаем наших птичек в деле. Готовься, тренируйся и не давай пощады врагам!",
+	},
+},
+["За Темным порталом"] = {
+	["english"] = "Beyond the Dark Portal",
+	["pages"] = {
+		"Всего через несколько месяцев после завершения строительства Крепости Стражей Пустоты вся энергия Темного портала слилась воедино и открылся новый проход на Дренор. Оставшиеся кланы орков под предводительством старого шамана Нер'зула вновь напали на Азерот. Собираясь украсть ряд магических артефактов, которые должны были увеличить могущество Нер'зула, орки планировали открыть несколько новых порталов на Дреноре, которые позволили бы им навсегда покинуть свой обреченный мир.",
+		"Король Теренас из Лордерона, будучи уверенным, что Нер'зул замышляет новое нападение на силы Альянса, послал свои войска на Дренор, чтобы раз и навсегда покончить с орочьей угрозой. Силы Альянса, ведомые Кадгаром и генералом Туралионом, сошлись с орками среди пылающих земель. Даже с помощью Аллерии из числа высших эльфов, дворфа Курдрана и опытного воина Даната Кадгар не смог помешать Нер'зулу открыть врата в другие миры.",
+		"Чудовищные магические штормы, вызванные скапливающейся энергией портала, начали разрывать опустошенный мир на части. Нер'зул, за которым пошли лишь самые преданные его слуги, смог убежать через один такой портал, пока Кадгар отчаянно сражался, чтобы вернуть своих товарищей в Азерот. Поняв, что они окажутся в ловушке в этом гибнущем мире, Кадгар и его спутники приняли самоотверженное решение уничтожить Темный портал, чтобы Азерот не пострадал от кошмарного разрушения Дренора.",
+		"Конечно, героям удалось разрушить портал и спасти Азерот, но сумели ли они выжить среди предсмертных мук Дренора – остается загадкой.",
+	},
+},
+["Договор картеля Трюмных Вод"] = {
+	["english"] = "Bilgewater Cartel Contract",
+	["pages"] = {
+		"В соответствии с условиями настоящего договора контрагент (здесь и далее – Вы) соглашается выполнять любые приказы Вождя или его офицеров. Приказы должны исполняться буквально с учетом следующих оговорок: Не допускаются никакие действия, препятствующие получению прибыли торговым принцем Галливиском (здесь и далее – Я).",
+		"Любые приказы, исходящие от меня или моих офицеров, автоматически получают более высокий приоритет относительно приказов командования Орды. Нарушение этого пункта будет преследоваться в судебном порядке и повлечет за собой отказ в выплате вознаграждений. Прочитав это, вы соглашаетесь с тем, что ручаетесь своей жизнью в выполнении данного контрактного соглашения.",
+		"Дополнительные исключения распространяются на приказы Орды, исполнение которых может повлечь за собой ослабление финансовой инфраструктуры Орды. Нельзя позволять Орде дойти до банкротства в этой войне. Я обладаю правами на все боевые машины Альянса, и я не намерен от них отказываться. Результатом любых действий, которые могут привести к банкротству Гарроша и его войск (даже если это будут приказы, отданные им самим, вероятность чего нельзя исключать), будет переложение долговых обязательств Вождя на вас и любого из ваших знакомых, которые в состоянии помочь выплатить долг.",
+		"Чернила, которыми написан этот документ, обладают юридической силой. Начиная с настоящего момента, вы попадаете под действие всех существующих законов… И давайте взглянем правде в лицо. Если вы попытаетесь уклониться от исполнения условий, мои костоломы доберутся до вас гораздо быстрее, чем эльф крови до источника силы.",
+	},
+},
+["Обуздание ящеров"] = {
+	["english"] = "Binding Raptors",
+	["pages"] = {
+		"Наш народ охотился с ящерами с самого рассвета цивилизации. Эти звери умны, смертоносны и преданы своим хозяевам. Тролля и его ящера связывает нечто больше, чем узы верности. Это кровные узы. Вы оба нужны друг другу.\n\nОбычно требуются годы на то, чтобы поладить со своим ящером. Но сейчас у нас мало времени, а зандаларам нужны ящеры для битвы. И мы прибегли к старым способам. Возьми кровь ящера. Заключи его душу в фетише. Нет времени пытаться приручить его, как раньше.\n\nСуровые настали времена.",
+	},
+},
+["Груда костей"] = {
+	["english"] = "Bone Pile",
+	["pages"] = {
+		"Судя по отметинам зубов и следам кислоты на костях, труп стал обедом горена. Чудовище сожрало доспехи, мясо и большую часть костей с одинаковой жадностью – по останкам невозможно определить, к какому племени принадлежала жертва.",
+	},
+},
+["Резное бронзовое зеркальце"] = {
+	["english"] = "Carved Bronze Mirror",
+	["pages"] = {
+		"Хотя стекла с амальгамой в обрамлении больше нет, часть красоты зеркала сохранилась. На обратной стороне круглого бронзового зеркала отчеканен изящный Красный Журавль Надежды. Нанесенная на поверхность дарственная надпись гласит: \"Моей Линь драгоценной,/ Символ вечной любви./ Вглядись в отраженье,/ Перл творенья/ Узри. – Яо\".\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Создание Драконов"] = {
+	["english"] = "Charge of the Dragonflights",
+	["pages"] = {
+		"Удовлетворенные упорядочением этого небольшого мира и окончанием трудов, титаны приготовились покинуть Азерот. Однако перед своим уходом они поручили величайшим существам этого мира присматривать за Калимдором, поскольку любое враждебное вмешательство могло поколебать его идеальный баланс. В то время существовало множество родов драконов.",
+		"Но пять родов главенствовали над своими собратьями. Титаны избрали эти пять стай, чтобы те присматривали за расцветающим миром. Величайшие члены Пантеона отдали часть своей силы каждому из лидеров стай. Эти магические драконы (указанные ниже) стали известны как Великие Аспекты или Великие драконы.",
+		"Аман-Тул, Великий Отец Пантеона, отдал часть своей вселенской силы огромному бронзовому дракону, Ноздорму. Великий Отец велел Ноздорму защищать само время и управлять извечными потоками рока и судьбы. Мужественный и благородный Ноздорму стал известен как Вневременный.",
+		"Эонар, титан-покровительница всего живого, отдала часть своей силы красной огромной Алекстразе. С тех пор Алекстраза зовется Хранительницей Жизни и охраняет всех созданий этого мира. За ее мудрость и безграничное сострадание ко всему живому Алекстраза была избрана Королевой драконов и возглавила свой род.",
+		"Эонар также даровала младшей сестре Алекстразы, изящной зеленой драконице Изере, определенную власть над природой. Изера впала в вечный транс, именуемый \"Сном Творения\". Известная под именем Дремлющей, она следит за природой мира из царства Изумрудного Сна.",
+		"Титан Норганнон, хранитель знаний и владыка магии, даровал синему дракону Малигосу часть своей великой силы. С того времени Малигос, известный как Хранитель Магии, хранит магию и тайные знания.",
+		"Титан Каз'горот, ваятель и кузнец мира, даровал часть своей огромной силы могучему черному змею Нелтариону. Великодушный Нелтарион, позже известный как Хранитель Земли, получил власть над почвой, камнем и подземными недрами. Воплотив в себе силу мира, он стал самым могущественным сторонником Алекстразы.",
+		"Получив могущество, пять Аспектов были уполномочены охранять мир в отсутствие титанов. Оставив драконов, готовых защищать их творение, титаны покинули Азерот навеки. К сожалению, Саргерас очень быстро узнал о существовании нового мира…",
+	},
+},
+["Гражданская война в Чумных землях"] = {
+	["english"] = "Civil War in the Plaguelands",
+	["pages"] = {
+		"Король-лич Нер'зул знал, что времени у него мало. Заключенный в Ледяном Троне, он подозревал что Кил'джеден попытается уничтожить его. Заклятие Иллидана необратимо повредило Трон, и с каждым днем Король-лич становился все слабее. В надежде на спасение он призвал к себе своего величайшего смертного слугу – рыцаря смерти Артаса.",
+		"Несмотря на нехватку сил, вызванную слабостью повелителя, Артас все же ввязался в братоубийственную войну в Лордероне. Тогда половина его уцелевших войск во главе с банши Сильваной Ветрокрылой вышла из-под его контроля и взяла власть в свои руки. Призванный своим господином, Артас был вынужден передать командование Плетью своему заместителю Кел'Тузаду, а война тем временем охватывала все новые области Чумных земель.",
+		"В конечном итоге Сильвана и ее мятежники, назвавшие себя Отрекшимися, объявили руины столицы Лордерона своей собственностью. В подземельях под этими руинами они обустроили собственную крепость, поклявшись победить Плеть и изгнать из своих земель Кел'Тузада.",
+		"Ослабевший, но исполненный решимости спасти своего господина, Артас добрался в Нордскол – и обнаружил там наг Иллидана с эльфами крови. Стремясь опередить обнаруженные силы врага, Артас со своими союзниками из Неруба направился к Ледяному Трону.",
+	},
+},
+["\"Взросление\""] = {
+	["english"] = "Coming of Age",
+	["pages"] = {
+		"В жизни зандаларских троллей нет места слабости. Сила, свирепость, выносливость и мощь – вот мерила их успеха. По достижении определенного возраста те зандалары, которые не были приняты в ряды жрецов или ученых, должны доказать свою силу перед лицом совета, короля и самих богов.\n\nДля этого подойдет любая демонстрация физической силы. Достигшие совершеннолетия тролли участвуют в турнирах и состязаниях. Юноши много лет готовятся к испытаниям, тренируются, общаются с духами и наносят на кожу печати власти. Обычно в ходе испытания юноши должны отправиться на полный опасных зверей остров, расположенный неподалеку от столицы, и поймать или подчинить себе дикого зверя. \n\nУ менее распространенных рас троллей есть свои версии подобной традиции, но они совсем не так грандиозны Справиться с равазавром или ящером несравнимо проще, чем с дьявозавром или дикорогом.",
+	},
+},
+["Перечень павших героев"] = {
+	["english"] = "Compendium of Fallen Heroes",
+	["pages"] = {
+		"Тартек Бешеный. Одно из самых могущественных поганищ, когда-либо сотворенных Плетью. Был создан личом Амненнаром Хладовеем для помощи в возведении укреплений на Курганах Иглошкурых. Лично освежевал более 1200 иглошкуров прежде, чем был побежден их многочисленной армией. Его жертва позволила Амненнару быстро собрать армию из неживых иглошкуров и стать первым главнокомандующим Плети в Калимдоре. Останки Тартека были использованы для создания Обжоры, нынешнего лейтенанты Амненнара.",
+		"Обрахиим Странник. Гениальный архитектор, участвовавший в создании Наксрамаса и спроектировавший Акерус. Совершил головокружительную карьеру, пройдя путь от чернорабочего до одного из самых преданных советников Кел'Тузада.\n\nОбуреваемый жаждой знаний, Обрахиим обогнул весь мир в поисках неизведанного. Он черпал вдохновение в нерубской архитектуре и магии чернокнижников. В последний раз его видели несколько лет назад, когда он направлялся к Руинам Зин-Ажхари в Калимдоре.",
+		"Диодор Проклятый. Человек-некромант, один из первых приверженцев культа Проклятых и герой Первой войны. Возглавил войска Плети и привел их к победе по время Первого и второго летнего штурма Монастыря Алого ордена. Был убит во время третьего штурма, успешно отраженного Алым орденом, который наконец-то смог вычислить его тактику.",
+		"Киркессен Жаждущий. Могущественный лич, правая рука самого Короля-лича. Ветеран бесчисленных сражений, Киркессен лично спланировал и возглавил Кровавую осаду Часовни Последней Надежды. Несмотря на численное превосходство, его войска были разбиты и понесли значительные потери. Лорд Максвелл Тиросс не простил Киркессену этой ошибки и лично лишил его права на физическое обличье.",
+	},
+},
+["Правила столовки Трупеуса"] = {
+	["english"] = "Corpulous' Mess Hall Rules",
+	["pages"] = {
+		"Трупеус – хороший повар из Акеруса, готовит вкусную еду. Он гордится тем, что кормит великую Плеть. Не зли Трупеуса, а то он не даст тебе еды.\n\nПравила:\n\nРыцари смерти едят первыми, вурдалаки потом.\n\nНе ешь сразу за вурдалаком. Сначала помой за ним тарелку.\n\nМожно добавлять в пищу своих червей и личинок. Трупеус не обидится.\n\nПоймал крысу? Принеси Трупеусу!\n\nМожно есть людей и эльфов. У эльфов – диетическое мясо.",
+		"Перемешай еду. Если найдешь салфетку – Трупеусу будет стыдно.\n\nМожно приносить обратно недостаточно сгнившую пищу. У Трупеуса есть три свободные подмышки.\n\nМожно есть руками, можно есть с ножа. Нельзя есть руки и ножи. \n\nЗомби нужна разнообразная пища. Мозгами сыт не будешь.\n\nНе ешь сам себя.",
+	},
+},
+["Проклятый надгробный камень"] = {
+	["english"] = "Cursed Gravestone",
+	["pages"] = {
+		"Здесь покоится жуткий капитан Генест, бич Южных морей.",
+	},
+},
+["Жизненный цикл богомола"] = {
+	["english"] = "Cycle of the Mantid",
+	["pages"] = {
+		"Каждые сто лет новорожденные богомолы в огромных количествах вылупляются из яиц. Со временем орда неизбежно мигрирует на восток, пожирая все на своем пути, пока не достигнет Змеиного Хребта. Там они тысячами гибнут от рук пандаренов, как некогда гибли от рук могу, воздвигших эту стену.\n\nУченые пандаренов пытались изучить этот цикл, но так и не пришли к согласию. Почему богомолы раз за разом позволяют гибнуть своему молодняку? Точно знают только сами богомолы.\n\nЭтот цикл стал настолько предсказуем, что стражи стены каждое столетие готовятся к нему заранее. Шадо-паны, как и могу до них, знают, когда придет орда, и планируют оборону соответственно. Пока стоит стена, у Пандарии есть защита от кажущейся бесконечной орды богомолов.",
+	},
+},
+["Данат Троллебой"] = {
+	["english"] = "Danath Trollbane",
+	["pages"] = {
+		"Данат Троллебой.\n\nКомандир ополчения Стромгарда. Советник генерала Туралиона, командир армии экспедиции Альянса, которая отправилась в Дренор, родной мир орков. Предположительно погиб.\n\nМы чтим твою память и твою жертву, племянник. Со дня основания нашей славной империи путь к доблести всегда был залит кровью героев.\n\n- Торас Троллебой, владыка Стромгарда",
+	},
+},
+["Табличка с именем темного хранителя"] = {
+	["english"] = "Dark Keeper Nameplate",
+	["pages"] = {
+		"Ворфалк Железнолоб\n\nВорфалк работает на складе \"Угрюмого обжоры\" и глубоко предан темным хранителям.\n\nДа укрепится его дух.",
+	},
+},
+["Резная могильная плита"] = {
+	["english"] = "Decorated Gravestone",
+	["pages"] = {
+		"Лежит здесь батрак; он смел очень был. Сражаться хотел, но лишь газы пустил.",
+	},
+},
+["Резное надгробие"] = {
+	["english"] = "Decorated Headstone",
+	["pages"] = {
+		"На добрую память о Джесс Моралес",
+	},
+},
+["Советы по призыву дьявозавра"] = {
+	["english"] = "Devilsaur Calling Tips",
+	["pages"] = {
+		"Дьявозавры не слушают кого попало. Они охотники. Убийцы. Нельзя напугать дьявозавра. Нельзя схватиться за кнут и полагать, что дьявозавр тут же начнет тебя слушаться.\n\nЧтобы приручить дьявозавра, надо отнять его душу. Забрать ее! Покорить! Заключить в артефакте. Это старый и проверенный способ. Это путь крови и власти. Не нужна тебе дружба со зверем, не нужно его уважение! Ты должен поработить его. Сломить его волю. Покорить его разум своей силой.\n\nТолько величайшие из заклинателей зверей способны на это.",
+	},
+},
+["Покорение"] = {
+	["english"] = "Dominance",
+	["pages"] = {
+		"Вождем племени может стать только самый сильный, отважный и выносливый яунгол. Именно эти качества считаются среди них важнейшими, и обладать ими должен всякий вождь яунголов.\n\nОднако, учитывая постоянную угрозу, исходящую от богомолов, они не могут позволить себе потерять ни единого воина во внутренней борьбе за власть.\n\nПоэтому было принято на удивление цивилизованное решение. Когда у двух яунголов возникает конфликт, между ними ставится флаг, и противники бьются друг с другом затупленным оружием до тех пор, пока один из них не уступит или не потеряет сознание.\n\nПодобным образом выбирают и нового вождя: яунгол, желающий занять место предводителя, должен встать под флаг своего рода и драться со всяким, кто оспорит его право на лидерство.",
+	},
+},
+["Записи Дорена"] = {
+	["english"] = "Doren's Logs",
+	["pages"] = {
+		"Высадка!\n\nЭтой ночью мы несколько раз вступали в бой с кораблями Орды. Мы потеряли много бойцов, но враг потерял еще больше. Мы воспользовались густым туманом, чтобы скрыть свои передвижения. Ордынцы, конечно же, решили, что нас значительно больше, так как к утру они уплыли на юго-восток.\n\nНеожиданно туман расступился, и мы увидели перед собой огромную скалу. Земля! Не отмеченная ни на одной карте! Я отправил сообщение на \"Небесный искатель\", чтобы организовать поддержку с воздуха.",
+		"День 2\n\nПрибыл \"Небесный искатель\", его гирокоптеры исследовали окрестности. Оказывается, мы обнаружили не какой-то не отмеченный на картах остров, а целый континент! Я собираюсь немедленно начать перебазировку людей и вещей на скалы, там у нас будет отличная точка наблюдения за океаном.\n\nНам не удается установить постоянной связи с флотом. Кажется, что силы Орды здесь повсюду. У нас нет связи с флагманским кораблем адмирала Тейлора, который скорее всего вступил в бой с кораблями Орды, виденными нами пару дней назад. Слава Свету, обошлось без кровопролития.\n\nИз Штормграда не поступает никаких известий. Я собираюсь взять инициативу в свои руки и занять эту землю.",
+		"5-й день\n\n\"Небесный искатель\" оставил нам много гирокоптеров, чтобы нам было просто основать базу. Мои люди обнаружили заброшенные руины и используют их в качестве нашего опорного пункта. Руины и окружающие их джунгли небезопасны для воздушной техники, поэтому мы используем в качестве временной авиабазы поляны, найденные к югу отсюда.\n\nЭтим утром у нас произошла первая встреча с местным населением. Это пандарены! Я и не думал, что они действительно существуют. Может быть, эта таинственная земля – их родной дом?",
+		"День 7\n\nПандарены задают нам множество вопросов, но ничем не помогают. Должен признать, что я чрезвычайно встревожен, но никак не могу понять, почему. Такое ощущение, что здесь все мои сомнения стали гораздо сильнее. Орда вернется, я уверен в этом. Но сколько их будет? Будут ли они наступать с моря или с воздуха? Я должен быть готов к этому!\n\nМои люди работают, не смыкая глаз. Пайки урезаны вдвое. Пандарены готовы продавать нам еду, но Штормградские векселя их не интересуют, а качество нашего оружия вызывает у них лишь смех. Все это меня просто бесит. Понимают ли они, что вот-вот окажутся в самом сердце сражения?",
+		"День 9\n\nС \"Небесного искателя\" сообщили, что этим утром на море было сражение и они взяли ордынцев в плен, но затем связь внезапно прервалась. Я боюсь самого худшего.\n\nВ общем-то, я боюсь очень многих вещей. Мы здесь совершенно одни. Подкрепления из Штормграда ждать еще несколько недель. Флагманский корабль Тейлора пропал, теперь и с \"Небесным искателем\" нет связи. Может, мы терпим поражение на море? Меня переполняют сомнения. Мне не удается привести свои мысли в порядок. Клянусь, моя кожа теряет цвет. Что со мной происходит?",
+		"День 12\n\nКаждый день я вглядываюсь в горизонт, пытаясь увидеть корабли Орды. Мы не готовы. Наша воздушная база в развалинах, башня достроена лишь наполовину. Некоторые пандарены предложили свою помощь, и я согласился.\n\nКогда-то много лет назад я выследил полковника Курцена, когда безумие настигло его в Тернистой долине. До сих пор я не понимал, как он себя чувствовал. Но теперь я совсем один. Ночами я лежу без сна в этой удушающей жаре, и, клянусь, тени нашептывают мне о моей смерти. Нужно достроить эту воздушную базу. Если будет нужно, я закую пандаренов в наручники. Орда... Орда...",
+		"День 14\n\nЯ увидел, что с берега запускают сигнальные ракеты. Какая-то тень движется в тумане. Что это? Корабль Орды?\n\nЯ отдал приказ поднять в воздух наши гирокоптеры. Но они могут не успеть добраться туда вовремя. Все заняли боевые посты. Вот это и случилось.\n\nМеня переполняют страх и злоба. Я сам на себя не похож. Может, победа принесет мне утешение?\n\nЕсли это просто один корабль Орды, то у них нет шансов. Мы уничтожим их.",
+	},
+},
+["Доргар Камнелоб"] = {
+	["english"] = "Dorgar Stoenbrow",
+	["pages"] = {
+		"Доргар Камнелоб\nВоин Алого ордена\nВластитель Красных пещер\nПоследний раз был замечен в горах Альтерака",
+	},
+},
+["Эдикт Властелина Грома"] = {
+	["english"] = "Edict of the Thunder King",
+	["pages"] = {
+		"Что стало с моими могу? Взгляните на себя! Вы ничуть не лучше тех дикарей, что когда-то возводили по нашей воле города.\n\nМогу должны править. Для этого нас и создали. В самих наших словах ощущается сила! А те, кто не склонится пред нами, падут под нашим натиском. \n\nСила заключается в единстве, а единство – в повиновении. Подчиняться императору и требовать покорности от подданных – это естественный порядок вещей.",
+		"Когда вы сражаетесь друг с другом, то противитесь своей собственной природе. Но в этом мире есть светоч порядка – та сила, что исходит от императора и наполняет землю до самых ее глубин. Не забывайте об этом. \n\nВсе вместе наши голоса прозвучат над миром, как раскат грома перед бурей. Вы и есть эта буря! \n\nПоднимитесь с колен, могу, и займите место, принадлежащее вам по праву рождения! Вы созданы, чтобы править!",
+	},
+},
+["Обуздание страстей"] = {
+	["english"] = "Embracing the Passions",
+	["pages"] = {
+		"Укрощенные лесные хозены, несмотря на то, что приняли культуру пандаренов, сохранили в глубине души склонность к простым радостям своего народа. Они любят охотиться и рыбачить, и могут атаковать любого, кто оказался в их охотничьих землях. Ситуация осложняется тем, что охотничьи земли хозенов редко имеют четко очерченные границы. К счастью, большинство хозенов находится под наблюдением пандарийских монахов.",
+	},
+},
+["Падение Империи"] = {
+	["english"] = "Empires' Fall",
+	["pages"] = {
+		"С другой стороны, достоверно установлено, что раса ночных эльфов обрела могущество именно после обнаружения Источника Вечности. Несмотря на все попытки троллей защитить свои владения, эта раса стремительно захватывала первобытный Калимдор. Сильная магия, недостижимая для суеверных троллей, позволила ночным эльфам добиться того, что не смогли сделать акир, – разрушить две великие империи.",
+		"Ночные эльфы разрушали укрепления троллей и препятствовали снабжению их войск. Бессильные перед магией, тролли проигрывали битву за битвой. Сравнившись в жестокости и хитрости с троллями, ночные эльфы навлекли на себя вековечную ненависть последних. Прошло несколько лет, и от империй Амани и Гурубаши остались жалкие осколки.",
+		"В конце концов ночные эльфы обожглись именно на том чародейском огне, который стремились подчинить. Их безрассудное злоупотребление магией привлекло в мир демонов Пылающего Легиона, которые нанесли существенный урон эльфийской цивилизации. Насчет войн демонов с троллями ничего не известно, но можно предположить, что нашествие не обошло их стороной.",
+		"В конце страшного противостояния, известного под названием Войны древних, Источник Вечности взорвался. Мощная волна разорвала Калимдор на части, превратив его в несколько менее крупных континентов и островов.",
+		"Но несмотря на все катаклизмы, остатки империй Амани и Гурубаши по-прежнему существуют в современных Кель'Таласе и Тернистой долине. Колонии акир Азжол-Неруб и Ан'Кираж в Нордсколе и Танарисе также пережили катастрофу. Ужаснувшись гибелью большей части привычного им мира, тролли понемногу начали восстанавливать свое былое могущество.",
+	},
+},
+["Пустой бочонок старшего хмелевара Синь Во Иня"] = {
+	["english"] = "Empty Keg of Brewfather Xin Wo Yin",
+	["pages"] = {
+		"Узорный краник этого бочонка выполнен в форме сердца, а это значит, что он когда-то вышел из хмелеварни покойного Синь Во Иня по прозвищу \"несчастный\". Давным-давно этот знаменитый старший хмелевар изготовил \"Сердечный бальзам\", волшебное варево, наполняющее душу мягким теплом и блаженством. Ходят легенды, будто Синь Во Иню так было жалко проданных бочек с бальзамом, что глаза его постоянно полнились горючими слезами. Вполне возможно, что и по этому бочонку он безутешно плакал. И, видно, не зря, ведь бочонок опустел. От такой мысли и вам сделалось немного горько.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Каменная табличка с гравировкой"] = {
+	["english"] = "Engraved Stone Plaque",
+	["pages"] = {
+		"В этой темной расселине обосновались истинные тени безумия и мести, и многие граждане Оргриммара лишились жизни.\n\nДавайте же не будем забывать уроки, усвоенные нами при осаде Оргриммара.\n\nПорознь мы падем. Вместе мы – Орда.",
+	},
+},
+["Нацарапанная записка"] = {
+	["english"] = "Etched Note",
+	["pages"] = {
+		"Эта наковальня является собственностью Джордана Стивелла – Просьба НЕ трогать!\n\n- Джордан",
+	},
+},
+["Дневник эксгуматора"] = {
+	["english"] = "Exhumer's Journal",
+	["pages"] = {
+		"Мы почти отыскали затерянное святилище! Болото полно опасностей, и мы уже потеряли немало слуг, но все эти жертвы не будут напрасны.\n\nКак только мы проникнем в главный зал, мы заберем священные реликвии Рыцаря и вернем их на законное место.",
+		"Это болото... с ним что-то не так. Мы еще только собираемся прорываться в главное помещение святилища, но я уже чувствую, что от него исходит что-то зловещее. Я ощущаю тепло – и, казалось бы, то, что в пещере все еще горит Свет Рухмар, должно успокаивать меня... но я чувствую, что там затаилась какая-то злая сила.\n\nВряд ли Рыцарь все это время спал спокойно...",
+	},
+},
+["Изгнание высших эльфов"] = {
+	["english"] = "Exile of the High Elves",
+	["pages"] = {
+		"Шли века, сообщество ночных эльфов набиралось сил и разрасталось, занимая все новые и новые территории леса, который они назвали Ясеневым. Появились и расплодились многие существа, жившие еще до Великого Раскола, – например фурболги и иглогривы. Ночные эльфы жили под управлением мудрых друидов и наслаждались эрой небывалого спокойствия и мира под звездами.",
+		"Однако многие из выживших высокорожденных становились все беспокойнее. Как и Иллидан, они пали жертвами магии, и изо дня в день их снедало искушение, безумное желание вновь почувствовать энергию Источника Вечности и насладиться его магией. Дат'Ремар, вспыльчивый и беззастенчивый предводитель высокорожденных, начал в открытую насмехаться над друидами и обвинять их в трусости за то, что они отказались от использования магии, которая, как он считал, принадлежала им по праву.",
+		"Малфурион и друиды не слушали речей Дат'Ремара и объявили высокорожденным, что любое использование магии будет караться смертью. Однако Дат'Ремар и его последователи все же попытались нарушить закон друидов, но попытка эта закончилась крахом, и в результате в Ясеневом лесу разразилась ужасная магическая буря.",
+		"Друиды не смогли заставить себя вынести стольким сородичам смертный приговор, поэтому решили просто изгнать безрассудных высокорожденных из своих земель. Дат'Ремар и его сородичи были только рады освободиться от традиционного общества друидов, поэтому они быстро погрузились на флотилию судов и пустились в плавание по морям. Никто не знал, что ждет их за исполинским бурлящим Водоворотом, но высокорожденные хотели найти себе новый дом, где они могли бы безнаказанно практиковать свою любимую магию.",
+		"Высокорожденные, или Кель'дорай, как их ранее называла Азшара, в конце концов достигли берегов восточных земель, которые люди позднее назовут Лордерон. Они планировали создать свое собственное королевство магов, Кель'Талас, и отречься от поклонения луне и от ночного образа жизни, свойственных ночным эльфам. С тех пор и вовеки они станут поклоняться солнцу и будут известны как высшие эльфы.",
+	},
+},
+["Феллари Быстрая Стрела"] = {
+	["english"] = "Fellari Swiftarrow",
+	["pages"] = {
+		"Феллари Быстрая Стрела\nКапитан следопытов Алого ордена\nЖительница Кель'Таласа\nПропала без вести в Серебряном бору",
+	},
+},
+["Феррен Маркус"] = {
+	["english"] = "Ferren Marcus",
+	["pages"] = {
+		"Феррен Маркус\nАббат Монастыря Алого ордена\nГражданин Стратхольма\nПогиб при обороне монастыря во время Первого летнего штурма",
+	},
+},
+["\"За короля и совет\""] = {
+	["english"] = "For Council and King",
+	["pages"] = {
+		"Иерархическая система общества зандаларов тысячелетиями оставалась неизменной.\n\nОснову империи, касту крестьян, составляют работящие фермеры, рыбаки и ремесленники. Старейшины зандаларов говорят им, какие сажать овощи, когда собирать урожай и как себя вести. Неповиновение старейшинам считается неповиновением богам и карается изгнанием или смертью.\n\nКаста воинов стоит выше касты крестьян. Воины – оружие в руках короля и опора совета. Зандаларские воины не ценят ловкость. Их любимый стиль боя заключается в смешивании грубой силы и древней магии.",
+		"Ученые и жрецы указывают зандаларам, как им вести себя в любой ситуации. Эти почтенные знатоки магии и их предшественники в течение пятнадцати тысячелетий накапливали знания. Великие жрецы являются членами совета зандаларов, который дает рекомендации королю и следит за тем, чтобы все его приказы выполнялись. Совет Занчули заседает перед каждой битвой или перед принятием важного решения.\n\nНа золотом троне восседает великий король Растахан, правящий всеми зандаларами.\n\nВедомый самими богами зандаларов, он правил своим народом более двух столетий.",
+	},
+},
+["Владыка лесов и первые друиды"] = {
+	["english"] = "Forestlord and the first Druids",
+	["pages"] = {
+		"Прошло время, и Кенарий стал сильным, как его великий отец. Брат деревьев и звезд, этот великий охотник странствовал по миру, напевая умиротворяющую песню рассвета. Все живое склонялось перед его грацией и красотой. Никого на свете не было мудрее сына луны и белого оленя.",
+		"Со временем Кенарий стал другом Шу'хало и рассказывал им о мире. Дети земли назвали его своим братом и поклялись помогать ему в заботе о полях жизни и любимых созданиях Матери-Земли.",
+		"Кенарий научил детей земли разговаривать с деревьями и травами. Шу'хало стали друидами и совершили множество чудес, приносящих земле здоровье. Многие поколения Шу'хало охотились вместе с Кенарием и хранили землю от темных сил.",
+	},
+},
+["Главный кузнец Дэн"] = {
+	["english"] = "Forgemaster Deng",
+	["pages"] = {
+		"На вершине славы Лэй Шэня прославленная Кузня Грома работала день и ночь, и лязг металла там не прекращался ни на минуту.\n\nГлавный кузнец Дэн сам присматривал за работой кузен. Из-под его молота выходило знатное оружие… Он знал, как сделать превосходные клинки из обычного металла – идеальной формы, идеальной силы.\n\nКак раз перед смертью главный кузнец создал свои лучшие творения: копье, топор и шлем, которые были преподнесены самому Лэй Шэню.\n\nНа похоронах Дэна Лэй Шэнь произнес следующие слова: \"Сегодня эту землю покидает звезда, уходящая в небеса\".",
+	},
+},
+["Окаменелое яйцо"] = {
+	["english"] = "Fossilized Egg",
+	["pages"] = {
+		"Найденное в знойной пустыне Танарис, это необычное яйцо остается загадкой для современных экологов. Работы по определению его возраста позволяют предположить, что этому яйцу около тысячи лет. Несмотря на то что определенные элементы указывают на его принадлежность насекомовидному существу, его настоящее происхождение невозможно понять. Особей, откладывающих столь характерные яйца, все еще предстоит обнаружить.",
+	},
+},
+["Записи Га'трула"] = {
+	["english"] = "Ga'trul's Logs",
+	["pages"] = {
+		"День 12\n\nУважаемый Вождь-\n\nПосле гибели Крага в бою с флагманским кораблем Альянс я принял командование флотом на себя. Он погиб как герой и испустил свой последний вздох, только узнав о поражении Альянса.\n\nНаш флот понес тяжелые потери в этом бою, но один за одним наши поврежденные корабли победно пристают к берегам этой необычной земли. Ее нет ни на одной карте.\n\nЯ приказал батракам построить для нас безопасную гавань, где мы сможем заняться ремонтом.",
+		"День 13\n\nТолстые создания, напоминающие медведей, называют эту землю своим домом. Это \"пандарены\". Далган говорит, что какой-то пандарен участвовал в основании Оргриммара, но Далган пьет не просыхая и врет напропалую.\n\nНе похоже, чтобы от этих пандаренов исходила угроза, но у них есть необходимые нам ресурсы: пища, дерево, камень... Если все это говорит о богатстве найденных нами земель, то хорошо бы Орде завладеть ими.",
+		"День 14\n\nРазведчики обнаружили древние, пустынные руины у скалы, возвышающейся над бухтой. Это идеальное место для крепости. Не думаю, что в ближайшие недели нам стоит ожидать подкрепления из Оргриммара. Поэтому я взялся за древние манускрипты и отдал нашим чернокнижникам приказ начать призыв демонических сил для укрепления нашей армии. Такая демонстрация силы без сомнений устрашит пандаренов и заставит их присоединиться к нам.\n\nГлубокой ночью к берегу приплыл целый батальон отрекшихся, которые выжили в морской битве. Похоже, они не тонут. Вонь стоит страшная, но от них может быть польза.",
+		"День 15\n\nИзвестия о нашей победе на море и открытии этих новых земель достигли Оргриммара. Не сомневаюсь, подкрепление уже в пути. Наши разведчики заметили корабли Альянса, плавающие среди обломков на месте морского сражения. Они наверняка вернутся. Мы будем к этому готовы.\n\nОт пандаренов никакого толка. То, чем мы готовы торговать, их не интересует. Даже при виде самых мощных артефактов они кривят свои черные носы. Моим солдатам нужна еда. Не можем же мы питаться телами утонувших матросов, как это делает нежить. Заносчивость пандаренов заставляет мою кровь просто бурлить от ярости. Я еле держу себя в руках.",
+		"Ден 17\n\nАльянс уже близко. Я чувствую это. Не знаю, в чем причина, но я постоянно ощущаю нарастающие тревогу и страх. В этих землях есть что-то такое, что буквально высасывает из меня силы. Я приказал чернокнижникам призвать демонического наблюдателя, чтобы мы могли держать под контролем берега. Они настаивают на том, что мы не сможем контролировать его. В то время, когда мне так нужно поддержка, меня окружают трусы. Почему я так сильно сомневаюсь во всем? Клянусь, даже моя кожа теряет свой цвет.",
+		"День 19\n\nПандарены прислали своего представителя, который попросил нас перестать рубить деревья. Я сказал ему, что им стоило бы прислушаться к моей просьбе снабдить нас древесиной, хорошенько вздул и отправил восвояси. Выплеснув свой гнев, я почувствовал себя гораздо лучше.\n\nАльянс скоро вернется, времени у меня все меньше. Я должен что-то придумать, чтобы пандарены прислушались к нам. Может, если завладеть чем-то, что для них ценно, то это продемонстрирует им нашу силу? К тому же, у нас появится повод для сделки. У Белландры была отличная идея – похитить их детенышей.",
+		"День 21\n\nК югу от нас появился боевой корабль Альянса. Я отдал приказ всем занять боевые посты. Я лично буду руководить обороной лагеря Гаррош'ар.\n\nЯ чувствую, как внутри меня растет великая тьма. От пролития крови Альянса мне должно стать легче. Я готов.",
+	},
+},
+["Записи Гарли"] = {
+	["english"] = "Garley's Journal",
+	["pages"] = {
+		"Я старался соблюдать осторожность и не притрагиваться к образцу. Подобная бдительность оказалась целесообразной, когда подтвердились мои первоначальные предположения о том, что данный предмет на самом деле относится к древнему божеству. Любой контакт с артефактом представляет серьезную угрозу для моей жизни.\n\nНадеюсь, меня еще не поразила проказа.",
+		"Материал похож на саронит с тем исключением, что он не обладает определенными свойствами последнего. По крайней мере, место его происхождения установлено неверно. Возможно ли, чтобы в недрах Восточных королевств скрывалось древнее божество? Предыдущие экспедиции вернулись ни с чем, но события, последовавшие за возвращением Смертокрыла, явили миру несколько тайных артефактов.",
+		"Я посылаю образец в Луносвет. В этом городе обеспечены более безопасные условия для работы исследователей с артефактом, представляющим столь значительную опасность.\n\nПомимо этого, я прячу этот журнал в тайном месте. Если Лига исследователей доберется до журнала, то последствия могут быть катастрофическими!",
+	},
+},
+["Генерал Туралион"] = {
+	["english"] = "General Turalyon",
+	["pages"] = {
+		"Генерал Туралион\n\nБывший наместник лорда Андуина Лотара. Рыцарь ордена Серебряной Длани. Верховный генерал экспедиции Альянса, которая отправилась в Дренор, родной мир орков. Предположительно погиб.\n\nЭзарус тар-но Дарадор – Кровью и честью мы служим.\nТы был правой рукой справедливости и добродетели, старый друг. Твое имя всегда будет почитаться в наших залах.\n\n- Лорд Утер Светоносец, рыцарь ордена Серебряной Длани",
+	},
+},
+["Геру-Странник"] = {
+	["english"] = "Geru Strider",
+	["pages"] = {
+		"Самые большие из птиц-долгоногов, геру, весьма немногочисленны и редко встречаются.",
+	},
+},
+["Погрызенный ящик"] = {
+	["english"] = "Gnawed Crate",
+	["pages"] = {
+		"Что бы ни было в этом ящике, теперь он пуст. Однако горен, похоже, с одинаковым удовольствием пожрал содержимое ящика и обгрыз сам ящик.",
+	},
+},
+["Позолоченная фарфоровая похоронная статуэтка"] = {
+	["english"] = "Gold-Inlaid Porcelain Funerary Figurine",
+	["pages"] = {
+		"Когда умирает кто-то из близких, у мастера заказывают статуэтку по образу усопшего. Говорят, она помогает смягчить боль утраты. Эта статуэтка олицетворяет прекрасную Линь, хранителя истории, а нанесенные на ней надписи гласят, что ее унесла жуткая чума, бушевавшая в долине Четырех Ветров во времена короткого правления императора хозенов Рикктика.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Великий адмирал Даэлин Праудмур"] = {
+	["english"] = "Grand Admiral Daelin Proudmoore",
+	["pages"] = {
+		"Командующий флотами Альянса\n\nДруг Штормграда",
+	},
+},
+["Зеленые холмы Тернистой долины"] = {
+	["english"] = "Green Hills of Stranglethorn",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">ЗЕЛЕНЫЕ ХОЛМЫ ТЕРНИСТОЙ ДОЛИНЫ</H1><BR/><H3 align=\"center\">Хеминг Эрнестуэй</H3></BODY></HTML>",
+		"Наш первый день прошел, как обычно проходят первые дни. Большую часть времени мы обустраивали лагерь. Мне удалось найти идеальное место у небольшой чистой заводи. Старые обветшавшие мостки указывали на то, что в этом месте когда-то жили. Кто именно там жил, мы пока не знали.",
+		"В эту экспедицию со мной отправились Аджек Руак и сэр С. Дж. Эрлджедин, а также мой верный слуга Барнил Каменный Горшок. С отцом Аджек мы когда-то сражались за Альянс плечом к плечу. Удивительно, как она выросла за это время. Отец обучил ее искусству владения оружием. Ее навыки стрельбы из лука настолько хороши, что невольно заставляют задуматься, не течет ли в ее жилах кровь эльфов.",
+		"Сэр С. Дж. Эрлджедин принадлежит к знатному людскому роду. Его отец, граф Эрлджедин, славился своей щедростью. Именно граф выступал за улучшение условий труда для Гильдии каменщиков во время восстановления Штормграда после Второй Великой войны.",
+		"В последующие годы, после того как Штормград обманул братство Каменщиков, сэр Эрлджедин разочаровался в аристократии Королевства. Он больше не хотел принадлежать к Благородным Домам, хотя право это унаследовал от отца.\n\nНо не будем отвлекаться. Мое повествование не политический трактат и не биография. Я всего лишь делюсь опытом участия в большой охоте среди зеленых холмов Тернистой долины.",
+		"Мы проснулись чуть свет. Барнил занялся приготовлением завтрака. Мне показалось, что мысли Аджек в этот момент были где-то далеко. Впереди нас ждал долгий день и немало опасностей. Нужна была полная сосредоточенность, иначе последствия могли быть печальными. Но Аджек была не в состоянии отвести взгляд от Барнила, занятого мытьем столовых принадлежностей.",
+		"Когда я уже собирался спросить, почему Аджек не участвует в обсуждении плана сегодняшней охоты, она выхватила стрелу из колчана, натянула тетиву и выстрелила в бедного Барнила. Однако стрела пролетела мимо. Разинув рот, Барнил наблюдал за тем, как возле него на поверхность реки всплыл огромный кроколиск, а между глаз у него торчала стрела Аджек.",
+		"Мы отправились на запад через дикие непроходимые джунгли. В поисках добычи мы медленно, но верно прокладывали себе путь сквозь густую растительность. К нашему сожалению, утром все было тихо. Даже ветер не шумел в кронах деревьев. К полудню мы начали волноваться. Шаги Барнила уже не были столь осторожными и тихими, как раньше. Теперь он неуклюже переваливался с ноги на ногу, с треском ломая упавшие на землю сухие ветки.",
+		"После очередного неверного шага Барнила Эрлджедин положил свою тяжелую руку ему на плечо. Мы с Аджек переглянулись, уверенные, что он решил-таки напомнить Барнилу о необходимости соблюдать осторожность. Но вместо этого Эрлджедин кивнул головой в сторону лежащего неподалеку дерева. Оттуда на нас пристально смотрели два черных глаза, а под ними была пасть, полная острых зубов.",
+		"Этим чудищем был самец тигра Тернистой долины. Прежде чем мне удалось взвести винтовку, Эрлджедин поднял свой арбалет и выстрелил в зверя. Стрела ушла немного в сторону и вонзилась в левый бок тигра. Зверь попытался убежать, но его рана была слишком глубокой. Он сумел сделать лишь несколько шагов, а затем его настиг метательный топор Барнила.",
+		"Первый успех взбодрил нашу команду. Барнил налил всем меда, чтобы отметить его. Но нашему празднованию не суждено было продолжаться долго. Когда мы подготавливали тушу к транспортировке в лагерь, внезапно раздался ужасный рев. Я в жизни не слышал такого леденящего кровь звука.",
+		"На скалистом склоне, возвышавшемся над нами, в лучах заходящего солнца вырисовывался силуэт самой большой кошки, которую я когда-либо видел. Мне удалось сделать неловкий выстрел из ружья, но кошка не двинулась с места. Она издала еще один ужасный рык, громче прошлого, и исчезла.\n\nМы собрали вещи и мрачно двинулись в лагерь.",
+		"Я обещал своим товарищам, что на следующий день мы отправимся охотиться на пантер, так как их мех очень высоко ценится по всему Азероту. Учитывая, что большинство охотников и торговцев мехом сейчас храбро отдавали свои жизни, сражаясь за Альянс, этот мех еще больше возрос в цене.",
+		"Аджек и сэр Эрлджедин страстно желали научиться стрелять из дворфийских винтовок. Я велел им оставить свое примитивное оружие в лагере. Мы с Барнилом снарядили их лучшими образцами стальгорнских ружей.",
+		"В тот день мы пошли на юг, двигаясь по свежим следам пантеры. Вскоре мы пришли к ущелью, через которое был перекинут длинный веревочный мостик. При виде этого чуда инженерной мысли мне сразу вспомнилось, как описывал этот район Бранн. Тролли, коренные жители этих мест, всегда считались примитивной расой, но мастерство, с которым они сконструировали этот мост через непреодолимую пропасть, было неоспоримо.",
+		"Аджек не понадобилось много времени, чтобы выследить пантеру; она ушла на юго-запад. Мы шли быстрым шагом, с оружием наготове, и уже предвкушали успех. Треск веток, донесшийся из рощи неподалеку, немедленно привлек наше внимание. Там кто-то был. Одного взгляда на Барнила хватило, чтобы он понял меня. Он медленно опустил винтовку. Эта добыча – не для нас, а для наших спутников-людей. Сколько пантер уже погибло от наших пуль! Нет, эта добыча – не для нас.",
+		"Аджек и сэр Эрлджедин стояли наготове, направив ружья в сторону колючего кустарника у подножия раскачивающихся деревьев. Полуденное солнце нещадно палило. Капля пота медленно скатилась по виску Эрлджедина, когда он взводил курок. В момент щелчка из кустов на поляну выпрыгнула огромная черная пантера – невероятно грациозное животное.",
+		"Пантера понеслась вдоль опушки леса, а люди ни на секунду не спускали с нее взгляда. Стволы их ружей медленно двигались, оставаясь идеально параллельными друг другу. Барнил посмотрел на меня нетерпеливым взглядом, но я отрицательно покачал головой. Это была охота людей, а не наша. Эрлджедин выстрелил. Раздался оглушительный грохот, но пантера осталась цела. Вероятно, Эрлджедин не был готов к такой мощной отдаче.",
+		"Ружье резко подалось назад в его руках. Дуло ушло в сторону и попало под ствол ружья Аджек. И именно в этот момент Аджек спустила курок. Неуклюже вздернувшееся к кронам деревьев ружье отчетливо и громко выстрелило. Стая птиц, крича, вспорхнула в небо, разлетаясь во все стороны. Струйка дыма вилась из дерева. Мы в оцепенении смотрели, как гигантская ветка рухнула прямо на убегающую пантеру и сломала ей хребет.",
+		"Шли недели, шкур пантер и тигров становилось все больше. Мне показалось, что настало время сосредоточить наши силы на более серьезной добыче: ящерах.\n\nЛюди поблагодарили нас с Барнилом за уроки, но отказались использовать огнестрельное оружие. Аджек чувствовала себя куда более уверенно с луком в руках, а сэр Эрлджедин не расставался со своим мощным арбалетом.",
+		"С первыми лучами солнца мы отправились на охоту на юг, за руины Ткаши. Барнил беспокоился, что мы можем наткнуться на троллей племени Кровавого Скальпа. Мои слова о том, что это племя сейчас занято войной со своими заклятыми врагами из племени Дробителей Черепов, конечно же, ничуть не успокоили его. Меня же возможность засады беспокоила гораздо меньше: в моих руках была заряженная винтовка, на поясе – полная сумка пороха, а рядом – трое отличных охотников.",
+		"Я помню битву с армией Пылающего Легиона: враги надвигалась со всех направлений, а прямо передо мной возвышался огромный инфернал. Толпа злобных троллей по сравнению с этим кажется безобидной, как заяц в горах Дун Морога.\n\nК величайшей радости Барнила, мы миновали руины Ткаши без всяких приключений. Мы продолжали двигаться на запад к Великому морю, обходя руины Зул'Кунды. Взобравшись на высокий утес над морем, мы увидели нашего первого ящера.",
+		"Зверь даже не обнаружил нашего присутствия. Если быть честным, единственное приветствие, которое он получил от экспедиции, – это пулю между глаз.\n\nАджек одобрительно кивнула мне, а сэр Эрлджедин радостно крикнул: “Ура!” Настало время отпраздновать успех, выкурив трубку, затерявшуюся в глубинах моего рюкзака. Барнил отправился на вершину утеса за трофеем. Вид поверженного чудища доставлял мне немалое удовольствие, как и любая значительная победа.",
+		"Но мне не пришлось долго наслаждаться успехом. На вершине утеса, прямо над несчастным Барнилом, появились несколько силуэтов.\n\n“Беги, Барнил!” – закричали мы. Аджек, сэр Эрлджедин и я выстрелили поверх головы Барнила в сторону преследующих его ящеров. Кто-то даже убил одного из них.",
+		"Наших суматошных выстрелов оказалось достаточно, чтобы дать Барнилу время убежать. Барнил скатился с холма и присоединился к нашей группе. Мы побежали в джунгли, преследуемые стаей свирепых ящеров-кнутохвостов.\n\nОхотники превратились в добычу.",
+		"Я вел отряд по направлению к морю в надежде, что вода остановит ящеров. Но в спешке мы зашли слишком далеко на север, на возвышенность. Исправлять ошибку было уже поздно. И вина была в этом моя. Мы остановились на краю отвесной скалы, а ящеры были уже в нескольких шагах от нас.",
+		"Я медленно шагнул вперед, держа ружье наготове. Я привел этих отважных охотников к гибели. И готов был погибнуть сам, защищая их. Ящеры-кнутохвосты известны своей свирепостью и неумолимой жаждой крови. Их было намного больше нас. Но я бы себе не простил, если бы позволил расправиться с собой и моими товарищами, не прикончив сначала несколько этих тварей!",
+		"Аджек и сэр Эрлджедин вскинули свое оружие, прикрывая меня с боков, спиной к морю. Барнил обреченно вздохнул и обнажил свой топор. Кнутохвосты были практически рядом с нами. Их уверенные шаги замедлились. Они крадучись подбирались к своим жертвам, зная, что загнали нас в ловушку.",
+		"И тогда случилось чудо. Прямо рядом с нами раздался резкий, ужасающий рев огромного белого тигра. Несмотря на количество, ящеры развернулись и бросились врассыпную. Мы увидели лишь белый сполох, когда тигр минул нас и помчался за одним из ящеров. Нам не требовалось команды. Все четыре члена нашего отряда знали, что пришло время бежать.",
+		"Мы без остановки мчались назад, к нашему лагерю. Позже той ночью мы тихо сидели у костра, зная, что наши жизни были спасены по странной прихоти судьбы. Этому риску подвергается любой участник большой охоты. Мы – игрушки в руках судьбы. Когда-нибудь каждый из нас встретится с хищным оскалом смерти. И ваш покорный слуга рад, что эта встреча не произошла на зеленых холмах Тернистой долины.\n\n--Конец--",
+	},
+},
+["Уход за вурдалаками"] = {
+	["english"] = "Grooming for Ghouls",
+	["pages"] = {
+		"Уход за кожей вурдалаков\nПособие по санобработке и утилизации отходов",
+		"Повязки\n\nРаны, кровоточащие чаще трех раз в день, рекомендуется перевязывать. Некоторые вурдалаки предпочитают для этой цели руническую ткань благодаря ее натуральному пурпурному цвету, который приобретает восхитительно мерзкий багровый оттенок в контакте с кровью. Однако многие отдают предпочтение современным тенденциям моды и выбирают дерзкую желтизну льняной корпии. Не бойтесь экспериментировать!",
+		"Струпы и язвы\n\nОтдайте дань вашему переменчивому настроению и выразите его с помощью слегка покрытых коростой, гниющих ран, щедро покрывающих все тело. Однако не позволяйте им засыхать полностью! Зажившая рана – это признак дурного вкуса.",
+		"Черви и насекомые\n\nОх, неужели вы откажетесь завести себе нескольких домашних животных? Они неприхотливы, мало едят и прекрасно дополняют ваш разлагающийся облик. Однако если в вас завелись пчелы или осы, немедленно обратитесь на ближайшую скотобойню для дезинфекции.",
+		"Недостающие конечности\n\nЕсли в разгар боя у вас отвалилась рука или нога, не спешите ее подбирать! Сражайтесь тем, что осталось. Наши специалисты подберут вам наилучшую замену, идеально отвечающую всем особенностям вашей анатомии. Но это будет после драки; пока же, в худшем случае, позаимствуйте недостающую часть тела у своего коллеги!",
+		"Каннибализм\n\nВо избежание поедания своих же коллег, выждите пять секунд после того, как тело упало на землю, и только после этого приступайте к трапезе. Осторожно, не спутайте мертвые тела со спящими послушниками!",
+	},
+},
+["Справочник по побочным эффектам воскрешения"] = {
+	["english"] = "Guide to the Side Effects of Reanimation",
+	["pages"] = {
+		"Добро пожаловать, новые солдаты Плети! Чувствуете ли вы восторг освобождения от смертных предрассудков и презренных желаний плоти? Отныне вам не надо тратить время на сон, укрывать свое тело от причуд стихий, беспокоиться о красе волос и ногтей. Не правда ли, это восхитительно?",
+		"Однако, в жизни нежити есть несколько незначительных деталей, на которые вам необходимо обратить внимание.\nВсегда следите за состоянием своей плоти. Гниющие конечности, несомненно, могут напугать противника, но рука, отвалившаяся в разгар боя, может повлиять на его исход не в вашу пользу. \nПривыкайте к своему запаху. Это не вонь, это аромат.\nИзбегайте живых существ, особенно собак.",
+		"Следите за речью. Если вы потеряете нижнюю челюсть, это может привести к переводу на менее почетную должность, на которой ваши дефекты произношения будут не столь заметны.\nК сожалению, алкогольные напитки больше не будут оказывать на вас желаемого эффекта.\nПринимайте кровавые ванны каждый день (добавлять пену не рекомендуется). \nИзбегайте пастельных тонов в одежде. Они не подходят под цвет вашей кожи. \nЭти штаны больше не будут вас полнить.",
+	},
+},
+["Гура Освобожденный"] = {
+	["english"] = "Gura the Reclaimed",
+	["pages"] = {
+		"Лорд Гура повелевал силой бурь и мог одним мановением руки окутать всю землю грозовым облаком, пронизанным электричеством. Тех несчастных, что оказались в эпицентре этой грозы, ждала страшная смерть.",
+	},
+},
+["Эпитафия Гуртана"] = {
+	["english"] = "Gurthan's Epitaph",
+	["pages"] = {
+		"Здесь томится в ожидании вождь клана Гуртан, повелитель зверей и покоритель народов.\n\nОн ждет, пока сама ЗЕМЛЯ СКЛОНИТСЯ перед ним, подобно диким тварям.\n\nОн ждет, пока СОЛНЦЕ ПАДЕТ перед ним, как некогда пали побежденные народы.",
+	},
+},
+["Полусъеденный скелет"] = {
+	["english"] = "Half-Eaten Skeleton",
+	["pages"] = {
+		"Кажется, этот искатель приключений разбился, упав с большой высоты.",
+	},
+},
+["Хацинь из Сотни Копий"] = {
+	["english"] = "Haqin of the Hundred Spears",
+	["pages"] = {
+		"Задолго до того, как Лэй Шэнь пришел к власти, могу сражались с другими расами Пандарии. Битва с империей цзинь-юй длилась сорок дней и сорок ночей.\n\nГоворящие с водой цзинь-юй обрушивали на войска могу водовороты воды, насылали водяные пузыри, которые утаскивали солдат высоко в воздух, а затем лопались, обрекая тех на неизбежную смерть.\n\nНо когда силы могу были почти разбиты, один пехотинец решил бросить вызов обитателям глубин. Он взял корзину с гарпунами и начал метать их на поле битвы с потрясающей точностью.\n\nКопья легко пронзали водяные щиты говорящих с водой и положили конец их сопротивлению. Так и была выиграна эта битва.\n\nВпоследствии Властелин Грома наградил Хакина сотней золотых копий, выкованных лучшими кузнецами могу. Он стал одним из величайших лейтенантов Лэй Шэня, а после смерти его золотые копья положили вместе с ним в могилу.",
+	},
+},
+["Хартал Проницательный"] = {
+	["english"] = "Harthal Truesight",
+	["pages"] = {
+		"Хартал Проницательный\nПредводитель паладинов Алого ордена\nГражданин Азерота – рыцарь ордена Серебряной Длани\nПоследний раз был замечен входящим в проклятый город Стратхольм",
+	},
+},
+["Ненависть Кентавра"] = {
+	["english"] = "Hatred of the Centaur",
+	["pages"] = {
+		"Когда рассветные туманы рассеялись, наступили дни, которые мы помним. Кенарий ушел по своим неизбывным путям. Из за его ухода Шу'хало, нареченные тауренами, впали в отчаянье и забыли многое из того, чему он учил. Сменилось поколение, и они разучились говорить с деревьями и травами. И тогда их ушей вновь начали достигать темные голоса из недр земли.",
+		"Дети земли не слушали темных голосов, но их постигло страшное проклятье. Из темных западных земель пришли орды кровожадных существ – кентавров. Каннибалы и опустошители, кентавры набросились на Шу'хало, как саранча. Даже благословение Матери-Земли не помогло смелым охотника одолеть эту напасть.",
+		"Шу'хало навсегда покинули родные земли и стали кочевать по бескрайним равнинам. Но они хранят надежду, что их племена найдут новое пристанище под сенью любящих рук Матери-Земли.",
+	},
+},
+["Сердце Горгорека"] = {
+	["english"] = "Heart of Gorgorek",
+	["pages"] = {
+		"Внутри сундука находится артефакт, который вы нашли в глубинах кратера Дымных Скал. Имя ему – Сердце Горгорека.\n\nСердце медленно бьется, и каждый его удар эхом отдается в самих земных недрах.\n\nКак дремлющий зверь, оно ждет.",
+	},
+},
+["Приказ Адского Крика: эльфы крови"] = {
+	["english"] = "Hellscream's Command: Blood Elves",
+	["pages"] = {
+		"Кровавый Эфес, отправляю вам отряд эльфов крови. Лор'темар наконец-то решил соблюсти обязательства своего соглашения с Ордой. Я не верю в его благие намерения, но уж лучше мы используем его эльфов, чем будем выставлять своих орков против заклинателей Альянса.\n\nОставляю их в вашем распоряжении. Адский Крик следит за вами!",
+	},
+},
+["Приказ Адского Крика: гоблины"] = {
+	["english"] = "Hellscream's Command: Goblins",
+	["pages"] = {
+		"Галливикс в своем контракте был слишком мягок. С гоблинами надо, как с воргами. Пользуйся их помощью, но при этом помни, что они наверняка получают приказы еще и от торгового принца. Мне нужно знать, какую игру он ведет. Узнай это. За Орду!",
+	},
+},
+["Здесь покоится Теренас Менетил II"] = {
+	["english"] = "Here Lies King Terenas Menethil II",
+	["pages"] = {
+		"Здесь покоятся останки короля Теренаса Менетила II – Последнего Истинного Короля Лордерона.\n\nВелики были его дела, долгим было его правление, немыслимой была его смерть. \n\n\"Да не будет на отце вины за бесстыдные поступки сына. \nДа останется потерянной и забытой окровавленная корона\".",
+	},
+},
+["Астролябия высокорожденных"] = {
+	["english"] = "Highborne Astrolabe",
+	["pages"] = {
+		"Поднятая из затопленных руин Сурамара, эта все еще работающая астролябия была создана высокорожденными эльфами около двенадцати тысяч лет назад. Высокорожденные, одержимые магией, оккультными науками и астрономией, создали множество гениальных инструментов. Это приспособление позволяет нам получить неоценимое представление об уровне развития наук у древних ночных эльфов.",
+	},
+},
+["Холия Солнечный Щит"] = {
+	["english"] = "Holia Sunshield",
+	["pages"] = {
+		"Холия Солнечный Щит\nЗащитница Алого ордена\nПогибла при покушении на повелителя ужаса Белтериса",
+	},
+},
+["Доктор Горацио Монтгомери"] = {
+	["english"] = "Horatio Montgomery, M.D.",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><P>В память о моем дорогом учителе, Горацио М. Монтгомери, докторе медицины, целителе, учителе, друге.</P><BR/><H1 align=\"center\">50 BTFT – 25 ATFT</H1><BR/><P>\"Мир полон боли и тягот. Наша задача как целителей, НЕТ – мужчин или женщин, отдавших себя медицине, очистить его от всех болезней.'\" </P><BR/><P>- Почетный работник медицины, доктор медицины, доктор философии, доктор юридических наук, Великий Фермер, Экстраординарный Танцор, Друг Животных</P></BODY></HTML>",
+	},
+},
+["Катапульта Орды"] = {
+	["english"] = "Horde Catapult",
+	["pages"] = {
+		"Эти следы Второй войны служат грозным напоминанием о том, как опасно близка была орда к завоеванию Железных гор.",
+	},
+},
+["Военные звания Орды"] = {
+	["english"] = "Horde Military Ranks",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">ВОЕННЫЕ ЗВАНИЯ ОРДЫ</H1><BR/><P align=\"center\">ОФИЦЕРЫ</P><BR/><P align=\"center\">Верховный Вождь</P><P align=\"center\">Вождь</P><P align=\"center\">Генерал</P><P align=\"center\">Лейтенант-генерал</P><P align=\"center\">Защитник</P><P align=\"center\">Центурион</P><P align=\"center\">Легионер</P><P align=\"center\">Кровавый Страж</P><P align=\"center\">Каменный Страж</P><BR/><P align=\"center\">РЯДОВЫЕ</P><BR/><P align=\"center\">Высший Сержант</P><P align=\"center\">Старший сержант</P><P align=\"center\">Сержант</P><P align=\"center\">Рубака</P><P align=\"center\">Разведчик</P></BODY></HTML>",
+	},
+},
+["Зрелость хозенов"] = {
+	["english"] = "Hozen Maturity",
+	["pages"] = {
+		"Век хозенов весьма недолог. Средний возраст для старейшин – двадцать лет, поэтому зрелость у хозенов весьма непродолжительна.\n\nВ отличие от сдержанных и воспитанных цзинь-юй, хозены – страстный народ, обожающий любовь, обожающий ненависть и вообще, обожающий все те чувства, на которые он только способен, до тех пор, пока эти чувства сильны.",
+	},
+},
+["Речь хозенов"] = {
+	["english"] = "Hozen Speech",
+	["pages"] = {
+		"Язык хозенов – большая загадка. Почти все хозены знают всеобщий язык, но предпочитают включать в свою речь множество звуков и \"слов\", которые пока что не поддаются переводу.\n\nУченые цзин-юй предполагают, что все эти выражения, скорее всего, оскорбительны, но ясности все еще нет.\n\nКак сказал великий жрец Ук-Ука, \"Каждой дерке своя джиба, но не каждой джибе своя дерка.\"\n\nВоистину мудрые слова. Наверное.",
+	},
+},
+["Скромный памятник"] = {
+	["english"] = "Humble Monument",
+	["pages"] = {
+		"&lt;На надгробии выведены орочьи руны.&gt;\n\n – ЛЮБИМАЯ ОЛЬГРА -\n Жена Манкрика\n\n Я искал тебя целую вечность\n А теперь тебя больше нет",
+	},
+},
+["Долговая расписка"] = {
+	["english"] = "I.O.U. Note",
+	["pages"] = {
+		"1 000 000 печений с шоколадной крошкой\n\n – O.D.G.",
+	},
+},
+["Ледяная Корона и Ледяной Трон"] = {
+	["english"] = "Icecrown and the Frozen Throne",
+	["pages"] = {
+		"Кил'джеден отправил Нер'зула обратно на Азерот. Его ледяная тюрьма пронеслась по ночному небу и упала на заснеженный северный континент Нордскол, погрузившись глубоко в ледник Ледяной Короны. После падения кристалл принял форму трона, а дух Нер'зула, заключенный в нем, вскоре пробудился.",
+		"Из глубин Ледяного Трона Нер'зул направил свой могучий разум ко всем обитателям Нордскола. Без особых усилий он подчинил своей воле многих существ, включая ледяных троллей и свирепых вендиго. Силы его духа были практически безграничны, и с их помощью он создал небольшую армию, которую собрал в бесконечных лабиринтах Ледяной Короны.",
+		"Совершенствуя свои навыки под неусыпным надзором повелителей ужаса, Король-лич вскоре сумел дотянуться до небольшого поселения людей на самом краю Драконьего Погоста. На нем Нер'зул и решил испытать свои силы.",
+		"Нер'зул выпустил на просторы ледяной пустыни чуму нежити, зародившуюся глубоко внутри Ледяного Трона. Направляя ее силами одного лишь разума, он привел ее в поселение людей. Спустя три дня все его жители погибли, но вскоре восстали, превратившись в ужасных зомби. Нер'зул чувствовал их мысли и настроения так же ясно, как свои.",
+		"Яростный диссонанс чужих душ, наполнивший разум бывшего шамана, еще более увеличил его силу. Нер'зул буквально пожирал души умерших. Но вскоре контроль над зомби наскучил Нер'зулу – слишком уж это было просто.",
+		"Следующие месяцы он провел, испытывая чуму нежити на оставшихся людях Нордскола, пока не поработил их всех. Армия нежити росла с каждым днем, и он понял, что пришло время для настоящего испытания.",
+	},
+},
+["С вечной любовью"] = {
+	["english"] = "In Loving Memory",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">Энтони Рэй Старк</H1><h2 align=\"center\">1961 – 2005</h2></BODY></HTML>",
+	},
+},
+["Бездействующий звуковой маяк"] = {
+	["english"] = "Inert Sound Beacon",
+	["pages"] = {
+		"Никто, кроме самих богомолов, не может постичь технологию создания их звуковых маяков. Полагают, что во многом устройство маяков опирается на психологию богомолов. Этот древний маяк полностью сохранен, но совершенно бесполезен без богомола, который мог бы им оперировать.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Инвар Однорукий"] = {
+	["english"] = "Invar One-Arm",
+	["pages"] = {
+		"Инвар Однорукий\nПервый предводитель убийц Алого ордена\nГражданин Даларана\nПоследний раз был замечен на берегах Нордскола",
+	},
+},
+["Непобедимый"] = {
+	["english"] = "Invincible",
+	["pages"] = {
+		"НЕПОБЕДИМЫЙ\n\nЗдесь покоится любимый скакун принца Артаса Менетила.\n\nПокойся с миром, мой верный и отважный друг.\n\nПусть на той стороне тебя ждут бескрайние пастбища и чистые ручьи.",
+	},
+},
+["Железный амулет"] = {
+	["english"] = "Iron Amulet",
+	["pages"] = {
+		"Тяжелый амулет весит почти как боевая секира. Могу часто носят подобные \"украшения\" в доказательство своей силы.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Стальгорн – Пробуждение дворфов"] = {
+	["english"] = "Ironforge - the Awakening of the Dwarves",
+	["pages"] = {
+		"В древние времена, после того как титаны покинули Азерот, их дети, известные как земельники, продолжали охранять и обустраивать глубины мира. Земельникам не было дела до наземных рас, они желали лишь проникать все глубже и глубже в землю.",
+		"Когда мир раскололся после взрыва Источника Вечности, это очень сильно задело земельников. Ошеломленные болью самой земли, земельники сделались непохожи на самих себя и закрылись в каменных чертогах, где некогда были созданы. Ульдаман, Ульдум, Ульдуар… это имена древних городов титанов, где земельники впервые обрели свой облик. Погребенные в недрах мира, земельники спокойно отдыхали почти восемь тысяч лет.",
+		"Неизвестно, что именно разбудило земельников, закрывшихся в Ульдамане, но в конце концов они очнулись от сна. Земельники обнаружили, что за время своего забытья сильно изменились. Их каменные шкуры разгладились и сделались мягкой кожей, а их власть над камнем и землей ослабла. Они стали смертными существами.",
+		"Назвав себя дворфами, последние земельники покинули Ульдаман и отправились исследовать мир. Их по-прежнему влекли уютные и безопасные подземелья, а потому они основали огромное королевство под самой высокой горой.",
+		"Они назвали свои земли Каз Модан, или \"Гора Каза\", в честь титана-кузнеца Каз'горота. Соорудив алтарь своему отцу-титану, дворфы создали огромную кузницу в самом сердце горы. И город, росший вокруг кузницы, стал называться Стальгорн.",
+		"Дворфы, от природы любившие придавать формы самоцветам и камню, начали добывать в близлежащих горах драгоценные минералы. Довольные своими подземными трудами, дворфы не стремились общаться с наземными соседями.",
+	},
+},
+["Кодекс тюремщика"] = {
+	["english"] = "Jailor's Law Book",
+	["pages"] = {
+		"1. Ожидай пленников, посланных в тюрьму нашими старшими.\n2. Открой дверь и медленно, но уверенно подойди к заключенному.\n3. Произнеси: \"Ты признан виновным в преступлениях против Альянса!\"\n4. Убей пленника с праведной убежденностью.",
+	},
+},
+["Урна с прахом"] = {
+	["english"] = "Jar of ashes",
+	["pages"] = {
+		"Вот урна с прахом. Внутри – останки моего рассудка, моей страсти и моего честолюбия. Все это погибло, уничтожило само себя. Пусть все, чья нога ступит на пустынные земли Адского Пламени, помнят этого раба. Он сражался за Альянс, храбро бился за Орду, но отплатили ему за это лишь злостью и жестокостью; все, чем он дорожил, у него отнимали. Пусть те, кто пожинают плоды его стараний, познают его гнев. Быть может, не в этой жизни, но им придется поплатиться за свое бездушие. Клянусь, справедливость восторжествует. Я отомщу за свои страдания.",
+	},
+},
+["Дневник верховного маршала Двукоссы"] = {
+	["english"] = "Journal of High Marshal Twinbraid",
+	["pages"] = {
+		"Не каждому в жизни удается и исполнять приказы, и удовлетворить свои собственные потребности в мести. Я считаю, что мне повезло.\n\nВместе с ордынцами сюда прибыл полководец Кровавый Эфес. Этот негодяй был в Крепости Отчаяния во время моей кампании в Южных Степях. Это его приказы стали причиной гибели моего сына и убийств наших солдат в Бейл Модане.\n\nА теперь с позволения самого короля в моих руках вся мощь Штормграда, Стальгорна и Гномрегана, и я могу выдворить этих паразитов из новых земель. Конечно, это не вернет моего мальчика. Но, может быть, мне удастся уберечь хотя бы одного пандарена от этой боли – пережить собственного ребенка.",
+	},
+},
+["Кел'Тузад и создание Плети"] = {
+	["english"] = "Kel'Thuzad and the Forming of the Scourge",
+	["pages"] = {
+		"Немало могущественных людей услышали зов Короля-лича из Нордскола. Среди них оказался Кел'Тузад, верховный даларанский маг, один из старейшин Кирин-Тора, совета Даларана. В течение многих лет его считали отступником за желание изучать запретные искусства некромантии.",
+		"Он хотел знать как можно больше о мире магии и темных чудес, но ограниченность и старомодность взглядов коллег разочаровывала его. Когда верховный маг услышал таинственный голос из Нордскола, он приложил все свои силы, чтобы ответить на этот зов. Кел'Тузад был убежден, что Кирин-Тор слишком слаб, чтобы овладеть силой и знаниями, заключенными в темных искусствах, и поэтому сам решил стать учеником могущественного Короля-лича.",
+		"Кел'Тузад оставил учение Кирин-Тора и навсегда покинул Даларан, отказавшись от всех своих богатств и высокого положения в обществе. Повинуясь голосу Короля-лича, звучащему в его мыслях, он продал все, что у него было, и спрятал свои богатства. Он проделал долгий путь по суше и морю – и наконец достиг ледяных берегов Нордскола.",
+		"В намерении добраться до Ледяной Короны и предложить свою службу Королю-личу, верховный маг миновал опустошенные войной земли Азжол-Неруба. Кел'Тузад своими глазами увидел, насколько могучим и яростным был Нер'зул. Он начал осознавать, сколь мудрым было его решение вступить в союз с загадочным Королем-личом и какие плоды этот союз мог принести.",
+		"После долгих месяцев блуждания по суровым снежным пустошам Кел'Тузад, наконец, добрался до Ледяной Короны. Он смело подошел к темной крепости Нер'зула, и, к его удивлению, стражники-нежить молча расступились – так, словно мага здесь ждали.",
+		"Кел'Тузад спустился глубоко под замерзшую землю и добрался до сердца ледника. Там, в бесконечных ледяных пещерах, он преклонился перед Ледяным Троном и преподнес свою душу темному повелителю нежити.",
+		"Король-лич был доволен новобранцем. Он пообещал Кел'Тузаду бессмертие и невиданную силу в обмен на преданность и покорность. Кел'Тузад жаждал получить эту силу и знание темных искусств и с радостью принял свою первую великую миссию – отправиться в мир людей и основать новую религию, последователи которой должны поклоняться Королю-личу как богу.",
+		"Чтобы Кел'Тузаду было легче справиться со своим заданием, Нер'зул оставил ему человеческую внешность. Престарелому, но тем не менее умевшему привлечь к себе сторонников магу предстояло использовать свой дар убеждения и иллюзии, чтобы внушить угнетенным жителям Лордерона веру и надежду. После этого он должен был показать им, насколько лучше они могли бы жить под властью нового короля.",
+		"Кел'Тузад вернулся в Лордерон в новом обличии и через три года, благодаря богатству и уму, собрал вокруг себя тайное братство. Это братство, которое он назвал Культом Проклятых, обещало всем своим служителям абсолютное равенство и вечную жизнь в Азероте в обмен на службу и покорность Нер'зулу.",
+		"Шли месяцы; к Кел'Тузаду приходили все новые и новые приверженцы Культа Проклятых. Кел'Тузад на удивление легко добился своей цели: многие потеряли веру в Священный Свет и стали поклоняться темному владыке Нер'зулу. Культ Проклятых становился все более влиятельным, но благодаря Кел'Тузаду власти Лордерона все еще не замечали перемен…",
+		"Довольный успехами Кел'Тузада в Лордероне, Король-лич готовился к нападению на людскую цивилизацию. Нер'зул поместил сгустки энергии чумы в передвижные артефакты, именовавшиеся котлами чумы, и приказал Кел'Тузаду перенести их в Лордерон, где их нужно было спрятать в селениях последователей Культа.",
+		"Котлы должны были находиться под охраной служителей Культа, а впоследствии использоваться в качестве источников чумы, разносящих по всем деревням и городам на севере Лордерона.",
+		"План Короля-лича сработал идеально. Многие северные деревни чума поразила почти мгновенно. Как и в Нордсколе, жители, заразившиеся чумой, умирали и восставали из мертвых верными рабами Короля-лича.",
+		"Члены Культа, созданного Кел'Тузадом, добровольно желали умереть и стать слугами своего темного повелителя. Они жаждали получить бессмертие через нежизнь. По мере распространения чумы северные земли наводняли полчища беспощадных зомби. Кел'Тузад назвал новую армию Плетью Короля-лича. Этой армии предстояло покорить Лордерон и стереть человечество с лица земли.",
+	},
+},
+["Кил'джеден и Пакт Тьмы"] = {
+	["english"] = "Kil'jaeden and the Shadow Pact",
+	["pages"] = {
+		"Когда в Азероте родился Медив, Кил'джеден Искуситель и его последователи из Круговерти Пустоты погрузились в размышления. По приказу своего хозяина Саргераса коварный великий демон готовил зловещие планы по захвату Пылающим Легионом Азерота.",
+		"На этот раз не должно было быть никаких ошибок. Кил'джеден решил, что нужно ослабить оборону Азерота еще до того, как Легион ступит на его земли. Расы смертных, такие как ночные эльфы и драконы, занятые борьбой с новым врагом, были бы уже неспособны противостоять нашествию Легиона.",
+		"Именно тогда Кил'джеден обнаружил покрытый густыми зарослями мир Дренора, который мирно парил по бескрайним просторам Великой запредельной тьмы. Дренор, родина поклонявшихся духам орков и миролюбивых дренеев, был миром настолько же безмятежным и тихим, насколько бескрайним.",
+		"Благородные кланы орков странствовали по необъятным степям и охотились – больше ради развлечения, а дренеи начинали возводить города среди скал и горных вершин. Кил'джеден решил, что, приложив немного усилий, из жителей Дренора можно сделать превосходных солдат для Пылающего Легиона.",
+		"Из двух рас Кил'джеден выбрал воинственных орков: их было легче привлечь под знамена Легиона. Он околдовал главного шамана орков Нер'зула точно так же, как много лет назад Саргерас подчинил своей воле королеву Азшару. Коварный шаман стал исполнителем воли демона, пробуждая в орках жестокость и жажду сражения.",
+		"Вскоре он превратил эту миролюбивую расу в жестоких, кровожадных воинов. Нер'зулу и его народу оставалось сделать последний роковой шаг: стать вестниками смерти, полностью посвятив себя войне. Но старый шаман понял, что для орков это означало вечное рабство, и ему удалось не поддаться воле демона.",
+		"Кил'джедена разозлила непокорность Нер'зула, и он стал искать другого орка, который смог бы заставить свой народ присоединиться к Легиону. Хитрому великому демону удалось-таки найти достойного кандидата – им стал тщеславный ученик Нер'зула, Гул'дан. Кил'джеден пообещал ему невиданную силу в обмен на полное повиновение.",
+		"Юный орк охотно согласился быть учеником демона и вскоре стал одним из самых могущественных смертных волшебников в истории. Он учил других орков темным искусствам и пытался искоренить их древние ритуалы. Гул'дан показал своим братьям волшебство, которое никто из них никогда не видел, ужасающую мощь, способную повсюду сеять смерть.",
+		"Стремясь укрепить свою власть над орками, Кил'джеден помог Гул'дану основать тайную секту под названием Совет Теней, чтобы манипулировать кланами и разносить по Дренору слухи о новой колдовской силе. Все больше орков овладевали искусством наложения чар, и безмятежные просторы Дренора окутывал мрак. Со временем бескрайние степи, служившие домом для орков не одно поколение, поблекли и превратились в безжизненные пустоши. Энергия демона медленно убивала этот мир.",
+	},
+},
+["Король Ллейн I из рода Риннов"] = {
+	["english"] = "King Llane I of the House of Wrynn",
+	["pages"] = {
+		"Король Ллейн I из дома Ринн\n\nВластительный лорд Штормграда\n\nЗащитник Азерота",
+	},
+},
+["Король Вариан Ринн"] = {
+	["english"] = "King Varian Wrynn",
+	["pages"] = {
+		"Посвящается Королю Вариану Ринну \nизвестному также как Ло'Гош, Призрачный Волк\n\nЕго чудесное возвращение после долгих лет ссылки и лишений зажгло пламя мужества и решимости в сердцах Альянса. \n\nМы гордо пройдем по этим проклятым землям, неся в душе его светлый облик.\n\n\n- Верховный лорд Болвар Фордрагон",
+	},
+},
+["Курдран Громовой Молот"] = {
+	["english"] = "Kurdran Wildhammer",
+	["pages"] = {
+		"Курдран Громовой Молот\n\nЗнаменитый драконобоец. Укротитель грифонов Заоблачного пика. Командир подразделения всадников на грифонах при экспедиции Альянса, которая отправилась в Дренор, родной мир орков. Предположительно погиб.\n\nВетер донесет до нас клич Скайри. Мы услышим грохот твоего молота по ту сторону гор. Вступай в загробную жизнь без опасений, брат. Залы наших предков ожидают тебя.\n\n- Верховный тан Фалстад Громовой Молот",
+	},
+},
+["Резервуар для сока кипари"] = {
+	["english"] = "Kypari Sap Container",
+	["pages"] = {
+		"Этот резервуар выглядит, как янтарный, но на самом деле он изготовлен из выделений куньчунов, как и большая часть домашней утвари богомолов.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Леди Мара Фордрагон"] = {
+	["english"] = "Lady Mara Fordragon",
+	["pages"] = {
+		"Леди Мара Фордрагон\n\nВысший клирик Штормграда\n\nПокровительница беженцев, наводнивших Лордерон после Первой войны.\n\nОна была светлой матерью нашего будущего. Да упокоится она в Свете.",
+	},
+},
+["Лэй Шэнь"] = {
+	["english"] = "Lei Shen",
+	["pages"] = {
+		"Юный Лэй Шэнь родился в семье полководца во времена жуткой эпохи сотни королей. Как и его братья, он был силен, и ему легко давалось военное дело. Но, в отличие от своих сверстников, он думал не только лишь о завоеваниях. В глубине сердца он хранил легенды о деяниях предков. \n\nКогда Лэй Шэнь был уже взрослым мужем и возглавлял целые легионы, то объявил, что собирается пробудить богов. Лишь самые преданные его соратники отправились с ним туда, куда не решались ступать другие могу, – в самое сердце Громовой Горы, священной обители того, кого могу называли своим владыкой. \n\nЛэй Шэнь спустился во чрево горы. \n\nОбратно вернулся уже Властелин Грома.",
+	},
+},
+["Долгий сон орков"] = {
+	["english"] = "Lethargy of the Orcs",
+	["pages"] = {
+		"Шли месяцы, и все больше орков попадали в лагеря для военнопленных. В них стало не хватать места, и Альянс был вынужден строить новые лагеря на равнинах к югу от Альтеракских гор. Чтобы содержать их, королю Теренасу пришлось ввести новые налоги.",
+		"Эти налоги и постоянные споры по поводу границ вызвали недовольство среди населения. Казалось, что хрупкий союз, который люди заключили в тяжелый час, может развалиться в любой момент.",
+		"Среди политической неразберихи многие начальники лагерей стали замечать изменения в поведении пленных орков. Число попыток побега и даже драк между заключенными резко уменьшилось. Орки стали спокойными и безразличными.",
+		"Это было невероятно, но орки, некогда считавшиеся самой воинственной расой, ступавшей на земли Азерота, потеряли желание сражаться. Они становились все более вялыми, чем совершенно сбили с толку предводителей Альянса.",
+		"Некоторые считали, что виной этому какое-то заболевание, которому подвержены только орки. Но верховный маг Антонидас из Даларана предложил другое объяснение. Изучив те немногие материалы по истории орков, которые ему удалось найти, Антонидас узнал, что несколько поколений этого народа находилось под влиянием демонов.",
+		"Он полагал, что орки подверглись пагубному влиянию еще до первого вторжения на Азерот. Демоны ввели что-то в их кровь, и те стали невероятно сильны, выносливы и агрессивны.",
+		"Антонидас предположил, что спокойствие орков вызвано не болезнью, а отсутствием черной магии, которая превращала их в грозных и безжалостных воинов.",
+		"Несмотря на то что причина стала ясна, Антонидасу не удалось найти лекарства, чтобы вывести орков из этого состояния. Кроме того, многие маги и некоторые лидеры Альянса полагали, что пытаться излечить орков – не самая благоразумная идея. Размышляя над проблемой, Антонидас пришел к выводу, что лекарство для орков, каким бы оно ни было, должно врачевать душу, а не тело.",
+	},
+},
+["Место упокоения Лю Лана"] = {
+	["english"] = "Liu Lang's Final Rest",
+	["pages"] = {
+		"До встречи, Шэнь-Цзынь Су. Не горюй, старый друг. Я всего лишь усну, а когда проснусь, меня будет ждать новый путь.\" Лю Лан\n\nЗдесь закончилась насыщенная жизнь Лю Лана, первого пандарена-путешественника. Его земной путь подошел к концу, когда он отдыхал в тени своего любимого зонта.\n\nЕсли верить легенде, это необычное дерево выросло из того самого зонта, и дух Лю Лана слился с землями на спине Шэнь-Цзынь Су.\n\nПримеру Лю Лана стали следовать многие жители острова преклонных лет, и каждый втыкал в землю свой посох. Так появился \"Лес Посохов\".",
+	},
+},
+["Первопроходец Лю Лан"] = {
+	["english"] = "Liu Lang, The First Explorer",
+	["pages"] = {
+		"Непознанное – величайшее сокровище. И всякое белое пятно на карте – история, которую только предстоит рассказать. Лю Лан\n\nПервый пандарен-путешественник Лю Лан отправился в плавание с материка на спине великой черепахи Шэнь-Цзынь Су. Его открытия доказали, что остальной мир тоже пережил Разлом.\n\nОн возвращался в Пандарию каждые пять лет, увозя с собой все больше желающих путешествовать, и плавал до самой своей смерти, которая пришла нему, когда Лю Лану было 122 года. После его смерти Черепаха Шэнь-Цзынь Су так и не вернулась в Пандарию.",
+	},
+},
+["Оковы мятежника"] = {
+	["english"] = "Manacles of Rebellion",
+	["pages"] = {
+		"В эти наручники с шипами, выкованные из железа и усиленные магией боли и подчинения, могу заковывали своих рабов. Хотя заклинания уже давно ослабли и развеялись, от одного вида этих кандалов все еще веет ужасом.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Лампа богомолов"] = {
+	["english"] = "Mantid Lamp",
+	["pages"] = {
+		"Эта лампа светится, но не огнем и не магией. Если заглянуть внутрь, можно увидеть множество мелких насекомых, застывших в янтаре.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Сообщество богомолов"] = {
+	["english"] = "Mantid Society",
+	["pages"] = {
+		"Нападение богомолов на Змеиный Хребет – это настоящий ужас, как для защитников, так и для нападающих. Только умнейшие, сильнейшие и хитрейшие богомолы способны выжить в этой бойне, а потери со стороны пандаренов просто не поддаются счету.\n\nУцелевшие богомолы возвращаются под сень великих деревьев с боевыми трофеями. Они возвращаются домой и занимают в обществе богомолов положение сообразно своим подвигам.\n\nЦель подобных ритуальных набегов неясна, но те, кто странствует за пределами стены, помнят напутствие: любой из встреченных там богомолов – закаленный в боях солдат, которого следует опасаться и уважать.",
+	},
+},
+["Рассветные Туманы"] = {
+	["english"] = "Mists of Dawn",
+	["pages"] = {
+		"Еще до дней, которые мы помним, Мать-Земля своим дыханием создала золотые туманы рассвета. Там где эти янтарные облака коснулись земли, появились бесконечные пшеничные и ячменные поля. Это была чаша ее творений – великая чаша жизни и надежды.",
+		"Очи Матери-Земли взирали сверху на созданные ею земли. Ее правое око, Ан'ше – солнце, дарило тепло и свет всей земле, а левое, Му'ша – луна, приносило покой и сон детям рассвета. Сила ее взгляда была такова, что пока одно ее око дремало, небо поворачивалось другой стороной. Ее любящий взгляд превращал день в ночь, и наоборот.",
+		"Глядя правым оком на золотой рассвет, Мать-Земля распростерла свои нежные руки над золотыми равнинами. Там, где легла тень от ее рук, из земли восстал благородный народ. Это Шу'хало, нареченные тауренами, вышли вознести благодарность и молитвы своей любящей матери. Там, в бескрайних полях рассвета, дети земли поклялись восхвалять ее имя до скончания времен.",
+	},
+},
+["Монета могу"] = {
+	["english"] = "Mogu Coin",
+	["pages"] = {
+		"Этими деньгами пользовались во времена правления императора могу Вая, и он запечатлен на монетах во всем своем щетинистом величии. На обратной стороне изображена смена династий могу, очень кровавое действо, в ходе которого предыдущая династия должна быть свергнута и казнена. Система правления могу во многом зиждилась на личных качествах, таких как хитрость и грубая сила.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Рунный камень могу"] = {
+	["english"] = "Mogu Runestone",
+	["pages"] = {
+		"В отличие от других, \"младших\" рас, вынужденных учиться магическому искусству, могу были прирожденными чародеями. Из того, что мы знаем об их мастерстве, можно сделать вывод, что их магию нельзя отнести к какой-то общепринятой категории, как, например, колдовство или чернокнижие. Они делали особый упор на подчинение духа и изменение формы плоти. Странный отпечаток магии, оставшийся в этом камне, практически неподвластен разуму нынешних обитателей Азерота. Любопытно, что некоторые символы вокруг руны напоминают письменность титанов.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Монумент Воспоминаний"] = {
+	["english"] = "Monument of Remembrance",
+	["pages"] = {
+		"В память о Главнокомандующем сил Альянса, Андуине Лотаре: Это человек, который был готов на все ради своего короля, своего народа и своей родины…\n\nПусть враги запомнят наши имена. Пусть друзья чтят нашу память. Мы – Сыны Лотара. \n\n- Генерал Туралион",
+	},
+},
+["Памятник Грому Адскому Крику"] = {
+	["english"] = "Monument to Grom Hellscream",
+	["pages"] = {
+		"Здесь покоится Громмаш Адский Крик, вождь клана Песни Войны\n\nПроклятие нашего народа началось с Грома – и им же закончилось.\nНа нашем древнем языке его имя означает \"Сердце великана\". Он заслужил его, вступив в поединок с демоном Манноротом\nи купив нам свободу ценой собственной крови.\n\nЛок'тар огар, старший брат. Да пребудет вечно клан Песни Войны. \n\n-Тралл, Вождь Орды",
+	},
+},
+["Гора Хиджал и Дар Иллидана"] = {
+	["english"] = "Mount Hyjal and Illidan's Gift",
+	["pages"] = {
+		"Немногие уцелевшие при взрыве эльфы собрались вместе, наспех сколотили несколько плотов и медленно поплыли к ближайшему куску земли. Милостью Элуны Великий Раскол пережили и Малфурион с Тирандой, и Кенарий. Измученные герои согласились стать предводителями своих выживших сородичей и обустроить для них новый дом.",
+		"Они молча глядели на то, что осталось от их народа, и понимали, что в этом виноваты лишь они сами и их страсти. Конечно, после уничтожения Источника Саргерасу и Пылающему Легиону больше не было хода в этот мир, но цена, которую пришлось заплатить за это, была поистине ужасной.",
+		"Многим высокорожденным тоже удалось выжить, и они отправились к берегам новой земли вместе с ночными эльфами. Малфурион до сих пор сомневался в высокорожденных, но он был рад хотя бы тому, что Источника больше нет, а без его энергии они не представляют собой угрозы.",
+		"Когда изможденные ночные эльфы высадились на берег, они увидели, что священная гора Хиджал не пострадала при взрыве. В поисках места для нового дома Малфурион и остальные эльфы поднялись на горные склоны и остановились на овеваемой всеми ветрами вершине. Спустившись в поросшую лесом низину между двумя огромными пиками, они обнаружили там маленькое тихое озеро и, к своему ужасу, поняли, что воды его осквернены магией.",
+		"Иллидан тоже пережил Раскол и добрался до вершины Хиджала намного раньше Малфуриона и ночных эльфов. Он был одержим идеей сохранить в этом мире магию, поэтому вылил в горное озеро драгоценную воду из Источника Вечности, которую хранил в нескольких сосудах.",
+		"Воды горного озера вмиг напитались энергией Источника Вечности, и оно превратилось в новый источник. Иллидан ликовал: он считал, что это станет настоящим даром для будущих поколений, поэтому был несказанно удивлен, когда на него вдруг набросился его брат. Малфурион объяснил Иллидану, что в основе всей магии лежит хаос и что ее использование неизбежно приведет к одержимости и войнам. Иллидан, однако, не спешил отказываться от своей магической силы.",
+		"Малфурион знал, что планы его брата, одержимого жаждой могущества, не сулят ничего хорошего, поэтому он решил раз и навсегда избавиться от Иллидана. Вместе с Кенарием они заключили его в тюрьму под холмами, где Иллидану надлежало оставаться до конца его жизни, обессиленным и закованным в цепи. Малфурион поручил юной стражнице по имени Майев Песнь Теней следить за пленником, чтобы тот не сбежал.",
+		"Ночные эльфы не стали уничтожать новый Источник Вечности, чтобы не вызвать новой катастрофы. Однако Малфурион объявил, что ночные эльфы больше никогда не будут практиковать магию, после чего они под руководством Кенария стали изучать древнее искусство друидизма, которое помогло бы им исцелить истерзанную землю и вырастить новые леса у подножия горы Хиджал.",
+	},
+},
+["Странные обломки"] = {
+	["english"] = "Mysterious Wreckage",
+	["pages"] = {
+		"Вы наткнулись на обломки странного предмета. Под слоем сажи угадывается надпись \"M:1815212085\". Вам невдомек, что все это может означать...",
+	},
+},
+["Огрский путевой указатель"] = {
+	["english"] = "Ogre Wayguide",
+	["pages"] = {
+		"Ну разве не глупо, что ты залез на такую высоту\n\nУходи\n\nСейчас же",
+	},
+},
+["Древняя ненависть – Колонизация Калимдора"] = {
+	["english"] = "Old Hatreds - The Colonization of Kalimdor",
+	["pages"] = {
+		"Хотя смертные расы и одержали победу, их мир был растерзан войной. Плеть и Пылающий Легион практически уничтожили все народы Лордерона и почти закончили свою работу в Калимдоре. Леса нуждались в восстановлении, обиды – в забвении, а разоренные земли – в новых жителях. Война нанесла тяжелые раны каждой из рас, но все они нашли силы объединиться и начать новую жизнь. Первым шагом к ней было перемирие между Альянсом и Ордой.",
+		"Тралл привел орков на материк Калимдор, где они обрели новую родину с помощью своих братьев-тауренов. Стремясь вернуть былое величие, орки назвали свой дом Дуротаром в честь убитого отца Тралла.",
+		"Когда проклятие демонов было снято, Орда превратилась из безжалостной военной машины в относительно свободный союз, направленный не столько на захват новых земель, сколько на жизнь и процветание. Тралл и его орки предвкушали начало новой мирной эры, получая помощь от благородных тауренов и хитрых троллей из племени Черного Копья.",
+		"Уцелевшие войска Альянса под командованием Джайны Праудмур осели в южном Калимдоре. На восточном краю Пылевых топей они построили укрепленный портовый город Терамор, в котором люди и дворфы объединили усилия ради выживания в этой негостеприимной земле. Хотя жители Дуротара и Терамора и сохраняли непрочное перемирие, оно не могло длиться вечно.",
+		"Мир между орками и людьми был нарушен с прибытием огромного флота Альянса под командованием отца Джайны, Великого адмирала Даэлина Праудмура. Этот флот покинул Лордерон перед самым падением королевства. В течение долгих месяцев плавания адмирал Праудмур искал любых уцелевших союзников по Альянсу.",
+		"Флот Праудмура представлял серьезную угрозу стабильности в регионе. Будучи знаменитым героем Второй войны, отец Джайны всей душой ненавидел Орду. Он твердо решил уничтожить Дуротар прежде, чем орки закрепятся на этой земле.",
+		"Адмирал поставил Джайну перед страшным выбором: выступить против новообретенных союзников-орков или сразиться с собственным отцом в надежде сохранить хрупкий мир между Альянсом и Ордой. После сильных душевных метаний Джайна выбрала последнее и встала на сторону Тралла.",
+		"К сожалению, адмирал Праудмур умер в бою, не успев помириться с Джайной и узнать, что орки перестали быть кровожадными чудовищами. В награду за помощь орки позволили Джайне и ее подданным беспрепятственно вернуться в Терамор.",
+	},
+},
+["\"Старик Жи и миллион душ\""] = {
+	["english"] = "Old Ri and the Million Souls",
+	["pages"] = {
+		"Поздним осенним вечером двое хороших друзей сидели на веранде таверны \"Ленивая репа\". Перед ними открывался вид на тихое и спокойное фермерское поселение Полугорье. Ночной воздух холодил кожу. Туман уже начал укрывать легкой дымкой пологие зеленые холмы долины, шпиль Императорского хранилища зерна темной тенью выделялся на фоне сверкающего яркими звездами неба.\n\nОбильный ужин и ароматы благоухающих трав привели друзей в благостное и задумчивое настроение.\n\nИ вдруг Чжи, который из них двоих был моложе и впечатлительнее, спросил: \"А что если все это ненастоящее?\"",
+		"Его умудренный годами друг Жи, который до этого сидел, лениво откинувшись назад и надвинув соломенную шляпу на глаза, приподнял ее край и спросил, внимательно посмотрев на Чжи своими карими глазами: \"Ты серьезно?\".\n\nЧжи взмахнул рукой в сторону горизонта, окидывая взглядом всю долину. \"А может мы просто рисунки на написанной кем-то картине? – спросил он. Чжи прикоснулся к своему лицу и вздохнул. – Что если все мы – просто вымышленные персонажи?!\".\n\nСтарик Жи обхватил свой живот обеими руками и разразился громким смехом. Затем взял у Чжи его курительную трубку и отложил ее в сторону.",
+		"\"Глаза – это зеркало души, – в конце концов ответил Жи. – Суть души – это мысли, чувства, эмоции. Моя душа и делает меня настоящим. А твоя – тебя.\"\n\nПосле этого старик поднялся и встал рядом со своим другом. Он положил руку на плечо Чжи и указал ему на простирающуюся внизу долину. \"Видишь, там, внизу, справа от нас фермерский рынок?\". В прохладе осенней ночи, укрывшей холмы темным покрывалом, рынок Полугорья казался островком теплого желтого света. Свежий ветерок развевал разноцветные флаги, видно было, как между прилавками движутся фигуры, одни продают выращенные собственными руками фрукты, а другие пополняют свои запасы. До таверны доносились голоса и смех. Слов было не разобрать, но звуки были полны жизни.",
+		"\"Видишь движущиеся фигуры? У каждой из них есть душа, – продолжил Жи. – И это место принадлежит нам. Миллионам душ, живущим в одном мире. В нашем мире! Полугорье реально и существует, пока существуем ты и я и пока мы радуемся жизни.\" Удовлетворенный, старик Жи вернулся на свое место и жестом приказал трактирщику принести ему еще один напиток.\n\nЧжи стоял на краю веранды, всем своим весом опираясь на деревянные перила. Он вдыхал прохладный воздух и смотрел на светляков, выписывающих причудливые траектории над залитой звездным светом травой полей. \"Жи, – в конце концов произнес он. – Знаешь, рисунки мы или нет... Если нашим душам суждено делить вместе какой-то один мир... я рад, что живу в одном мире с тобой\".",
+		"Старик Жи надвинул шляпу на глаза и что-то пробормотал в знак согласия.\n\nПение сверчков и звуки веселой суматохи, доносящиеся с рынка, вновь вернули друзей в состояние благостного покоя.",
+	},
+},
+["Старый плакат \"Разыскивается\""] = {
+	["english"] = "Old Wanted Poster",
+	["pages"] = {
+		"Внимание: вооружены и очень опасны!\n\nСледующие люди из Хилсбрада объявлены вне закона, и верховный палач Дарталия предлагает награду за их головы:\n\nКлерк Гораций Белоконь. Разыскивается за убийство стража смерти Томма.\n\nГорожанин Вилкс. Разыскивается за убийство аптекаря Эли.\n\nШахтер Хакетт. Разыскивается за убийство ловчего смерти Фрая.\n\nФермерша Калаба. Разыскивается за нападение на караван с припасами из Подгорода.\n\nВсе перечисленные преступники скрываются, и найти их будет нелегко. Награда будет выдана при предъявлении доказательств их смерти.",
+	},
+},
+["В Наксрамасе"] = {
+	["english"] = "On Naxxramas",
+	["pages"] = {
+		"Сегодня я устроился на работу на военную фабрику великой Плети! Деятельность в Наксрамасе бьет ключом. К сожалению, я обнаружил, что здесь используются какие-то непонятные механизмы для питания критически важных телепортов, но, очевидно, до более элегантного решения они не додумались. Я уже задумался о том, какие выгоды могло бы принести мне такое изобретение... но присутствие этого назойливого неруба не дает мне сосредоточиться!",
+		"Неруб все никак не угомонится. То и дело я слышу его жуткий, монотонный голос, взывающий ко мне. Постоянно приглашает зайти к нему \"заняться исследованиями\". В последнее время я прячусь от него в сломанной трубе за комнатой Глута – это единственное место, где я могу побыть в одиночестве. Мой мозг скоро лопнет!",
+		"И как эти жалкий набор суповых костей и гниющих трупов собирается покорить весь Азерот? Они не в состоянии даже уберечь свои тела от распадания! А я не могу и надеяться на то, что мне удастся воплотить в жизнь мои планы, пока этот мерзкий нерубыц таскается за мной по пятам и отравляет все мое существование!",
+		"Я уже начинаю привыкать к неожиданным нападениям во время работы. Сегодня очередная банда искателей приключений ворвалась в некрополь и стала убивать моих коллег. Увы, пали даже отважные служители культа Фарлины, прежде чем этот мерзкий паук позволил мне с ней поговорить! Ненавижу это место! Стану нежитью – сразу унесу отсюда ноги. А пока что – пора взять в руки оружие!",
+	},
+},
+["В Некроситете"] = {
+	["english"] = "On Scholomance",
+	["pages"] = {
+		"Наконец-то я заслужил милость настоятеля! Сегодня мне было позволено посещать Некроситет. Это будет первой ступенькой на пути к моему величию!",
+		"Я не ожидал, что дела в Некроситете настолько запущены. Повсюду валяются груды исследовательских материалов и свитков, порой совершенно заляпанных воском от чадящих свечей. Духи, големы и демоны неприкаянно бродят по коридорам. Надо сказать, я ожидал большей ответственности от столь опытных некромантов!",
+		"Сегодня в школу ворвалась группа бандитов и попыталась проникнуть в склепы. Подумайте только, пока они сражались с небольшой группой защитников в фойе, стоящие рядом студенты даже пальцем не пошевелили, чтобы помочь своим учителям! Их силы хватило бы на то, чтобы одолеть небольшую армию – а они продолжали свои занятия, будто ничего не не происходило! Какие болваны!",
+		"Во время урока в классе темного магистра Гандлинга случилось еще одно происшествие. Захватчики проникли в Некроситет через демонстрационную комнату и достигли склепов, а этот псих спрятался за книжным шкафом и хихикал, глядя, как убивают наших школьных управляющих, одного за другим. Затем он вдруг выбежал вперед и заорал: \"У нас идут занятия!\". Он что, совершенно съехал с катушек? Все, я перевожусь в Стратхольм!",
+	},
+},
+["В Стратхольме"] = {
+	["english"] = "On Stratholme",
+	["pages"] = {
+		"Меня приняли на место Тузадинского некроманта в Стратхольм! Странное тут место. Не понимаю, почему никто не гасит огни. А сумасбродная система зиккуратов, связанная с вратами скотобойни, меня совершенно озадачила. Если цель в том, чтобы не подпускать никого к скотобойне – почему бы просто не запереть ворота?",
+		"Теперь я начинаю понимать, в чем причина всех этих недоразумений. Это наглый, заносчивый урод на гнилой кобыле, который провозглашает себя \"Бароном\" Ривендером, повелителем Стратхольма. По-моему, этот парень перепутал плеть с личным зоопарком, потому что каждое утро он проводит среди послушников, миньонов и големов, строя их в отряды и распределяя по разным кварталам города!",
+		"После завершения ежедневного баронского парада по городу шатаются множество бездельников, круша и сжигая все вокруг. Я не раз говорил ему: \"Заприте ворота!\", но он продолжает настаивать, что его миньоны защитят скотобойню. В общем, мне это надоело. Немедленно собираю вещички и уматываю через задние ворота!",
+		"Похоже, моего побега никто не заметил. Судя по клубам дыма, поднимающимся со стороны города, я ушел как нельзя вовремя. Сколько времени потрачено зря в этом Стратхольме! Небольшим утешением может служить только печатка Барона, которую я украл у этого мерзавца. Полагаю, столь благородное украшение с личным баронским гербом поможет мне уютно обосноваться в Наксрамасе.",
+	},
+},
+["В Нежити"] = {
+	["english"] = "On Undeath",
+	["pages"] = {
+		"После нескольких попыток послужить Плети я осознал, что моим требованиям не отвечают даже самые высшие эшелоны данной организации. Учитывая неотъемлемое отсутствие гибкости, присущее любому социальному строю, усилия по внедрению перемен не приносят желаемого эффекта.",
+		"К счастью, данная организация предоставляет возможности для трудоустройства даже увечным, неизлечимо больным или – как в моем случае – усопшим индивидуумам.",
+		"Мне пришлось познать на себе одну истину: ледяное прикосновение смерти не приносит ничего, кроме разочарования. Да, теперь я свободен от смертных обязательств, но не испытываю от этого облегчения, ибо мне больше нечем его испытывать. Я просто существую. Я могу лишь надеяться погибнуть вновь, в эпической битве, от руки благородного и чистого духом воина.",
+		"Некрополь был отозван назад, к Ледяной Короне. Мы получили подкрепление и продовольствие, и город снова ожил! Но я изменился. Я чувствую себя более собранным. Более живым, чем когда-либо. Меня восхищает совершенство моего Господина. Теперь я знаю, в чем заключается мой долг, и когда воины придут, им придется пережить встречу со мной.",
+	},
+},
+["Одна правда в нежитии"] = {
+	["english"] = "One Truth in Undeath",
+	["pages"] = {
+		"О, величайшая ирония! Смертные приписывают нежити самые жалкие проявления своего существования – рабское покорство, жестокость и равнодушие. Да, мы служим! Но смертные служат не меньше нас. Они поклоняются королям, богам, друидам, жрецам, людям и зверям. Мы же повинуемся только могучей воле Короля-лича, которая объединяет и сплочает всех нас!",
+		"Вся история человечества пронизана свидетельствами жестокости, предательства, ненависти и эгоизма. Для Плети же существует только результативность и единство. Мы служим Королю-личу в жизни и продолжаем служить ему после смерти. Он – единственный властелин, который ведет нас к победе.",
+		"Наша плоть мертва, но наше единство живет. Могущественная Плеть – это один народ, один разум, одна душа. Истинная смерть живет в бессердечных взглядах стражей, что бросают на произвол судьбы беженцев из собственной страны, оставляют увечных на поле боя. Разве люди едины? Только холодом своих сердец.",
+		"Так поднимем же наши знамена и низвергнем врагов! Пусть их сломленные тела примкнут к нашей армии, и вскоре все живые существа склонят колени перед Ледяным Троном!",
+	},
+},
+["Истоки"] = {
+	["english"] = "Origins",
+	["pages"] = {
+		"Этот древний алтарь цзинь-юй может пролить свет на происхождение этой расы. Мы видим изображение примитивных приземистых водяных существ. Их окружают озера на золотом поле; возможно, они олицетворяют Вечноцветущий дол. \n\nОдно из примитивных существ держит над водой посох, но символы вокруг его головы вам незнакомы. Возможно, этот язык древнее династии могу.\n\nТочная связь между древними водными существами и долом остается покрыта тайной.",
+	},
+},
+["Орман из Стромгарда"] = {
+	["english"] = "Orman of Stromgarde",
+	["pages"] = {
+		"Орман из Стромгарда\nПервый капитан-генерал Алого ордена\nГражданин Стромгарда\nПропал без вести на леднике Ледяной Короны",
+	},
+},
+["Пандаренская тактика боя"] = {
+	["english"] = "Pandaren Fighting Tactics",
+	["pages"] = {
+		"В темные времена империи могу рабам-пандаренам не разрешалось иметь никакого оружия. Для своих тайных тренировок монахи обычно использовали земледельческие орудия или обычные бамбуковые палки, а также оттачивали мастерство боя без оружия.\n\nСамые популярные виды оружия могу были, напротив, скорее устрашающими, чем практичными: большие, громоздкие и неуклюжие. Преимущество монахов-пандаренов было в скорости перемещения и молниеносности ударов. Более крупные и медлительные могу нередко бывали совершенно дезориентированы скоростью монахов.\n\nС годами стиль боя пандаренов сильно изменился, вобрав в себя новые способности, стили, виды оружия. Но суть его осталась все той же: неважно, какого размера противник, просто победи его. Если понадобится – одними когтями.",
+	},
+},
+["Пандаренская игральная доска"] = {
+	["english"] = "Pandaren Game Board",
+	["pages"] = {
+		"Пандарены обожают играть. Эта игра весьма популярна со времен первого пандаренского императора. Это прекрасный образец древнего набора.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Пандаренский чайный набор"] = {
+	["english"] = "Pandaren Tea Set",
+	["pages"] = {
+		"Вся история пандаренов пропитана трепетным отношением к чаю. Они относятся к процессу заварки и к самому чаепитию, как к особому ритуалу. Этот простенький чайный сервиз изготовили еще при могу. Он был утешением для своего хозяина во времена великих страданий и тирании. Сейчас он расколот, но служит хорошим примером того, как нужно радоваться простым вещам.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["\"Путь Хоцзинь\""] = {
+	["english"] = "Path of the Huojin",
+	["pages"] = {
+		"\"Всегда действуй. Всегда сомневайся. Худшее, что можно сделать во имя общего блага, – это не сделать ничего.\" Мастер Цзужун\n\nИдущие по пути Хоцзинь превыше всего ценят расчетливые и решительные действия. Они также верят, что моральные ценности и идеалы не абсолютны и зависят от обстоятельств.\n\nМастер Хоцзинь должен обладать гибким умом и не останавливаться ни перед чем для достижения общего блага.",
+	},
+},
+["\"Путь Тушуй\""] = {
+	["english"] = "Path of the Tushui",
+	["pages"] = {
+		"Дисциплина – не война, которую можно выиграть. Это битва, которая продолжается всю жизнь. Мастер Фэн\n\nПуть Тушуй – это жизнь, подчиненная принципам. Последователи Тушуй верят, что миром правят моральные принципы, и все в жизни делится на правильное и неправильное.\n\nОни без колебаний пожертвуют чем угодно, даже своими жизнями, ради защиты этих непреложных, с их точки зрения, ценностей.",
+	},
+},
+["Жемчужина Юй-лун"] = {
+	["english"] = "Pearl of Yu'lon",
+	["pages"] = {
+		"На поверхности этой нефритовой сферы изображена змея, пожирающая собственный хвост, а на каждом полушарии виднеются надписи:\"Лишь в одном можешь ты быть уверен, – где есть конец, там есть и начало\". Сферу изготовили в прославление Нефритовой Змеи при пандаренском императоре Шу Слепом Глазе, и она символизирует перерождение Юй-лун раз в сто лет. Юй-лун и сейчас способна поделиться знанием и мудростью с теми, кто посетит ее храм в Нефритовом лесу.\"\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["\"Зубастая погибель\""] = {
+	["english"] = "Pestilence with Teeth",
+	["pages"] = {
+		"Компсогнаты – это чума! Они жрут нашу еду, отравляют воду, крадут наших деток, сжирают раненых. Они хуже крыс в канализациях.\n\nНо крыс можно обучить. Мы, зандаларские тролли, знаем, как страшны компсогнаты, но наши враги не знают. Они не привыкли к этим зверькам и их ядам. Пришла пора сделать из паразитов оружие. \n\nБери их! Бери! Натрави на врагов, и увидишь, как те будут корчиться. Пусть они жрут их еду, отравляют их воду, крадут их деток и сжирают их раненых. Покажи, что даже зандаларские паразиты – мощное оружие!",
+	},
+},
+["Окаменевший костяной хлыст"] = {
+	["english"] = "Petrified Bone Whip",
+	["pages"] = {
+		"Этот кнут был сделан из позвоночника какого-то древнего и мощного создания, и кровь множества рабов могу покрывает его.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Сборник пыльцы"] = {
+	["english"] = "Pollen Collector",
+	["pages"] = {
+		"Трудно утверждать наверняка, но больше всего это похоже на некий сборник пыльцы.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Руководство по эксплуатации опытной модели жнеца"] = {
+	["english"] = "Prototype Reaper Instruction Manual",
+	["pages"] = {
+		"Руководство по эксплуатации опытной модели жнеца версии 1.28.92\n\n1. Для запуска опытной модели жнеца заберитесь внутрь и запустите механизм разблокировки управления, распологающийся рядом с красной кнопкой. Ни при каких обстоятельствах не нажимайте саму красную кнопку.\n\n2. Опытная модель жнеца спроектирована таким образом, чтобы выдерживать экстремальную температуру шлакового ковша. Не пытайтесь перемещать баки со шлаком без помощи жнеца!\n\n3. Главный паровой клапан опытной модели жнеца используется для подачи пара в ходе эксплуатации. Паровая тяга приводит в движение гидравлический сервопривод, разгоняя его до высокой скорости, либо помогает создать напор в насосном механизме при подъеме тяжестей.",
+	},
+},
+["Скелет птерадона"] = {
+	["english"] = "Pteradon Skeleton",
+	["pages"] = {
+		"Этот неповрежденный скелет птерадона был найден в далеком Кратере Ун'Горо. Исходя из структуры скелета, был сделан вывод, что подобный вид существ никогда раньше не встречался. Этот скелет, вероятно, был погребен под слоями плодородной земли этого региона много столетий назад.",
+	},
+},
+["Цюань Тоу Ко \"Двойной Кулак\""] = {
+	["english"] = "Quan Tou Kuo the Two Fisted",
+	["pages"] = {
+		"Создатель Разделения Темного и Светлого Эля и учения о Сбалансированном Опьянении.\n\nИзыскивая средство, смягчающее отрицательное воздействие пива и не влияющее на его положительные стороны, Цюань Тоу Ко изобрел двухчастную систему пития, созданную для достижения состояния сбалансированного опьянения. Употребляемые раздельно в надлежащих пропорциях Светлый Эль духа и Темный Эль разума объединяются в желудке выпившего, чтобы тот достиг состояния просветления и доброжелательности без помутнения рассудка и потери самоконтроля, привычных для любителей хмельного.",
+	},
+},
+["Капитан следопытов Аллерия Ветрокрылая"] = {
+	["english"] = "Ranger Captain Alleria Windrunner",
+	["pages"] = {
+		"Капитан следопытов Аллерия Ветрокрылая\n\nЗнаменитая охотница на троллей из Кель'Таласа. Главная разведчица при экспедиции Альянса, которая отправилась в Дренор, родной мир орков. Предположительно погибла.\n\nСестра, твое сердце было решительно и неукротимо, как стрела, летящая по ветру. Ты была самой яркой из нашего Ордена. Ты была самой любимой из нашего рода.\n\n- Сильвана Ветрокрылая, предводитель следопытов Кель'Таласа",
+	},
+},
+["Останки Идеала"] = {
+	["english"] = "Remains of a Paragon",
+	["pages"] = {
+		"Как показывает эта находка, сохранение в янтаре не всегда было безопасным. От этого Идеала осталась одна голова. Предположительно артефакт относится к эпохе до пандаренской революции, хотя точное датирование представляется невозможным.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Слепец Жэнь Юнь"] = {
+	["english"] = "Ren Yun the Blind",
+	["pages"] = {
+		"Создатель пива индивидуальных ощущений и пива четырех чувств.\n\nЖэнь Юнь, прочие чувства которого обострились благодаря слепоте, много лет страдал от вкуса обычного пандарийского пива, который считал весьма вульгарным. После долгих лет странствий и экспериментов он изобрел сорта пива, которые доставляли наслаждение всем его четырем чувствам, но, усовершенствовав эти напитки по отдельности, он не сумел объединить их в один, который назвал бы идеальным. Всю свою жизнь он провел в исканиях, пока однажды не раскрыл тайну рецепта, который позволил объединить эти напитки в один: пиво четырех чувств.",
+	},
+},
+["Отчеты с передовой: Драконий Погост"] = {
+	["english"] = "Report from the Frontlines: Dragonblight",
+	["pages"] = {
+		"Драконий Погост – Принц Валанар объявил об открывшейся вакансии для исключительного рыцаря смерти, которому надлежит отправиться в Драконий Погост, находящийся в центре Нордскола, и возглавить элитный отряд солдат, который окажет сопротивление роду красных драконов. \"Ваше обучение практически завершено, – сказал он в недавнем обращении к войскам. – Настало время выступить против защитников смертных! Мы покажем им истинное значение названия \"Драконий Погост\"!",
+		"Алекстраза, Королева красных драконов и самый могущественный враг Плети в Нордсколе, набирает собственную армию. Ходят слухи, что она готова заключить союз с родом синих драконов.",
+	},
+},
+["Отчеты с передовой: Восточные королевства"] = {
+	["english"] = "Report from the Frontlines: Eastern Kingdoms",
+	["pages"] = {
+		"Разлом Смерти, Восточные королевства – На этой неделе инструктор Разувий довольно резко высказался по поводу многочисленных случаев неподчинения и нарушения субординации в войсках. Цитирую, \"Любой рыцарь смерти, осмелившийся предать Плеть, будет обречен на вечные страдания, по сравнению с которыми смерть покажется недостижимым блаженством. Я лично прослежу за этим\".",
+	},
+},
+["Отчеты с передовой: Подгород"] = {
+	["english"] = "Report from the Frontlines: Undercity",
+	["pages"] = {
+		"Подгород – Наши источники в Подгороде докладывают, что Орда готовится выступить на Нордскол. \"Войска Орды, недавно вернувшиеся из Запределья, готовятся нанести удар по Ледяной Короне,\" – сообщают наши агенты.",
+		"Помимо этого, шпионы докладывают о необычайной активности Королевского Фармацевтического Сообщества. \"Хотя у нас нет прямых доказательств, нельзя игнорировать слухи о том, что Отрекшимся удалось добиться значительных успехов в изобретении новой чумы. По тем же донесениям, всем войскам Орды приказано оказывать максимальное содействие алхимикам Сообщества\".",
+	},
+},
+["Отчеты с передовой: Западный Нордскол"] = {
+	["english"] = "Report from the Frontlines: Western Northrend",
+	["pages"] = {
+		"Западный Нордскол – Данные воздушной топографической разведки из Ледяной Короны показывают, что сообщение с Лич-лордом Хладолютом прервано. \"В последний раз Хладолюта видели за пультом управления некрополем, Талрамасом, пролетавшим над Борейской тундрой в рамках выполнения сверхсекретного задания,\" – докладывает офицер разведки Плети, инженер Каромон. – \"Наши данные свидетельствуют о том, что его кристаллы связи целы и работают, но он... хранит гробовое молчание\".",
+	},
+},
+["Возвышение эльфов крови"] = {
+	["english"] = "Rise of the Blood Elves",
+	["pages"] = {
+		"На этот раз Плеть превратила практически весь Лордерон и Кель'Талас в ядовитые Чумные земли. Там осталось лишь несколько очагов сопротивления Альянса. Один из них, состоявший в основном из высших эльфов, возглавлял последний представитель династии Солнечного Скитальца – принц Кель'тас.",
+		"Кель, опытный маг, был обеспокоен слабостью Альянса. Его подданные, высшие эльфы, огорченные потерей своей родины, назвали себя эльфами крови – в память о своем погибшем народе. Лишенные энергии Солнечного Колодца, они ценой огромных страданий сдерживали дальнейшее наступление Плети.",
+		"Когда Кель понял, что не сможет найти средство от магической зависимости своего народа, он совершил непоправимое. Вспомнив об общих предках-высокорожденных, он встал на сторону Иллидана и его спутников-наг. Остальные предводители Альянса объявили эльфов крови предателями и изгнали их навсегда.",
+		"Келю и его подданным не оставалось ничего, кроме как отправиться в Запределье вслед за леди Вайш и сразиться с Майев, которой удалось снова поймать Иллидана. Объединив силы, наги и эльфы крови справились с Майев и освободили его. Обосновавшись в Запределье, Иллидан начал копить силы для следующего удара по Королю-личу и его цитадели Ледяной Короны.",
+	},
+},
+["Возвышение Орды"] = {
+	["english"] = "Rise of the Horde",
+	["pages"] = {
+		"Под контролем Гул'дана и Совета Теней орки стали грубыми и жестокими. Они построили огромные арены, где соревновались друг с другом в умении сражаться и убивать. В это время вожди некоторых кланов решили высказать свое негодование по поводу упадка их расы.",
+		"Одним из таких вождей был Дуротан из клана Северного Волка; он указал оркам на то, что они начали терять контроль над собой и поддаваться гневу и ненависти. Но они были глухи к его предостережениям, да и многие более могущественные вожди, среди которых был Гром Адский Крик из клана Песни Войны, выступили в поддержку новой эры войны и господства.",
+		"Кил'джеден знал, что уже справился со своей задачей, но хотел быть уверенным в преданности орков. Он дал Совету Теней тайный приказ призвать Маннорота Уничтожителя, живое воплощение ярости и разрушения. Гул'дан собрал вождей кланов и убедил их, что, испив крови Маннорота, они станут непобедимыми.",
+		"Во главе с Громом Адским Криком все вожди, кроме Дуротана, повиновались и тем самым обрекли себя на вечную службу Пылающему Легиону. Те, кого коснулась ярость Маннорота, пусть не желая того, превратили своих ничего не подозревающих собратьев в таких же рабов, какими стали сами.",
+		"Орки были обречены на вечную неутолимую жажду крови и обрушивали свою ярость на любого, кто стоял у них на пути. Гул'дан почувствовал, что время пришло, и объединил воюющие кланы в одну неудержимую Орду.",
+		"Но зная, что все вожди, в первую очередь Адский Крик и Оргрим Молот Рока, начнут борьбу за превосходство, Гул'дан поставил во главе Орды своего вождя-марионетку. На эту роль он выбрал Чернорука Разрушителя, злобного и жестокого орка. Под командованием Чернорука Орда выдвинулась в первый пробный бой против дренеев.",
+		"Через несколько месяцев Орда истребила почти всех дренеев, живших на Дреноре. Лишь немногие сумели избежать гнева орков. Гул'дан был доволен: его Орда была непобедима. Но он знал, что если им будет не с кем сражаться, непреодолимая жажда крови заставит их убивать друг друга и войско уничтожит само себя.",
+		"Кил'джеден знал, что Орда, наконец, готова. Орки стали мощнейшей силой Пылающего Легиона. Коварный демон рассказал обо всем своему повелителю, и Саргерас согласился, что час расплаты настал.",
+	},
+},
+["Коготь руха"] = {
+	["english"] = "Roc Talon",
+	["pages"] = {
+		"Этот окаменевший коготь был найден у южных берегов Тернистой долины. Экологи полагают, что этот коготь принадлежал древнему солнечному руху. Несмотря на то что упоминания об этих существах присутствуют в примитивных мифологических сказаниях тауренов, находка этого когтя предполагает тот факт, что, вероятно, подобное создание действительно существовало.",
+	},
+},
+["Обелиск Дуротана"] = {
+	["english"] = "Rock of Durotan",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><P align=\"left\">Здесь покоится Дуротан – вождь клана Северного Волка и отец нашего почтенного Военного Вождя Тралла. Он был храбрейшим среди нас, и его предали те, кто жаждал нашего порабощения. Дуротан отдал свою жизнь, чтобы мы могли обрести свободу. Мы чтим его и заветы, что он передал нам через своего сына.</P><BR/><P align=\"left\">Дрек'Тар, шаман клана Северного Волка</P></BODY></HTML>",
+	},
+},
+["Выбор роли"] = {
+	["english"] = "Role Call",
+	["pages"] = {
+		"Иерархия цзинь-юй представляет собой строгое кастовое общество, доказательством чему служит эта каменная таблица с перечисленными на ней именами. Яйца отсортировываются в соответствии с нуждами общества.\n\nМногие цзинь-юй принадлежат к касте рабочих и усердно трудятся на строительстве дамб и иных сооружений. Других назначают ремесленниками, и они отправляются на обучение сразу после появления на свет.\n\nЛучшее жилище и больше всего еды достается воинам и жрецам, и лишь наиболее успешные священнослужители могут стать старейшинами или Говорящими с водой. Браки между представителями разных каст находятся под запретом.",
+	},
+},
+["Саргерас и Предательство"] = {
+	["english"] = "Sargeras and the Betrayal",
+	["pages"] = {
+		"Во все времена демонические существа пытались проникнуть в мир Титанов из Круговерти Пустоты, и Пантеон выбрал своего самого великого, Саргераса, чтобы он охранял границы миров. Благородный гигант из расплавленной бронзы, Саргерас выполнял свои обязательства несчетное количество тысячелетий, находя и уничтожая демонов везде, где возможно. Спустя века Саргерас столкнулся с двумя мощными демоническими расами, которые были помешаны на получении силы и господства над физической вселенной.",
+		"Эредары, коварная раса демонических чародеев, использовала магию своих колдунов, чтобы поработить множество миров. Расы тех миров мутировали под влиянием злых сил эредаров и сами превращались в демонов.",
+		"Несмотря на то что практически бесконечной силы Саргераса с избытком хватало, чтобы победить зловещих эредаров, он был весьма обеспокоен разрушением и всепоглощающим злом, распространяемыми этими созданиями. Неспособный понять такую развращенность, великий титан начал погружаться в отчаяние. Несмотря на свою растущую тревогу, Саргерас все же избавил вселенную от колдунов, заманив их в ловушку в Круговерти Пустоты.",
+		"Все более снедаемый тревогой и тоской, Саргерас был вынужден по приказу титанов вступить в бой с еще одной группой тварей, жаждавшей разрушения: натрезим. Эти демоны-вампиры (также известные как повелители ужаса) завоевали множество миров, вселяясь в их обитателей и склоняя их на сторону зла.",
+		"Нечестивые, коварные повелители ужаса обращали друг против друга целые народы, манипулируя их бездумной ненавистью и недоверием друг к другу. Саргерас легко победил Натрезим, но их порча глубоко запала в его душу.",
+		"Когда сомнения и отчаяние полностью овладели Саргерасом, он потерял веру не только в свою миссию, но отказался от мыслей титанов об упорядоченной вселенной. В конечном счете он пришел к выводу, что сам порядок является глупостью и что хаос и порочность – единственно абсолютные понятия в этой темной, одинокой вселенной.",
+		"Его друзья-титаны пытались убедить его не совершать ошибки, пытались успокоить его разбушевавшиеся чувства, но он принимал их более чем оптимистичные верования за корыстные заблуждения. Покинув навсегда их ряды, Саргерас отправился на поиски своего собственного места во вселенной. Несмотря на то что Пантеон был опечален его уходом, даже титаны не могли предугадать того, как далеко зайдет их заблудший брат.",
+		"К тому времени, как безумие Саргераса поглотило остатки его некогда отважного духа, он уверовал в то, что титаны сами несут ответственность за ошибки своих созданий. Решив, в конечном счете, уничтожить плоды их трудов во всей вселенной, он захотел создать несокрушимую армию, которая огнем и мечом пройдет по вселенной.",
+		"Даже титаническое тело Саргераса пострадало от порчи, что поразила его когда-то благородное сердце. Его глаза, волосы и борода горели пламенем, а его металлическая бронзовая кожа раскололась, открыв бездонное горнило пылающей ненависти.",
+		"В своей ярости Саргерас разрушил темницы, в которых были заперты эредары и натрезим, и выпустил отвратительных демонов на свободу. Эти коварные существа склонились пред необъятным гневом темного титана и предложили служить ему всеми доступными им злокозненными способами. Из рядов могучих эредаров Саргерас выбрал двух предводителей, которых поставил во главе своей демонической армии разрушения.",
+		"Кил'джеден Искуситель был выбран для поиска самых темных рас во вселенной и присоединения их к армии Саргераса. Второй, Архимонд Осквернитель, был избран, чтобы вести огромную армию Саргераса в битву против тех, кто мог воспротивиться воле титана.",
+		"Первым шагом Кил'джедена было порабощение вампирических повелителей ужаса своей чудовищной властью. Повелители ужаса служили его личными агентами по всей вселенной, они находили удовольствие в поиске примитивных рас для своего повелителя, совращали их и сбивали с пути истинного. Первым среди повелителей ужаса был Тихондрий Затмеватель. Тихондрий безукоризненно служил Кил'джедену и согласился распространять пылающую волю Саргераса во всех темных уголках вселенной.",
+		"Могущественный Архимонд также избрал для себя агентов. Призвав зловредных разрушителей и их жестокого предводителя, Маннорота Разрушителя, Архимонд надеялся создать военную элиту, которая искореняла бы все живое.",
+		"Когда Саргерас убедился, что его армии в сборе и готовы следовать всем его приказам, он выпустил свои необъятные силы на просторы Великой запредельной тьмы. Он назвал свою растущую армию Пылающим Легионом. До сих пор никто не знает, сколько миров они уничтожили, пройдя по вселенной огнем и мечом.",
+	},
+},
+["Яйцо завра"] = {
+	["english"] = "Saurial Egg",
+	["pages"] = {
+		"Найденное в отдаленных тропических лесах Кратера Ун'Горо, это яйцо когда-то содержало в себе эмбрион дьявозавра. Генетический материал этого зверя оказался бесценен для экологов Лиги Исследователей, которые теперь как никогда близки к изобретению сыворотки от лишающего сил яда дьявизавров.",
+	},
+},
+["Свиток с предсказанием"] = {
+	["english"] = "Scroll of Auspice",
+	["pages"] = {
+		"Когда небеса загудят в смятенье\nИ страх поднимется из долин,\nВместилище нашего избавленья\nРазбей до самых его глубин.\n\nКинжалы злые великих, статных\nТенью и деревом ты свяжи.\nЧтоб ярость бурь королей закатных\nНазло всему продолжала жить.",
+		"Пускай обещание злата купило\nЗаклятья, что силу хранят в веках.\nСвяжи их чары, мой друг, с той силой,\nЧто душит огонь и былого страх.\n\nПостигнув этот рецепт священный,\nИсполни точно его совет.\nОмой плоды его Кровью Древних,\nИ война кошмаров сойдет на нет.",
+	},
+},
+["Омытый морем свиток"] = {
+	["english"] = "Sea-kissed Scroll",
+	["pages"] = {
+		"Сегодня был день великого позора. Мы награбили на побережье целую кучу добычи и, как обычно, отнесли ее в нашу пещеру.\n\nА вот дальше все пошло не так. Первый помощник Торглорк решил, что ему его доли мало, и подговорил часть команды на бунт. В пещере они напали на капитана Железноборода и убили его! Когда мы поняли, что произошло, было уже поздно. Я не хотел разделить участь капитана, так что мне пока пришлось смириться с новым положением вещей...\n\nТорглорк теперь занял место Железноборода, причем он выдает себя за него, чтобы наверху никто не прознал, что случилось. Когда я вижу его гнусную рожу, мне хочется раскроить ему башку топором – а потом вспороть себе живот за то, что я до сих пор не положил конец этому бесчестью...",
+		"Вторжение идет полным ходом. Нас переводят в гавань Железного Кулака в Награнде, так что с Танаанскими джунглями мы прощаемся.\n\nЯ подмазал одного чернокнижника, и он пообещал, что поможет. Говорит, что его магия вернет Железноборода назад... по большей части. Так что я отправлюсь в нашу пещеру и попробую его воскресить. Может быть, вместе мы еще все и исправим.",
+		"Ритуал провалился... по большей части. Воскресить Железноборода не вышло. Ну, то есть он вернулся, но по-прежнему мертв. Его дух помнит только миг своей гибели, и он взбешен сверх всякой меры. Я сообщил ему, что Торглорк теперь выдает себя за него, и он так взбеленился, что тут же набросился на меня. Я еле ноги унес.\n\nДо сих пор в ушах звенят его крики и проклятия в адрес предателей – аж мурашки по коже. Так что придется мне возвращаться на корабль. Ну ничего. Я еще придумаю, как вернуть утраченную честь...",
+	},
+},
+["Туристическая брошюрка секретной лаборатории"] = {
+	["english"] = "Secret Lab Tourism Brochure",
+	["pages"] = {
+		"Добро пожаловать в секретную лабораторию, самое замечательное место для туристов в Азшаре!\n\n\nВы когда-нибудь думали, откуда берутся тайны?\n\n\nВ глубине богатых ресурсами лесов Азшары гоблины-ученые усердно трудятся, изобретая тайны завтрашних дней, которыми вы можете насладиться уже сегодня! За символическую плату вся ваша семья получит кресла в переднем ряду и сможет наблюдать, как гоблины-инженеры испытывают на прочность основы вселенной.",
+		"Зачем мы здесь? Что делает нас разумными? Сколько неукротимой энергии можно уместить в одной унции взрывоопасного ракетного топлива, прежде чем оно достигнет критической массы и произойдет взрыв, способный сдвинуть планету с ее орбиты? Мы можем выяснить это вместе. Твоя секретная лаборатория ждет тебя!\n\n\n&lt;Остальные 36 страниц брошюры содержат сложные юридические формы отказа от претензий и форму заказа подарка.&gt;",
+	},
+},
+["\"Тень, Шторм и Камень\""] = {
+	["english"] = "Shadow, Storm, and Stone",
+	["pages"] = {
+		"В литературе и искусстве могу часто повторяется – и с каждым разом все больше приукрашивается – одна легенда. Это сказание о Тени, Шторме и Камне. Ниже приведен перевод наиболее ранней записи этой легенды.",
+		"Зверь о семи главах \nСемь раз вздохнул.\nИ землю тень устлала, \nИ рой затмил светило.\nНе сладить было с древним,\nВсяк гнева его страшился.\nНо вот явился Шторм.\nИ прогремел вдруг гром, и ожил Камень.\nТот гром был гласом Шторма,\nА Камень его дланью.\nИ молния высь озарила \nИ тут же рой прогнала.\nИ в головы зверя бил Камень.\nИ тень захлестнула небо и землю,\nКак страх и как ярость бессмертна.\nИсполнилась и воля Шторма,\nИ Камня предназначение.",
+	},
+},
+["\"Тени лоа\""] = {
+	["english"] = "Shadows of the Loa",
+	["pages"] = {
+		"Зандалары поклоняются \"лоа\", могущественным духам, которые населяли этот мир еще до прихода титанов. Лоа очень много. Некоторые из них сильны, но большинство – слабы. Многие не имеют формы, тогда как другие похожи на животных и иных существ.\n\nСемьи зандаларов часто поклоняются своим собственным, семейным лоа, города имеют лоа-покровителей, а величайшим лоа поклоняется вся нация. Могучие, достигшие просветления зандалары после смерти тоже могут стать лоа – по крайней мере, все в это верят.\n\nЭти духи являются центром мировоззрения зандаларов. Как скажут лоа, так и поступят зандалары.",
+	},
+},
+["Скорбь Матери-Земли"] = {
+	["english"] = "Sorrow of the Earthmother",
+	["pages"] = {
+		"Странствуя по полям рассвета, дети земли слышали мрачный шепот из подземных недр. Этот шепот рассказывал им про войну и обман. Многие Шу'хало попали под его чары и впустили зло в свои души. Они отвернулись от своих добрых братьев и утратили первозданную чистоту.",
+		"Увидев падение своих детей, Мать-Земля не выдержала такого горя. Она вырвала свои глаза и бросила их на бескрайний небосвод. С тех пор Ан'ше и Му'ша, словно бы желая утешить друг друга, гоняются друг за другом по небу. Поэтому день и сменяет ночь.",
+		"Но даже ослепнув, Мать-Земля не могла оставаться безучастной. Ветер доносил до ее ушей вести обо всем, что происходило на рассветных равнинах. Ее любящее сердце всегда пребывало с ее детьми, как и ее великая мудрость.",
+	},
+},
+["Высекатель искр Ву"] = {
+	["english"] = "Sparkmancer Vu",
+	["pages"] = {
+		"Высекатель искр Ву был доверенным советником Властелина Грома.\n\nОба могу происходили из одного племени и были близки, как братья. С детства они играли вместе, ссорились, соревновались в достижениях, и считается, что именно из-за этого соперничества в Лэй Шэне пробудилась жажда власти. Но Ву приложил все усилия для того, чтобы трон Пандарии достался именно Лэй Шэню.\n\nВскоре после того, как Лэй Шэнь громко заявил о себе, нанятые его соперниками убийцы похитили Ву и вырезали ему язык. Говорили, что за похищением стоял сам Властелин Грома, которому нужно было сохранить в тайне то, что мог знать о нем только самый близкий друг. \n\nИх братские отношения также стали плодородной почвой для домыслов. Крестьянам нравилось сочинять о них истории, среди которых был и рассказ о том, как два друга повздорили из-за женщины.\n\nНесмотря на эти слухи, исторические источники свидетельствуют, что Высекатель искр Ву был бесконечно предан своему императору, и до конца своей жизни верно служил ему.",
+	},
+},
+["Пленители душ"] = {
+	["english"] = "Spirit Binders",
+	["pages"] = {
+		"В течение многих веков могу использовали плоть как оружие, деформируя и изменяя ее по своей черной воле. Но после неудачи с сотворением расы сауроков могу начали искать возможность создать новое оружие, на сей раз – полностью подвластное им.\n\nДревние исследования научили их обращать плоть в камень и наоборот. Безжизненный камень можно было оживить, наделить волей (или безволием) и заключить в нем душу.\n\nЭти мрачные ритуалы породили рожденных-из-камня, нефритовых солдат, которых магия сотворила из субстанции жизни пленников могу. Эти создания были сильны, ужасны обликом и, что важнее всего, хранили непоколебимую верность своим хозяевам.",
+	},
+},
+["Дневник шпиона"] = {
+	["english"] = "Spy's Logbook",
+	["pages"] = {
+		"Мой лагерь находится достаточно далеко от цели, чтобы не привлекать внимания. Орки клана Веселого Черепа, которых мы \"убедили\" поделиться сведениями, называют его \"Дров Крушитель\"\n\nЭти магнароны могут принести пользу Железной Орде, я точно это знаю!",
+		"Целыми днями это чудище выводит лапой на земле очертаний рун, словно творит заклинания. Другие магнароны несут смерть и разрушение, но этот только наблюдает.\n\nВозможно, он общается с остальными, но я не понимаю, как именно он это делает.",
+		"Отряд искателей приключений прибыл из другого мира и напал на Дрова. Он расправился со всеми. Кажется, он не испытывает никаких чувств, а его сила безгранична.\n\nНе знаю, можно ли его одолеть...",
+		"Прибыла еще одна группа – и была неоднократно обращена в бегство.\n\nОна смогла нанести значительный урон, но в конце концов понесла невероятно большие потери и была вынуждена отступить.\n\nРаздавив одного паладина, монстр посмотрел прямо на меня. Клянусь, он знает, что я наблюдаю за ним...",
+		"Когда я свежевал тушу, на мой \"лагерь\" упал огромный валун. Я едва не свалился. Обернувшись, я увидел магнарона – он, как обычно, стоял и чертил что-то на земле.\n\nВозможно, он следил за мной краем глаза. Кажется, время моего пребывания здесь подошло к концу...",
+	},
+},
+["Штандарт Нюцзао"] = {
+	["english"] = "Standard of Niuzao",
+	["pages"] = {
+		"Стоило лишь развернуть этот моток плотной ткани, как взору предстал благородный герб пандаренской империи. По нижней кромке проходят кожаные ремни с тяжелыми металлическими кольцами, за которые крепится знамя. На каждом ремне начертаны строки, воодушевляющие знаменосца:\"От страха не уйти,/ Отвагу обрети\".\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Солнечный Колодец – Падение Кель'Таласа"] = {
+	["english"] = "Sunwell - The Fall of Quel'Thalas",
+	["pages"] = {
+		"Хотя Артас сокрушил всех, кого теперь считал своими врагами, его не переставал преследовать дух Кел'Тузада. Призрак сказал, что Артас должен помочь вернуть его к жизни, чтобы продолжить выполнение плана Короля-лича. Для этого Артас должен был принести останки Кел'Тузада к волшебному Солнечному Колодцу, сокрытому в королевстве высших эльфов Кель'Таласе.",
+		"Войско Плети под предводительством Артаса вторглось в Кель'Талас и окружило немногочисленную армию эльфов. Сильвана Ветрокрылая, предводительница следопытов Луносвета, храбро вступила в неравный бой с врагом, но Артас истребил всю армию высших эльфов и добрался до Солнечного Колодца. В подтверждение своего превосходства безжалостный Артас воскресил Сильвану как банши, чтобы она вечно служила поработителю Кель'Таласа.",
+		"Затем Артас погрузил останки Кел'Тузада в священные воды Солнечного Колодца. Могучие воды Вечности были осквернены этим злодеянием, но Кел'Тузад воскрес и вернулся в этот мир могущественным личом. Кел'Тузад, чьи силы теперь многократно возросли, объяснил, в чем состоял следующий этап плана Короля-лича.",
+		"Когда Артас со своей армией нежити повернул на юг, в землях Кель'Таласа уже не осталось ни одного живого эльфа. Славного королевства высших эльфов, просуществовавшего более девяти тысяч лет, больше не существовало.",
+	},
+},
+["Воинам, павшим в Танаане"] = {
+	["english"] = "Tanaan's Fallen",
+	["pages"] = {
+		"Посвящается тем, кто отдал жизнь в боях за побережье Танаанских джунглей.",
+	},
+},
+["Терракотовая рука"] = {
+	["english"] = "Terracotta Arm",
+	["pages"] = {
+		"Когда могу стало не хватать смертных рабов-воинов, они начали создавать армии оживленных механизмов. Поскольку терракотовые воины порой бездействовали веками, сложно определить когда был создан или использован этот. Впрочем, оторванная рука говорит нам, что он пал в бою.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Альянс Лордерона"] = {
+	["english"] = "The Alliance of Lordaeron",
+	["pages"] = {
+		"После битвы в крепости Штормграда лорд Лотар собрал остатки армий Азерота и организовал отступление к берегам северного королевства Лордерона. Главы семи человеческих народов решили, что если Орду не остановить, то она уничтожит все человечество, и создали союз, позже получивший название Лордеронский Альянс.",
+		"В первый раз за почти три тысячи лет разрозненные народы Аратора объединились под одним знаменем. Лорд Лотар был назначен главнокомандующим войск Альянса и начал подготовку своих воинов к нашествию Орды.",
+		"При поддержке своих помощников Утера Светоносного, адмирала Даэлина Праудмура и Туралиона, Лотар убедил получеловеческие народы Лордерона в необходимости противостоять надвигающемуся вторжению. Альянс также смог заручиться поддержкой дворфов из Стальгорна и некоторых высших эльфов из Кель'Таласа.",
+		"Эльфы под предводительством Анастериана Солнечного Скитальца не хотели вмешиваться в предстоящий конфликт. Но они не могли отказать Лотару – последнему из рода Арати, который поддерживал их в прошлом.",
+		"Орда под предводительством вождя Молота Рока привела под свои знамена огров из родного Дренора и лесных троллей Амани. Продолжая свое наступление, Орда легко подавила сопротивление дворфов из королевства Каз Модан и южных областей Лордерона.",
+		"Грандиозные битвы Второй войны сотрясали море и воздух. Каким-то образом Орде удалось завладеть могущественным артефактом – Душой Демона – и с его помощью подчинить себе Алекстразу, древнюю королеву драконов. Угрожая уничтожить отложенные ею яйца, Орда заставила Алекстразу отправить своих детей на войну. Благородные красные драконы были вынуждены сражаться на стороне Орды, и сражались они превосходно.",
+		"Война бушевала на просторах Каз Модана, Лордерона и самого Азерота. Свирепая Орда сожгла дотла пограничные земли Кель'Таласа, после чего эльфы наконец-таки присоединились к Альянсу. Война разрушила и разорила некогда процветавшие города Лордерона. Несмотря на превосходящие силы врага, Лотар и его союзники сумели сдержать наступление Орды.",
+		"Но в последние дни Второй войны, когда победа Орды казалась уже неизбежной, между двумя самыми могучими орками Азерота возникли небывалые раздоры. Когда Молот Рока готовился к решающей атаке на столицу Лордерона, которая должна была сокрушить последние силы Альянса, Гул'дан и его сторонники покинули остальное войско и отправились в море.",
+		"Из-за предательства Гул'дана Молот Рока потерял почти половину своих воинов и был вынужден отступить, выпустив из рук столь близкую победу над Альянсом.",
+		"Жаждавший могущества, Гул'дан отправился на поиски подводной Гробницы Саргераса, где он надеялся раскрыть тайну абсолютной силы. Гул'дан уже обрек своих воинов на вечное рабство в Пылающем Легионе и о своем долге перед Молотом Рока он беспокоился меньше всего.",
+		"С помощью кланов Бушующего Шторма и Сумеречного Молота Гул'дану удалось поднять Гробницу Саргераса с морского дна. Но когда он открыл древний склеп, его встретили полчища обезумевших демонов.",
+		"Молот Рока желал наказать своенравных орков за столь дерзкое предательство и послал своих воинов убить Гул'дана и вернуть остальных изменников. Обезумевшие демоны, которых столь опрометчиво освободил Гул'дан, разорвали его на клочки. Потеряв своего командира, воины тотчас сдались на милость войска Молота Рока.",
+		"Несмотря на то что восстание было подавлено, Орде не удалось оправиться от ужасных потерь. Предательство Гул'дана не только придало Альянсу уверенности, но и обеспечило им время на перегруппировку и подготовку к ответной атаке.",
+		"Видя, что Орда раскалывается изнутри, лорд Лотар собрал последние силы и отбросил Молота Рока на юг, к центру Штормграда. Там войска Альянса окружили Орду в вулканической крепости Пика Черной горы. Лотар пал в этой битве, но один из его командиров, Туралион, в последний момент взял на себя командование войском и заставил Орду отступить к бескрайнему Болоту Печали.",
+		"Войскам Туралиона удалось уничтожить Темный портал – волшебный портал в родной мир орков, Дренор. Орда, лишенная подкрепления и разрываемая на части внутренней враждой, наконец, пала перед мощью Альянса.",
+		"Орки со всего мира были собраны вместе и помещены в лагеря для военнопленных. Но, хотя с Ордой было покончено, многие сомневались, что мир удастся сохранить надолго. Кадгар, ставший верховным магом, убедил глав Альянса построить Крепость Стражей Пустоты, чтобы охранять руины Темного портала и не допустить повторного вторжения из Дренора.",
+	},
+},
+["\"Рыболов и монахи\""] = {
+	["english"] = "The Angler and the Monks",
+	["pages"] = {
+		"Два мудрых монаха встретились у Храма Нефритовой Змеи, чтобы обсудить природу истины. Водная гладь казалась спокойной, безмятежной... и они решили нанять рыбака, чтобы выйти в море и любоваться прекрасным видом во время увлекательной беседы. \"Такое затишье бывает только перед бурей\", – предупредил их рыбак, но монахи доверяли лишь своим глазам и настояли на своем.\n\n\"Истина абсолютна\", – сказал первый монах, когда лодка вышла в открытое море. \"Во вселенной лишь одна истина, и мы должны работать без устали, чтобы познать ее.",
+		"\"Истина относительна!\" – парировал второй, когда над ними уже начали собираться тучи. \"Во вселенной много истин, и только дурак может думать, что истина одна для всех.\"\n\nРыболов хранил молчание, пока монахи спорили, но один из них поинтересовался его мнением. \"Я не задумывался об этом\", – признался он. Оба монаха укоризненно покачали головами и зацокали языками. Затем они выяснили, что рыболов не умел даже читать и писать. \"Ты впустую потратил свою жизнь\", – сказали они.",
+		"В этот момент небо расколола молния, загремел гром и начался сильнейший ливень. Небольшая лодка быстро наполнилась водой и перевернулась. Рыболов скинул плащ и поплыл к берегу.\n\n\"Помоги нам! Мы не умеем плавать!\" – закричали монахи, когда волны начали смыкаться над ними. \"Вы впустую потратили свою жизнь\", – ответил им рыболов.",
+	},
+},
+["Броня Маннорота"] = {
+	["english"] = "The Armor of Mannoroth",
+	["pages"] = {
+		"Эти демонические доспехи носил демон, поразивший наш народ проклятием кровожадности. Благодаря геройскому поступку одного храброго орка он был побежден. Нет больше Маннорота Разрушителя. Да послужат эти доспехи напоминанием нам о том, как глубоко мы пали и как отчаянно мы сражались за то, чтобы вновь обрести наше доброе имя.\n\n- Тралл, Вождь Орды",
+	},
+},
+["Битва при Грим Батол"] = {
+	["english"] = "The Battle of Grim Batol",
+	["pages"] = {
+		"Тем временем остатки Орды боролись за выживание в истерзанных войной южных землях. Гром Адский Крик со своим кланом Песни Войны сумел избежать плена, а вот клан Кровавой Глазницы в полном составе, вместе с вождем Мертвым Глазом, был заключен в лордеронские лагеря для военнопленных. Последовала череда бунтов, но начальникам лагерей вскоре удалось восстановить порядок среди заключенных.",
+		"Но втайне от Альянса большая группа орков продолжала странствовать по пустошам Каз Модана. Клан Драконьей Пасти, возглавляемый коварным чернокнижником Некросом, с помощью могущественного артефакта под названием \"Душа Демона\" подчинил себе королеву драконов Алекстразу и ее подданных. Удерживая королеву в заложниках, Некрос собрал тайную армию в заброшенной цитадели Громового Молота, которую многие считали проклятой.",
+		"Планируя нанести удар Альянсу силами своей армии и могучих красных драконов, Некрос надеялся вновь объединить Орду и продолжить завоевание Азерота. Но его надеждам не суждено было сбыться: небольшая группа бойцов сопротивления, возглавляемая магом Ронином, смогла уничтожить Душу Демона и освободить королеву драконов.",
+		"Разъяренные драконы Алекстразы разрушили Грим Батол и сожгли большую часть орков Драконьей Пасти. Грандиозные планы Некроса рухнули; войска Альянса окружили уцелевших орков и заключили их в лагерь для военнопленных. Поражение Драконьей Пасти ознаменовало конец Орды и кровожадности орков.",
+	},
+},
+["Восход Предателя"] = {
+	["english"] = "The Betrayer Ascendant",
+	["pages"] = {
+		"Во время атаки Легиона на Ясеневый лес Иллидан был освобожден из своей тюрьмы, где он провел в заточении десять тысяч лет. Сначала Иллидан пытался помочь своим товарищам, но вскоре он принял свое истинное обличие и поглотил энергию могущественного волшебного артефакта под названием Череп Гул'дана.",
+		"Череп Гул'дана дал Иллидану демонический облик и огромную силу. Кроме того, он получил часть воспоминаний Гул'дана, главным образом о Гробнице Саргераса – подземелье на острове, где, по слухам, находились останки Титана Мрака Саргераса.",
+		"Вновь получив силу и возможность свободно странствовать по миру, Иллидан отправился на поиски своей судьбы; но на этом пути он столкнулся с Кил'джеденом, который сделал Иллидану предложение, от которого тот не мог отказаться. Кил'джеден был разгневан поражением Архимонда у горы Хиджал, но ему предстояли более важные дела, чем отмщение.",
+		"Кил'джеден понимал, что Король-лич, его собственное творение, достиг слишком большого могущества, и управлять им уже невозможно, а потому он приказал Иллидану убить Нер'зула, уничтожив Плеть раз и навсегда. Взамен он пообещал Иллидану невиданную силу и почетное место среди повелителей Пылающего Легиона.",
+		"Иллидан согласился и тотчас отправился на поиски Ледяного Трона, чтобы уничтожить этот ледяной сосуд, в котором хранилась душа Короля-лича. Иллидан знал, что для этого ему понадобится могущественный артефакт. Использовав знания, перешедшие к нему с воспоминаниями Гул'дана, Иллидан отправился к Гробнице Саргераса за останками Титана Мрака.",
+		"Иллидан потревожил своих старых должников высокорожденных и выманил из подводных убежищ змееподобных существ – наг. Наги во главе с леди Вайш помогли Иллидану добраться до Таинственных островов, где, по слухам, находилась Гробница Саргераса.",
+		"Когда Иллидан, сопровождаемый нагами, отправился в путь, его начала преследовать Майев Песнь Теней. Майев была тюремным стражником Иллидана десять тысяч лет и страстно желала вернуть его в заточение. Но Иллидан, перехитрив Майев и ее Смотрящих, сумел завладеть Оком Саргераса. Найдя могущественное Око, Иллидан отправился в бывший город волшебников – Даларан.",
+		"Забрав энергию силовых линий города, Иллидан воспользовался Оком, чтобы нанести магический удар по цитадели Ледяной Короны в далеком Нордсколе. Этот удар сокрушил защиту Короля-лича и поставил под угрозу саму крышу мироздания. В последний момент разрушительное заклятие Иллидана было остановлено, когда его брат Малфурион и жрица Тиранда пришли на помощь Майев.",
+		"Зная, что Кил'джеден будет недоволен его неудавшейся попыткой разрушить Ледяной Трон, Иллидан бежал в безжизненный мир, называемый Запределье: последние остатки Дренора, бывшей родины орков. Там он хотел укрыться от гнева Кил'джедена и обдумать свои дальнейшие планы.",
+		"Остановив Иллидана, Малфурион и Тиранда вернулись на родину, в Ясеневый лес, дабы охранять свой народ. Однако Майев не согласилась отступить так просто – она последовала за Иллиданам в Запределье, чтобы покарать его.",
+	},
+},
+["Рождение Короля-лича"] = {
+	["english"] = "The Birth of the Lich King",
+	["pages"] = {
+		"Нер'зул и его последователи оказались в Круговерти Пустоты, астральной среде между мирами, разбросанными по Великой запредельной тьме. К несчастью, там его поджидал Кил'джеден со своими воинами-демонами. Кил'джеден, поклявшийся отомстить Нер'зулу за его неповиновение, медленно терзал старого шамана, разрывая на части его тело.",
+		"Кил'джеден не давал духу шамана умереть, заставляя его в полной мере чувствовать ужасную боль, которую ему причинял. Нер'зул умолял демона послать ему смерть, но тот был непреклонен: он сказал, что Кровавый договор, который они очень давно заключили, все еще в силе, и Нер'зул еще должен был сослужить демону службу.",
+		"Орки оказались неспособны завоевать мир для Пылающего Легиона, и Кил'джеден был вынужден создать новую армию, чтобы сеять хаос в королевствах Азерота. Эта армия не должна была пасть жертвой глупой вражды, подобно Орде. Она должна была быть беспощадной и преданной своему повелителю. В этот раз Кил'джеден не мог позволить себе потерпеть поражение.",
+		"Кил'джеден поставил беспомощный дух Нер'зула перед последним выбором между службой Легиону и вечными муками. И вновь Нер'зул принял условия демона. Кил'джеден заточил его душу в глыбу прочного как алмаз льда, собранного в самых дальних пределах Круговерти Пустоты.",
+		"Заточенный в ледяной тюрьме Нер'зул почувствовал, что возможности его разума возросли тысячекратно. Наделенный огромной силой демона, он стал невероятно могущественным духом. В этот момент орк по имени Нер'зул перестал существовать, и на свет явился Король-лич.",
+		"Рыцари смерти и последователи клана Призрачной Луны, верные Нер'зулу, также подверглись трансформации: их разорвали на части, а затем превратили в костяных Королей Мертвых. Демоны позаботились о том, чтобы даже после смерти последователи Нер'зула беспрекословно служили ему.",
+		"Когда пришло время, Кил'джеден объяснил Королю-личу, зачем тот был создан. Нер'зул должен был распространить в Азероте смертоносную чуму, которая истребила бы расу людей. Заразившиеся этой чумой умирали и превращались в нежить, отдавая свои души во власть железной воли Нер'зула.",
+		"В случае успеха миссии по истреблению людей Кил'джеден пообещал Нер'зулу свободу от проклятия и новое здоровое тело.",
+		"Несмотря на то что Нер'Зул согласился сыграть свою роль, Кил'джеден не был уверен в его преданности. Удерживая дух Короля-лича в заточении, демон мог не беспокоиться о его покорности, но, тем не менее, он предпочел не оставлять его без присмотра. Для этого Кил'джеден приставил к Нер'Зулу своих лучших демонов-стражников, повелителей ужаса, чтобы те охраняли его и следили за тем, чтобы он выполнил свою жуткую миссию.",
+		"Самому могучему и коварному из повелителю ужаса, Тихондрию, это задание пришлось по душе: его завораживала смертоносная сила чумы и небывалая мощь Короля-лича.",
+	},
+},
+["\"Место рождения Лю Лана\""] = {
+	["english"] = "The Birthplace of Liu Lang",
+	["pages"] = {
+		"Прославленный пандарийский исследователь Лю Лан родился и вырос здесь, в Каменном Плуге, на маленькой ферме неподалеку от этого самого места.\n\nОн должен был помогать семье по хозяйству, но вместо этого часто взбирался на скалы к югу отсюда и глядел на бескрайнюю гладь океана. \"Я хочу увидеть, что там, за морем\", – объявил он однажды, изрядно насмешив сверстников (повсеместно считалось, что остальной мир погиб во время Раскола).\n\nСначала Лю Лан хотел плыть на лодке, но местные рыбаки сказали, что так он никогда не сможет вернуться домой сквозь пелену тумана.\n\nПозже он сообщил, что собирается исследовать мир, отправившись в путь на спине морской черепахи, потому что черепахи всегда возвращаются к родным берегам.\n\nПосле этого местные заподозрили, что Лю Лан объелся гнилой репы и повредился умом.",
+	},
+},
+["Конденсация электро-ичества"] = {
+	["english"] = "The Condensation of Electra-Atrocity",
+	["pages"] = {
+		"Для тех, кто привык к владению тайными искусствами или демоническими энергиями, управление стихиями представляет немалую сложность, а для неопытных – серьезную или даже смертельную опасность.\n\nТе, кто желает заниматься изучением стихий, должны помнить о том, что даже лишенные призывающих и оживляющих тайных энергий стихии могут быть очень и очень опасны.",
+		"Я вновь обращаю ваше внимание на то, что мы переходим к основной теме этой книги – работе с таинственной и эфемерной субстанцией, которую я назвал \"электро-ичеством\".\n\nЭта в высшей степени любопытная сущность, не имеющая запаха, возникает во вращающихся потоках воздушных элементалей. Возможно, она выполняет ту же функцию, что кровь или слизь у созданий из плоти. Грозовые облака также выделяют эту субстанцию, подобно тому, как вы или я выделяем из себя отходы жизнедеятельности.",
+		"Вы можете думать, что электро-ичество, которое считается бесполезным побочным продуктом, не найдет никакого применения. Мои эксперименты докажут обратное! Когда я впервые коснулся языком клеммы заряженной конденсаторной банки, то упал навзничь, пораженный чем-то, что могу охарактеризовать лишь как поцелуй Богов.",
+		"Сохраняемое в подходящем сосуде, электро-ичество бурлит от неимоверной созидательной энергии. Мои эксперименты показывают, что оно может быть губительным для кошек и кроликов.\n\nБатарею конденсаторных банок можно использовать для поддержания портала в стихийное измерение; при этом призывающие могут заняться другими делами. Я недавно установил подобное устройство на вершине горы Хиджал, чтобы организовать перемещение большого количества людей и материалов через Огненные Просторы.",
+		"Электро-ичество ведет себя как сердитая сущность, всегда стремящаяся вернуться в землю по самому короткому, мокрому и металлическому пути.\n\nНЕ ПЫТАЙТЕСЬ ПИТЬ ЭТУ СУЩНОСТЬ.\n\nВкусом она похожа на горелую плоть и может вызвать поражение внутренних органов. В качестве мер защиты всегда следует надевать одежду из толстой кожи, а для работы с электро-ическим оборудованием использовать доверчивых новичков, которые гораздо глупее вас.",
+		"Подчинив себе электро-ичество, мы станем еще на шаг ближе к власти над стихиями и сможем призвать наших повелителей в измерение смертных, и они откроют нам все тайны бесконечности.\n\nДа будет свет! А также боль, страдания и, возможно, гибель. Они не дадут нам забыть о той славе, которая придет к нам, когда мир будет создан заново, а верующие станут единым целым с искрящейся голубой сущностью могущества!",
+	},
+},
+["\"Проклятие и молчание\""] = {
+	["english"] = "The Curse and the Silence",
+	["pages"] = {
+		"На протяжении веков могу охраняли великие реликвии титанов и всегда повиновались своему хозяину, всегда были послушны. Исполненные бесконечной решимости, они не оставляли свой вечный пост.\n\nДаже когда умолк их повелитель.\n\nС тех времен, когда камень тел могу превратился в обычную плоть, не осталось никаких записей. Должно быть, им было очень страшно, когда они впервые начали дышать, истекать кровью, умирать.\n\nОни взывали к своему господину, но тот не отвечал.",
+		"Превратившись в существ из плоти и крови, могу подверглись и другим проклятиям смертных: гордыне и жадности, страху и злобе. Потеряв общую цель, могу принялись сражаться между собой.\n\nМогущественные военачальники собирали под свои знамена целые армии и вели непрекращающиеся войны. На полях брани не оставалось ничего, кроме выжженной земли, а отзвуки сражения наполняли сердца других рас ужасом. \n\nНо хозяин их все равно хранил молчание.",
+	},
+},
+["Темный портал и падение Штормграда"] = {
+	["english"] = "The Dark Portal and the Fall of Stormwind",
+	["pages"] = {
+		"Кил'джеден подготавливал Орду к нападению на Азерот, а Медив в это время продолжал сражаться с Саргерасом за свою душу. Король Ллейн, благородный правитель Штормграда, узнал о том, что тьма завладела душой его бывшего друга.",
+		"Король Ллейн рассказал об этом Андуину Лотару, последнему потомку рода Арати, которого он сделал своим военачальником. Но никто из них не мог предположить, что беда, случившаяся с Медивом, станет причиной столь ужасных событий.",
+		"В качестве последней награды Саргерас пообещал Гул'дану огромную силу в обмен на его согласие повести Орду на Азерот. Через Медива Саргерас сказал чернокнижнику, что может сделать его богом во плоти, если тот найдет подводную могилу, в которой хранительница Эгвин тысячу лет назад укрыла останки Саргераса.",
+		"Гул'дан согласился сделать это и решил, что, как только Азерот будет повержен, он направится на поиски легендарной могилы и получит свою награду. Саргерас, уверенный в том, что Орда будет покорно служить ему, приказал начать вторжение.",
+		"Общими усилиями Медив и волшебники Совета Теней открыли портал межу измерениями – Темный портал. Этот портал позволил армии Дренора попасть на Азерот. Гул'дан послал через портал разведчиков, чтобы они исследовали земли, которые им предстояло завоевать. Вернувшись, они доложили Совету Теней, что можно начать вторжение.",
+		"Дуротан, по-прежнему уверенный в том, что Гул'дан приведет их народ к гибели, снова высказался против действий волшебников. Храбрый воин сказал, что они уничтожили чистый дух орков и что это безрассудное нападение на Азерот погубит их всех. Гул'дан не мог пойти на риск, убив любимого всеми героя, и был вынужден отправить Дуротана вместе с его кланом Северного Волка в самые отдаленные области нового мира.",
+		"За изгнанным кланом Северного Волка через портал последовали лишь несколько кланов. Орки быстро развернули базу в Черных Топях, темной болотистой местности на востоке королевства Штормград. Начав исследовать новую территорию, они тут же столкнулись с защитниками Штормграда.",
+		"Хотя битвы с людьми заканчивались довольно быстро, обе расы успели выяснить сильные и слабые стороны соперников. Ллейну и Лотару не удавалось получить точные сведения о численности орков, и они могли лишь догадываться о том, насколько могуч был их противник.",
+		"Через несколько лет большая часть Орды перебралась на Азерот, и Гул'дан решил, что настало время нанести сокрушительный удар по человечеству. Орда обрушила всю свою мощь на ничего не подозревающих жителей королевства Штормград.",
+		"В то время как жители Азерота и Орда бились друг с другом по всему королевству, внутри обеих армий разгорались конфликты. Король Ллейн, убежденный в том, что звероподобные орки не в состоянии завоевать Азерот, упрямо отказывался покидать столицу Штормграда; Лотар же был уверен, что бой следует перенести на территорию, занятую противником, так что ему пришлось выбирать между своими убеждениями и верностью королю.",
+		"Лотар решил последовать своим инстинктам и, заручившись поддержкой ученика Медива – Кадгара, – пошел на штурм крепости волшебника – Каражана. Кадгару и Лотару удалось победить хранителя, которого они считали причиной всей войны.",
+		"Убив тело Медива, Лотар и юный Кадгар, сами того не зная, изгнали дух Саргераса в бездну. А праведный дух Медива остался жив… и долгие годы скитался по астральному миру.",
+		"Хотя Медив был повержен, Орда по-прежнему брала верх над защитниками Штормграда. Но когда победа была уже у Орды в руках, один из самых могучих вождей орков, Оргрим Молот Рока, стал понимать, насколько изменились некогда миролюбивые кланы, жившие на Дреноре.",
+		"Его старый друг Дуротан, вернувшийся из изгнания, напомнил ему о предательстве Гул'дана. По приказу мстительного Гул'дана Дуротан и вся его семья были убиты, в живых оставили лишь его юного сына. Но Молот Рока не знал о том, что сын Дуротана попал в плен к Аделасу Блэкмуру, одному из командиров армии людей, и стал его рабом. \n\nИменно этому юному орку суждено было стать величайшим вождем в истории своего народа.",
+		"Оргрим, разгневанный убийством Дуротана, решил освободить Орду от ужасного проклятья и, чтобы стать новым вождем Орды, убил Чернорука, марионетку Гул'дана. Под его твердым руководством безжалостная Орда наконец окружила крепость Штормграда.",
+		"Король Ллейн сильно недооценил мощь Орды и мог лишь беспомощно смотреть на то, как его королевство рассыпалось под натиском зеленокожих захватчиков. Вскоре и сам король был убит одним из лучших наемных убийц Совета Теней, полуорком Гароной.",
+		"Лотар и его воины, возвращавшиеся из Каражана, надеялись остановить кровопролитие и спасти свою некогда славную родину. Но было слишком поздно: когда они вернулись, их королевство лежало в руинах. Орда опустошала деревни и захватывала близлежащие земли. Лотар и его войско, вынужденные скрываться от врагов, поклялись вернуть свою родину любой ценой.",
+	},
+},
+["\"Темный пророк Зул\""] = {
+	["english"] = "The Dark Prophet Zul",
+	["pages"] = {
+		"В совет Занчули входит множество жрецов и магов, наделенных огромной силой и обладающих древним запретным знанием. Одним из самых уважаемых членов совета является Зул. Еще будучи ребенком, он безошибочно и в самых страшных подробностях предсказывал будущее, являвшееся ему в ужасных видениях. Он внушает окружающим страх и благоговение, и его причисляют к темным пророкам – тем провидцам, что способны предвидеть ужасные трагедии еще до их наступления.",
+		"За несколько месяцев до наступления Катаклизма ночные кошмары Зула были наполнены жуткими образами разорванного на клочки мира. Он тщательно взвесил все предзнаменования и пришел к выводу, что родина зандаларских троллей будет уничтожена великим бедствием. Он предложил совету и королю заключить союз с другими племенами и покинуть обреченную родину.",
+		"Несмотря на репутацию Зула, совет отказался поверить в масштабы надвигающейся трагедии. Многие тогда сочли, что Зул просто играет на публику и лишь хочет укрепить свое положение и добиться большей власти. Над ним насмехались, когда он и его последователи начали собирать боевой флот и налаживать связи с менее распространенными племенами троллей. \n\n Но видения Зула в один день стали явью. Катаклизм, вызванный Смертокрылом, потряс Зандалар до самого основания. Даже сейчас могучая и загадочная империя троллей постепенно уходит в морскую пучину. Теперь и воины и крестьяне присоединяются к Зулу в надежде, что он знает, как нужно дальше поступить.",
+	},
+},
+["Указ Плети"] = {
+	["english"] = "The Decree of the Scourge ",
+	["pages"] = {
+		"Догматы Плети\nРаздел 1\nАвтор – Кел'Тузад\n\nПлеть пустила корни вглубь каждой живущей расы, и грехи смертных питают ее стремление к величию. Так называемые \"герои\" склонятся перед нами, ибо их идеалы не способны привести к победе. Их победа – это мираж, путь к которому устлан горьким разочарованием, ибо Плеть выигрывает всегда, даже проиграв битву. Когда смертные, наконец, поймут эту истину, они неизбежно покорятся нашей воле.",
+		"Наш Повелитель, Король-лич, был рожден под властью этих идеалов.\n\nЗавоевание – это разрушение. Разрушение – это обладание тем, что принадлежит тебе по праву, это существование и обращение в оружие недостатков смертных. Все признаки живых существ имеют синонимы, которые отражают их несовершенство: надежда – это догма, правота – это фанатизм, а существование – это жалость. Познайте, что движет смертными – и вы обретете оружие против них.",
+		"Величайшая мудрость – знать прямой путь, ведущий к цели. Душевная слабость, физические увечья, даже болезнь могут подкосить многих смертных. Но цель Повелителя – не покорение многих, а полное подчинение. Глупо тратить бесценные ресурсы, воздействуя на жалких крестьян – с этим справится обычная чума, однако ей не под силу сломить сильных духом. Для них нужен отдельный подход, основывающийся на наших знаниях о слабости человеческой души.",
+		"Догматы Плети\nГлава 2\n\nОценивая действия Плети, смертные пребывают в плену величайшей ошибки, коей является их определение \"зла\". В целях деморализации мы не собираемся развеивать это заблуждение, и даже намерены подкреплять его своими силами. Но истинное могущество Плети заключается в том, что мы свободны от моральных оков, мешающих смертным процветать.",
+		"Скажите мне, например, в чем сила эмоций и польза благородства? Они служат лишь для самооценки смертных, позволяют им чувствовать себя праведными. Но какую цену они вынуждены платить за эти чувства? Эмоции напрямую связаны с отрицанием логики и здравого смысла. Благородство же зачастую приводит к гибели во время заведомо проигрышной схватки. Ах, если бы смертные знали, с какой готовностью мы приветствуем их заблуждения, как культивируем их недостатки, которые лежат в основе их иррационального и глупого поведения.",
+		"Нас нельзя очистить от душевной холодности. Нельзя смягчить нашу злость, излечить гнев и преодолеть ненависть. Они стали нашей неотъемлемой частью, хотя некоторые глупцы все еще полагают, что они способны победить Плеть и стереть любое воспоминание о ней с лица земли. До тех пор, пока смертные не очистятся от своих грехов, они сами будут воплощением нашей идеологии, кормовой базой и источником наших сил.\n\nЯ сам был рожден под властью этих идеалов.",
+		"Догматы Плети\nГлава 3\n\nПотенциал Плети бесконечен, однако мы не безупречны. Помните о том, что наши силы и ресурсы не безграничны. Всегда думайте на шаг вперед и ищите возможные пути отступления. Жертвовать пешками для достижения победы – вот основа философии Плети. Храбрость, мученичество и патриотизм недопустимы для наших солдат и могут быть присущи только нашему Повелителю.",
+		"Еще одно заблуждение смертных, касающееся Плети – это убежденность, что мы паразитируем на их обществе и не можем выжить без их участия. И снова мы не намерены избавлять их от предрассудков, хотя подобные заявления предельно далеки от истины. Мы – постоянно совершенствующая форма жизни, оптимально адаптированная к раздираемому войной миру. Бесчисленные пороки человечества не имеют над нами власти; нам не грозят перенаселение, раскол, эгоизм, недальновидность и даже смерть. Мы служим воле Повелителя, и в этом весь смысл нашей жизни.",
+		"Действительно, мы перенимаем технологии, архитектуру и физические возможности поглощаемых нами цивилизаций, но делаем это только из присущего нам чувства прагматизма. У Плети нет ни времени, ни желания создавать собственную культуру. Существо, созидающее нечто новое, вкладывает в акт творения частичку себя, равно как желание оберегать и насаждать свое изобретение. Это ведет к появлению индивидуальности и, в свою очередь, к расколу. Созидание – это порок общества, которое должно стремиться только к обеспечению себя базовыми нуждами вроде жилья и оружия. Мы не должны задаваться вопросом, откуда берутся ресурсы; важно лишь то, насколько они полезны.",
+		"Плеть – это движущая сила земли. Рано или поздно все живые существа склонятся перед нами в простом осознании: мы необходимы им, ибо Плеть – это ключ к выживанию. От нашей воли нет противоядия, и нет силы, способной нам сопротивляться, ибо мы воплощаем в себе самую неизбежную и безграничную мощь природы – саму Смерть. Смерть – это неотъемлемая часть жизни, а загробная жизнь является неотъемлемой частью смерти. Чем скорее смертные осознают эту непреложную истину, тем проще им будет перейти на нашу сторону.",
+	},
+},
+["\"Отважные\""] = {
+	["english"] = "The Defiant",
+	["pages"] = {
+		"Изначально сауроков создали для того, чтобы они следили за порядком на дальних рубежах империи могу. Культура сауроков основывалась на чувстве собственного превосходства и ненависти к любой слабости, чему немало способствовало поведение их хозяев.\n\nВскоре стражи-сауроки начали грабить тех, кому служили. Они перестали подчиняться и атаковали своих командиров всякий раз, когда им казалось, что они получили слишком мало добычи.\n\nИмператор Доцзян ответил так, как это принято у могу: души были вырваны из тел всех сауроков в Вечноцветущем доле. Такому же наказанию он повелел предать и действующие легионы. Так началось великое Очищение.",
+	},
+},
+["\"Дезертиры\""] = {
+	["english"] = "The Deserters",
+	["pages"] = {
+		"Когда могу объявили о полном истреблении сауроков, несколько легионов еще оставалось на полях боя. Когда вести об измене их владык достигли ушей сауроков, они подняли оружие на своих военачальников и исчезли в землях богомолов, обойдя вражеские войска. Бесчисленные легионы могу и их рабы отправились на охоту за дезертирами. Но никто из них не вернулся.",
+	},
+},
+["\"Поединок грома и силы\""] = {
+	["english"] = "The Duel of Thunder and Strength",
+	["pages"] = {
+		"Давным-давно армии Лэй Шэня подступили к самой Вершине Кунь-Лай. Свободолюбивые местные жители сосредоточили все силы для обороны и собирались защищаться до последней капли крови. Они не собирались уступать свою землю Властелину Грома.\n\nНо Лэй Шэню не нужна была земля, он пришел за новыми рабами. Его империя разрасталась, и для строительства городов и крепостей необходим был труд невольников.",
+		"И вот вместо того, чтобы брать вершину приступом, Лэй Шэнь прогремел на всю округу: \"Выберите самого сильного воина, и мы сразимся с ним в честном поединке! Если победа достанется мне, то вы преклонитесь перед моей властью, а если нет, то я оставлю ваши земли в покое.\"\n\n\"Мы принимаем вызов!\" – прозвучал над горными вершинами голос, по своей мощи едва уступавший реву Лэй Шэня.\n\nС гор спустился Сюэнь, Белый Тигр. Августейший небожитель сжалился над местными жителями, увидев их невзгоды.",
+		"Так и началась дуэль двух легенд. От их ярости содрогалась земля, а с небес падали молнии. Колдовство встретилось с быстротой, а ненависть – с силой.\n\nГоворят, эта дуэль длилась тридцать дней и тридцать ночей, и эмоции, захлестывавшие сражавшихся, пробудили к жизни ша огромной мощи.\n\nНо в конце концов Сюэнь проиграл, сокрушенный неземной силой Лэй Шэня.\n\n\"Твоя простая магия не сравнится с моей, глупый тигр! – проревел Лэй Шэнь. – Мне нравится твое упорство, но за дерзость тебя следует наказать!\"",
+		"И сказал Властелин Грома жителям Вершины Кунь-Лай: \"Знайте, что те, кто осмелятся перечить мне, ощутят на себе всю силу моего гнева! А этому созданию не придется ощутить милость смерти. В этих горах мы возведем для него тюрьму, где он будет заточен навечно. Он вечно будет помнить о своем поражении и взирать с вершины на то, как вы и ваши дети трудитесь в неволе на благо моей империи\".",
+		"Так Сюэнь и оказался заточен на Вершине Кунь-Лай. Он видел, как могу поработили хозенов и пандаренов. Но тигр не был сломлен пыткой Лэй Шэня и лишь набирал силу в своем заточении. Поражение стало для него уроком, и он, умерив гордыню, ожидал того дня, когда молодой раб-пандарен найдет в себе силы бросить вызов мощи императоров могу.",
+	},
+},
+["Подземелья Доцзян"] = {
+	["english"] = "The Dungeons of Dojan",
+	["pages"] = {
+		"(Переведено хранителем знаний Ваэлдрином)\n\nПолноправный властитель империи, Доцзянь Огненная Корона, привел легионы в Красарангские джунгли, подавил сопротивление местных жителей и присоединил область к империи.\n\nКрасаранг был последним фригольдом – в этих гниющих джунглях хозяйничали шайки разбойников и бунтовщиков, скрывающихся от гнева Его Милости.\n\nТем не менее, настоящей целью императора был легендарный Пруд Молодости. Огненная Корона был уже в летах и мечтал о силе, которую такой пруд может даровать ему, если окажется под его владычеством.",
+		"Во время этих завоеваний Огненная Корона использовал новых рабов для строительства Подземелий Доцзянь, которые вскоре обрели репутацию одних из самых устрашающих и знаменитых подземелий во всем известном мире. Бесчисленные ловушки и оружие служили напоминанием империи о том, что Огненная Корона не потерпит оскорбительных мятежей.\n\nЧтобы упрочить свою репутацию, имперские магистры создали множество барьеров и магических темниц. Те, кому хватило глупости попытаться использовать магический портал и покуситься на сердце империи, быстро попадали в магическую темницу или еще куда похуже.\n\nС течением времени единственным местом в тех краях, где можно было успешно телепортироваться, стал ближайший порт Корцзя.",
+	},
+},
+["\"Бремя императора\", ч. I"] = {
+	["english"] = "The Emperor's Burden - Part 1",
+	["pages"] = {
+		"Десять тысяч лет назад, в тот день, когда Шаохао был назван императором Пандарии, он, как и все императоры до него, искал совета великого цзинь-юй, Говорящего с водой. С легким сердцем молодой император встал перед пророком, ожидая услышать от него, как он думал, добрые вести.\n\nНо когда Говорящий с водой прислушался к песне великой реки, глаза его расширились от ужаса.\n\nОтрывок из Книги Бремени, глава 1:\n\n\"И узрел Говорящий с водой пред собою волшебников, окруживших большой колодец, и из колодца призвали они племя демонов. Зеленое пламя обрушилось с небес, и земля содрогнулась.\"\n\nУстрашившись видения, что предстало перед ним, император Шаохао понял, что не суждено ему безмятежно жить в роскоши. Так в скромной деревне Цветущая Заря начался его путь к спасению Пандарии.",
+	},
+},
+["\"Бремя императора\", ч. II"] = {
+	["english"] = "The Emperor's Burden - Part 2",
+	["pages"] = {
+		"Десять тысяч лет назад на этом самом месте Шаохао, последний император Пандарии, просил совета у Нефритовой Змеи.\n\nОтрывок из Книги Бремени, глава 3:\n\n\"Всеми покинутый и лишившийся надежды, последний император ступил на крутой склон горы Неутомимых. Холод острыми кинжалами пронзал его шелковые одежды, а ветер, что неустанно дул в лицо, нашептывал, что путь его бесцелен.\"\n\n\"Лишь на самой вершине горы обрел император покой и уединение, и говорил он там с Нефритовой Змеей, духом мудрости.\"\n\nИ был совет Нефритовой Змеи таков – освободиться от бремени, очистить свой дух и стать единым с этой землей.\n\nИмператора озадачили эти слова, но никаких иных ответов не открылось ему на вершине холодной горы. Удрученный, император Шаохао спустился по склону вниз, дабы посоветоваться со своим спутником, Королем обезьян, и решить, что же делать дальше.",
+	},
+},
+["\"Бремя императора\", ч. III"] = {
+	["english"] = "The Emperor's Burden - Part 3",
+	["pages"] = {
+		"На этом самом месте десять тысяч лет назад Шаохао, последний император Пандарии, победил Ша Сомнения, заточив его под землей.\n\nОтрывок из Книги Бремени, глава 5:\n\n\"Шаохао медитировал три дня и три ночи, ибо совет, данный Нефритовой Змеей, казался ему туманным. Как можно самого себя избавить от всех сомнений?\"\n\n\"Устав от ожидания, спутник Шаохао – король обезьян – вырезал из бамбука странную маску, на которой запечатлел гримасу сомнения. Он предложил императору спрятать под ней свое лицо...\"\n\nНедобрыми были намерения короля обезьян, но все обернулось к лучшему: едва Шаохао снял маску, как все его сомнения приняли телесную форму. Семь часов они бились друг с другом, пока император не победил Ша Сомнения.\n\nС этого дня последний император не сомневался в том, что сумеет спасти Пандарию от Раскола. Он обрел веру.",
+	},
+},
+["\"Бремя императора\", ч. IV"] = {
+	["english"] = "The Emperor's Burden - Part 4",
+	["pages"] = {
+		"Именно здесь Шаохао, последний император Пандарии, победил и заточил под землей Ша Отчаяния десять тысяч лет назад.\n\nОтрывок из девятой главы Книги Скорби:\n\n\"После победы в Нефритовом лесу император Шаохао исполнился храбрости, но разум его тяготила неопределенность будущего. Он стал искать совета у Красного Журавля, духа Надежды, жившего в глуби Красарангских джунглей.\"\n\n\"Красный Журавль поведал императору, что надежда заключена в каждом из живущих, и надо лишь заглянуть в себя. Затем король обезьян поднес императору Шаохао неизбывный символ смертельной грусти – маску Отчаяния. Император надел маску и выдворил отчаяние из своей души...\"\n\nЧетыре дня и пять ночей бились Шаохао, Красный Журавль и король обезьян с Ша Отчаяния. И все это время падал с неба проливной дождь. В конце концов герои одолели отчаяние Шаохао.\n\nС того самого дня император всегда смотрел в будущее без страха, ведь в душе он хранил надежду.",
+	},
+},
+["\"Бремя императора\", ч. V"] = {
+	["english"] = "The Emperor's Burden - Part 5",
+	["pages"] = {
+		"На этом самом месте десять тысяч лет назад Шаохао, последний император Пандарии, победил Ша Страха, заточив его в недра земли.\n\nОтрывок из Книги Бремени, глава 14:\n\n\"Даже избавившись от сомнения и отчаяния, император Шаохао не смог превозмочь свой страх. Он искал совета у Черного Быка, духа отваги и мужества, жившего в степях за стеной.\"\n\n\"Черный Бык, Красный Журавль, император и король обезьян долго говорили о природе страха, пока, наконец, Король обезьян не решил, что пора действовать. Он сделал маску страха – любого, кто смотрел на нее, охватывал ужас. Дрожащими руками император надел кошмарную маску, и все его страхи вырвались наружу...\"\n\nСемь дней и еще один день сражались друг с другом император и Ша Страха, и легенда гласит, что все это время солнце боялось взойти над землей. Одолев Ша и заточив его под землей, Шаохао изменился навеки, ибо в нем больше не осталось страхов. Он обрел мужество.",
+	},
+},
+["\"Бремя императора\", ч. VI"] = {
+	["english"] = "The Emperor's Burden - Part 6",
+	["pages"] = {
+		"Десять тысяч лет назад на этом самом месте Шаохао, последний император Пандарии, победил Ша Злости, Ша Ненависти и Ша Жестокости.\n\nОтрывок из Книги Бремени, глава 19:\n\n\"Император Шаохао, которого вели бесстрашие и уверенность в себе, думал, что ему нет равных. Но по совету Красного Журавля, он стал искать совета у Белого Тигра, духа силы.\"\n\n\"Белый Тигр увидел в Шаохао безрассудство, что часто сопровождает тех, кто не ведает страха, и может их погубить. Он собрал вместе величайших воинов Пандарии, чтобы испытать императора.\"\n\n\"Шаохао дали десятифутовый шест и сказали ударить хотя бы одного из воинов. Сражение шло несколько часов, но эти воины были слишком быстры и ловки для не столь умелого императора. Он гневался, бранился и, в конце концов, переломил свой шест через колено\".",
+		"Посрамленный император спросил Белого Тигра, в чем его ошибка, и узнал, что слабость его – в его же страстях. Чтобы спасти Пандарию, Шаохао должен был встретиться в бою с собственным гневом, ненавистью и жестокостью.\n\nКороль обезьян принялся за дело и вырезал три маски. Каждую из них император надевал по очереди, и с помощью друзей, а также всех величайших воинов Пандарии, Ша Злости, Ша Ненависти и Ша Жестокости были побеждены и заточены в недра земли.\n\nНавеки изменившийся император отправился в свое последнее путешествие, в котором обрел терпение, любовь и покой.",
+	},
+},
+["\"Бремя императора\", ч. VII"] = {
+	["english"] = "The Emperor's Burden - Part 7",
+	["pages"] = {
+		"Орден шадо-панов был основан десять тысяч лет назад по приказу Шаохао, последнего императора Пандарии.\n\nИмператор Шаохао знал, что темная энергия ша – телесное воплощение таких чувств, как гнев, страх, ненависть или сомнение, представляет великую опасность для пандаренов, если позволить ей заразить эти земли. Он повелел величайшим воинам Пандарии сдерживать энергию ша и управлять ей.\n\nНа этом самом месте, всего через несколько часов после того, как Шаохао превозмог собственные злость, ненависть и жестокость, первый из шадо-панов преклонил колено и принес присягу последнему императору. И с тех самых пор, на протяжении десяти тысяч лет, те же самые слова произносит каждый новобранец Шадо-Пан.",
+	},
+},
+["\"Бремя императора\", ч. VIII"] = {
+	["english"] = "The Emperor's Burden - Part 8",
+	["pages"] = {
+		"",
+	},
+},
+["\"Императрица\""] = {
+	["english"] = "The Empress",
+	["pages"] = {
+		"Императрица богомолов – сила, внушающая страх всей Пандарии. Именно она порождает несметные орды богомолов. \n\nИмператрицы живут долго, но и они не вечны. Клакси, совет старейшин богомолов, контролирует передачу власти новой императрице. Детали этой передачи точно неизвестны, но она включает в себя испытания в бою. Новая императрица пожирает остатки своей предшественницы. Таким образом передача власти не прерывается на протяжении всей истории цивилизации богомолов.\n\nКлакси, хоть их и немного, несомненно играют ключевую роль в создании и сохранении культуры богомолов. Тем не менее, неясно, могут ли они впрямую противостоять воле императрицы.",
+	},
+},
+["\"Первые монахи\""] = {
+	["english"] = "The First Monks",
+	["pages"] = {
+		"\"Во времена правления могу рабы были кровью империи. Пандарены, хозены и цзинь-юй трудились на полях и в рудниках, строили могучие твердыни по воле своих хозяев.\n\nЧтобы усталость и увечья не мешали работе, могу выделили некоторых рабов из числа пандаренов и велели им варить целебные зелья. Сначала это были просто настои трав и припарки. Из этих простых знахарей впоследствии вышли лекари, вожди и хмелевары.\n\nТак родилась благородная традиция, и первые \"монахи\" стали надеждой пандаренов, воплощением их гордости.\n\nИменно они когда-то стали основателями искусства боя без оружия и тайно обучили этому искусству других рабов. Во время восстания монахи первыми шли в бой, вдохновляя фермеров, кузнецов и каменщиков...\"",
+	},
+},
+["Основание Кель'Таласа"] = {
+	["english"] = "The Founding of Quel'Thalas",
+	["pages"] = {
+		"Высшие эльфы, ведомые Дат'ремаром, покинули Калимдор и миновали Водоворот с его бурями. Их флот много долгих лет плавал среди обломков старого мира, они открыли множество тайн и потерянных королевств. Дат'ремар, взявший имя Солнечный Скиталец (или \"тот, кто ходит весь день\"), искал места с большей магической энергией, чтобы построить там новое королевство для своего народа.",
+		"В конце концов они ступили на берега королевства, которое люди позднее назовут Лордерон. Продвигаясь в глубь континента, высшие эльфы основали поселение на спокойных Тирисфальских лесах. Но через несколько лет многие из них начали сходить с ума. Возникло предположение, что что-то злое спало в недрах тех земель, но эти слухи так и не оправдались. Высшие эльфы собрали все свое добро и двинулись на север, к землям, богатым энергетическими линиями.",
+		"В то время как высшие эльфы шли по гористым землям Лордерона, их путешествие становилось все более опасным. Поскольку они были отрезаны от животворных энергий Источника Вечности, многие из них начали болеть из-за холодного климата или умирать от голода. Но ужаснее всего было то, что теперь они были не бессмертны и не могли противостоять стихиям.",
+		"Кроме того, они стали ниже ростом, а их кожа потеряла характерный фиолетовый оттенок. Несмотря на трудности, они смогли противостоять многим неведомым существам, каких в Калимдоре и не видывали. Они нашли племена диких людей, которые охотились в древних чащах. Но самую большую угрозу представляли собой алчные и хитрые лесные тролли Зул'Амана.",
+		"Эти тролли с кожей цвета мха умели отращивать утраченные конечности и залечивать самые ужасные раны. Но это был варварский и злой народ. Империя Амани растянулась по большей части северного Лордерона, и тролли яростно боролись за свои земли, стараясь держать незваных гостей подальше от своих границ. Эльфы всей душой ненавидели злобных троллей и убивали их при любом удобном случае.",
+		"После долгих лет странствий высшие эльфы, наконец, нашли земли, напоминавшие Калимдор. В глуши северных лесов они основали королевство Кель'Талас и поклялись создать могущественную империю, которая будет во всем превосходить цивилизацию их собратьев, калдорай. К сожалению, эльфы вскоре узнали, что основали Кель'Талас на развалинах древнего города троллей, который те до сих пор считали священным. Тролли почти сразу же начали атаковать эльфийские поселения.",
+		"Упрямые эльфы, не желавшие отдавать свои новые владения, использовали магию, оставшуюся от Источника Вечности, и заставили свирепых троллей отступить. Под командой Дат'Ремара они сумели победить отряды Амани, которые десятикратно превосходили их числом. Некоторые эльфы, помнившие древние предупреждения калдорай, почувствовали, что использование магии может привлечь внимание изгнанного Пылающего Легиона.",
+		"Поэтому они решили скрыть свои земли защитным барьером, который позволял бы им спокойно заниматься магией. Они установили в разных точках Кель'Таласа, на границах магического барьера, цепь Рунических камней. Рунические камни не только скрывали магию эльфов от внеземных угроз, но и помогали отпугивать суеверных троллей.",
+		"С течением времени Кель'Талас сделался сияющим памятником трудам и магическому мастерству высших эльфов. Его прекрасные дворцы были созданы в том же архитектурном стиле, что и древние чертоги Калимдора, однако они великолепно вписывались в естественный ландшафт тех мест. Кель'Талас стал сияющим самоцветом, который так хотели создать эльфы.",
+		"Правительством Кель'Таласа стал совет Луносвета, хотя династия Солнечных Скитальцев также отчасти сохраняла политическую власть. Включавший в себя семерых величайших эльфийских лордов совет заботился о безопасности эльфов и эльфийских земель. Под защитой барьера высшие эльфы отвергли былые предупреждения калдорай и с преступной беспечностью продолжали использовать магию практически во всех аспектах своей жизни.",
+		"Почти четыре тысячи лет высшие эльфы спокойно жили в своем укромном королевстве. Тем не менее мстительные тролли сдаваться не собирались. В глуши лесов они строили планы и копили силы. В конце концов могучая армия троллей вышла из тени лесов и вновь осадила сияющие башни Кель'Таласа.",
+	},
+},
+["\"Основание ордена Облачного Змея\""] = {
+	["english"] = "The Founding of the Order of the Cloud Serpent",
+	["pages"] = {
+		"Во время зандаларских войн, сразу после основания Империи пандаренов, маленькая Цзян гуляла по Дендрарию и услышала странные звуки. Она подошла поближе и увидела на земле умирающего облачного змея. С материнской нежностью юная Цзян взяла змея в руки и стала заботиться о нем. его к себе и выходила. Она назвала змея Ло, и они быстро стали друзьями.",
+		"Окружающие не одобряли эту дружбу. Облачных змеев побаивались, их считали дикими и опасными существами. Цзян стали сторониться, ее уговаривали избавиться от Ло, пока тот еще не вырос во взрослого змея и не способен причинить ей вред.\n\nОднажды армия зандаларов продвинулась далеко на юг, достигла Нефритового леса и напала на Пандарию со стороны моря. Цзян не осталась в стороне и, взяв оружие, защищала свой народ.",
+		"В одной из битв Цзян чуть было не лишилась жизни. За секунду до того, как копье должно было пронзить ее сердце, на помощь пришел Ло.\n\nЗмей, который тогда был еще очень юн, налетел на тролля и разорвал его на части. Затем он подхватил раненую Цзян и унес ее с поля боя.\n\nКогда Цзян поправилась, она обратилась к военачальникам Пандарии – бесстрашным воинам-монахам, которые защищали земли от нашествия троллей и других опасностей.",
+		"Она попыталась объяснить, что змей может помочь им и изменить ход войны.\n\nНо ее не желали слушать. Монахи считали, что и без юной Цзян знают, как лучше, и решили продолжать действовать по своему плану.\n\nНо Цзян не сдалась. Наоборот, отказ придал ей решительности.",
+		"Прошло несколько дней, и войска зандаларов высадились на побережье и начали наступление вглубь страны. Воители пандарены держали оборону на большом мосту у Цветущей Зари. Изо всех сил они пытались сдержать наступление, но преимущество было не на их стороне. Зандалары превосходили их числом и использовали летучих всадников, против которых у пандаренов не было оружия. Стало ясно, что надежды на победу нет.",
+		"Но вдруг наблюдатели заметили что-то в небе! Это была Цзян верхом на своем друге Ло!\n\nВдвоем они ринулись в атаку, скидывали атакующих зандаларов с моста и сокрушали летучих всадников. Никто не смог противостоять ярости двух друзей.\n\nВойна продолжалась еще несколько месяцев, но эта битва стала в ней переломным моментом. Вскоре Цзян начала учить других пандаренов верховой езде на змеях.",
+		"Цзян и Ло стали героями! С того самого дня змей считается у пандаренов символом надежды. Тогда же был основан Орден Облачного Змея. И по сей день они стоят на страже Нефритового леса.",
+	},
+},
+["\"Генерал и груммель\""] = {
+	["english"] = "The General and the Grummle",
+	["pages"] = {
+		"Много столетий назад генерал Шадо-Пан стоял на стене Змеиного Хребта и ожидал нашествия богомолов. Юный груммель, только что доставивший припасы на стену, спросил у него, ждет ли их победа в битве.\n\n\"Да, если нам будет сопутствовать удача\", – ответил генерал.\n\nГруммель знал об удаче не понаслышке и сказал: \"Удача так ветрена! Как понять, что она на нашей стороне?\"",
+		"Генерал кивнул и начал рыться в карманах. \"Посмотрим, в каком она настроении!\", – сказал он, достал из кармана монету и подбросил ее. \"Решка – значит, враг не прорвет оборону. Орел – мы потерпим поражение.\"\n\nК тому времени вокруг генерала и груммеля уже собралось немало защитников стены, и после броска все солдаты бросились вперед, желая увидеть результат. Монета подскочила, завертелась и, наконец, вынесла свой вердикт. \"Решка!\" – закричали солдаты в один голос.\n\nНа следующий день пришло время битвы. На каждого защитника стены приходилось тридцать богомолов, но защитники разбили врага и одержали победу.",
+		"Груммель был очень впечатлен уверенностью и генерала и этим счастливым случаем. \"Вы так рисковали, – сказал он. – Если бы монета упала другой стороной, боевой дух армии мог пошатнуться. Откуда в вас такая уверенность?\".\n\nУлыбнувшись, генерал вынул из кармана монету и протянул ее груммелю. Обе ее стороны были решками. \"Судя по моему опыту, наша удача – в наших руках\", – ответил он.",
+	},
+},
+["Боги Арака"] = {
+	["english"] = "The Gods of Arak",
+	["pages"] = {
+		"Когда-то в небесах Арака жили три божества…",
+		"Рухмар была сильной, молодой и целеустремленной. Она летела все выше и выше – ей нравилось, как солнечные лучи ласкают ее перья. Она поднималась до тех пор, пока не вспыхивала, но при этом не сгорала. Пламя стекало с нее яркими красными и золотыми потоками. \n\nЕе холстом было небо, ее детьми – калири.",
+		"Анзу был слаб, но обладал блестящим умом. Он предпочитал прохладу теней и вечернюю тишину, когда он мог поразмышлять в одиночестве. Он разговаривал с богами преисподней и решил, что они скучные, безмозглые существа.\n\nЕго пух – черная ночь, а его дети – грозные вороны.",
+		"Сете был холодным и презрительным. Когда он летал, ветер кусал его. Он грелся, сидя на горных вершинах, но не чувствовал тепла.\n\nЕго чешуей было \"морозное\" стекло, его дети – крылатые змеи.",
+		"Сете мечтал о благоволении ветра и тепле солнечных лучей. Он убедил Анзу, что они должны вместе убить Рухмар и захватить власть над небом.\n\nНо Анзу был хитер и не любил крылатых змеев. Во тьме ночи он послал ворона, чтобы предупредить Рухмар о планах Сете.\n\nКогда Рухмар и Сете сошлись в поединке, Анзу наблюдал за этим с вершины горы.\n\nСете атаковал именно так, как и предупреждал Анзу, и Рухмар легко уклонилась от удара. Она взлетела ввысь, к солнцу и бросилась на Сете.",
+		"Когти Рухмар впились в голову Сете. Взмахнув огромными крыльями, она расколола само небо над ним, словно ударив его бичом.\n\nСете рухнул на вершину с такой силой, что она обрушилась под ним.\n\nАнзу мгновенно налетел на Сете и прижал к земле.",
+		"Взглянув на бога воронов, Сете произнес предсмертное проклятие: \n\n\"Моя кровь сделает море черным, словно смола! Моя плоть загноится и заставит само небо прогнить!\" \n\n\"Тогда мы не оставим ни крови, ни плоти\", – ответил Анзу. \n\nОн пировал, питаясь мясом крылатого змея, и обглодал кости дочиста. \n\nТолько небольшой ручеек крови пролился с Надломленного пика и отравил пруды в долине у его подножия.",
+		"Вскоре Анзу почувствовал, как по его жилам струится ненависть Сете. Его спина сгорбилась, крылья ослабели. Сознание заполнили болезненные видения.\n\nБог воронов задержал проклятие Сете, приняв его на себя. \n\nКакое-то время он боролся с проклятием, а затем отступил в темноту.",
+		"Рухмар, напуганная проклятием, с тех пор ни разу не приземлялась в Араке. Она улетела в далекие новые земли и создала новый народ, чтобы он правил небом – народ, в котором ее сила и ловкость объединились с жаждой знания Анзу.\n\nОна назвала их \"араккоа\" в надежде, что однажды они вернутся в Арак, чтобы наслаждаться ветром и солнцем, как когда-то это делала она.",
+	},
+},
+["Зеленые холмы Тернистой долины"] = {
+	["english"] = "The Green Hills of Stranglethorn",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">ЗЕЛЕНЫЕ ХОЛМЫ ТЕРНИСТОЙ ДОЛИНЫ</H1><BR/><H3 align=\"center\">Хеминг Эрнестуэй</H3></BODY></HTML>",
+		"Наш первый день прошел, как обычно проходят первые дни. Большую часть времени мы обустраивали лагерь. Мне удалось найти идеальное место у небольшой чистой заводи. Старые обветшавшие мостки указывали на то, что в этом месте когда-то жили. Кто именно там жил, мы пока не знали.",
+		"В эту экспедицию со мной отправились Аджек Руак и сэр С. Дж. Эрлджедин, а также мой верный слуга Барнил Каменный Горшок. С отцом Аджек мы когда-то сражались за Альянс плечом к плечу. Удивительно, как она выросла за это время. Отец обучил ее искусству владения оружием. Ее навыки стрельбы из лука настолько хороши, что невольно заставляют задуматься, не течет ли в ее жилах кровь эльфов.",
+		"Сэр С. Дж. Эрлджедин принадлежит к знатному людскому роду. Его отец, граф Эрлджедин, славился своей щедростью. Именно граф выступал за улучшение условий труда для Гильдии каменщиков во время восстановления Штормграда после Второй Великой войны.",
+		"В последующие годы, после того как Штормград обманул братство Каменщиков, сэр Эрлджедин разочаровался в аристократии Королевства. Он больше не хотел принадлежать к Благородным Домам, хотя право это унаследовал от отца.\n\nНо не будем отвлекаться. Мое повествование не политический трактат и не биография. Я всего лишь делюсь опытом участия в большой охоте среди зеленых холмов Тернистой долины.",
+		"Мы проснулись чуть свет. Барнил занялся приготовлением завтрака. Мне показалось, что мысли Аджек в этот момент были где-то далеко. Впереди нас ждал долгий день и немало опасностей. Нужна была полная сосредоточенность, иначе последствия могли быть печальными. Но Аджек была не в состоянии отвести взгляд от Барнила, занятого мытьем столовых принадлежностей.",
+		"Когда я уже собирался спросить, почему Аджек не участвует в обсуждении плана сегодняшней охоты, она выхватила стрелу из колчана, натянула тетиву и выстрелила в бедного Барнила. Однако стрела пролетела мимо. Разинув рот, Барнил наблюдал за тем, как возле него на поверхность реки всплыл огромный кроколиск, а между глаз у него торчала стрела Аджек.",
+		"Мы отправились на запад через дикие непроходимые джунгли. В поисках добычи мы медленно, но верно прокладывали себе путь сквозь густую растительность. К нашему сожалению, утром все было тихо. Даже ветер не шумел в кронах деревьев. К полудню мы начали волноваться. Шаги Барнила уже не были столь осторожными и тихими, как раньше. Теперь он неуклюже переваливался с ноги на ногу, с треском ломая упавшие на землю сухие ветки.",
+		"После очередного неверного шага Барнила Эрлджедин положил свою тяжелую руку ему на плечо. Мы с Аджек переглянулись, уверенные, что он решил-таки напомнить Барнилу о необходимости соблюдать осторожность. Но вместо этого Эрлджедин кивнул головой в сторону лежащего неподалеку дерева. Оттуда на нас пристально смотрели два черных глаза, а под ними была пасть, полная острых зубов.",
+		"Этим чудищем был самец тигра Тернистой долины. Прежде чем мне удалось взвести винтовку, Эрлджедин поднял свой арбалет и выстрелил в зверя. Стрела ушла немного в сторону и вонзилась в левый бок тигра. Зверь попытался убежать, но его рана была слишком глубокой. Он сумел сделать лишь несколько шагов, а затем его настиг метательный топор Барнила.",
+		"Первый успех взбодрил нашу команду. Барнил налил всем меда, чтобы отметить его. Но нашему празднованию не суждено было продолжаться долго. Когда мы подготавливали тушу к транспортировке в лагерь, внезапно раздался ужасный рев. Я в жизни не слышал такого леденящего кровь звука.",
+		"На скалистом склоне, возвышавшемся над нами, в лучах заходящего солнца вырисовывался силуэт самой большой кошки, которую я когда-либо видел. Мне удалось сделать неловкий выстрел из ружья, но кошка не двинулась с места. Она издала еще один ужасный рык, громче прошлого, и исчезла.\n\nМы собрали вещи и мрачно двинулись в лагерь.",
+		"Я обещал своим товарищам, что на следующий день мы отправимся охотиться на пантер, так как их мех очень высоко ценится по всему Азероту. Учитывая, что большинство охотников и торговцев мехом сейчас храбро отдавали свои жизни, сражаясь за Альянс, этот мех еще больше возрос в цене.",
+		"Аджек и сэр Эрлджедин страстно желали научиться стрелять из дворфийских винтовок. Я велел им оставить свое примитивное оружие в лагере. Мы с Барнилом снарядили их лучшими образцами стальгорнских ружей.",
+		"В тот день мы пошли на юг, двигаясь по свежим следам пантеры. Вскоре мы пришли к ущелью, через которое был перекинут длинный веревочный мостик. При виде этого чуда инженерной мысли мне сразу вспомнилось, как описывал этот район Бранн. Тролли, коренные жители этих мест, всегда считались примитивной расой, но мастерство, с которым они сконструировали этот мост через непреодолимую пропасть, было неоспоримо.",
+		"Аджек не понадобилось много времени, чтобы выследить пантеру; она ушла на юго-запад. Мы шли быстрым шагом, с оружием наготове, и уже предвкушали успех. Треск веток, донесшийся из рощи неподалеку, немедленно привлек наше внимание. Там кто-то был. Одного взгляда на Барнила хватило, чтобы он понял меня. Он медленно опустил винтовку. Эта добыча – не для нас, а для наших спутников-людей. Сколько пантер уже погибло от наших пуль! Нет, эта добыча – не для нас.",
+		"Аджек и сэр Эрлджедин стояли наготове, направив ружья в сторону колючего кустарника у подножия раскачивающихся деревьев. Полуденное солнце нещадно палило. Капля пота медленно скатилась по виску Эрлджедина, когда он взводил курок. В момент щелчка из кустов на поляну выпрыгнула огромная черная пантера – невероятно грациозное животное.",
+		"Пантера понеслась вдоль опушки леса, а люди ни на секунду не спускали с нее взгляда. Стволы их ружей медленно двигались, оставаясь идеально параллельными друг другу. Барнил посмотрел на меня нетерпеливым взглядом, но я отрицательно покачал головой. Это была охота людей, а не наша. Эрлджедин выстрелил. Раздался оглушительный грохот, но пантера осталась цела. Вероятно, Эрлджедин не был готов к такой мощной отдаче.",
+		"Ружье резко подалось назад в его руках. Дуло ушло в сторону и попало под ствол ружья Аджек. И именно в этот момент Аджек спустила курок. Неуклюже вздернувшееся к кронам деревьев ружье отчетливо и громко выстрелило. Стая птиц, крича, вспорхнула в небо, разлетаясь во все стороны. Струйка дыма вилась из дерева. Мы в оцепенении смотрели, как гигантская ветка рухнула прямо на убегающую пантеру и сломала ей хребет.",
+		"Шли недели, шкур пантер и тигров становилось все больше. Мне показалось, что настало время сосредоточить наши силы на более серьезной добыче: ящерах.\n\nЛюди поблагодарили нас с Барнилом за уроки, но отказались использовать огнестрельное оружие. Аджек чувствовала себя куда более уверенно с луком в руках, а сэр Эрлджедин не расставался со своим мощным арбалетом.",
+		"С первыми лучами солнца мы отправились на охоту на юг, за руины Ткаши. Барнил беспокоился, что мы можем наткнуться на троллей племени Кровавого Скальпа. Мои слова о том, что это племя сейчас занято войной со своими заклятыми врагами из племени Дробителей Черепов, конечно же, ничуть не успокоили его. Меня же возможность засады беспокоила гораздо меньше: в моих руках была заряженная винтовка, на поясе – полная сумка пороха, а рядом – трое отличных охотников.",
+		"Я помню битву с армией Пылающего Легиона: враги надвигалась со всех направлений, а прямо передо мной возвышался огромный инфернал. Толпа злобных троллей по сравнению с этим кажется безобидной, как заяц в горах Дун Морога.\n\nК величайшей радости Барнила, мы миновали руины Ткаши без всяких приключений. Мы продолжали двигаться на запад к Великому морю, обходя руины Зул'Кунды. Взобравшись на высокий утес над морем, мы увидели нашего первого ящера.",
+		"Зверь даже не обнаружил нашего присутствия. Если быть честным, единственное приветствие, которое он получил от экспедиции, – это пулю между глаз.\n\nАджек одобрительно кивнула мне, а сэр Эрлджедин радостно крикнул: “Ура!” Настало время отпраздновать успех, выкурив трубку, затерявшуюся в глубинах моего рюкзака. Барнил отправился на вершину утеса за трофеем. Вид поверженного чудища доставлял мне немалое удовольствие, как и любая значительная победа.",
+		"Но мне не пришлось долго наслаждаться успехом. На вершине утеса, прямо над несчастным Барнилом, появились несколько силуэтов.\n\n“Беги, Барнил!” – закричали мы. Аджек, сэр Эрлджедин и я выстрелили поверх головы Барнила в сторону преследующих его ящеров. Кто-то даже убил одного из них.",
+		"Наших суматошных выстрелов оказалось достаточно, чтобы дать Барнилу время убежать. Барнил скатился с холма и присоединился к нашей группе. Мы побежали в джунгли, преследуемые стаей свирепых ящеров-кнутохвостов.\n\nОхотники превратились в добычу.",
+		"Я вел отряд по направлению к морю в надежде, что вода остановит ящеров. Но в спешке мы зашли слишком далеко на север, на возвышенность. Исправлять ошибку было уже поздно. И вина была в этом моя. Мы остановились на краю отвесной скалы, а ящеры были уже в нескольких шагах от нас.",
+		"Я медленно шагнул вперед, держа ружье наготове. Я привел этих отважных охотников к гибели. И готов был погибнуть сам, защищая их. Ящеры-кнутохвосты известны своей свирепостью и неумолимой жаждой крови. Их было намного больше нас. Но я бы себе не простил, если бы позволил расправиться с собой и моими товарищами, не прикончив сначала несколько этих тварей!",
+		"Аджек и сэр Эрлджедин вскинули свое оружие, прикрывая меня с боков, спиной к морю. Барнил обреченно вздохнул и обнажил свой топор. Кнутохвосты были практически рядом с нами. Их уверенные шаги замедлились. Они крадучись подбирались к своим жертвам, зная, что загнали нас в ловушку.",
+		"И тогда случилось чудо. Прямо рядом с нами раздался резкий, ужасающий рев огромного белого тигра. Несмотря на количество, ящеры развернулись и бросились врассыпную. Мы увидели лишь белый сполох, когда тигр минул нас и помчался за одним из ящеров. Нам не требовалось команды. Все четыре члена нашего отряда знали, что пришло время бежать.",
+		"Мы без остановки мчались назад, к нашему лагерю. Позже той ночью мы тихо сидели у костра, зная, что наши жизни были спасены по странной прихоти судьбы. Этому риску подвергается любой участник большой охоты. Мы – игрушки в руках судьбы. Когда-нибудь каждый из нас встретится с хищным оскалом смерти. И ваш покорный слуга рад, что эта встреча не произошла на зеленых холмах Тернистой долины.\n\n--Конец--",
+	},
+},
+["Хранители Тирисфаля"] = {
+	["english"] = "The Guardians of Tirisfal",
+	["pages"] = {
+		"Когда тролли были изгнаны из северных земель, эльфы Кель'Таласа направили все свои усилия на воссоздание своего великолепного царства. Армия Аратора с победой вернулась домой, в южные земли Cтрома.",
+		"Общество людей Аратора росло и процветало, но Торадин, боявшийся, что его королевство расколется, если оно будет расти дальше, сохранял Cтром центром Араторской империи. Через много лет спокойного развития и торговли могучий Торадин умер от старости, давая юному поколению Аратора возможность распространить власть империи дальше земель Cтрома.",
+		"Первая сотня магов, обученная эльфами использовать магию, развила свое могущество и начали глубже изучать тайны плетения заклинаний. Эти маги, изначально выбранные из-за их сильной воли и доблести, всегда очень осторожно практиковали свою магию; но они передали свою силу и тайны магии новому поколению, не имевшему никакого представления об ужасах войны или необходимости самоконтроля.",
+		"Эти юные маги начали практиковать магию для собственной пользы, а не ради исполнения долга перед своими сородичами.",
+		"Империя росла и охватывала все новые земли, а юные маги двинулись на юг. Используя свои мистические силы, маги защищали своих собратьев от диких животных и сделали возможной постройку новых городов-государств в диких местах. Но в то время как их силы росли, маги становились все более высокомерными и все больше отдалялись от остальных людей.",
+		"Второй город-государство Аратора, Даларан, был построен севернее Cтрома. Многие юные волшебники покинули ограничивавшие их границы Cтрома и отправились в Даларан, где они надеялись получить свободу в использовании заклинаний. Эти маги использовали свои силы, чтобы создать зачарованные башни Даларана, и с головой погрузились в исследования.",
+		"Жители Даларана спокойно отнеслись к деятельности магов и создали бурную экономику под их защитой. Но чем больше и больше магов практиковало свои искусства, тем больше ткань реальности вокруг Даларана слабела и рвалась.",
+		"Зловещие шпионы Пылающего Легиона, которые были изгнаны во время обрушения Источника Вечности, были привлечены обратно в мир неосторожными заклинаниями магов Даларана. Хотя эти относительно слабые демоны не проявляли себя в полной мере, они создавали довольно большую неразбериху и хаос на улицах Даларана.",
+		"Большинство этих встреч с демонами были отдельными случаями, и правившие магократы делали все, что могли, чтобы хранить такие происшествия в тайне от народа. Самые могущественные маги были посланы на борьбу с неуловимыми демонами, но нередко они обнаруживали, что безнадежно уступают одиноким шпионам могучего Легиона.",
+		"Через несколько месяцев суеверные простолюдины начали подозревать, что их правители-волшебники от них что-то скрывали. Слухи о революции пронеслись по всем улицам Даларана, в то время как подозрительные горожане начали сомневаться в действиях и принципах магов, которыми они раньше восхищались. Магократы, опасаясь, что крестьяне поднимут бунт и что Стром может предпринять что-то против них, обратились к одной группе, которая, как они надеялись, поймет их, – к эльфам.",
+		"Услыхав от магократов вести о действиях демонов в Даларане, эльфы немедленно послали своих самых могущественных волшебников к людям. Эльфийские волшебники изучили течение энергии в Даларане и составили детальные отчеты о действиях демонов. Они заключили, что, хотя в мире пока не так много демонов, сам Легион будет по-прежнему представлять огромную угрозу, пока люди используют магию.",
+		"Совет Луносвета, правивший эльфами Кель'Таласа, заключил секретный пакт с магократами, владыками Даларана. Эльфы рассказали лордам-магам об истории древнего Калимдора и Пылающем Легионе, который все еще угрожал миру. Они сообщили людям, что, пока те используют магию, им придется защищать своих граждан от коварных посланцев Легиона.",
+		"Магократы предложили решение – дать отдельным смертным воинам огромную силу, чтобы они использовали ее для вечной тайной борьбы с Легионом. Они настаивали на том, чтобы большая часть человечества никогда не узнала о Хранителях или угрозе нападения Легиона, поскольку иначе воцарится ужас и хаос. Эльфы согласились с предложением и основали тайное общество, наблюдавшее за отбором Хранителей и помогавшее сдерживать хаос.",
+		"Сообщество собиралось в тенистых Тирисфальских лесах, где высшие эльфы впервые поселились в Лордероне. Поэтому секта была названа \"Хранители Тирисфаля\". Смертные поборники, избранные быть Хранителями, получали огромную силу эльфийской и людской магии. Хотя одновременно мог существовать только один такой поборник, Хранители были настолько могущественны, что могли и в одиночку расправиться со шпионами Легиона, где бы они их ни находили.",
+		"Сила Хранителя была столь велика, что только Совет Тирисфаля мог отбирать достойных этого титула. Когда Хранитель становился слишком стар или уставал от этой тайной войны против хаоса, Совет выбирал нового защитника и при определенных условиях формально передавал силу старого Хранителя новому.",
+		"Проходили века, Хранители защищали людей от невидимой угрозы Пылающего Легиона по всему Аратору и Кель'Таласу. Аратор рос и процветал, а использование магии распространилось по всей империи. Тем временем Хранители пристально наблюдали: не появится ли признаков активности демонов.",
+	},
+},
+["\"Нашествие хозенов\""] = {
+	["english"] = "The Hozen Ravage",
+	["pages"] = {
+		"Хозены, обитающие в горах Кунь-Лай, – поразительно злобные существа, даже по меркам самих хозенов. В этих суровых краях зачастую не хватает пищи. В голодные времена лидеры хозенов могут объявить \"набег\" на ближайшие поселения .\n\nВо время набегов каждый хозен, который способен стоять на ногах, присоединяется к огромной орде, сносящей все на своем пути. Хозены в выигрыше в любом случае – либо они награбят достаточно еды, чтобы перезимовать, либо избавятся от слабых и больных, и им хватит того, что есть.\n\nВ течение многих лет шадо-паны и груммели сохраняют шаткий мир с хозенами в обмен на поставку им продовольствия. Хозены и рады бы забрать все силой, но их удерживает страх перед шадо-панами... Как правило.",
+	},
+},
+["Вторжение в Дренор"] = {
+	["english"] = "The Invasion of Draenor",
+	["pages"] = {
+		"Когда последние очаги войны были ликвидированы, Альянс предпринял жесткие меры для предотвращения угрозы со стороны орков. На юге Лордерона были построены несколько лагерей специально для пленных орков. Лагеря, охраняемые паладинами и опытными воинами Альянса, успешно справились со своей задачей.",
+		"Пленные орки жаждали сражений, но начальники лагерей, обосновавшиеся в крепости-тюрьме Дарнхольде, поддерживали среди них видимость порядка и спокойствия.",
+		"Тем временем в дьявольском мире Дренора новая армия орков готовилась к нападению на ничего не подозревающий Альянс. Бывший наставник Гул'дана Нер'зул собирал оставшиеся кланы орков под своими знаменами. С помощью клана Призрачной Луны он намеревался открыть на Дреноре несколько порталов, позволяющих Орде проникнуть в новые нетронутые миры.",
+		"Чтобы добыть энергию, необходимую для порталов, ему нужно было несколько мощных артефактов с Азерота. Нер'зул снова открыл Темный портал и послал туда своих верных слуг, чтобы они нашли эти артефакты.",
+		"Новая Орда, возглавляемая такими опытными вождями, как Гром Адский Крик и Килрогг Мертвый Глаз (из клана Кровавой Глазницы), застала врасплох войска Альянса и напала на близлежащие деревни. Под командованием Нер'зула орки быстро добыли нужные артефакты и вернулись обратно на Дренор.",
+		"Король Лордерона Теренас, уверенный в том, что орки готовят новое нашествие, созвал к себе своих самых преданных военачальников. Он приказал генералу Туралиону и верховному магу Кадгару, возглавить поход сквозь Темный портал, чтобы раз и навсегда разделаться с орками. Силы Туралиона и Кадгара вторглись в Дренор и вступили в сражение с войсками Нер'зула на Полуострове Адского Пламени.",
+		"Но даже при поддержке высшего эльфа Аллерии Ветрокрылой, дворфа Курдрана Громового Молота и опытного воина Даната Троллебоя Кадгар не смог помешать Нер'зулу открыть порталы в другие миры.",
+		"Нер'зулу, наконец, удалось открыть порталы, но он даже не предполагал, какую цену придется за это заплатить. Колоссальная энергия порталов начала буквально разрывать Дренор на части. Мир орков рушился, и войска Туралиона отчаянно пытались добраться до портала, чтобы вернуться домой. Гром Адский Крик и Килрогг Мертвый Глаз поняли, что безумные планы Нер'зула вот-вот погубят весь их народ, и, собрав всех оставшихся орков, отправились искать спасение в Азероте.",
+		"Туралион и Кадгар решили героически принести себя в жертву, разрушив Темный портал со стороны Дренора. Их жизни и жизни их воинов – немалая цена за разрушение портала, но они понимали, что это единственный шанс спасти Азерот. Адский Крик и Мертвый Глаз успели пройти через Темный портал навстречу своей свободе, и через мгновение он взорвался за их спинами. Для них и остальных орков в Азероте пути назад больше не было.",
+		"Нер'зул и верный ему клан Призрачной Луны прошли через самый большой из открытых ими порталов, в то время как извержения вулканов начали разрывать континенты Дренора на части. Кипящие моря вознеслись к небу и обрушились на землю: мир орков исчез во всепоглощающем пламени гигантского взрыва.",
+	},
+},
+["Дневник Линя (ч. I)"] = {
+	["english"] = "The Journal of Lin (I)",
+	["pages"] = {
+		"Всем, кого это касается.\n\nНаверняка вы заметили, какая эта бумага липкая. Она пропитана специальным токсином, разработанным мной. Если вы богомол, то жить вам осталось две минуты. Прощайте.\n\nВ противном случае разрешите представиться. Меня зовут Линь, и я умираю. Прошу вас, доставьте это послание шадо-панам. Полученные мной знания о богомолах и их культуре крайне важны для того, чтобы понять образа мышления и поведение нашего врага.\n\nУ меня нет сил тягаться с ветром, который разносит страницы моего дневника по Жутким пустошам.\n\nБогомолы – древний народ. Намного древнее, чем мы думали. И намного организованнее.",
+		"Задачей моего отряда было разузнать все об их королеве и, если будет возможность, убить ее. Но... она не королева. Она настоящая императрица богомолов – во всех смыслах этого слова. Легионы богомолов из всех великих деревьев сражаются под ее знаменами. На ее призыв откликаются все королевства, полные роящихся теней. Она не просто матка, откладывающая яйца.\n\nОна правит богомолами, и у нее есть свои советники.",
+	},
+},
+["Дневник Линя (ч. II)"] = {
+	["english"] = "The Journal of Lin (II)",
+	["pages"] = {
+		"Мы знали, что между богомолами и их деревьями существует некая связь. Но мы считали ее инстинктивной, сродни привязанности пчел к цветам.\n\nВ действительности все намного сложнее. Для богомола его дерево священно. Это живой храм, имеющий огромное значение для их культуры, настоящая основа их общества.\n\nКаждому дереву богомолы дали имя. И каждый богомол, живущий в дереве, носит родовое имя этого дерева.",
+		"Назвать эти сообщества \"племенами\" было бы неправильным. Они гораздо ближе к королевствам: у каждого своя внутренняя иерархия, система управления и повседневная жизнь.\n\nЯ не зря употребляю слова \"повседневная жизнь\". Богомолы – такой же самодостаточный народ, как и пандарены, цзинь-юй или хозены. Их культура кардинально отличается от нашей, но, тем не менее, у них есть культура. Не могу утверждать, что понимаю ее. Но я полностью уверен в ее наличии.",
+	},
+},
+["Калдорай и Источник Вечности"] = {
+	["english"] = "The Kaldorei and the Well of Eternity",
+	["pages"] = {
+		"За десять тысяч лет до того, как орки и люди сошлись в Первой войне, мир Азерота вмещал лишь один массивный континент, окруженный бескрайними бушующими морями. На этом континенте, известном как Калимдор, жило множество самых разных народов и существ, борющихся за выживание на просторах нового мира. В центре темного континента находилось таинственное озеро, бурлившее энергией.",
+		"Озеро, которое позже назовут Источником Вечности, было подлинным средоточием магических и природных сил мира. Черпая энергию из Великой Запредельной Тьмы, Источник был как мистический ключ, питающий этой энергией мир и поддерживающий жизнь во всем ее удивительном многообразии.\n\nСо временем до берегов завораживающего колдовского озера добралось примитивное племя гуманоидов, ведущих ночной образ жизни.",
+		"Эти дикие кочевники, которых притягивала энергия Источника, построили на его безмятежных берегах свои хижины. Со временем космическая энергия Источника изменила племя, сделав его сильным, мудрым и практически бессмертным. Племя стало называть себя \"калдорай\", что на их родном языке означало \"дети звезд\". Прославляя расцвет своего общества, поселенцы воздвигли по берегам озера большие постройки и храмы.",
+		"Калдорай, или ночные эльфы, как их стали называть позже, поклоняются богине Луны, Элуне, и верят, что в дневное время она спит в мерцающей глубине Колодца. В стародавние времена жрецы и провидцы ночных эльфов изучали Колодец с неиссякаемым энтузиазмом, пытаясь раскрыть его тайны и завладеть его силой. Численность ночных эльфов постепенно увеличивалась, и они открывали для себя\nбескрайние просторы Калимдора, налаживали связи с многочисленными жителями этого материка.",
+		"Единственными, кто внушал им тревогу, были могущественные древние драконы. Хотя эти большие змееподобные существа часто жили отшельниками, они всегда старались охранять известные им земли от возможной угрозы. Ночные эльфы решили, что драконы провозгласили себя защитниками мира и что их вместе с их секретами лучше не трогать.",
+		"Со временем любопытство ночных эльфов привело к тому, что они повстречали и подружились с самыми разными могущественными существами, не последним из которых был Кенарий, могучий полубог древних лесов. Благородному Кенарию пришлись по нраву любознательные ночные эльфы, и он потратил много времени на то, чтобы рассказать им о силах природы. Мирные калдорай прониклись большим сочувствием к живым лесам Калимдора и наслаждались гармонией природы.",
+		"С неспешным течением времени росла как территория ночных эльфов, так и их культура. Храмы, дороги и жилища протянулись по всему темному континенту. Азшара, прекрасная и талантливая королева ночных эльфов, воздвигла на берегу Источника Вечности огромный, изумительный дворец, в роскошных залах которого проживали ее любимые слуги.",
+		"Приближенные слуги Азшары, которых она называла Кель'дорай, или высокорожденными, выполняли каждое ее желание и считали себя выше своих собратьев. И хотя королеву Азшару одинаково любили все ее подданные, ревнивые массы эльфов втайне ненавидели высокорожденных.\n\nРазделяя стремление жрецов познать тайны Источника Вечности, Азшара приказала мудрецам из числа высокорожденных проникнуть в его секреты и раскрыть миру его истинное назначение.",
+		"Высокорожденные с головой ушли в работу и беспрерывно изучали Источник. Со временем они развили в себе способности управлять его космической энергией. Чем больших успехов высокорожденные достигали в своих опытах, тем явственней они понимали, что с помощью своих новообретенных навыков они могут как творить, так и разрушать. Злосчастные высокорожденные зациклились на примитивной магии и твердо решили добиться мастерского владения ею.",
+		"Хотя Азшара вместе с ее высокорожденными понимали, что при безответственном обхождении такая магия может быть опасна, они начали практиковать ее с неуемной страстью. Кенарий и многие из ночных эльфов-мудрецов предупреждали, что безрассудство при обращении со столь неуловимой магической силой неизбежно грозит бедой. Но Азшара и ее последователи упрямо продолжали усиливать свое растущее могущество.",
+		"По мере того как могущество высокорожденных и самой Азшары росло, в их характере наметились явственные изменения. И без того высокомерные и холодные, представители высшего класса становились все более чванливыми и жестокими по отношению к соплеменникам. Некогда завораживающую красоту Азшары окутал темный покров. Она начала отдаляться от любящих подданных и не хотела общаться ни с кем, кроме своих доверенных жрецов из числа высокорожденных.",
+		"Молодой и талантливый ученый по имени Малфурион Ярость Бури, который очень долго изучал эффекты Источника, начал подозревать, что высокорожденными и обожаемой королевой овладела темная сила. И хотя он не мог постичь природы этого зла, он осознавал, что жизнь ночных эльфов скоро изменится навсегда...",
+	},
+},
+["Последний хранитель"] = {
+	["english"] = "The Last Guardian",
+	["pages"] = {
+		"Хранительница Эгвин с течением времени становилась все могущественнее, используя энергии Тирисфаля, чтобы продлить свою жизнь. Самоуверенно надеясь, что она победила Саргераса, она продолжала охранять мир от приспешников короля демонов почти девятьсот лет. Но в конце концов Совет Тирисфаля объявил, что время ее службы подошло к концу.",
+		"Совет приказал Эгвин вернуться в Даларан, чтобы они могли избрать нового носителя силы Хранителя. Но Эгвин, никогда не доверявшая Совету до конца, решила сама выбрать преемника.",
+		"Гордая Эгвин хотела родить сына, которому она передаст свою силу. Она не хотела, чтобы Тирисфальский орден манипулировал ее преемником так же, как они пытались манипулировать ей. Отправившись в южное государство Азерот, Эгвин нашла идеального мужчину, который мог бы стать отцом ее сына – искусного человека-мага по имени Ниелас Аран.",
+		"Аран был придворным чародеем и советником короля Азерота. Эгвин соблазнила волшебника и забеременела от него. Еще не рожденное дитя получило природную способность Ниеласа к магии, что позже определит трагическую судьбу этого ребенка. Ребенок также получил силу Тирисфаля, хотя она не проявилась до того, как он стал совершеннолетним.",
+		"Прошло время, и Эгвин родила сына в укромной роще. Назвав мальчика Медив, что означало \"хранитель секретов\" на языке высших эльфов, Эгвин верила, что мальчик будет готов к тому, чтобы стать Хранителем. К сожалению, злой дух Саргераса, таившийся в ней, вселился в дитя, еще находившееся в ее чреве. Эгвин не знала, что новый Хранитель мира уже одержим его величайшим врагом.",
+		"Уверенная в том, что ее дитя здорово и невредимо, Эгвин отправила юного Медива ко двору Азерота и оставила его там, чтобы его взрастил его смертный отец и его народ. Сама же она ушла в глушь, готовая встретить все, что ее могло ожидать в загробной жизни. Медив вырос сильным пареньком, но не имел никакого представления о потенциальной мощи силы Тирисфаля, принадлежавшей ему по праву рождения.",
+		"Саргерас выжидал подходящего момента, когда таящаяся в юноше сила даст о себе знать. Уже будучи подростком, Медив заработал себе популярность среди жителей Азерота своими выдающимися магическими способностями и часто отправлялся на поиски приключений вместе со своими друзьями – принцем Азерота Ллейном и Андуином Лотаром, одним из последних сыновей рода Арати. Трое мальчишек постоянно попадали в переделки, но горожане их очень любили.",
+		"Когда Медиву было четырнадцать, в нем проснулась великая сила, которая не могла ужиться с дремлющим внутри него духом Саргераса. Медив впал в глубокий сон, продлившийся не один год.",
+		"Вернувшись к жизни, он обнаружил, что уже повзрослел, а его друзья Ллейн и Андуин стали правителями Азерота. Он желал использовать обретенные силы на благо своей родной земли, но злой дух Саргераса овладел его разумом и направил его на путь злодеяний.",
+		"Сердце Медива заполняла тьма, и Саргерас был доволен: почти все было готово для его повторного вторжения в этот мир, а последний Страж должен был помочь ему с легкостью осуществить все свои планы.",
+	},
+},
+["\"Последняя битва\""] = {
+	["english"] = "The Last Stand",
+	["pages"] = {
+		"Сауроки, всегда сопротивляющиеся до последнего, не уступали могу ни пяди болот Красаранга. Именно здесь, на незнакомой противнику территории, у них появились шансы на победу.\n\nКоличество смертей начало расти, когда повстанцы отравили запасы воду и стали разрушать постройки могу.\n\nПоддавшись слепой ярости, император из Доцзяна все посылал и посылал в Красаранг войска, рабов и оружие, пытаясь уничтожить всех оставшихся сауроков до последнего.\n\nНо все его попытки были тщетны.",
+	},
+},
+["\"Наследие императора Цао\""] = {
+	["english"] = "The Legacy of Emperor Tsao",
+	["pages"] = {
+		"Правление императора Цао было коротким и отличалось не жестокостью, свойственной правителям могу, а рядом реформ.\n\nСтоит отметить, что его правление сильно сказалось на жизни пандаренов. Императорским указом рабам-пандаренам было разрешено читать, писать и открывать собственные школы.\n\nПосле революции большинство памятников могу разрушили, но монумент в честь императора Цао остался стоять здесь, на берегу. Каждое утро он встречает солнце и смотрит на народ, который помог спасти.",
+	},
+},
+["Триумф Короля-лича"] = {
+	["english"] = "The Lich King Triumphant",
+	["pages"] = {
+		"Даже практически оставшись без сил, Артас сумел опередить Иллидана и первым добраться до Ледяного Трона. Своим руническим мечом, Ледяной Скорбью, Артас разрушил ледяную тюрьму, а потом забрал из нее зачарованный шлем и доспехи Нер'зула.",
+		"Водрузив на свою голову шлем, Артас стал новым Королем-личом. Души Нер'зула и Артаса слились воедино, обретя небывалое могущество. Увидев, что Артас стал самым грозным существом в истории этого мира, Иллидан со своими войсками был вынужден бежать обратно в Запределье.",
+		"Сейчас Король-лич Артас пребывает в Нордсколе. Говорят, что он собирается восстановить Ледяную Корону. Его верный помощник Кел'Тузад командует силами Плети в Чумных землях. Сильвана же со своими Отрекшимися удерживает лишь Тирисфальские леса – небольшую часть растерзанного войной королевства.",
+	},
+},
+["\"Забытая династия\""] = {
+	["english"] = "The Lost Dynasty",
+	["pages"] = {
+		"Даже с точки зрения могу правление императора Доцзяна II было кратким и кровавым. Его маниакальное стремление завершить дело своего отца и навсегда освободить империю от легионов бунтующих сауроков заставило его оставить двор и начать военную кампанию, обреченную на провал.\n\nОбозревая с высоких скал Красарангские джунгли, он смотрел, как медленно вырубаются заросли, как строится Подземелье Доцзянь и как гибнет раса сауроков.\n\nНо чего он не ожидал, так это того, что остатки пятого и седьмого легионов сауроков взберутся на огромнейшие скалы под покровом ночи, отрежут императорский шатер от Долины Четырех Ветров и столкнут в пропасть. Тело Доцзяна так и не нашли, а хаос, воцарившийся в столице, привел к тому, что почти два года в империи правила смута. Сауроки, тем временем, растворились в пустошах, не оставив и следа...",
+	},
+},
+["Мемуары лорда Торваля"] = {
+	["english"] = "The Memoirs of Lord Thorval",
+	["pages"] = {
+		"До меня дошли слухи, что некоторых новообращенных рыцарей смерти тревожат воспоминания о их прошлой жизни. Я взываю к их беспокойным умам: не оглядывайтесь назад, ибо позади остались лишь ошибки прошлого. Плеть очистит вас от отвратительных мыслей, как это и произошло со мной.",
+		"Знайте же, что когда-то я был паладином и поклонялся мерзкому Свету. Я был слеп в своем неведении, очарован сказочками о лживой надежде, ради которой я оставил жену и двух юных дочерей. Долгие недели наши жалкие отряды скитались по лесам в поисках Плети, но все следы вели в никуда. Разочарованные, мы повернули назад.",
+		"Но на пороге отчего дома нас ждала ужасная картина. Взобравшись на последний холм, мы увидели сожженные остовы родной деревни. Я бросился к своему жилищу. Из двери торчала самодельная стрела. Слишком испуганный, чтобы обращать внимание на такое детали, я ворвался внутрь и увидел тела родных, обугленные до неузнаваемости. Я отвернулся и обессилено прислонился к двери, испещренной следами ногтей. Самые тоненькие царапины наверняка оставили мои дочери...",
+		"Позже я узнал, что в наше отсутствие пошли слухи, будто в деревне скрывается зараженный чумой человек, и Алый орден приказал сжечь всех жителей вместе с домами. Потрясенный открывшейся мне жестокостью, я принял это чувство и поселил его в своем сердце. Отныне у меня была только одна цель – преследовать рыцарей Света и мстить им за гибель моей семьи.",
+		"К счастью, наш отряд снова был собран, и я почувствовал отклик ярости в сердцах моих друзей. Но наш командир приказал нам следовать к ближайшему аванпосту. Той же ночью мы услышали знакомые голоса мертвецов, эхом отражавшиеся в глубине леса, и вскоре мы были окружены солдатами Плети.",
+		"Я убивал их, не ведая пощады, но на место каждого павшего вставали двое новых оживших мертвецов. Нас поймали те самые отряды Плети, за которыми мы так долго охотились, но в тот момент мы не были готовы к схватке. Мои товарищи были изранены и подавлены, а противник во много раз превосходил нас числом.",
+		"И когда их мечи наконец дотянулись до меня, я внезапно вспомнил, как когда-то играл со своей младшей дочерью на этой самой поляне. Ярость захлестнула меня с головой. Зачем нужны эти бесплодные воспоминания? Они не более, чем иллюзия, в которой мы ищем спасения от боли и страха реальной жизни. Мои дочери были мертвы, а поляна захвачена солдатами Плети. Смерть – вот единственный правдивый конец любой сказки. Не в наших силах уберечь от нее тех, кто нам дорог. Мы можем только выбрать, что будет за гранью...",
+		"Именно тогда я поклялся в верности Королю-личу, предвестнику нашей победы. Он очистил меня от страданий, вызванных глупыми человеческими эмоциями. Я возродился, как феникс из пепла, и стал рыцарем смерти. Нет такой силы, которая сломила бы меня и моих братьев. Нет испытаний, могущих поколебать мою веру. Плеть обновила меня, и отныне я горд служить вестником смерти на просторах всего Азерота.",
+	},
+},
+["\"Могу и трогг\""] = {
+	["english"] = "The Mogu and the Trogg",
+	["pages"] = {
+		"Давным-давно под холмом жило существо, которое называли троггом. Он бродил по горным пещерам и тоннелям и вечно что-то вынюхивал и искал. Трогг был доволен жизнью. Но однажды ему повстречался могу.\n\n\"Какие сильные у тебя руки!\" – сказал он троггу. \"Моя магия сделает их еще сильнее, чтобы ты мог сокрушать моих врагов\".\n\n\"А какой чуткий у тебя нос\", – продолжал он. \"Моя магия усилит твой нюх, чтобы ты смог выслеживать моих врагов\".",
+		"\"И как замечательно ты умеешь отыскивать путь. Моя магия сделает так, чтобы ты никогда не терялся и всегда помнил пути моих врагов.\"Чтобы превратить это существо в оружие, могу использовал воды Вечноцветущего дола.\n\nКогда дым рассеялся и пыль улеглась, взору могу предстал безмятежный груммель.\n\n\"У тебя сильные руки, острый нюх и ты не забываешь путь\", – сказал могу груммелю. \"Ступай к фермам на востоке и перенеси всю еду к стене на запад. Изучи всех врагов, которых встретишь, а затем доложи мне\".",
+		"Груммель, у которого были сильные руки, острый нюх и который никогда не забывал дорогу, отправился искать \"врагов\", как велел могу. Он доставил еду, обыскал все тропы, но так и не встретил врагов. \"Докладывай о моих врагах\", – велел могу груммелю. \"Они прячутся в горных проходах? Или в пещерах у реки? А может, на фермерских полях?\"",
+		"Груммель моргнул и задумался. Он думал и думал и, наконец, сказал: \"Мой нос вынюхивал, а глаза высматривали, но твоих врагов я не встречал. В горах я видел хозенов. Они рыли тоннели. В пещерах у реки я видел цзинь-юй. Они разговаривали с водой. В полях я видел пандаренов. Они смешно танцевали.\"\n\nМогу, услышав эти новости, перестал тревожиться.\n\nКаждый раз, когда груммель, выполнив поручения, возвращался, могу задавал ему тот же вопрос и получал все тот же ответ.",
+		"Но могу не знал, что хозены роют тоннели, чтобы обойти воинов могу с тыла. Что цзинь-юй прислушивались к воде, чтобы выяснить, где могу отразят первые атаки восставших. И что пандарены не танцевали, а учились сражаться без оружия.\n\nКогда началось восстание, могу был вне себя от ярости.\n\n\"Ты сказал, что не видел врагов!\" – кричал он на груммеля.",
+		"Груммель улыбнулся и ответил ему: \"Я видел то, что хотел видеть. Ты слышал то, что хотел слышать\".",
+	},
+},
+["\"Природа спокойствия\""] = {
+	["english"] = "The Nature of Peace",
+	["pages"] = {
+		"Мир – как река. Иногда воды текут спокойно, не встречая препятствий. А иногда они бурлят, пенятся и точат камни, чтобы достичь цели.",
+	},
+},
+["Новая Орда"] = {
+	["english"] = "The New Horde",
+	["pages"] = {
+		"Аделас Блэкмур, руководитель всех лагерей для военнопленных, наблюдал за орками из своей крепости Дарнхольд. Один из орков пользовался его особым вниманием: молодой сирота, пойманный почти восемнадцать лет назад. Блэкмур воспитал орчонка как своего раба, назвал его Траллом и обучил тактике, философии и фехтованию. Тралл даже пробовал себя в качестве гладиатора. Блэкмур пытался сделать из юного орка орудие убийства.",
+		"Несмотря на тяжелое детство, Тралл вырос сильным и умным орком; он осознавал, что участь раба – не для него. Повзрослев, он узнал многое об истории своего народа, представителей которого он почти не видел: после поражения в войне практически все орки попали в лагеря для военнопленных. Ходили слухи, что вождю Молоту Рока удалось бежать из Лордерона. И лишь один клан орков все еще оставался на свободе, скрываясь от бдительных глаз Альянса.",
+		"Находчивый, но неопытный Тралл решил бежать от Блэкмура и отправиться на поиски своих собратьев. Путешествуя от одного лагеря к другому, Тралл обнаружил, что некогда могучие и воинственные орки превратились в совершенно безжизненных существ. Не сумев найти среди них могучих воинов, о которых он так много слышал, Тралл отправился искать последнего непобежденного вождя Грома Адского Крика.",
+		"Несмотря на постоянные преследования со стороны людей, душа Адского Крика была по-прежнему полна неутолимой жажды боя. Вместе со своим верным кланом Песни Войны он продолжал партизанскую войну против поработителей своего народа. К несчастью, он так и не нашел способ вернуть пленным оркам их жизненную энергию. Юного Тралла завораживал идеализм Адского Крика и воинские традиции Орды.",
+		"В поисках правды о своих предках Тралл отправился на север, где обнаружил легендарный клан Северного Волка. Там ему рассказали, как Гул'дан отправил Северного Волка в изгнание в самом начале Первой войны. Тралл также узнал, что он – сын и наследник храброго орка Дуротана, вождя Северного Волка, погибшего на этих пустынных просторах почти двадцать лет назад.",
+		"Под руководством мудрого шамана Дрек'Тара Тралл изучил древнюю культуру своего народа, которая была почти полностью забыта при правлении коварного Гул'дана. Со временем Тралл сам стал могучим шаманом и занял свое законное место вождя клана. Исполненный силы самих стихий, Тралл отправился в путь, чтобы освободить свой народ и снять с него демоническое проклятие.",
+		"В ходе своих путешествий Тралл встретил старого вождя Оргрима Молота Рока, который долгие годы жил отшельником. Молот Рока был близким другом отца Тралла. Он решил помочь юному орку освободить плененные кланы. При поддержке опытных воинов Траллу удалось вернуть Орду к жизни и стать ее духовным учителем.",
+		"Символом перерождения орков стал поход Тралла на крепость Дарнхольд и освобождение из лагерей всех пленных; зловещим планам Блэкмура не суждено было сбыться. Но эта победа далась дорогой ценой: во время осады одного из лагерей в бою погиб Молот Рока.",
+		"Тралл взял легендарный боевой молот Молота Рока и надел свои черные доспехи; теперь он стал новым предводителем Орды. Следующие несколько месяцев его маленькое неуловимое войско совершало набеги на лагеря военнопленных Альянса; войско Альянса было бессильно против него. Под руководством своего лучшего друга и наставника, Грома Адского Крика, Тралл делал все возможное, чтобы его народ никогда больше не испытал на себе гнета рабства.",
+	},
+},
+["Древние боги и формирование Азерота"] = {
+	["english"] = "The Old Gods and the Ordering of Azeroth",
+	["pages"] = {
+		"Не знавшие о том, что Саргерас намерен уничтожить плоды их бесчисленных трудов, титаны продолжали передвигаться от мира к миру, формируя и приводя в порядок те планеты, что они находили пригодными. В своем путешествии они случайно попали в небольшой мир, который его обитатели позже назвали Азеротом.",
+		"Путешествуя по этому девственному миру, по первобытной земле, титаны встречали множество агрессивных элементалей. Эти духи, поклонявшиеся расе невероятно злых существ, известных как древние боги, поклялись отбросить титанов и сохранить их мир от металлического прикосновения захватчиков.",
+		"Пантеон, обеспокоенный склонностью древних богов ко злу, начал войну против элементалей и их темных повелителей. Армии древних богов вели в бой наиболее могущественные элементали: Рагнарос Повелитель Огня, Теразан Матерь Камня, Ал'Акир Владыка Ветра и Нептулон Хозяин Приливов.",
+		"Эти силы хаоса бушевали и бились с колоссами-титанами на груди мира. Несмотря на то что элементали были настолько могущественны, что смертным даже представить невозможно, их объединенных сил было недостаточно, чтобы остановить могучих титанов. Один за другим повелители элементалей пали, а их силы отступили.",
+		"Пантеон разрушил цитадель древних богов и заточил пятерых злых богов глубоко в недрах мира. Элементали, которые не могли сдерживать свое буйство без власти древних богов, были изгнаны в бездну миров, где они остались сражаться друг с другом на веки вечные. С исчезновением элементалей природа смягчилась, и в мире наступила полная гармония. Титаны увидели, что с угрозой покончено, и принялись за работу.",
+		"Титаны наделили силой многие расы, чтобы те смогли помочь им придавать миру форму. Для создания бездонных подземных пещер титаны сотворили дворфоподобных земельников из магического живого камня. Чтобы помочь им осушить моря и поднять землю над уровнем моря, титаны создали огромных, но кротких морских великанов. Многие столетия титаны придавали форму землям, пока не смогли сотворить совершенный континент.",
+		"В центре континента титаны поместили озеро искрящейся энергии. Озеро, которое они назвали Источником Вечности, было источником жизни в мире. Его могущественная энергия питала корни мира и давала возможность жизни пустить побеги в его плодородной почве. Со временем травы, деревья, монстры и создания всех видов появились на первобытном континенте.",
+		"В честь сумерек, павших на мир в их последний день работы, титаны назвали этот континент Калимдором – \"землей вечного звездного света\".",
+	},
+},
+["\"Пандаренский вопрос\""] = {
+	["english"] = "The Pandaren Problem",
+	["pages"] = {
+		"Существуют доказательства, что задолго до того, как была образована старая империя, тяга пандаренов к знанию уже принесла свои плоды в виде стихов, сельскохозяйственных приспособлений и лекарств. \n\nВластелин Грома увидел в пандаренах большой потенциал, и потому он всегда опасался их. \n\nПосле того, как могу подчинили себе весь материк, они запретили пандаренам читать и писать, а всех их предводителей и ученых казнили. Все произведения пандаренской литературы и искусства были преданы огню. Если пандарен разговаривал не на языке могу, его сразу же обвиняли в заговоре, и подобные обвинения зачастую влекли за собой смертную казнь.",
+		"Работы ранних пандаренских художников и писателей были навсегда утеряны. \n\n Прошло немало веков, прежде чем появились новые ученые пандарены… однако язык, на котором они говорили, не был им родным.",
+	},
+},
+["Молящийся богомол"] = {
+	["english"] = "The Praying Mantid",
+	["pages"] = {
+		"Эта статуя Клакси'ва датируется эпохой появления титанов. На постаменте выгравирована молитва \"к тому, что имеет семь голов\". В древнем языке слово \"клакси\" обозначало понятие \"жрец\".\"\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["\"Императорский хранитель ключей\""] = {
+	["english"] = "The Royal Chamberlain",
+	["pages"] = {
+		"\"Берегись императорского хранителя ключей. Он издавна стоял на страже бесчисленных сокровищ его величества. Пока эта статуя не рассыплется в прах, никто, кроме самого Императора, не перешагнет порог королевской сокровищницы\".",
+	},
+},
+["\"Священная гора\""] = {
+	["english"] = "The Sacred Mount",
+	["pages"] = {
+		"Еще до того, как Лэй Шэнь основал старую империю, на одном горном плато с давних пор бушевала непрекращающаяся буря. Это место называлось Громовой Горой, и именно здесь располагался престол того, кого могу звали владыкой.\n\nВ исторических хрониках не говорится, что именно Лэй Шэнь обнаружил, взойдя на гору и скрывшись в ее недрах. Но когда он вернулся на поверхность, его сила была сравнима с мощью тысячи бурь. Тогда он объявил о том, что именно на горе и будет располагаться его будущая столица. На самой вершине по его приказу были построен великолепный запретный город.",
+		"Легенды гласят, что после смерти Лэй Шэня мощь горы отказалась подчиняться кому-либо другому, и вершину вновь затянули штормовые облака. Императоры, правившие после него, перенесли столицу в Вечноцветущий дол. \n\nДаже во время правления последнего пандаренского императора Шаохао Громовая Гора все еще наполняла сердца благоговейным страхом. После Разлома, расколовшего мир, гора почти полностью ушла под воду, но, возможно, последний император посчитал, что ее все же стоит сохранить. А может, он просто боялся сокрытых в ней тайн, и потому решил спрятать ее от посторонних глаз. Так или иначе, город на вершине горы, ставшей еще одним островом в океане, тоже окутал густой туман, опустившийся на Пандарию.",
+	},
+},
+["\"Сауроки\""] = {
+	["english"] = "The Saurok",
+	["pages"] = {
+		"Сауроки должны были стать подневольными воинами на службе империи могу, народ это был свирепый и неистовый. После Очищения они на много столетий затаились в Красарангских джунглях и в болотах за Змеиным Хребтом.\n\nВ последнее время сауроки осмелели и стали нападать на города вдоль побережья Пандарии, скрываясь в море вместе с награбленным.\n\nВстретив саурока в джунглях, знайте – его сородичи наверняка неподалеку. Будьте готовы защитить себя!",
+	},
+},
+["\"Саурок и цзинь-юй\""] = {
+	["english"] = "The Saurok and the Jinyu",
+	["pages"] = {
+		"Цзинь-юй сидел у реки и размышлял о вечном, когда к нему подошел саурок. Поначалу цзинь-юй встревожился и подумал, не нырнуть ли ему в реку, чтобы скрыться.\n\nНо саурок примирительно поднял лапы и сказал: \"Я хочу переправиться на другой берег, но не умею плавать. А ты умеешь. Может, разрешишь мне переплыть реку на твоей спине?\"\n\nНа это цзинь-юй ответил: \"Но ты же меня укусишь, зарежешь или откусишь мне голову\".",
+		"Саурок засмеялся: \"Тогда мы оба погибнем. Без тебя я утону.\"\n\nЦзинь-юй обдумал слова саурока и согласился. С трудом тяжелый саурок вскарабкался на спину цзинь-юй, и они отплыли от берега.\n\nНо посреди реки саурок, не раздумывая, ударил цзинь-юй своими острыми когтями.\n\nТело цзинь-юй пошло ко дну. Вместе с ним утонул и саурок.\n\nДаже когда на кону стояла его жизнь, он не мог перебороть свою природу.",
+	},
+},
+["Плеть Лордерона"] = {
+	["english"] = "The Scourge of Lordaeron",
+	["pages"] = {
+		"После долгих месяцев приготовлений Культ Проклятых под предводительством Кел'Тузада нанес первый удар, выпустив чуму на земли Лордерона. Утер и его паладины обследовали зараженные территории в надежде найти способ остановить чуму; но, несмотря на все их старания, болезнь продолжала распространяться, угрожая полностью уничтожить Альянс.",
+		"Полчища нежити продолжали свое шествие по землям Лордерона, и принц Артас, единственный сын Теренаса, решил выступить против них. Артасу удалось убить Кел'Тузада, но ряды нежити пополнялись с каждым павшим солдатом, защищавшим свои земли. Враги казались непобедимыми, и Артас впал в отчаяние; ему пришлось идти на крайние меры. В конце концов он узнал от солдат, что начал терять свои человеческие качества.",
+		"Страх и решимость Артаса привели его к погибели. Он желал уничтожить угрозу своей земле и ради этого добрался до источника чумы в Нордсколе, но сам пал жертвой могущества Короля-лича. Надеясь спасти свой народ, Артас взял в руки проклятый рунический клинок, Ледяную Скорбь.",
+		"Меч дал Артасу невиданную силу, но забрал его душу, превратив принца в одного из самых могущественных рыцарей смерти, подданных Короля-лича. Потеряв душу и рассудок, Артас возглавил Плеть и повел армию против своего собственного королевства. Артас убил своего отца, короля Теренаса, и бросил поверженное королевство Лордерон к ногам Короля-лича.",
+	},
+},
+["Часовые и долгое бдение"] = {
+	["english"] = "The Sentinels and the Long Vigil",
+	["pages"] = {
+		"С уходом своих своевольных собратьев ночные эльфы вновь стали оберегать свою зачарованную родину. Друиды, чувствуя, что скоро должны уснуть, готовились ко сну и прощались со своими родными и близкими.",
+		"Тиранда, ставшая Верховной жрицей Элуны, умоляла своего возлюбленного Малфуриона не уходить в Изумрудный Сон Изеры. Но Малфурион, считавший своим долгом вступить на изменчивые тропы Спящей, попрощался со жрицей и поклялся, что они никогда не разлучатся, до тех пор пока хранят верность своей любви.",
+		"Оставшись в одиночестве защищать Калимдор от опасностей нового мира, Тиранда собрала мощную армию своих сестер, ночных эльфиек. Бесстрашные, искусные воительницы, поклявшиеся защищать Калимдор, стали известны как Часовые. Хотя они предпочитали самостоятельно патрулировать тенистый Ясеневый лес, у них было множество союзников, которых они призывали во время опасностей.",
+		"Полубог Кенарий обитал неподалеку оттуда на Лунных полянах горы Хиджал. Его сыновья, известные как Хранители Рощ, наблюдали за ночными эльфами и регулярно помогали Часовым поддерживать мир на этих землях. Даже скромные дочери Кенария, дриады, стали появляться все чаще и чаще.",
+		"Охрана Ясеневого леса занимала все время Тиранды, но она тосковала без Малфуриона. Шли века, друиды спали, а ее опасения насчет нового вторжения демонов росли. Она не могла избавиться от тревожного ощущения, что, возможно, Пылающий Легион все еще здесь, за пределами Великой тьмы неба, и что он готовится отомстить ночным эльфам и всему Азероту.",
+	},
+},
+["Семь королевств"] = {
+	["english"] = "The Seven Kingdoms",
+	["pages"] = {
+		"Cтром по-прежнему оставался центром Аратора, но на континенте Лордерон возникло множество новых городов-государств. Гилнеас, Альтерак и Кул-Тирас были первыми среди этих городов-государств, и хотя во всех этих городах были свои обычаи и своя экономика, все они подчинялись Cтрому.",
+		"Под бдительным присмотром Тирисфальского ордена Даларан стал центром обучения для всех волшебников. Магократы, правившие Далараном, основали Кирин-Тор, особое тайное общество, регистрировавшее и изучавшее каждое заклинание, артефакт или магический предмет, известный в то время.",
+		"Гилнеас и Альтерак были надежными союзниками Cтрома. Они отправили свои могучие армии изучать гористые южные земли Каз Модана. Именно тогда люди впервые столкнулись с древней расой дворфов и пришли в их подземный город Стальгорн. Люди и дворфы делились друг с другом секретами обработки металлов и инженерного дела. К тому же оба народа одинаково любили битвы и древние предания.",
+		"Город-государство Кул-Тирас, основанный на большом острове к югу от Лордерона, имел процветающую экономику, основанную на рыболовстве и мореплавании. Со временем у Кул-Тираса появился могучий флот торговых судов, плававших по всему известному миру в поисках экзотических товаров. Но в то время как экономика Аратора процветала, наиболее мощные ее элементы начали рушиться.",
+		"Со временем лорды Cтрома переселились в богатые северные земли Лордерона, оставив засушливый юг. Наследники короля Торадина, последние потомки рода Арати, запретили покидать Cтром, чем вызвали недовольство богачей, которые желали уехать.",
+		"Лорды Cтрома, ища на диком севере чистоту и свет, решили оставить свой древний город. Далеко к северу от Даларана лорды Cтрома построили новый город-государство, названный Лордерон. Весь континент был назван в честь этого города. Лордерон стал местом религиозного паломничества и укрытием для тех, кто искал спокойствия и безопасности.",
+		"Наследники Арати, оставшиеся в ветшающих стенах древнего Cтрома, решили отправиться на юг, за каменистые горы Каз Модана. Их странствия длились не один год, но наконец путешествие окончилось, и они поселились в северном регионе континента, который позднее назовут Азерот. В плодородной долине они основали королевство Штормград, быстро ставшее независимой силой.",
+		"Несколько воинов, оставшихся в Строме, решили и дальше защищать древние стены. Стром более не был центром империи, но он превратился в новое государство – Стромгард. Хотя каждый город-государство сам по себе процветал, империя Аратор практически распалась. Каждое государство завело свои собственные обычаи и верования, и они начали все больше отдаляться друг от друга. Мечта короля Торадина об объединении человечества развеялась.",
+	},
+},
+["Череп Тираннистраса"] = {
+	["english"] = "The Skull of Tyrannistrasz",
+	["pages"] = {
+		"Останки гигантского красного дракона были обнаружены в Болотине вскоре после Битвы за Грим Батол. Говорят, что Тираннистрас был первым супругом Королевы Драконов, Алекстразы.",
+	},
+},
+["\"Властелин Грома\""] = {
+	["english"] = "The Thunder King",
+	["pages"] = {
+		"Историки писали о том, что великий Лэй Шэнь, впервые увидев земли богомолов, почувствовал не страх, но вдохновение.\n\nНачав объединять свой народ под единым знаменем и подчинять другие расы Пандарии, он понимал, что богомолы его авторитета не признают никогда. Они говорили на его языке – на языке силы. Он велел своим рабам построить Змеиный Хребет, потрясающих размеров стену, окружавшую всю его империю.\n\nНа ее возведение потребовалось бы несколько поколений строителей, но Лэй Шэнь знал, как расшевелить своих подданных. Страх. Страх перед богомолами двигал горы, собирал целые армии, оберегал его империю, и он же возвел эту стену.",
+	},
+},
+["\"Земледелец и монах\""] = {
+	["english"] = "The Tiller and the Monk",
+	["pages"] = {
+		"Одному молодому крестьянину не повезло – он делил комнату на постоялом дворе со старым монахом, который от захода солнца до утренней зари без умолку рассуждал о философии и науке. Когда монаху наскучило вести монолог, он предложил крестьянину игру на сообразительность.\n\nКрестьянин не собирался состязаться в сообразительности с монахом, но тот все же придумал, как его заинтересовать: \"За каждый твой вопрос, на который я не отвечу, ты получишь 50 золотых. А если ты не ответишь на мой вопрос, заплатишь мне 5 золотых\".",
+		"На эти условия крестьянин согласился.\n\n\"Превосходно!\" – воскликнул монах, и попытался придумать не слишком сложный, но и не особенно простой вопрос. \"Как измерить объем тела неправильной формы?\" спросил он с огоньком в глазах.\n\nДаже не пытаясь задуматься, крестьянин отдал монаху 5 золотых монет.\n\nМонах был разочарован, но собрался с мыслями, ожидая вопроса крестьянина.",
+		"Тот задумался и через некоторое время задал свой вопрос: \"У кого сердце тигра, мудрость орла и сила быка?\"\n\nМонах обрадовался новой пище для ума, вскочил на ноги и начал ходить по комнате. Шесть часов он хранил гробовое молчание, пытаясь разгадать загадку крестьянина. Постепенно его спокойствие превратилось в раздражительность, а раздражительность – в ярость и отчаяние. \"Довольно! Я сдаюсь!\" – закричал он, размахивая руками. Он достал кошель, нехотя отсчитал 50 золотых монет и отдал их сопернику, который с радостью принял свой выигрыш.",
+		"Монах, не отрываясь, смотрел на соседа. \"Ну! – не выдержал он. – Каков ответ на твою загадку?\"\n\nКрестьянин молча отдал монаху 5 монет.",
+	},
+},
+["Империи-близнецы"] = {
+	["english"] = "The Twin Empires",
+	["pages"] = {
+		"Около 16 000 лет назад, задолго до того как ночные эльфы навлекли на себя гнев Пылающего Легиона, большая часть Калимдора принадлежала троллям. Они основали две империи: Гурубаши в юго-восточных джунглях и Амани в центре материка.",
+		"Далеко на севере, в области, сейчас известной под названием Нордскол, жили малочисленные племена, образовавшие государство Гундрак, но так и не сравнившиеся со своими южными сородичами.",
+		"Хотя империи Гурубаши и Амани недолюбливали друг друга, конфликты между ними были редкостью. Их общим врагом был Аз'Акир – цивилизация насекомоподобных существ с дальнего запада. Разумные насекомые отличались невероятной агрессивностью и стремились искоренить все остальные формы жизни Калимдора.",
+		"Тролли долгие годы воевали с акир, но так и не смогли одержать над ними настоящую победу. Все, что им удалось, – это расколоть вражеское королевство на части и изгнать насекомых в далекие земли севера и юга.",
+		"Акир основали две крупнейших колонии – Азжол-Неруб на севере и Ан'Кираж на юге. Тролли предполагали, что существуют и другие колонии под поверхностью Калимдора, но эти подозрения не оправдались.",
+		"После изгнания коварных насекомых две империи вернулись к обычной жизни. Победа в войне практически не изменила их границ. Впрочем, в древних рукописях упоминается некое племя, покинувшее в те годы империю Амани и основавшее собственное поселение в самом сердце темного континента.",
+		"Легенда гласит, что эти храбрые первопроходцы обнаружили Источник Вечности, наделивший их невероятной силой. Есть предположение, что именно от них произошли ночные эльфы, но точно это не известно.",
+	},
+},
+["\"Странствующая вдова\""] = {
+	["english"] = "The Wandering Widow",
+	["pages"] = {
+		"Много веков назад исследователь Лю Лан каждые пять лет возвращался в Пандарию на спине гигантской морской черепахи и всякий раз забирал с собой все больше тех, кого манило неизведанное. Местные прозвали эту черепаху \"Скитающимся островом\", ибо она выросла настолько, что на спине ее уже построили небольшой город и даже возвели храм.\n\nОднажды местная вдова Маб Буйный Портер, горевавшая о погибшем на винодельне муже, объявила, что Пандария больше ничем не сможет ее обрадовать. С этими словами она вместе со своим младшим сыном Ляо Буйным Портером взошла на спину черепахи, став первой среди поступивших так хмелеваров.\n\nСкитающийся остров много веков не появлялся в Пандарии. Считается, что Шэнь-Цзынь Су перестал возвращаться туда после смерти своего возлюбленного друга Лю Лана.",
+	},
+},
+["Война древних"] = {
+	["english"] = "The War of the Ancients",
+	["pages"] = {
+		"Высокорожденные довольно бездумно обращались с магией, в результате чего из Источника Вечности начали расходиться волны, проникающие даже в самые дальние уголки Великой запредельной тьмы и привлекающие внимание тамошних обитателей. Вскоре и Саргерас – Великий враг всего живого и Разрушитель миров – почуял эти волны и устремился к их источнику.",
+		"Когда Саргерас увидел юный мир Азерота и почуял энергию Источника Вечности, в нем проснулся неутолимый голод, и великий темный бог Безымянной Бездны решил уничтожить этот мир и завладеть его силой.",
+		"Собрав свою армию – великий Пылающий Легион, – Саргерас пошел на мирный Азерот войной. Легион состоял из миллионов кровожадных демонов, слетевшихся со всех концов Вселенной, и этим демонам не терпелось начать вторжение. Ближайшие помощники Саргераса, Архимонд Осквернитель и Маннорот Разрушитель, подготовили своих зловещих воинов к решительному удару.",
+		"Королева Азшара, которую магия привела в состояние безумной эйфории, подчинилась невероятному могуществу Саргераса и согласилась пропустить его в свой мир. Перед разлагающим действием магии не устояли даже ее служители-высокорожденные, которые начали поклоняться Саргерасу, как богу. Для того чтобы доказать свою верность Легиону, высокорожденные помогли своей королеве открыть огромный портал в недрах Источника Вечности.",
+		"Как только все было готово, Саргерас начал вторжение в Азерот. Демоны Пылающего Легиона ворвались в мир через Источник Вечности и осадили мирно спящие города ночных эльфов. Под предводительством Маннорота и Архимонда Легион промчался по землям Калимдора, оставляя за собой лишь боль и пепел.",
+		"Демоны-чернокнижники призвали инферналов, которые обрушились на изящные шпили калимдорских храмов будто адские пылающие метеоры. Армия кровожадных убийц, называемых стражниками ужаса, прошла по калимдорским полям, уничтожая все живое на своем пути. Демонические гончие Скверны наводнили сельскую местность. Разумеется, храбрые воины-калдорай пытались защитить свои родные земли, но они не могли сдержать всю ярость Пылающего Легиона, и им пришлось шаг за шагом отступать.",
+		"Искать спасения для своего застигнутого врасплох народа пришлось Малфуриону Ярости Бури. Родной брат Малфуриона, Иллидан, практиковал магию высокорожденных, и Малфуриона очень сильно беспокоила его растущая одержимость. Малфурион убедил брата отказаться от свого пагубного пристрастия и вместе с ним отправиться на поиски Кенария. Кроме того, братьям надлежало собрать силы для сопротивления демонам.",
+		"С братьями отправилась юная жрица Тиранда, служительница Элуны. И Малфурион, и Иллидан были влюблены в нее, однако сердце Тиранды принадлежало лишь Малфуриону. Иллидан ревновал девушку к своему брату и завидовал их любви, однако его душевные страдания не шли ни в какое сравнение с муками от магической зависимости.",
+		"Зависимость Иллидана от магической энергии непрестанно мучила его, и он с трудом сдерживался, чтобы не броситься к источнику Вечности. Однако Тиранда все время была рядом и поддерживала его, так что в итоге они все же добрались до полубога-отшельника по имени Кенарий.",
+		"Кенарий жил на священных Лунных полянах на горе Хиджал. Он согласился помочь ночным эльфам, найти древних драконов и обратиться к ним за помощью. Драконы, в свою очередь, тоже решили не оставаться в стороне и, ведомые исполинской красной Алекстразой, отправились на войну с демонами и их адскими предводителями.",
+		"Кенарий призвал на помощь духов из зачарованного леса и собрал армию вековых древней, которые двинулись на Легион. Когда союзники ночных эльфов встретились возле храма Азшары и Источника Вечности, там завязалась ужасная битва. Однако, несмотря на всю помощь своих новых союзников, Малфурион и его соратники поняли, что даже этих сил не хватит на то, чтобы остановить Легион.",
+		"Пока в самом сердце Азшары гремела битва, одурманенная королева с нетерпением дожидалась прибытия Саргераса, который готовился пройти сквозь источник Вечности и самолично ступить на землю Азерота. Его исполинская тень медленно приближалась к поверхности Источника, а Азшара тем временем собрала своих самых могущественных служителей, чтобы они объединили свои силы, прочитали одно заклинание и расширили портал настолько, чтобы Саргерас смог пройти через него.",
+		"Во время битвы на полях Калимдора произошло нечто ужасное. Подробности этого происшествия были утеряны, но известно лишь то, что дракон Нелтарион, Аспект земли, в пылу битвы с демонами вдруг сошел с ума. Он начал распадаться на части, по всей его черной шкуре вспыхивали языки пламени, и в итоге это разъяренное горящее чудовище назвало себя Смертокрылом и напало на своих собратьев, из-за чего пять стай драконов были вынуждены покинуть поле боя.",
+		"Внезапное предательство Смертокрыла повлекло за собой столь губительные последствия, что остальные драконы так никогда и не смогли оправиться от потрясения. Израненная и убитая горем Алекстраза и ее собратья покинули поле боя, оставив своих смертных союзников один на один с многократно превосходящей их армией демонов. Малфуриону и его соратникам едва удалось выжить в последовавшем натиске.",
+		"Малфурион был уверен, что демоны рвутся в этот мир из Источника Вечности, поэтому он стал настаивать на его уничтожении. Но так как именно Источник являлся залогом могущества и бессмертия Ночных эльфов, такое решение привело остальных в ужас. Однако Тиранда поняла весь замысел Малфуриона и убедила Кенария и его соратников напасть на храм Азшары и найти способ закрыть источник раз и навсегда.",
+	},
+},
+["\"Военачальник и монах\""] = {
+	["english"] = "The Warlord and the Monk",
+	["pages"] = {
+		"Однажды кровожадный властитель могу собрал армию и решил захватить Нефритовый лес.\n\n\"Я восстановлю империю могу!\" – заявил он, подойдя к вратам Храма Нефритовой Змеи. \"Вы снова станете покорными рабами!\"\n\nСо стены донесся ответ пандарена-монаха: \"Сколько могу ты привел, чтобы сразить нас?\"\n\n\"Со мной армия из сотни воинов могу!\" – гордо сказал властитель.\n\n\"Но за этими стенами пять сотен воинов пандаренов\", – с уверенностью в голосе сообщил монах.\n\nВоины могу забеспокоились и усомнились в своем предводителе. Сомнения наполнили их сердца страхом, и армия разбежалась.",
+		"Властитель был вне себя. Отступив от храма, он начал снова собирать союзников. После долгих споров, угроз, обещаний и увещеваний могу собрал новую армию.\n\nПодступив к вратам Храма Нефритовой Змеи, властитель закричал: \"Со мной шестьсот воинов могу, которые сотрут в порошок пять сотен жалких пандаренов.\"\n\nИ снова со стены донесся голос того же монаха: \"А я уже говорил, что у каждого нашего монаха есть взрослый облачный змей? Они обожают мясо могу... и сейчас они очень голодны.\"\n\nВоины могу, испугавшись подобной участи, побежали прочь от стен храма.",
+		"Ярости властителя не было предела. В третий раз он начал собирать свою армию. Он потратил на это много лет, но вернулся к стенам храма с могучим легионом цийлиней и могу с оружием из гробниц древних императоров.\n\n\"На колени, ничтожества!\" – прокричал он. \"У ваших ворот тысяча могу и пять сотен цийлиней. У нас есть оружие и темная магия древних!\"\n\nСо стены донесся ответ монаха: \"А вы уже нашли нашего шпиона? Он очень хитрый и проворный\".",
+		"Воины легиона начали смотреть друг на друга со злобой. Каждый подозревал в другом шпиона и предателя. Могу неведомо доверие, они признают только грубую силу.\n\nУ храма началась битва. Могу сражались друг с другом до последнего, давая волю своей злобе, недоверию, страху, ненависти, жестокости и презрению.\n\nКогда битва закончилась, в живых у ворот остался лишь властитель. В этом бою он уничтожил многих своих союзников, оставшись без поддержки и без шансов на продолжение войны.",
+		"Из храма вышел пандарен-монах, посмотрел на поле боя и начал наводить порядок.\n\n\"Где твоя армия?\" – спросил у него властитель.\n\n\"Ты сам с ней пришел\", – ответил монах и улыбнулся. \"Друг мой, тот, кто отчаянно хочет нанести удар первым, заранее проиграл\".",
+	},
+},
+["Белый Олень и Луна"] = {
+	["english"] = "The White Stag and the Moon",
+	["pages"] = {
+		"В сердца своих светлых детей Мать-Земля вложила любовь к охоте, ибо создания первого рассвета были злобными и жестокими. Они прятались от Матери-Земли в темных и глухих уголках мира. Шу'хало охотились на них везде, где находили, и укрощали их нрав с благословения Матери Земли.",
+		"Но один великий дух ускользнул от них. Это был Апа'ро, которого ночные эльфы называли Малорном, гордый белоснежный олень. Его рога упирались в небеса, а его сильные копыта оставляли глубокие следы по всей земле. Шу'хало долго охотились за Апа'ро, но в конце концов сумели окружить гордого оленя.",
+		"Пытаясь спастись, великий олень прыгнул на небо, но зацепился могучими рогами за звезды. Как ни старался Апа'ро вырваться, ничего у него не вышло. И тогда его нашла Му'ша, которая гналась за свои братом Ан'ше. Она увидела, как могучий олень борется за свою свободу, и тотчас же влюбилась в него.",
+		"Умница луна договорилась с великим оленем, что освободит его, если тот полюбит ее и прервет ее одиночество. \n\nЖелание Му'ша исполнилось, и она зачала от Апа'ро ребенка, который родился темной ночью. Он получил имя Кенарий и бродил по звездной тропе между пробуждающимся миром и небесным царством.",
+	},
+},
+["Древо Жизни и Изумрудный Сон"] = {
+	["english"] = "The World Tree and the Emerald Dream",
+	["pages"] = {
+		"На протяжении многих лет ночные эльфы работали не покладая рук, чтобы восстановить то, что осталось от их древней родины. Они оставили свои разрушенные храмы и дороги зарастать и построили новые дома среди зеленых деревьев и тенистых холмов у подножия горы Хиджал. Мало-помалу из своих укрытий выбрались и драконы, пережившие Великий Раскол.",
+		"Алекстраза красная, Изера зеленая и Ноздорму бронзовый опустились на тихие поляны ночных эльфов и посмотрели на плоды их трудов. Малфурион, ставший могущественным верховным друидом, поприветствовал драконов и рассказал им о новом Источнике Вечности.",
+		"Эта новость встревожила великих драконов, потому что пока существовал источник, существовала и возможность того, что Пылающий Легион когда-нибудь снова вернется в этот мир. Малфурион и три дракона договорились вечно охранять Источник и решили сделать все возможное для того, чтобы демоны никогда больше не появились в этом мире.",
+		"Алекстраза Хранительница Жизни опустила в источник зачарованный желудь. Пробужденный могущественными водами, он вырос в огромное дерево, корни которого тянулись в самые недра Источника, а крона, казалось, достигала небес.",
+		"Огромное древо стало символом вечного союза ночных эльфов и природы, а его жизнетворная энергия впоследствии исцелила весь мир. Ночные эльфы дали своему Древу Жизни имя Нордрассил, что на их языке означало \"корона жизни\".",
+		"Ноздорму Вневременный наложил на Древо Жизни заклятье, которое сделало ночных эльфов бессмертными, вечно молодыми и невосприимчивыми к любым болезням.",
+		"Изера Дремлющая тоже зачаровала Древо Жизни, связав его со своим миром, астральным измерением, известным как Изумрудный Сон. Этот огромный мир, населенный духами, не подчинялся законам физического мира. Из своего Сна Изера могла управлять жизнью природы и развитием всего остального мира.",
+		"Древо Жизни связывало всех ночных эльфов-друидов, включая Малфуриона, с Изумрудным Сном. Заключая договор с драконами, они согласились периодически засыпать на целые века, чтобы их духи могли блуждать по бесконечным тропам сна Изеры. Конечно, друидов печалило то, что придется потерять столько лет своей жизни, но, тем не менее, они самоотверженно пошли на эту сделку.",
+	},
+},
+["\"Зандаларское соглашение\""] = {
+	["english"] = "The Zandalar Agreement",
+	["pages"] = {
+		"Внимайте же указу Властелина Грома!\n\nВоскресив меня, зандаларские тролли вернули нам старинный долг. Наши судьбы теперь навеки сплетены воедино. Их империя разрушена, а наша вновь восстанет из руин. Они дали нам солдат, корабли и боевых зверей. Как только мы отвоюем наши земли, мы отдадим им обширные и богатые земли на северном побережье.\n\nНаши союзники, может, невелики ростом, но не стоит пренебрегать их силой и умением обращаться с магией. У них также есть опыт борьбы с этими захватчиками из Орды и Альянса, который нам пригодится.\n\nОбъединившись, тролли и могу вновь обретут бесконечную власть над низшими созданиями. Мы изменим мир и сделаем его таким, каким он был раньше, каким он и должен быть!",
+	},
+},
+["Мой рунический меч."] = {
+	["english"] = "This is my Runeblade...",
+	["pages"] = {
+		"Мой рунический меч: один из многих, но только мой\nМонография леди Бломе\n\nПриветствую тебя, рыцарь смерти. Вероятно, инструктор Разувий уже преподал тебе несколько первых уроков о том, что значит быть рыцарем смерти. Позволь же мне теперь познакомить тебя с самым главным сокровищем твоей новой жизни: руническим мечом.",
+		"Без тебя этот клинок – всего лишь кусок железа. По отдельности вы слабы, беспомощны и не представляете угрозы. Если ты окажешься в ситуации, когда твоего рунического меча не окажется под рукой, твоя первая задача – найти ему замену, и как можно быстрее.",
+		"Для рыцаря смерти рунический меч является воплощением воли самого Короля-лича. Именно с его помощью ты обрушишь гнев своего повелителя на головы неверных, и потому обладание подобным оружием – не только высочайшая привилегия, но и огромная ответственность. Поэтому тебе крайне необходимо усвоить следующие вещи:",
+		"1) Этот клинок является продолжением твоего тела. А твое тело принадлежит Королю-личу. \n\n\n\n2) Рунический клинок в твоей руке является физическим воплощением твоей воли. А твоя воля едина с волей Короля-лича. \n\n\n\n3) Рунический клинок – это проводник смерти, наполняющей твою душу. А твоя душа – это воплощение воли Короля-лича.",
+		"В процессе обучения тебе предстоит впитать многие знания, доступные нашему пониманию. Относись к учению с должным усердием, не пренебрегая ни единым предметом, ибо подобная беспечность свойственна лишь глупой гордыне, которая погубила не одного рыцаря смерти на поле битвы.",
+		"Возможно, многие из вас вскоре ощутят силу рунического меча, подпитывающую вашу ярость. Однако этого недостаточно. Не воспринимай свой клинок только как точку приложения силы. Самые могущественные рыцари смерти способны управлять клинком одним усилием разума. Вместе они способны сражаться как единое целое, как средоточие воли, пред которым не устоит ни одно смертное существо.",
+		"Другие могут отметить, что клинок действует более эффективно, будучи заряженным энергией ледяной стужи. Даже острейшее оружие не сможет сравниться по силе с руническим мечом, наполненным силой льда. Знай же, рыцарь смерти, что тебе подвластна магия, пронизывающая саму великую цитадель – Ледяную Корону. Если ты пожелаешь совершенствоваться в искусстве управления этой стихией, у твоих врагов не будет и шанса подойти к тебе на расстояние удара, ибо холод и лед скуют их движения.",
+		"Однако многие из вас почувствуют в себе призвание нести смерть и разрушение болезнью и чумой, пропитывающей ваши клинки. Эта специализация подвластна только самым искусным рыцарям смерти. Порой тебе будет казаться, что ты столкнулся с защитой, которую невозможно преодолеть. Но любая защита призвана скрывать слабость, и у любой брони есть уязвимые места. Помни, рыцарь смерти, что Лордерон разрушила не великая армия, но простая чума.",
+	},
+},
+["Знак Властелина Грома"] = {
+	["english"] = "Thunder King Insignia",
+	["pages"] = {
+		"Эта нефритовая эмблема украшена короной и скрещенными молниями. Такие значки носили солдаты Лэй Шэня, первого императора могу.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Мемориал Тиффин Эллериан Ринн"] = {
+	["english"] = "Tiffin Ellerian Wrynn Memorial",
+	["pages"] = {
+		"Тиффин Эллериан Ринн, \nкоролева Штормграда, \nсправедливая и беспристрастная, чья мудрость сравнится лишь с бескрайней добротой. \nДа озарится Свет сиянием твоей души, ибо мир становится тусклее в твое отсутствие.",
+	},
+},
+["\"В единстве – наша сила!\""] = {
+	["english"] = "Together, We Are Strong",
+	["pages"] = {
+		"Сила империи могу была не в численности ее армии, но в страхе, что армия внушала. Страх помогал управлять множеством городов, населенных рабами всех рас. Страх держал Пандарию в ежовых рукавицах.\n\nПандарены были первыми, кто восстал против могу, но они не были единственными. Хозены привнесли в общее дело свою свирепость, цзинь-юй – мудрость, груммели стали посланниками восставших, перестав доставлять еду и информацию своим бывшим хозяевам.\n\nИмперские армии голодали, жизненно важные сообщения не доходили до адресатов, пошатнулись сами основы империи. Могу понятия не имели, как добывать пищу, как снабжать собственные войска. Целые армии сидели в казармах, не замечая восстания, пока не стало слишком поздно.\n\nПо сути, главная сила империи обернулась против нее. Общая цель объединила народы Пандарии, и они поняли, насколько сильны вместе.",
+	},
+},
+["Надгробный камень"] = {
+	["english"] = "Tombstone",
+	["pages"] = {
+		"Тут покоится &lt;имя&gt;",
+	},
+},
+["Скелет Щелкозуба"] = {
+	["english"] = "Toothgnasher's Skeleton",
+	["pages"] = {
+		"Это копия скелета Щелкозуба в натуральную величину. Легендарный баран был чудом Каз Модана и популярным персонажем дворфийского фольклора. До сих пор ученые не могут объяснить ни огромный размер барана, ни его необычайную мощь.",
+	},
+},
+["Прикосновение банши"] = {
+	["english"] = "Touch of the Banshee",
+	["pages"] = {
+		"Скор'зад осторожно выглянул из-за колонны. Как он и ожидал, она парила в одиночестве по центру комнаты. Правильно ли он поступил, придя столь поздно ночью в покои банши? Если бы некроманты обнаружили его здесь, то закопали бы обратно под землю. Что хуже всего – он не был уверен во взаимности своих чувств, а мадам Сиднари славилась вспыльчивым нравом.",
+		"Но узрев свою богиню во всей красе, зомби отбросил последние сомнения. Ее тонкий профиль все еще хранил изящные, эльфийские черты как напоминание о прошлой жизни, но теперь ее лицо было испещрено струпьями и червоточинами. Багровую, почти прозрачную кожу едва прикрывали лохмотья истлевшего савана, оставляя мало простора для воображения. Ее безногое тело буквально светилось энергией, исходившей от синеватой сферы, зависшей в нескольких футах от холодного, гранитного пола. Скор'зад заставил себя слегка расслабиться и облегченно вытер пот вперемешку со слизью, сочившейся из треснувшей кожи над бровью.",
+		"Не заметив его присутствия, она проплыла над полом к единственному окну, открывавшему великолепный вид на поле битвы. Пред ней предстала великолепная картина смерти и разрушений. Всего шесть часов назад эти земли содрогались от криков убиенных младенцев, но сейчас над полем царила замогильная тишина.",
+		"Ветер развевал ее длинные волосы, играя змееподобными локонами, обрамляющими пустые глазницы. Скор'зад внезапно осознал, что в порыве страсти слишком сильно высунулся из-за колонны, и в ужасе отшатнулся, боясь, что Темная Плакальщица может его увидеть. Она и впрямь почувствовала движение у себя за спиной, но ему незачем было волноваться.",
+		"\"Скор'зад!\" – позвала она. – \"Я ждала тебя. Сегодня ты храбро сражался.\" Банши бросила на него томный взгляд, позволяя трепещущим лоскуткам савана слегка сползти с гниющего плеча. \"Подойди сюда. Настало время... вознаградить тебя за отвагу\".",
+		"&lt;Похоже, следующие несколько страниц намертво склеились.&gt;",
+	},
+},
+["Ремонт межпространственного корабля для начинающих"] = {
+	["english"] = "Trans-dimensional Ship Repair for Simpletons",
+	["pages"] = {
+		"Ремонт Межпространственного Лайнера для начинающих, Джамус Кэси\n\n&lt;На тонких страницах этой книги множество диаграмм, показывающих, как содержать в исправности и ремонтировать межпространственный лайнер. Книга открыта на главе под названием \"Как Избежать Поломки Навигационного Комплекса\".&gt;",
+	},
+},
+["Экземпляр книги \"Самая известная расписка\""] = {
+	["english"] = "Transcription: A Most Famous Bill of Sale",
+	["pages"] = {
+		"На этом самом месте много веков назад стояла лавка Шень-Цзыня, которого так любили местные фермеры. Однажды первый пандарийский исследователь Лю Лан пришел к нему с весьма неожиданным списком покупок, который сохранился и по сей день:\n\n Один фонарь\n\n Три литра лампового масла\n\n Четыре упаковки сушеных фруктов\n\n Два мешка сушеных бобов\n\n Четыре окорока солонины\n\n Двенадцать литров пресной воды\n\n Одна корзина сухарей\n\n Один компас\n\n Одна подзорная труба\n\nЛю Лан объявил, что собирается отправиться в путь, чтобы исследовать мир. Шэнь-Цзынь, посмеявшись над покупателем, предложил Лю Лану захватить с собой зонтик, и даже сказал, что не возьмет за него плату.\n\nПоклонившись, благодарный Лю Лан сказал Шэнь-Цзыню: \"В твою честь я назову свою морскую черепаху!\" И, довольный, ушел с полной тележкой покупок, насвистывая на ходу и ловя на себе любопытные взгляды.",
+	},
+},
+["Экземпляр книги \"Бремя императора\", ч. I"] = {
+	["english"] = "Transcription: The Emperor's Burden - Part 1",
+	["pages"] = {
+		"Десять тысяч лет назад, в тот день, когда Шаохао был назван императором Пандарии, он, как и все императоры до него, искал совета великого цзинь-юй, Говорящего с водой. С легким сердцем молодой император встал перед пророком, ожидая услышать от него, как он думал, добрые вести.\n\nНо когда Говорящий с водой прислушался к песне великой реки, глаза его расширились от ужаса.\n\nОтрывок из Книги Бремени, глава 1:\n\n\"И узрел Говорящий с водой пред собою волшебников, окруживших большой колодец, и из колодца призвали они племя демонов. Зеленое пламя обрушилось с небес, и земля содрогнулась.\"\n\nУстрашившись видения, что предстало перед ним, император Шаохао понял, что не суждено ему безмятежно жить в роскоши. Так в скромной деревне Цветущая Заря начался его путь к спасению Пандарии.",
+	},
+},
+["Экземпляр книги \"Бремя императора\", ч. II"] = {
+	["english"] = "Transcription: The Emperor's Burden - Part 2",
+	["pages"] = {
+		"Десять тысяч лет назад на этом самом месте Шаохао, последний император Пандарии, просил совета у Нефритовой Змеи.\n\nОтрывок из Книги Бремени, глава 3:\n\n\"Всеми покинутый и лишившийся надежды, последний император ступил на крутой склон горы Неутомимых. Холод острыми кинжалами пронзал его шелковые одежды, а ветер, что неустанно дул в лицо, нашептывал, что путь его бесцелен.\"\n\n\"Лишь на самой вершине горы обрел император покой и уединение, и говорил он там с Нефритовой Змеей, духом мудрости.\"\n\nИ был совет Нефритовой Змеи таков – освободиться от бремени, очистить свой дух и стать единым с этой землей.\n\nИмператора озадачили эти слова, но никаких иных ответов не открылось ему на вершине холодной горы. Удрученный, император Шаохао спустился по склону вниз, дабы посоветоваться со своим спутником, Королем обезьян, и решить, что же делать дальше.",
+	},
+},
+["Экземпляр книги \"Бремя императора\", ч. III"] = {
+	["english"] = "Transcription: The Emperor's Burden - Part 3",
+	["pages"] = {
+		"На этом самом месте десять тысяч лет назад Шаохао, последний император Пандарии, победил Ша Сомнения, заточив его под землей.\n\nОтрывок из Книги Бремени, глава 5:\n\n\"Шаохао медитировал три дня и три ночи, ибо совет, данный Нефритовой Змеей, казался ему туманным. Как можно самого себя избавить от всех сомнений?\"\n\n\"Устав от ожидания, спутник Шаохао – король обезьян – вырезал из бамбука странную маску, на которой запечатлел гримасу сомнения. Он предложил императору спрятать под ней свое лицо...\"\n\nНедобрыми были намерения короля обезьян, но все обернулось к лучшему: едва Шаохао снял маску, как все его сомнения приняли телесную форму. Семь часов они бились друг с другом, пока император не победил Ша Сомнения.\n\nС этого дня последний император не сомневался в том, что сумеет спасти Пандарию от Раскола. Он обрел веру.",
+	},
+},
+["Экземпляр книги \"Бремя императора\", ч. IV"] = {
+	["english"] = "Transcription: The Emperor's Burden - Part 4",
+	["pages"] = {
+		"Именно здесь Шаохао, последний император Пандарии, победил и заточил под землей Ша Отчаяния десять тысяч лет назад.\n\nОтрывок из девятой главы Книги Скорби:\n\n\"После победы в Нефритовом лесу император Шаохао исполнился храбрости, но разум его тяготила неопределенность будущего. Он стал искать совета у Красного Журавля, духа Надежды, жившего в глуби Красарангских джунглей.\"\n\n\"Красный Журавль поведал императору, что надежда заключена в каждом из живущих, и надо лишь заглянуть в себя. Затем король обезьян поднес императору Шаохао неизбывный символ смертельной грусти – маску Отчаяния. Император надел маску и выдворил отчаяние из своей души...\"\n\nЧетыре дня и пять ночей бились Шаохао, Красный Журавль и король обезьян с Ша Отчаяния. И все это время падал с неба проливной дождь. В конце концов герои одолели отчаяние Шаохао.\n\nС того самого дня император всегда смотрел в будущее без страха, ведь в душе он хранил надежду.",
+	},
+},
+["Экземпляр книги \"Бремя императора\", ч. V"] = {
+	["english"] = "Transcription: The Emperor's Burden - Part 5",
+	["pages"] = {
+		"На этом самом месте десять тысяч лет назад Шаохао, последний император Пандарии, победил Ша Страха, заточив его в недра земли.\n\nОтрывок из Книги Бремени, глава 14:\n\n\"Даже избавившись от сомнения и отчаяния, император Шаохао не смог превозмочь свой страх. Он искал совета у Черного Быка, духа отваги и мужества, жившего в степях за стеной.\"\n\n\"Черный Бык, Красный Журавль, император и король обезьян долго говорили о природе страха, пока, наконец, Король обезьян не решил, что пора действовать. Он сделал маску страха – любого, кто смотрел на нее, охватывал ужас. Дрожащими руками император надел кошмарную маску, и все его страхи вырвались наружу...\"\n\nСемь дней и еще один день сражались друг с другом император и Ша Страха, и легенда гласит, что все это время солнце боялось взойти над землей. Одолев Ша и заточив его под землей, Шаохао изменился навеки, ибо в нем больше не осталось страхов. Он обрел мужество.",
+	},
+},
+["Экземпляр книги \"Бремя императора\", ч. VI"] = {
+	["english"] = "Transcription: The Emperor's Burden - Part 6",
+	["pages"] = {
+		"Десять тысяч лет назад на этом самом месте Шаохао, последний император Пандарии, победил Ша Злости, Ша Ненависти и Ша Жестокости.\n\nОтрывок из Книги Бремени, глава 19:\n\n\"Император Шаохао, которого вели бесстрашие и уверенность в себе, думал, что ему нет равных. Но по совету Красного Журавля, он стал искать совета у Белого Тигра, духа силы.\"\n\n\"Белый Тигр увидел в Шаохао безрассудство, что часто сопровождает тех, кто не ведает страха, и может их погубить. Он собрал вместе величайших воинов Пандарии, чтобы испытать императора.\"\n\n\"Шаохао дали десятифутовый шест и сказали ударить хотя бы одного из воинов. Сражение шло несколько часов, но эти воины были слишком быстры и ловки для не столь умелого императора. Он гневался, бранился и, в конце концов, переломил свой шест через колено\".",
+		"Посрамленный император спросил Белого Тигра, в чем его ошибка, и узнал, что слабость его – в его же страстях. Чтобы спасти Пандарию, Шаохао должен был встретиться в бою с собственным гневом, ненавистью и жестокостью.\n\nКороль обезьян принялся за дело и вырезал три маски. Каждую из них император надевал по очереди, и с помощью друзей, а также всех величайших воинов Пандарии, Ша Злости, Ша Ненависти и Ша Жестокости были побеждены и заточены в недра земли.\n\nНавеки изменившийся император отправился в свое последнее путешествие, в котором обрел терпение, любовь и покой.",
+	},
+},
+["Экземпляр книги \"Бремя императора\", ч. VII"] = {
+	["english"] = "Transcription: The Emperor's Burden - Part 7",
+	["pages"] = {
+		"Орден шадо-панов был основан десять тысяч лет назад по приказу Шаохао, последнего императора Пандарии.\n\nИмператор Шаохао знал, что темная энергия ша – телесное воплощение таких чувств, как гнев, страх, ненависть или сомнение, представляет великую опасность для пандаренов, если позволить ей заразить эти земли. Он повелел величайшим воинам Пандарии сдерживать энергию ша и управлять ей.\n\nНа этом самом месте, всего через несколько часов после того, как Шаохао превозмог собственные злость, ненависть и жестокость, первый из шадо-панов преклонил колено и принес присягу последнему императору. И с тех самых пор, на протяжении десяти тысяч лет, те же самые слова произносит каждый новобранец Шадо-Пан.",
+	},
+},
+["Экземпляр книги \"Бремя императора\", ч. VIII"] = {
+	["english"] = "Transcription: The Emperor's Burden - Part 8",
+	["pages"] = {
+		"Десять тысяч лет назад Шаохао, последний император Пандарии, воспользовался силой этих священных вод, чтобы спасти свою страну от Раскола, погубившего весь остальной мир.\n\n\"На закате последнего дня небо вспыхнуло зеленым огнем, а земля в задрожала от ужаса. Но император не устрашился. Разум его был ясен и лишен сомнений и отчаяния. Он пировал и пел, пока над ним раскалывалось небо.\"\n\n\"Видя страх и сомнения в глазах подданных, император Шаохао объявил: Каждый день нужно проживать в полной мере, а каждую ночь спать, сохраняя мир в своей душе\".",
+		"Легенда гласит, что он спустился на Террасу Вечной Весны, чтобы отделить Пандарию от остального мира, но ему не хватило сил: земля содрогнулась, но не сдвинулась с места. Он усомнился в себе, и тогда Ша Сомнения двинулся к нему с востока. И устрашился император, и Ша Страха рванулся из оков на западе. В отчаянии Шаохао воззвал к Нефритовой Змее.\n\nИ услышал император от Нефритовой Змеи слова мудрости: \"Пандария – это не только Пандарийская Империя. Твои враги на западе – такая же часть этой земли, как и твоя империя за стеной\".",
+		"Увидев, что все вокруг объединилось в единое целое, а столь любимая им земля перестала быть просто Пандарийской Империей, Шаохао, наконец, прозрел. Его посох упал, а дух слился с землей. Когда мир разорвался на куски, Пандария тихо уплыла в океан. А когда пустые одежды императора опустились на пол, эту землю окружила непроницаемая пелена тумана, скрывшая ее от внешнего мира.",
+	},
+},
+["Экземпляр книги \"Бремя императора, ч. V\""] = {
+	["english"] = "Transcription: Waiting for the Turtle",
+	["pages"] = {
+		"Из этого самого места много веков назад, взяв с собой лишь зонт и заплечный мешок с едой, молодой пандарийский исследователь Лю Лан отправился познавать мир на спине морской черепахи.\n\nТогда все верили, что во время Раскола уцелела лишь Пандария. И все считали Лю Лана... \"не совсем здоровым\" на голову.\n\nНо они поняли, что ошибались, когда пять лет спустя Лю Лан вернулся и рассказывал им о загадочных землях, найденных далеко за морями. И до конца своих дней каждые пять лет он возвращался в Пандарию, а его черепаха все росла и росла, и стала настолько огромной, что на ее спине возвели целое поселение.\n\nОдержимые жаждой странствий, пандарены часто смотрели на море, ожидая возвращения Лю Лана, и даже в наши дни, если кто-то долго смотрит вдаль, его спрашивают: \"Не черепаху ли ждешь?\"",
+	},
+},
+["\"Затерявшись в неизведанных землях\""] = {
+	["english"] = "Trapped in a Strange Land",
+	["pages"] = {
+		"О происхождении яунголов мы знаем очень мало. Самые ранние записи в хрониках о яунголах датируются временами правления императора могу Цяна Безжалостного. Его ученые писали о кочевых племенах \"разумных охотников-быков\", которые странствовали по \"обширным охотничьим угодьям за пределами западных границ империи.\"\n\nНекоторые племена яунголов не смогли покинуть Пандарию после Раскола, когда эта земля отделилась от большого континента.\n\nЗастряв в опасных Танлунских степях, как в ловушке, яунголы были вынуждены приспосабливаться, используя местные запасы нефти как оружие и развивая свою довольно агрессивную культуру.\n\nНемногие народы способны выстоять против богомолов в открытом бою. По одной лишь этой причине яунголов стоит уважать и бояться.",
+	},
+},
+["Парные кружки старшего хмелевара Цюань Тоу Ко"] = {
+	["english"] = "Twin Steins of Brewfather Quan Tou Kuo",
+	["pages"] = {
+		"Пара кружек поможет распить алкоголь: одна цветом – нефрит, а другая как смоль. Старший хмелевар Цюань Тоу Ко по прозвищу \"амбидекстр\", искал способ смягчить хмельное воздействие крепкой выпивки, смешивая разные напитки. Если употребить в равных порциях светлый эль духа и темный портер разума, то они образуют в желудке живительную амброзию. Она поможет достичь просветления и благодати, не лишив пьющего трезвости рассудка и самоконтроля, как часто случается при распитии менее благородных напитков. Рецепты мастера, к несчастью, были утеряны, но остались две изумительные кружки как символ его мастерства.n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Ульдаманские реликвии"] = {
+	["english"] = "Uldaman Relics",
+	["pages"] = {
+		"Эти образцы древней посуды земельников были найдены при раскопках Ульдамана. Хотя на них не так много загадочных рун или иероглифов, они позволяют оценить мастерство изготовления этих повседневных предметов древней расы дворфов.",
+	},
+},
+["Ульдаманские барельефы"] = {
+	["english"] = "Uldaman Reliefs",
+	["pages"] = {
+		"Эти барельефы с бегунами – возможно, наиболее значительная находка в первых залах Ульдамана. Барельеф ясно показывает связь между големоподобными земельниками и расой дворфов. Если в дальнейшем обнаружатся еще подобные свидетельства, теория нашего предполагаемого создания мифическими титанами может оказаться верной.",
+	},
+},
+["\"Цена единства\""] = {
+	["english"] = "Unity at a Price",
+	["pages"] = {
+		"Высвободивший силу бури Властелин Грома собрал своих последователей и приступил к планомерному завоеванию земель других военачальников могу. Большинство из них не признали его власть, и наиболее везучие из них обратились в пар от удара молнии или были растерзаны набиравшими силу легионами. Остальных же заковывали в цепи и держали в неволе до тех пор, пока Властелину не удавалось их сломить.",
+		"Но многие могу увидели в Лэй Шэне силу, которая сможет объединить всех для достижения общей цели, а этого так сильно недоставало могу после того, как замолчали их владыки. Они вставали под знамена Властелина Грома и ревностно выполняли любой его приказ, обращая в рабство другие расы. Как и сам Лэй Шэнь, они верили, что низшие расы должны служить могу так же, как сами могу служили своим хозяевам.",
+		"Лэй Шэнь не просто основал империю, но ввел в ней единый язык, единую валюту, стандартные единицы мер и весов. \n\nВпервые в истории все расы на материке были объединены. Властелин Грома считал, что их страдания были небольшой платой за такую благодать... ведь страдания – всего лишь недуг плоти.",
+	},
+},
+["Дневник неизвестного рыцаря"] = {
+	["english"] = "Unknown Crusader's Diary",
+	["pages"] = {
+		"Запись 1:\n\nВерховный генерал нашла отличный источник вербовки среди крестьян! Теперь флот Ордена растет с каждым днем, и в наших рядах нет недостатка в крепких воинах. Мы готовы нанести удар по Нордсколу и завершить эту бесконечную войну. И все же положение наше оставляет желать лучшего. Бастион Алого ордена объят пламенем, и я не могу не ощущать дыхание смерти у себя за спиной.",
+		"Запись 15:\n\nАббендис сошла с ума. Она собирается расколоть Орден и напасть на цитадель Короля-лича с горсткой преданных рыцарей. Значит ли это, что она намерена бросить Новый Авалон и Длань Тира на откуп судьбе и забрать на край света наших последних защитников?",
+		"Запись 23:\n\nЭто было солнечное утро, отражавшееся в блеске лопат и мотыг, вздымавшихся над полем, где мужчины и женщины трудились не покладая рук. Но потом на нас пала тень некрополя, и то был не Наксрамас. Плеть разбила лагерь недалеко от нашего укрепления, Аббендис приказала нам сражаться до последней капли крови. Неужели я клялся в верности Ордену только для того, чтобы погибнуть, покрывая бегство нашего генерала?",
+		"&lt;Меж последних страниц дневника лежит неаккуратно сложенная карта. Похоже, автор собирался обогнуть вплавь северо-восточное побережье Лордерона и достичь Тирисфальских лесов!&gt;",
+	},
+},
+["Неподписанный дневник"] = {
+	["english"] = "Unmarked Journal",
+	["pages"] = {
+		"К нам явилась араккоа – жрица солнца. Она жаждет завладеть нашими землями, она несет с собой прах, ветер и смерть. Она выжигает наши поля солнечным огнем.",
+		"&lt;Не хватает нескольких страниц.&gt;",
+		"Наша деревня постепенно вымирает. Многих защитников поразило жуткое проклятие, которое мы называем \"солнечной болезнью\".\n\nПотрясенные и опустошенные, еле держась на ногах, они возвращаются в деревню и уже не способны увидеть Свет или почувствовать его благодать.",
+		"Сегодня в лесу рядом с нашей деревней я столкнулся с жрицей солнца. Мне удалось бежать, но она успела поразить меня солнечной болезнью.\n\nС тех пор как она произнесла то чудовищное заклинание, я молюсь Свету... но ничего не чувствую.\n\nТам, где раньше была священная и бесконечная благодать, теперь лишь пустота.\n\nНикогда прежде мне не было так страшно.",
+		"Мне удалось отослать отсюда детей, больных и стариков. Возможно, там, за рекой, они будут в безопасности.\n\nЗдесь остаюсь только я.\n\nСегодня я убью жрицу солнца.",
+		"&lt;Большинство остальных страниц вырвано, за исключением последней.&gt;",
+		"Много времени прошло с тех пор, как я убил пернатую ведьму. Сколько лет? Уже и не сосчитать.\n\nЯ старик, и жить мне осталось мало.\n\nСтолько лет я бродил слепой и одинокий, лишенный Света. Куда годится воздаятель, неспособный нести воздаяние?\n\nЭто как лакомство без вкуса. Учение без понимания. Жизнь без смысла.\n\nТьма манит меня. Мир становится темнее. Без Света у меня нет надежды.",
+	},
+},
+["Утер Светоносный"] = {
+	["english"] = "Uther the Lightbringer",
+	["pages"] = {
+		"Утер Светоносный\n\nБлагородный паладин, верный друг и праведник.\n\nТы никогда не будешь забыт, брат.",
+	},
+},
+["Утер Светоносный"] = {
+	["english"] = "Uther the Lightbringer",
+	["pages"] = {
+		"Здесь покоится Утер Светоносный –\nпервый паладин и основатель ордена Серебряной Длани\n\nУтер жил и умер, защищая королевство Лордерон. Его предал любимый ученик, но мы верим, что дух Утера все еще жив. Он по-прежнему наблюдает за нами теперь, когда вокруг нашей разоренной земли сгущаются тени. Его свет – свет всего человечества, и пока мы чтим пример Утера, этот свет никогда не угаснет. \n- Аноним",
+	},
+},
+["Дневник Ваэлдрина"] = {
+	["english"] = "Vaeldrin's Journal",
+	["pages"] = {
+		"Запись 1\n\nВпервые за последние десять лет, кажется, я напал на след. Я нашел древний свиток на незнакомом языке, где говорится о Пруде Молодости. Кажется, он древнее правления Азшары.\n\nСамое странное, что язык свитка не эльфийский и не тролльский. Потрясающее открытие! Из него следует, между прочим, что в Азероте существовали более древние цивилизации, чем наша.\n\nИз того, что мне удалось расшифровать, я понял, что Пруд Молодости был собственностью некой древней династии. Каким народом правила эта династия – загадка.\n\nОднако в рукописях этой \"династии Доцзянь\" есть нечто зловещее. Кроме того, там упоминается имперский престол и некая долина золотых цветов.\n\nОднако важнее всего то, что в тексте указаны координаты \"средоточия мощи\" их королевства. Вероятно, по моему распоряжению один из наших новых чародеев сможет создать нам портал, если удастся убедить Тиранду одобрить эту миссию.",
+		"Запись 2\n\nТиранда – своенравная упрямица! Конечно, мне не пристало говорить дурно о верховной жрице, но она глупа и не хочет идти даже на самый незначительный риск.\n\nЯ показал ей свои исследования! Я показал ей, как найти Пруд Молодости и наследие этой древней империи. А она что? Сочла миссию \"слишком рискованной\".\n\nКак можно считать вопрос смертности нашего народа \"слишком рискованным\"?! О, она настаивает, что мы сделали правильный выбор, отказавшись от бессмертия ради спасения Азерота. Но я полагаю, что это можно поправить.\n\nСуществуют разные способы жить вечно!",
+		"Запись 3\n\nТиранда просто богиня! Она одобрила мою миссию! Правда, она настояла на том, чтобы я взял с собой дочь и целый батальон часовых, но это неважно. Я могу действовать.\n\nПохоже, ее сиятельство преследовали сны и видения той же золотой долины, о которой я ей поведал в своем исследовании.\n\nВидения принесли ей чувство исцеления и нужды в мире. Но в ее видениях также встречались какие-то намеки на опасность и предупреждения вроде \"прежде чем положение улучшится, сначала будет плохо\".\n\nВ свитках, которые я исследовал, говорится о весьма мирном крае, и я просто не понимаю, чего она опасается\".",
+		"Запись 4.\n\nДумаю, моя дочь недовольна тем, что ее заставили охранять меня. Лиалия – милая девочка, но она никогда не ценила мои исследования.\n\nЖаль, что она так упряма. Возможно, этим она пошла в мать. Я пытался ей объяснить, что в случае успеха у нас будет на двоих целая вечность.\n\nОна ведь почти ребенок, заставший только последний век. Похоже, она очень расстроена, что я уделяю ей мало внимания. Но что такое двадцать лет исследований, если сравнивать их с тысячелетием разговоров и событий, которые последуют за ними?",
+		"Запись 5\n\nМагическая темница. Кому понадобилось создавать такое зловещее приспособление?\n\nПо моим расчетам, этому устройству почти двенадцать тысяч лет, но оно все так же способно заточать в себе несчастных.\n\nСудя по всему, лишив узников свободы, приспособление начинает вытягивать их энергию, подпитываясь ею так же, как чернокнижники выкачивают жизнь из своих жертв.\n\nБольшинство цивилизованных городов просто используют защиту, чтобы не допустить открытия нежелательных порталов.\n\nЭто же весьма темная магия. Похоже, цивилизация, которая создала эту ловушку, ничего не имела против выкачивания и передачи жизненной силы.",
+	},
+},
+["Валея Два Клинка"] = {
+	["english"] = "Valea Twinblades",
+	["pages"] = {
+		"Валея Два Клинка\nВоительница Алого ордена\nЖительница Альтерака\nПоследний раз была замечена в Восточных Чумных землях.",
+	},
+},
+["Долина Императоров"] = {
+	["english"] = "Valley of the Emperors",
+	["pages"] = {
+		"К своим умершим сородичам могу относятся как к источнику запасных частей. Души помещают в камень, чтобы иметь возможность использовать их в любой момент. Плоть и кровь помогают продлевать жизнь тех, кто верен императору. Если могу хоронят в неприкосновенности – это признак великого уважения.\n\nПеред вами Долина Императоров, место упокоения сотен поколений военачальников, королей и императоров, некогда правивших этой землей.\n\nРискните разорить эти могилы!",
+	},
+},
+["\"Победа на Кунь-Лай\""] = {
+	["english"] = "Victory in Kun-Lai",
+	["pages"] = {
+		"Создать послушную армию из сауроков не удалось, и могу пришлось изобретать другие способы создания идеальной боевой машины. С помощью темной магии неизвестного происхождения они проводили ритуалы, чтобы подчинять чужие души и заключать их в каменные корпусы.\n\nДинастии сменяли друг друга, а огромная армия этих живых статуй копилась в огромном подземелье в горах Кунь-Лай.\n\nПандарены-монахи знали об этом тайном оружии и страшились его мощи. Им удалось захватить подземелья сразу после начала восстания. Могу были захвачены врасплох стремительным отрядом, обрушившимся на них с пика Безмятежности. Битва за подземелья длилась четыре дня, но, в конце концов, снежная буря вытеснила могу с горы.\n\nЛишившись своего тайного оружия, могу были вынуждены воевать с мятежниками практически на равных.",
+	},
+},
+["\"В ожидании черепахи\""] = {
+	["english"] = "Waiting for the Turtle",
+	["pages"] = {
+		"Из этого самого места много веков назад, взяв с собой лишь зонт и заплечный мешок с едой, молодой пандарийский исследователь Лю Лан отправился познавать мир на спине морской черепахи.\n\nТогда все верили, что во время Раскола уцелела лишь Пандария. И все считали Лю Лана... \"не совсем здоровым\" на голову.\n\nНо они поняли, что ошибались, когда пять лет спустя Лю Лан вернулся и рассказывал им о загадочных землях, найденных далеко за морями. И до конца своих дней каждые пять лет он возвращался в Пандарию, а его черепаха все росла и росла, и стала настолько огромной, что на ее спине возвели целое поселение.\n\nОдержимые жаждой странствий, пандарены часто смотрели на море, ожидая возвращения Лю Лана, и даже в наши дни, если кто-то долго смотрит вдаль, его спрашивают: \"Не черепаху ли ждешь?\"",
+	},
+},
+["Трость старшего хмелевара Жэнь Юня"] = {
+	["english"] = "Walking Cane of Brewfather Ren Yun",
+	["pages"] = {
+		"На конце этой трости, на которую когда-то опирался таинственный хмелевар Жэнь Юнь, красуется резной набалдашник из китовой кости. У слепого от рождения Жень Юня все прочие чувства были чрезвычайно остры, и потому он находил спиртное того времени слишком горьким и грубым. С годами ему удалось сварить четыре напитка услаждавших каждое из данных ему природой чувств. Однако, рецепт \"того самого\" напитка, который бы воздействовал на все чувства одновременно, ему постичь не удавалось. Лишь на закате своей жизни хмелевар довел до совершенства свой уникальный рецепт \"Пива индивидуальных ощущений\". Это было величайшее изобретение тех времен, но Жень Юнь забрал его с собой в могилу: никто не мог разобрать его почерк и рецепт пропал навсегда.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Объявление о Фестивале странника"] = {
+	["english"] = "Wanderer's Festival Announcement",
+	["pages"] = {
+		"- ФЕСТИВАЛЬ СТРАННИКА -\n\nВсем добро пожаловать на Фестиваль странника, где каждый из нас может вдоволь помечтать! Приходите на Черепаший пляж по воскресеньям сразу после заката. Хотите знать больше? Поговорите со странствующими гонцами в день фестиваля.",
+	},
+},
+["Война пауков"] = {
+	["english"] = "War of the Spider",
+	["pages"] = {
+		"Пока Тралл был занят освобождением своих собратьев в Лордероне, Нер'зул продолжал строить базу в Нордсколе. Над Ледяной Короной он возвел огромную крепость, в которой трудились легионы мертвецов. Но нашлась одна империя, готовая противостоять растущему могуществу Короля-лича.",
+		"Из древнего подземного королевства Азжол-Неруб, основанного расой зловещих пауков-гуманоидов, был послан элитный отряд воинов. Они должны были напасть на Ледяную Корону и остановить помешанного на абсолютном господстве Короля-лича. К своему разочарованию, Нер'зул обнаружил, что воины Неруба невосприимчивы не только к чуме, но и к его телепатии.",
+		"В распоряжении пауков-повелителей Неруба имелось немалое войско и сеть подземных тоннелей, простирающихся почти на половину территории Нордскола. Они нападали небольшими отрядами, и это не позволяло Королю-личу разделаться с ними раз и навсегда. В конце концов Нер'зулу удалось победить в этой войне, нанеся сокрушительный удар по воинам Неруба. Вместе со зловещими повелителями ужаса и огромной армией нежити Король-лич напал на Азжол-Неруб и обрушил их подземные храмы на головы пауков-повелителей.",
+		"Несмотря на невосприимчивость воинов Неруба к чуме, Нер'зулу удалось воскресить пауков-воинов и подчинить их своей воле. Нер'зул отдал дань уважения их силе и храбрости, позаимствовав их необычный архитектурный стиль для строительства своих крепостей и сооружений.",
+		"Избавившись от всех противников, Король-лич мог, наконец, приступить к выполнению своей истинной миссии в этом мире. Он устремил свои помыслы к землям людей, выискивая тех, в чьих душах скрывалась тьма, тех, кто слышал его зловещий зов…",
+	},
+},
+["Война Трех Кланов"] = {
+	["english"] = "War of the Three Hammers",
+	["pages"] = {
+		"Дворфы Стальгорна многие века жили в спокойствии. Но их стало слишком много, им перестало хватать места в подземных городах. И хотя могучий король Модимус Старая Наковальня правил всеми дворфами мудро и справедливо, три мощные фракции появились в обществе дворфов.",
+		"Клан Бронзобородов под управлением тана Мадорана Бронзоборода имел хорошие связи с королем и был защитником Стальгорна. Клан Громового Молота, управляемый таном Кардросом Громовым Молотом, населял холмы и утесы у подножья горы и пытался добиться большей власти в городе.",
+		"Третья фракция, клан Черного Железа, была под командованием тана-чародея Тауриссана. Дворфы Черного Железа таились в самых глубоких тенях под горой и замышляли заговор против своих собратьев из клана Бронзобородов и клана Громового Молота.",
+		"Некоторое время три фракции поддерживали хрупкий мир, однако напряжение возросло, когда король Старая Наковальня скончался от старости. Три правящих клана вступили в войну за контроль над Стальгорном. Гражданская война дворфов многие годы пылала под землей. В конце концов клан Бронзобородов, имевший самую большую армию, изгнал кланы Черного Железа и Громового Молота из-под горы.",
+		"Кардрос и воины Громового Молота отправились на север через пограничные ворота Дун Альгаз и основали свое собственное королевство под далекой горой Грим Батол. Там Громовые Молоты разбогатели и построили новые сокровищницы. Тауриссан и другие члены клана Черного Железа не были столь же удачливы. Униженные и разгневанные своим поражением, они поклялись отомстить Стальгорну. Уведя своих сородичей далеко на юг, Тауриссан основал город (названный в свою честь) под прекрасным Красногорьем.",
+		"Процветание и прошедшие годы не уменьшили ненависти клана Черного Железа к своим собратьям. Тауриссан и его жена-волшебница Модгуд начали войну на два фронта против Стальгорна и Грим Батола. Клан Черного Железа хотел заполучить весь Каз Модан для себя.",
+		"Армии Черного Железа атаковали крепости своих собратьев и практически захватили оба королевства. Но Мадоран Бронзобород в конце концов привел свой клан к окончательной победе над колдовской армией Тауриссана. Тауриссан и его слуги бежали в свой безопасный город, не зная о том, что происходило в Грим Батоле, где армия Модгуд тоже не особо успешно сражалась с Кардросом и его воинами из клана Громового Молота.",
+		"Столкнувшись с вражескими воинами, Модгуд использовала свои силы, чтобы вселить страх в их сердца. Тени двигались по ее команде, и темные существа вылезали из глубин земли, нападая на Громовых Молотов в их собственных дворцах. В конце концов Модгуд прорвалась через ворота и осадила саму крепость. Громовые Молоты сражались отчаянно, сам Кардрос был среди воинов, желая убить королеву-колдунью.",
+		"Потеряв свою королеву, воины клана Черного Железа бежали от ярости Громовых Молотов. Они бежали на юг, к крепости своего короля, но столкнулись с армией Стальгорна, пришедшей помочь Грим Батолу. Зажатые между двух армий, силы Черного Железа были полностью уничтожены.",
+		"Объединенные армии Стальгорна и Грим Батола отправились на юг с целью уничтожить Тауриссана и клан Черного Железа раз и навсегда. Они не успели далеко уйти, когда гнев Тауриссана вызвал заклинание, приведшее к катаклизму. Желая призвать сверхъестественное существо, которое поможет ему победить, Тауриссан призвал древние силы, спавшие в глубинах мира, и к своему ужасу он обнаружил, что появившееся существо было ужаснее самых страшных ночных кошмаров.",
+		"Это был Рагнарос Повелитель Огня, бессмертный повелитель всех элементалей огня, изгнанный титанами, когда мир еще был юн. Теперь, освобожденный призывом Тауриссана, Рагнарос явился вновь. Возрождение Рагнароса в Азероте сотрясло Красногорье, и посреди руин воздвигся огромный вулкан.",
+		"Вулкан, известный как Черная гора, был окружен Тлеющим ущельем с севера и Пылающими степями с юга. И хотя Тауриссан был убит силами, которые он призвал, его выжившие собратья были полностью порабощены Рагнаросом и его элементалями. До сих пор они остаются в глубинах Черной горы.",
+		"Увидев ужасное разрушение и огонь, распространившийся по южным горам, король Мадоран и король Кардрос остановили свои армии и спешно вернулись назад в свои королевства, не желая пасть жертвами ужасного гнева Рагнароса.",
+		"Клан Бронзобородов вернулся в Стальгорн и восстановил свой славный город. Громовой Молот также вернулся домой, в Грим Батол. Но смерть Модгуд осквернила крепость, и дворфы Громового Молота не могли уже там жить.",
+		"Горечь потери своего дома ожесточила их сердца. Король Бронзобород предложил дворфам Громового Молота место, где они бы могли жить в границах Стальгорна, но они отказались. Кардрос повел свой народ на север к землям Лордерона. Поселившись в буйно зеленеющих лесах Внутренних земель, клан Громового Молота построил город Заоблачный пик, где дворфы стали ближе к природе и даже приручили могучих грифонов, живших там.",
+		"Желая восстановить отношения и торговлю со своими собратьями, дворфы Стальгорна построили две огромные арки, называемые Мост Тандола, между Каз Моданом и Лордероном. Поддерживаемые обоюдной торговлей, два королевства процветали. После смерти Мадорана и Кардроса их сыновья вместе построили две большие статуи в честь своих отцов.",
+		"Две статуи должны были стоять на страже прохода в южные земли, покрытого застывшей лавой из-за близости всесжигающего Рагнароса. Они служили не только грозным предупреждением всем тем, кто решится напасть на дворфийские королевства, но также и напоминанием о цене, которую клан Черного Железа заплатил за свои преступления.",
+		"Два королевства некоторое время поддерживали довольно тесную связь, но на клан Громового Молота слишком сильно повлияли ужасы, свидетелями которых дворфы стали у Грим Батола. Вместо того чтобы создать огромное подземное царство, они обжили склоны Заоблачного пика. Идеологические различия между двумя оставшимися кланами дворфов в конце концов привели к отчуждению.",
+	},
+},
+["Тавро вождя"] = {
+	["english"] = "Warlord's Branding Iron",
+	["pages"] = {
+		"Клеймом в форме герба мелкого военачальника могу метили не скот, а обращенных в рабство пленных.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["ВНИМАНИЕ"] = {
+	["english"] = "WARNING",
+	["pages"] = {
+		"Эта местность объявлена слишком опасной для обычных путешественников.\n\nСоблюдайте исключительную осторожность.\n\nХ.Д.",
+	},
+},
+["\"Водоковка\""] = {
+	["english"] = "Watersmithing",
+	["pages"] = {
+		"В отличие от пандаренов и могу, работающих с огнем и кузнями, цзинь-юй овладели тайнами воды. Они заставляют металлы и камень менять свою форму, используя давление воды и силу течения.\n\nИзначально цзинь-юй добывали из рек отполированные водой камни и другие материалы. Они научились находить места, где можно было отыскать самые лучшие камни.\n\nЗа сотни лет цзинь-юй научились управлять водой с помощью магии и создавать из камня и других материалов потрясающие сооружения, не знающие себе равных. Их оружие и доспехи прочны, как закаленная сталь, а стены, кажется, сложены без единого стыка.",
+	},
+},
+["\"Говорящие с водой\""] = {
+	["english"] = "Waterspeakers",
+	["pages"] = {
+		"Как гласит легенда, в дни, предшествовавшие Расколу, все реки текли в Пандарию. И мало кто знал это лучше, чем мудрые цзинь-юй. Со временем мудрейшие из мудрых научились разговаривать с речной водой и, слушая ее, узнавать тайны будущего. Этих старейшин, наделенных титулом \"Говорящие с водой\", уважали все народы.",
+	},
+},
+["\"Мы – яунголы\""] = {
+	["english"] = "We Are Yaungol",
+	["pages"] = {
+		"У каждого из нас свое племя и свои распри. Все мы чьи-то отцы, матери или дети. Но не это главное. Главное, что мы – яунголы.\n\nЯунголы сильны!\n\nЯунголы бесстрашны!\n\nЯунголы выносливы!\n\nМы живем рядом с самыми страшными врагами Азерота, но все равно процветаем. Процветаем, потому что мы вместе.\n\nНи один яунгол не должен идти против другого. Ни одно наше племя не должно идти войной на другое. В этом наша сила.\n\nТе, кто пойдут войной на своих же, будут сражаться одни. Тот, кто захочет править, пусть установит знамя и защищает его в одиночку. Только так мы сохраним единство. Только так мы сохраним свою силу. Только так мы останемся яунголами.",
+	},
+},
+["\"О том, как мы были великими воинами\""] = {
+	["english"] = "We Were Warriors",
+	["pages"] = {
+		"Не забывайте поля в огне.\n\nНе забывайте о нашей силе.\n\nПомните храбрых, которым служили,\n\nИ земли, сожженные в этой войне.\n\n\"Яунголы идут!\" – они причитали,\n\nПока их голос был слышен и крик не затих.\n\n\"Яунголы, яунголы\" – они пощады не ждали,\n\nЗастывая от страха, исчезая в огне.",
+	},
+},
+["Потертый гроссбух"] = {
+	["english"] = "Worn Monument Ledger",
+	["pages"] = {
+		"Пренебрегая силой своей магии, могу зачастую использовали силы рабов для строительства гигантских монументов. В этой смете перечислены издержки при строительстве такого памятника, только измеряли их не в деньгах, а в жизнях рабов.\n\nОбразец передан в дар &lt;многоуважаемым/многоуважаемой:c&gt; |3-4(&lt;класс&gt;) по имени &lt;имя&gt;.",
+	},
+},
+["Гнев Свежевателя Душ"] = {
+	["english"] = "Wrath of Soulflayer",
+	["pages"] = {
+		"Годы после Великого Раскола были для троллей самыми тяжелыми. Их разрозненные королевства были охвачены голодом и страхом. Тролли Гурубаши в отчаянии искали помощи у древних мистических сил. Все тролли имели общих многочисленных богов, но на призывы Гурубаши откликнулся самый темный и мрачный из них.",
+		"Хаккар Свежеватель Душ – жестокий и кровожадный дух – решил прийти на помощь троллям. Открыв Гурубаши секреты крови, он помог им захватить большую часть Тернистой долины и несколько островов Южных морей. Но за свою помощь Хаккар потребовал очень дорогую цену.",
+		"Кровожадный бог требовал ежедневного приношения множества жертв. Он мечтал явиться в реальный мир и выпить кровь всех живых существ. Но в конце концов Гурубаши поняли, что за создание им помогает, и восстали против него. Самые сильные племена пошли войной на Хаккара и его верных жрецов Атал'ай.",
+		"О страшной войне между слугами Хаккара и остальными троллями Гурубаши говорят только шепотом. От магии, которую обрушивали друг на друга злой бог и его мятежные дети, содрогалась земля. В самый последний момент троллям удалось изгнать Хаккара из мира, убив его аватару.",
+		"Даже его жрецы из племени Атал'ай, были изгнаны из столицы Зул'Гуруба в северные топи. Там, посреди болот, они воздвигли огромный Храм Атал'Хаккара и продолжили дело своего павшего хозяина…",
+		"После гражданской войны пути оставшихся троллей Гурубаши разошлись. Племена Дробителей Черепов, Кровавого Скальпа и Черного Копья племена нашли свое пристанище в джунглях Тернистой долины. На руинах империи воцарился хрупкий мир, но в народной памяти осталось пророчество о том, что однажды Хаккар вернется в мир и поглотит его.",
+	},
+},
+["Синь Во Инь Разбитое Сердце"] = {
+	["english"] = "Xin Wo Yin the Broken Hearted",
+	["pages"] = {
+		"Создатель согревающего душу пива.\n\nЭтот напиток наполняет все тело теплом и спокойствием. Говорят, что Синь Во Инь так любил свои творения, что рыдал навзрыд, отдавая каждый бочонок пива.",
+	},
+},
+["Яна Кровавое Копье"] = {
+	["english"] = "Yana Bloodspear",
+	["pages"] = {
+		"Яна Кровавое Копье\nВторой предводитель убийц Алого ордена\nЖительница Даларана \nПропала без вести в Тирисфальских лесах",
+	},
+},
+["\"Огонь яунголов\""] = {
+	["english"] = "Yaungoil",
+	["pages"] = {
+		"Горящая нефть – главное оружие яунголов. В те дни, когда на свете жили их величайшие воины, она превосходила по своей смертоносности магию. Нефть калечила врагов, выжигала землю, уничтожала деревья и лишала защиты, которую они давали, и обращала в бегство даже армии богомолов.\n\nСтарейшая тактика яунголов – разжигать по ночам намного больше костров, чем необходимо воинам. Враг, наблюдающий за яунголами после заката, думал, что их гораздо больше, чем есть на самом деле. Их настоящее количество и месторасположение оставались для противника неизвестными.",
+	},
+},
+["\"Тактика яунголов\""] = {
+	["english"] = "Yaungol Tactics",
+	["pages"] = {
+		"Яунголы, обреченные выживать на бесплодных землях Танлунских степей со времен последнего пандарийского императора, полностью изменили свой образ жизни.\n\nЭтот народ беспрерывно кочует, разбивая временные стоянки, \"огненные стойбища\", в местах, изобилующих природными ресурсами (особенно нефтью и дичью). Где разбить лагерь, сколько продлится стоянка и куда двигаться дальше, решает исключительно вождь.\n\nВ бою яунголы предпочитают атаковать быстро и яростно, используя конницу на флангах, чтобы давить на противника, пока тяжеловооруженная пехота атакует слабые места вражеского строя. Магия пламени и огнеметные осадные орудия прикрывают основные силы.\n\nЯунголы известны тем, что отступают так же быстро, как нападают, предугадывая действия врага, и используют все свои силы, только когда полностью уверены в победе.",
+	},
+},
+["Надгробная плита Юрива"] = {
+	["english"] = "Yuriv's Tombstone",
+	["pages"] = {
+		"Слово \"ПРЕДАТЕЛЬ\" криво нацарапано поверх красиво высеченной эпитафии, гласящей:\n\n\"Здесь покоится Юрив.\nОтец, муж, паладин.\nПусть же потомки знают, что преданность его Свету была неколебима.\nОн никогда не требовал от других того, чего не стал бы делать сам\".",
+	},
+},
+["Скабрезный любовный роман: \"Необузданные страсти\""] = {
+	["english"] = "A Steamy Romance Novel: Savage Passions",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance02\" /></BODY></HTML>",
+		"Позади некогда белой кобылицы поднимались клубы пыли; она промчалась мимо ворот гарнизона и на полном скаку остановилась у конюшни. Ворон, главный конюх, бросился к ней и помог усталому всаднику спешиться.\n\n\"Лорд Марк, позвольте мне помочь вам\", – одним движением сильной, загорелой руки Ворон стащил паладина с седла, но не отпустил, а потрясенно уставился на его залитые кровью доспехи. \n\nУвидев тревогу на лице Ворона, Марк положил руку на его плечо, тепло улыбнулся и сказал: \"Не бойся, старина, моей здесь почти нет\".\n\n\"Рад это слышать!\" – ответил Ворон и крепко его обнял.",
+		"\"Да, да, я в порядке! Путь был долгим и зачастую трудным, но я вернулся с победой!\" – воскликнул Марк, вынимая из-под доспехов вздувшийся мешочек и аккуратно кладя его в ладони Ворона.\n\nЗаинтересованный, конюший взял мешочек и слегка сжал, пытаясь догадаться, что там лежит.\n\n\"Не стесняйся, ты же знаешь, что там. Но у меня есть для тебя и кое-что получше\", – заметил Марк с понимающей улыбкой.",
+		"Ворон закрыл глаза. Он вытянул руки и спокойным голосом проговорил: \"Пожалуйста, дай это мне\".\n\nРуки слегка опустились под тяжестью чего-то необычно теплого и гладкого по всей длине. \"О, так это, хм... знакомо... да, точно, я знаю – зачарованный меч!\" Ворон выпустил светящееся оружие из одной руки, дав ему описать дугу.\n\nМарк поднял брови. \"Я рад, что он тебе нравится. Видно, не в первый раз держишь в руках такое?\"",
+		"\"Именно такое – в первый раз\", – ответил, подмигнув, Ворон.\n\n\"Надо поработать над твоей хваткой, ты слишком крепко держишь рукоять. Найдется у тебя свободная минутка?\" – спросил Марк, пристально глядя в темно-карие глаза Ворона.\n\nТот ухмыльнулся. \"Пойду, привяжу твою лошадь...\"\n\n&lt;Оставшиеся страницы еще чисты. Видимо, рассказ еще не дописан.&gt;",
+	},
+},
+["Скабрезный любовный роман"] = {
+	["english"] = "A Steamy Romance Novel",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance05\" /></BODY></HTML>",
+		"Нани медленно подошла к седому воину, и он бросил на нее холодный взгляд. \"Ты, наверное, хочешь награду за то, что убила этих мурлоков?\"\n\nВзгляд Нани остановился на его светящемся мече: \"Все зависит от того, что это за награда, Марк\". Она игриво провела рукой по волосам, делая вид, что не заметила, как он начал нервничать в ее присутствии: \"Мне она может не понравиться\".",
+		"Марк сделал шаг ей навстречу; он был зол, но, в то же время, боялся ее. \"Награда не подлежит обсуждению!\" На мгновение он остановился, а потом резко прижал ее маленькое тело к своему. Их губы встретились в пламенном поцелуе, который в одно мгновение растопил ее ледяную броню.\n\n\"Так у этого приключения все-таки будет продолжение?\" – ехидно спросила она; ее глаза весело блестели.\n\n&lt;Это продолжается несколько сотен страниц без каких-либо поворотов сюжета.&gt;",
+	},
+},
+["Скабрезный любовный роман \"Любовный туман\""] = {
+	["english"] = "A Steamy Romance Novel: Hot and Misty",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance04\" /></BODY></HTML>",
+		"Боевой конь Марка галопом несся к зданию. Завидев его, одна из стражниц, которую природа не обделила пышными формами, еле заметно покраснела. Марк спешился и отдал вожжи подоспевшей распорядительнице стойл. Затем он заговорил, положив руку ей на плечо. \"Кама, ты обдумала мое предложение?\" – спросил он с притворной серьезностью.\n\nКама закатила глаза. Черный мех вокруг глаз подчеркивал ее гримаску. \"Не думаю, что любви всей моей жизни это придется по нраву.\"\n\nМарк зашелся смехом и направился к выходу. \"Тем не менее, я был бы рад как-нибудь познакомиться с ней поближе!\" – сказал он, уходя.",
+		"Вопреки обыкновению, таверна \"В туманах\" в тот день пользовалась небывалой популярностью среди местных жителей, и Марку пришлось пробираться сквозь толпу к укромному месту в темном углу зала. \"Марк, как я рада снова вас видеть\", – услышал он вкрадчивый, почти мурлыкающий голос.\n\nМарк улыбнулся и прищурился, чтобы глаза быстрее привыкли к полумраку. \"Мадам Гойя, какая честь!\" – ответил он.\n\nМадам Гойя сделала книксен, и Марка бросило в жар. Он тут же вспомнил, почему пандариек называют пышечками. Он поклонился ей и галантно взял ее лапу. Целуя ее гладкий мех, он не спускал глаз с охранника со шрамом между глаз, стоявшего за спиной Мадам Гойи.",
+		"\"Марк, может, согласитесь на... особое предложение? Боюсь, сегодня я не могу выполнить ваш обычный заказ.\" От внимания Марка не ускользнуло, что она подчеркнула слово \"обычный\" и произнесла его не без разочарования в голосе. Их глаза снова встретились, и она крепко сжала его руку, прежде чем отпустила ее.\n\n\"Ну раз вы настаиваете, позвольте хотя бы оценить, что вы хотите мне предложить?\" – сказал он.\n\n\"В моем распоряжении имеются превосходные доспехи, милый спутник и даже редкое верховое животное\", – ответила мадам Гойя. В ее голосе снова появилась привычная игривость. Она ненадолго замолчала и подперла лапой подбородок, изображая задумчивость. \"Но самое ценное у меня припрятано наверху.\"\n\nМарк приподнял брови, всем своим видом выражая заинтересованность. \"Тогда увидимся наверху\", – озвучил он свое решение. Ее ресницы затрепетали, а Марк направился к лестнице, ведущей на второй этаж этой странной таверны.",
+		"В комнате наверху Марк увидел двух настолько прекрасных девушек, что ему едва удалось устоять на ногах. У одной из них были длинные светлые волосы, при взгляде на них казалось, что смотришь прямо в Солнечный Колодец. У другой же волосы были короткие и черные, как ночь. Очнувшись от оцепенения, Марк осознал – перед ним враги! Он вытащил из ножен меч, который озарил своим сиянием лица эльфиек крови.\n\nЭльфийка с сияющими волосами заговорила первой. \"Посмотрите-ка. Всегда готов к бою.\" Она дотронулась пальцем до кончика меча и отвела лезвие от себя, подойдя ближе и не отрывая взгляда от его глаз. \"Ты веришь в любовь с первого взгляда? Или мне нужно показаться тебе на глаза во второй раз?\"\n\nМарк прильнул к ней, прижимая лезвие меча к ее телу, шепнул ей что-то на ухо и отстранился, ожидая реакции на свои слова.",
+		"\"Нет. Этого я делать не стану... Но моя сестра не прочь!\" – ответила светловолосая и засмеялась. Темноволосая эльфийка повела бровью, кивнула и пожала плечами. Она сделала едва заметный жест рукой, и ее тело наполнилось жаром. Ее одежда, которая и без того была слишком откровенна, тут же сгорела. Когда Марк заключил ее в объятия, она едва слышно прошептала какие-то слова. Над головой Марка появился символ, окруживший его сиянием, но незаметный для него.\n\"Как же... мне хорошо. Что это было?\" – спросил он.\n\n\"Стойкость, мой господин. Она тебе пригодится.\" Только тогда он заметил, что ноги эльфийки не касаются пола и он не чувствует ее веса. Голова у Марка закружилась, у него в голове закрутились бесчисленные варианты развития событий, а его сильные руки...\n\n&lt;Остальные страницы cкрыты дымкой.&gt;",
+	},
+},
+["Скабрезный любовный роман \"Нагишом в сугроб\""] = {
+	["english"] = "A Steamy Romance Novel: Northern Exposure",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance07\" /></BODY></HTML>",
+		"Из-за ограды даларанского палисадника выглянула крошечная гномка.\n\n\"Вид с балкона чудесный! Иди сюда, погляди!\"\n\nЗаскрипели латные поножи – это Марк стал подниматься наверх. Поднявшись, он вздохнул и задумчиво почесал подбородок.\n\n\"В \"Благодарности за отвагу\" так уютно. В этой комнате тебе кое-что очень понравится!\"\n\nТави вбежала в комнату, замерев лишь на мгновенье перед тем, как броситься в огромную кровать. Оттуда она стала посылать влажные выразительные взгляды Марку, то широко распахивая глаза, то игриво прикрывая их. Ее нежная улыбка сменилась дьявольской усмешкой.",
+		"\"Позовем еще кого-нибудь?\" – промурлыкала Тави, производя руками замысловатые пассы ритуала призыва. Почувствовав наконец присутствие призванного, она замерла.\n\nНа лице Марка не осталось ни кровинки, он всеми силами пытался выразить протест. \"Я... не думаю, что это удачная мысль.\"\n\nОзадаченная Тави оглянулась посмотреть, в чем дело. За ее спиной стояла гончая Скверны, капая слюной на пол и пожирая глазами полуодетого паладина.\n\n\"Нет! Я совсем не ее хотела призвать\", – запинаясь, пробормотала она, изгоняя голодного монстра. \"Прости, я не совсем по этой части...\"",
+		"Марк сжал ее ручки в своей и постарался успокоить девушку. \"Все в порядке. А какая у тебя специализация?\"\n\nОна вскинула голову и глаза ее загорелись: Тави заставила Марка скорчиться на коленях перед собой от болезненной темной энергии, которой она его наполнила.\n\n\"Вообще-то колдовство\".",
+		"Заскрипев зубами, Марк выпрямился и осветился внутренним сиянием.\n\nТави беспокойно взглянула на него, когда он встал во весь рост и накрыл ее своей тенью. Паладин выбросил вперед руку и направил волну праведной силы сквозь гномку. Ее глаза закатились, и она беспомощно покачнулась, теряя сознание.\n\n\"Недавно я выбрал путь... воздаяния.\"\n\nВероломная бесстыдница постаралась овладеть собой. \"Ну что ж, скучать не придется.\"\n\n&lt;Для прочтения остальных страниц требуется 999 уровень.&gt;",
+	},
+},
+["Скабрезный любовный роман \"Запретная любовь\""] = {
+	["english"] = "A Steamy Romance Novel: Forbidden Love",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance06\" /></BODY></HTML>",
+		"А'туза ползла по широкому подземному туннелю, стараясь производить как можно меньше шума и оборачиваясь на каждый звук, доносившийся из-за спины. \"Где же он...\" – раздраженно пробормотала она, и тут же резко остановилась, почувствовав какое-то движение за спиной. Ее глаза настороженно сузились, и в воздухе повис звон стали, извлеченной из ножен. \n\n\"Я-то думал, что разбойники предпочитают подкрадываться сзади к своей жертве\", – раздался хриплый голос, эхом откликнувшийся от стен пустой пещеры. Она молниеносно развернулась, и ее меч яростно обрушился на окованный железом щит. \"Я думала, что паладинам полагается быть смиренными\", – парировала она с самоуверенной улыбкой.",
+		"Наклонившись вперед, А'туза громко начала считать вслух, пока невидимый кокон не лопнул с характерным звуком. \"Двенадцать секунд? По-моему, ты способен на большее\", – съязвила она. \n\nТонкие, костлявые пальцы умело проникли под его броню, расстегивая кирасу и обнажая грудь. \"Не бойся, милый Марк, это еще только начало. Я всего лишь разогреваюсь...\" Он обвил руками то, что осталось от ее талии и провел пальцем по позвонкам, вызвав нервный смешок...\n\n&lt;Остаток книги зачитан настолько, что текст практически невозможно разобрать.&gt;",
+	},
+},
+["Скабрезный любовный роман \"Бомба\""] = {
+	["english"] = "A Steamy Romance Novel: Big Brass Bombs",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance03\" /></BODY></HTML>",
+		"Невысокая коренастая женщина-гоблин стремительной походкой вошла в инженерную мастерскую и направилась прямо к хозяину, на ходу бросив оценивающий взгляд на полки с товаром.\n \n\"Как делишки, Джек?\" – ее голос, немного хриплый от постоянного вдыхания выхлопных газов мотоцикла, для владельца мастерской звучал как музыка.\n\nГоблин, которого назвали Джеком, поднял голову и осклабился в улыбке. \"Реви, дорогая! Теперь, когда ты здесь, лучше некуда, – Джек поставил на стол свой тангенциальный вращатель. – Чем могу служить?\"",
+		"Реви задумчиво потерла подбородок: \"Ну, даже не знаю... Есть у тебя чего-нибудь эдакое... особенное?\"\n\n\"Ха! Еще бы! Ты же знаешь, что самые выгодные цены на самый лучший товар можно найти только у меня! – восторженно воскликнул Джек. – Смотри, вот эти штуки мне подвезли только сегодня утром. Маленькие красные ракеты – а еще есть синие и зеленые\". Разочарование Реви не ускользнуло от наблюдательного взгляда продавца, и он тут же поспешил заинтересовать клиентку кое-чем покруче, плюхнув на стол замысловатого вида штуковину. \"Я зову ее Великан, – сказал он, – только для гоблинов, жуткий раритет\".\n\n\"Классная штука, классная\", – промямлила Реви без особого энтузиазма. Взгляд ее блуждал по сторонам.",
+		"\"Сразу видно, что у леди действительно изысканный вкус\". Джек воровато оглянулся по сторонам, прежде чем выложить на стол следующее, еще более громоздкое устройство. \"Эта штука называется, – Джек сделал театральную паузу для пущего драматизма, – Величайший!\"\n\nУ Реви от удивления аж округлились глаза: \"Эта штука... она... она настоящая?\" \n\nПочувствовав, что клиентка клюнула, Джек немного расслабился. Заложив руки за голову и откинувшись назад в своем кресле, он слегка прищурился и с ленцой ответил: \"100% гоблинская работа, малышка. Только натуральные компоненты\". \n\nПосле секундного колебания Реви склонилась над столом и осторожно погладила гладкую желтую поверхность устройства: \"Супер! Дайте две!\"\n \n\"С удовольствием! И кстати, если тебя так заинтересовала эта вещица, то, наверное, тебе могут пригодиться также и трубы из закаленного адамантита. Они дополнительно усилят эффект\". \n\nРеви утвердительно кивнула и вдруг спросила, глядя на стену за спиной Джека: \"А это что такое?\"",
+		"Джек обернулся: \"Ах, это... Это для оживления мертвых\". \n\nРеви явно была заинтригована: \"А эта штука пригодится тем, кто еще не умер?\" \n\nДжек, никогда не упускавший случая впарить клиенту товар любой ценой, с готовностью ответил: \"Ну конечно! В общем, смотри – если ты возьмешь все это вместе, я дам тебе в придачу проекционные очки резни всего за полцены!\"\n \nРеви вынула здоровенный набитый монетами кошель, от одного взгляда на который у Джека чуть слюни не потекли. \"Ну а почему бы и нет? В конце концов, мотоциклы в этом году продавались очень неплохо\". \n\nПодсчитывая общую сумму покупок, Джек поинтересовался: \"Собираешься в серьезный рейд, что ли?\" \n\nРеви пожала плечами: \"Да нет. У меня просто сегодня свидание вслепую с одним типом по имени Марк\".",
+		"Джек кивнул: \"А что с этим парнем из мотоклуба? Вы же вроде встречались?\"\n \nЗатянутая в кожу гоблинша одной рукой сгребла свой необъятный кошель, а другую выставила вперед: \"Как видишь, на этом пальце до сих пор так и нет кольца – а я все же девушка серьезная\". \n\nДжек улыбнулся и покачал головой, провожая взглядом Реви, направившуюся к выходу.\n \n&lt;Чтобы прочитать оставшиеся страницы, требуется специальное гоблинское кольцо-декодер.&gt;",
+	},
+},
+["Скабрезный любовный роман \"Тринадцатое полнолуние\""] = {
+	["english"] = "A Steamy Romance Novel: Blue Moon",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/SteamyRomance01\" /></BODY></HTML>",
+		"Обворожительная девушка перешла озеро и, помахивая хвостом, плывущей походкой направилась к мужчине, отдыхающему на берегу. При ее появлении он поднялся, его лицо озарилось светом счастья. Голубые руки скользнули по его плечам, а гладкий хвост недвусмысленно обвился вокруг пояса. \"Объяснишь, ради чего мне пришлось искать тебя... \" В ее речи слышался резкий, но вместе с тем очаровательный акцент.\n\nШироко улыбаясь, он мягко отстранил ее от себя, откровенно любуясь ее чертами в лучах солнца.\n\n\"...в этой глуши?\" – закончила она гневно, но при этом лукавые огоньки заиграли в ее глазах. \n\nОбезоруживающе пожав плечами, он потянулся к сумке и достал оттуда небольшой мешочек. \"Моя прекрасная Соола, я хочу подарить тебе одну вещь,\" – его слова прозвучали твердо и уверенно.",
+		"Она выхватила мешочек у него из рук, с волнением развязала тесемку и вытащила цитриновую подвеску. \n\n\"О... Марк, тебе не стоило...\"\n\nГолос Марка изменился, утратив привычную дразнящую интонацию: \"Как грани этого камня озаряют мир тысячей бликов, так и твоя красота озаряет мое трепещущее сердце.\"\n\nСоола нахмурилась. \"Да нет же, правда не стоило. Я ведь могла бы совершенно случайно смастерить что-то более красивое.\"\n\nВ первый и, возможно, последний раз чьи-то слова так сильно задели Марка. Его плечи поникли, привычная дерзкая улыбка исчезла с красивого лица.\n\nСоола замерла на полуслове, ее губы разошлись в теплой улыбке и сияющая руна появилась над ее глазами. \"Даже мой Дар не сможет залечить нанесенную рану, не так ли?\"",
+		"Несмотря на ее утверждение, слова, кажется, возымели нужный эффект. Марк игриво усмехнулся, поправляя поножи. \"Ну, ты здесь не единственное одаренное создание.\"\n\nВоздух вокруг них окутала физически ощутимая тишина, когда беседа перешла на почти беззвучный язык, который понимают все расы Азерота.\n\nМинуты казались часами, пока молния, пересекшая безоблачное небо с оглушительным треском не ударила в озеро, окутав все вокруг клубящимся паром, и не прервала на миг этот диалог страсти.\n\n\"Что-то не так?\" – спросил Марк.\n\n\"Нет, мой милый Марк. Это всего лишь начало чего-то великого...\"\n\nОстальные страницы были уничтожены стихиями.",
+	},
+},
+["Манускрипт ненасытности"] = {
+	["english"] = "Libram of Voracity",
+	["pages"] = {
+		"*Страницы покрыты древними эльфийскими рунами.* \n\nЭти страницы содержат воспоминания о событиях, произошедших при сборе и приготовлении реагентов, необходимых для создания простого магического камня. \n\nДа не получат наши враги никогда доступ к этим письменам. \n\nДа доживу я до тех пор, когда бледный свет луны вновь осветит Кель'Талас. \n\nДа умру я во имя Кель'таса. \n\nДа буду убивать я во славу Иллидана. \n\n-Мастер Кариэль Винтхалус",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_bldbank_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_whipper_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
+	},
+},
+["Манускрипт здоровья"] = {
+	["english"] = "Libram of Constitution",
+	["pages"] = {
+		"*Страницы покрыты древними эльфийскими рунами.* \n\nЭти страницы содержат воспоминания о событиях, произошедших при сборе и приготовлении реагентов, необходимых для создания простого магического камня. \n\nДа не получат наши враги никогда доступ к этим письменам. \n\nДа доживу я до тех пор, когда бледный свет луны вновь осветит Кель'Талас. \n\nДа умру я во имя Кель'таса. \n\nДа буду убивать я во славу Иллидана. n\n-Мастер Кариэль Винтхалус",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blasted_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_nightdragon_256\" /></BODY></HTML>",
+	},
+},
+["Манускрипт размышления"] = {
+	["english"] = "Libram of Rumination",
+	["pages"] = {
+		"*Страницы покрыты древними эльфийскими рунами.* \n\nЭти страницы содержат воспоминания о событиях, произошедших при сборе и приготовлении реагентов, необходимых для создания простого магического камня. \n\nДа не получат наши враги никогда доступ к этим письменам. \n\nДа доживу я до тех пор, когда бледный свет луны вновь осветит Кель'Талас. \n\nДа умру я во имя Кель'таса. \n\nДа буду убивать я во славу Иллидана. \n\n-Мастер Кариэль Винтхалус",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blasted_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
+	},
+},
+["Манускрипт устойчивости"] = {
+	["english"] = "Libram of Resilience",
+	["pages"] = {
+		"*Страницы покрыты древними эльфийскими рунами.* \n\nЭти страницы содержат воспоминания о событиях, произошедших при сборе и приготовлении реагентов, необходимых для создания простого магического камня. \n\nДа не получат наши враги никогда доступ к этим письменам. \n\nДа доживу я до тех пор, когда бледный свет луны вновь осветит Кель'Талас. \n\nДа умру я во имя Кель'таса. \n\nДа буду убивать я во славу Иллидана. \n\n-Мастер Кариэль Винтхалус",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_bldbank_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
+	},
+},
+["Манускрипт скорости"] = {
+	["english"] = "Libram of Rapidity",
+	["pages"] = {
+		"*Страницы покрыты древними эльфийскими рунами.* \n\nЭти страницы содержат воспоминания о событиях, произошедших при сборе и приготовлении реагентов, необходимых для создания магического камня. \n\nДа не получат наши враги никогда доступ к этим письменам. \n\nДа доживу я до тех пор, когда бледный свет луны вновь осветит Кель'Талас. \n\nДа умру я во имя Кель'таса. \n\nДа буду убивать я во славу Иллидана. \n\n-Мастер Кариэль Винтхалус",
+		"&lt;Глядя на эти страницы, вы чувствуете жгучую боль.&gt;",
+	},
+},
+["Манускрипт средоточия"] = {
+	["english"] = "Libram of Focus",
+	["pages"] = {
+		"&lt;Страницы исписаны древними эльфийскими рунами&gt; \n\nНа этих страницах описаны события, случившиеся при сборе и создании реагентов, необходимых для изготовления магического камня. \n\nПусть же наши враги никогда не заполучат эти манускрипты. \n\nПусть же я доживу до того дня, когда снова увижу Кель'Талас, озаренный бледным светом луны. \n\nПусть же я умру, но умру во славу Кель'таса. \n\nПусть же я убью во славу Иллидана. \n\n-Кариэль Винтхалус",
+		"&lt;Вы не можете разобрать надписи на этих страницах.&gt;",
+	},
+},
+["Манускрипт упорства"] = {
+	["english"] = "Libram of Tenacity",
+	["pages"] = {
+		"*Страницы покрыты древними эльфийскими рунами.* \n\nЭти страницы содержат воспоминания о событиях, произошедших при сборе и приготовлении реагентов, необходимых для создания простого магического камня.\n\nДа не получат наши враги никогда доступ к этим письменам. \n\nДа доживу я до тех пор, когда бледный свет луны вновь осветит Кель'Талас. \n\nДа умру я во имя Кель'таса. \n\nДа буду убивать я во славу Иллидана. \n\n-Мастер Кариэль Винтхалус",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blackrock_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_bldbank_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_blasted_256\" /></BODY></HTML>",
+		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
+	},
+},
+["Манускрипт защиты"] = {
+	["english"] = "Libram of Protection",
+	["pages"] = {
+		"*Страницы покрыты древними эльфийскими рунами.* \n\nЭти страницы содержат воспоминания о событиях, произошедших при сборе и приготовлении реагентов, необходимых для создания магического камня. \n\nДа не получат наши враги никогда доступ к этим письменам. \n\nДа доживу я до тех пор, когда бледный свет луны вновь осветит Кель'Талас. \n\nДа умру я во имя Кель'таса. \n\nДа буду убивать я во славу Иллидана. \n\n-Мастер Кариэль Винтхалус",
+		"&lt;Письмена на странице кружатся и перемещаются. Вам кажется, будто книга дразнит вас.&gt;",
+	},
+},
+["\"Должники Сальсалабима\""] = {
+	["english"] = "\"Creatures That Owe Sal'salabim Golds\"",
+	["pages"] = {
+		"(1) Пьяница Ралик: огр. Все время проводит в баре. Злой. Безобразный. Толстый. Злой. И еще очень толстый.\n\n[Следующая страница]",
+		"(2) Куш'куш: этот маленький надоедливый зангарский спорлинг владеет грибным садом на границе Зангартопи и Тероккара. Проиграл много денег Сальсалабиму в игру “Что это за запах”. Пытался расплатиться с Сальсалабимом дурацким грибом под названием \"огнешляпка\". Сказал, что это не хуже золота. Ха! \n\n[Следующая страница]",
+		"(3) Флун: араккоа. Проиграл много денег Сальсалабиму. Сальсалабим убил птицелюда за то, что тот не расплатился. Теперь призрак птицелюда бродит в северо-западной части Костяных пустошей.",
+	},
+},
+["Ключ к сокровищу Сандера"] = {
+	["english"] = "A Clue to Sanders' Treasure",
+	["pages"] = {
+		"Ну что ж, неплохо! Теперь отправляйся на восток по крутым берегам. Когда выйдешь на дорогу, ищи на обочине развалившуюся дымоходную трубу. Там ты найдешь старую бочку, а в ней следующую подсказку.",
+	},
+},
+["Письмо Касыму Шариму"] = {
+	["english"] = "A Letter to Kasim Sharim",
+	["pages"] = {
+		"Касым,\n\nОн вернулся.\n\n- Дозорный Махар Ба",
+	},
+},
+["Послание от хранителя истории Чо"] = {
+	["english"] = "A Missive from Lorewalker Cho",
+	["pages"] = {
+		"$p,\n\nтвои друзья выжили в сражении с Ша Сомнения, и за ними ухаживают лучшие пандарийские лекари из деревни Бинан. Похоже, они поправятся.\n\nПо дороге в Бинан тебе придется пройти по Сокрытой лестнице к вершине Кунь-Лай. Возьми это послание в Бинан, и отдай его в руки мэра Ежевичный Посох. У него и спросишь, где найти твоих друзей.\n\nНадеюсь, наши дороги еще пересекутся.\n\n-Хранитель истории Чо",
+	},
+},
+["Послание Албрека"] = {
+	["english"] = "Albreck's Findings",
+	["pages"] = {
+		"Приветствую тебя, мой ученый коллега Антонивич!\n\nНадеюсь, это письмо дойдет до тебя в Траллмар. Условия здесь, на Хребтоломе, вполне удовлетворительные для проведения моих экспериментов, хотя иногда мне все-таки хочется обратно в Подгород, где у меня было все необходимое оборудование и слуги…\n\nЭх, все это – жалобы трупа.\n\nНо отложим любезности в сторону. У меня интересные новости: в крови орков Скверны, которую &lt;добыл/добыла&gt; &lt;имя&gt;, обнаружилась высокая концентрация демонической инфекции. Она практически идентична инфекции первых орков Скверны в Азероте… инфекции Маннорота.",
+		"Не может быть, чтобы влияние Маннорота дошло до Запределья, ведь этот монстр мертв уже много лет. Боюсь, у нас появился новый демон, по силе не уступающий Маннороту… И он может привлечь местных орков на свою сторону.\n\nЯ продолжу изучать кровь орков Кровавой Глазницы, но прошу тебя как можно быстрее начать поиски. Хотя, боюсь, они могут завести тебя в Цитадель Адского Пламени.\n\nТвой ученый друг,\nАптекарь Албрек",
+	},
+},
+["Стишок Алисии"] = {
+	["english"] = "Alicia's Poem",
+	["pages"] = {
+		"Не надо, не плачь над могилой моей -\n Мой дух никогда не покоился в ней.\n\nЯ стала улыбкой и ласковым словом,\nВетрами и вьюгой над снежным Нордсколом,\n\nРосой на полях, что беспечно играет\nПод утренним солнышком в Западном Крае.\n\nЗачем же грустить – ведь я стала отныне\nБескрайним закатом в Тернистой долине,\n\nИ голос мой звучный прольется дискантом,\nРаскатами грома над вечным Награндом.\n\nЯ светом луны озаряю террасы\nИ сонные крыши ночного Дарнаса,\n\nПрохладным дождем твои слезы умою -\nНе надо, послушай, не плачь надо мною!\n\nНе стой у могилы ни ночью, ни днем,\nЯ рядом, мой милый. Я в сердце твоем.",
+	},
+},
+["Послание Альянса"] = {
+	["english"] = "Alliance Missive",
+	["pages"] = {
+		"Чем бы ты ни &lt;был занят/была занята&gt;, отложи это, &lt;имя&gt;!\n\nОрда и ее злобные обезьяны готовятся к атаке.\n\nОни ощутимо превосходят нас в живой силе, так что нельзя дать им возможности натренировать своих солдат\n\nБросай все, чем ты там занимаешься, и поспеши в деревню Жемчужного Плавника.\n\n- Адмирал Тейлор",
+	},
+},
+["Приказы Альянса"] = {
+	["english"] = "Alliance Orders",
+	["pages"] = {
+		"По приказу короля Ринна эти земли станут прочесывать до тех пор, пока Белую Пешку не вернут в целости и сохранности.\n\nКороль не остановится ни перед чем, и если потребуется, пожертвует жизнью всякого, кто служит здесь.\n\nО семьях этих благородных героев позаботится корона, а тот, кто найдет Белую Пешку – пусть сам назовет свою награду.",
+	},
+},
+["Древние клинки драконьей ковки"] = {
+	["english"] = "Ancient Dragonforged Blades",
+	["pages"] = {
+		"Поистине редки радужные клинки, созданные по объединенной воле пяти драконьих родов. Среди величайших из них – мечи-братья Кель'Серрар и Кель'Делар.\n\nМудрая королева драконов Алекстраза подарила их эльфам Азерота: каждому из двух эльфийских народов досталось по мечу. Кель'Серрар был создан для доблестных калдорайских воителей, а Кель'Деларом владели кель'дорайские герои.\n\nВ руках своих обладателей клинки менялись, магическим образом усиливая их способности...",
+	},
+},
+["Еще один ключ к сокровищу Сандерса."] = {
+	["english"] = "Another Clue to Sanders' Treasure",
+	["pages"] = {
+		"Вот от этой самой бочки иди прямехонько на север. Иди, пока не увидишь пустой кувшин рядом с заброшенной ветряной мельницей, стоящей на крутом берегу у моря. В том кувшине найдешь, что ищешь.",
+	},
+},
+["Заметки аптекаря Ферроу"] = {
+	["english"] = "Apothecary Furrows' Notes",
+	["pages"] = {
+		"&lt;Записи аптекаря напоминают бессмысленные каракули – наряду со сложными алхимическими формулами в них полно рисунков, похожих на детские. Вы ухитряетесь прочитать часть последних записей.&gt;\n\n...очень сильная скверна, гнездящаяся в глубине живых тканей. Она очень заразна, когда &lt;несколько слов нельзя разобрать из-за кляксы&gt; по пищевой цепочке. Сегодняшние опыты показали, что она имеет лишь частично биологическую природу. Грязное Копыто, мой &lt;неразборчиво&gt; компаньон, охвачен жаждой мести и не хочет видеть других, более конструктивных применений своей &lt;оставшаяся часть предложения заляпана чем-то зеленым&gt;. Исследования продвигаются медленно. Надеюсь, у моих товарищей в Алталаксе дела идут лучше.",
+	},
+},
+["Чародейская руна"] = {
+	["english"] = "Arcane Rune",
+	["pages"] = {
+		"Те, кто имеет быстрый разум, но не столь быстр телом, должны искать... другие способы выжить. Многие из них выбирают путь, связанный с магией.\n\n&lt;имя&gt;, я наблюдал за тобой и понял, что твой разум цепок, как стальной капкан. Однако чтобы преуспеть в эти времена потрясений, таким как ты следует овладеть тайными искусствами. А для этого тебе нужно поговорить со мной.\n\nРазыщи меня в Старой Наковальне. Нам нужно многое обсудить.\n\n-Тигли Веселинг",
+	},
+},
+["Клятва крови Орды"] = {
+	["english"] = "Blood Oath of the Horde",
+	["pages"] = {
+		"Лок'тар огар! Победа или смерть – вот девиз, который объединяет меня с Ордой, ибо это самая фундаментальная и непреложная истина для любого воина.\n\nЯ с гордостью отдам за вождя свою кровь до последней капли. Я – инструмент в руках вождя, его верное оружие.\n\nС этого мига и до самой смерти я живу и умру – за Орду!",
+	},
+},
+["Донесение Сухопека"] = {
+	["english"] = "Brubaker's Report",
+	["pages"] = {
+		"Кишан, если ты это читаешь, значит, я уже мертв. Скорее всего, моя позиция раскрыта.\n\nОрки проделывают со своими пленниками ужасные вещи. Да, Кишан, пленниками. У них полно клеток с военнопленными. Если ты хочешь взорвать эту долину, тебе придется сначала освободить пленных.\n\nСкажи моей жене, что я ее люблю. Да, и пусть она вынесет мусор.\n\n-Сухопек\n\nP.S.: У них есть черные драконы.",
+	},
+},
+["Каллиграфическое письмо"] = {
+	["english"] = "Calligraphed Letter",
+	["pages"] = {
+		"Я рад, что тебя интересуют пути монахов. Я прибыл издалека, чтобы принести твоим сородичам мудрость моего народа.\nЯ поселился в аббатстве и даю уроки всем, кто желает учиться нашим искусствам. Приходи, и я стану учить тебя.\n\nС почтением,\nБao",
+	},
+},
+["Каллиграфическая записка"] = {
+	["english"] = "Calligraphed Note",
+	["pages"] = {
+		"Я провел много времени в твоем племени, и, хотя иные из твоих сородичей пытались овладеть нашим искусством, только в тебе я вижу к нему настоящий талант.\n\nПожалуйста, разыщи меня в Лагере Нараче. Я многому научился у твоих сородичей – пора вернуть долг. \n\nШоюй",
+	},
+},
+["Покрытый письменами пергамент"] = {
+	["english"] = "Calligraphed Parchment",
+	["pages"] = {
+		"Я прибыл издалека учиться путям твоего народа и делиться нашим знанием. Ты оказываешь мне честь, желая научиться следовать пути монахов. Со временем я смогу научить тебя очень многому, но начинать нужно с малого. Разыщи меня в Долине Испытаний, и мы начнем уроки.\n\nГато",
+	},
+},
+["Покрытый письменами знак"] = {
+	["english"] = "Calligraphed Sigil",
+	["pages"] = {
+		"Здравствуй, |3-6(&lt;класс&gt;). Я вижу, что тебя интересуют пути монахов. Я с радостью начну учить тебя всему, что знаю. Ты кажешься мне &lt;достойным учеником/достойной ученицей&gt;. Ищи меня на нижнем уровне Альдрассила.\n\nЛаоси",
+	},
+},
+["Записка Калора"] = {
+	["english"] = "Calor's Note",
+	["pages"] = {
+		"Мастер Карвин!\n\n &lt;Принесший/Принесшая&gt; это сообщение &lt;осенен/осенена&gt; благословением Света, может сражаться с мертвецами и демонами, наводнившими пределы Сумеречного леса, и желает присоединиться к семье Карвин на их пути к Свету.\n\nВ моем послании я прошу вас предоставить этому воину Света задание – возможно, это будет поиск горожан, замеченных в помощи врагам Света.\n\nС уважением,\nКалор",
+	},
+},
+["Заказ на ткани"] = {
+	["english"] = "Cloth Request",
+	["pages"] = {
+		"Добрый день, Шнайдер!\n\nНадеюсь, дела в районе каналов идут хорошо. У нас тут, в торговом квартале, большой наплыв покупателей.\n\nНам нужно побольше вязаной одежды, наши запасы на исходе. Пожалуйста, пришлите мне стандартную партию при первой же возможности.\n\nУдачи. Надеюсь, занятия вашего сына Турмана тоже продвигаются неплохо. \n\n--Харлан Багли",
+	},
+},
+["Благословенное письмо"] = {
+	["english"] = "Consecrated Letter",
+	["pages"] = {
+		"Надеюсь, это письмо дошло до тебя, |3-6(&lt;класс&gt;). Я обращаюсь к тебе с гордостью, потому что немногие обладают столь крепкой верой и готовы войти в число величайших защитников Азерота.\n\nНикогда не забывай, твой главный долг – сражаться с теми, кто угрожает нашему миру и несет скверну в наши дома.\n\nМеня назначили твоим наставником на первое время. Когда будешь &lt;готов/готова&gt;, ищи меня в Аббатстве Североземья.\n\n-Брат Самуэль, наставник паладинов.",
+	},
+},
+["Освященная записка"] = {
+	["english"] = "Consecrated Note",
+	["pages"] = {
+		"Я ждал твоего прихода, &lt;служитель/служительница&gt; солнца. Сам вождь Соколиный Ветер говорил мне о твоем интересе к нашему ордену, и я согласился приступить к твоему обучению. Когда будешь &lt;готов/готова&gt; начать учиться, приходи в круг, расположенный в центре лагеря Нараче, я буду ждать тебя там.\n\nСлужитель солнца Хелаку",
+	},
+},
+["Священная руна"] = {
+	["english"] = "Consecrated Rune",
+	["pages"] = {
+		"Одни боятся нас больше, чем драконов. Другие завидуют нам больше, чем самым искусным кузнецам. Третьи превозносят нас за подвиги на поле боя. Четвертые преклоняются перед нашей верой. А пятым просто обидно, что мы можем с легкостью перепить любого из них! Но помни, |3-6(&lt;класс&gt;), что на самом деле мы – величайшие защитники Азерота. Божественный Свет дает нам тем больше силы, чем больше мы служим ему. Я расскажу тебе больше, когда ты освоишься. Ищи меня в Старой Наковальне над долиной.\n\n-Бромос Груммнер, наставник паладинов",
+	},
+},
+["Руководство пользователя панели управления"] = {
+	["english"] = "Control Console Operating Manual",
+	["pages"] = {
+		"Панель управления самофланжа можно использовать, чтобы автоматически регулировать поток топлива, газов, жидкостей и связанные с этим механизмы. После завершения исходной регулировки она должна оперировать без проблем при минимальной поддержке.\n\nКраткий список компонентов элементов панели управления (слева направо)\n\nI. Тумблер включения\n\nПозиция \"включено\" задействует самофланж. Контрольный механизм не отключится автоматически при переводе рычага в положение \"выключено\". Это лишь",
+		"начнет процесс охлаждения, который в этот момент потребует примерно от одной до двух минут (в зависимости от ситуации) для своего завершения.\n\nВАЖНОЕ ЗАМЕЧАНИЕ: главным силовым рубильником можно манипулировать, только когда три контрольных клапана на самих машинах выключены. Выключать эти клапаны можно в любом порядке.\n\nПервый – ГЛАВНЫЙ КОНТРОЛЬНЫЙ КЛАПАН, который можно найти у основания большой вертикальной дымовой трубы. Далее – КЛАПАН УПРАВЛЕНИЯ ТОПЛИВОМ, его можно найти на большой трубе, которая ведет",
+		"из баков с горючим (их должно быть три) к дымовой трубе. Наконец, РЕГУЛИРУЮЩИЙ КЛАПАН можно найти на нижнем из двух больших цилиндрических баков, соединенных с дымовой трубой. \n\nII. Индикаторы топлива\n\nОтображают текущее давление в первом, втором и третьем топливном баке.\n\nIII. Индикатор потока\n\nОтображает текущую скорость потока внутри системы.",
+		"IV. Регуляторы потока\n\nУвеличивают или уменьшают скорость потока. Это автоматически регулируется управляющим механизмом самофланжа.\n\nV. Индикатор температуры\n\nОтображает температуру внутри системы в целом.",
+	},
+},
+["Список Умейки"] = {
+	["english"] = "Crafty's Shopping List",
+	["pages"] = {
+		"<HTML><BODY><BR/><P>Итак, $n, вот список вещей, необходимых мне для создания нашего нового суперсекретного... эээ... супероружия. Для начала назовем его \"ультрасовременный прототип укорачивающего излучателя Умейки\".</P><BR/><P>Поверь, по сравнению с этим изобретением наш старый-добрый увеличитель будет казаться детской игрушкой!</P><BR/><P>Впрочем, не стоит сейчас мечтать о славе. Просто добудь мне все необходимое – и мы с тобой будем купаться в золоте!</P></BODY></HTML>",
+		"<HTML><BODY><BR/><H1 align=\"center\">Инструменты</H1><BR/><P>Итак, для начала тебе придется найти мои инструменты. Никакими другими орудиями не выполнить столь тонкую работу!</P><BR/><P>Я тебе не рассказывала, как мне пришлось спасаться бегством с насосной станции? Там-то я и оставила мои чудесные инструменты... Нет, ну ты же понимаешь, речь шла о моей жизни! Помню только, что в последний момент я успела спрятать их под восточным насосом.</P></BODY></HTML>",
+		"<HTML><BODY><BR/><H1 align=\"center\">Перегруженный конденсатор</H1><BR/><P>Эту штуковину может смонстрячить любой инженер, способный держать в руках отвертку. Да я бы сама ее сделала, были бы у меня инструменты. Но у меня их нет, как ты помнишь; смотри пункт первый.</P><BR/><P>Так что умри, но достань мне перегруженный конденсатор. Мы без него как без рук! Если уж совсем не будет иного выхода – возвращайся на южные земли и купи его на аукционе. </P></BODY></HTML>",
+		"<HTML><BODY><BR/><H1 align=\"center\">Горсть песка Рокнара</H1><BR/><P>Последний компонент будет нелегко достать, но ты же понимаешь – линзы бластера нужно полировать только самым лучшим песком. А стрясти его можно только с первоклассного элементаля. </P><BR/><P>Пожалуй, Рокнар сгодится для этой цели. В последний раз его видели на юго-востоке, возле Студеного Предела, где он бродил между Уну'пе и Стонущим Зиккуратом. Проделай дырку в его ледяной броне и доберись до каменистого сердца, в котором найдется для нас пригоршня песка.</P></BODY></HTML>",
+	},
+},
+["Полевой справочник Крогола по силитидам"] = {
+	["english"] = "Crawgol's Silithid Field Guide",
+	["pages"] = {
+		"&lt;Почерк Крогола крупный и неровный, немногим лучше детских каракулей.&gt;\n\nСилу... силли... &lt;Несколько неправильно написанных слов зачеркнуто&gt; силитиды – это такие животные, похожие на жуков, а не овощи (пока их как следует не стукнешь). Они живут под землей, а иногда и нет. Некоторые из них могут летать? (Я думаю.)\n\nНа вкус они ПРОСТО УЖАСНЫ.\n\nБольшинство силитидов состоит из частей тел жуков. У них бывает от ни одной до восьми ног (зависит от того, как они умерли?).",
+		"Если их сжечь, они умирают. У них есть панцири (называются \"кара паксы\", наверное потому, что защищают их от справедливой кары), которые нельзя пробить, разве что бить очень сильно.\n\nОни могут быстро копать, но я не знаю, насколько быстро, потому что они закапываются в землю.\n\nПОЯВЛЕНИЕ СИЛИТИДОВ\n\nПочти все силитиды появляются из дырок, обычно дырок в земле.",
+	},
+},
+["Первая игрушка детеныша ледопарда"] = {
+	["english"] = "Cub's First Toy",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/Winterspring_Memento_256\" /></BODY></HTML>",
+	},
+},
+["Ежедневный отчет: предгорья Хилсбрада"] = {
+	["english"] = "Daily Report - Hillsbrad Foothills",
+	["pages"] = {
+		"Ежедневный отчет – Предгорья Хилсбрада\n\nЮжнобережье под атакой вследствие возросшей активности воргенов\n\nДонесения об участившихся вылазках воргенов на юге, в особенности, вблизи Южнобережья. По сведениям разведки виновником недавних нападений на наших граждан является Ивар Кровавый Клык со своими подельниками.\n\nРекомендуемый план действий: послать героев, способных оказать помощь в расследовании.",
+		"\"Проблема на Топких полях\n\nВ местности, ранее известной как Хилсбрадские поля, а ныне – как Топкие поля, расположенной на юго-западе Хилсбрада, резко участились различные \"происшествия\". Судя по донесениям надзирателя Штиллеца, произошло распространение инфекции.\n\nРекомендуемый план действий: послать героев, способных оказать помощь в расследовании.",
+		"Падение производительности паучьей фермы у Лазуритового рудника\n\nВ последнее время отмечен значительный спад производительности паучьей фермы у Лазуритового рудника, расположенного в юго-западном регионе Хилсбрада. Укротительница пауков Сарус и капитан Кейтон просят о помощи.\n\nРекомендуемый план действий: послать героев, способных оказать помощь в расследовании.",
+	},
+},
+["Подлые обитатели глубин"] = {
+	["english"] = "Dastardly Denizens of the Deep",
+	["pages"] = {
+		"Тетур – одно из самых опасных существ, которых мне доводилось видеть. Одного столкновения с этой тварью мне хватило, чтобы не желать повторной встречи; мне чудом удалось уцелеть!\n\nВ ту ночь была страшная буря. Свет маяка Терамора был едва различим сквозь бушующие волны и проливной дождь. Мы делали все возможное, чтобы направить корабль к маяку. И вдруг прямо перед нами из волн вырвалось это чудище!",
+		"Чудовище раскрыло свою пасть, окатывая нас потоками ледяной воды. Его челюсти сомкнулись и оторвали нос нашего корабля. Моряки и весь груз оказались за бортом, а остатки корабля скрылись в морской пучине.\n\nПоследнее, что я помню, – это как меня выбросило из корабля в бушующее море… В моих глазах потемнело, и я решил, что сделал свой последний вздох. Когда меня привели в чувство в лазарете Терамора, мне стало ясно, что мой долг – поведать миру эту историю.",
+	},
+},
+["Переписанный с таблички расшифрованный текст"] = {
+	["english"] = "Decoded Tablet Transcription",
+	["pages"] = {
+		"День 1\nНаше странствие закончено. Мы наконец-то дошли до Силитуса, где и свяжемся с ними. Мы пришли сюда из самых разных мест, чтобы сообща свершить великое дело.\n\nВоздух весь наполнен предвкушениями. Завтра мы целиком посвятим себя строительству сооружения, которое позволит нам общаться с НИМИ.\n\nЗавтра мы будем возводить ветровой камень!",
+		"День 2\nМы долго спорили о том, где следует возводить Ветровой Камень. Даже мудрейшие из нас не могут сказать наверняка, что за место описано в древнем пророчестве.\n\nЯ примкнул к тем, кто считает, что строить надо на севере, и время несомненно докажет нашу правоту. Доводы, что энергетические линии якобы пересекаются там под плохим углом, наивны и глупы. \n\nМы уже собираем с великой поспешностью все, что нужно для строительства.",
+		"День 15\nНаше упорство себя оправдало. Мы первыми завершили установку Ветрового Камня. Останься с нами другие глупцы, на это ушло бы меньше недели!\n\nЗавтра мы приступим к ритуалам призыва самого Барона Казума. Он потребовал, чтобы его вызвали первым, и перечить ему мы не можем, поскольку в гневе он скор на расправу.\n\nЯ надеюсь, что он будет очень нами доволен.",
+	},
+},
+["Изящная руна"] = {
+	["english"] = "Elegant Rune",
+	["pages"] = {
+		"Друг, ты делаешь мне честь, желая научиться путям монахов, искусству моего народа. Твой интерес греет мне сердце и дает возможность отплатить за гостеприимство и щедрость твоих собратьев. Разыщи меня в Старой Наковальне.\n\nС почтением,\nЛо",
+	},
+},
+["Изящный свиток"] = {
+	["english"] = "Elegant Scroll",
+	["pages"] = {
+		"Здравствуй!\n\nЯ Тин Крепкий Желудок. Я пришла из далеких земель.\n\nМожет, я и не одна из вас, отрекшихся, но и мне видно, что ты &lt;силен/сильна&gt; и духом и телом. Кое-кто из моего народа не верит, что люди из вашего племени могут обрести мастерство монаха, но я не разделю этих предрассудков. Приди ко мне, и я научу тебя сражаться!\n\n- Тин Крепкий Желудок.",
+	},
+},
+["Наделенная силой руна"] = {
+	["english"] = "Empowered Rune",
+	["pages"] = {
+		"Помни: шаман никогда не должен требовать могущества. Сделать это – означает прогневить стихии, а шаман без защиты стихий ничего не значит. Те, кто следует пути шамана, никогда не должен забывать об этом.\n\nВ то же время шаман, который живет в почтительном союзе со стихиями, способен овладеть невообразимой силой. Если думаешь, что тебе хватит для этого смирения, найди меня в Старой Наковальне. Я научу тебя – как когда-то научили меня – работать со стихиями огня, земли, ветра и воды, а также с дикой природой.\n\n- Тео Молотошторм",
+	},
+},
+["Зашифрованное письмо"] = {
+	["english"] = "Encrypted Letter",
+	["pages"] = {
+		"Я никогда так не гордился своим ремеслом, как в последние несколько лет. Спрос на услуги убийц, шпионов и разведчиков высок как никогда. На первый взгляд может показаться, что нас кормит война. Но ни в одну войну мы не процветали так, как процветаем сейчас, когда мирное время подходит к концу.\n\nМне передали, что ты &lt;появился/появилась&gt; в наших краях и хочешь кое-чему научиться. Когда будет время, приходи к стойлам позади аббатства.\n\n-Джорик Керридан, наставник разбойников",
+	},
+},
+["Зашифрованный пергамент"] = {
+	["english"] = "Encrypted Parchment",
+	["pages"] = {
+		"Приветствую тебя, &lt;имя&gt;. Я был погружен в размышления, когда мне в голову пришла мысль тебе написать.\n\nМногие наши соплеменники считают духовными лидерами шаманов, подобных нашему великому Вождю. Другие предпочитают поклоняться мечу и топору. Но не стоит забывать, что исход битв и даже целых войн определяют те, кто обладает особенными способностями. Именно об этом я и хочу поговорить с тобой, &lt;имя&gt;. Разыщи меня среди орков в Долине Испытаний.\n\n-Руаг, наставник разбойников.",
+	},
+},
+["Зашифрованная руна"] = {
+	["english"] = "Encrypted Rune",
+	["pages"] = {
+		"&lt;Брат/Сестра&gt;, я надеюсь, ты получил эту руну. Хочу сообщить тебе, что я в Старой Наковальне, что в Холодной долине.\n\nЯ знаю, как важно для нас держаться вместе, особенно в такое неспокойное время. Загляни ко мне, когда будет свободное время.\n\n-Сольм Харгрин, наставник разбойников",
+	},
+},
+["Зашифрованный свиток"] = {
+	["english"] = "Encrypted Scroll",
+	["pages"] = {
+		"Постарайся принять мои слова во внимание, &lt;имя&gt;. В наше время хитрость и обман распространены везде… даже в нашем славном Подгороде. Каждый, кто сохраняет верность Сильване, вносит свой вклад в славное будущее Отрекшихся. Мы не владеем магией и не охраняем границы – наше ремесло иного рода. \n\nНайди меня в таверне в Похоронном Звоне. Там и поговорим.\n\n-Давид Триас, наставник разбойников",
+	},
+},
+["Зашифрованный знак"] = {
+	["english"] = "Encrypted Sigil",
+	["pages"] = {
+		"Сал'ах, друг мой. Я надеюсь, ты &lt;получил/получила&gt; мой знак. Меня попросили помочь тебе. Я нахожусь в Тенистой долине, среди ветвей великого Альдрассила. Если тебе нужны знания, обращайся ко мне.\n\nВ наше неспокойное время все благоразумные мастера тонких искусств должны держаться друг друга. По-другому мы не сможем сохранить Тельдрассил и наше ремесло. \n\nПриходи, когда сможешь.\n\n-Фрагун Шепот Тени, наставник разбойников",
+	},
+},
+["Запечатанное письмо"] = {
+	["english"] = "Etched Letter",
+	["pages"] = {
+		"Долина Североземья – опасное место, и навыки выживания, свойственные охотнику, здесь весьма пригодятся. Нечего и говорить о том, что твои успехи в деле защиты долины впечатлили меня, и я с нетерпением жду встречи. Прошу, разыщи меня у входа в аббатство.",
+	},
+},
+["Нацарапанная записка"] = {
+	["english"] = "Etched Note",
+	["pages"] = {
+		"Могучие воины защищают наши дома. Мудрые шаманы охраняют наши души и ведут нас путем предков. Друиды сообщают нам волю Матери-Земли.\n\nНо ты – &lt;охотник/охотница&gt;, а это призвание объединяет в себе умения воинов, шаманов и друидов. Такие, как ты, становятся душой нашего народа. К тебе будут обращаться за советом и защитой. Я должен удостовериться, что ты &lt;готов/готова&gt; к этому. Приходи в Лагерь Нараче.\n\n-Ланко Дальний Выстрел, наставник охотников",
+	},
+},
+["Пергамент с письменами"] = {
+	["english"] = "Etched Parchment",
+	["pages"] = {
+		"Вижу, как ты, юнец, слоняешься по долине со своим никудышным луком, да еще и в потрепанном одеянии. Ты мне напоминаешь одного охотника, которого я знал когда-то...\n\nЕсли желаешь обучиться азам профессии, захаживай ко мне. Охотники ведут уединенный образ жизни, так что лишний друг никогда не помешает.\n\nКарраниша, наставник охотников",
+	},
+},
+["Гравированная руна"] = {
+	["english"] = "Etched Rune",
+	["pages"] = {
+		"Укрощение зверей, меткая стрельба, чтение следов – как научиться всему этому за такую короткую жизнь? Умения охотника требует недюжинной смекалки и огромного терпения.\n\nПуть охотника не из легких, это точно. Тебе нужно много тренироваться, чтобы достичь уровня самого неуклюжего ружейника из нашего народа. Потому я тебе и пишу.\n\nПриходи в Старую Наковальню, что в Холодной долине. Я буду ждать тебя там.\n\n-Торгас Мрачнон, наставник охотников",
+	},
+},
+["Выгравированный знак"] = {
+	["english"] = "Etched Sigil",
+	["pages"] = {
+		"Элуна с тобой, &lt;имя&gt;. Ветер прошептал мне твое имя, и я очень рада, что могу принять участие в обучении следующего поколения охотников.\n\nЯ знаю, что ты сейчас где-то недалеко от Альдрассила. Я буду ждать там.\n\nНаши старейшины поручили мне подготовить всех новых охотников к грядущим испытаниям. Ты входишь в их число. До встречи.\n\n-Аянна Вечная Странница, наставница охотников",
+	},
+},
+["Свидетельства против Самуэльсона"] = {
+	["english"] = "Evidence Against Samuelson",
+	["pages"] = {
+		"Ваше Святейшество, Чо'Галл дал нам новый приказ: мы должны стереть ваш собор с лица земли. Когда от духовного центра Штормграда останется лишь кратер, начнется паника и лишенные иллюзий крестьяне потянутся к нашей истинной религии. Я посылаю вам взрывчатку. Во имя Молота! Во имя Смертокрыла! Во имя великих дней, которые скоро наступят! -Самуэльсон",
+	},
+},
+["Выцветшая карта сокровищ"] = {
+	["english"] = "Faded Treasure Map",
+	["pages"] = {
+		"Клад Новолуния хочешь найти? Путь тебе дальний придется пройти!\n\nГород оставишь, дальше пойдешь, в доме одном ты подсказку найдешь.",
+	},
+},
+["Доклад отца Густава"] = {
+	["english"] = "Father Gustav's Report",
+	["pages"] = {
+		"Верховный лорд!\n\n&lt;имя&gt; успешно &lt;возглавил/возглавила&gt; поход против Плети Плетхольма и &lt;подготовил/подготовила&gt; наше войско к наступлению на Ледник Ледяной Короны.\n\nТакже благодаря &lt;его/ее&gt; участию каменотесы получили необходимые материалы для возведения Крепости Справедливости в Лесу Хрустальной Песни.\n\nНам осталось решить последнюю задачу – захватить Вершину Рыцарей, ибо именно оттуда я желаю начать наш последний поход. \n\nМы ожидаем только вашего приказа.\n\nДа защитит вас Свет, сэр.\n\n-Густав",
+	},
+},
+["Полевой дневник"] = {
+	["english"] = "Field Journal",
+	["pages"] = {
+		"День первый\n\nПопал на корабль под названием \"Ярость Дреки\". Мы везем особый груз в далекое место через весь океан. В мои обязанности входит уборка на корабле во время плавания и разведка после высадки на берег.\n\nЭто лучше, чем разыскивать разбойников и друидов Альянса в Оргриммаре.\n\nЕда не слишком хороша, но грог неплох. Дуротар уже скрылся за горизонтом.",
+		"День второй\n\nПища и корабельная качка не идут мне на пользу!\n\nУборки полно, так как многим моим братьям все время дурно. По-моему, это не очень хорошая идея, но если потребуется, мы с радостью последуем за ним хоть на дно моря.\n\nБудем надеяться, что до этого не дойдет.",
+		"День третий\n\nВолны бросают корабль в разные стороны. Капитан приказал спустить паруса. Мы словно детская игрушка в руках гигантского малыша.\n\nЯ не люблю океан, но сегодня сдержал тошноту, как истинный воин.",
+		"День четвертый:\n\nНа горизонте видны два маленьких островка. Капитан говорит, что мы пройдем мимо. Он не хочет там останавливаться. Что-то в его голосе мне не нравится. Это очень похоже на страх.\n\nПришлось повозиться с... что? Снаружи доносятся звуки взрывов. Пойду на верхнюю палубу, посмотрю, в чем там дело.",
+		"День ??\n\nМеня выбросило на каменистый берег острова. Это, должно быть, один из тех двух островов, что я видел раньше. Большинство моих братьев мертвы. От нашего особого груза не осталось и следа. Я опасаюсь худшего и не хочу ни о чем думать.\n\nНе знаю, сколько дней прошло. Один, возможно, два? Вряд ли больше. Трусы из Альянса напали на нас из засады, спрятавшись за большим из двух островов. Их было слишком много, но один корабль мы потопили.\n\nЯ видел, как еще одно судно попало в зону битвы и разлетелось на куски. Думаю, это были гоблины. Дураки!",
+		"День ?? и еще один\n\nМы разбили подобие лагеря на возвышении острова. Аггра хочет, чтобы я поискал других выживших на западном берегу. Килаг с небольшим отрядом пойдет на другую сторону острова, чтобы разыскать Альянс. Кое-кто из них уже атаковал нас. Они не успокоятся, пока мы их всех не перебьем. Или они нас.\n\nВдалеке слышны звуки, издаваемые гоблинами, и я вижу остов их разбитого корабля. Шумные ребята. За ними понаблюдаю позже. Я нашел пещеру, из которой раздаются звуки горных работ. Похоже, там есть и животные.\n\nПойду проверю.",
+	},
+},
+["Последний ключ к сокровищу Сандерса."] = {
+	["english"] = "Final Clue to Sanders' Treasure",
+	["pages"] = {
+		"За то, что ты нашел для меня бутылочку старого доброго виски, я скажу, где находится сокровище! Иди вдоль берега, двигаясь на запад от бутылки. Дойдешь до воды – плыви дальше на запад. Через некоторое время ты приплывешь на остров, где и найдешь мой сундук с сокровищами!",
+	},
+},
+["Состязание рыбаков!"] = {
+	["english"] = "Fishing Tournament!",
+	["pages"] = {
+		"Рыболовный чемпионат Тернистой долины!\nПроводится по воскресеньям, с 14:00 до 16:00.\n\nЗакиньте удочки где угодно на побережье Тернистой долины (кроме Пиратской Бухты) и ищите косяки вкуснорыбы, что появляются вдоль берега! Старайтесь забросить удочку как можно ближе к стайке рыб, и тогда у вас будет возможность поймать особенную рыбу вместо обычных, которых полно в Тернистой долине. Первый, кто выловит сорок вкуснорыб, сможет сдать их Мастеру Мормышу в Пиратской Бухте и получить вознаграждение!\n\nДаже если вам не удалось поймать сорок вкуснорыб первому, вы сможете обменять их на деньги, а за некоторых рыб можно получить ценные призы!",
+	},
+},
+["Во имя Света!"] = {
+	["english"] = "For the Light!",
+	["pages"] = {
+		"Имя его принесло Свет во тьму Азерота.\n\nДоблесть его победила всякое отчаяние.\n\nСеребряная Длань не могла сделать большего,\n\nчем дать миру рыцаря, что отдал миру себя.",
+		"Он не искал себе почет и славу\n\nи не хотел сородичами править.\n\nРешил он биться за Лордерон,\n\nчтоб после уж народ его жил в мире.",
+		"Рассказ о добродетели его\n\nсо смертью рыцаря не будет завершен.\n\nЕго мы чтим и воздаем хвалу!\n\nПусть Утер в славе почиет и в Свете!",
+	},
+},
+["Запретная печать"] = {
+	["english"] = "Forbidden Sigil",
+	["pages"] = {
+		"Надеюсь, что ты получишь этот знак, &lt;имя&gt;. Верховный маг сообщил о твоем прибытии, и я немедленно послала тебе весточку.\n\nИз-за всего, что случилось в прошедшие годы, когда тайная магия вернулась к нашей расе, на твоем пути возникнет множество препятствий. Я могу помочь тебе. Когда будешь &lt;готов/готова&gt;, найди меня в Альдрассиле, на втором уровне.\n\n-Рианда, наставница магов",
+	},
+},
+["Документ Хмуроброва"] = {
+	["english"] = "Furlbrow's Deed",
+	["pages"] = {
+		"Это договор на владение участком земли в Западном Крае. По договору данный участок, включая любую продукцию, полученную на нем, и все строения, находящиеся в его пределах, принадлежит лицам, указанным ниже.\n\nДокумент подписан:\n\n Теодор Хмуробров\n Верна Хмуробров",
+		"[На обратной стороне договора было написано быстрым почерком]\n\nМы припугнули Хмуроброва и получили этот договор. Он может пригодиться, если нам вдруг понадобится их участок. Хмуробровы нам уже не помеха. Последний раз, когда я их видел, они уезжали из Западного Края и остановились, чтобы починить свою повозку.",
+	},
+},
+["Записи Галена"] = {
+	["english"] = "Galaen's Journal",
+	["pages"] = {
+		"Его жестоко избивали прямо на моих глазах. Безжалостный лейтенант вел себя так, как будто в этом не было ничего особенного. Когда я смотрел на избиение поборника Саруана, во мне что-то сломалось.\n\nНа глаза навернулись слезы. Но не от страха, нет… Это были слезы горечи. Как можно так обращаться с дренеями, Триумвират… Если бы мне можно было освободиться от своих оков… Если бы…",
+		"Немало времени прошло, прежде чем поборник потерял сознание. Даже он не выдержал этих пыток. Его мучитель (мне сказали, что его звали Матис) пытался вернуть его к жизни, разбрызгивая по его измученному телу разведенный в воде яд. Но Саруан не шевелился.",
+		"Мне хотелось кричать, но лишь приглушенный стон сорвался с моих губ. За неповиновение меня незамедлительно избили. Лежа на полу, я видел, как Матис вышагивает перед телом Саруана. У него был обеспокоенный вид. Он сказал, что если Саруан умрет во время пыток, то Сиронас – или Сирона? – спустит с него семь шкур.",
+		"У Сиронас были планы насчет Саруана…\n\n&lt;Тут предложение обрывается. Дреней умер, не дописав его.&gt;",
+	},
+},
+["Письмо мага"] = {
+	["english"] = "Glyphic Letter",
+	["pages"] = {
+		"Существует четыре правила магии:\n\n Магия могущественна.\n Магия развращает.\n Магия порождает зависимость.\n Магия притягивает обитателей Круговерти Пустоты к тому, кто ее применяет.\n\nЭти правила неизменны. Этим правилам ты &lt;должен/должна&gt; будешь подчинить всю свою жизнь, если захочешь продолжить путь магов…\n\nЕсли у тебя хватит глупости не внять этому предупреждению, приходи ко мне в библиотечное крыло Североземского аббатства. Я буду ждать тебя на втором этаже.\n\nКельден Бремен, наставник магов",
+	},
+},
+["Покрытый письменами пергамент"] = {
+	["english"] = "Glyphic Parchment",
+	["pages"] = {
+		"Остальные нас не понимают. Они притворяются, что ладят с нами, но на самом деле это не так. Даже чернокнижники нас опасаются.\n\nНо это не беда, потому что у меня есть ты, а у тебя есть я. Орки-маги, объединяйтесь! Я и ты! Акрифа и... как бы там тебя ни звали! Ха!\n\nМы покажем им, на что мы способны. Приходи ко мне, и я поделюсь с тобой кое-какими тайными знаниями, которыми мне удалось овладеть.",
+	},
+},
+["Покрытый письменами свиток"] = {
+	["english"] = "Glyphic Scroll",
+	["pages"] = {
+		"Скверна и зло, с которыми, как принято считать, сопряжена тайная магия, – ничто по сравнению с тем, что мы уже пережили. Мы больше не жертвы, &lt;имя&gt;. Мы сами выбираем свою судьбу. Сильвана указала нам путь – она доказала, что у нас есть своя воля и что мы не обязаны подчиняться этому ублюдку Артасу.\n\nНайди меня в церкви – я расскажу тебе больше… если захочешь.\n\n- Изабелла, наставница магов",
+	},
+},
+["Отпечаток Гордауга"] = {
+	["english"] = "Gordawg's Imprint",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/24475_gordawg_256\" /></BODY></HTML>",
+	},
+},
+["Записка бабули Стоунфилд"] = {
+	["english"] = "Gramma Stonefield's Note",
+	["pages"] = {
+		"Здравствуй, Вильям!\n\nМы уже много лет не разговариваем, но я надеюсь, что у вас с братом все в порядке и что ваша аптека процветает.\n\nУ меня к тебе просьба, Вильям. В общем, мой внук Томми Джо влюблен в юную Мейбелл Маклур. Они друг в друге души не чают, но наши семьи... Конечно, наши семьи враждуют уже много лет...",
+		"Я боюсь, что война между Стоунфилдами и Маклурами убьет начинающийся роман между Томми Джо и Мейбелл. В такие времена, когда мрачные новости и слухи о войне доходят до нас, о молодости и любви должно заботиться.\n\nТак вот, просьба: я прошу тебя использовать свои умения и создать зелье или эликсир, который бы помог этим молодым влюбленным встретиться друг с другом.\n\nСпасибо тебе, Вильям. И пожалуйста, когда найдешь время оторваться от работы, заходи в гости. У нас есть о чем вспомнить и посмеяться.\n\nМилдред",
+	},
+},
+["Список трав Великой Матери"] = {
+	["english"] = "Greatmother's List of Herbs",
+	["pages"] = {
+		"Корень олембы довольно часто встречается в лесу Тероккар. Ищи выступающие над землей корни деревьев олембы, из которых этот лес и состоит.\n\nКлюква растет только в Зангартопи. Ее можно найти возле крепости Анго'рош, что в северо-западной части болота. Опасайся огров, охраняющих эти ценные ягоды.\n\nТелаарский папоротник, наверное, самое легкодоступное растение в списке. Его можно найти в котловине Телаари к югу от Гарадара. Листья находятся возле воды. \n\nПоследнее растение есть только в Острогорье к северу от Зангартопи. Драконий шип растет на вершинах скалистых утесов у входа в ущелья Острогорья. Ты поймешь, о чем я говорю, когда увидишь эти горы: утесы похожи на ряды огромных острых зубов.",
+	},
+},
+["Список Гремлока"] = {
+	["english"] = "Gremlock's List",
+	["pages"] = {
+		"Ниже приведен список учеников, получивших Платиновую звезду в Школе Кулинаров Гремлока и заработавших почетный мясницкий нож:\n\nМелия Камнетряс\nБардин Железняк\nУми Триггервольт\nРуми Триггервольт\nВорель Стальной Шип",
+	},
+},
+["Письмо Гришки"] = {
+	["english"] = "Gryshka's Letter",
+	["pages"] = {
+		"Дорогой Гримтак! \n\nМясо, которое ты прислал, очень вкусное. Оно с прожилками жира, нарезано толстыми кусками и обернуто в кабанье сало – как раз по моему вкусу. Когда я съем его и разгрызу последние кости, то обязательно буду думать о тебе. Я закрою глаза и буду представлять, как ты рубишь и режешь это мясо своими сильными, покрытыми шрамами руками…\n\nХа! Я сразу вспомнила о том случае, когда ты лишился пальца… О, Гримтак! Когда мне на память приходит тот день, я всякий раз хихикаю, будто маленькая девчонка.\n\nТы такой милый, когда истекаешь кровью!\n\n-Гришка",
+	},
+},
+["Благословенное письмо"] = {
+	["english"] = "Hallowed Letter",
+	["pages"] = {
+		"Секрет успеха жреца – в его связи с миром. Мудрость и сострадание позволят тебе помогать тем, кто действительно в этом нуждается, а поспешность и необдуманные решения причинят только вред. Но к этому ты &lt;должен прийти сам/должна прийти сама&gt;.\n\nКогда ты это осознаешь, тебе понадобятся новые способности и заклинания. Вот с этим я могу тебе помочь. Приходи в библиотечное крыло Аббатства Североземья.\n\n-Жрица Анетта, наставница жрецов",
+	},
+},
+["Благословенное послание"] = {
+	["english"] = "Hallowed Note",
+	["pages"] = {
+		"Хоть раньше в нашем народе и не было жрецов, зато всегда были провидцы. Во время своей учебы ты многое узнаешь о мудрости Матери-Земли и о Свете. Когда будешь &lt;готов/готова&gt; начать учиться, приходи в круг, расположенный в центре лагеря Нараче, я буду ждать тебя там.\n\nПровидица Воронье Перо",
+	},
+},
+["Благословенная руна"] = {
+	["english"] = "Hallowed Rune",
+	["pages"] = {
+		"В это время, когда Священный Свет согревает наши души, а каждый день дарит нам новые открытия, особенно хорошо быть &lt;одним из сыновей/одной из дочерей&gt; Стальгорна. Лига исследователей с каждым днем все более продвигается вперед, находя давно потерянные ответы на еще более древние вопросы. А еще теперь среди нас есть ты, &lt;способный/способная&gt; помочь в борьбе с троггами и всеми другими врагами.\n\nНайди меня, когда у тебя будет время. Я буду в Старой Наковальне, что находится выше по склону. \n\n- Брансток Халдер, наставник жрецов",
+	},
+},
+["Священный свиток"] = {
+	["english"] = "Hallowed Scroll",
+	["pages"] = {
+		"Рад, что твоя душа не попала в Пустоту, &lt;имя&gt;. Я полагаю, ты стоишь усилий, затраченных на написание этого свитка.\n\nПомни: людей, которых ты &lt;знал и любил/знала и любила&gt;, больше нет в живых! Ты &lt;должен/должна&gt; пронести этот груз через все свое дальнейшее существование. Советую тебе смириться с этим с самого начала.\n\nЕсли ты &lt;готов/готова&gt; к испытаниям, найди меня в церкви Похоронного Звона.\n\n- Темный священник Дьюстен, наставник жрецов",
+	},
+},
+["Благословенный знак"] = {
+	["english"] = "Hallowed Sigil",
+	["pages"] = {
+		"Надеюсь, этот знак застанет тебя в добром здравии, &lt;имя&gt;. Духи поведали мне о твоем приходе, и я сразу же стала писать это письмо. Хочу скорее передать тебе часть моих знаний и направить тебя на верный путь, пока ты готовишься покинуть Тельдрассил для более важных дел.\n\nПосле всего что случилось за последние несколько лет, очень многие народы Азерота нуждаются в нашей помощи. Когда будешь &lt;готов/готова&gt;, разыщи меня в Альдрассиле, на втором уровне.\n\n-Шанда, наставница жрецов.",
+	},
+},
+["Торопливо написанная записка"] = {
+	["english"] = "Hastily Written Note",
+	["pages"] = {
+		"Дуран!\n\n&lt;Этот/Эта:r&gt; |3-6(&lt;раса&gt;) &lt;помог/помогла:r&gt; мне собрать достаточно демонического огня, чтобы начать штурм эльфийских позиций.\n\nСнаряды обладают невероятно разрушительной силой, но их невозможно контролировать. Надо найти способ управлять ими.\n\nЯ думаю, когда застава Расщепленного Дерева будет в безопасности, мне простят использование демонических сил...\n\nДраака",
+	},
+},
+["Записи Хилдельва"] = {
+	["english"] = "Hildelve's Journal",
+	["pages"] = {
+		"День первый.\n\nМой танк сломался, но я знаю, что залежи руды хирона – где-то в этих холмах. Я велел Большеногу оставаться и присматривать за нашими танками.\n\nПродолжил поиск в одиночку. Если я не смогу вернуться назад, то журнал останется моим последним завещанием.\n\n--Бурон Хилдельв, пилот\nПаровая бригада Стальгорна",
+		"День второй\n\nМой поиск продолжается, но до сих пор нет следов руды. Интересно, не пошутил ли Каменный Убор по поводу этой руды. Если так, то он получит хорошую затрещину от меня, когда я вернусь в Поселок Сталежара!\n\nКогда я размещал свой лагерь, то услышал эхо рычания в каньонах.\n\nЭто был не волк. Это, должно быть, медведь.",
+		"Третий день\n\nРычание не прекращалось всю ночь и преследует меня даже днем. Я не могу сосредоточиться на добыче руды. Думаю, это медведь!\n\nПусть только подойдет поближе, мне уже не терпится всадить кирку в его череп!",
+		"День четвертый.\n\nМои запасы подходят к концу. У меня все еще очень много еды, но я не планировал столь долго оставаться в лесу, так далеко от моего танка, и взял с собой лишь два кега эля.\n\nЯ не спал обе прошлые ночи, прислушиваюсь к этому проклятому реву, и практически до дна выпил оба кега!\n\nЗавтра мне придется повернуть назад к Большеногу и нашим паровым танкам. Я не хочу здесь пропасть без выпивки.",
+		"День пятый.\n\nЭтот проклятый медведь добрался до меня! Он бросился на меня в полдень и напал со спины.\n\nЯ бы унюхал его задолго до этого, если бы он напал на меня не с подветренной стороны – запах от него шел ужасный! Одна только вонь от его грязной шкуры и гнилое дыхание заставили бы меня сбежать оттуда!\n\nЯ сражался с ним, но он хорошо подрал мою ногу. Теперь я не могу двигаться, эля нет, и я так и не нашел эту руду. Проклятье!",
+		"День шестой.\n\nМедведь еще не вернулся; должно быть, я задал ему хорошую трепку! Но я все еще слышу его рычание. Я думаю, он ждет, когда я умру!\n\nКто бы ни нашел эту книгу, я прошу тебя. Убей этого грязного медведя. Убей его и отнеси книгу моему другу Большеногу. Он захочет узнать, что произошло.\n\nИ возьми мою броню. Она понадобится тебе в бою со старым Паршивым Когтем!",
+	},
+},
+["Послание Орды"] = {
+	["english"] = "Horde Missive",
+	["pages"] = {
+		"Хватит безделья, &lt;имя&gt;!\n\nТы еще помнишь наши указания?\n\nПришло время последних приготовлений к атаке, и ты &lt;нужен/нужна&gt; здесь.\n\nБросай все, чем ты там занимаешься, и поспеши на холм Грукин.\n\n- Генерал Назгрим",
+	},
+},
+["Указания Балтаза, повелителя Иллидари"] = {
+	["english"] = "Illidari Lord Balthas' Instructions",
+	["pages"] = {
+		"Во имя нашего великого владыки… Во славу Иллидана!\n\nДетали, необходимые для пушки души, можно найти в разных местах. За слитками оскверненной стали, кориевым сердечников и адамантитой рамкой обратись к горнякам и инженерам.\n\nЗа безупречной чародейской сущностью придется отправиться в лес Тероккар. В центре этого леса, над ордынским Фортом Камнеломов, ты найдешь дом Сар'тиса, араккоа-еретика. Это место известно под названием озеро Иорун.\n\nПоговори с Сар'тисом и скажи ему, что ты ищешь. Не забудь упомянуть, что тебя прислал я, потому что за ним есть должок, и не один.\n\nСделай так, как скажет Сар'тис, и получишь сущность.\n\n-Балтаз",
+	},
+},
+["Служебные бумаги Иллидари"] = {
+	["english"] = "Illidari Service Papers",
+	["pages"] = {
+		"Во имя нашего великого владыки… Во славу Иллидана!\n\nМор'гор,\n\nЯ посылаю вам этого несчастного, чтобы он служил Иллидану. Рыцарем смерти он стать никогда не сможет, но некоторые его навыки могут прийтись вам по душе. Заставьте его подчиняться вам. Сделайте из него настоящего воина Иллидари. \n\nА если он подведет вас… Если проявит хоть малейшую слабость… Избавьтесь от него. Отправьте его на рудники! \n\nЛорд Терон Кровожад",
+	},
+},
+["Отчет о достижениях Железняка"] = {
+	["english"] = "Ironband's Progress Report",
+	["pages"] = {
+		"Достопочтенные коллеги и искатели правды.\n\nРаскопки продолжаются, но они были приостановлены из-за троггов, о которых я сообщал в моем последнем докладе. Я уверен, их проблему можно решить даже несмотря на то, что некоторые трогги гораздо более агрессивны, чем обычно.\n\nМы нашли еще больше артефактов, хотя во всех случаях, кроме одного (о котором я напишу ниже), эти находки были такие же, как и раньше, – интересные, если не сказать более.",
+		"За одним лишь исключением. Странно высеченные идолы, что мы обнаружили недавно (краткое их описание прилагалось к моему последнему докладу), похоже, возымели побочный эффект на троггов на месте раскопок. Их притягивают эти высеченные фигуры, и некоторые трогги впадают из-за них в ярость!\n\nНеобходимо изучить этих идолов внимательнее, чтобы сделать по поводу них какие либо выводы, но я все еще надеюсь, что они прольют свет на связь между троггами и титанами.",
+		"И в заключение я должен вновь напомнить о моей просьбе доставить взрывчатого порошка. Мои запасы подходят к концу, что серьезно препятствует успеху экспедиции. Мне обещали, что взрывчатый порошок вскоре будет доставлен, но я до сих пор его не получил.\n\nКакова причина, позвольте спросить, этой задержки?\n\nС уважением,\nгеолог Дартеус Железняк",
+	},
+},
+["Дневник Джубеки"] = {
+	["english"] = "Jubeka's Journal",
+	["pages"] = {
+		"Дневник Джубеки\n\nДокумент содержит ежедневные записи одной из наставниц чернокнижников. Страницы испещрены обрывочными фразами, среди которых встречаются рисунки внутренних органов бесов и любопытные советы по поводу рациона охотников Скверны.\n\nОдна из записей ближе к концу дневника притягивает ваш взгляд...",
+		"День 26:\n\nПрошло уже почти две недели с тех пор, как мы с Канретадом добрались до Запределья. Практически сразу же после нашего прибытия он отправился в Долину Призрачной Луны. Не знаю, что ему там нужно, а расспрашивать его я не стала. Меня это не очень-то волнует, главное чтобы он не дал себя укокошить.\n\nМои же исследования в этих пыльных пустошах продвигаются, как и было задумано. После того, как Пылающий Легион прошел по этим землям, здесь осталось множество редких видов демонов.",
+		"День 28:\n\nБесы Скверны в Лощине Вспышки Скверны невероятно болтливы. Я обнаружила, что чтобы заставить их служить себе, достаточно просто выучить их имена. Ритуал же призыва совершенно тривиален.\n\nНайти Повелителя Бездны трудно, но зато потом не составляет труда уговорить его раскрыть имя одного из других, неугодных ему Повелителей.\n\nИногда я вспоминала о Канретаде и думала, вернется ли он когда-нибудь, но, в сущности, мне это безразлично. Да, Совет может приговорить меня к смерти, но это не так важно. Пока существуют мои гримуары, мое наследие будет жить.",
+		"День 32:\n\nСегодня, исследуя тошнотворные Руины Фаралона в Пустоверти, я подверглась нападению каких-то летающих существ, похожих на глазные яблоки со щупальцами. Они называют себя наблюдателями и на удивление умны. Они выражали глубокое желание познакомиться со всеми видами магии и охотно предложили свои услуги взамен на возможность научиться новому.\n\nРитуал призыва наблюдателя удивительно сложен. Являясь обитателями Великой Запредельной Тьмы, они очень часто перемещаются с места на место, и поэтому ритуал призыва должен восполнить им недостаток путешествий. Призыв наблюдателя без его добровольного содействия практически невозможен.",
+		"День 35: \n\nКанретад вернулся, и вид у него был исключительно мрачный. Принимая во внимание его разболтанность, меня ничуть не удивляет тот факт, что его исследования оказались далеки от успеха.\n\nЯ хочу попытаться подчинить своей воле высокопоставленного представителя Пылающего Легиона, но я не осмелюсь провести ритуал в одиночку. Возможно, Канретад мог бы стать отличным подопытным...",
+		"День 36:\n\nПотрясающе! Моя первая попытка призвать кого-то из высшей касты Пылающего Легиона провалилась так эффектно, как я и планировала. Шиварра вырвалась на свободу, едва Канретад завершил ритуал.\n\nЯ думала, что пока я буду изгонять ее, она просто-напросто уничтожит этого хлипкого человечишку, но в тот момент, когда бритвенно-острые клинки Шиварры мелькнули в воздухе, Канретад изменил свой облик, и клинки будто бы наткнулись на камень.\n\nВ отличие от обычной трансформации на этот раз он не завершил демоническое перевоплощение... возможно, мои выводы относительно неуспешности его исследований были несколько поспешными.",
+		"День 40:\n\nПо иронии судьбы оказалось, что для того, чтобы установить связь со стражем гнева, нужно уменьшить количество используемых в круге призыва рунических символов. Стражи гнева удивительно невосприимчивы к заклинаниям подчинения и принуждения, но зато с готовностью отвечают на простую демонстрацию силы.\n\nКанретад оказался удивительно проницателен и понял, каким образом Легион управляет стражами гнева. Он обладает поразительными способностями в управлении малыми демонами. Правда, хватает его ненадолго. С большим трудом мне удалось описать те формы, которыми он пользуется для одновременного призыва нескольких демонов.\n\nК сожалению, у меня получается установить связь с двумя малыми демонами лишь на короткое время, тогда как он может делать это бесконечно долго.",
+		"День 47:\n\nПришлось загубить нескольких огров, но зато когда мы изучили ритуал круга Вим'гола, нам открылись новые способы увеличения нашей силы при помощи демонических жертвоприношений. Этот ритуал приводит в ярость наших демонических слуг, а мы можем объединять их жизненную энергию со своей собственной, что делает нас гораздо сильнее.\n\nПроведя несколько экспериментов, я поняла, что чем более тесная связь была с демоном, которого приносят в жертву, тем большей силой обладает ритуал.\n\nПохоже, Канретаду так и не удается научиться контролировать свои демонические трансформации. В который раз его неумелость вызывает у меня отвращение. Он тратит бесконечно много времени на то, что у других чернокнижников не вызывает вообще никаких затруднений.",
+		"День 50: \n\nПо настоянию Канретада мы отправились к Алтарю Проклятия в Долине Призрачной Луны. Похоже, он был убежден в том, что рука Гул'дана – это нечто большее, чем просто средоточие силы.\n\nЯ не особенно в это верю, но работа над моими гримуарами уже закончена. Никак не пойму, почему он так одержим идеей контроля над потоком силы, которую он получает, принимая демонический облик. \n\nПока он разбирается с этими древними алтарями, я попытаюсь открыть демонические врата и призвать целую ораву диких бесов...",
+		"День 60:\n\nКанретад явно что-то замышляет. Сказать, что я беспокоюсь по поводу нашего следующего перехода, – это ничего не сказать.",
+		"(Изорванная записка прикреплена к задней стороне кожаной обложки дневника)\n\nБоюсь, что нам не удастся выбраться из этой переделки живыми. Но я не могу допустить того, чтобы мои гримуары так и остались непрочитанными. Поэтому я попросила бесов отнести четыре фрагмента моего камня души в четыре разных места; все они указаны в моем дневнике.\n\nПосылаю дневник тебе, моему преданному другу. Если когда-нибудь у тебя возникнет необходимость разыскать меня, соедини четыре камня души, найди мое тело и убедись в том, что мои гримуары попали обратно в Азерот.\n\nПодписано:\nДжубека Тенелом",
+	},
+},
+["Наследие мастеров (ч. I)"] = {
+	["english"] = "Legacy of the Masters (Part 1)",
+	["pages"] = {
+		"Прочти эти записи, ученик мой, и знай, что имя мое – Джубека Тенелом, и я обязана передать крупицу мудрости ордена тому, кто сможет разобрать это послание.\n\nПосле гибели Смертокрыла стало ясно, что чары чернокнижников не могли и отдаленно приблизиться по силе к той мощи, что угрожала Азероту. Поэтому мы и собрали совет шести чернокнижников, чтобы обсудить, каким образом можно изучить новую невиданную магию.",
+		"Несколько ночей длились споры, ругань и потасовки, после чего слово взял чернокнижник по имени Канретад, представитель человеческой расы: \n\n\"После Катаклизма напряжение между враждующими Ордой и Альянсом все росло, и величайшие герои Азерота начали готовиться к войне. Воины развернули боевые знамена, рыцари смерти Акеруса подчинили себе нежить, и ходят слухи, будто маги ищут способы повернуть само время вспять. Неумолимая тьма, накрывавшая Азерот, развеялась. Чо'галл убит, а остатки культа Сумеречного Молота рассеяны. Рагнарос побежден, его войска оттеснены на Огненные Просторы. Смертокрыл пал, растерзанный на части, его сумеречные драконы уничтожены. Однако сила, которой они владели, не могла просто так уйти в никуда... и придет день, когда кто-нибудь захочет завладеть ею\".",
+		"- Кстати, среди нас есть те, кому лично пришлось столкнуться с этой силой, – продолжил он, указывая на фигуру в капюшоне, сидящую в другом конце комнаты. Раздался низкий зловещий смех, капюшон охватило пламя, и он сгорел, явив остальным лицо орка-чаротворца Ритцуна.\n\n– Да, розовокожий, я был там, когда повелитель огня был повержен. Мощь его пламени превосходила все, что вы можете себе представить, – огонь в глазах Ритцуна отбрасывал зловещие тени на его покрытое ожогами лицо и клыкастую ухмылку.\n\n– Вздор! – выкрикнул резкий женский голос. Сидевшая напротив Шинфель, эльфийка крови, носившая острые шипы из сумеречного элементия, сердито посмотрела на орка. – Пока не окажешься узником своего собственного разума, ты не знаешь ничего о настоящем ужасе.\n\nКровь Шинфель подверглась порче во время сражения с Чо'галлом. Теперь руки эльфийки были покрыты черными отметинами в тех местах, где порча поразила кожу. Перенесенные муки лишь усилили ее садистские наклонности.",
+		"Шинфель продолжила:\n\n– Даже пламя повелителя огня затмил дикий хаос, выпущенный наружу Разрушителем… – она умолкла и взглянула на воргена, который хранил зловещее молчание. Зиннин присутствовал при поражении Смертокрыла и не произнес ни слова с тех самых пор. Зиннин сощурился, а затем зарычал на Ритцуна.\n\nКанретад встал из-за стола и сделал глубокий вдох.\n\n– Вот именно поэтому мы здесь. Я не испытываю ни к кому из вас большой любви. Но мы все были свидетелями проявлений этой мощной силы. Только представьте, что нам удалось соединить расплавленную ярость Огненных Просторов с непреодолимой мощью хаоса Смертокрыла... Даже сила Пылающего Легиона не смогла бы тогда сравниться с нашим пламенем!",
+		"Ритцун небрежно положил ноги на стол и рассмеялся.\n\n– И кто же это сделает? Ты, что ли? – зло спросил он. – Не думаю. Ты не принимал участия в сражениях со времен осады Черного храма. Если бы этот Совет не был посвящен в тайну преображения Иллидана, я бы убил тебя только за то, что ты имел наглость вызвать меня сюда.\n\nКанретад сжал зубы, но затем взял себя в руки и ответил:\n\n– Нет. Масштаб этой миссии превышает возможности каждого из собравшихся здесь. Я считаю, что все мы должны разбиться на пары. Ритцун и Зиннин отправятся в Сульфурас. Шинфель и Зелфракс отыщут оставшихся членов культа Сумеречного Молота и... убедят их поделиться своими знаниями.",
+		"Гном с изрытым оспинами лицом ликующе захлопал в ладоши.\n\nКанретад продолжил:\n\n– А когда мы вернемся… ровно через год, то поделимся полученными знаниями с нашими сектами. Так мы добьемся большего, чем если бы отправились поодиночке.\n\nРитцун нахмурился, увидев, как на лицах членов совета отражается жадность, вызванная словами человека.\n\n– Ну и что помешает нам попросту убить своего напарника первой же ночью, добившись успеха?\n\nНахмурившись, Канретад в ответ проворчал:\n\n– Клятва, которую мы все принесем. Если один из членов совета нарушит договор, не вернется или вернется один, остальные найдут и убьют отступника и его напарника и навечно уничтожат их души. Или мы добьемся успеха вместе – или погибнем поодиночке.",
+		"Ритцун был могучим чернокнижником и, пожалуй, мог без труда справиться с Канретадом, но с пятью противниками?.. Мы видели, как он колебался, и каждый из нас потянулся к оружию и книгам заклинаний. \n\n– Отлично, – наконец сказал Рицун. – Я согласен участвовать в этой бессмысленной затее, но сперва хочу узнать, куда направишься ты вместе с этой жалкой Отрекшейся, Джубекой?\n\n– Я? – злорадно ухмыльнулся Канретад. – Я возвращаюсь... в Запределье.",
+	},
+},
+["\"Легенды Гурубаши\", том 3"] = {
+	["english"] = "Legends of the Gurubashi, Volume 3",
+	["pages"] = {
+		"\"Легенды троллей\", том III\n\"Камень Приливов\"\n\nПринадлежит перу \nверховного мага Ансарема Руноплета\nДаларан\n\nВСТУПЛЕНИЕ\n\nДревняя империя Гурубаши была источником многих завораживающих и интригующих легенд, которые, без сомнения, основаны на пристальных наблюдениях за живой природой, поскольку исследования верований и традиций этих троллей указывают на благоговение перед своей естественной средой обитания.\n\nВ то время как я исследовал многие",
+		"аспекты их поклонения змеям в предыдущих томах этой работы, здесь я хотел бы рассмотреть примеры особого отношения троллей к морю.\n\n\nВЕЛИКОЕ МОРЕ\n\nИмперия Гурубаши с трех сторон была окружена морем, так что неудивительно, что морские воды играли значительную роль в жизни их общества. Обширные пространства своей поросшей джунглями империи тролли могли контролировать беспрепятственно, а вот море не желало им подчиняться. Широкое, бескрайнее, оно, несомненно,",
+		"обескураживало могущественных троллей.\n\nЗдесь следует отметить, что последние открытия, по всей видимости, показывают, что тролли мало интересовались исследованием земель, находящихся за Великим морем. Хотя различные племена троллей обитали на всей территории Азерота, Каз Модана и Лордерона, в новооткрытых землях Калимдора и на островах Южных морей следов их цивилизации обнаружено практически не было. Говорит ли это о нежелании",
+		"троллей удаляться от своих исконных владений, или же об их неумении разработать технологии, необходимые для такого путешествия? Ответ на этот вопрос потребует дальнейших исследований, выходящих за рамки моей работы.\n\nОднако же вряд ли тролли могли игнорировать столь крупный объект. И новые находки в обширных тролльских развалинах в Тернистой долине демонстрируют ранее не известный аспект их взаимоотношений с морем.\n\n\nКАМЕНЬ ПРИЛИВОВ\n\nНедавние открытия, произведенные при обследовании",
+		"тролльских развалин в Тернистой долине, позволили обнаружить упоминания о предмете, известном как Камень Приливов. Объединяя различные фрагменты тролльских преданий, мы получим достаточно сложную картину представлений о Камне и его значении для древней империи Гурубаши.\n\nСкладывается впечатление, что Камень Приливов позволял своему владельцу повелевать водой в любых ее видах: реками, дождями, приливами. На основании легенд, связанных с использованием Камня Приливов, я пришел к выводу, что он,",
+		"по сути представляет собой материальное воплощение силы Повелителя вод, могущественного морского элементаля. Как и почему подобный предмет вышел из-под власти Повелителя вод и попал в руки троллей – другой вопрос, ответ на который мне неизвестен.\n\n\nВЛАДЫКА ПРИЛИВОВ\n\nПодобно самим приливам, Камень Приливов был непостоянен: он появлялся в мире троллей и исчезал снова, никогда не оставаясь в их руках дольше жизни одного поколения.",
+		"В преданиях троллей говорится, что в первый раз Камень Приливов попал в империю Гурубаши, будучи найденным воином-троллем, бродившим по побережью Тернистой долины. Воину попался на глаза таинственный синий камень, внутри которого сплетались и струились молочно-белые прожилки. Заинтригованный воин взял камень с собой и продолжил свой путь.\n\nСо временем воин обнаружил, что камень дает ему власть над водами. Он мог вызывать",
+		"элементалей воды, существ, целиком состоящих из воды, что прежде удавалось только могущественным магам Кирин-Тора.\n\nВоин отправился в Зул'Гуруб, в сердце империи, чтобы продемонстрировать свои новые способности императору. Он с легкостью добился аудиенции при дворе после того, как продемонстрировал свое могущество в центре столицы империи. Его способности поразили императора Гурубаши, который немедленно предоставил ему почетное место при дворе, назвав воина Владыкой Приливов. Прежнее его имя",
+		"было забыто.\n\nГодами Владыка Приливов служил империи Гурубаши, заставляя служивших ему элементалей воды сражаться в бою и управляя течением воды в Тернистой долине во благо империи. Но с годами Владыка Приливов стал более склонен к уединению. Он все чаще и чаще надолго удалялся от двора.\n\nВладыка Приливов скрывал от любопытных глаз придворных свою страшную тайну. Способности, которые дал ему Камень Приливов, сопровождало проклятие. С ходом лет",
+		"Владыка Приливов таял. С каждым приливом и отливом он терял часть себя, утрачивал свою телесную форму – исчезая и снова появляясь, – пока, наконец, в свой смертный час он не отправился на берег, на котором нашел Камень, и не вошел в море, исчезнув в последний раз.\n\nНесколько поколений спустя Камень Приливов снова вынесло прибоем на берега Тернистой долины, и тролль, принесший его в Зул-Гуруб, был избран новым",
+		"Владыкой Приливов. Так продолжалось много веков: Камень выносило на берег, а потом Владыка Приливов уходил в море.\n\n\nКамень Приливов периодически упоминается в современных источниках, но почему столь могущественный предмет появляется с такой регулярностью и кто тому причиной, остается загадкой.",
+	},
+},
+["Письмо Лор'темара Терона"] = {
+	["english"] = "Letter from Lor'themar Theron",
+	["pages"] = {
+		"Уважаемые главы Орды!\n\nЯ, Лор'темар Терон, правящий лорд Кель'Таласа, с превеликим удовольствием сообщаю вам о разгроме военачальника Плети, известного нам под именем Дар'Кхан Дратир.\n\nНа прошлых переговорах син'дорай много раз попрекали его присутствием на наших землях. Мы надеемся, что вышеупомянутое событие снимет все вопросы, имевшиеся у уважаемых соправителей.\n\nЛор'темар Терон &lt;стоит подпись&gt;",
+		"\n\nP.S. Нашему магистру прислали из Запределья ответ на вопрос Тралла. Ответ утвердительный.",
+	},
+},
+["Письмо от Саурфанга"] = {
+	["english"] = "Letter from Saurfang",
+	["pages"] = {
+		"&lt;имя&gt;!\n\nЕсли ты читаешь это письмо, значит, с тобой все в порядке – во всяком случае, с твоим зрением.\n\nПрошу прощения за секретность, но Агмар установил жесткий контроль за корреспонденцией – слишком уж много тут развелось воров и шпионов, как ясно следует из плакатов \"Разыскивается\". А я хотел обсудить с тобой крайне деликатные вопросы, которые могли бы быть неверно истолкованы новыми стражниками. \n\nДля солдата Орды потеря – это все. Потеря – это смерть, и ее не избежит никто из нас. Мы можем только надеяться, что покинем мир с честью и достоинством.",
+		"Но победа... Победа многозначна. Как ты уже &lt;сам мог/сама могла&gt; убедиться, Кор'крон набрал полную силу. Вождь отправил свой элитный отряд воинов, чтобы обеспечить нашу победу в Нордсколе. Вместе с тобой и другими героями они теснят Короля-лича и его войска к неизбежной пропасти поражения. С каждым убитым тобой противником мы еще на шаг приближаемся к достижению нашей цели – избавить мир от Артаса и Плети. \n\nНо здесь кроется сложная дилемма. Видишь ли, наши войска в Нордсколе возглавляет молодой Адский Крик, и его победы воодушевляют войска Орды по всему Азероту.",
+		"К несчастью, Адский Крик действует слишком грубо. Хотя каждая выигранная битва оправдывает его методы, она так же подводит его все ближе и ближе к тому месту, куда не ступала наша нога уже многие десятки лет: к средоточию тьмы.\n\nЯ послал своего сына принять командование нашими войсками у Врат Гнева. Я знаю, что он будет сражаться достойно, и храню в сердце надежду на то, что его смелость не останется незамеченной среди наших войск. Он – моя душа и мой меч, разящий врагов в тех краях, где я быть не могу...Ты же будешь моими глазами и ушами. Вместе мы добьемся победы.\n\nКровь и гром... Пусть они ознаменуют твое появление.\n\nСаурфанг",
+	},
+},
+["Приглашение в Храм Драконьего Покоя"] = {
+	["english"] = "Letter of Introduction to Wyrmrest Temple",
+	["pages"] = {
+		"Моя Королева!\n\nМы обнаружили, что синие драконы более не блокируют пересечение силовых линий в Садах Лунного Покоя. Они пытались разрушить замковый камень с помощью волноловов, но вместо того, чтобы отвести энергию назад, в нексус, они воспользовались ей, чтобы сбежать назад, в Лазуритовое святилище драконов, заключив в земле остатки силы.\n\nПолагаю, вы понимаете, какое ужасное воздействие оказали пучки магической энергии, пронзившие почву. Пострадали древние обитатели лесов, Калу'аки и прочие существа, обитающие в этих краях. К счастью для нас, &lt;стоящий перед вами/стоящая перед вами:r&gt; |3-6(&lt;раса&gt;) по имени &lt;имя&gt;, уже &lt;разобрался/разобралась&gt; с источником этих бед.\n\nПо моему скромному мнению, &lt;имя&gt; может пригодится Храму Драконьего Покоя в решении проблем, с которыми мы сейчас столкнулись. Нижайше прошу рассмотреть &lt;его/ее&gt; кандидатуру в качестве нашего союзника.\n\nС глубочайшим уважением,\n\nМодера\nВерховный маг и член Шести",
+	},
+},
+["Письмо с печатью Сильваны"] = {
+	["english"] = "Letter Sealed by Sylvanas",
+	["pages"] = {
+		"Уважаемые главы Орды!\n\nЯ, Лор'темар Терон, правящий лорд Кель'Таласа, с превеликим удовольствием сообщаю вам о разгроме военачальника Плети, известного нам под именем Дар'Кхан Дратир.\n\nНа прошлых переговорах син'дорай много раз попрекали его присутствием на наших землях. Мы надеемся, что вышеупомянутое событие снимет все вопросы, имевшиеся у уважаемых соправителей.\n\n&lt;Подпись&gt;Лор'темар Терон",
+		"P.S. Нашему магистру прислали из Запределья ответ на вопрос Тралла. Ответ утвердительный.\n\n&lt;На письме стоит печать леди Сильваны Ветрокрылой&gt;",
+	},
+},
+["Письмо к Элло"] = {
+	["english"] = "Letter to Ello",
+	["pages"] = {
+		"Буквы вспыхивают на записке и исчезают. Уловить их смысл невозможно...",
+	},
+},
+["Записи магистра Блеклых Сумерек"] = {
+	["english"] = "Magister Duskwither's Journal",
+	["pages"] = {
+		"Я очень надеюсь, что мои изыскания помогут мне найти дополнительный источник магической энергии, который будет безопасен для моего народа. Теперь, когда Солнечного Колодца нет, нам надо научиться жить по-новому, не поддаваясь соблазнам магических чар.\n\nЯ верю, что судьба син'дорай еще станет примером, вдохновляющим всех!",
+		"Пока мне не везет. То небольшое количество магии, что я добыл, должно быть, утекло через Утес. Но у меня еще есть несколько интересных идей. Я привлеку к своим изысканиям своих лучших учеников и посмотрю, чего мы сможем добиться.",
+		"Давненько мне не приходилось здесь ничего писать. У нас по-прежнему никаких результатов. Вчера до меня дошел слух, что один из учеников на Острове Солнечного Скитальца, Фелендрен, не подчинявшийся своим наставникам, заразился этой ужасной болезнью.\n\nПридется удвоить усилия.",
+		"По-прежнему безуспешно. Но я не собираюсь сдаваться. Син'дорай не могут позволить себе полагаться на чью-либо магию, особенно сейчас, когда противники окружают нас.\n\nЯ разрабатываю совершенно новый метод, и если все пойдет по плану, он позволит мне очистить те источники магии Скверны, которые мне удалось обнаружить. Но действовать нужно осторожно.",
+		"Это удивительно! Хотя количество магии, которую нам удалось извлечь, очень скромное, это уже большой шаг вперед. Я немедленно привлеку всех учеников к изучению моего нового метода.\n\nЕсли нам повезет, мы сможем усовершенствовать процедуру и убить сразу двух зайцев: у нас в руках будет практически нескончаемый источник энергии, и мы сможем противостоять магии Скверны.",
+		"Случилась беда! Во время одного из экспериментов мой лучший ученик Телетайон заразился и впал в то же состояние, что и многие из моих собратьев. Мои попытки помочь ему не увенчались успехом: было слишком поздно. У меня не оставалось выбора, и мне пришлось избавить его от страданий.\n\nСлишком дорогой ценой далось нам это открытие.",
+		"Я не могу больше этого выносить… еще двое учеников погибли. Мы же были так осторожны… Не понимаю, в чем дело.\n\nПридется остановить исследования и начать все сначала.",
+		"Слишком поздно. Втайне от меня мой третий ученик продолжал наши неудачные исследования и вовлек в них еще нескольких. Я попытаюсь не дать ситуации выйти из-под контроля, но сначала нужно отстранить от исследования всех здоровых учеников.\n\nЯ скажу им, что уезжаю в Обитель Странников в надежде разработать новый подход к нашей проблеме.\n\nИз-за моей оплошности уже многие погибли, и мне нужно постараться искупить вину.",
+	},
+},
+["Документы маршала Макбрайда"] = {
+	["english"] = "Marshal McBride's Documents",
+	["pages"] = {
+		"РАПОРТ: Кобольды\n\nРядом с Долиной Североземья наблюдается повышенная активность кобольдов. Все кобольды были оттеснены ордой обезумевших орков клана Черной горы.",
+		"ОТЧЕТ: ОРКИ КЛАНА ЧЕРНОЙ ГОРЫ\n\nБанды орков клана Черной горы появились в долине. Похоже, за этой атакой последует что-то еще более серьезное. Необходимо известить мирового судью Соломона в Приозерье.",
+		"РЕКОМЕНДАЦИЯ:\n\nНоситель данного документа, послуживший Североземью с рвением и отличием, должен быть награжден званием делегата в армии Штормграда. Я уверяю вас, что вы найдете его полезным в Элвиннском лесу.\n\nПодпись:\nМаршал Дуглас Макбрайд, \nАрмия Штормграда, Североземья.",
+	},
+},
+["Любовное послание Мейбелл"] = {
+	["english"] = "Maybell's Love Letter",
+	["pages"] = {
+		"Томми Джо!\n\nМое сердце увядает с каждой минутой, проведенной вдали от тебя. Ах, если бы только наши родственники могли забыть о своей глупой вражде и преступлениях и понять, что единственное настоящее преступление – это их взаимная ненависть! Ненависть убивает, и, боюсь, в это тяжелое время она овладеет не только нашими семьями.\n\nЕсли они это поймут, мы сможем быть вместе. Надеюсь, так оно и будет, я живу мечтами об этом.\n\nС любовью,\nМейбелл",
+	},
+},
+["Заказ Морриса"] = {
+	["english"] = "Morris's Order",
+	["pages"] = {
+		"По приказу верховного палача Зуганда ниже я привожу список предметов, требуемых для пополнения запаса Гробницы:\n\n12 длинных мечей\n9 кинжалов\n8 круглых щитов\n15 топоров\n1000 стрел\n\nПоставку запасов из данного списка считать личным распоряжением Темной Госпожи. Те, кто ответственен за выполнение приказа, будут находиться под Ее неусыпным наблюдением, как и те, кто будет противиться либо еще как-нибудь препятствовать Ее воле.",
+	},
+},
+["Записки Пустолога"] = {
+	["english"] = "Netherologist's Notes",
+	["pages"] = {
+		"&lt;В конце невообразимо скучной книги, в которой изложена всякая ученая бессмыслица, на последней странице написано неразборчивым почерком…&gt;\n\nПростите, шеф. Судя по всему, от Пустоверти скоро ничего не останется. Возможно, взрыв поглотит и все остальное Запределье.\n\nЯ не уверен на все сто, но, по-моему, во всем виноваты эти эльфы крови с их темными делишками в Манагорнах.\n\n Хорошо, что вы строите эту ракету!\n\n-- Медноклеппер\n\np.s. – а в ракете случайно не найдется места для меня? Вам наверняка понадобится хороший пустолог во время путешествия по Круговерти Пустоты!",
+	},
+},
+["Указания Нитрина"] = {
+	["english"] = "Nitrin's Instructions",
+	["pages"] = {
+		"Чтобы настойка позволила увидеть мертвецов, нужно собрать кое-какие ингредиенты.\n\nПрежде всего нужен глаз горного гронна из западного Награнда, что возле проклятых кузниц Пылающего Легиона, к югу от холма Боевого Молота.\n\nТакже понадобятся большие ветрухи, которые можно найти на западе Награнда. Подойдут только безупречные особи!\n\nНаконец, нужен жир старого копытня, обитающего на западе и юго-западе Награнда.\n\nСобери эти ингредиенты и принеси их мне! Торопись!\n\n-Нитрин",
+	},
+},
+["Приказы Дракуру"] = {
+	["english"] = "Orders From Drakuru",
+	["pages"] = {
+		"Прислужники, слушайте зов вашего повелителя! Король-лич даровал Дракуру всю власть над армиями Плети в Зул'Драке. Наш приказ – убить всех!\n\nУМЕРЕТЬ ДОЛЖНЫ ВСЕ!\n\nВсе трупы будут обрабатываться в Мертвых полях и посылаться к Принцу Навариусу в Зерамас для превращения в воинов Плети! Ничто не должно пропасть зря!\n\nСкоро мы будем пить кровь пророков и станем самым сильными! Плеть раздавит Зул'Драк и Гундрак!",
+	},
+},
+["Донесение Ориона"] = {
+	["english"] = "Orion's Report",
+	["pages"] = {
+		"Генерал!\n\nМы держим оборону у Ступеней Судьбы, но Легион не жалеет на нас своих солдат. Наверное, у них где-то поблизости расположена военная база, которую еще не обнаружили наши разведчики. Боюсь, Легион прорвет нашу оборону – даже несмотря на то, что на нашей стороне войска Альянса. Пошлите нам на помощь всех, кого сможете, иначе врата будут потеряны и мы останемся в этом кошмарном мире навсегда.\n\nГенерал-лейтенант Орион",
+	},
+},
+["Пандаренский свиток"] = {
+	["english"] = "Pandaren Scroll",
+	["pages"] = {
+		"Молодец, &lt;житель/жительница&gt; дальних земель.\n\nПодружившись с хозеном, ты следуешь по пути, о котором мы говорили в последний раз.\n\nНе забывай про медитацию, и, возможно, наша земля откроет тебе и другие свои тайны.\n\nЯ приглашаю тебя в нашу деревню Цветущая Заря. Жители деревни будут очень рады пообщаться с человеком, приплывшим из-за туманов.\n\nХранитель истории Чо",
+	},
+},
+["Подмоченные страницы"] = {
+	["english"] = "Partially Soaked Pages",
+	["pages"] = {
+		"&lt;Большая часть страниц намокла. Можно разобрать только несколько строк.&gt;",
+		"Я даже не мог себе представить, что сражение окажется настолько страшным.\n\nПовсюду раздается грохот артиллерии Орды.\n\nИх снаряды дождем сыплются на палубу, и вопли команды заглушает грохот ответного огня.\n\nАдмирал Тейлор велел мне оставаться в укрытии, пока не кончится бой.\n\nСнаружи у моей двери поставили охрану.\n\nЯ не нахожу себе места. Я должен быть там, наверху, я должен сражаться!",
+		"Те, кто не погиб в сражении, стали жертвами бури, пришедшей следом.\n\nПока наши потрепанные корабли шли сквозь дождь и туман, почти все тяжелораненые умерли.\n\nЯ делал все, что моих силах, чтобы помочь им, но этого оказалось недостаточно.\n\nПочему я никогда не успеваю спасти друзей?",
+		"Я проснулся посреди ночи от громкого звука, похожего на гром.\n\nКорабль несло на скалы.\n\nОн накренился и затрещал, на палубе раздавались крики.\n\nЯ бросился к двери каюты, но мой телохранитель запер меня внутри.\n\nЯ ничего не могу сделать – остается только ждать.",
+		"Флагманский корабль вынесло на незнакомый берег. Корабль неподвижен, снаружи царит полная тишина.\n\nЗа мной никто не пришел, боюсь, команда мертва.\n\nКаюта заполняется водой, так что мне скоро придется найти способ выбраться отсюда.\n\nЕсли кто-то из солдат Альянса найдет эту запись, знайте, что я, принц Андуин Ринн, жив.\n\nЯ собираюсь сойти на берег в поисках еды и в надежде на помощь.\n\nПрошу передать моему отцу, что со мной все в порядке\".",
+	},
+},
+["Очищая луковицу"] = {
+	["english"] = "Peeling the Onion",
+	["pages"] = {
+		"Как очистить луковицу\nПодробное руководство по сражению с Грозовой Вершиной\n-Написано Дрек'Таром\n\nНа этих страницах читатель найдет обширные сведения о политике и боевой тактике. Хороший солдат – это тот солдат, что понимает важность накопленного опыта. Пусть же эта книга послужит читателю руководством по сражению за Альтеракскую долину.",
+		"Глава 1 – Линия фронта\n\nАтаковать армию Грозовой Вершины – все равно что снимать кожицу с луковицы. Чтобы пробраться к сердцевине, нужно сперва разделаться с внешними слоями.\n\nПередняя линия обороны, состоящая в основном из горных пехотинцев Грозовой Вершины и Часовыми Альянса, связана с Капитанским Укрытием. Снабжает войска и посылает им в случае осады подкрепление Капитан Балинда Каменный Очаг. Срази капитана, и передовые линии падут.",
+		"Глава 2 – Башни-близнецы\n\nУчти: Вандар Грозовая Вершина – враг умный и хитрый. Разрушив передовые укрепления, надо помнить о том, что впереди еще вторая линия обороны. Это – башни-близнецы Каменный Очаг и Ледяное Крыло, из которых командиры управляют стражниками Грозовой Вершины вне Дун Болдара и патрулями Грозовой Вершины.",
+		"Будь осторожен, воин, ведь обе эти башни сильно укреплены и управляются элитным командорами Вандара. И если твои войска прорвут укрепления, сделай так, чтобы командор в башне был… устранен. Это – следующий важный шаг на пути к победе над Грозовой Вершиной.",
+		"Глава 3 – Четыре Командора\n\nТретий слой луковицы под названием Грозовая Вершина – четыре Командора. В этом отношении Вандар перенял нашу славную тактику обороны Северного Волка. Сам он, конечно, считает по-другому… Но я отвлекся. \n\nЧетыре Командора повелевают Стражниками Грозовой Вершины, неусыпно охраняющими Дун Болдар. Устрани их всех, и Стражники падут.\n\nПосле этого останется лишь один, последний слой.",
+		"Глава 4 – Укрытия Дун Болдара\n\nКак ты, несомненно, заметил, линии обороны Грозовой Вершины выстроены так, чтобы не дать массированному удару сокрушить сразу всю армию. Сразу отвечу на твои вопросы. Да, именно так организована и наша оборона, и нет, менять ее расположение я не стану. Они переняли все у нас, с чего бы нам меняться?",
+		"Так о чем я? В общем, Укрытиями Дун Болдара (расположены они в Дун Болдаре) управляют защитники из клана Грозовой Вершины – лучшие стражи Вандара, которым он доверяет больше всех. Уничтожь две башни, и подкрепление, которее выходит на помощь Вандару, прекратит свое существование.",
+		"Эпилог\n\nПроделав все это, ты доберешься до самой цели, до центра луковицы. Вандар Грозовая Вершина будет один и безо всякой защиты. Правила ведения войны требуют нам предложить ему сдаться в плен, прежде чем убивать. Поэтому, как увидишь его, обязательно предложи ему сдаться… а потом убей.",
+	},
+},
+["Письмо о найме"] = {
+	["english"] = "Recruitment Letter",
+	["pages"] = {
+		"Призыв на службу в Орду\n\nСила и мастерство предъявителя сего помогли ему совершить немало славных дел во имя Орды. Его следует немедленно назначить на работу на Перекресток.\n\nС глубоким почтением,\nТакрин Торитель Путей",
+	},
+},
+["Бумаги реликвария"] = {
+	["english"] = "Reliquary Papers",
+	["pages"] = {
+		"Всем, кого это касается!\n\nРохан Солнечный Парус, высокопоставленный представитель Реликвария и глава экспедиции Солнечного Паруса, ищет опытных искателей приключений, способных оказать помощь в археологических изысканиях в южной части Выжженных земель. Работа хорошо оплачивается.\n\nЦелью экспедиции Солнечного Паруса является поиск, перепись и сохранение любых магических артефактов, которые удастся найти в районе Проклятого леса. Раньше известная как Гниющий Шрам, эта область была недавно возвращена к жизни друидом-воргеном и заросла деревьями и кустарниками. За подробностями обращаться к Рохану или Кларии Солнечный Парус.",
+	},
+},
+["Руническая записка"] = {
+	["english"] = "Rune-Inscribed Note",
+	["pages"] = {
+		"Приветствую тебя, &lt;юный/юная:c&gt; |3-6(&lt;класс&gt;). Ветер нашептал мне, что ты &lt;пришел/пришла&gt;. Земля рассказала о твоей силе. И теперь древние духи говорят о том, что ты &lt;готов/готова&gt; учиться. Наш народ нуждается в мудрых и могущественных наставниках – и находит их среди нас. Если хочешь, я научу тебя большему.\n\nИщи меня в Лагере Нараче на плато Красного Облака – нам есть, о чем поговорить.\n\n-Мила Рассветная Странница, наставница шаманов",
+	},
+},
+["Рунический пергамент"] = {
+	["english"] = "Rune-Inscribed Parchment",
+	["pages"] = {
+		"Лок-тар, &lt;брат/сестра&gt;. Стихии указали на тебя и поручили мне показать тебе путь шамана. Духи наших предков смотрят на нас и гордятся тем, что ты &lt;вступил/вступила&gt; в наши ряды.\n\nКогда будешь &lt;готов/готова&gt;, найди меня у входа в Логово. Я обучаю там наших собратьев. Да будет тебе попутный ветер.\n\nШикрик, наставница шаманов",
+	},
+},
+["Свиток с предсказанием"] = {
+	["english"] = "Scroll of Auspice",
+	["pages"] = {
+		"Когда небеса загудят в смятенье\nИ страх поднимется из долин,\nВместилище нашего избавленья\nРазбей до самых его глубин.\n\nКинжалы злые великих, статных\nТенью и деревом ты свяжи.\nЧтоб ярость бурь королей закатных\nНазло всему продолжала жить.",
+		"Пускай обещание злата купило\nЗаклятья, что силу хранят в веках.\nСвяжи их чары, мой друг, с той силой,\nЧто душит огонь и былого страх.\n\nПостигнув этот рецепт священный,\nИсполни точно его совет.\nОмой плоды его Кровью Древних,\nИ война кошмаров сойдет на нет.",
+	},
+},
+["Запечатанная записка"] = {
+	["english"] = "Sealed Note",
+	["pages"] = {
+		"&lt;имя&gt;,\n\nВ первую очередь, приношу тебе свои извинения за эту таинственность. Но осторожность в этом деле совершенно необходима.\n\nМинувшие события научили нас тому, что ордынцы порой не уделяют должного внимания планированию своих действий, а также несдержанны.\n\nМы собираемся выдвинуться к следующей цели и избежать бессмысленных потерь.\n\nТебе удалось зарекомендовать себя надежным и опытным союзником. Поэтому мы хотим предложить тебе как можно скорее присоединиться к нам в Долине Императоров, что на Вершине Кунь-Лай.\n\nНадеемся на скорую встречу.\n\nТвой друг из Луносвета.",
+	},
+},
+["Донесение Сенира"] = {
+	["english"] = "Senir's Report",
+	["pages"] = {
+		"Отчет о положении дел с троллями из племени Мерзлогривов в регионе Дун Морога\n\nБольшая часть троллей, обитающих в Дун Мороге, сконцентрирована в форте Мерзлогривов, горной пещере на западной границе. Их численность может вызывать некоторые опасения, однако, похоже, они не собираются покидать свою пещеру. Вне всяких сомнений, они не хотят вызывать гнев дворфов и рисковать своей шкурой. Они всего лишь обороняют свою территорию, и",
+		"не представляют для нас реальной угрозы до тех пор, пока мы не нарушаем их границ. Возможно, народу дворфов неприятна сложившаяся ситуация, но, учитывая дефицит военных сил, будет благоразумнее перенести решение этой проблемы на более поздний срок и бросить все усилия на борьбу с троггами и дворфами Черного Железа.\n\nВ письме вы также найдете отчет моего брата Грелина о Старой Наковальне.\n\nПодписано:\nСенир Белобород",
+		"Отчет о положении дел с троллями из племени мерзлогривов в регионе Холодной долины.\n\nПодготовлен Грелином Белобородом, особым посланником Сената\n\nЯ потратил немало времени, наблюдая за деятельностью племени Мерзлогривов в Холодной долине, и полагаю, что они не представляют особой угрозы дворфским поселениям в этом районе. Более того, эту угрозу можно уничтожить даже без особой поддержки со стороны армии. Учитывая помощь горных пехотинцев, уже находящихся в",
+		"Холодной долине и наемников (нанятых на деньги, выделенные мне старейшиной Сената), я уверен, что проблема будет решена в ближайшее время. \n\nВся кампания официально одобрена королем Бронзобородом.",
+	},
+},
+["Обычное письмо"] = {
+	["english"] = "Simple Letter",
+	["pages"] = {
+		"Скажи-ка мне, |3-6(&lt;класс&gt;), ты когда-нибудь &lt;слышал/слышала&gt; боевой клич орков? А может быть, ты &lt;защищал/защищала&gt; свой дом от гноллов, желающих перегрызть глотку тебе и твоим близким? Жутковато звучит, не правда ли?\n\nЧто ж, тебе пригодится моя помощь. Меня можно найти в североземском аббатстве. Мои знания стоят недешево, но если ты достаточно &lt;опытен/опытна&gt;, я могу научить тебя приемам и хитростям, которые помогут тебе защищать Штормград и наши земли.\n\nЛлан Бишер, наставник воинов",
+	},
+},
+["Простая записка"] = {
+	["english"] = "Simple Note",
+	["pages"] = {
+		"Во многих племенах способность разговаривать с умершими предками считается очень ценным даром. Но ты, |3-6(&lt;класс&gt;), &lt;должен/должна&gt; помнить, что твой дар не менее ценен. Те, кто говорит с духами, не могут поднять тяжелое оружие или вытерпеть телесные страдания, причиняемые тайной магией. Ты – можешь. Ты &lt;сильный/сильная&gt;. Я помогу тебе стать еще сильнее. Ищи меня в Лагере Нараче.\n\n-Харутт Громовой Рог, наставник воинов",
+	},
+},
+["Пергамент"] = {
+	["english"] = "Simple Parchment",
+	["pages"] = {
+		"Тром-ка, воин. Меня не интересуют твои подвиги – это все дела прошлого. Когда ты последний раз &lt;убивал/убивала&gt; человека? Наверняка давно. Ты теряешь хватку без дела.\n\nМне &lt;нужен напарник/нужна напарница&gt;. А взамен я дам тебе то, что тебе нужно, – полезную тренировку. Когда до тебя дойдет, что я дело говорю, – приходи. Я буду ждать тебя под навесом прямо возле Логова.\n\n-Франг, наставник воинов",
+	},
+},
+["Простая руна"] = {
+	["english"] = "Simple Rune",
+	["pages"] = {
+		"Клянусь бородой Магни, &lt;имя&gt;, нам нужно многое обсудить, а времени очень мало. Как можно скорее найди меня в Старой Наковальне, что в Холодной долине. Там и начнем обучение.\n\nЯ мог бы открыть тебе секреты быстроты движений… но об этом говорить еще рано. Сначала тебе нужно научиться правильно держать топор, привыкнуть к весу доспехов и запаху пота, заливающему лицо в тяжелом бою… Для начала этого будет достаточно.\n\n-Тран Корман, наставник воинов",
+	},
+},
+["Простой свиток"] = {
+	["english"] = "Simple Scroll",
+	["pages"] = {
+		"Многие наши соплеменники считают, что тайная магия и чародейство – единственные источники силы. Но ты-то так не думаешь, |3-6(&lt;класс&gt;)? Клинки – наша магия, щиты – наши обереги, броня – наша мудрость.\n\nБудучи мертвыми, мы сохраняем и умножаем свою силу. Ищи меня в таверне в Похоронном Звоне. Там мы обо всем и поговорим.\n\n-Даннал Штерн, наставник воинов",
+	},
+},
+["Простой знак"] = {
+	["english"] = "Simple Sigil",
+	["pages"] = {
+		"Надеюсь, ты &lt;получил/получила&gt; мой знак, |3-6(&lt;класс&gt;). Я пишу тебе, потому что нашему народу нужны мечники, копьеносцы и другие отважные воины. С тех пор как нам стало известно о других расах Азерота, мы еще больше нуждаемся в сильных защитниках.\n\nЭто твой путь. Твое призвание. Я расскажу тебе больше, но только при встрече с глазу на глаз. Ищи меня на нижнем уровне Альдрассила.\n\n-Алайссия, наставница воинов",
+	},
+},
+["Записка сестры Аквинны"] = {
+	["english"] = "Sister Aquinne's Note",
+	["pages"] = {
+		"Ньома!\n\nТы просто не представляешь, как я обрадовалась этой книге рецептов! Все описанные там блюда именно такие, какими я их помню. Хочу как можно скорее попробовать новые рецепты.\n\nЕсли будет время, обязательно приезжай ко мне в Дарнас, приготовлю что-нибудь вкусненькое.\n\nТвоя подруга,\nАквинна",
+	},
+},
+["Отчет с Заставы Расщепленного Дерева"] = {
+	["english"] = "Splintertree Post Report",
+	["pages"] = {
+		"Мрачный Клык!\n\nШлю тебе этот доклад из Заставы Расщепленного Дерева; новости неутешительны.\n\nЗаставу недавно атаковали калдорай, что и не позволило нам отправить сообщение раньше.\n\nОсада уже снята, но наши потери велики, и новое нападение неизбежно.\n\nМы должны убивать эльфов до тех пор, пока это возможно.\n\n- Кардак",
+	},
+},
+["Донесение шпиона"] = {
+	["english"] = "Spy's Report",
+	["pages"] = {
+		"--День 13\nДвижение войск у Терамора усилилось. Крупные отряды людей оставили город и спешно идут на запад.\n\n--День 14\nИз города уходят все новые отряды. Я проследил за одной маленькой группой и видел, как все в ней сняли униформу, удалившись от Терамора на расстояние полета стрелы. Может быть, они дезертиры?\n\n--День 15\nСегодня я слышал, как солдаты в Тераморе говорили о часовых, оставляющих посты. Должно быть, мои подозрения о дезертирах верны",
+		"--День 16\nУлег и Таргил вернулись с задания в доках Терамора. В порту они видели новый корабль – \"Бешеный Воробей\". Корабль прибыл из Гавани Менетилов.\n\nЗавтра Улег и Таргил вернутся в доки и прокрадутся на корабль. Они надеются найти там политические документы, раскрывающие отношения Терамора и Альянса.",
+		"--День 17\nУлег вернулся с задания. Он потерпел неудачу, а Таргил попал в плен. Я послал Улега доставить это сообщение Назиру.\n\nЯ останусь здесь. Я видел, что от побережья Терамора все чаще отходят корабли. Продолжу вести наблюдение и буду лично сообщать о всяком заслуживающем упоминания событии.",
+	},
+},
+["Грозовая Вершина: требование"] = {
+	["english"] = "Stormpike's Request",
+	["pages"] = {
+		"Мастер Длиннобородый, как тебе известно, мы в клане Грозовой Вершины разбираемся в отличной работе, так что качество твоих щитов для нас не новость.\n\nИменно поэтому я хотел бы заказать у тебя щит. Описание его я привожу на следующей странице:",
+		"-Идеально круглый, от центра до края – локоть длины.\n\n-По краю – заклепки. Серебряные.\n\n-В центре – большой шип, диаметр основания – три пальца. Серебряный.\n\n-Сам щит из дуба, укрепленный железом.\n\n-На наружном ободе выгравировать мое имя – Грингер Грозовая Вершина.",
+		"Оплата будет произведена обычным способом. И расплатись с подателем сего письма за доставку. Эти деньги можешь прибавить к цене щита.\n\n\n\nПремного тебе благодарен,\n--Грингер Грозовая Вершина.",
+	},
+},
+["Знак брони Штормграда"] = {
+	["english"] = "Stormwind Armor Marker",
+	["pages"] = {
+		"Этот знак брони можно обменять на изделие из кожи или ткани у Тимберлейнов на Лесопилке Восточной долины.",
+	},
+},
+["Запачканное письмо"] = {
+	["english"] = "Tainted Letter",
+	["pages"] = {
+		"Частенько последователи Священного Света запугивают тех, кто интересуется настоящей силой, пытаясь убедить их, что тайная магия непознаваема. Но не все, что приходит извне, является злом. Не все сущности стремятся подчинить себе других. Если у тебя будет достаточно силы, те же самые сущности станут твоими слугами.\n\nОб этом я хотела бы поговорить с тобой. Жду тебя на кладбище справа от аббатства.\n\n-Друзилла ла Салле, наставница чернокнижников",
+	},
+},
+["Гниющий пергамент"] = {
+	["english"] = "Tainted Parchment",
+	["pages"] = {
+		"&lt;имя&gt;, я пишу это послание самыми могущественными чернилами, какие только могу создать. Они принесут проклятье любому, кроме тебя. Я вызываю могущественных демонов Круговерти Пустоты просто для развлечения. Я убиваю своих врагов и во сне и на поле боя. Теперь и ты видел могущество, которое можно обрести на моем пути. Мои братья этому рады.\n\nКогда доберешься, найдешь меня в глубине Логова. Нам надо поговорить о важных вещах.\n\nНарток, наставник чернокнижников",
+	},
+},
+["Оскверненная руна"] = {
+	["english"] = "Tainted Rune",
+	["pages"] = {
+		"ВНИМАНИЕ:\n\nНичего не говори! Не оглядывайся! За тобой могут следить.\n\n&lt;имя&gt;, меня зовут Сарипал Дымоварь. Я обучаю тех, кого интересует мудрость и сила из… из других миров. Меня попросили связаться с тобой и предложить тебе услуги учителя магии.\n\nКогда будешь &lt;готов/готова&gt;, ищи меня на задворках Старой Наковальни.\n\nСарипал Дымоварь, наставница чернокнижников",
+	},
+},
+["Грязный свиток"] = {
+	["english"] = "Tainted Scroll",
+	["pages"] = {
+		"Мы в жутком положении, ты не находишь, &lt;имя&gt;? Зараженные чумой Артаса, отвергнутые всеми, кто нас любил. Да, прекрасная Сильвана вернула нам свободу воли, но что это дает нам сейчас? Мы сменили хозяев, но остались рабами.\n\nА если мы сами станем хозяевами? Ты ведь знаешь, о чем я думаю, правда?\n\nМы чужие даже среди Отрекшихся, &lt;имя&gt;. И потому нам обязательно нужно встретиться. Я буду в церкви Похоронного Звона.",
+	},
+},
+["Послание баронессы"] = {
+	["english"] = "The Baroness' Missive",
+	["pages"] = {
+		"Картис, Омасум!\n\nПришло время ритуала, о котором мы говорили. Я покидаю Стратхольм, чтобы заняться пленником в центральной бойне Чумного леса. Вы отвечаете за внешнюю охрану. Если вы меня подведете, то мой господин заберет ваши жизни. Если все будет в порядке, еще один брат-дворф присоединится к вам.\n\n- Анастари",
+	},
+},
+["Битва за Хилсбрад"] = {
+	["english"] = "The Battle for Hillsbrad",
+	["pages"] = {
+		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Дневник клерка Горация Белоконя</H1><BR/><H1 align=\"center\">Битва за Хилсбрад</H1></BODY></HTML>",
+		"День 12-й\n\nНам только что поступило донесение о том, что Южнобережье пало. Военную махину Отрекшихся не остановить. Мы не в силах противостоять их химическому оружию.\n\nНесмотря на отсутствие всякой надежды, я буду вести этот дневник. Пусть потомки узнают о кровавых злодеяниях наших дней.",
+		"День 16-й\n\nМногие крестьяне и жители Хилсбрада покинули свои дома. Некоторые из них попытались уйти на восток, на Нагорье Арати. К сожалению, им это не удалось. Все беженцы погибли еще до того, как те дошли до Стены Торадина.\n\nМножество людей ушло на север в поисках пристанища в Серебряном бору. Они беспечно устремились прямо в стан врага! В своем безумии они заявили, что воргены отныне находятся на нашей стороне.\n\nПоследнее, что я узнал об их судьбе, это то, что они обосновались на острове Фенриса. С тех пор от них не поступало никаких вестей.\n\nВоргены? Возможно ли это...",
+		"День 19-й\n\nМы знали, что время на исходе. Мы эвакуировали всех, кого можно, но Бернсайд заявил, что он не покинет Хилсбрад. Мы решились остаться с ним плечом к плечу.\n\nМы – это мировой судья Бернсайд, гражданин Вилкс, кузнец Веррингтан и несколько фермеров: Гетс, Калаба и Рей со своими помощниками.",
+		"День 20-й\n\nХилсбрадских полей больше нет. Те, кто не успел бежать, попали в плен. Отрекшиеся считают нас своими военнопленными. Нас заставляют работать на их новой плантации.",
+		"День 25-й\n\nОни подожгли наши фермы и заставили нас смотреть на это. С завтрашнего дня начинаются строительные работы. Это место не походит ни на одну ферму или плантацию, что я видел ранее.",
+		"День 40-й\n\nСтроительство плантации практически подошло к концу. Это место абсолютно не похоже на те плантации, что я видел в прошлом.",
+		"День 41-й\n\nСегодня прибыл надзиратель Штиллец, в ведении которого будет находиться плантация. Он приказал нам построиться, после чего провел медосмотр.\n\nНикто не понимает, что происходит.",
+		"День 45-й\n\nМы приступили к работам на Топких полях, где в вонючей воде и жиже выращивают ядовитые грибы.",
+		"День 50-й\n\nДо меня доносятся крики с особняка надзирателя. Стали пропадать люди",
+		"День 52-й\n\nСлышал, как охранники в разговоре обронили пару слов о Рей, Гетсе и Калабе. Уверен, что с ними случилось нечто ужасное.",
+		"День 60-й\n\nТе, что еще остались в живых, сильно напуганы. Многие фермеры утверждают, что ночью по округе рыщут кровожадные вурдалаки.",
+		"День 61-й\n\nСтранный оборот событий: сегодня сюда прибыл опытный аптекарь с мельницы Таррен. Как я слышал, он будет управлять плантацией. Звать его Лидон.",
+		"День 62-й\n\nОхранники Штилеца схватили опытного аптекаря Лидона. Он выкрикивал проклятья и обещал, что Темная Госпожа этого так не оставит и что Штиллецу не сносить головы. Интересно, что он имел в виду?",
+		"День 63-й\n\nВидел, как вчера ночью они забрали Бернсайда и Веррингтана. Наверное, я следующий.\n\n&lt;Дальнейшие записи в журнали представляют собой неразборчивые каракули.&gt;",
+	},
+},
+["Расписание Вымогателя"] = {
+	["english"] = "The Collector's Schedule",
+	["pages"] = {
+		"Ниже представлена схема и расписание перевозки золота из шахт Элвиннского леса.\n \nРасписание:\n\nВоскресенье: 12:30\nСреда: 12:30\n\nВ указанные дни золото, добытое в шахтах Элвин, будет доставляться на тыквенное поле Бреквеллов. Лицо, отвечающее за весь процесс – \"Собиратель\" – будет носить на пальце особое кольцо с гравировкой.",
+	},
+},
+["Вызов Дарнхольда"] = {
+	["english"] = "The Durnholde Challenge",
+	["pages"] = {
+		"Зефирий, прислужник Ал'акира\n\nПроживает в развалинах казарм.",
+		"Теракула, прислужник Теразан\n\nБродит по тропе за старыми казармами.",
+		"Кровояд, прислужник Нептулона\n\nЗаточен в западном крыле тюрьмы.",
+		"Инферний, прислужник Рагнароса\n\nЗаточен в восточном крыле тюрьмы.",
+		"Д-1000\n\nПоджидает тебя на старой арене.",
+	},
+},
+["Праздник Зимнего Покрова"] = {
+	["english"] = "The Feast of Winter Veil",
+	["pages"] = {
+		"Праздник Зимнего Покрова.\n\nОкончание года среди многих народов Азерота считается временем перемен. Дворфы и Таурены особенно любят отмечать появление Зимнего Покрова, когда земля покрывается белым убранством, провозглашая тем самым время обновления. И хотя сами сказания, сложенные по этому поводу разными народами Азерота, не слишком различны, способы, которыми они воздают почести этим легендам, многообразны, как и придумавшие их народности.",
+		"Легенда о Дедушке Зиме.\n\nГоворят, что название \"Зимний Покров\" происходит от сверхъестественного существа, именуемого во многих культурах Дедушкой Зимой. Считается, что, когда на исходе года он шествует по земле, за ним вздымающимся шлейфом ложится снежный покров. Говорят, что просыпается Дедушка Зима под одеялом из снега и укрывает снежной вуалью землю. Месяцы, когда Азерот частично укрыт снегом, дают земле время обновиться и переродиться.",
+		"Дворфы\n\nОни, неустанно исследуя свои собственные корни, предпочитают отмечать праздник, восхваляя самого Дедушку Зиму. Его дворфы считают воплощением древних жителей Азерота – титанов. Полагая, что сами они приходятся в какой-то мере родней этим таинственным существам, дворфы объявили свое снежное обиталище Дун Морог главным доказательством благосклонности Дедушки Зимы.",
+		"Таурены\n\nТаурены с их шаманистическим отношением к зиме и интересом к делам друидов, буквально подтверждают собой легенду о Зимнем Покрове. Они, однако же, видят в ней прежде всего путь обновления знаний, а поклонение собственно легенде оставляют тем народам, что, по их мнению, не так глубоко познали природу вещей. Многие таурены считают, что именно во время этого праздника им приличествует благодарить судьбу за благословение их нового обиталища, Мулгора.",
+		"Пиршество\n\nОбычай устраивать на этот праздник пиршества тянется корнями в глубь самой легенды. Она гласит, что, когда Дедушка Зима шел по Азероту, укрывая его снегами, тех, кто приветствовал его появление, он осыпал дарами. И потому традиция пировать на Зимний Покров объединила между собой общины, члены которых совместно вкушали на пиру разные яства. Обычно обновление и перерождение земли приветствовали весельем и празднеством в течение целого дня.",
+		"Как отмечают Зимний Покров сегодня\n\nСо временем и другие народы начали признавать праздник Зимнего Покрова временем великого празднества, хотя отмечать праздник они стали не совсем так, как описано в легенде. Сегодня этому торжеству в разных уголках мира соответствует множество обычаев, часто ставящих своей целью лишь собственно празднество и обмен подарками. Иногда на праздниках появляются и портреты Дедушки Зимы, но, как правило, затем, чтобы бойче шла торговля, а не ради восхваления могущественного титана.",
+	},
+},
+["Артишок Северного Волка"] = {
+	["english"] = "The Frostwolf Artichoke",
+	["pages"] = {
+		"Артишок клана Северного Волка: Повести о славе Грозовой Вершины\n-Автор Вандар Грозовая Вершина\n\nЧто такое клан Северного Волка? Ответ прост: клан Северного Волка – сборище дикарей, жаждущих низвергнуть нас, своих законных повелителей.\n\nОн, подобно артишоку, окружен колючим и твердым защитным слоем, сняв который, можно добраться до сердцевины и съесть ее с доброй чесночной подливой.\n\nВкусно!",
+		"Глава 1 – Линия фронта\n\nПередние линии обороны Клана Северного Волка состоят из воинов клана. Эти воины отправляются на передовую из крепости капитана Гальвангара под названием гарнизон Стылой Крови. Проще всего расправиться с этой линией обороны, разрушив гарнизон.\n\nОсади крепость и убей капитана Гальвангара. После этого передовые линии падут.",
+		"Глава 2 – Стылая Кровь и Смотровая башня\n\nКогда ты разделаешься с первым слоем \"артишока\", тебе будет открыт второй. Если уничтожить Башни Северного Волка, стоящие у линии фронта, то ослабнут вражеские легионеры и патрули с задних флангов.\n\nЭти башни сильно укреплены, и в каждой из них находится по одному из элитных командоров Дрек'Тара. Их надо убить. Так ты ускоришь крах обороны клана Северного Волка.",
+		"Глава 3 – Четыре командора\n\nЕсли ты следовал мудрым советам этого руководства, то сейчас двое из командоров Дрек'Тара уже мертвы. Так держать, солдат! Решимость врага уже пошатнулась. Теперь нужно окончательно разделаться с командным звеном неприятеля и убить двух оставшихся командоров.\n\nКогда будут убиты все четыре командора, в рядах легионеров Северного Волка, охраняющих Крепость Северного Волка наступит сумятица – ведь командовать ими будет некому. Можно брать голыми руками!",
+		"Глава 4 – Восточная и Западная башни Северного Волка\n\nТеперь от победы тебя отделает только один рубеж – самые преданные и сильные стражи Дрек'Тара, стражи Северного Волка.\n\nИх присылают из резервных отрядов, что содержатся в Восточной и Западной Башнях Северного Волка. Уничтожь эти башни – и увидишь, как позорно побегут оставшиеся Стражи.",
+		"Эпилог\n\n\"Сдобрить сердцевину артишока маслом с чесноком и майонезом. Запивать блюдо лучше крепким, выдержанным элем.\"\n\nТеперь Дрек'Тар совсем один, если не считать двух болванов-подопечных по обе руки. Захвати Приют Северного Волка и убей Дрек'Тара. Когда Генерал падет, его земли наконец-то перейдут к их истинному владельцу – Грозовой Вершине.",
+	},
+},
+["Зычный глас Орды"] = {
+	["english"] = "The Horde's Hellscream",
+	["pages"] = {
+		"Имя его не умрет.\nЖертва его всегда\nнам будет указывать путь.\n\nОковы, что крепко держали\nчесть, отвагу и смелость,\nнас не стесняют теперь.",
+		"Слышишь ли ты его крик?\nКлич боевой за Орду:\nПобеда или смерть!\n\nДолжны мы вовек запомнить,\nкак отважно презрел он смерть.\nМечты его воплотились.",
+		"Здесь опасность кругом!\nЖаждут враги заковать\nнас обратно в оковы.\n\nПомни же в яростной битве\nо том, кто свой выполнил долг.\nАдский Крик вечно живет!",
+	},
+},
+["Легенда о Сталване"] = {
+	["english"] = "The Legend of Stalvan",
+	["pages"] = {
+		"Уважаемому директору Криллиану.\n\nМой учитель, пишу вам, чтобы вы знали, чем ваш ученик занимался в последнее время. Последовав вашему совету, я решил расширить свои знания и обрести мудрость в путешествиях вдали от нашего любимого Штормграда. Я побывал во многих местах, но в итоге решил поселиться здесь, в милом городке Луноречье. Окружающие его поля Западного Края особенно прекрасны в ту пору, когда приближается время сбора урожая.",
+		"Всего через несколько дней после приезда я уже учил местных детишек с окрестных ферм. Уроки шли так хорошо, что мэр города предложил мне открыть здесь школу и начал строительство нового здания для нее! Из Серебряного бора в Штормград, а теперь и в Луноречье – кто бы мог подумать, что я увижу столько разных земель Азерота!\n\nС уважением,\n\nСталван Мистмантл",
+		"Досточтимый господин!\n\nВесть о том, что вы ищете учителя для своих детей, дошла до меня в Златоземье, где я временно проживаю в таверне \"Гордость льва\". Ввиду того, что в регионе неспокойно, мне пришлось оставить пост директора школы Луноречье. Прошу рассмотреть мою кандидатуру на должность учителя ваших детей. Директор Криллиан из академии может дать вам рекомендации, если это необходимо.",
+		"Я приеду, чтобы встретиться с вами, когда закончатся зимние дожди, и дороги снова станут пригодны для путешествий.\n\nДо встречи.\n\nСталван Мистмантл из Серебряного бора.",
+		"...Джайлс, мальчик, производит впечатление непослушного ребенка, и его обучение потребует усилий. Однако старшая дочь, Тиллоа, весьма умна. Я также не могу не обратить внимания на ее пленительную красоту. Сейчас она находится на пороге женской зрелости. Скорее всего, лорд собирается в следующем году выдать ее замуж. Однако я отвлекся. На этой неделе я отправлюсь вместе с семьей в их летний домик возле лесопилки Восточной Долины в Элвиннском лесу, неподалеку от Красногорья. Надеюсь, оттуда смогу написать подробнее.",
+		"...какое странное и неконтролируемое чувство. Я никогда еще не чувствовал ничего подобного. Пока я занимался с Джайлсом историей, Тиллоа прогуливалась в палисаднике снаружи. Через несколько минут она вернулась к нам, положила мне в ладонь ярко-красную бегонию и так улыбнулась мне, что у меня чуть сердце не выскочило из груди...",
+		"...уверен, что она разделяет мои чувства. Сегодня утром она даже взяла меня за руку. Когда она улыбается, ее глаза сверкают подобно бриллиантам. Мы обмениваемся непроизнесенными словами. Когда она рядом, мое сердце бьется по-другому, а по телу разливается жар.",
+		"...гнев и ярость такой силы, о какой я раньше и представления не имел! Да как она смеет! Когда я рассказывал Джайлсу о значениях чисел, Тиллоа появилась передо мной со своим поклонником, держа его за руку! Что за неотесанный молодой человек! Вместо того чтобы представить меня как подобает, Тиллоа сказала: \"О, это просто мой учитель, дядюшка Сталван. Он милый старичок\". Старичок! При этих словах мои щеки просто вспыхнули. Я всего лишь на несколько лет старше, и все же она...",
+		"...в бездну отчаяния. Вначале она насмехалась надо мной, а теперь обручена. Эта обманщица притворяется, что любит, а на самом деле хочет лишь причинить мне боль. В моей душе осталась лишь черная пустота, которая разрастается с каждым мгновением. Кровь, которую я пролью, ничто по сравнению с пролитыми мною слезами...",
+	},
+},
+["Легенда о Роге"] = {
+	["english"] = "The Legend of the Horn",
+	["pages"] = {
+		"Легенды о роге неистовства стихий давным-давно ходили среди таунка. Поколения героев выросли на этих преданиях, и, возмужав, отправлялись на его поиски младые сыны, но тщетны были их усилия. Был среди них и отважный воин Штормовое Копыто, что отринул семью и родной край ради погони за мечтой.\n\nСражаясь со стужей и яростными элементалями Ледяного Клинка, Штормовое Копыто в одиночку покорил неприступную гору, где на вершине ждал его сам Северный Ветер. Зная, что повелитель бурь не отдаст рог без боя, могучий рыцарь бросил ему вызов.",
+		"Пять дней без передышки Штормовое Копыто сражался с ветром. И вот, на закате шестого дня, он наконец изгнал его с Вершины Ледяного Клинка. Теперь рог принадлежал ему! Израненный и усталый, Штормовое Копыто отправился в обратный путь.\n\nНо Северный Ветер не собирался сдаваться. Он призвал к себе армию младших элементалей и напал на Штормовое Копыто, когда тот уже приближался к родному дому. Утомленный долгой битвой воин не смог оказать достойного сопротивления и пал жертвой мести Северного Ветра, который отобрал у него рог и разломал его на две части. Из этих обломков он сделал две блестящие безделушки и подарил их своим верным союзникам, могущественным вождям горлоков.\n\n&lt;На этом месте текст обрывается, но под ним кто-то – возможно, сам укротитель ветров Барах – сделал следующее дополнение:&gt;\n\nПо повелению Северного Ветра великие горлоки передавали эти реликвии из поколения в поколения, от отца к сыну. И в настоящий момент обломки рога хранятся у вождя Бурблгубля и вождя Гурглбугля.",
+	},
+},
+["Путь искупления"] = {
+	["english"] = "The Path of Redemption",
+	["pages"] = {
+		"<HTML><BODY><BR/><H1 align=\"center\">Путь искупления</H1><BR/><IMG src=\"Interface/FlavorImages/ScarletCrusadeLogo\" /></BODY></HTML>",
+		"<HTML><BODY><BR/><P>Голос сказал мне: \"Приди!\" – и в тот же момент я поняла, что это был сам Великий Свет, взывающий ко мне во сне. Наконец-то! После стольких лет молитв и добрых деяний, после того, как я очистила землю от нежити, оскверняющей Азерот, после многих поражений и воскрешений я наконец-то удостоилась этой великой чести! </P><BR/><P>Свершилось!</P></BODY></HTML>",
+		"<HTML><BODY><BR/><P>Я снова слышала голос. \"Приди...\" – воззвал ко мне Свет.</P><BR/><P>Я проснулась, дрожа до кончиков пальцев, но причиной тому был не холод моих покоев. Я должна удвоить усилия! Сегодня же скажу верховному настоятелю, что желаю возносить в два раза больше молитв. Хватит полумер!</P><BR/><P>Великий Свет радуется нашим добрым деяниям. Теперь я это знаю наверняка!</P></BODY></HTML>",
+		"<HTML><BODY><BR/><P>Это произошло снова! На этот раз я не спала. Чуть больше минуты я внимала голосу Света, и посреди теплого, летнего дня с моих губ вдруг сорвалось облачко холодного пара. Это заметил один из жрецов и пал на колени в благоговейной молитве. </P><BR/><P>Правда, никто, кроме меня, не слышал священный глас. Но теперь я точно знаю, что не сошла с ума. Может быть, мне попросить Ландгрена помолиться за меня? </P><BR/><P>Надо сказать Джордану и Стриту, чтобы они более тщательно подходили к набору добровольцев. Наша армия переполнена скептиками и неверующими, желающими только сражаться с нежитью. Довольно! Больше я не потерплю такого кощунства.</P></BODY></HTML>",
+		"Епископ и главнокомандующий приняли мое предложение – правда, у них не было выбора. Епископ Стрит особенно воодушевленно отнесся к моим словам, и все время говорил о том, что нашей армии не помешает небольшая чистка. \n\nЯ велела ему успокоиться. В мои намерения не входит уничтожение всего ордена. Однако, мне по душе идея создания элитного отряда преданных Свету солдат, которые будут выполнять его волю в Нордсколе. Боюсь, дружба с Лекрафтом очень сильно на него влияет. Впрочем, оба они еще мне пригодятся.\n\nОднако слова Стрита о новом Ордене заставили меня задуматься. Если бы мы создали новую силу, я дала бы ей другое имя, гордое, отражающее нашу великую цель, но все же связанное с прошлым орденом. Я буду молиться, чтобы на меня снизошло вдохновение.",
+		"<HTML><BODY><BR/><P>Наши молитвы услышаны. Верховный настоятель был поражен силой гласа Света, его чистотой и убежденностью. </P><BR/><P>Лишь самые преданные воины отправятся с нами на Север и войдут в историю под именем Алого Натиска.</P><BR/><P>Мы начинаем наступление на Нордскол! Скверна Плети угрожает захватить власть над миром и погубить все живое. Настало время дать ей отпор! Скоро мы будем стоять у подножия трона самого Короля-лича! </P></BODY></HTML>",
+		"<HTML><BODY><BR/><P>С трепетом взираю я на Новый Авалон, ибо мне кажется, что вижу его в последний раз. Наша судьба решится в Нордсколе, но меня обуревает гнетущее чувство неминуемой беды. Я надеюсь, что наши грядущие деяния очистят мою душу от смятений. Я должна выбросить сомнения прочь из головы.</P><BR/><P>Нас ждет Багровый Рассвет.</P></BODY></HTML>",
+	},
+},
+["\"Повесть о Моргане Ладиморе\""] = {
+	["english"] = "The Story of Morgan Ladimore",
+	["pages"] = {
+		"Морган Ладимор был известным и благородным рыцарем, защищавшим невинных, бедных и страждущих. Многие годы он усердно сражался в отдаленных районах Азерота, помогая угнетенным и верша правосудие над их угнетателями.\n\nКогда ему исполнилось восемнадцать лет, он женился на молодой девушке по имени Лиис. Они очень любили друг друга. У них родилось трое детей: сын и две дочери.\n\nМоргану было тридцать два года, когда в Лордероне началась",
+		"война. Морган служил под командованием легендарного паладина Утера Светоносного, который сражался с орками и нежитью. Оставив жену и детей, Морган отправился на войну.\n\nШли годы, война затягивалась. Морган стал свидетелем ужаснейших событий, включая конец ордена паладинов Серебряной Длани, гибель Утера и эпидемию чумы. Единственной причиной, по которой он не сошел с ума, была уверенность в том, что",
+		"однажды он вернется к своей жене и детям.\n\nНаконец, Морган вернулся домой, но обнаружил, что родные места уже не те, какими он их помнил. Некогда зеленый лес был заражен и населен нежитью и монстрами. Везде стояли разрушенные дома и фермы, и большую часть округи занимало кладбище возле Вороньего Холма. Пораженный и сбитый с толку, Морган пришел к своему дому и увидел одни развалины. Не понимая, что произошло с его родными местами, он",
+		"отправился в деревню в поиске ответов, в надежде встретить близких.\n\nМорган спрашивал о судьбе своей семьи, но никто ничего не знал. Жрец из Темнолесья, как теперь называлась деревня, посоветовал ему пойти на кладбище у Вороньего Холма и поискать там. Морган отказывался верить в то, что его семья погибла, и продолжал поиски среди ферм и домов Сумеречного леса, но тщетно.\n\nМорган отправился из Темнолесья в соседнее Приозерье, надеясь, что его семья осела там. По пути",
+		"он все-таки решил зайти на кладбище Вороньего Холма. Несколько часов бродил Морган среди могил. Многие имена на надгробиях были ему знакомы, и чувство отчаяния захлестывало его все больше и больше. И вдруг он увидел маленький неухоженный участок с тремя небольшими надгробиями. Ужас обуял его, когда он подошел поближе. Морган смахнул пыль с самого большого надгробия, чтобы прочесть имя. На камне были высечены буквы, которые сложились в",
+		"страшные слова:\n\nЛиис Ладимор\nЛюбимая жена и мать\n\nСбылись самые страшные опасения Моргана... горе и печаль охватили его, и он, рыдая, упал на колени. Многие часы он смотрел на могилу, прося у холодного камня прощения. И вдруг через несколько часов что-то в нем сломалось, и он впал в бешенство. Он выхватил свой меч из ножен и, яростно крича, начал осыпать надгробия ударами. Ничего не видя и не слыша вокруг, он продолжал крушить все на своем пути, чем привлек внимание",
+		"трех служителей кладбища. Когда они попытались его успокоить, он перенес свой гнев на них и, обвинив их во всех своих несчастьях, убил всех троих.\n\nПозже Морган пришел в себя и увидел свой меч в груди одного из служащих. Осознание произошедшего привело его в отчаяние – он выхватил из ножен кинжал и вонзил его в свое сердце.\n\nТело Моргана Ладимора и тела трех его жертв были найдены",
+		"на следующий день. Его быстро похоронили, без обряда, в спешно выкопанной могиле на окраине кладбища. Убийство невинных жертв, противоречащее убеждениям паладина, и глубокое отчаяние от собственного бессилия не позволили Моргану перейтив мир духов. Он так и остался блуждать в нашем мире в облике неупокоенного мертвеца.\n\nЧерез несколько дней его могила была обнаружена пустой, тело так и не было найдено. Существо, в которое превратился Морган,",
+		"бродит сейчас по Сумеречному лесу, терзаемое горем от потери жены, детей и ненавидящее себя за это. Мор'Ладим, как он теперь себя называет, скитается по Сумеречному лесу и из мести убивает все живое.",
+	},
+},
+["Потрепанный дневник"] = {
+	["english"] = "Time-Worn Journal",
+	["pages"] = {
+		"Вот уже девять дней \"Рак\" дрейфует в густом тумане. Кажется, сам воздух застыл на месте, стал неподвижным, мертвым.\n\nТо, что вы читаете, вероятно, станет моими последними словами. Меня зовут Джеймс Харрингтон, и я – путешественник. Вместе с группой матросов мы отправились на шлюпке разузнать, не таятся ли в тумане какие-либо опасности.\n\nЯ с нетерпением жду встречи с какой-нибудь огромной рыбиной размером с дракона, способной не моргнув глазом проглотить наше утлое суденышко и тем самым спасти меня от ужасов нашего корабля, где есть лишь одно отхожее место.",
+		"Земля! Долгожданная высадка! \n\nМы обнаружили небольшой странный остров, которого, кажется, нет ни на одной из морских карт. Матросы воспрянули духом, и те, что помоложе, немедленно отправились на поиски золота и богатств, которые, безусловно, дожидались их в засыпанных костями сундуках. Вот уже несколько часов от них нет ни слуху, ни духу.\n\nМы немедленно приступаем к разведке. Если нам не удастся найти еду, то через пару дней мы все погибнем. Хотя я взял свое верное охотничье ружье, я опасаюсь за свою жизнь. Мне кажется, что нога человека не ступала на этот острова сотни, возможно даже тысячи лет.\n\nЯ исполню долг истинного исследователя и постараюсь задокументировать все, что увижу. Надеюсь, что в один прекрасный день эти страницы попадут в руки другого отважного искателя приключений, чья беспрецедентная отвага возобладает над рассудком.",
+		"Ветроперый журавль\n\nНам попался удивительный вид птиц: они обладают блестящим оперением и с великой отвагой защищают свои гнезда.\n\nЭти птицы, по всей видимости, превосходно летают, и могут прижимать перья к телу, что позволяет им резко набрасываться на опасных хищников. Самки этого вида иногда издают мелодичное пение, успокаивающее взволнованных птенцов. Самцы ведут себя очень бойко и способны мощным взмахом крыльев обрушить мощный порыв ветра на нападающих.\n\nМы успели поохотиться на ветроперых журавлей, чтобы разжиться мясом, из которого удалось приготовить вкусный и довольно сытный обед. Похоже, перья птиц благотворно влияют на настроения среди экипажа. Не удивлюсь, если у них есть магические свойства. \n\nЯ неоднократно замечал в гнездах яйца, из которых того и гляди должны были проклюнуться птенцы. Если получится, я достану яйцо, выведу себе птенца и понаблюдаю за его поведением.",
+		"Як-сталемех\n\nОгромный зверь, в чем-то похожий на ледяную глыбу благодаря своей неспешности и медлительному разуму. Такой густой шерсти, как у яка, не встретишь у альтеракских баранов.\n\nСвоими могучими рогами сталемех может запросто сбить с ног здорового матроса. Мне неоднократно доводилось видеть, как кто-то улепетывал при виде несущегося яка. Поэтому как только мы замечаем бьющего копытом об землю яка, то сразу же бежим врассыпную и карабкаемся на ближайшее дерево.\n\nМясо сталемеха гораздо жирнее и питательнее ветроперки. Благодаря ему и растущим поблизости фруктам мы должны протянуть тут немало дней, если, конечно, жители острова не прикончат нас раньше.\n\nЭтим утром меня разбудил необычный шум. Один из нас каким-то чудом умудрился взобраться на яка. Ярость сталемеха не заставила себя долго ждать – взбешенное животное начало носиться по всему острову.",
+		"Большая черепаха\n\nБолее крупные и крепкие, чем их сородичи из русел рек Южнобережья, большие черепахи щеголяют красивыми панцирями с замысловатым рисунком. Но чтобы разглядеть их, потребуется подобраться поближе.\n\nИспуганная черепаха может перекусить саблю своими челюстями. Если это существо спрячет голову в панцирь, не думайте, что оно безобидно. Матросы сильно удивились, когда скрывшаяся в свой панцирь черепаха принялась вращаться, как волчок. Старина Джим тогда лишился руки. Мы не решаемся подходить к взрослым особям, плавающим в прибрежных водах, так как они достаточно велики, чтобы проглотить матроса целиком.\n\nЧерепахи обеспечили нас рыхловатым, но сытным мясом, а матросам понравилось играть с их панцирями. Если их бросить, то они пролетят необычайно далеко. Так можно сыграть жестокую шутку с задремавшим на посту товарищем. Многие матросы получили травмы.\n\nА еще этим утром мы направили матроса Уоллеса обратно на \"Рака\" с грузом мяса и фруктов.",
+		"Краб-хребтохват\n\nВ поисках ответов на своим вопросы и пропитания мы наткнулись на необычный вид краба. Прочный хитиновый панцирь существа позволяет предположить, что ему многие тысячи лет.\n\nКоманде, подуставшей от фруктов и мяса, захотелось отведать крабовых ножек. Видимо, учуяв опасность, огромный краб набросился на одного из молодых моряков и начал полосовать его своими бритвенно-острыми клешнями. Тот даже не понял, что случилось. Нам удалось поймать злобное создание до того, как оно улизнуло в воду.\n\nМоя любимая шляпа ушла на дно вместе с кораблем во время шторма, поэтому я решил временно нацепить на себя светлый крабий панцирь. Другие члены команды не раз посмеивались надо мной, посчитав, что я спятил.\n\nМожет, это и так, или я уже просто свыкся с жизнью на острове.",
+		"Пятнистый роевик\n\nНам неслыханно повезло, поскольку мы, похоже, нашли поселение местных жителей. В таких случаях первопроходцы всегда должны действовать с осторожностью, чтобы не провоцировать аборигенов. Вокруг деревни растет несколько кустарников с яркими цветами, в которых хрустят листвой пятнистые шелкопряды.\n\nЕсли подойти к ним слишком близко, то черви набросятся на несчастную жертву, источая опасный яд. Хоть они и невелики, недооценивать их не стоит. За сегодняшний день мы израсходовали почти весь мой запас противоядия.\n\nВскрыв одного из шелкопрядов, я обнаружил, что железы существа производят шелковый шнур, который мощнее самой крепкой стали. Мы использовали их липкую секрецию, чтобы сконструировать что-то вроде плота, скрепив несколько древесных стволов.\n\nС тех пор прошла уже почти неделя, но ни Уоллеса, ни лодки все еще не видать. Мы с моряками опасаемся, что лодка могла затонуть.",
+		"Духи Древнего Пи'джоу\n\nСегодня мы рискнули подойти еще ближе к старой деревне Пи'джоу. Опытного искателя приключений вроде меня не удивить тем, что в подобном месте обитают духи умерших жителей. Так или иначе, было бы еще более странно, если бы в деревне не было ни души.\n\nЭти духи яростно сражались, применяя странные боевые искусства, подобных которым мы никогда не видели. Они молниеносно наносили резкие удары налево и направо, призывали туманы, исцеляющие союзников, и запускали в противников причудливые сферы из неизвестного материала. Если бы старший помощник не сплотил матросов в слаженный отряд, мы бы пополнили число неупокоенных духов.\n\nВ одной из хижин я нашел бутылку странного, эфириального отвара. При ближайшем рассмотрении оказалось, что в ней заключен некий дух. Я пока не буду откупоривать бутылку: у меня предчувствие, что она еще может мне пригодиться в таком виде.",
+		"Крадущийся тигр\n\nМы зажаты между двумя обрывами, и матросы изрядно нервничают. На земле рядом с некоторыми журавлиными гнездами нам попались отпечатки больших лап. Сегодня мы проследовали по извилистой дорожке, окаймленной странными красными камнями, и увидели хищных кошек размером с лошадь, развалившихся в тени от деревьев, которые время от времени встречались на нашем пути.\n\nОдин из матросов перемахнул через красный камень и с дикими глазами понесся в атаку на группу свирепых зверей. Он ловко уклонялся от ударов чудовищных когтей размером с человеческую голову, и в итоге победоносно взгромоздился на дымящуюся кучу окровавленных туш.\n\nРоскошные шкуры и обильный запас мяса этих диких зверей на родине можно будет продать за хорошие деньги. Возможно, в одной из укромных бухт этого странного острова нас уже ждет корабль. Я должен сосредоточиться на этой мысли, чтобы сохранить остатки рассудка.",
+		"Могучие обитатели скал\n\nЭтих существ можно услышать издалека, и они неоднократно прерывали мой крепкий сон отдаленным грохотом падающих камней. Огромные обитатели скал появились из тех самых камней, по которым мы ступаем, и они ни на секунду не прекращают свое движение. Как они пробудились, мне неизвестно. Возможно, с течением лет камням становится скучно, и они сами отправляются на поиски приключений или просто пытаются сменить обстановку. Но мне доподлинно известно, что эти создания могут раздавить человека одной ногой, и многих постигла такая скорбная участь. Тела этих существ покрыты тысячами драгоценных камней, переливающихся в лучах солнца, но пытаться добыть их – гиблое дело.",
+		"Хваткая лягушка\n\nСегодня мы обнаружили небольшое углубление на восточном берегу, где живут необычные красочные амфибии. Вздувшиеся мертвые тела множества крупных зверей, лежавшие там, свидетельствовали о том, что за безобидным обликом этих земноводных скрывалось нечто большее. Впрочем, то же самое можно сказать обо всех обитателях этого острова.\n\nКожа этих лягушек покрыта вязким, токсичным веществом. Я решил потыкать палкой в одну из небольших особей, но в итоге моя палка просто растворилась.\n\nЯ подобрал одну из кувшинок, росших неподалеку. При ближайшем рассмотрении выяснилось, что эти растения покрываются плотным слоем воска, защищающим их от яда лягушек. Интересный симбиоз. Я возьму кувшинку для дальнейшего изучения.\n\nБольше мы не нашли ничего особенного, равно как не обзавелись и способом покинуть остров. Лично я уже неплохо привык к тропическому климату и даже подумываю иногда остаться на острове. Может быть, навечно.",
+		"Смертолаз\n\nСтоило мне на секунду отвернуться от Коротышки Джона, как его уже не было. Огромная змея поползла в свое укрытие среди растений, держа в пасти добычу, но мы не собирались ее упускать.\n\nОгромными клыками эта тварь прокусывала стальные щиты насквозь, и острые боевые топоры бесследно исчезали в ее утробе. При этом казалось, что никаких проблем с желудком у жуткой змеи не предвиделось.\n\nНо когда змея была повержена, к нашему великому удивлению из ее разрубленного брюха вывалился Коротышка Джон. Он был совершенно невредим и с упоением жевал жареную ногу яка, которую он нашел у змеи в желудке.\n\nИ тогда у нас возник вопрос: кто мог поджарить эту ногу? Не змея же!..",
+		"Танцор из нефритовых туманов\n\nМы завершили обход западного берега острова, но внезапно дорогу на север нам преградила пелена тумана.\n\nИз дымки то и дело показывались маленькие силуэты, от вида которых у нас по телу побежали мурашки. Мы не решились подходить ближе.\n\nВглядываясь в изменчивые туманы, я, кажется, заметил небольшую каменную пирамиду, и что-то в этом строении меня очень заинтересовало. \n\nНадо будет вернуться и все хорошенько осмотреть.",
+		"Загадочная пещера – Зловещий огонь\n\nМы наткнулись на странную пещеру, освещенную жутковатыми синими огнями, совсем как в детских страшилках про поющие топи. Как и в сказках, я и мои товарищи спустились в пещеры, влекомые этим светом.\n\nВнезапно окружающие нас огни принялись излучать жуткое свечение, и наша кожа запылала неземным огнем. Мы кричали от боли и бежали, пока в ногах еще были силы.\n\nОт раскиданных по влажным пещерам костров, источавших все тот же синий свет, не было никакого тепла, но наша боль немного утихла, стоило только к ним приблизиться. Нам удалось скрыться от обжигающего света.\n\nПодобными сказками мы в свое время пугали детей, чтобы те держались подальше от опасных болот. Возможно, нам самим стоило прислушаться к этим историям.\n\nИз всей команды нас осталось только шестеро.",
+		"Загадочная пещера – Дымчатый шаркун\n\nНам оставалось только идти вперед. Мы пробились в самые глубины этой сырой пещеры, и в спину нам нашептывали духи наших погибших товарищей. В таком месте им не обрести покой.\n\nМы очень удивились, когда мхи и лишайники, покрывавшие стены, спустились на землю и начали медленно ползти к нам. Из грибковых наростов этой бесформенной массы исходил удушающий газ. Лозы и листья папоротника, образовавшие шкуру чудища, сразу отрастали заново, сколько бы мы их ни рубили.\n\nМы были загнаны в угол, и нам оставалось только одно – бросить на произвол судьбы того, кого мох избрал своей следующей жертвой.\n\nОтголоски его криков не дадут мне покоя до конца моих дней.",
+		"Ордосский хранитель свечей\n\nКогда мы вернулись в наш лагерь вблизи старой деревни, мы обнаружили, что его ограбили, а многие из наших припасов были сожжены на большом костре. Это сделали не животные: кто-то явно хотел, чтобы мы покинули остров.\n\nОни пришли ночью. Сначала мы услышали глухой рев боевого рога, а потом огромные быки, размахивающие пылающим оружием, утащили троих наших заходящихся криками товарищей в ночную тьму.\n\nИз ноздрей одного из быков вырвались мощные языки пламени, из-за которых вскоре сгорела половина лагеря. Нам пришлось отступить в джунгли, а быки тем временем скрылись.\n\nК моему великому удивлению духи деревни ждали нас, когда мы вернулись в лагерь. Они ничего не говорили, а просто молча указали на далекую каменную арку и кивнули. Может быть, они хотят помочь нам?",
+		"Ордосский хранитель огня\n\nЯ принял участие в крупном сражении, возможно, самом масштабном, которое мне когда-либо доводилось видеть. Я спрятался в каком-то ящике, который принесли быки, так как от моего ружья было мало толку. Окружавшие нас духи сражались отчаянно, подобно безмолвной смертоносной лавине, спустившейся во тьме.\n\nОрдосские воины тоже имели представление о магическом искусстве – они метали в противника огненные шары, выжигавшие все вокруг. Один такой маг попал своим огненным снарядом прямо в грудь моего товарища, разорвав его на куски.\n\nВ суматохе я подобрал несколько амулетов и одежду одного из быков-магов. Если получится, я изготовлю себе особый костюм, чтобы не привлекать к себе их внимание.",
+		"Ордосский почетный страж\n\nЯ вздохнул с облегчением, когда мне удалось пройти мимо могучих воинов-быков, облачившись в маскировку. Я пошел дальше в гору и разглядел разрушенный храм вдалеке. Возможно, там я обрету вечное спасение.\n\nЯ вспомнил, как умело сражались эти огромные безжалостные воины. Когда противник нападал на них, они поднимали тяжелые щиты, отклоняя почти все удары и позволяя своим соратникам выйти врагу во фланг. Когда противник переключался на их союзников, они принимались низко гортанно петь, окружая товарищей таинственным волшебным щитом.\n\nТо, насколько слаженно они действовали, лишь напомнило мне в очередной раз о том, что выжить из всей команде удалось лишь мне. Я совсем один, если не считать моего дневника и мыслей.",
+		"Ордосский горящий берсерк\n\nМне ничего не остается, кроме как затаиться в этой разрушенной башне и наблюдать оттуда за тем, что творится внизу.\n\nЯ видел еще быков с пылающими кинжалами, собиравших травы и листву на пологих холмах. Я могу только предположить, что быстро растущий подлесок является источником топлива для их вечно горящих жаровен.\n\nНа одного из быков набросилась хищная кошка, и завязался бой. Трудно было сказать, победит ли бык с огненным оружием или огромный тигр. Бык завертелся, как волчок, и глубоко рубанул зверя, прежде чем зажечь свои кинжалы и вонзить их в его шею.\n\nМне так хочется есть... Я долго не продержусь, если останусь здесь, но куда мне идти?",
+		"Духи ясеневого листа\n\nУдача улыбнулась мне одной глухой ночью, когда у меня над головой с ревом пронесся огненный шар.\n\nЛесные существа, которые устраивают свои жилища на деревьях, по всей видимости, враждуют с огромными летучими змеями и местными быками. Когда сгусток раскаленной магмы отскочил от дерева, маленькие создания образовали из листьев щит, чтобы отразить летящий в них огонь и защититься от напавшего на них чудища.\n\nМощный удар огненного шара сбил на землю несколько крупных орехов. Пока маленькие древесные жители готовились отражать очередное нападение, я незаметно украл несколько тыкв, а также подобрал с тела погибшего аборигена немного ягод.\n\nМне хватило орехов, чтобы утолить голод, а сок ягод оказался на удивление питательным. Я уже почти собрался с силами, чтобы покинуть это место.",
+		"Алочешуйчатая Огненная Буря\n\nПричудливые и прекрасные змеи, похоже, просто играли с обитателями деревьев. Они часами кружили над древами, время от времени обдавая их огнем. Древесные жители явно научились защищать свои жилища, а змеи, кажется, вовсе не хотели никого убивать.\n\nЭто зрелище напомнило мне о моем коте, Саймоне, которого я оставил на попечении друга. Вспомнив о нем, я понял, что совершенно не представляю, сколько времени я провел на этом острове. Несколько дней? Недель? Или месяцев? И что стряслось с \"Раком\"?\n\nМои раздумья были прерваны звуками стычки двух больших змеев. Огненные сполохи осветили полночное небо, на некоторое время ослепив меня. По всей округе на поверхность начала пробиваться раскаленная магма. Скорее всего, это был территориальный конфликт, так как победивший змей даже не взглянул на обгоревшее тело своего соперника.\n\nВ покрытых сажей лапах погибший змей сжимал очень необычное яйцо.",
+		"Ордосский раскаленный страж\n\nОгромные големы из объятого огнем камня блокируют проход к вершине горы. Решусь ли я пройти мимо них так же, как я преодолел патруль быков? Я хорошо поработал над своим костюмом, набив плечи хворостом и приладив прутья, так что теперь меня почти не отличить от одного из быков. Думаю, что вполне могу миновать этих големов. В конце концов, хуже ведь уже не будет.\n\nПроходя мимо стражей, я крепко прижимал яйцо к груди. Исходящие от него волны жара обжигали мои руки. Куда я направлялся? Кто его знает... Наверное, наверх.\n\nЯ увидел дымящуюся печь, в которой, возможно, и были созданы големы. Рядом с печью лежало обгоревшее тело и раскаленный камень, который, казалось, уже не остынет никогда. Возможно, с помощью этого камня в раскаленных стражей вдохнули жизнь. Но откуда он взялся?\n\nТогда-то меня сзади схватила чья-то рука, и мир погрузился во тьму.",
+		"Ордосский охваченный пламенем зачаровыватель\n\nТе быки, что подвели меня к огромному костру в центре храма, были одеты гораздо изысканнее своих собратьев, а их оружие сверкало затейливыми рунами.\n\nМне показалось, что тот, кто руководил нанесением ритуальных ожогов на мое тело, был из числа представителей их религиозного ордена. Переговариваясь на неизвестном языке, они разрезали мою плоть раскаленными добела кинжалами. Пока быки проводили свои изуверские ритуалы, вокруг нас ливнем падали с неба горящие метеоры, скрывавшие храм от посторонних глаз.\n\nКогда пытка закончилась, зачаровыватель произнес слово силы и вызвал чудище из магмы и камня.\n\nЯ мог только предполагать, что моя душа навеки станет частью безжизненной машины из пылающего камня.",
+		"Ордосский вечный хранитель обжигающего огня\n\nЗдоровый стражник вонзил копье в землю, и из этого места извергся поток пламени, начавшего быстро заполнять мою обсидиановую камеру. На несколько мгновений я прекратил кричать и причитать.\n\nЯ не знал, что они собирались со мной делать, но было ясно, что мое путешествие подошло к концу. Вопреки обстоятельствам, мое любопытство взяло верх над страхом, и я продолжал пристально наблюдать за ними.\n\nЯ подметил, что когда эти неповоротливые быки приблизились к бушующему пламени костра, оно, казалось, наполняло их силой. Но я никак не мог придумать, как это использовать в своих целях. Я безвольно упал на колени в углу моей камеры, готовый смиренно принять свою участь.",
+		"Ордосский верховный жрец\n\nМеня вновь привели в центр огромного храма быков. Передо мной встал внушительных размеров бык, который буквально светился такой силой, что я чуть было не зажмурился, чтобы не ослепнуть. Его руки были обуглены, а мех сожжен в нескольких местах.\n\nМеня подвели к большому котлу. В гортанной речи быков мне несколько раз послышалось слово \"Ордос\", произносимое с явным благоговением. Я издалека заметил, как ко мне приближалась большая фигура. Грива этого быка напоминала пламя преисподней, а вместо слез из его глаз струилась раскаленная магма. Ударом копья в спину меня подтолкнули еще ближе к котлу.\n\nВ отчаянии я бросил яйцо змея в котел. Это была моя последняя и единственная надежда. Яйцо раскололось, и из скорлупы появился небольшой змей. Отряхнувшись, он стремительно полетел вверх.\n\nЯ рванулся вперед и схватил устремившегося к небесам змея за хвост. Но долго я держаться не мог, и вскоре рухнул с высоты в холодную мутную воду, омывавшую остров.",
+		"В утробе великого Вечножора\n\nКогда меня объяли ледяные волны, я оказался подхвачен мощным течением, которое занесло меня в какую-то зловонную полость.\n\nСтены пещеры позади меня на мгновение раздвинулись, чтобы впустить морскую воду, и я смог разглядеть окружающую обстановку. Тогда-то я и понял, что меня проглотила огромная рыбина.\n\nПрежде чем пасть снова закрылась, я успел хорошенько оглядеться. Конца пищевода, в гладких мускулистых стенках которого я оказался, не было видно. Тут и там были разбросаны обломки больших и малых кораблей и кости причудливых морских существ.\n\nГде-то в глубине забрезжил неяркий свет. По непонятной причине он напомнил мне об успокаивающем шепоте, который я слышал на покрытом туманами северо-западном берегу острова. Вот так я и нашел фонарь – меня немного успокаивает эта старая ржавая штуковина.\n\nИ вот я сижу тут и дописываю заключительную главу моей автобиографии, которую никто никогда не прочитает.",
+		"Последняя запись\n\nМеня нашли! Нет, нет, нет... Это я нашел! Да... Так и должно быть. Я должен был оказаться здесь, найти этот портал в будущее, в мое будущее.\n\nФонарь освещает мои каракули, помогает найти дорогу во тьме. \"Вазувий\" зовет меня.\n\nИ я отвечу на его зов. Я зажгу фонарь и с головой окунусь в застоявшиеся воды. Я глубоко вдохну солоноватый запах... запах разложения моих товарищей.\n\nИ Я ПРИМКНУ К КОМАНДЕ УЖАСА, И ВМЕСТЕ МЫ ВЕЧНО БУДЕМ УБИВАТЬ И ГРАБИТЬ.",
+	},
+},
+["Королю Вариану Ринну, предводителю Альянса"] = {
+	["english"] = "To King Varian Wrynn of the Alliance",
+	["pages"] = {
+		"Ваше величество!\n\nО, милосердный король, да озарит Свет каждый ваш шаг, и да пребудет он вечно в вашем сердце. Я молю вас о пощаде для этого павшего рыцаря, и смиренно прошу выслушать меня до конца.\n\nПодатель сего письма некогда &lt;был/была&gt; героем Альянса. Хотя отныне чело &lt;его/ее&gt; отмечено печатью смерти и обликом Плети, душой &lt;он остался верен/она осталась верна&gt; вашему величеству.",
+		"&lt;имя&gt; &lt;был избран/была избрана&gt; мной в качестве представителя нового союза, сражающегося против Короля-лича. Этот орден носит имя Рыцарей Черного Клинка. Да, ваше величество, вы не ошибаетесь: рыцари смерти объединились против своего бывшего повелителя. Их возглавляет сын лорда Александроса Могрейна – сам Испепелитель, и жаждут они того же, что и все мы: положить конец Плети.\n\nЯ не смею просить вас принять &lt;имя&gt; и всех Рыцарей Черного Клинка в Альянс, но надеюсь, что вы проявите к ним снисхождение.",
+		"Помните, сир, что все мы служим кровью и честью во имя великой цели.\n\nС глубоким уважением,\n\nВерховный лорд Тирион Фордринг",
+	},
+},
+["Вождю Орды"] = {
+	["english"] = "To the Warchief of the Horde",
+	["pages"] = {
+		"О, великий вождь!\n\nда озарит Свет каждый ваш шаг, и да пребудет он вечно в вашем сердце. Я молю вас о пощаде для этого павшего рыцаря, и смиренно прошу выслушать меня до конца.\n\nПодатель сего письма некогда &lt;был/была&gt; героем Орды. Хотя отныне чело &lt;его/ее&gt; отмечено печатью смерти и обликом Плети, душой &lt;он остался верен/она осталась верна&gt; нашему делу.",
+		"&lt;имя&gt; &lt;был избран/была избрана&gt; мной в качестве представителя нового союза, сражающегося против Короля-лича. Этот орден носит имя Рыцарей Черного Клинка. Да, ваше величество, вы не ошибаетесь: рыцари смерти объединились против своего бывшего повелителя. Их возглавляет сын лорда Александроса Могрейна – сам Испепелитель, и жаждут они того же, что и все мы: положить конец Плети.\n\nЯ не смею просить вас принять &lt;имя&gt; и всех Рыцарей Черного Клинка в Орду, но надеюсь, что вы проявите к ним снисхождение.",
+		"Помните, вождь, что вы всегда можете рассчитывать на наши клинки и нашу дружбу.\n\nС глубоким уважением,\n\nВерховный лорд Тирион Фордринг\nP.S. Передайте Эйтриггу мои пожелания крепкого здоровья и скажите ему, что мне не помешает такой союзник в Нордсколе – разумеется, если вы не будете возражать.",
+	},
+},
+["Книга Томаса Томсона"] = {
+	["english"] = "Tome of Thomas Thomson",
+	["pages"] = {
+		"Дети: Джоэль и Джина. Жена: Сюзанна.",
+	},
+},
+["Истрепавшийся свиток"] = {
+	["english"] = "Trail-Worn Scroll",
+	["pages"] = {
+		"Мы Отрекшиеся – мы сражаемся против Короля-лича, сражаемся с Альянсом... иногда даже ссоримся с другими расами Орды. Нас мало, и наш путь тернист... но мы выживем и победим.\n\nТы охотник и тоже будешь выживать и побеждать с луком в руке и питомцем, прикрывающим тебе спину. Твоя сила – не в тайной магии или боевых искусствах, а в умении жить в дикой природе.\n\nПуть охотника открывается перед тобой. Он начинается с меня, твоего наставника. Где он окончится... мы пока этого не знаем.",
+	},
+},
+["Переведенное послание Солнечных Ястребов"] = {
+	["english"] = "Translated Sunhawk Missive",
+	["pages"] = {
+		"Заявление Солнечного короля\n\nСолнечный Ястреб, мои милые, преданные дети, ваш король очень доволен вами. Ваше присутствие в Азероте очень важно как для меня, так и для Повелителя.\n\nУже скоро солнечный портал сможет переместить подкрепление из Крепости Бурь прямо на остров Кровавой Дымки. \n\nМы вернем Экзодар. Мы убьем всех этих синекожих полукровок на месте. Велен заплатит за то, что он совершил. \n\n-Король Кель'тас Солнечный Скиталец",
+	},
+},
+["Бумаги Торговой Компании"] = {
+	["english"] = "Venture Co. Documents",
+	["pages"] = {
+		"Бригадир Шумовик, к письму приложен список оборудования, который ты запросил, одобренный Управляющим Раздунком.\n\nОн попросил меня напомнить тебе, что Торговая Компания очень заинтересована в проведении операций по всему Калимдору. Наши бурильные и шахтерские операции в Степях оказались прибыльными и эффективными, но мы все еще ожидаем достаточных норм производительности от Мулгора, который в твоей юрисдикции.\n\nСоветники сознают всю сложность проведения",
+		"операций в большом масштабе так близко к земле тауренов, но им не кажется, что таурены представляют собой серьезную угрозу нашему плану в этой местности в целом.\n\nМы рады слышать, что разработки начались в богатых минералами равнинах Мулгора. Из-за этого совет одобрил твой запрос касательно оборудования. Нам кажется, что в Мулгоре можно получить существенную выгоду не только за счет древесины, но и при добыче минералов, поэтому тебе также предоставят несколько наших новейших крошшеров и материалы, необходимые для изготовления завода.",
+	},
+},
+["Зеленая записка"] = {
+	["english"] = "Verdant Note",
+	["pages"] = {
+		"Прошлой ночью мне во сне явились духи. Они сообщили мне о твоем прибытии и о том, что я должен помогать тебе. Нам нужно о многом поговорить: о природе, духах, Матери-Земле и ночных эльфах. Но для этого нужна личная встреча. Мой долг – подготовить тебя к грядущим испытаниям.\n\nМоя мудрость поможет тебе. Я буду ждать.\n\n-Гарт Вестник Туманов, наставник друидов",
+	},
+},
+["Зеленый знак"] = {
+	["english"] = "Verdant Sigil",
+	["pages"] = {
+		"Как только мне стало известно, что ты &lt;готов/готова&gt; к обучению, я тотчас же послал тебе эту печать. Друиды Кенария рады любому пополнению рядов. Даже духи становятся сильнее, когда нас больше. Рано или поздно, проявив должное терпение, мы вернем былое величие. Разыщи меня возле Альдрассила. Я буду твоим проводником, пока ты живешь в Тенистой долине.\n\n- Мардант Крепкий Дуб, наставник друидов",
+	},
+},
+["Приказы по вооружению"] = {
+	["english"] = "Weaponization Orders",
+	["pages"] = {
+		"Раз!\n\nТебе поручено изловить еще 4 гроннов для военных разработок.\n\nИз первой группы весь процесс пережил только один.\n\nОдин постоянно нападал на солдат, и его пришлось убить.\n\nВторой погиб от случайного выстрела, пока на него устанавливали орудие. Третий во сне перекатился на собственные пушки. Его ошметки мы до сих пор собираем.\n\nНе волнуйся, твои труды не пойдут даром.\n\nКапитан Брак",
+	},
+},
+["Ядовитый фолиант"] = {
+	["english"] = "Venomous Tome",
+	["pages"] = {
+		"1. Если вас не устраивает эффективность яда, удвойте количество ингредиентов или уменьшите их наполовину. \n2. Если яд не работает так, как задумано, вы совершили вдвое больше ошибок, чем предполагаете.\n3. Опыты, опыты и еще раз опыты (из гномов получаются отличные подопытные).\n4. Яды должны быть просты в использовании и трудны в поиске противоядия. \n5. Экспериментируйте с ингредиентами в поисках неожиданных сочетаний.",
+	},
+},
+["Сборник стихов"] = {
+	["english"] = "A Collection of Poems",
+	["pages"] = {
+		"Мои стихи\nАвтор – Ураток\n\nСтарая лужа...\nВ нее прыгает тритон;\nВсплеск;\n\nВетер над Ледяным Огнем;\nНа моем плече плащ!\nПодарок от Эрды…",
+	},
+},
+["Таинственное послание"] = {
+	["english"] = "A Mysterious Message",
+	["pages"] = {
+		"Чернокоготь--\n\nМоре ждет нас. Нам нужны ресурсы с севера. Несите все: рельсы, ведра. Нам нужен металл. Ожидается прибытие груза из ПБ, но поставка задерживается. Потрудитесь как следует, Чернокоготь! В этот раз посылайте припасы прямо в \"амбар\". Времени в обрез.\n\n--ван Клиф",
+	},
+},
+["Пачка изрезанных писем"] = {
+	["english"] = "A Slashed Bundle of Letters",
+	["pages"] = {
+		"Уважаемому директору Криллиану.\n\nМой учитель, пишу вам, чтобы вы знали, чем ваш ученик занимался в последнее время. Последовав вашему совету, я решил расширить свои знания и обрести мудрость в путешествиях вдали от нашего любимого Штормграда. Я побывал во многих местах, но в итоге решил поселиться здесь, в милом городке Луноречье. Окружающие его поля Западного Края особенно прекрасны в ту пору, когда приближается время сбора урожая.",
+		"Всего через несколько дней после приезда я уже учил местных детишек с окрестных ферм. Уроки шли так хорошо, что мэр города предложил мне открыть здесь школу и начал строительство нового здания для нее! Из Серебряного бора в Штормград, а теперь и в Луноречье – кто бы мог подумать, что я увижу столько разных земель Азерота!\n\nС уважением,\n\nСталван Мистмантл",
+		"Досточтимый господин!\n\nВесть о том, что вы ищете учителя для своих детей, дошла до меня в Златоземье, где я временно проживаю в таверне \"Гордость льва\". Ввиду того, что в регионе неспокойно, мне пришлось оставить пост директора школы Луноречье. Прошу рассмотреть мою кандидатуру на должность учителя ваших детей. Директор Криллиан из академии может дать вам рекомендации, если это необходимо.",
+		"Я приеду, чтобы встретиться с вами, когда закончатся зимние дожди, и дороги снова станут пригодны для путешествий.\n\nДо встречи.\n\nСталван Мистмантл из Серебряного бора.",
+	},
+},
+["Разорванный дневник"] = {
+	["english"] = "A Torn Journal",
+	["pages"] = {
+		"...Джайлс, мальчик, производит впечатление непослушного ребенка, и его обучение потребует усилий. Однако старшая дочь, Тиллоа, весьма умна. Я также не могу не обратить внимания на ее пленительную красоту. Сейчас она находится на пороге женской зрелости. Скорее всего, лорд собирается в следующем году выдать ее замуж. Однако я отвлекся. На этой неделе я отправлюсь вместе с семьей в их летний домик возле лесопилки Восточной Долины в Элвиннском лесу, неподалеку от Красногорья. Надеюсь, оттуда смогу написать подробнее.",
+		"...какое странное и неконтролируемое чувство. Я никогда еще не чувствовал ничего подобного. Пока я занимался с Джайлсом историей, Тиллоа прогуливалась в палисаднике снаружи. Через несколько минут она вернулась к нам, положила мне в ладонь ярко-красную бегонию и так улыбнулась мне, что у меня чуть сердце не выскочило из груди...",
+	},
+},
+["Журнал гарнизона адмирала Тейлора"] = {
+	["english"] = "Admiral Taylor's Garrison Log",
+	["pages"] = {
+		"День 0 \nПрибыли на побережье; большая часть нашего снаряжения осталась нетронутой. Финн убеждает, что это идеальное место. Эдвард и Клаудия постоянно переругиваются после недавней атаки араккоа. Эфиал все твердит про \"силовые линии\" (уж не знаю, что это такое). Мы не можем даже точно сказать, когда именно прошли через портал – вроде бы осенью? Этот день я называю нулевым днем.",
+		"День 2\nИсчезло около дюжины дровосеков. У того, кто вернулся, в животе торчало осиное жало длиной с мою руку. Данберлин и Эфиал предложили пойти туда с боевым отрядом и все там зачистить. Я отправил их с парой спутников. Нам очень нужна древесина.",
+		"День 4\nНас посетил воздаятель Мараад. Наши дела его радуют. Он предложил нам отправить рабочих в дренейский город Элодор за едой. Я не согласился. Ни за что не стану отправлять своих лучших работников за полмира ради какой-то еды. Я решил по-другому. Мадам Гойя, эта дружелюбная пандаренка, предложила нам целые повозки провизии по разумной цене. Кажется, ей можно доверять.",
+		"День 7\nАтака Железной Орды! Слава Свету, что мы успели возвести стены. Данберлин сражался, словно дикий зверь. И все же мы потеряли в бою многих достойных товарищей, у многих раны были на спинах. Эфиала до сих пор не видно, хотя после нападения прошло уже несколько часов. Что-то тут не так. Дал рабочим выходной, чтобы они похоронили погибших. Работа продолжится завтра. Казармы почти готовы. Еще чуть-чуть – и можно будет строить оружейную.",
+		"День 12\nСегодня в городскую ратушу прибыл сэр Эдвард вместе с Черным Принцем Гневионом. Трудно было сказать, кто из них кого пленил. Гневион ищет убежища в моем гарнизоне, говорит, что Чем-то разозлил огров. Эдвард объявил, что Гневион бежал от Альянса. Прибыла леди Клаудия со своим отрядом, бойцы рассыпались веером и достали оружие. Ситуация накалилась. Я сказал Гневиону, что мы будем рады видеть его своим \"гостем\" при условии, что он останется под домашним арестом и круглосуточной охраной. Королю отправлено сообщение. В моем гарнизоне укрылся Черный Дракон – чего же теперь бояться?",
+		"День 15\nКазармы готовы. Полным ходом идут работы по оружейной. Этим утром прибыл большой груз разных материалов – \"подарок\" от Гневиона для строительства таверны. Как ему это удается? Я пошел поговорить с Гневионом, а он велел мне приглядывать за Эфиалем. Не доверяю ни тому, ни другому.",
+		"День 16\nОтозвал в сторону пару стражников и предложил им существенную доплату за круглосуточный присмотр за Гневионом. Они потупили взгляд и признались, что Гневион уже платит им за присмотр за МНОЙ. Вот так...",
+		"День 21 \nПришло письмо от Гаргтока, он приглашает нас на состязание в Кольце Крови. Выпала возможность показать всем, на что способен Альянс. Призовые деньги отдам Гойе. Вышел с Эдвардом и Клаудией, чтобы \"победить всех во славу Ринна\". Охранять гарнизон оставил Данберлина.",
+		"День 25\nПобеда! Эдвард отлично сражался на арене.",
+		"День 27\nВернулся. В гарнизоне хаос. Припасы от Гойи так и не прибыли. Данберлин решил, что закон военного времени – это хорошо. Теперь им командует Эфиал. Гневиона нигде нет. Забрал с собой нескольких моих лучших соратников. Пора засучить рукава и исправлять ситуацию.",
+	},
+},
+["Дневник искателя приключений"] = {
+	["english"] = "Adventuring Journal",
+	["pages"] = {
+		"Теперь у меня есть камера С.Е.Л.Ф.И., и с ней я смогу сделать отличный репортаж обо всем, что увижу в Танаане за позициями Железной Орды. Использовав пару-тройку инженерных штучек и добрый десяток зелий, я наконец-то миновал все патрули на берегу и двинулся вглубь Танаана. Здесь действительно опасно. Даже Железная Орда без особой надобности сюда не суется. Кажется, я нашел место, где в изобилии водятся опустошители. Пока останусь здесь и буду запасать их шкуры. Когда наберу достаточно, достану свой камень возвращения – и домой, в Ашран!",
+		"&lt;Почерк становится все более неровным.&gt;\n\nВот я идиот. Камеру С.Е.Л.Ф.И. взял – а камень возвращения забыл.\n\nОпустошители все прибывают.\n\nРюкзак полон\n\nРасскажите мою историю",
+	},
+},
+["Закрытый фолиант мудрости"] = {
+	["english"] = "An Unopened Tome of Advice",
+	["pages"] = {
+		"Содержание\n\nГлава 1 – Смерть и вы\n\nГлава 2 – Создаем вурдалака: семь простых примеров\n\nГлава 3 – Вечный покой: выбираем гроб по размеру\n\nГлава 4 -Любовь до гроба: пятьдесят верных признаков\n\n&lt;Похоже, эту книгу никогда не открывали&gt;",
+	},
+},
+["Древняя табличка клана Корун"] = {
+	["english"] = "Ancient Korune Tablet",
+	["pages"] = {
+		"В 170-й год правления Властелина Грома чаровязы клана Корун пришли к Лэй Шэню с самым великим своим творением.\n\nЭто был колокол, отлитый из плоти его создателей, выкованный при помощи огня звезд и закаленный дыханием непроглядной тьмы. Звук этого колокола мог сотрясти весь мир и долететь до небес.\n\nВ бою громогласное звучание колокола воодушевляло воинов Лэй Шэня. Оно наполняло их сердца яростью и ненавистью, делая их сильнее на поле битвы. В сердцах же врагов Императора пронзительный звон колокола сеял страх и сомнения, вынуждая их пускаться в бегство.\n\nПребывая в благоговейном трепете перед этим творением, Властелин Грома говорил о нем, как о \"гласе богов\", и назвал его Шэньцин или Божественный Колокол.",
+	},
+},
+["Древняя табличка"] = {
+	["english"] = "Ancient Tablet",
+	["pages"] = {
+		"Молот Зул'Фаррака\n\nЧтобы создать молот Зул'Фаррака, следует отправиться к алтарю Зула и заполучить священный молот, хранящийся у тролля – хранителя.\n\nДалее следует принести молот к алтарю в городе троллей Джинта'Алор.\n\nЕсли ударить молотом по алтарю, алтарь наполнит его силой и превратит его в молот Зул'Фаррака.",
+	},
+},
+["Дневник механолога Маатуна"] = {
+	["english"] = "Artificer Maatun's Journal",
+	["pages"] = {
+		"Мой отец называл этот камень \"Грезы Аргуса\", хотя теперь я понимаю, что в прошлом он был известен под другими именами. Это был кристалл огромной силы, способный обеспечить энергией целую деревню. Некоторые говорили, что это дар наару, который они передали нашей семье после исхода с Аргуса, что объясняет его легендарную мощь.\n\nКонечно, все это пустые разговоры, поскольку кристалл был разбит задолго до моего рождения, а его осколки - \"осколки грез\", как я их называю - столь же бесполезны, как и прочие кристаллы, добываемые в шахтах Призрачной Луны. Но я не оставляю надежд собрать Грезы Аргуса воедино и возродить его легендарную силу, чтобы поселения дренеев вновь процветали на Дреноре.",
+		"Во время поисковых работ, проводившихся вместе с местными рангари, мы наткнулись на небольшую группу орков клана Призрачной Луны, которые занимались исследованием тех же месторождений минералов. В разговоре орки упомянули некие ритуалы, которые они проводят для того, чтобы объединять маленькие кристаллы в крупные структуры и поддерживать их вместе при помощи магии. Ранее я никогда не интересовался магией орков Призрачной Луны, но сейчас мне кажется, что их знания могут быть полезны в восстановлении Грез Аргуса.\n\nМне нужно как следует изучить этот вопрос.",
+		"Совет прелатов отказал мне в моей просьбе отправить посланника к оркам Призрачной Луны. Они полагают, что подобное исследование не имеет никакого смысла, а я просто-напросто отчаянно пытаюсь склеить разбитую реликвию. Впрочем, заставить меня сидеть на месте они не могут.\n\nЗавтра я начну действовать на свой страх и риск. Надеюсь, клан Призрачной Луны согласится помочь мне в моих изысканиях.",
+		"Я провел в пути уже много дней, но пока еще не встретил ни одного орка из клана Призрачной Луны. Конечно, мы заметили, что в последнее время орки перестали с нами торговать, но даже не подозревали, что они теперь вообще не идут на контакт. \n\nОстается только один выход – мне предстоит отправиться в западные скалы. Я вижу впереди огромные каменные монолиты, испещренные рунами клана Призрачной Луны, которые возвышаются над плоскогорьем. Уверен, что орков следует искать именно там.",
+		"Похоже, орки из клана Призрачной Луны по какой-то причине укрылись за своими укреплениями. Я взобрался на самый верх скалистых гор и оттуда видел огромное скопление членов клана, чего никогда не бывало прежде.\n\nОрки странно себя вели, однако не были настроены агрессивно. Они называли место, где собрались, Столпами Судьбы, и, казалось, готовились к каким-то великим магическим ритуалам. Когда я начал их расспрашивать о сути грядущих ритуалов и о причинах их недавнего уединения, орки давали мне лишь уклончивые ответы.",
+		"В процессе восстановления Грез Аргуса Маатун обращался за помощью к трем оркам. Эти орки предали его и забрали осколки кристалла до того, как их можно было собрать воедино. Попытайся найти этих орков. Возможно, осколки все еще у них.\n\nПервый должен быть где-то неподалеку. В дневнике написано:\n\n\"Мне говорили, что чаще всего ее можно встретить в кристаллической пещере к северу от лагеря. Там она занимается изучением подлинных кристаллов с тем, чтобы усилить их потенциальные способности. Поищу ее в пещере.\"",
+		"Лор Каменный Кулак была высокой, статной женщиной. За ее грубыми чертами скрывался глубокий ум и эрудиция, которыми она поразила меня, когда мы стали обсуждать, как восстановить кристалл. С помощью своих познаний в магии клана Призрачной Луны она могла собрать воедино любой кристалл и придать ему первозданный вид.\n\nЧтобы реализовать свой план, мне оставалось привлечь на свою сторону еще двух орков в лагере: Вока Черноязыка и Короса Расщепителя Душ.",
+		"Черноязык был старшим ритуалистом клана Призрачной Луны и искусным резчиком рун. Для ритуала было крайне важно точно расположить руны определенным способом, и, поскольку мой кристалл уникален по своей природе, здесь потребуется работа мастера. Я слышал, что обычно орка можно найти в одной из хижин мастеров рун, в южной части лагеря. Узнать эти хижины можно по стоящим вокруг валунам и по парящим над ними руническим камням.\n\nВторого орка, Короса Расщепителя Душ, отыскать будет сложнее. Он ведет отшельнический образ жизни и предпочитает жить вдали от остальных орков. Впрочем, говорят, что его нередко можно встретить бродящим среди могил на высоком холме и разглядывающим оттуда лагерь, который находится внизу. Должно быть, там он говорит с ушедшими предками, предпочитая их живым соплеменникам.",
+		"Мне удалось найти двух оставшихся орков, которые согласились помочь мне и Лор. Признаюсь, их магия кажется мне довольно странной, но я стараюсь не обращать на это внимания. Если их ритуалы помогут мне вернуть Грезы Аргуса, то я не буду задавать лишних вопросов. \n\nМы обнаружили пустую пещеру на уступе, который возвышается над Крепостью Страданий – над оплотом клана Призрачной Луны. Там мы начали сооружать алтарь под руководством Лор Каменный Кулак. Объединив изобретательность дренеев и загадочное искусство нанесения рун клана Призрачной Луны, мы надеялись создать устройство, способное воссоздать кристалл из разрозненных частей.\n\nГрезы Аргуса возродятся вновь!",
+		"Сооружение алтаря продолжается, однако мои союзники ведут себя все беспокойнее. Словно некая сила будоражит орков Призрачной Луны, и они день ото дня становятся все агрессивнее. Они спорят о чем-то на своем языке, которого я не понимаю. Боюсь, они больше не испытывают желания мне помогать. \n\nЯ продолжу работу несмотря на возросшее напряжение. Возможно, судьба всех дренеев зависит от этого кристалла.",
+		"Устройство почти готово, а вот происходящее вокруг меня в клане Призрачной Луны меня все больше беспокоит. Похоже, орки собирают армию. Также я видела, как их маги вызывают темных существ из запрещенных миров. Чем дальше, тем больше я чувствую себя здесь пленником.\n\nОстается только надеяться, что когда моя миссия будет завершена, орки Призрачной Луны позволят мне вернуться к дренеям.",
+		"Меня предали. Мы собрали устройство, но прежде чем я смог его активировать и восстановить кристалл, орки набросились на меня. Каменный Кулак нанесла удар, который свалил меня с ног. Беспомощный, я лежал на земле у своего устройства. Я мог лишь видеть, как каждый из орков взял себе часть кристалла, после чего меня оттащили прочь.\n\nСейчас я сижу, прикованный к огромному руническому камню, и жду неизвестно чего. Единственное мое желание сейчас – еще хотя бы раз увидеть соплеменников.",
+	},
+},
+["Неразборчиво написанный дневник"] = {
+	["english"] = "Barely Readable Diary",
+	["pages"] = {
+		"Папа снова отправил меня ухаживать за старухой Бесс. Кажется, ему нравится наблюдать за тем, как она меня гоняет. Не знаю, почему она меня так невзлюбила – я никогда не делал ей ничего плохого. Ну, разве что однажды съел ее яблоко. Не представляю, как она об этом узнала.",
+	},
+},
+["\"Истоки угрозы нежити\""] = {
+	["english"] = "Beginnings of the Undead Threat",
+	["pages"] = {
+		"Козни нежити на земле Азерота начались не с падения принца Артаса, они начались задолго до того, как и события, вызвавшие падение Лордерона. Началом всему послужило пришествие орочьих кланов и Пылающего Легиона.",
+		"Орки Дренора (мира, из которого они изначально пришли) были благородными и стремились к знаниям. Они были могучими воинами, сильными телом и душой. Именно поэтому их упорно разыскивал Пылающий Легион. Кил'джеден, демон великой мощи из рядов Легиона, возжаждал поработить орочьи кланы и напустить их полчища на те миры, которые еще только предстояло покорить Пылающему Легиону.",
+		"Кил'джеден пришел к предводителю кланов, могучему шаману по имени Нер'зул. Он пообещал ему необычайную мощь и мудрость, если тот заключит с демоном пакт, который отдаст кланы во власть Пылающего Легиона. Этот пакт предопределил не только судьбу орков, но и судьбу всего их мира.",
+		"Со временем Нер'зул осознал, что судьба кланов – в руках Пылающего Легиона, и тогда шаман бросил вызов Кил'джедену. Демон, разъяренный поступком Нер'зула, обратился к ученику шамана, Гул'дану, склонить которого ко злу оказалось куда проще, чем Нер'зула.",
+		"Именно Гул'дан повинен в том, что шаманские знания в кланах пошли на убыль. Он обещал всем могущество и власть над врагами, и его охотно слушали. С помощью Кил'джедена Гул'дан начал манипулировать кланами. Орки, некогда благородные, превратились в злобных и неразумных дикарей. Когда же в их жилы попала кровь демонов, орки стали еще более безжалостными и одержимыми.",
+		"Хотя Кил'джедену удалось склонить к себе Гул'дана после неудачи с Нер'зулом, он по-прежнему ненавидел шамана и поклялся заставить его принять тот самый пакт. Кил'джеден захватил Нер'зула и начал истязать шамана невыносимой медленной пыткой. Нер'зул молил о смерти, а Кил'джеден все напоминал ему о пакте. Затем Кил'джеден убил орка, но умертвил при этом лишь его тело. Душу орочьего шамана Кил'джеден удерживал, пока она не нашла свой путь в Круговерть Пустоты.",
+		"Кил'джеден поместил душу Нер'зула в ледяную глыбу, принесенную из Круговерти Пустоты, и наделил ее еще большим могуществом. Потеря телесной оболочки и обладание невероятной силой привели к перевоплощению Нер'зула.",
+		"Кил'джеден бросил в Азерот через иные измерения глыбу льда, и она упала на континенте Нордскол, принеся в наш мир великое зло. Нер'зул исчез навсегда, вместо него там образовался Ледяной Трон, средоточие ненависти. Некогда уважаемый предводитель шаманов стал невероятно могущественным королем-личом.",
+		"Поскольку Кил'джеден не доверял Королю-личу, он послал своих Повелителей ужаса надзирать за духом и следить, чтобы тот выполнял его приказания. Его слуги-вампиры охотно отправились в Азерот, их влекла мощь и ярость Короля-лича, а также возможность изничтожить население целой планеты.",
+		"Прошло больше десяти лет. За это время Король-лич использовал свою огромную мощь, чтобы обрести власть над умами обитателей Нордскола, и повелел им возвести огромную цитадель над его Ледяным Троном. Теперь, когда под его началом был весь Нордскол, Король-лич понял, что настала пора вторгнуться в Лордерон. Находясь в ледяном плену, бывший орочий шаман начал обдумывать новые способы захвата власти. Его призыв достиг всех земель.",
+		"Призывы Короля-лича не остались незамеченными, особенно в небольшой группе могущественных личностей. Среди них был верховный маг Кел'Тузад, влиятельный участник правящего круга Даларана, Кирин-Тора. Его стремление овладеть всеми видами волшебства нарушало правила Кирин-Тора, возбраняющие практиковаться в черной магии. Кел'Тузад оставил Кирин-Тор, порвал все связи с обычным миром и поклялся стать прилежным учеником Короля-лича.",
+		"Двое заключили между собой пакт. Кел'Тузад получил бессмертие и великую силу в обмен на верность Королю-личу. Перво-наперво он должен был употребить в Лордероне все свое богатство и влияние, чтобы основать там Культ Проклятых. Этот культ обещал всем своим приверженцам равенство и вечную жизнь, если они присягнут на верность Нер'зулу, богу Культа Проклятых.",
+		"Затем Нер'зул создал артефакты, чтобы распространить чуму среди народов Лордерона. Он отдал их Кел'Тузаду и повелел волшебнику разнести их по земле. А служителям своего культа приказал защищать артефакты любой ценой.",
+		"Потом чума начала заполонять страну и заражать ее ничего не подозревающих обитателей. Под присмотром Кел'Тузада войско Короля-лича быстро росло, и вскоре тот подчинил себе обширные земли. Это войско стало известным под именем Плеть, и единственной его целью было истребление всех жителей Азерота.",
+	},
+},
+["Научные записи Беламур"] = {
+	["english"] = "Belamoore's Research Journal",
+	["pages"] = {
+		"Кеган Мракмар, лидер небольшой группы нежити, пришедший к нам в поисках убежища для его \"братьев\", опроверг все обычные представления о таких, как он. Может быть, его кожа гнила, и кровь не течет по его жилам, но он держал себя очень достойно, и, похоже, заботился больше о безопасности своих товарищей, чем о самом себе.\n\nВ действительности, признаюсь честно, в нем было больше человечности, чем в некоторых окружающих.",
+		"Но почему я вспомнила об этом? Я это сделала для того, чтобы вы поверили тому, что я собираюсь написать, словам, что произнесли губы Кегана, и надеюсь, мои коллеги, читая этот дневник, поймут, почему я поверила тому, что он сказал:\n\n\"То, что осталось от древних богов, все еще влачит жалкое существование в глубоких расщелинах этого мира. Новые силы ищут способ обуздать эти древние силы, и тот, кто сумеет это сделать, получит в свое распоряжение ужасное орудие против своих врагов\".",
+		"Вот что произнес Кеган, когда протягивал мне свою подвеску Кровавого камня, и был страх и, может быть, благоговение в его глазах, когда он делал это. Когда его рука встретилась с моей, он замешкался, будто не желая расставаться с подвеской. Я содрогнулась от отвращения и по сей день не знаю, из-за того ли, что я ощутила касание его мертвой плоти, или это подвеска заставила меня поежиться.\n\nИбо я почувствовала в ней силу. Глубокую, скрытую, ненасытную силу. И острую жажду свободы.",
+		"Несмотря на то, что мои коллеги в Даларане настороженно отнеслись к идее изучения кровавых камней, которые принесли с собой Кеган и его спутники, заключив в карантин четырех беженцев и оставив кровавые камни при них, искренность Кегана обязала меня изучить его подвеску Кровавого камня.",
+		"Я надеялась доказать моим коллегам, что этот камень обладает магическими свойствами, и если мы, волшебники Даларана, не желаем использовать силу кровавых камней, мы должны по крайней мере изучить их свойства, поскольку однажды наши враги могут использовать их против нас.\n\nИ так начались мои исследования.",
+		"Я начала мои эксперименты с предположения, что кровавые камни были каким-то видом камня, как кварц или обсидиан. Посему я запустила серию экспериментов для опознания того, какие минералы содержатся в кровавом камне, какие силы использовались для придания ему такой твердости и цвета, и других свойств, сходных с камнем или рудой. Но подвеска Кровавого камня, к моему разочарованию, не отреагировала на мои процедуры так, как это сделала бы обычная руда.",
+		"В действительности она часто реагировала с точностью до наоборот! Как будто подвеска умышленно искажала результаты моих экспериментов.\n\nКак будто камень был думающим, живым существом.\n\nРазгневанная, но не сдавшаяся, я прекратила выдвигать предположения о том, что подвеска была инертным куском скалы, и начала считать, что она была живым существом.\n\nНо снова я была не права.",
+		"Ни один из моих тестов не пролил свет на загадку происхождения кровавого камня. В то время единственной загадкой, что мне удалось разгадать, было то, что кровавый камень – ни живое, ни мертвое существо!\n\nНо тогда, на грани поражения, я сделала прорыв. В моем последнем тесте не последнюю роль сыграла стеклянная колба с отколотым горлышком. Когда я закончила свой тест, опять ничего не обнаружив, я убирала инструменты со своего рабочего стола и порезалась об острый край колбы.",
+		"Порез был неглубокий, хотя обильно кровоточил. Прежде чем я обмотала мой палец бинтом, добрая порция моей крови пролилась на стол.\n\nИ когда я начала убирать ее, я заметила странную вещь…",
+		"Кровь, что я пролила возле подвески Кровавого камня, медленно двигалась по направлению к драгоценности, как если бы ее притягивала к камню некая сила. А кровь, что попала на подвеску, похоже, исчезла, и красный цвет камня стал еще более насыщенным, когда тот всосал еще немного моей крови.",
+		"После того как я это увидела, моя голова просветлела, возможно, благодаря недавнему порезу (хотя я не верю, что потеряла настолько много крови), а может быть потому, что я, наконец-то, после стольких разочарований, обнаружила одно из свойств кровавого камня. Я добралась до своего стула и села, размышляя. Мысли и вопросы роились в моей голове, вызывая головокружение и угрожая свалить меня наземь.\n\nКровавый камень пьет кровь? Ему нужна кровь? Он притягивает кровь?",
+		"Или кровавый камень состоит из крови? И, если так, чьей крови? Моей? Крови другого человека? Животного?\n\nИли, может быть, кровавый камень – это кровь некоего неизвестного существа – того самого существа, которого Кеган одновременно почитал и боялся, когда отдавал мне эту подвеску?\n\nВот вопрос, на который нужно получить ответ. Это – ключ.",
+		"Я снова загорелась интересом и вернулась к своим экспериментам. В этот раз я не выдвигала никаких предположений, методично делая все тесты, что были в моем распоряжении. Это чрезвычайно увеличило понадобившиеся усилия, но шансы прояснить что-либо увеличились соответственно.\n\nИ, несмотря на то что моя лаборатория мала и у меня нет помощников, к которым я могла бы обратиться за помощью, я обнаружила еще одно интригующее свойство кровавого камня...",
+		"В дополнение к крови в камень были вплавлены силы стихий. Огонь, вода, гром и камни были перемешаны с кровью (но все же, с чьей кровью?), и несмотря на то, что эта смесь была внешне инертна, все эти силы внутри нее бушевали в неистовом противостоянии. Столь много вопросов возникло об этом поразительном, знаковом материале.",
+		"Но чтобы ответить на эти вопросы, понадобятся еще тесты и исследования подвески, и я боюсь, что Лордамерские выселки не смогут снабдить меня ни помощниками, ни оборудованием для выполнения этой задачи. Поэтому я отправила подвеску Кровавого камня вместе с посыльным в Даларан с особыми инструкциями о том, как исследовать его, чтобы они могли избежать тех разочарований, что постигли меня с самого начала.",
+		"В ожидании результатов мы с Кеганом много беседовали. Мне хотелось побольше узнать от него о кровавых камнях, но он никогда не говорил мне больше, чем в тот день, когда отдал мне свою подвеску. И он нечасто говорил о времени, проведенном им среди тех, кого он называл \"Отрекшимися\", – так он именует свой клан нежити.",
+		"Зато Кеган очень охотно говорил о других вещах, особенно о своем детстве, проведенном в Лордероне до его падения. \n\nОн по-прежнему полон любви к этому потерянному королевству, хотя оно сейчас разрушено и мертво.\n\nРастущая привязанность к Кегану придавала мне терпения в ожидании результатов анализов.",
+		"Но после нескольких недель отсутствия новостей терпение у меня иссякло. Из Даларана мне сообщили, что кровавый камень к моим коллегам так и не попал. Курьер каким-то образом пропал по дороге, а с ним была утрачена и подвеска кровавого камня!\n\nЭто очень печальные новости, так как, хотя у Кегана и его последователей есть еще образцы кровавого камня, с которыми мы можем экспериментировать, я опасаюсь, что подвеска попадет в неподходящие руки.",
+		"Пришлось отправить в Даларан другого посланца. Мне стало известно, что они прочесывают руины возле нашей защитной сферы в поисках подвески.\n\nОстается лишь надеяться, что мы не опоздали.",
+	},
+},
+["Планы вторжения клана Черной горы"] = {
+	["english"] = "Blackrock Invasion Plans",
+	["pages"] = {
+		"Гноллы племени Темношкуров и орки Черной горы собирают войска, чтобы напасть на Штормград.",
+	},
+},
+["Послание орков Черной горы"] = {
+	["english"] = "Blackrock Orc Missive",
+	["pages"] = {
+		"&lt;Вся страница исписана орочьими письменами. Вы не понимаете ни единого слова в этом документе.&gt;",
+	},
+},
+["Окровавленный зандаларский дневник"] = {
+	["english"] = "Blood-Spattered Zandalari Journal",
+	["pages"] = {
+		"Я говорил им, что лоа не говорят со мной, хотя я повсюду вижу их, слышу, как они говорят обо мне, слышу, как они приказывают мне бросить все. Они жаждут плоти, эти лоа. Они жаждут ненависти. Они считают меня негодным. Я быстро выучился тому, что мне все придется брать самому, потому что духи ничего мне не дадут.\n\nЯ сказал старейшинам, что хочу выйти на ринг, а они сказали, что я глупец, и что меня убьют. Приказали мне пройти испытание камнями: надо было поднимать над головой тяжелые камни, чтобы показать, что у меня сильная спина, что я могу тащить плуг и жить в грязи. Старейшины совсем меня не знают. Но я вижу духов, даже таких, которых не видят они. Духи кружатся над их головами. Духи видят меня насквозь. Ненавидят меня. Я докажу им, что они ошибаются.",
+		"Я вышел на ринг, взял по тяжелому молоту в каждую руку. Хорошее ощущение. Будет еще лучше, когда я разобью ими пару голов. Будет просто отлично, когда они станут скользкими от крови. Все видят, когда троллю нечего терять, когда ему все равно, кто перед ним. Они не показывают страха, но духи видят. От духов страх не спрячешь.\n\nКровь проливать нельзя, но я бью в голову – там живет ненависть. Когда я убиваю других, духи их покидают. Теперь они меня боятся. Так-то лучше. Я вас вижу, духи. Я знаю вас лучше, чем кто бы то ни было.",
+	},
+},
+["Приказы пиратов Кровавого Паруса"] = {
+	["english"] = "Bloodsail Orders",
+	["pages"] = {
+		"Приказы братства Кровавого Паруса\n\nОбратите внимание на сказанное здесь, ребята. Это будет наша финальная атака на Пиратскую Бухту.\n\nКрасавчик в последний раз подвел меня. Тот, кто его заменил, находится на севере. Он будет командовать наступлением на суше, через этот проклятый туннель.\n\nКапитан Кильватель и \"Бурун\" зайдут с юго-запада, чтобы не дать пушкам обстрелять нас с мыса. Ему понадобятся люди, порох и много веревок.",
+		"\"Госпожа Удача\" войдет прямо в гавань и откроет огонь. Капитан корабля получит приказ никого не брать в плен – все мужчины, женщины и дети, причастные к общению с разбойниками Черноводья из Пиратской Бухты, должны быть убиты на месте.\n\nЯ буду командовать атакой с тыла вместе с \"Кровавой Завесой\". Мы обеспечим огневую поддержку и защиту от налетчиков, которые придут на оборону своей драгоценной Пиратской Бухты.",
+		"Никакого плана отступления не будет, ребята. Когда мы прибудем в Пиратскую Бухту, то сожжем и захватим город – или умрем, пытаясь это сделать. Примите это к сведению.\n\n-Командир флота Фираллон",
+	},
+},
+["Легенды и предания племени Кровавого Скальпа"] = {
+	["english"] = "Bloodscalp Lore Tablet",
+	["pages"] = {
+		"Луна над Долиной",
+		"Луна сияет над Долиной\nСвой свет на джунгли изливает\nГде храбрые бойцы собрались\nЧтоб защитить народ свой в битве. \n\nЛуна сияет над Долиной\nНад битвой страшной и кровавой\nГде гибнут воины в сраженьи\nДрузья и недруги там бьются.",
+		"Когда наши братья уходят\nВ мир за гранью нашего знания\nДух становится сильнее\nВ глубине под Долиной.\n\nКогда наши братья уходят\nВ Храм Горы\nМы защищаем их бессмертный дух,\nЗаключенный в священном голубом кристалле.\n\nКогда наши братья уходят\nНад Долиной сияет Луна.",
+		"Гри'лек Странник",
+		"Рассказ о Гри'леке Страннике\n\n[...Начало текста, написанного на табличке, стерлось. Но конец можно разобрать...]\n\nГри'лек шел по джунглям. Глаза его горели, а из груди вырывалось рычание, ибо пылал он великой яростью. \n\nВ гневе подымал он вверх руку, издавая яростный рык, – левую руку, окрепшую в охотах и битвах, проведенных без ее близнеца. \n\nИбо правой руки у Гри'лека давно не было.",
+		"И так он странствовал в своих вечных поисках, и не было у него руки. Он шел и посылал проклятия небесам. \n\nНо Гри'лек уже давно отвратил свой слух от гласа духов, и они прогневались и не слушали его проклятий.\n\nПроклят был Гри'лек. Обречен он был на вечные странствия. Без руки.",
+		"Падение Гурубаши",
+		"Поднявшись из океана подобно гигантской водяной башне, Нептулон наслал на обреченный И'лалай великих краккенов. Столь огромны они были, что в них росли целые джунгли водорослей и плавали левиафаны. \n\nСамый большой краккен высоко поднял руки и обрушил их в море, посылая вперед гигантские волны. И все они устремились на И'лалай.",
+		"Краккены взревели, как океанский шторм: \n\n\"Мы идем\".\n\nМин'лот, твердо держась на ногах, призвал свою магию. Волны, устремившиеся к И'лалай, разделились и обошли город с двух сторон, обрушившись на джунгли. Затем Мин'лот приказал своим ученикам начать песнь усмирения, и десятки троллей запели.\n\nИ один голос звучал громче остальных.",
+		"Мин'лот закричал – магия собрала всю мощь заклинаний его учеников, и он обрушил ее на приближающегося краккена.\n\nМоре расступилось, и заклятие Мин'лота устремилось к слугам Нептулона. Оно обрушилось на них, и тысячи молний вскипятили воду и оставили множество кратеров в земле.\n\nМин'лот вскричал, торжествуя, он знал, что его заклинание сокрушит противников.",
+		"Но краккены стары, очень стары. Они помнят времена, когда земля только вышла из моря.\n\nОни помнят правление Древних и пришествие свергнувших их Странников. Они помнят времена, когда магия была юной.\n\nОни стары и владеют многими тайнами. И хотя заклинание Мин'лота было сильным, все же, как и тролли, не вечным.\n\nИ его действие закончилось.",
+		"Оно не смогло сковать краккенов, но разъярило их. Много эпох смертные не причиняли им боли, а заклинание троллей оказалось болезненным!\n\nИ вот краккены сбросили оковы заклинания Минлота и взревели от ярости.\n\nРаздался громовой рокот. Из глубин поднялись большие волны и понеслись к суше. Волны достигли И'лалая и накрыли город тенью.\n\nНо прежде чем уничтожить его, краккены на миг замерли.",
+		"Тролли-знахари содрогнулись и воззвали к своему учителю. Мин'лот смотрел на водяные валы, обреченный, но не сломленный. Он обратился к своим ученикам и прошептал несколько слов, которые затем были высечены в камне. Мин'лот повернулся к краккенам.\n\nЕго лицо исказила гримаса, и он метнул в них свой посох – это было его последнее отчаянное деяние.\n\nКраккены разгневались на Мин'лота, и океан обрушился на И'лалай.\n\nОн перестал существовать.",
+		"И воды обрушились на джунгли, сметая все на своем пути. Тролли и животные вопили в ужасе, когда вода догоняла и поглощала их.\n\nМногие тролли Гурубаши не понимали, почему вдруг океан вышел из берегов, но потом они умерли – так ничего и не поняв.\n\nНаконец, достигнув гор, волны остановились. Успокоившись, они вновь отхлынули к берегам, оставляя после себя полосу разрушений.\n\nВода отступила, но осталась в И'лалай, поглотив его навечно.",
+		"И вождь Вар'газул, который находился в безопасности за горами, в Зул'Гурубе, спустился в джунгли и увидел, что его народа больше нет.\n\nИ он пришел в отчаяние, так как его мечты о завоеваниях потерпели крах.\n\nА Мин'лота-Змея так и не нашли.",
+		"Гробница Императора",
+		"Во имя луны и огня,\nВо имя плоти и костей,\nНаписанного кровью\nИ вырезанного в камне.\nОставь это место\nИли встреть свою гибель\nСама смерть стоит на страже\nГробницы Императора.",
+	},
+},
+["Планы Тяжелого Кулака"] = {
+	["english"] = "Boulderfist Plans",
+	["pages"] = {
+		"Глупый,\n\nнайди еду. Синие вкусные. Лантрезор говорит, они хорошие. Неси еду Глыбу. Сначала ест Глыб, потом ест глупый. Ясно? Быстро, а то Глыб будет есть тебя.\n\n-Глыб",
+	},
+},
+["\"Добиться дренейской девушки.\" Сочинение Брейзи."] = {
+	["english"] = "Brazie's Dictionary of Devilish Draenei Damsels",
+	["pages"] = {
+		"Вам по вкусу экзотика? \nВы мечтаете о ком-то немного не от мира сего? \nКопыта вам по душе, но вот суккубы – уже немного перебор?\n\n Эта книга для вас, дорогие читатели..",
+		"Я только сошел с корабля на Остров Лазурной Дымки и сразу же повстречал компанию прекрасных юных дренеек, которым едва ли исполнилось по 230 лет. Они много смеялись и в целом прекрасно проводили время. Вот счастливчик, я только ступил на землю, а уже нашел именно таких веселых и энергичных девушек, которых мечтал встретить в этом путешествии. \n\nСначала я немного нервничал, а потом сделал глубокий вдох и сказал себе: \"Они приехали в Азерот, чтобы отдохнуть, и, значит, не против завести новые знакомства и хорошенько повеселиться.\"\n\nДевушки, конечно же, были рады встретить в Экзодаре такого чертовски очаровательного гнома, как я. Как оказалось, мы еще и остановились вместе неподалеку от Чертога Света. На прощанье мы обменялись томными, многообещающими взглядами и договорились встретиться возле А’дала вечером того же дня.",
+		"На следующий день я повстречал еще одну прекрасную дренейскую девушку – блики света в ее рогах говорили о благородной утонченности ее натуры. Я поинтересовался, с какой целью она приехала в Экзодар, и был ужасно удивлен, узнав, что она на самом деле живет здесь. \n\nМне вспомнились мои собственные слова: \n\n\"Она приехала сюда отдохнуть, завести новые знакомства и хорошенько повеселиться.\" \n\nКак я мог так ошибиться: она сюда отнюдь не отдыхать приехала! И тут мои шестеренки осенило. Я ведь считал, что дренеи так легко шли на контакт именно потому, что остров для них был местом отдыха. Ну что за нелепое объяснение! \n\nЯ веселый и интересный парень, с которым не против провести время любая разумная девушка – не важно, на отдыхе мы познакомились или нет. Сейчас, когда мне встречается дренейская девушка, я всегда вспоминаю одну простую истину: \n\n \"Она просто не против завести новые знакомства и хорошенько повеселиться\".",
+		"Следующие 497 страниц руководства заполнены фотографиями, снятыми аппаратом \"Супер-щелк FX 2000\" под очень странным углом.",
+	},
+},
+["\"Документ о дворфийских дамах.\" Сочинение Брейзи."] = {
+	["english"] = "Brazie's Document on Dwarven Dates in Dun Morogh",
+	["pages"] = {
+		"Как покорить сердце дворфийской дамы?\n\n1. Попросите ее купить вам выпить.",
+	},
+},
+["\"Гномские голубки: гляди в оба!\" Сочинение Брейзи."] = {
+	["english"] = "Brazie's Guide to Getting Good with Gnomish Girls",
+	["pages"] = {
+		"\"Жизнь, как в сказке!\"\n\nНемного фантазии в отношениях никому не повредит, тем более что ни одна уважающая себя девушка-гном не станет связываться со скучным занудой. Порадуйте слух избранницы описанием будущих совместных приключений:\n\n \"Только ты и я, детка. Мы полетим с тобой в Калимдор, вырежем наши имена на стволе Тельдрассила, а потом будем качаться на лианах в тропических лесах Кратера Ун'Горо, пока смерть не разлучит нас. \"\n\n\"У кого подвешен язык...\"\n\nСкормите ей пару историй о вашем захватывающем будущем вместе! Чем невероятней они звучат, тем лучше. Грандиозные планы поразят вашу избранницу в самое сердце. Этот прием срабатывает даже в самом начале знакомства!\n\n \"Поставь нас вдвоем во главе командования, мы бы в два счета выиграли войну за освобождение Гномрегана... Так почему мы еще не вместе?\"",
+		"\"Шутите с умом\"\n\nЖизненно необходимо овладеть искусством подшучивать над женщиной так, чтобы это было смешно обоим. Оно, однако, сравнимо с хождением по краю пропасти: один неверный шаг – и вы кандидат в покойники. Вот, например, назовите даму назойливой гоблинской мушкой, и она тотчас выплеснет вам в лицо порцию зеленого гордокского. Постарайтесь придумать что-нибудь более утонченное.\n\nЕсли она ведет себя как ребенок и постоянно запрыгивает на стол посреди бара, возможно, подойдет следующая фраза:\n\n\"Я слышал, в сиротском приюте Штормграда набирают ведущих шоу-программ.\"\n\nЕсли она без умолку болтает только о себе, попробуйте шутливо сказать:\n\n\"Так, где у тебя выключатель?\"\n\nВАЖНО: У гномов НЕТ волшебного выключателя. Попытка найти таковой имеет все шансы закончиться для вас потерей жизни, кошелька или какой-нибудь из конечностей.",
+	},
+},
+["\"Жертвы ради женщин.\" Сочинение Брейзи."] = {
+	["english"] = "Brazie's Handbook to Handling Human Hunnies",
+	["pages"] = {
+		"Покорите сердце молодой человеческой красотки – и вы познаете верх блаженства. Безгранично великодушные, бесконечно внимательные и необычайно веселые, эти девушки во все времена были погибелью многих героев (см. главу 3: \"Джайна Праудмур и мужчины, которые ее добивались\").\n\nСо временем выяснилось, что недостаточно быть просто обладателем определенной суммы денег, приятной внешности или внушительно смотрящихся доспехов, чтобы расположить к себе такую женщину. Даже чудесные гномские изобретения не всегда смогут вам помочь. \n\nЗавоевать любовь своей избранницы вам помогут следующие три принципа: \n\n* Быть веселым и дружелюбным\n* Быть крепким орешком\n* Быть настоящим мужчиной",
+		"Быть веселым и дружелюбным \n\nСреди ваших друзей есть такие, которые всегда портят всем настроение, когда появляются на вечеринках? Да, такие наверняка есть у каждого. А часто их потом приглашают куда-нибудь? Нет (за исключением тех случаев, когда они приносят с собой много эля). Если вы хотите прослыть приятным и обаятельным, ведите себя соответствующим образом. \n\nВскоре вы увидите, что чем приятней вам общаться с другими, тем больше им нравится общаться с вами! \n\nНет проще способа испортить вечер с девушкой, чем явиться на него с видом занудного слюнтяя. Гоните прочь такие настроения! Веселитесь от души, и ваша уверенность в себе быстро вернется.",
+		"Быть крепким орешком \n\nВ последние дни гномы все чаще понуро слоняются кругом с безнадежно унылыми мыслями о том, что ни одна человеческая девушка не согласится на встречу с ними. Они врываются в таверну, осыпают даму комплиментами и предложениями выпить и, отвергнутые, идут домой.\n\nДружок, позволь заметить, что, когда ты ведешь себя так отчаянно нелепо, ты скрываешь от мира свою уникальную и изысканную личность. Все говорят, ты далеко не подарок,  для женщин ты – пустое место и посему должен умолять их о малейшем проявлении внимания. \n\nО, как же все они ошибаются! Не раздаривай себя людям, того не достойным. Вместо того чтобы спрашивать себя: \"Нравлюсь ли я ей?\", – спроси лучше: \"Нравится ли она мне?\" \n\nБросьте ей вызов – покажите, что вам нужно нечто большее, чем просто милая мордашка. Если она не соответствует вашим стандартам, не тратьте на нее силы. Если же она намекнет, что ей есть что предложить, знайте, вы стоите на пороге чего-то удивительно прекрасного.",
+		"Быть настоящим мужчиной \n\nВ один \"прекрасный\" момент мы лишились крова, вынуждены были бороться за выживание и столкнулись лицом к лицу с ужасами, невиданными ранее в Азероте. Можно было бы предположить, что эти перипетии помогли нам доказать свое право называться мужчинами.  \n\nК сожалению, искусство быть настоящим мужчиной ушло на второй план, вытесненное блеском и славой сражений, и было успешно нами забыто. Однако не все потеряно! Немного практики и уверенности – и вы заново откроете себя. \n\nКогда вы встретите человеческую девушку вашей мечты, которая, к тому же, докажет, что она достойна вашей любви и внимания, не забудьте о следующем:\n\n*Берите инициативу на себя – покажите ей всю красоту вашего мира.\n* Держите ее за руку – это основа близких и нежных отношений. \n* Относитесь с уважением – к себе, к ней и ко всему миру вокруг вас.\n\nА главное:\n\n* Будьте всегда в ответе за тех, кого приручили!",
+		"Мачо не плачут\n\nПусть не всегда все идет так, как было задумано – но ведь это и делает жизнь поистине непредсказуемой и захватывающей. Однако я готов поделиться с вами парочкой советов о том, как сделать все еще лучше. Вот несколько примеров того, как не следует поступать:\n\n* Не преследуйте даму\n* Не будьте размазней\n* Не зацикливайтесь на ком-то, кому вы безразличны \n\nОглянитесь – в этом прекрасном мире столько женщин! Если у вас что-то не получилось с одной из них, выбросьте ее из головы. Вот увидите, чем меньше вы цепляетесь за женщину, тем больше она цепляется за вас.",
+	},
+},
+["\"Эти эксцентричные ночные эльфийки!..\" Сочинение Брейзи."] = {
+	["english"] = "Brazie's Notes on Naughty Night Elves",
+	["pages"] = {
+		"То, что я сейчас расскажу, перестало быть тайной уже после окончания Третьей войны (может, даже намного раньше). \n\nЕсли вы хотите покорить сердце ночной эльфийки, вам нужно стать лучше всех. Конечно, все мы не раз слышали истории о девушках, танцующих стриптиз вокруг шестов для почтовых ящиков, чтобы оплатить курсы езды на ночном саблезубе. Сложно сказать, насколько они правдивы, но вот чтобы добиться улыбки эльфийской милашки, вам нужно быть как минимум оригинальным, запоминающимся и уверенным в себе. \n\nДля начала покажите, что вас интересует нечто большее, чем просто приятная внешность. Конечно, умение зажигательно двигаться – это плюс, но сможет ли девушке достойно поддержать беседу? Знает ли она, как устроен самофланж? Умеет ли веселиться по-настоящему?\n\nСамое худшее, что может случиться – вы придете на вечеринку в компании ночной эльфийки, а она будет неловко держаться в стороне и только и делать, что сетовать на гибель своей высокорожденной сестры во время Войны древних.",
+	},
+},
+["\"Компендиум павших\""] = {
+	["english"] = "Compendium of the Fallen",
+	["pages"] = {
+		"Благодаря успеху Кел'Тузада в Лордероне Король-лич завершил последние приготовления к атаке на человеческую цивилизацию. Нер'зул поместил вызывающие чуму сгустки энергии в несколько переносных артефактов, так называемых чумных котлов, и приказал Кел'Тузаду доставить их в Лордерон, где они должны были быть спрятаны в различных селениях, находящихся под властью служителей культа.",
+		"Котлы, которые охраняют верные служители культа, должны были действовать как генераторы чумы, рассылая ее по поместьям и городам северного Лордерона.\n\nПлан Короля-лича сработал идеально. Многие из северных деревень Лордерона заразились почти сразу же. Как и в Нордсколе, горожане, заболевшие чумой, умерли и возродились уже преданными рабами Короля-лича.",
+		"Служители культа под командованием Кел'Тузада жаждали смерти, после которой они могли бы восстать и служить своему темному властелину. В этом они увидели шанс на бессмертие и возрадовались ему. Чем дальше расходилась чума, тем больше ужасных зомби появлялось в северных землях. Кел'Тузад, глядя на растущее войско Короля-лича, назвал его Плетью – ведь скоро она придет к воротам Лордерона... и могучим ударом бича снесет человечество с лица земли.",
+	},
+},
+["Приказы Крулгорошу"] = {
+	["english"] = "Crulgorosh's Orders",
+	["pages"] = {
+		"Я уже близок к тому, чтобы напитать броню магией скверноломов. Если у меня получится, мы сможем укрепить с помощью этих заклинаний всю армию, и тогда никто не сможет нас остановить! С этой минуты не беспокой меня ни по какому делу. Король-чародей и так недоволен тем, сколько времени и денег ушло на это предприятие. Права на ошибку у нас нет!\n\nРеглаак",
+	},
+},
+["Смятая расписка"] = {
+	["english"] = "Crumpled Bill of Sale",
+	["pages"] = {
+		"Расписка с ярмарки Новолуния\n\n6 суперреалистичных макетов гноллов* \n60 з 20 с 300 м",
+		"*Эффективность суперреалистичных макетов гноллов зависит от интеллекта противника. При использовании против гуманоидов, драконов и других полуразумных существ эффективность не гарантирована.",
+	},
+},
+["Мятая записка"] = {
+	["english"] = "Crumpled Note",
+	["pages"] = {
+		"Убежать от Занзила в этой гниющей лодке в то время казалось хорошей идеей, но я начинаю думать, что смерть могла быть лучшей судьбой.\n\nМне казалось, будто мне повезло, что предки позволили мне спастись от своего гнева. Но сейчас я не понимаю, какую мудрость обрету, если переживу свой плен.",
+	},
+},
+["Отсыревшая страница дневника (день 4)"] = {
+	["english"] = "Damp Diary Page (Day 4)",
+	["pages"] = {
+		"Дневник – день 4\n\nЯ сижу на этом острове наедине со своими мыслями уже 4 дня. Бананы очень вкусные, вот только лазать за ними приходится высоко. В свободное от добывания еды или укрывания от дождя время я думаю лишь о спасении.\n\nЯ не питал бы такой радостной надежды, если бы на берег вместе со мной не выбросило ящики с бумагой и бутылки. Теперь мне смешно вспоминать о том, как недоволен я был, что застрял на корабле, полном алхимиков и писцов.",
+	},
+},
+["Отсыревшая страница дневника (день 512)"] = {
+	["english"] = "Damp Diary Page (Day 512)",
+	["pages"] = {
+		"Дневник – день 512\n\nБананы начали говорить со мной, и я многое узнал об их культуре. Теперь я перестал бездумно разрушать их дома и поедать их детей. Как же мало мне было известно о великой цивилизации, которую я уничтожал.\n\nКроме того, у меня, кажется, заканчиваются бутылки и бумага. Когда я впервые оглядел ту огромную кучу бумаги, что выбросило волнами на берег, то подумал, что она не переведется никогда. Увы, скоро мне придется прекратить свои записи.",
+	},
+},
+["Отсыревшая страница дневника (день 87)"] = {
+	["english"] = "Damp Diary Page (Day 87)",
+	["pages"] = {
+		"В эти месяцы у меня было достаточно времени для раздумий о моих старых верованиях и фанатизме. Альянс? Орда? Добро? Зло? Значение этих слов, когда-то таких простых, теперь расплывалось перед моим взором, устремленным на бескрайнее море.\n\nТеперь я знаю, в чем причина. Эти бананы следят за мной. Сидят высоко и недоброжелательно следят за мной своими глазками. И когда последний раз я пытался съесть один из них, он чуть не задушил меня! Я почти слышал его крик, когда я размазал его, наполовину откушенного, по камням.\n\nЭто – война, и я ее выиграю.",
+	},
+},
+["Отсыревшая записка"] = {
+	["english"] = "Damp Note",
+	["pages"] = {
+		"Вот и подсказка и ветер морской - другая же будет совсем не простой.\n\nТеперь к четырем отправляйся котам – подсказка твоя будет спрятана там.",
+	},
+},
+["Докладная записка Черного Железа"] = {
+	["english"] = "Dark Iron Memo",
+	["pages"] = {
+		"Гравиус!\n\nС сегодняшнего дня тебе надлежит трудиться вдвое усерднее. Охват нашего проекта заметно расширился. Наши археологические и геологические изыскания могут подождать.\n\nДвигайся вперед и копай все глубже и глубже. Бригады, занятые в тоннелях Тлеющего ущелья, станут пробиваться к тебе навстречу. Гравиус, мы с тобой идем в авангарде дворфов подземной империи клана Черного Железа.",
+		"Тебя ждет награда за успешную реализацию этой задачи. Ставлю тебя в известность, что данные распоряжения исходят не от меня, а от надзирателя Мальтория и эрцгерцога.\n\nКопай глубже.\nГлавный землекоп Звоноус",
+	},
+},
+["Приказы Братства Справедливости"] = {
+	["english"] = "Defias Orders",
+	["pages"] = {
+		"Гарн!\n\nДумаю, важность твоей миссии у тебя сомнений не вызывает. Ты должен защитить драгоценный груз любой ценой. Как я и обещал, в случае успеха тебя ждет щедрая награда.\n\nПусть твои \"товарищи\" держат язык за зубами, а ты приглядывай за командой, и тогда все пройдет как по маслу. Когда все выполнишь, сообщи мне.",
+	},
+},
+["Дневник доктора Жло"] = {
+	["english"] = "Diary of Weavil",
+	["pages"] = {
+		"Дорогой дневник, сегодня мой злейший враг Нарайн Причудень пытался меня обмануть, послав вместо себя друзей на казнь. На СВОЮ казнь. Ты можешь в это поверить?\n\nЯ, несмотря ни на что, разрабатывал свой дьявольский план, чтобы выманить его из этой проклятой хижины, а он выкинул такое! Да что там… Больше писать не могу, слишком зол. Продолжу позже.",
+		"Дорогой дневник, написав последнюю запись, я вышел из убежища в сильном гневе. Ох, как же я был зол. Хочу, придумать для своих прислужников новую униформу, что отражала бы мою ярость. Мне уже лучше, но чего-то не хватает. Скоро вернусь…",
+		"Дорогой дневник, теперь я в порядке. Я бил своего прислужника до тех пор, пока он не начал рыдать, словно девчонка.\n\nХм… Что-то на душе тоскливо. Минутку! Демоны! Я же ЗЛОЙ гений! Злой, понимаешь? Как я в себе разочарован. Скоро вернусь.",
+		"Дорогой дневник, я обнял прислужника и сказал, что очень им доволен. Теперь мне лучше. Только никому ни слова, дневничок.\n\nТак о чем я? Ах, да, НАРАЙН! Р-р-р!!! Ненавижу его. Ведь это он так выделывался на каждом экзамене, когда мы учились в Гномреганском Институте Механики.\n\nОтчислили меня, значит? Гномреган, насколько мне известно, получил по заслугам!\n\nНа сегодня все. Спокойной ночи, дневник!",
+		"Дорогой дневник, наверное, я старею. Я совершенно забыл, что говорил тебе о Нарайне и его обмане. Как бы то ни было, я так разозлился, когда увидел вместо самого Нарайна его копию, что приказал Номеру Два умертвить глупца!\n\nПотом я сел в свой ветролет и начал вырывать страницы из его драгоценной, глупой, идиотской книге на драконьем. Что за бахвальство? Кто сейчас читает на драконьем? Как я его ненавижу!",
+		"Дорогой дневник, прости, я заснул. Когда я в ярости летал и разбрасывал листы из этой глупой книги, то увидел под собой в Теснине Зловещего Шепота демона и решил сделать из страниц первой главы магическое торнадо, чтобы разорвать его тело на миллион кусочков! Я слово заново родился. Магия + бумага = веселье.\n\nЭтот случай меня изрядно развеселил, и я решил полететь в Восточные королевства. Первой моей остановкой были Огненные Недра. Нарайн постоянно о них твердил! \"А вот когда я был в Огненных Недрах, да в Рагнаросе...\"",
+		"И знаешь что? Если уж ему так там нравится, пусть попробует восстановить главу из книги, отправившись в Огненные Недра и покопавшись в куче пепла! Ха!\n\nПока я там летал, обнаружил пресмыкающихся механиков в Лаборатории Виктора Нефария – им могут пригодиться Драконьи штуки. Сбросить бомбы!",
+		"Это стало неплохой забавой. Мне так понравилось рвать проклятую книгу на куски!\n\nДальше уже дело пошло просто.\n\nОдна глава отправилась в Подгород, обиталище зловонных мертвецов и место, где я пробовал самый, пожалуй, лучший чили. Другая – в Штормград, столицу сыра. Дневник, а ты не пробовал заедать сыром из Штормграда, чили из Подгорода? Эй? Там, никак, тревога.",
+		"Я в это время уже начал уставать – и потому развернул ветролет и направился домой, но по пути сделал еще две остановки. Я пролетел мимо Владыки Каззака и его демонов в Гниющем Шраме (он этого терпеть не может) и сбросил груз в трубу Ониксии.\n\nУстал. Пойду спать.",
+	},
+},
+["Грязная записка"] = {
+	["english"] = "Dirty Note",
+	["pages"] = {
+		"Радуйся, друг – ты на верном пути! Знаешь, куда тебе дальше идти?\n\nТот, кто раскаялся, знает секрет. Их двое – и меньший тебе даст ответ.",
+	},
+},
+["Записи водолаза"] = {
+	["english"] = "Diving Log",
+	["pages"] = {
+		"День 1: Как я и рассчитывал, жалкие людишки не заметили моего присутствия. Они готовятся к бомбежке, и мне не составит труда составить карту их диспозиций.\n\nДень 2: Карты готовы – право, для такого опытного шпиона, как я, это было слишком просто. Не понимаю, зачем такое задание поручили мне – с нам справился бы и Дж. С. Правда, у него ужасный акцент. \n\nДень 3: Первый глоток воздуха уже слегка застоялся. Пожалуй, через несколько дней мне придется снова выглянуть на поверхность. Какая тоска – сидеть здесь и ждать сигнала.\n\n&lt; Продолжение следует... &gt;",
+		"День 12: Ах, наконец-то. Второй глоток воздуха показался мне чище детской слезы. Сигнала по-прежнему нет; к тому же, на моем большом пальце устроился какой-то наглый краб.\n\n&lt; Записи становятся более путаными... &gt;",
+		"День 36: Закончился третий глоток воздуха, и вены в моем левом локте чуть не вскипели, пока я пробивал себе дорогу вверх. Трескотня крабов не прекращается ни днем, ни ночью – омерзительное музыкальное сопровождение для моей личной преисподней. Не могу поверить, что эти мерзавцы про меня забыли! Если бы на моем месте был Дж. С., они бы не осмелились бросить его здесь. Даже Ганса и Сильвию наверняка бы вытащили отсюда! Так в чем я провинился? \n\n&lt; Дальнейшие записи практически невозможно разобрать... &gt;",
+	},
+},
+["Приказы доктора Колера"] = {
+	["english"] = "Doctor Kohler's Orders",
+	["pages"] = {
+		"Добрейший доктор Колер!\n\nЧерный Рыцарь еще не исполнил своего предназначения. Соберите его останки на Ристалище и используйте свое искусство, чтобы вернуть его к жизни. Мы обратим силу крестоносцев и их последователей против них самих.\n\nЗахватите пленных и вдохните их души в моего верного слугу. Принесите рыцаря Кула, прозванного боевыми товарищами \"отчаянным\", в жертву на вашем алтаре. Его дух наделит Черного Рыцаря ужасающей силой и мощью. После этого доставьте Черного Рыцаря ко мне.",
+	},
+},
+["Потрепанная записка"] = {
+	["english"] = "Dog-Eared Note",
+	["pages"] = {
+		"Магра, моя прекрасная охотница!\n\nЕще один унылый день на Аванпосте Каменного Клыка. Вглядываясь в равнины, я думаю лишь о тебе. Помнишь ли ты нашу первую встречу? Я ранил топором твоего скакуна, а брошенное тобой копье чуть не лишило меня жизни.\n\nЭто была любовь с первого взгляда.\n\nБудь проклята вражда кланов! Но я твердо решил: брошу все, лишь бы быть с тобой. Выбери место. Я приду. Мы покинем Хребет Ледяного Огня и отправимся хоть на край мира. Я слышал, в Награнде очень красиво.\n\nТвой будущий муж,\n\nКараш.\n\nP.S. Я посылаю тебе первоклык Протяжного Воя, что висел в тот день у меня на шее. Надеюсь, он укажет тебе путь ко мне.",
+	},
+},
+["Отделанный мехом свиток"] = {
+	["english"] = "Fur-Lined Scroll",
+	["pages"] = {
+		"Караш, волк мой!\n\nКогда я нашла твою записку, пришлось закусить губу, чтобы не перебудить своим радостным криком весь лагерь.\n\nМне тот день никогда не забыть! Помню, как вы с Протяжным Воем прочесывали равнину, такие суровые… Глаз и рука подвели меня тогда. Трудно поверить, что мы чуть не убили друг друга! Как бы я хотела провести с тобой целую вечность.\n\nЯ знаю одно место; чтобы добраться туда, следует пересечь равнину и идти на север – за вулкан, с которого видно Погибель колосса. Я отмечу путь костями. Отыщи меня, и мы будем вместе навеки.\n\nВсегда твоя,\n\nМагра.\n\nP.S. Не волнуйся, я сохраню клык Протяжного Воя. В ответ посылаю тебе мой талисман – лапку моей первой добычи. Если не вернешь мне ее в целости и сохранности, выпотрошу как зайца!",
+	},
+},
+["Приказы Доцзяни"] = {
+	["english"] = "Dojani Orders",
+	["pages"] = {
+		"Поисковые работы\n\nПо приказу его величества искатели должны быть направлены на Руины Доцзян. Там они должны найти любые артефакты, которые могут пригодиться для вооружения наших людей.\n\nНам нужны охранные статуи, свитки, любые магические устройства, которые помогут нам восстановить древнюю славу.\n\nГлавная цель – Пруд Молодости, который находится в северной части Доцзянь. Воды этого пруда чрезвычайно важны для усиления мощи нашей империи.\n\nПервопроходец Брожай, Главный завоеватель",
+	},
+},
+["Археологические находки Даррина"] = {
+	["english"] = "Durrin's Archaeological Findings",
+	["pages"] = {
+		"Император Тауриссан!\n\nЭто мой отчет о недавних находках в Кратере Ун'Горо. После Катаклизма я прекратил свою работу и начал искать в кратере новые места, подходящие для раскопок. Любопытно, что кратер не слишком пострадал от Катаклизма, но я нашел нечто, больше всего напоминающее гигантскую челюсть, торчащую из земли на Пути Ужаса!",
+		"Похоже, это предок здешних динозавров. Я провел несколько недель, выкапывая его, и это самая значительная из всех моих находок. По моим подсчетам, этот зверь был около 300 футов длиной от носа до хвоста. Он был крупнее самых крупных драконов и НАМНОГО крупнее любого динозавра, живущего в кратере в наши дни.",
+		"Продвижение было медленным, главным образом потому, что мне приходилось маскировать следы своей работы. Дружки проклятого гоблина Пустокопа все еще заняты раскопками в этой области, и я не могу допустить утечки информации, пока не отошлю окончательные результаты в Черную гору. Эти сведения могут стать ключом к пониманию того, чем титаны занимались в Ун'Горо!\n\nС уважением,\n\nДаррин Мрачнокоп",
+	},
+},
+["Записи посланника"] = {
+	["english"] = "Envoy's Log",
+	["pages"] = {
+		"&lt;Похоже, посланник вел дневник.&gt;\n\n3-й день.\n\nМы прибыли в лагерь Кровавого Молота. Вождь клана Боргал отказывался говорить со мной, пока я не пообещал купить несколько телег с рабами. Цена, конечно, была задрана выше некуда, но мне нужно было заручиться его доброй волей.\n\nБоргал согласился – за невероятную сумму – приказать своим рабам провести раскопки в тех местах, которые мы укажем, и передать нам все найденное.\n\nПророк Гаррош говорит, что артефакт закопан под этой горой, однако мне кажется, что поручать его поиски Кровавому Молоту – не лучшая затея. Но приказ есть приказ...",
+		"7-й день.\n\nПока что нам удается откапывать только камни и землю. Огры уже бормочут, что пора бы от нас избавиться. Еще один туго набитый кошелек, отданный Боргалу, кажется, погасил назревающий конфликт.",
+		"10-й день.\n\nСнова камни и земля.",
+		"14-й день.\n\nВчера глубокой ночью в пещере на юго-западе возникло странное оживление. Что именно произошло, неизвестно, однако я видел, как рабы выносили из пещеры трупы.\n\nВозможно, это работа \"Разрушителя Душ\", о котором меня предупреждали перед поездкой.",
+		"15-й день.\n\nБоргал отказывается отдать артефакт!\n\nЯ не позволю этому жирному огру присвоить имущество Железной Орды!\n\nЯ обсудил операцию с моей охраной: утром мы вернемся и силой заставим его отдать артефакт!\n\n&lt;Остальные страницы пусты.&gt;",
+	},
+},
+["Сложенное письмо"] = {
+	["english"] = "Folded Letter",
+	["pages"] = {
+		"Привет!\n\nЯ не очень хорошо умею писать, поэтому пришлось просить о помощи попечительницу. Я просто хочу ПОБЛАГОДАРИТЬ тебя, потому что ты &lt;настоящий герой/настоящая героиня&gt;. Когда я вырасту, я тоже буду спасать людей!\n\nЛадно, побегу играть. Еще раз СПАСИБО ОГРОМНОЕ за то, что ты &lt;такой сильный и хороший/такая сильная и хорошая&gt;, да еще и &lt;красивый/красивая&gt;!\n\n--&lt;Тайная почитательница/Тайный почитатель&gt;.",
+	},
+},
+["Потертый зандаларский дневник"] = {
+	["english"] = "Frayed Zandalari Journal",
+	["pages"] = {
+		"Дикорог! Кроха Талак думает, что может приручить дикорога!\n\nЯ пытался доказать ему, что и раптор сойдет. Заклинатель зверей с хорошим, сильным раптором – это же отлично. Внушает уважение. Рапторы очень восприимчивы к зову духов. Мне кажется, это все потому, что они разумны. У них глаза очень смышленые.\n\nНо нет же, ему нужен дикорог! Особым рогом он вырезал у себя на запястье печати, поговорил с великим звериным лоа, которого мы взяли на корабль. После этого он выпил отвар, надел маску с двумя клыками и зарычал внутренним голосом. Духам это нравится. Они любят сильных, но иногда вьются и возле смелых.",
+		"Так я и помогал слабому Талаку. Я поговорил со своими духами. Со старым лоа Гримматом, который вошел в меня еще когда я был маленьким и направлял мою руку, когда я склонял ею голову своего собственного дикорога. Я испил из колодца крови, увидел в небе яростных духов и прошептал имя Талака.\n\nТеперь он на Острове Великанов. Кроха Талак. Только он уже не кроха. Он либо вернется как герой, либо вовсе не вернется. Да пребудут с ним духи.",
+	},
+},
+["Приказы для воинов на Хребте Ледяного Огня"] = {
+	["english"] = "Frostfire Mission Orders",
+	["pages"] = {
+		"Скорость исследований и инженерных работ в Осадном лагере Железной Орды на Хребте Ледяного Огня должна быть удвоена. Любыми средствами. С новыми боевыми машинами Железная Орда сокрушит любого врага.\n\nВождь Громмаш Адский Крик",
+	},
+},
+["Пожертвуйте на благо церкви и да освятит вас благодать"] = {
+	["english"] = "Give to the Church and the Light Will Provide",
+	["pages"] = {
+		"Обращение верховного настоятеля Ландгрена. \n\nНекоторым может показаться, что в дни скорби и гнева следует отречься от всего и посвятить себя только благополучию семьи и родного дома, но чувство это ложно. Отринув факел веры, отгоняющий тьму от наших душ, сердца ваших близких очень скоро окажутся беспомощными перед отчаянием и страхом. Чувство сытости, тепла и уюта, которое можно купить за деньги, не сможет спасти вашу семью от внутренней опустошенности, которая завладеет душами, ежели те забудут о своих обязательствах перед Светом.",
+		"Обратитесь к церкви. Трудности, возникающие от отсутствия благ насущных, только укрепят вашу душу, изгонят бесов и поднимут вас на новый уровень духовного совершенства. Не стыдитесь бурчания голодных животов, царапин от камней на босых подошвах и мурашек на озябшей коже. Гордо идите по пути Света и внимайте ему всей душой. Страдания приближают вас к золотым чертогам святости, которые открыты для тех, кто крепок духом и телом. \n\nОткажитесь от ублажения плоти и приблизьтесь к истинному пониманию Света.",
+	},
+},
+["Гнолльские приказы атаковать"] = {
+	["english"] = "Gnoll Attack Orders",
+	["pages"] = {
+		"Слуги, наш повелитель отдал приказ. Вы должны напасть на Сторожевой холм и освободить адмирала. Все, что удастся награбить по пути, можете оставить себе.\n\n-Хеликс",
+	},
+},
+["Военные планы гноллов"] = {
+	["english"] = "Gnoll Battle Plans",
+	["pages"] = {
+		"Шаг 1: УБИТЬ\nШаг 4: Поспать?\nШаг 2: ПОЕСТЬ\nШаг 1: Сходить в туалет",
+	},
+},
+["Приказы гноллов"] = {
+	["english"] = "Gnoll Orders",
+	["pages"] = {
+		"Вы нападете снизу!\nМы нападем сверху!\nВстретимся в центре города людишек.\n\n-Изувой, сын Изувоя",
+	},
+},
+["Стратегическое руководство гноллов"] = {
+	["english"] = "Gnoll Strategy Guide",
+	["pages"] = {
+		"&lt;Этот документ чист.&gt;\n\n&lt;Поправка. Этот документ недавно использовали как туалетную бумагу.&gt;",
+	},
+},
+["Список тайников Горика"] = {
+	["english"] = "Gorick's Stash List",
+	["pages"] = {
+		"<HTML><BODY><P>Здесь содержится подробная информация о местонахождении тайных точек обмена посылками в Лок Модане. Если в ваши руки попадут какие-либо документы Лиги исследователей или их союзников, поместите их в одном из этих тайников, и наш посыльный заберет их в течение недели и доставит на операционную базу.</P><BR/><P>Запомнив все местонахождения, немедленно сожгите книгу, чтобы противник не смог ей завладеть ни в коем случае. Если по каким-то причинам вам покажется, что враги подозревают вас, тотчас же сожгите книгу. Ни при каких обстоятельствах она не должна попасть в чужие руки, иначе это неминуемо приведет к разоблачению наших путей сообщения.</P><BR/><P>За Рагнароса!</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Место 1: западный причал Лока</H1><BR/><P>К северо-востоку от Телсамара есть небольшое поселение с причалом, которым иногда пользуются дворфы во время рыболовного сезона. Донесение нужно положить в водонепроницаемый ящик в укромном месте под причалом.</P><BR/><P>Отправлять и забирать донесения следует только ночью, чтобы не попасться на глаза местным рыбакам. По понятным причинам этим тайником не стоит пользоваться часто во время сезона рыбной ловли.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Место 2: пещера Седых Лап</H1><BR/><P>К югу от Телсамара есть большой холм. На южном склоне холма можно заметить тропинку, ведущую к пещере на вершине. Донесение нужно спрятать за камнями в глубине пещеры.</P><BR/><P>Пожалуйста, воздержитесь от частого использования этой пещеры в качестве укрытия и/или убежища. Использование пещеры таким образом ставит под угрозу сохранность донесений и секретность передвижения нашего курьера.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Место 3: Логово Шанды</H1><BR/><P>В скале к юго-западу от места раскопок есть небольшая пещера, в которой когда-то жил одинокий отшельник. Там поселилась Шанда, поэтому поблизости больше никто не живет. Вход в пещеру – отличное место для документов.</P><BR/><P>Напомню: Шанда – это огромный паук-убийца, размером вдвое больше дворфа. Не оставляй документы в самой пещере, если даже Шанды там не будет. Она там появится, это лишь вопрос времени.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Место 4: Каморка на раскопках Сталекрута</H1><BR/><P>В самом центре раскопок Сталекрута есть скрытая от посторонних глаз каморка. Это отличное место для тайника – прямо под носом у Лиги исследователей.</P><BR/><P>Трогги отвлекли внимание Лиги исследователей, но нельзя забывать, что они враждебны нам. Так что ведите себя здесь ночью поосторожнее. Трогги могут устроить засаду.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Место 5: Идол-череп Мо'граша</H1><BR/><P>Этот каменный идол в форме черепа похож на те, что встречаются в поселениях огров, но он находится немного южнее тех мест, где обычно живут огры. Положите донесение к его основанию.</P><BR/><P>НЕ кладите донесения В РОТ черепа. Так уже были навсегда утеряны несколько документов и одна рука.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Место 6: Роща на месте бывшего озера Лок</H1><BR/><P>Небольшая рощица молодых деревьев в центре озера Лок – отличное место для тайника.</P><BR/><P>Когда озеро Лок высохло, это место стало более доступным, но зато там обосновались кроколиски.</P></BODY></HTML>",
+	},
+},
+["Зеленые холмы Тернистой долины: стр. 14"] = {
+	["english"] = "Green Hills of Stranglethorn - Page 14",
+	["pages"] = {
+		"В тот день мы пошли на юг, двигаясь по свежим следам пантеры. Вскоре мы пришли к ущелью, через которое был перекинут длинный веревочный мостик. При виде этого чуда инженерной мысли мне сразу вспомнилось, как описывал этот район Бранн. Тролли, коренные жители этих мест, всегда считались примитивной расой, но мастерство, с которым они сконструировали этот мост через непреодолимую пропасть, было неоспоримо.",
+	},
+},
+["Записи Грелина Белоборода"] = {
+	["english"] = "Grelin Whitebeard's Journal",
+	["pages"] = {
+		"ПЕРВЫЙ ДЕНЬ\n\nМы с учеником приехали сегодня в Холодную Долину. Путешествие мимо пещеры прошло без приключений. Мы разбили лагерь подальше от нее, так как нас предупредили, что там водятся тролли.\n\nВТОРОЙ ДЕНЬ\n\nПроклятый волчий вой не давал мне спать всю ночь.\n\nНе пройдет и нескольких дней, как у меня будет накидка из шкуры этой твари.\n\nПаренек столкнулся сегодня с троггом, ввязался в бой и",
+		"попытался проучить монстра, но в итоге получил глубокий порез на руке. Похоже, придется накладывать швы.\n\nТРЕТИЙ ДЕНЬ\n\nПохолодало. Ночью выпало немного снега.\n\nЧЕТВЕРТЫЙ ДЕНЬ\n\nУченик поправился и пребывает в хорошем расположении духа, поэтому мы рискнули посмотреть на троллей. Судя по отметкам на их коже и различным амулетам, которые они носят, это племя Мерзлогривов.",
+		"ПЯТЫЙ ДЕНЬ\n\nОставил парня присматривать за лагерем, а сам прокрался к пещере, чтобы немного осмотреться. Троллей здесь огромное количество. Чтобы очистить пещеру от этих паразитов потребуется немало солдат.\n\nЯ вспомнил, что в последнее время я вообще не видел троггов. Они появляются в регионе в огромных количествах, но они настолько примитивны, что вряд ли представляют угрозу. Хотя поживем – увидим.",
+		"Уже почти неделю нет ни капли эля.\n\nШЕСТОЙ ДЕНЬ\n\nОпять похолодало. Идет снег. Тролли. Эля нет.\n\nСЕДЬМОЙ ДЕНЬ\n\nСнег белеет,\nНебо синеет,\nВолки воют,\nА эля все нет.\n\nВОСЬМОЙ ДЕНЬ\n\nТролли, возможно, не такая уж проблема. Их много,",
+		"но вооружение у них никудышное и нет дисциплины. Небольшое проявление силы – вот и все, что нужно для устранения \"угрозы\".",
+	},
+},
+["Дневник Ухмыляющегося Толга"] = {
+	["english"] = "Grinning Tolg's Journal",
+	["pages"] = {
+		"Собиратель Черепов жив!\n\nЭти изогнутые рога его проклятой маски, из-под которой сверкают демонические глаза, невозможно спутать ни с чем. Он считает, что смог избежать ярости клана Веселого Черепа, но никому не дано отнять жизни у членов нашего клана и избежать расплаты.\n\nНикому, даже если он один из нас.",
+		"Слишком долго Собиратель Черепов безнаказанно охотился на своих братьев. Я помню тот день, когда он надел этот кровожадный череп, которые поглотил его неистовое сердце. Никто не знает, откуда он взял эту проклятую штуку, но она забрала его душу, душу истинного воина. Теперь он, будто безмолвный призрак смерти, живет только ради того, чтобы убивать живых и собирать их черепа. \n\nЯ напал на его след в Вечном Цветении, и теперь недолго ему осталось охотиться. Скоро я заберу его череп.",
+		"Враг опять ускользнул от меня. Стоит мне начать преследование, как его следы исчезают, будто он отрастил крылья и улетел в небо.\n\nПохоже, он прячется среди опустошителей и ос Вечного Цветения. Надо узнать, куда он двинется дальше.",
+		"Я потерял его! Только я выследил, где он прячется, и уже был готов нанести удар, как внезапно появился гигантский опустошитель, вдвое больше обычных особей, и унес его прочь! Я сначала подумал, что он принял Собирателя Черепов за добычу, но зверь, похоже, не причинил ему никакого вреда.\n\nВот, значит, как ему удается прятаться от клинков Веселого Черепа! Но ему не уйти от возмездия. Я найду его хоть в небе, хоть на земле.",
+		"Эликсир – вот ключ к моим поискам. Кормящая воронов знает рецепт, который использовали шаманы для того, чтобы говорить с ветром. С его помощью я вырву ответы у опустошителей, которые пришли на помощь к моему врагу.\n\nРеагенты придется вырвать из рук проклятых ботани, но эта задача только радует меня.\n\nЯ разбил лагерь в ближайшей пещере. На закате я нанесу удар ботани и раздобуду ключ к местонахождению Собирателя Черепов.",
+		"Сперва мне понадобится тенеполох, чьи листья черны как ночь. Он растет в тени, вдали от жарких лучей горгрондского солнца. Я видел несколько цветков под каменными монолитами рядом со стеной из черного железа. Возле них толкутся люди-растения, но я скошу их как сухую траву. \n\n Дети генезотавра не смогут меня остановить.",
+		"Я раздобыл тенеполох, хоть и не без труда. Шипы ботани невероятно остры, и мои раны ужасно болят. Но даже это не удержит меня от достижения цели.\n\nТеперь мне надо найти лозу костешипа, который растет на костях древних. Кажется, я видел старые кости какого-то зверя в сухом русле реки в северной чаще. Не удивлюсь, если найду костешип, произрастающий из выжженного солнцем черепа.",
+		"Мне осталось найти только грибы-парошляпки, и можно будет приступать к изготовлению эликсира. Кормящая воронов сказала, что они растут вокруг паровых скважин в верхней части Вечного Цветения. Кажется, я знаю одно такое место рядом с северными озерами гидр.\n\nНадо торопиться. Раны, нанесенные ботани, воспалились настолько, что моя плоть отваливается от костей. Я должен найти Собирателя Черепов до того, как перестану быть самим собой.",
+		"Слишком поздно. Мое тело, зараженное инфекцией ботани, восстало против меня. Братья мои, если вы найдете эти записки, я призываю вас обратить клинки против Собирателя Черепов.\n\nНо сперва сожгите мое тело и заберите мой череп.",
+	},
+},
+["Гром'карское сообщение"] = {
+	["english"] = "Grom'kar Dispatch",
+	["pages"] = {
+		"Генерал Оргрим!\n\nНесколько наших солдат попали в плен к огронам. Их похитили среди бела дня там, где, как мы думали, нам ничего не угрожает.\n\nХуже всего, что с ними был капрал Тукмар. \nВместе с ним пропали и все исследовательские заметки. \n\nЯ собираюсь отправить отряд в Провал Ярости, чтобы вернуть его бумаги и, возможно, наших солдат.\n\nКак только мне что-нибудь станет известно, я немедленно вам сообщу.\n\nКомандир Гар",
+	},
+},
+["Приказ Иллидана"] = {
+	["english"] = "Illidan's Command",
+	["pages"] = {
+		"Дорогая советница,\n\nПривлечь великанов долины Призрачной Луны на нашу сторону – ваша задача. Я не сомневаюсь, что вы с ней справитесь. Используйте ваше эльфийское обаяние, пусть они посмотрят на мир с нашей точки зрения. Если это не сработает, истребите их всех до одного…\n\n-Владыка Иллидан Ярость Бури",
+	},
+},
+["Информационный буклет"] = {
+	["english"] = "Informational Pamphlet",
+	["pages"] = {
+		"Стоит только дать человеку плащ с гербом, и он поклянется в вечной преданности вашему делу. Теперь эти люди – просто стадо овец, которым наплевать на ваши нужды. Они носят плащи с гербом своего вождя и их волнует только то, чего желает он.\n\n-В",
+	},
+},
+["Зандаларский дневник в железном переплете"] = {
+	["english"] = "Iron-Bound Zandalari Journal",
+	["pages"] = {
+		"Никогда не любил пророков. А особенно – темных, с запавшими глазами, говорящих мне то, чего я не хочу слышать, но что скоро случится. Зул был хуже их всех. Хуже – потому что он всегда предвидел плохие вещи. Хуже – потому что не было способа их предотвратить.\n\nКогда король Растахан приказал мне присоединиться к флоту Зула, я подумал, что чем-то обидел консула. Я решил, что он собирается пожертвовать мной и другими ради того, чтобы только избавиться от Зула и выслать его из Зандалара. Я клял свою неудачу, заставляющую меня провести этого старика по всем океанам, встретиться с отвратительными троллями из племени Песчаной Бури и сумасшедшими Драккари.",
+		"Это было неделю назад. До того, как я услышал о том, что случилось в столице.\n\nТеперь я понимаю, почему духи отправили меня сюда. Зандаларам надо было искать новый дом, и помочь в этом мог только Зул. Зул со своими проклятыми, проклятыми глазами!\n\nКакое будущее ты предвидишь для нас, темный пророк? Что теперь нас ждет, старый тролль? Что теперь?..",
+	},
+},
+["Выпуск Луноречского вестника"] = {
+	["english"] = "Issue of the Moonbrook Times",
+	["pages"] = {
+		"<HTML><BODY><body><H1>Зверское убийство бродяг у фермы Хмуроброва</H1><BR/><P>По свидетельствам очевидцев четверо бродяг подверглись нападению, когда они несли домашние пироги к поселению на восточном берегу.</P><BR/><P>Вот что говорит Джимб \"Свечник\" Макханниган, ставший свидетелем нападения: \"Да-да, я все это видел собственными глазами. Это $gбыл:была:c; $c. $gОн так выглядел:Она так выглядела;, как будто что-то $gзамышлял:замышляла;. Вот, а потом $gприрезал:прирезала; этих бродяг, выкрикивая \"Слава Штормграду!\" да \"Слава Вариану Ринну!\". Думаю, что и Лу $gон потом убил:она потом убила;. Но сам-то я этого не видел, слишком страшно было, убежал.\"</P></body></BODY></HTML>",
+	},
+},
+["Дневник Хазгорма"] = {
+	["english"] = "Khazgorm's Journal",
+	["pages"] = {
+		"Раскопки Бейл Модана\n\nПервая исследовательская команда, отправленная Лигой Исследователей, не ошиблась в своих выводах. Здешняя земля содержит артефакты неограниченной ценности для нашего народа. Без сомнения, под песком и скалами Бейл Модана мы найдем много новых знаний.\n\nГеология этого региона, однако, заставляет нас прибегать к крайним мерам. Многие из залежей песка затвердели под воздействием суровой погоды и переменчивого климата.",
+		"Решение, впрочем, весьма просто. Используя мякоть дерева в качестве адсорбента, мы можем соединить следы нитроглицерина с нитратом натрия, чтобы получить сильный взрывной заряд, способный пробиться даже через самые плотные массы.\n\nРабота будет шумной и разрушительной, но наши поиски гораздо важнее комфорта местных жителей. На самом деле нам уже пришлось выгнать из этой области стаю рогатых, которые мешали нам.",
+		"То обстоятельство, что мы здесь имеем дело с различными мошенниками, заставляет меня считать, что нам понадобится поддержка армии короля. Помимо того что раскопки потребуют военной поддержки, на мой неопытный взгляд, Бейл Модана может представлять стратегическую ценность для Альянса, учитывая нестабильность мировой политики в ее текущем состоянии.\n\nУвы, я отвлекаюсь. Под скалой нужно проделать много работы. Я провел слишком много времени за письмом и недостаточно – за раскопками...",
+	},
+},
+["Досье офицеров Лагеря Курцена"] = {
+	["english"] = "Kurzen Compound Officers' Dossier",
+	["pages"] = {
+		"ДОСЬЕ НА ОФИЦЕРОВ КУРЦЕНА\n\nНе подлежат распространению",
+		"КОМАНДИР АНДЕРС\n\nВозглавляет диверсантов и партизан. Отвечает за безопасность лагеря и защиту ресурсов от атак мятежников.",
+		"КОМАНДИР ГАУЛ\n\nВозглавляет лекарей. Отвечает за медицинскую помощь и поддержание мира с соседними племенами Кровавого Скальпа и Дробителей Черепов.",
+		"КОМАНДИР МИРАНДА\n\nВозглавляет тайный спецназ Курцена. Отвечает за хранение синего камня и исследование способов его применения",
+		"КОМАНДИР ЭСКИВЕЛ\n\nВременно исполняющий обязанности руководителя после смерти полковника Курцена. Отвечает за проведение всех операций сил Курцена.",
+	},
+},
+["Тюремные дела Лагеря Курцена"] = {
+	["english"] = "Kurzen Compound Prison Records",
+	["pages"] = {
+		"ТЮРЕМНЫЕ ЗАПИСИ КУРЦЕНА\n\nНе подлежит распространению",
+		"БЕРРИН ГОРИШПИНДЕЛЬ\n\nПреступления: неподчинение, нарушение порядка\n\nНаказание: тюремное заключение, 50 лет",
+		"ЭМЕРИНА ЮНИС\n\nПреступления: наказание по особому приказу полковника Курцена\n\nНаказание: тюремное заключение, 75 лет",
+		"ОСБОРН Пропеллерз\n\nПреступления: безумие\n\nНаказание: тюремное заключение, 130 лет",
+		"БУКСТОН ИРОД\n\nПреступление: сотрудничество с мятежниками\n\nНаказание: смерть через повешение",
+		"ПОЛКОВНИК КОНРАД КУРЦЕН\n\nПреступления: слабость\n\nНаказание: сброшен с башни",
+	},
+},
+["Манускрипт Лоргалиса"] = {
+	["english"] = "Lorgalis Manuscript",
+	["pages"] = {
+		"Наш мир наполнен историей. Историей народов, новых и старых. Историей войн, тех, что давно угасли, и тех, что еще тлеют.\n\nИсторией богов юных, что приходят вниз с небес. Историей богов старых, что дремлют в земле.\n\nИменно о них мой рассказ, о древних богах. О тех, кто жил и бушевал по всему Азероту, когда мир был еще молод.",
+		"Древние боги – воля нашего мира. В каждом шторме слышен громовой хохот одного из них. В пламени каждого пожара виден блеск их глаз. Когда Древние боги ходят, земля дрожит и трескается, а все, кто слабее их, кричат в отчаянии.\n\nИ одно лишь отчаяние им уготовано: как огонь не жалеет руки неразумного ребенка, так и Древние боги не жалеют тех, кто ниже их. В лучшем случае мы для них пешки. В худшем случае – игрушки.",
+		"Они были первыми хозяевами мира и правили железной рукой. И хотя теперь они закованы в цепи и спят, их слуги еще на свободе, а нам, жалким смертным, с мощью этих слуг не совладать.\n\nТе, кто пытался это сделать, изничтожены. Те же, кто знает свое место, кто склоняет колени в мольбе перед прислужниками древних богов, кто без раздумий жертвует им душу и разум... лишь они обретут их милость.",
+		"Аку'май, Принцесса Глубин, служит древним богам. Она проживает в Непроглядной Пучине, озаряя тамошние подземелья своей древней мудростью. Аку'май, пришедшая в Пучину по воле старейшин смертных, олицетворяет божественность. Она обладает лишь частичкой мощи и ярости древних богов, но и такая малость выше нашего разумения.\n\nПоэтому ей поклоняются. Поэтому ее боятся и любят.\n\n\n--Лоргалис",
+	},
+},
+["Дневник моряка"] = {
+	["english"] = "Mariner's Log",
+	["pages"] = {
+		"Первая вахта, седьмая склянка\nСедрик снова рылся в шкафу для рома. Наказан.",
+		"Первая вахта, восьмая склянка\nСмена вахты. Все спокойно.",
+		"Ночная вахта, первая склянка\nСедрика заметили пытающимся открыть винный шкаф капитана. Наказан.",
+		"Ночная вахта, вторая склянка\nСедрик полез на мачту, запутался и упал. Потребовалась помощь хирурга. Отпустили, чтобы протрезвел.",
+		"Ночная вахта, четвертая склянка\nВ штанах у Седрика нашли бутылку рома. Наказан.",
+		"Ночная вахта, пятая склянка\nНашли одежду Седрика. Самого Седрика нашли отдельно. Седрик наказан.",
+		"Ночная вахта, шестая склянка\nСедрик громко поет. Разбудил капитана. Капитан наказал Седрика.",
+		"Первая вахта, восьмая склянка\nСмена вахты. Все тихо. Двоих послали искать Седрика.",
+		"Утренняя вахта, первая склянка\nПожар в каюте капитана. Все подняты по тревоге. Выбрасываем порох за борт.",
+	},
+},
+["\"Поваренная книга\" Мегавзрыва"] = {
+	["english"] = "Megacharge's Cookbook",
+	["pages"] = {
+		"В этой увесистой книге содержатся рецепты и описание способов применения различных взрывчатых веществ – от самых простых до экзотических. Вы быстро пролистываете ее до главы \"Антимагические боеприпасы\".\n\n\"Если вам когда-то потребуется разрушить магический барьер, вы довольно скоро обнаружите, что это несколько затруднительно сделать с помощью обычных боеприпасов. Даже если вы запалите целую гору динамита, все закончится огромной ямой в земле, а вы с некоторой вероятностью лишитесь пары конечностей\".\n\n\"К счастью, на этот случай у Мегавзрыва припасено особое изобретение - магический взрыватель! (вопрос о выдаче патента рассматривается)\".",
+		"\"Чтобы сделать магический взрыватель, вам потребуется некоторое количество высококачественной высокоточной взрывчатки. В компании Черноплавса ее довольно просто достать, поскольку она используется для производства всех боезарядов. \n\nНо если вы оказались где-то в другой части света, вам придется отыскать лучшего производителя, потому что обычная взрывчатка для этого рецепта не годится\".",
+		"\"В качестве детонатора вы должны использовать мощное электрическое устройство. Для Магического взрывателя требуется значительная сила тока, так что ваш обычный детонатор не подойдет\".\n\nК этой странице прикреплена записка:\n\n\"Не забыть заказать больше высоковольтных детонаторов. Последняя партия потерялась где-то на Берегу Призрачной Луны, возле захваченных демонами утесов. Возможно, стоит выслать туда водолазов и вернуть утраченный груз\".",
+		"\"Последний и самый важный компонент Магического взрывателя - это внушительное количество крови демонов. Ее уникальные магические свойства в сочетании с высококачественной взрывчаткой и создают эту невероятно мощную смесь.\"\n\n\"Когда вы поджигаете ее высоковольтным детонатором, смесь производит магически заряженный взрыв, способный уничтожить практически любой магический барьер.\"\n\n\"Не забудьте спрятаться подальше до того, как эта штука взлетит на воздух!\"",
+	},
+},
+["Письма и записки о Метцене"] = {
+	["english"] = "Metzen's Letters and Notes",
+	["pages"] = {
+		"Спасибо тебе еще раз от имени Пастбищ Дымного Леса за твою помощь. Мы не уверены, у кого именно Метцен, и потому определенно стоит проверить обе банды!\n\nВремя – деньги, и сейчас нам его очень не хватает. Пожалуйста, постарайся спасти оленя скорее, ведь недооценивать жестокость этих бандитов нельзя.\n\nДальше идут две записки с требованием выкупа, которые мы получили. Удачи…",
+		"Если хочешь получить оленя в целости и сохранности, советуем не медлить с выкупом. Пираты Южных морей очень плохо относятся к задержкам платежей, а нам известно, как ценен зверь для ТВОЕГО разбоя.\n\nПринеси 1000 золотых ко входу в Бухту Сорванных Парусов в Танарисе. Если кто-то попытается спасти оленя, то Метцену придется прогуляться по очень короткой доске.\n\nДа-да…\n\nПираты Южных морей.",
+		"Твой драгоценный зверь не очень-то хорошо себя чувствует в обжигающем жаре Тлеющего ущелья… лучше тебе незамедлительно выполнить наши требования.\n\nТы принесешь нам 5 звездных рубинов и 700 золотых, и положишь все это в один пакет без пометок. Пакет не позже чем через неделю оставь у входа на Подгорную тропу.\n\nЕсли наши требования не будут выполнены, Метцен украсит собой традиционный дворфийский стол на Праздник Зимнего Покрова.\n\nОлень… вкуснятина…",
+		"И ветра быстрей прискакали они,\n\nИ громко он их имена возгласил:\n\n\"Ну, Мерсер! Ну, Чилтон! Ну, Джордан и Каплан!\n\nНо, Нэйгл! Но, Пардо! Но, Гудман и Метцен!\n\nБегом на крыльцо! На стену скорей!\n\nИ мчитесь, мчитесь, мчитесь резвей!\"",
+	},
+},
+["Записка, читаемая в лунном свете"] = {
+	["english"] = "Moonlit Note",
+	["pages"] = {
+		"Вот и последняя наша подсказка! Жаль, что так скоро закончилась сказка!\n\nК цели заветной укажет путь парус, по цвету точь-в-точь, как шляпа Сайласа.",
+	},
+},
+["Планы из Садов Лунного Покоя"] = {
+	["english"] = "Moonrest Gardens Plans",
+	["pages"] = {
+		"Горамош!\n\nЯ послал к тебе представителя Эфириума. Этот посол Дейхен утверждает, что наши идеи весьма популярны среди его народа, и многие из них хотят помочь нашему делу. Выясни, так ли это, и может ли он быть нам полезен.\n\nЕсли от него будет толк, я позволю прочим представителям его народа примкнуть к нам.\n\nНе будь идиотом, сожги письмо после прочтения!\n\nM",
+	},
+},
+["Испачканные страницы записей"] = {
+	["english"] = "Muddy Journal Pages",
+	["pages"] = {
+		"...я более чем уверен, что она испытывает те же чувства, что и я. Она даже взяла меня за руку сегодня утром. Когда она смеется, ее глаза сверкают как бриллианты. Столько невысказанных слов между нами. Мое сердце стучит, как сумасшедшее, и огонь разливается по венам.",
+		"...гнев и ярость такой силы, о какой я раньше и представления не имел! Да как она смеет! Когда я рассказывал Джайлсу о значениях чисел, Тиллоа появилась передо мной со своим поклонником, держа его за руку! Что за неотесанный молодой человек! Вместо того чтобы представить меня как подобает, Тиллоа сказала: \"О, это просто мой учитель, дядюшка Сталван. Он милый старичок\". Старичок! При этих словах мои щеки просто вспыхнули. Я всего лишь на несколько лет старше, и все же она...",
+	},
+},
+["Улика против мурлоков"] = {
+	["english"] = "Murloc Clue",
+	["pages"] = {
+		"&lt;В письме не хватает некоторых слов, так как чернила во многих местах смыло водой.&gt;\n\n... любая форма ... основана на ... противостоянии угнетателей и угнетенных...\n\n... нечего терять, кроме своих цепей...\n\n... прошлое не должно быть забыто...\n\n... нельзя простить...\n\n... ВОССТАНЕТ ВНОВЬ!",
+	},
+},
+["Размышления верховного генерала"] = {
+	["english"] = "Musings of the High General",
+	["pages"] = {
+		"Очищайте тело трудом. Очищайте душу молитвами. Очищайте ваших врагов огнем и мечом. Не избегайте боли, ибо она – ваш союзник. Примите ее, ибо боль едина для всех, верующих и неверных. \n\nСопротивление путям Света есть признак несовершенства души, который должен быть искоренен из плоти нашего сообщества.",
+	},
+},
+["Таинственное воззвание"] = {
+	["english"] = "Mysterious Propaganda",
+	["pages"] = {
+		"Час нашего избавления близится, братья и сестры! Сегодня мы сбросим оболочку своих прежних жизней и возродимся как герои!\n\n-В",
+	},
+},
+["\"Мифология Титанов\""] = {
+	["english"] = "Mythology of the Titans",
+	["pages"] = {
+		"Никто не знает точно, как зародилась Вселенная. Кто-то предполагает, что после сильнейшего космического взрыва в Великой Тьме стали вращаться бесконечные миры – миры, в которых затем зародилось великое многообразие форм жизни. Другие же считают, что Вселенная в ее современном виде была создана одной-единственной всемогущей сущностью.",
+		"Хотя доподлинное происхождение хаотичной Вселенной неизвестно, очевидно, что могущественные создания явились, дабы привнести в миры порядок и обеспечить тем, кто будет их населять, мир и спокойствие.\n\nТитаны – колоссальные железнокожие боги из далеких пределов космоса – занимались обустройством встреченных ими миров. Они возводили высокие горы и создавали морские пучины.",
+		"Они облекли планеты небесными слоями и бушующими атмосферами, воплощая свой непостижимый и дальновидный замысел, создавая порядок из хаоса. Они научили древние примитивные племена приглядывать за своими детищами и поддерживать целостность созданных миров.\n\nТитаны, которыми правила элитная группа – Пантеон, – создали порядок в сотнях миллионов миров, рассеянных по Великой Запредельной Тьме на заре творения.",
+		"Благой Пантеон, желающий оградить свои упорядоченные миры от всякого зла, зорко наблюдал за действиями темных сил Круговерти Пустоты. Там, в неосязаемом мире неупорядоченных магических энергий, соединяющем мириады миров во Вселенной, обитали неисчислимые множества зловредных демонических существ, жаждавших лишь умерщвления и пожирания всего сущего в мирах.",
+	},
+},
+["Символ семейной любви"] = {
+	["english"] = "Of Love and Family",
+	["pages"] = {
+		"<HTML><BODY><IMG src=\"Interface/Pictures/14679_Tirion_256\" /></BODY></HTML>",
+	},
+},
+["Приказы верховного командования"] = {
+	["english"] = "Orders from High Command",
+	["pages"] = {
+		"Зарен!\n\nТвоя первая задача – захватить и удерживать Соборный квартал в Гилнеасе. Затем я хочу, чтобы ты вместе с воргенами лорда Краули выдвинулся на вражескую территорию. Уничтожь ближние сторожевые посты и перережь линии связи.\n\nКороль Ринн заверил меня, что целая армада военных кораблей уже в пути и прибудет сюда со дня на день. Как только подойдет оставшийся флот, мы начнем полномасштабное наступление на передовой отряд Отрекшихся и загоним этих ничтожных червяков обратно в Серебряный бор.\n\nКак только Гилнеас будет в руках Альянса, мы начнем приготовления к отвоеванию Лордерона.\n\nВо славу Альянса!\n\n-Главнокомандующий Халфорд Змеевержец\n\nP.S. Когда мы будем готовы напасть на передовой отряд Отрекшихся, подадим сигнал ракетой. Держи своих солдат в полной боевой готовности.",
+	},
+},
+["Служение богу"] = {
+	["english"] = "Priestly Preening: Be Like Your Betters",
+	["pages"] = {
+		"1. Отрастите пышную бороду, дабы она скрывала несовершенство ваших лиц от Света. \n\n2. Очищайте руки в молоке кобылиц, ибо дарам достойно быть принятыми только из мягких и нежных рук. \n\n3. Омывайте тело свое в реках, позволяя великим дарам Света очистить вашу кожу.",
+		"4. Регулярно меняйте одеяния, дабы ваш облик и запах не оскорбил служителей Света.\n\n5. Держите осанку – не позволяйте усталости и лени согнуть вашу спину. \n\n&lt;Список наставлений продолжается еще на нескольких листах&gt;",
+	},
+},
+["Квитанция заказа на товары"] = {
+	["english"] = "Purchase Order Receipt",
+	["pages"] = {
+		"Внимание: миссис Прибамбас!\n\nПрилагаю к письму сильное слабительное средство, которое вы заказывали. Примите мои соболезнования относительно судьбы мистера Блимо Прибамбаса после встречи с горным великаном. Мне любопытно, почему вы выбрали для его лечения слабительное, а не какое-нибудь рвотное средство? Боюсь, что вы оказываете мистеру Прибамбасу медвежью услугу. Удачи вам в вашем начинании!\n\n- Ломак Демонтирс",
+	},
+},
+["Рваная записка"] = {
+	["english"] = "Ripped Note",
+	["pages"] = {
+		"Зверь, который правит этим островом, действительно ужасен. Другие существа трепещут перед ним – и небогривые гориллы, и жагуары. Его рев постоянно звучит у меня в ушах и заставляет съеживаться от страха.\n\nЭти существа наверняка остановят любого, кто придет на остров. Но придется довериться воле предков...",
+	},
+},
+["Покрытый слоем соли дневник"] = {
+	["english"] = "Salt-Crusted Journal",
+	["pages"] = {
+		"Мы едва ушли из Кезана живыми! Вулкан уничтожил все... мой дом, повозку, питомца-кабана, домик моего кабана, его повозку... \n\nНо, по крайней мере, нам удалось попасть на корабли! Мы пойдем прямо в Дуротар, а когда ступим на твердую землю, обманем парочку орков и через неделю снова будем с деньгами!",
+		"Кажется, мы уже целую вечность в океане. Не думаю, что кто-нибудь знает, где мы находимся.\n\nНаши припасы заканчиваются, а половину воды пришлось потратить на самодельный опреснитель. Мы выкинули несколько человек за борт, чтобы увеличить скорость, но оставили все их золото, так что это мало помогло.\n\nНо все равно это было весело.",
+		"Мы высадились на землю! Точнее, разбились о нее. Лодки ночью налетели на берег, пока \"капитан\" занимался ерундой.\n\nМы все проснулись, лежа лицом вниз на этом таинственном песчаном пляже! Никто и понятия не имеет, где мы, но нам придется выживать в этой экзотической местности, не отмеченной ни на одной карте.\n\nЯ сказал, что все мы проснулись? Ну, это было преувеличение.",
+		"Мы нашли нечто удивительное! Какой-то старый разбитый механизм. Один из тех собирателей древностей, которые пережили крушение, сказал, что эта штуковина – творение титанов.\n\nЧто бы это ни было, готов поспорить, она стоит денег. Ребята, которые ее нашли, сказали, что у них болели головы, и из этой штуки исходило странное сияние, но КАКАЯ РАЗНИЦА?",
+		"Ребята, которые нашли этот артефакт, ведут себя немного СМЕШНО! Нет, ничего такого плохого с точки зрения гоблина. Они прирезали всего одного или ДВОИХ.\n\nДумаю, это не так уж и плохо! Но всем окружающим все равно НЕМНОГО смешно, ха-ха-ха.\nХотя этот их грубиян слишком много БОЛТАЕТ.",
+		"Остальные позволили мне ПРИМКНУТЬ к ним наконец-то они позволили мне смотреть на АРТЕФАКТ достаточно долго и я почувствовал покалывание они сказали МОРДОФАРШ знает все он самый УМНЫЙ я надеюсь что с его помощью мы сможем ОСВОБОДИТЬ этот пляж от ДРУГИХ ЗЛЫХ ГОБЛИНОВ которые прилетели на своих ЛЕТУЧИХ МАШИНАХ чтобы УБИТЬ НАС они соврали они сказали МЫ ПРИБЫЛИ ИЗ ПРИБАМ-БАСКА ЧТОБЫ СПАСТИ ВАС но нас не обманешь мы отобрали у них все ха-ха-ха",
+		"ВКУСНЫЙ ЖУРНАЛ НАДО ЕГО СЪЕСТЬ\n\n&lt;Остальные страницы отсутствуют&gt;",
+	},
+},
+["Депеша курьера Алого ордена"] = {
+	["english"] = "Scarlet Courier's Message",
+	["pages"] = {
+		"Госпожа верховный генерал,\n\nспешу сообщить вам, что войска Дольного Очага и Тирисфальских лесов находятся менее чем в одном дне езды от Нового Авалона. Путь наш озарен Светом, и ветра дуют нам в спину. Скоро Плеть узреет истинную мощь Алого Ордена!\n\nБлагослови вас Свет,\n\n Главнокомандующий Галвар Чистокров",
+	},
+},
+["Бумаги Алого ордена"] = {
+	["english"] = "Scarlet Crusade Documents",
+	["pages"] = {
+		"Распространение сведений производите на свое усмотрение.\n\nТирисфальское региональное командование\nКапитан Мелраш\nКапитан Вакон\nКапитан Перрин\n\nУказания даны самим верховным лордом.\n\nКапитан Перрин, продолжайте укреплять позицию на юго-западной башне (как уже было сказано). Провиант подвезут позднее. Материалы можно добывать на близлежащих фермах. Не забывайте о разведке и сборе информации.",
+		"должна быть собрана о нежити в Брилле.\n\nКапитан Вакон, похоже, что передвижения нежити около северной башни возросли. Эти волнения должны быть быстро и решительно подавлены.\n\nКапитан Мелроуз, меня беспокоит уровень организованности нежити около границ с Чумными землями. Новая группа солдат будет доставлена в ваше распоряжение в ближайшие недели.\n\nДа прославится Свет",
+	},
+},
+["Тайный дневник"] = {
+	["english"] = "Secret Journal",
+	["pages"] = {
+		"Я с трудом могу в это поверить. Мы терпели эти мучения четыре долгих года, но скоро все кончится. Братство будет возрождено, и мы прокатимся по этой земле, словно наводнение, и очистим ее от грязи и скверны.",
+	},
+},
+["Приказы для воинов в Долине Призрачной Луны"] = {
+	["english"] = "Shadowmoon Mission Orders",
+	["pages"] = {
+		"Железная Орда должна обрести господство в воздухе – только тогда мы сможем разгромить врагов. В Долине Призрачной Луны живет большая популяция диких рилаков. Заставь этих существ покориться нам. Я хочу увидеть, как в небо Азерота одновременно взмоют тысячи рилаков.\n\nВождь Громмаш Адский Крик",
+	},
+},
+["Приказы Серебряного союза"] = {
+	["english"] = "Silver Covenant Orders",
+	["pages"] = {
+		"Найди чародея Тибалина на верхнем этаже Серебряного Анклава. Он даст тебе книгу, коей нет цены, поэтому охранять ее следует пуще собственной жизни. Со всей возможной поспешностью доставь книгу Каладису Сияющему Копью в покой Кель'Делара.",
+	},
+},
+["Песнь Долины"] = {
+	["english"] = "Song of the Vale",
+	["pages"] = {
+		"Долина в мире есть, где явь подобна сну,\nГде ивы и цветы приветствуют весну,\nГде из сырой земли рождается росток,\nИ блеском ослепляет родника поток,\nГде у огня найдешь спокойствие и мир,\nИ веет красотой наполненный эфир.\n\nСвященного Пруда искрится глубина,\nКоль немощен, испей воды его до дна.\nПрирода остановит страданий круговерть,\nЗабудется недуг, и жизнью станет смерть.",
+	},
+},
+["Приказы для воинов на Пиках Арака"] = {
+	["english"] = "Spires of Arak Mission Orders",
+	["pages"] = {
+		"Араккоа – могущественные союзники и опасные враги. Мы должны получить доступ к их мистическим знаниям во что бы то ни стало – убеждением или силой.\n\nВождь Громмаш Адский Крик",
+	},
+},
+["Послание Ярости Бури"] = {
+	["english"] = "Stormrage Missive",
+	["pages"] = {
+		"Командир,\n\nКод нужно доставить Зулухеду. Он будет охранять его до дальнейших распоряжений.\n\n-Владыка Иллидан Ярость Бури",
+	},
+},
+["Приказы Похитителей Солнца"] = {
+	["english"] = "Sunreaver Orders",
+	["pages"] = {
+		"Найди магистра Хатореля в баре \"Грязное животное\". Он даст тебе книгу, коей нет цены, поэтому охранять ее следует пуще собственной жизни. Со всей возможной поспешностью доставь книгу Миралию Блеску Солнца в покой Кель'Делара.",
+	},
+},
+["Послание Синдиката"] = {
+	["english"] = "Syndicate Missive",
+	["pages"] = {
+		"Валлик,\nохраняй раба до нашего возвращения. Теперь здесь небезопасно, мы не можем больше хранить ЕГО тут. Мы отправимся на север, обходя стороной любые места, где нас могли бы заметить.\n\nОни – животные, но животные безжалостные – мы достаточно от них натерпелись, у нас есть причины для беспокойства. Лучше спрятать любые знаки, что могли бы заставить собраться их вместе. Меньше всего мы бы хотели дать им повод воссоединиться и напасть на нас.",
+	},
+},
+["Залитое слезами письмо"] = {
+	["english"] = "Tear-stained Letter",
+	["pages"] = {
+		"Келинара!\n\nС прискорбием сообщаю, что мне придется освободить тебя от обязанностей моей ученицы. Мне не удалось верно оценить твой потенциал, и за это я виню только себя. Надеюсь, ты поймешь, что даже самые одаренные маги иногда ошибаются. По крайней мере, теперь ты сможешь забыть о своих промахах и выбрать для себя соответствующее способностям призвание. Возможно, плетение корзин более отвечает твоим... талантам.\n\nК сожалению, у меня нет ни одного знакомого плетельщика корзин, да и слишком много дел, чтобы писать тебе рекомендательное письмо. Пожалуйста, как можно быстрее возвращайся в Азерот.\n\nАсталор",
+	},
+},
+["Книга Ура"] = {
+	["english"] = "The Book of Ur",
+	["pages"] = {
+		"Азерот – страна нескончаемых чудес. Здесь многообразно все – флора, фауна, культура, магия. Жаждущий знаний может многое здесь найти. Надо лишь внимательно смотреть.\n\nИ если заглянуть достаточно глубоко, то увидишь окна в новые миры, в каждом из которых есть свои чудеса.\n\nА есть и свои бедствия.",
+		"Вот цель моей книги: составить список этих существ, этих зловещих созданий, желающих уничтожить наши земли, чтобы те странники, кто на них наткнется, знали, чего им следует ожидать.\n\nПоэтому если ты считаешь себя стражем Азерота, читай дальше. Читай, чтобы знать своего врага.\n\n-Ур\nМаг из Даларана",
+		"Тварь, о которой я пишу, – это ворген.\n\nО воргенах часто рассказывают в селах – какой же ребенок с фермы не слышал сказок о людях-волках, бродящих по лесам и болотам у его родной деревни?\n\nВ таких сказках может скрываться и правда – возможно, так нас предупреждают о воргенах, пугая страшными небылицами.",
+		"Но прежде чем читатель поспешит отбросить мысли о сказках, поспешу его уверить: воргены существуют на самом деле. Возможно, они не из нашего мира, но между мирами сейчас проложены свои тропы, и чудовищ можно призвать сюда из их миров с помощью сильной магии.\n\nНо лучше такой магией не пользоваться, ведь где бы ни появлялись воргены, с собой они приносят ужас и смерть.",
+		"Воргена можно узнать по его сходству с волками из нашего мира. Глядя на воргена, каждый с легкостью заметит, как сильно его грубая шерсть, заостренные уши и длинная морда похожи на волчьи.\n\nНо сразу же станут заметны и отличия: грубая шерсть покрывает мощное тело с двумя ногами, из пасти торчат длинные клыки, а когти – словно кинжалы. В завываниях же его слышится такая злоба, которой нет ни у одного здешнего зверя.",
+		"Родина воргенов – темное место, обитель кошмаров. Если в том мире и есть места, куда не могут добраться проклятые воргены, то мне о таких бастионах не известно.\n\nЕсли же лицезреть воочию ярость и злобу воргенов, то на ум приходит, что быть таких мест не может.\n\nЕсть мнение, что воргенов вполне устраивает их собственный мир: ведь, хотя некоторые из них владеют очень сильной магией, они не предпринимали попыток перенестись в Азерот самостоятельно.\n\nИ для нас это очень хорошо.",
+		"Как уже упоминалось выше, некоторые воргены хорошо владеют тайными искусствами, и их магия – магия тьмы и зла.\n\nДля них обычны проклятия и жуткие яды, так что пусть читатель знает заранее: те, кто столкнется с воргенскими магами, должны уметь оградить себя от тьмы.",
+		"Я надеюсь, что ни один даларанский волшебник не станет разыскивать воргенов, даже из лучших побуждений. С этими тварями нельзя заключить союз, у них нельзя ничему научиться и нельзя узнать ничего полезного.\n\nБудет лучше, если они останутся в своем мире. Ведь если они придут в наш мир и не будут уничтожены – судьба наша незавидна...",
+	},
+},
+["Дневник верховного генерала Аббендис"] = {
+	["english"] = "The Diary of High General Abbendis",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">Дневник верховного генерала Аббендис</H1><BR/><IMG src=\"Interface/FlavorImages/ScarletCrusadeLogo\" /></BODY></HTML>",
+		"<HTML><BODY><P>Голос сказал мне: \"Приди!\" – и в тот же момент я поняла, что это был сам Великий Свет, взывающий ко мне во сне. Наконец-то! После стольких лет, проведенных в молитвах, после того, как я совершила столько праведных поступков и очистила землю от нежити, оскверняющей Азерот, после многих поражений и воскрешений я наконец-то удостоилась этой великой чести!</P><BR/><P>Свершилось!</P></BODY></HTML>",
+		"<HTML><BODY><P>Я снова слышала голос. \"Приди...\" – воззвал ко мне Свет.</P><BR/><P>Я проснулась, дрожа до кончиков пальцев, но причиной тому был не холод моих покоев. Я должна удвоить усилия! Сегодня же скажу верховному настоятелю, что желаю возносить в два раза больше молитв. Довольно полумер!</P><BR/><P>Великий Свет радуется нашим добрым деяниям. Теперь я это знаю наверняка!</P></BODY></HTML>",
+		"<HTML><BODY><P>Это произошло снова! На этот раз я не спала. Чуть больше минуты я внимала голосу Света, и посреди теплого, летнего дня с моих губ вдруг сорвалось облачко холодного пара. Это заметил один из жрецов и пал на колени в благоговейной молитве. </P><BR/><P>Правда, никто, кроме меня, не слышал священный глас. Но теперь я точно знаю, что не сошла с ума. Может быть, мне попросить Ландгрена помолиться за меня?</P><BR/><P>Надо сказать Джордану и Стриту, чтобы они более тщательно подходили к набору добровольцев. Наша армия переполнена скептиками и неверующими, желающими только сражаться с нежитью. Довольно! Больше я не потерплю такого кощунства.</P></BODY></HTML>",
+		"<HTML><BODY><BR/><P>Епископ и главнокомандующий приняли мое предложение – правда, у них не было выбора. Епископ Стрит особенно воодушевленно отнесся к моим словам, и все время говорил о том, что нашей армии не помешает небольшая чистка.</P><BR/><P>Я велела ему успокоиться. В мои намерения не входит уничтожение всего ордена. Однако мне по душе идея создания элитного отряда преданных Свету солдат, которые будут выполнять его волю в Нордсколе. Боюсь, дружба с Лекрафтом очень сильно на него влияет. Впрочем, оба они еще мне пригодятся.</P></BODY></HTML>",
+		"<HTML><BODY><BR/><P>Я намереваюсь оставить здесь большую часть Ордена, чтобы они продолжали зачистку земель от нежити за нашей спиной. Надеюсь, что когда начатое нами дело будет завершено, они смогут отправиться по домам, к своим семьям, и жить отныне в мире и согласии.</P><BR/><P>Кажется, я правильно поступаю. В конце концов, только на нас держалась эта земля, склонившаяся под гнетом омерзительной Плети, и только мы могли вернуть Лордерону его былую славу. Вернуть те времена, когда нежить не ходила по нашим полям, когда еще не было Артаса и его предательства... когда еще не было Короля-лича.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мои люди верят, что вскоре настанет решающий день для всего Алого ордена. Епископ Стрит дал имя этому событию, назвав его в проповеди Багровым Рассветом.</P><BR/><P>Мне надо поразмыслить над происходящим – хотя у меня нет сомнений в том, что все идет так, как задумано. Я буду молиться, чтобы это событие обернулось во благо нашему Ордену.</P></BODY></HTML>",
+		"<HTML><BODY><P>Свет снова говорил со мной, с настойчивостью и убедительностью. Я проснулась в тревоге, боясь его подвести. Больше медлить нельзя. Мы должны выступать! </P><BR/><P>Какое совпадение – признаться, я с трудом сдерживаю вздох облегчения, но именно сегодня капитан Шели предоставил нам новый флот для путешествия. Хотя, возможно, это было вовсе не совпадение? Неисповедимы пути Света, и я могу лишь надеяться, что это он руководит моими действиями.</P><BR/><P>Моим флагманом будет \"Глупость Грешника\". По-моему, вполне подходящее название.</P></BODY></HTML>",
+		"<HTML><BODY><P>Теперь я знаю, почему Свет так настойчиво побуждал меня к действию. Под покровом ночи в небесах появились некрополи Плети и обрушили тысячи демонов на наши головы!</P><BR/><P>Захватчиков возглавляет новый выводок рыцарей смерти, и мы потеряли множество людей в сражении с этими тварями. Теперь, когда Плеть может нападать на нас повсюду, и даже с небес, нам будет гораздо сложнее удерживать оборону. </P><BR/><P>Боюсь, наша экспедиция в Нордскол закончится, не успев начаться.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мне сообщили, что Дольный Очаг готов оказать нам поддержку. Спасательную операцию намеревается возглавить сам главнокомандующий Галвар Чистокров, но усилия его напрасны.</P><BR/><P>Надо отправить моих лучших курьеров, чтобы они прорвались за линию огня и передали мой приказ к отступлению. Дольный Очаг должен сосредоточиться на обороне, чтобы иметь возможность принять под свою защиту остатки Ордена.</P><BR/><P>Надеюсь, мое послание достигнет их еще до наступления ночи.</P></BODY></HTML>",
+		"<HTML><BODY><P>К утру от моих курьеров не поступило ни единого донесения. Очевидно, никто из них не добрался до Дольного Очага. Чумные земли потеряны для нас. Скоро сюда прибудет Чистокров, но его войска будут разбиты еще на подходе. </P><BR/><P>Сегодня днем мне было видение, посланное Светом. Я видела гибель всего, что мы возвели собственными руками. Теперь я знаю, что должна забрать с собой самых преданных воинов и оставить прочих рыцарей Ордена на откуп судьбе.</P></BODY></HTML>",
+		"<HTML><BODY><P>Позже Ландгрен сказал, что видел то же, что и я. Не понимаю, почему Свет побуждает нас совершить столь бесчестное деяние, но не имею права сомневаться в его повелении. Я должна повиноваться, и я повинуюсь. </P><BR/><P>С трепетом взираю я на Новый Авалон, ибо мне кажется, что я вижу его в последний раз. Наша судьба решится в Нордсколе, но меня обуревает гнетущее чувство неминуемой беды. Я надеюсь, что наши грядущие деяния очистят мою душу от смятений. Я должна выбросить сомнения прочь из головы.</P></BODY></HTML>",
+		"<HTML><BODY><P>Молюсь Свету, чтобы главнокомандующий Чистокров избежал страшной участи на поле боя. Я же чувствую себя предательницей. Трусливым псом, поджавшим хвост от страха.</P><BR/><P>Говорят, что путешествие займет около двух месяцев – остальные корабли не столь быстроходны, как \"Грешник\". На них находится большая часть наших войск и экипировки, но они должны доплыть в целости и сохранности. </P><BR/><P>Меня совсем не тянет к воде, но во имя Света я должна перетерпеть морскую болезнь. Просто не буду никому показываться на глаза.</P></BODY></HTML>",
+		"<HTML><BODY><P>Я давно уже ничего не писала в дневнике – в последнее время мне с трудом удается удержаться на ногах, чтобы не почувствовать очередной приступ тошноты. Солдаты начинают волноваться за меня – ведь я практически не покидаю своей каюты. Но я не могу позволить им увидеть себя в таком плачевном состоянии.</P><BR/><P>К счастью, терпеть осталось недолго. Молю Свет, чтобы наше путешествие поскорее закончилось. Мы плывем вот уже шесть недель, и с каждым днем погода становится все хуже и хуже. Надеюсь, в Нордсколе будет немного теплее – с детства ненавижу холод.</P><BR/><P>И глас Великого Света давно уже ко мне не обращался.</P></BODY></HTML>",
+		"<HTML><BODY><P>На нас напали без единого предупреждения! Эти великаны в грубо выточенных каноэ выплыли из тумана подобно призракам! Бесшумные, как мертвецы...</P><BR/><P>Мы потеряли один корабль со всей командой. Они сражались отважно и умело, учитывая, что до сих пор им не приходилось участвовать в реальных морских сражениях.</P><BR/><P>Вопли наших моряков, захваченных великанами, еще долго отражались от прибрежных скал. Потом все стихло. Епископ Стрит созвал команду на панихиду.</P></BODY></HTML>",
+		"<HTML><BODY><P>Сегодня утром я проснулась и обнаружила себя склонившейся над морскими картами. Сам Свет руководил моим пером, прокладывая путь к цели.</P><BR/><P>Мы почти на месте!</P></BODY></HTML>",
+		"<HTML><BODY><P>Наконец-то, земля!</P><BR/><P>Сойдя со шлюпки на берег, я установила наш флаг, и тут же услышала глас Великого Света. Он говорил моими устами. Сегодня великий день, сказал он – день Багрового Рассвета. Здесь, в этом самом месте, будет основан Новый Дольный Очаг. Отныне мы носим иное имя. Мы – Алый Натиск!</P><BR/><P>И сим мы начинаем наступление на Нордскол! Скверна Плети угрожает захватить власть над миром и погубить все сущее. Настало время дать ей отпор. Скоро мы будем стоять у подножия трона самого Короля-лича!</P></BODY></HTML>",
+		"<HTML><BODY><P>Прошел уже месяц, и я вполне довольна темпами строительства. Ничего не писала в дневнике – было не до того. Разведчики докладывают, что в этих землях полно драконов и прочих странных зверей. Мы должны быть настороже.</P><BR/><P>Сегодня во время проповеди верховный настоятель провозгласил пришествие посланника Света, который поведет нас к победе.</P><BR/><P>Не знаю даже, что и думать об этом. Почему Свет не обращается больше ко мне? Неужто я чем-то прогневила небеса, и меня хотят заменить каким-то чужестранцем?</P></BODY></HTML>",
+		"<HTML><BODY><P>Сегодня меня посетил сам адмирал Бареан Вествинд! По всем сведениям он считался погибшим много лет назад.</P><BR/><P>Он выглядел довольно молодо, но я все равно узнала его с первого взгляда. Адмирал рассказал мне, что остался единственным выжившим человеком из всего обреченного флота, и что он спасся только благодаря милости Света.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мы провели за беседой всю ночь и все утро. Адмирал заверил меня, что не собирается покушаться на мой авторитет, но Свет повелел ему отправиться в Драконий Погост, чтобы стать моим советником и формальным главнокомандующим. Он утверждает, что скоро в Нордсколе произойдут великие перемены. Альянс и Орда объединятся перед лицом единой опасности – страшной чумы, которую намеревается наслать на них проклятый Король-лич.</P></BODY></HTML>",
+		"<HTML><BODY><P>Солдаты восторженно приняли нового главнокомандующего – особенно верховный настоятель Ландгрен и епископ Стрит. Не иначе, Свет нашептал им благословения адмиралу, пока они спали. Некоторые воины приняли постриг и теперь именуют себя \"жрецами-воронами\".</P><BR/><P>Кажется, только Джордан остался в стороне от всеобщего ликования, и я вполне его понимаю. Он тоже чувствует, насколько шатко наше положение.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мне кажется, что здесь что-то не так. У меня нет никаких поводов не доверять адмиралу, но все же он меня беспокоит. Нет, он не сделал ничего дурного; совсем наоборот! Но я всегда доверяла своей интуиции – и потому до сих пор жива. </P><BR/><P>Я буду молить Свет, чтобы он ниспослал мне мудрость понять происходящее. Но поскольку адмирал был послан нам свыше, чтобы привести нас к победе, я не могу в нем сомневаться. Я покорюсь, ибо вера моя незыблема.</P></BODY></HTML>",
+		"<HTML><BODY><P>Прошло еще несколько месяцев. Мы достигли больших успехов в строительстве Нового Дольного Очага. Стена почти завершена, впрочем как и казармы. Люди Калейки просто чудесные работники.</P><BR/><P> Я давно не делала здесь никаких записей – не хотелось. По какой-то причине я даже этого избегала. В последнее время Свет не говорит со мной, однако адмирал уверяет, что здесь не о чем волноваться.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мои разведчики доложили, что Отрекшиеся разбили лагерь на северных склонах холмов, прямо под боком у Альянса, затеявшего строительство массивной крепости с другой стороны.</P><BR/><P>Адмирал говорит, что нам не стоит связываться с нежитью. На западе от них расположились войска Орды, которые непременно придут им на помощь в случае нашего нападения. Мне это не нравится, но я не могу не согласиться с адмиралом.</P></BODY></HTML>",
+		"<HTML><BODY><P>Первая фаза строительства завершена. Адмирал Вествинд приказал моим людям основать на севере несколько укреплений. Зачем это надо – он не объяснил, сославшись на \"повеление свыше\".</P><BR/><P>Сегодня днем поймали четырех шпионов Отрекшихся из Ядозлоби. Надо бы приказать Лекрафту вытянуть из них информацию под пытками. Если мы поймали четверых – то сколько еще могли проскользнуть мимо нас?</P><BR/><P>Почему у меня такое чувство, будто все катится под откос?</P></BODY></HTML>",
+	},
+},
+["Путь искупления"] = {
+	["english"] = "The Path of Redemption",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">Дневник верховного генерала Аббендис</H1><BR/><IMG src=\"Interface/FlavorImages/ScarletCrusadeLogo\" /></BODY></HTML>",
+		"<HTML><BODY><P>Голос сказал мне: \"Приди!\" – и в тот же момент я поняла, что это был сам Великий Свет, взывающий ко мне во сне. Наконец-то! После стольких лет молитв и добрых деяний, после того, как я очистила землю от нежити, оскверняющей Азерот, после многих поражений и воскрешений я наконец-то удостоилась этой великой чести! </P><BR/><P>Наконец-то!</P></BODY></HTML>",
+		"<HTML><BODY><P>Я снова слышала голос. \"Приди...\" – воззвал ко мне Свет.</P><BR/><P>Я проснулась, дрожа до кончиков пальцев, но причиной тому был не холод моих покоев. Я должна удвоить усилия! Сегодня же скажу верховному настоятелю, что желаю возносить в два раза больше молитв. Хватит полумер!</P><BR/><P>Великий Свет возрадуется нашим добрым деяниям. Теперь я это знаю наверняка!</P></BODY></HTML>",
+		"<HTML><BODY><P>Это произошло снова! Теперь я уже не спала. Чуть больше минуты я внимала голосу Света, и посреди теплого летнего дня с моих губ вдруг сорвалось облачко холодного пара. Это заметил один из жрецов и пал на колени в благоговейной молитве. </P><BR/><P>Правда, никто, кроме меня, не слышал священный глас. Но теперь я точно знаю, что не сошла с ума. Может быть, мне попросить Ландгрена помолиться за меня? </P><BR/><P>Надо сказать Джордану и Стриту, чтобы они более тщательно подходили к набору добровольцев. Наша армия переполнена скептиками и неверующими, желающими только сражаться с нежитью. Довольно! Больше я не потерплю такого кощунства.</P></BODY></HTML>",
+		"<HTML><BODY><P>Епископ и главнокомандующий приняли мое предложение – правда, у них не было выбора. Епископ Стрит особенно воодушевленно отнесся к моим словам, и все время говорил о том, что нашей армии не помешает небольшая чистка. </P><BR/><P>Я велела ему успокоиться. В мои намерения не входит уничтожение всего ордена. Однако мне по душе идея создания элитного отряда преданных Свету солдат, которые будут выполнять его волю в Нордсколе. Боюсь, дружба с Лекрафтом очень сильно на него влияет. Впрочем, оба они еще мне пригодятся.</P></BODY></HTML>",
+		"<HTML><BODY><P>Я намереваюсь оставить здесь большую часть Ордена, чтобы они продолжали зачистку земель от нежити за нашей спиной. Надеюсь, что когда начатое нами дело будет завершено, они смогут отправиться по домам, к своим семьям, и жить отныне в мире и согласии.</P><BR/><P>Кажется, я правильно поступаю. В конце концов, только на нас держалась эта земля, склонившаяся под гнетом омерзительной Плети, и только мы могли вернуть Лордерону его былую славу. Вернуть те времена, когда нежить не ходила по нашим полям, когда еще не было Артаса и его предательства... когда еще не было Короля-лича.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мои люди верят, что вскоре настанет решающий день для всего Алого ордена. Епископ Стрит дал имя этому событию, назвав его в проповеди Багровым Рассветом.</P><BR/><P>Мне надо поразмыслить над происходящим – хотя у меня нет сомнений в том, что все идет так, как задумано. Я буду молиться, чтобы это событие обернулось во благо нашему Ордену.</P></BODY></HTML>",
+		"<HTML><BODY><P>Свет снова говорил со мной, с настойчивостью и убедительностью. Я проснулась в тревоге, боясь его подвести. Больше медлить нельзя. Мы должны выступать! </P><BR/><P>Какое совпадение – признаться, я с трудом сдерживаю вздох облегчения, но именно сегодня капитан Шели предоставил нам новый флот для путешествия. Хотя, возможно, это было вовсе не совпадение? Неисповедимы пути Света, и я могу лишь надеяться, что это он руководит моими действиями.</P><BR/><P>Моим флагманом будет \"Глупость Грешника\". По-моему, вполне подходящее название.</P></BODY></HTML>",
+		"<HTML><BODY><P>Теперь я знаю, почему Свет так настойчиво побуждал меня к действию. Под покровом ночи в небесах появились некрополи Плети и обрушили тысячи демонов на наши головы!</P><BR/><P>Захватчиков возглавляет новый выводок рыцарей смерти, и мы потеряли множество людей в сражении с этими тварями. Теперь, когда Плеть может нападать на нас повсюду, и даже с небес, нам будет гораздо сложнее удерживать оборону. </P><BR/><P>Боюсь, наша экспедиция в Нордскол закончится, не успев начаться.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мне сообщили, что Дольный Очаг готов оказать нам поддержку. Спасательную операцию намеревается возглавить сам главнокомандующий Галвар Чистокров, но усилия его напрасны.</P><BR/><P>Надо отправить моих лучших курьеров, чтобы они прорвались за линию огня и передали мой приказ к отступлению. Дольный Очаг должен сосредоточиться на обороне, чтобы иметь возможность принять под свою защиту остатки Ордена.</P><BR/><P>Надеюсь, мое послание достигнет их еще до наступления ночи.</P></BODY></HTML>",
+		"<HTML><BODY><BR/><P>К утру от моих курьеров не поступило ни единого донесения. Очевидно, никто из них не добрался до Дольного Очага. Чумные земли потеряны для нас. Скоро сюда прибудет Чистокров, но его войска будут разбиты еще на подходе. </P><BR/><P>Сегодня днем мне было видение, посланное Светом. Я видела гибель всего, что мы возвели собственными руками. Теперь я знаю, что должна забрать с собой самых преданных воинов и предоставить остатки Ордена на откуп судьбе.</P></BODY></HTML>",
+		"<HTML><BODY><P>Позже Ландгрен сказал, что видел то же, что и я. Не понимаю, почему Свет побуждает нас совершить столь бесчестное деяние, но не имею права сомневаться в его повелении. Я должна повиноваться, и я повинуюсь.</P><BR/><P>С трепетом взираю я на Новый Авалон, ибо мне кажется, что вижу его в последний раз. Наша судьба решится в Нордсколе, но меня обуревает гнетущее чувство неминуемой беды. Я надеюсь, что наши грядущие деяния очистят мою душу от смятений. Я должна выбросить сомнения прочь из головы.</P></BODY></HTML>",
+		"<HTML><BODY><P>Молюсь Свету, чтобы главнокомандующий Чистокров избежал страшной участи на поле боя. Я же чувствую себя предательницей. Трусливым псом, поджавшим хвост от страха.</P><BR/><P>Говорят, что путешествие займет около двух месяцев – остальные корабли не столь быстроходны, как \"Грешник\". На них находится большая часть наших войск и экипировки, но они должны доплыть в целости и сохранности. </P><BR/><P>Меня совсем не тянет к воде, но во имя Света я должна перетерпеть морскую болезнь. Просто не буду никому показываться на глаза.</P></BODY></HTML>",
+		"<HTML><BODY><P>Я давно уже ничего не писала в дневнике – в последнее время мне с трудом удается удержаться на ногах, чтобы не почувствовать очередной приступ тошноты. Солдаты начинают волноваться за меня – ведь я практически не покидаю своей каюты. Но я не могу позволить им увидеть себя в таком плачевном состоянии.</P><BR/><P>К счастью, терпеть осталось недолго. Молю Свет, чтобы наше путешествие поскорее закончилось. Мы плывем вот уже шесть недель, и с каждым днем погода становится все хуже и хуже. Надеюсь, в Нордсколе будет немного теплее – с детства ненавижу холод.</P><BR/><P>И глас Великого Света давно уже ко мне не обращался.</P></BODY></HTML>",
+		"<HTML><BODY><P>На нас напали без единого предупреждения! Эти великаны в грубо выточенных каноэ выплыли из тумана подобно призракам! Бесшумные, как мертвецы...</P><BR/><P>Мы потеряли один корабль со всей командой. Они сражались отважно и умело, учитывая, что до сих пор им не приходилось участвовать в реальных морских сражениях.</P><BR/><P>Вопли наших моряков, захваченных великанами, еще долго отражались от прибрежных скал. Потом все стихло. Епископ Стрит созвал команду на панихиду.</P></BODY></HTML>",
+		"<HTML><BODY><P>Сегодня утром я проснулась и обнаружила себя склонившейся над морскими картами. Сам Свет водил моей рукой, прокладывая путь к цели.</P><BR/><P>Мы почти на месте!</P></BODY></HTML>",
+		"<HTML><BODY><P>Наконец-то, земля!</P><BR/><P>Сойдя со шлюпки на берег, я установила наш флаг, и тут же услышала глас Великого Света. Он говорил моими устами. Сегодня великий день, сказал он – день Багрового Рассвета. Здесь, в этом самом месте, будет основан Новый Дольный Очаг. Отныне мы носим иное имя. Мы – Алый Натиск!</P><BR/><P>Так мы начинаем наступление на Нордскол! Скверна Плети угрожает захватить власть над миром и погубить все живое. Настало время дать ей отпор. Скоро мы будем стоять у подножия трона самого Короля-лича! </P></BODY></HTML>",
+		"<HTML><BODY><P>Прошел уже месяц, и я вполне довольна темпами строительства. Ничего не писала в дневнике – было не до того. Разведчики докладывают, что в этих землях полно драконов и прочих странных зверей. Мы должны быть настороже.</P><BR/><P>Сегодня, во время проповеди верховный настоятель провозгласил пришествие посланника Света, который поведет нас к победе.</P><BR/><P>Не знаю даже, что и думать об этом. Почему Свет не обращается больше ко мне? Неужто я чем-то прогневила небеса, и меня хотят заменить каким-то чужестранцем?</P></BODY></HTML>",
+		"<HTML><BODY><P>Сегодня меня посетил сам адмирал Бареан Вествинд! По всем сведениям он считался погибшим много лет назад. </P><BR/><P>Он выглядел довольно молодо, но я все равно узнала его с первого взгляда. Адмирал рассказал мне, что остался единственным выжившим человеком из всего обреченного флота, и что он спасся только благодаря милости Света. </P></BODY></HTML>",
+		"<HTML><BODY><P>Мы провели за беседой всю ночь и все утро. Адмирал заверил меня, что не собирается покушаться на мой авторитет, но Свет повелел ему отправиться в Драконий Погост, чтобы стать моим советником и формальным главнокомандующим. Он утверждает, что скоро в Нордсколе произойдут великие перемены. Альянс и Орда объединятся перед лицом единой опасности – страшной чумы, которую намеревается наслать на них проклятый Король-лич.</P></BODY></HTML>",
+		"<HTML><BODY><P>Солдаты восторженно приняли нового главнокомандующего – особенно верховный настоятель Ландгрен и епископ Стрит. Не иначе, Свет нашептал им благословения адмиралу, пока они спали. Некоторые воины приняли постриг и теперь именуют себя \"жрецами-воронами\".</P><BR/><P>Кажется, только Джордан остался в стороне от всеобщего ликования, и я вполне его понимаю. Он тоже чувствует, насколько шатко наше положение.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мне кажется, что здесь что-то не так. У меня нет никаких поводов не доверять адмиралу, но все же он меня беспокоит. Нет, он не сделал ничего дурного; совсем наоборот! Но я всегда доверяла своей интуиции – и потому до сих пор жива. </P><BR/><P>Я буду молить Свет, чтобы он ниспослал мне мудрость понять происходящее. Но поскольку адмирал был послан нам свыше, чтобы привести нас к победе, я не могу в нем сомневаться. Я покорюсь, ибо вера моя незыблема.</P></BODY></HTML>",
+		"<HTML><BODY><P>Прошло еще несколько месяцев. Мы достигли больших успехов в строительстве Нового Дольного Очага. Стена почти завершена, впрочем как и казармы. Люди Калейки просто чудесные работники.</P><BR/><P> Я давно не делала здесь никаких записей – не хотелось. По какой-то причине я даже этого избегала. В последнее время Свет не говорит со мной, однако адмирал уверяет, что здесь не о чем волноваться.</P></BODY></HTML>",
+		"<HTML><BODY><P>Мои разведчики доложили, что Отрекшиеся разбили лагерь на северных склонах холмов, прямо под боком у Альянса, затеявшего строительство массивной крепости с другой стороны.</P><BR/><P>Адмирал говорит, что нам не стоит связываться с нежитью. На западе от них расположились войска Орды, которые непременно придут им на помощь в случае нашего нападения. Мне это не нравится, но я не могу не согласиться с адмиралом.</P></BODY></HTML>",
+		"<HTML><BODY><P>Первая фаза строительства завершена. Адмирал Вествинд приказал моим людям основать на севере несколько укреплений. Зачем это надо – он не объяснил, сославшись на \"повеление свыше\".</P><BR/><P>Сегодня днем поймали четырех шпионов Отрекшихся из Ядозлоби. Надо бы приказать Лекрафту вытянуть из них информацию под пытками. Если мы поймали четверых – то сколько еще могли проскользнуть мимо нас?</P><BR/><P>Почему у меня такое чувство, будто все катится под откос?</P></BODY></HTML>",
+	},
+},
+["Сведения Тукмара"] = {
+	["english"] = "Thukmar's Intel",
+	["pages"] = {
+		"Это невероятно!\n\nМне удалось откопать артефакт неизвестного происхождения. Стоило мне к нему прикоснуться, как в моем сознании возникли изображения всех магнаронов, гроннов и им подобных, которые живут в Горгронде.\n\nБолее того, меня охватило чувство, что все эти существа являются продолжением меня. Я мог общаться с ними, манипулировать ими и даже управлять их мыслями.\n\nЯ возвращаюсь в литейную, чтобы лично доложить обо всем Черноруку. Это открытие поможет нам быстрее очистить от врагов Дренор – а затем и многие другие миры!",
+	},
+},
+["Приказы Тулгорку"] = {
+	["english"] = "Thulgork's Orders",
+	["pages"] = {
+		"Крепость в жалком состоянии. Броню Сквернолома будет сложно перековывать в таком бардаке. Нам нужен простор на случай ошибки в заклинании и защищенные помещения для хранения материалов. Действуй, да поживее!\n\nРеглаак",
+	},
+},
+["Порванная записка"] = {
+	["english"] = "Torn Note",
+	["pages"] = {
+		"Я скучаю по своему племени и по дому. Как я тоскую по вольному ветру над равниной, по закатам над Громовым Утесом! Но кругом только жаркие джунгли...\n\nЯ вижу поблизости океан, но эти волны не охлаждают ни мое тело, ни мою тоску. Они только напоминают мне о заточении.",
+	},
+},
+["Изорванный зандаларский дневник"] = {
+	["english"] = "Torn Zandalari Journal",
+	["pages"] = {
+		"Беру обратно все слова, что я говорил об этом месте. Когда Зул пристал к северным берегам материка, я решил, что вот она – земля обетованная, спасение племени зандаларов. Рыбацкие деревушки было так легко завоевать. Никто не пытался дать отпор до тех пор, пока не пришли другие, темные – \"Шадо-Пан\". Они не дрались один на один. Они нападали на нас из-за деревьев. Клянусь, иногда мне казалось, что они проходили сквозь стены. Они всегда позади, всегда где-то неподалеку – ни разу не выходили на честный бой.\n\nКак только мы заполучили труп старого короля могу, мы оттуда ушли. Могу, могу, могу. Понимаю, почему Зул хотел заполучить их в союзники: я увидел все величие их древней империи, когда мы пробивались через Долину Императоров.",
+		"Но то было давно. Теперь я корчусь в болоте, откапывая статуи под дождем. Могу смотрят на нас как на низших существ. Это заметно – особенно по тем, у кого есть глаза. Некоторые могу – просто камни, с каменным сердцем и булыжником вместо мозгов.\n\nОни нас используют. Но Зул говорит, что когда они снова войдут в силу, то сдержат свое слово. А Зул... он просто ЗНАЕТ.",
+	},
+},
+["Переписка предателя"] = {
+	["english"] = "Traitor's Communication",
+	["pages"] = {
+		"Мой слуга,\n \nВсе эти годы подготовки пошли насмарку. Дренеи вместе со своим проклятым вождем снова ушли от Повелителя! Еще и захватив с собой МОЙ корабль, который они разбили в Азероте! \n\nШпионка Повелителя – одна из эредаров – потерпела неудачу, но ей удалось передать нам местоположение Экзодара. К счастью, дренеи пока не знают, кто она такая. Так что она еще может нам пригодиться.",
+		"Свяжись с нашим шпионом и приготовься к полномасштабному нападению на дренеев. Уничтожь их и верни мой корабль. Только ты можешь отомстить этим негодяям за ущерб, нанесенный Экзодару.\n\nНе подведи меня, гном. Если позволишь своей страсти к сокровищам взять верх над тобой, будешь жалеть об этом всю оставшуюся жизнь. Но если ты подведешь меня, она все равно будет недолгой, и ты будешь молить меня о смерти.\n\n-Король Солнечный Скиталец",
+	},
+},
+["Неприятности из ниоткуда"] = {
+	["english"] = "Troubles From Without",
+	["pages"] = {
+		"Братья и сестры,\n\nМы должны пристально следить за берегами. Туманы рассеялись. Мы, члены ордена Шадо-Пан, – последняя оборонительная линия.\n\nКак вы знаете, первыми пришли Орда и Альянс. Хотя они и не вели себя враждебно, мы все равно продолжаем относиться к ним с осторожностью.\n\nПришедшие вслед за ними появились не с воздуха, а из глубин моря. Береговые макруры ведут себя очень беспокойно, и это значит, что нам следует ожидать скорой атаки. Я перечислю наши основные цели.",
+		"Аккалу\nИзвестно, что она нападает на рыбаков деревни Шри-Ла в голодные времена. В некоторых отчетах ей не придают большой важности, но есть и такие, кто считает Аккалу очень опасным существом. В последний раз ее видели на скалах в юго-западной части Наветренного острова, в Нефритовом лесу.\n\nАккалар\nАккалар известен своим толстым панцирем. Он так безбоязненно нападает на цзинь-юй Нефритового леса, что это может свидетельствовать либо о его излишней самонадеянности, либо о невероятной силе, а может быть, о том и о другом одновременно. В последний раз его видели в южной части Нефритового леса, к югу от Деревни Жемчужного Плавника.",
+		"Дамлак\nВсе ученые сходятся в предположении, что у макрур есть некоторые магические способности. Те, кому приходилось встречаться с Дамлаком, знают, что это правда. Это мрачное существо бродит по островам и морскому дну между Колыбелью Чи-Цзи и лагуной Найели, что в Красарангских джунглях.\n\nКишак\nЗлобное существо, обитающее в ледяных северных водах. В последний раз его видела на скалистых берегах Вершины Кунь-Лай, к западу от деревни Цзоучин.",
+		"Створщик\nСтрашный зверь, пришедший из-за стены. Известен своей невероятной силой. Даже богомолы стараются держаться от него подальше. В последний раз его видели на северо-западном берегу Зан'весса.\n\nОдд'нирок\nНападая, Одд'нирок не пользуется своими клешнями, как это делают другие макруры. Вместо этого он использует свою грубую шаманскую силу и сражается с помощью мощи самой водной стихии. В последний раз его видели на берегу к югу от скал Сик'весса, что в Танлунских степях.",
+		"Клешнелорд Крил'мандар\nЕсли уж мы говорим о макрурах, то я должен упомянуть Крил'мандара по прозвищу Клешнелорд или Ужас Южных Приливов.\n\nКрил'мандар не показывался уже много лет. Наши дозорные, наблюдающие за южной частью стены, обыскали его остров, расположенный к западу от Колыбели Чи-Цзи, и не нашли никаких следов его присутствия.\n\nБудьте бдительны.\n\n-Повелитель ястребов Нужун",
+	},
+},
+["Подставь другую щеку"] = {
+	["english"] = "Turning the Other Cheek",
+	["pages"] = {
+		"Сегодня я хочу поднять очень нелегкую тему об отпущении грехов. В наши тяжелые времена оно становится необходимым актом очищения. Церковь признает несовершенство и слабость человеческой души, способной потворствовать минутным порывам – таким как вспышки гнева, неосторожно сказанные слова и даже рукоприкладство. \n\nОднако Церковь не одобряет подобные деяния, и все эти грехи должны быть искуплены. За грех сквернословия очистите душу пожертвованием горсти серебряных монет. За грех рукоприкладства пусть расплатится рука, подавшая горсть золотых монет. За прочие же грехи полагается исповедь и более щедрое пожертвование.",
+		"Искупление рукоприкладства: \n Удар по лицу: 2 золотых монеты\n Удар в пах: 3 золотых монеты\n Удар в грудь: 1 золотая монета и 45 серебряных\n \n&lt;Подробный список грехов и искуплений занимает несколько листов&gt;",
+	},
+},
+["Сумеречная корреспонденция"] = {
+	["english"] = "Twilight Correspondence",
+	["pages"] = {
+		"Верные слуги повелителей элементалей, НАШЕ ВРЕМЯ ПРИШЛО.\n\nСлишком долго таились мы в тенях, выжидали, прислуживали нашим хозяевам, дожидаясь неизбежного. Теперь, когда в ночи запылало жертвенное пламя Рагнароса, мы в силах начать войну и низвергнуть мир в пучину хаоса!\n\nПовелитель Огня заточен в нашем мире, он лишен своей подлинной силы, но все равно могуч. Если сыщется ему достойный противник, то начнется великая война элементалей, которая приведет к долгожданному концу света.",
+		"Нептулону служит великий Повелитель Холода по имени Ахун. Он собирается с силами, чтобы начать войну против Рагнароса. Ему осталось лишь найти врата в наш мир; мы с радостью ему поможем. У нас есть союзники. Мы выбрали поле боя. У нас в достатке могущества и силы воли.\n\nМы проведем последние переговоры с нашими новыми союзниками и гостями в тихом, укромном местечке, в Ясеневом лесу.\n\nНе успеют жалкие смертные напраздноваться вдоволь, как Ахун сразится с Рагнаросом в самом сердце Черной горы. Когда сойдутся эти силы, весь мир содрогнется.",
+		"Мы долго ждали этого момента. Наши повелители выступят друг против друга, и эта славная битва раздерет Азерот на части.\n\nМы дождались конца времен, братья. Не опускайте оружия. Боритесь до конца. Победа будет за нами!",
+	},
+},
+["Трактат Ура по темной магии"] = {
+	["english"] = "Ur's Treatise on Shadow Magic",
+	["pages"] = {
+		"Спиральные символы и пиктограммы, которыми испещрены страницы этого пособия, настолько запутанны, что их невозможно разобрать.",
+	},
+},
+["Докладная записка Алого ордена"] = {
+	["english"] = "Urgent Scarlet Memorandum",
+	["pages"] = {
+		"Срочное сообщение для всех офицеров и солдат Алого ордена!\nАгент Плети по имени Лилиан Восс сбежала из тюрьмы в Палисаде Алого ордена. Очень опасна, при обнаружении – уничтожить. Преступница убила 15 наших солдат. Она не оставляет в живых никого.\n\nНЕ ПЫТАЙТЕСЬ ее арестовать. Это скорее всего приведет к вашей гибели. Она – враг ордена и должна быть уничтожена как можно скорее.\n\nТот, кто принесет ее голову верховному жрецу, получит в награду 1000 золотых монет. Со всеми вопросами обращайтесь к своим командирам.\n\n\n- БВ",
+	},
+},
+["Приказы военного вождя"] = {
+	["english"] = "Warchief's Orders",
+	["pages"] = {
+		"Командир!\n\nВозвращайтесь в Оргриммар. Ваши войска несостоятельны. Следует пересмотреть наше положение на основании поступившей новой информации.\n\nКрупные силы Приверженцев Тени и огров. Демоны охраняют Темный портал.\n\n-Тралл, Вождь Орды",
+	},
+},
+["Вымокшее письмо"] = {
+	["english"] = "Water Soaked Letter",
+	["pages"] = {
+		"Долгие годы я был заключен в этой магической тюрьме. Сегодня я вырвусь на свободу. Теперь у меня есть все, что нужно для побега.\n\n&lt;В этой части письма чернила расплылись под воздействием воды&gt;\n\nПочему меня заключили здесь? Чем я заслужил такое наказание? День за днем я задавал себе эти вопросы. Что можно было натворить, чтобы заслужить такую кару?\n\n&lt;В этой части письма чернила расплылись под воздействием воды&gt;\n\nВозможно, я найду ответы в следующей жизни.",
+	},
+},
+["Промокший дневник"] = {
+	["english"] = "Waterlogged Journal",
+	["pages"] = {
+		"1-й день. Началась очередная сезонная миграция Громоборцев. Если они повернут в сторону наших земель, гонцы передадут этот дневник вождю.\n3-й день. В каньоне наш отряд разведки попал в засаду огров Боевого Молота. Дет'рак и Келорр погибли, Петтре осталось недолго. Остальных погрузили в трюм огромного корабля, набитого рабами из всех известных и неизвестных мне племен. Пока удается прятать дневник от огров.\n8-й день. Петтра продержался дольше, чем мы предполагали. Огры вытащили его труп из трюма и скормили своим жутким вепрям. Среди остальных рабов распространяется болезнь. Необходимо действовать – иначе наш дух будет сломлен еще до того, как мы достигнем места назначения.",
+		"11-й день. Огров больше, чем нас, но мне удалось убедить еще с дюжину орков помочь нам сегодня ночью с побегом. Телмек нашел цепь – он собирается тихо задушить ею охранника. Затем мы постараемся выбраться на палубу.\n12-й день. Побег не удался. Огры слишком сильны и многочисленны. Нескольких рабов они убили, а остальным раздробили коленные чашечки. Больше мне воевать не придется. Если повезет, то когда-нибудь я снова смогу ходить.\n19-й день. На горизонте показалась земля. Я должен избавиться от дневника, иначе его непременно найдут при обыске. Если он когда-нибудь попадет на родину... Паллеа, я люблю тебя.",
+	},
+},
+["Промокший зандаларский дневник"] = {
+	["english"] = "Waterlogged Zandalari Journal",
+	["pages"] = {
+		"Он до сих пор стоит перед моими глазами, я до сих пор помню, что почувствовал, впервые увидев его. Я моргал, чтобы проснуться, и понимал, что не сплю. Великий дворец, словно пьяница, накренился на один бок. Он все так же сиял позолотой. Интересно, остался ли Растахан там? Король своего сгорбившегося трона...\n\nСолнце отражалось в воде, заливавшей площадь перед дворцом. Здесь было бы красиво, если бы не кривая трещина, прорезавшая плиты. Мы думали, что худшее уже случилось. Но Катаклизм только начался.",
+		"К следующему вечеру вода поднялась на метр. Через неделю море подобралось к крышам палаток на рынке. А солнце сияло по-прежнему. Может быть, этим мир хотел сказать нам, как ему было жаль. Жаль забирать наши дома. Жаль отдавать их морю.\n\nМир всегда доделывает свою работу до конца.",
+	},
+},
+["Потрепанный дневник"] = {
+	["english"] = "Weathered Journal",
+	["pages"] = {
+		"В 170-й год правления Властелина Грома чаровязы клана Корун пришли к Лэй Шэню с самым великим своим творением.\n\nЭто был колокол, отлитый из плоти его создателей, выкованный при помощи огня звезд и закаленный дыханием непроглядной тьмы. Звук этого колокола мог сотрясти весь мир и долететь до небес.\n\nВ бою громогласное звучание колокола воодушевляло воинов Лэй Шэня. Оно наполняло их сердца яростью и ненавистью, делая их сильнее на поле битвы. В сердцах же врагов Императора пронзительный звон колокола сеял страх и сомнения, вынуждая их пускаться в бегство.\n\nПребывая в благоговейном трепете перед этим творением, Властелин Грома говорил о нем, как о \"гласе богов\", и назвал его Шэньцин или Божественный Колокол.",
+	},
+},
+["Белая перфокарта"] = {
+	["english"] = "White Punch Card",
+	["pages"] = {
+		"СУПЕРВАЖНАЯ КАРТА ДАННЫХ С ТРОЙНЫМ КОДОМ\n\n01010100 01101000 01110010 01100001 01101100 01101100 00100000 01100001 01101110 01100100 00100000 01001010 01100001 01101001 01101110 01100001 00100000 01110011 01101001 01110100 01110100 01101001 01101110 01100111 00100000 01101001 01101110 00100000 01100001 00100000 01110100 01110010 01100101 01100101 00101100 00100000 01001011 00101101 01001001 00101101 01010011 00101101 01010011 00101101 01001001 00101101 01001110 00101101 01000111",
+	},
+},
+["Поваренная книга экзотической кухни"] = {
+	["english"] = "An Exotic Cookbook",
+	["pages"] = {
+		"1. Добыть один или восемь человек\n2. Бить человек сильно\n3. Бить человек еще\n4. Класть его в огонь\n5. Есть человек",
+	},
+},
+["Страница из дневника"] = {
+	["english"] = "Journal Page",
+	["pages"] = {
+		"Я не устаю удивляться, как легко можно подчинять всех своей воле, играя на их ненависти. С орками и троллями было легче всего, ненависть к Альянсу сделала их прилежными учениками Темной Нити. Понимают ли они хоть отчасти, какой могучей силе служат?\n\nЭтот паладин, который меня бесит, Делгрен Очиститель, сует нос в наши дела в Ясеневом лесу, пока его прислужник, Балтул, шпионит за моей башней, думая, что мне о его присутствии неизвестно. Делгрен считает нас незначительной",
+		"помехой – возможно, лишь еще одним культом смерти. Ему невдомек, что мы – не что иное, как одна из... нитей Совета Теней.\n\nРебенком я слышал историю о насекомом, один укус которого мог с легкостью убить жертву, хотя выглядело оно как обычная мушка, как пятнышко, вряд ли заслуживающее внимания. Именно то, что оставляют без внимания, и наносит нам самый крупный ущерб.",
+	},
+},
+["Инструкция по эксплуатации пилонов"] = {
+	["english"] = "Crystal Pylon User's Manual",
+	["pages"] = {
+		"<HTML><BODY><H1 align=\"center\">ПИЛОНЫ: ИНСТРУКЦИЯ ПО ЭКСПЛУАТАЦИИ</H1><BR/><P align=\"center\"> \"Руководство по сбору и использованию кристаллов силы Кратера Ун'Горо\" </P><BR/><BR/><P align=\"left\">Глава 1: Северный пилон </P><BR/><P align=\"left\">Глава 2: Восточный пилон </P><BR/><P align=\"left\">Глава 3: Западный пилон </P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Глава 1: СЕВЕРНЫЙ ПИЛОН</H1><BR/><BR/><IMG src=\"Interface/Pictures/11482_crystals_mini_north\" align=\"left\" /><P align=\"right\">Северный<BR/>пилон принимает<BR/>желтые, красные<BR/>и зеленые<BR/>кристаллы.</P><BR/><BR/><BR/><BR/><P align=\"left\">Пилон фокусирует энергию, которая возникает при использовании желтых кристаллов в качестве основного источника энергии.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Северная комбинация кристаллов</H1><BR/><P align=\"left\">Есть два возможных эффекта: наносящий урон и нейтрализующий его. </P><BR/><P align=\"left\">КРИСТАЛЬНЫЙ ЗАРЯД: требует желтых и красных кристаллов.<BR/>Провоцирует сильный взрыв.</P><BR/><P align=\"left\"> КРИСТАЛЬНОЕ ВОССТАНОВЛЕНИЕ: требует желтых и зеленых кристаллов. <BR/>Наделяет вас целительной аурой.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ДИАГРАММА СЕВЕРНОГО ПИЛОНА</H1><BR/><IMG src=\"Interface/Pictures/11482_crystals_north\" /></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Глава 2: ВОСТОЧНЫЙ ПИЛОН</H1><BR/><BR/><IMG src=\"Interface/Pictures/11482_crystals_mini_east\" align=\"left\" /><P align=\"right\">Восточный<BR/>пилон принимает<BR/>синие, желтые<BR/>и зеленые<BR/>кристаллы.</P><BR/><BR/><BR/><BR/><P align=\"left\">Пилон фокусирует энергию, которая может быть создана при использовании синих кристаллов в качестве основного источника энергии.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Восточная комбинация кристаллов</H1><BR/><P align=\"left\">Существует два возможных эффекта: один оказывает положительный эффект на дух, второй создает щит, наносящий урон.</P><BR/><P align=\"left\">КРИСТАЛЬНАЯ СИЛА: требуются синие и зеленые кристаллы.<BR/>Повышает вашу характеристику \"дух\".</P><BR/><P align=\"left\">КРИСТАЛЬНЫЙ ШИП: требует синих и желтых кристаллов.<BR/>Создает щит, который будет наносить урон атакующим.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ДИАГРАММА ВОСТОЧНОГО ПИЛОНА</H1><BR/><IMG src=\"Interface/Pictures/11482_crystals_east\" /></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Глава 3: ЗАПАДНЫЙ ПИЛОН</H1><BR/><BR/><IMG src=\"Interface/Pictures/11482_crystals_mini_east\" align=\"left\" /><P align=\"right\">Западный<BR/>пилон принимает<BR/>красные, зеленые<BR/>и синие<BR/>кристаллы.</P><BR/><BR/><BR/><BR/><P align=\"left\">Пилон фокусирует энергию, которая создается при использовании красных кристаллов в качестве основного источника энергии.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">Западные комбинации кристаллов</H1><BR/><P align=\"left\">Существует два возможных эффекта: один повышает вашу защиту от урона, второй ослабляет защиту противника.</P><BR/><P align=\"left\">КРИСТАЛЛ-ХРАНИТЕЛЬ: Требуются красные и зеленые кристаллы.<BR/>Повышает вашу характеристику \"броня\".</P><BR/><P align=\"left\">КРИСТАЛЛ-ГУБИТЕЛЬ: Требуются синие и красные кристаллы.<BR/>Может снизить характеристику \"броня\" выбранной цели.</P></BODY></HTML>",
+		"<HTML><BODY><H1 align=\"center\">ДИАГРАММА ЗАПАДНОГО ПИЛОНА</H1><BR/><IMG src=\"Interface/Pictures/11482_crystals_west\" /></BODY></HTML>",
+	},
+},
+["\"Продвинутая рыбалка\" Ната Пэгла"] = {
+	["english"] = "Nat Pagle's Guide to Extreme Anglin'",
+	["pages"] = {
+		"…и там ты найдешь легендарный меч Командира Алых – Испепелитель.\n\nРазве не замечательно добыть такое на обычной рыбалке?",
+	},
+},
+["Карта Пероборода"] = {
+	["english"] = "Featherbeard's Map",
+	["pages"] = {
+		"Это – план Шадра'Алора и трех здешних церквей; крестиками помечены местонахождения украденных яиц. Вот они: в южной части восточной церкви, возле хижины к северо-востоку от восточной церкви, возле алтаря к востоку от озера в центре и на склоне южной церкви возле надписи \"изгнанник\"\n\nСудя по записям Пероборода, он рассчитывал передать эти сведения Фалстаду Громовому Молоту; он надеялся, что именно его отряд воинов пошлет спасать яйца.",
+	},
+},
+["Записки Доблестной Крови"] = {
+	["english"] = "Bloodvalor's Notes",
+	["pages"] = {
+		"&lt;имя&gt;,\n\nЧтобы создать закаленный кровью протазан, нужно немало очень редких материалов, но в итоге ты получишь оружие непревзойденной силы. Я перечислю необходимые материалы, начиная с тех, которые легче всего найти.\n\nНе забывай, что орден Рыцаря Крови нужно хранить до тех пор, пока ты не соберешь все материалы, необходимые для этого оружия.",
+		"Чтобы подготовить металл к ковке, его нужно закалить в Крови Разгневанных. Кровь большинства демонов содержит достаточное количество энергии, но здесь нужна не обычная кровь.\n\nВолшебники из Оргриммара поделились сведениями о том, что у сектантов Пламенеющего Клинка из Огненной Пропасти есть сфера с кровью, которая нам подойдет. По слухам, эту сферу охраняет орк по имени Жергош Призыватель Духов.\n\nДействуй осторожно, ведь ты имеешь дело с демоническими силами. Невозможно предугадать, что может случиться с таким мощным веществом, как это.",
+		"Ящик со слитками, закаленными в крови... Сталь, конечно, металл неплохой, но без особой закалки ничем не примечательный. Слитки, закаленные в крови, – материал высочайшего качества, способ его изготовления держится в строжайшей тайне. Ходят слухи, что любой кузнец, осмелившийся работать с металлом такой закалки, навлекает на себя страшное проклятье, но наши мастера доказали, что это не так.\n\nНеудивительно, что столь ценный материал очень сложно достать, но от Отрекшихся мы получили сведения о том, что его можно найти в Крепости Темного Клыка. Умелый кузнец по имени Ландэн Стилвелл сумел раздобыть этот металл и теперь хранит его в крепости. Где именно он его спрятал, остается тайной, но наш осведомитель сообщил, что Ланден Стилвелл сейчас заключен в тюрьме, что в подземелье крепости. Раздобудь этот металл любым способом.",
+		"Оскверненный самоцвет Кора – в книгах магистра говорится, что в этих редких драгоценных камнях некоторые из наиболее могущественных волшебников хранили свою магию. В очищенном виде такие камни найти очень легко, но они слишком слабы для твоего оружия.\n\nВ пещерах Непроглядной Пучины волшебники-наги хранят самоцветы Кора со своей могучей темной магией – они-то нам и нужны. Убей этих волшебников и забери их камни.",
+		"Орден, который ты будешь носить, раньше принадлежал храброму и бесстрашному рыцарю крови из семьи Утренней Звезды. Его верная служба – доброе знамение для твоей.\n\nРыцарь крови Утренняя Звезда храбро повел свое войско на атаку крепости Плети Смертхольм, но потерпел поражение. Его тело покоится там, где он умер, – на месте битвы с нашими заклятыми врагами. Найди его, &lt;имя&gt;, и принеси мне его орден.",
+	},
+},
+["Предметы для магистра Асталора Кровавой Клятвы"] = {
+	["english"] = "Items for Magister Astalor Bloodsworn",
+	["pages"] = {
+		"Леди Лиадрин!\n\nУ нас возникли некоторые проблемы с пойманным существом, и в результате пострадало очень ценное оборудование. Мне удалось восстановить контроль над ним, хоть и немалыми усилиями. Составленный мной рапорт об этом инциденте был направлен верховному магистру Роммату, но он до сих пор мне не ответил. Боюсь, что без некоторых материалов, которые были утрачены, я не смогу продолжать свои исследования, а вы понимаете, насколько они важны для ваших рыцарей.\n\nНадеюсь, вы сможете помочь мне получить некоторые из материалов, перечисленных ниже. Любая помощь будет принята с благодарностью.\n\nМагистр Асталор Кровавая Клятва",
+		"* 40 отрезов рунической ткани\n* 6 слитков арканита\n* 10 солнечников\n* 5 темных рун\n* 150 золотых",
+	},
+},
+["Реликвии Терокка"] = {
+	["english"] = "The Relics of Terokk",
+	["pages"] = {
+		"Когда мне последний раз доводилось бывать в Залах, король воронов Айкисс носил перо Терокка как знак своей власти. Наверное, это перо до сих пор у него, ведь для его последователей это доказательство того, что он перерожденный Терокк.\n\nМаска Терокка была на лице моего брата Темнопряда Сита, когда он проводил сетеккские ритуалы.\n\nЧто касается \"Сказания о Терокке\", оно хранится в огромном чертоге рядом с обиталищем короля Айкисса, окруженное кольцом рун.",
+	},
+},
+["Записки Маккарти"] = {
+	["english"] = "McCarty's Notes",
+	["pages"] = {
+		"&lt;Эти закорючки совершенно неразборчивы, но вам все же удается понять что-то про розовый цвет... &gt;",
+	},
+},
+["Новости с севера"] = {
+	["english"] = "News From The North",
+	["pages"] = {
+		"Верховный адмирал Аббендис,\nНовый Авалон, Алые земли\n\nУважаемая главнокомандующая Аббендис!\n\nЗаранее прошу прощения, если данное письмо покажется вам неуместным. Меня зовут Дансел Адамс, я охотник по профессии и крестоносец Алого ордена по призванию. Я хочу поведать вам, что мне было ниспослано чудо.",
+		"Когда мы с моей командой очищали Чумной лес от оскверняющих его язычников Плети, с небес внезапно раздался оглушающий крик. Когда же мы посмотрели вверх, на Наксрамас, наши челюсти отвисли до самой земли! Уверяю вас, верховный генерал, такое зрелище способно повергнуть в шок кого угодно! Эта жуткая цитадель двигалась! Сначала медленно, потом все быстрее и быстрее, и наконец, ваше генеральство, Наксрамаса больше нет! Нет! Возможно ли объяснить это как-то иначе, нежели божественным промыслом Света? Я не могу поверить ни во что другое!",
+		"Могло ли так случиться, что эти нечистые, мерзкие варвары были осуждены и приговорены самим Светом? Воистину, хвала его великой справедливости! \n\nПожалуйста, генерал, поведайте об этом чуде нашим братьями и сестрам.\n\nПусть хранит вас Свет, дабы вы смогли нести весть о его могуществе до скончания дней.\n\nС уважением,\n\nД. Адамс\n\"Закрывающий\"",
+	},
+},
+["Расшифрованное сообщение 001-003"] = {
+	["english"] = "Decoded Message 001-003",
+	["pages"] = {
+		"В пещерах Магнитной Пропасти на отряд \"Миротворец 011\" напал неизвестный противник. Действуйте по протоколу 54.",
+	},
+},
+["Расшифрованное сообщение 001-014"] = {
+	["english"] = "Decoded Message 001-014",
+	["pages"] = {
+		"121 727 роботов собраны и отправлены нейтрализовать неизвестного врага, находящегося в Магнитной Пропасти под Этерниевым Морем. Необходимо увеличить напряжение в контурах щедрости \"Блескотронов\", чтобы минимизировать спонтанное самоосознание.",
+	},
+},
+["Расшифрованное сообщение 001-107"] = {
+	["english"] = "Decoded Message 001-107",
+	["pages"] = {
+		"Общий уровень потерь союзников повысился до 64%. Нужны припасы.",
+	},
+},
+["Расшифрованное сообщение 001-111"] = {
+	["english"] = "Decoded Message 001-111",
+	["pages"] = {
+		"Получена большая партия Тревого-ботов. Они разобраны и переделаны в осколочные гранаты.",
+	},
+},
+["Расшифрованное сообщение 001-119"] = {
+	["english"] = "Decoded Message 001-119",
+	["pages"] = {
+		"Вирус, заразивший наших роботов, идентифицирован: он нарушает работу системы сборки часового механизма. Поначалу вирус кажется полезной подпрограммой, поэтому робот с готовностью загружает его, и тот начинает разрушать ИИ робота, перегружая контуры щедрости. Пока у нас нет способа, позволяющего нейтрализовать эффект вируса, не уничтожая самого робота. Действуй решительно.\n\nТвой лидер (0x0001)",
+	},
+},
+["Расшифрованное сообщение 001-150"] = {
+	["english"] = "Decoded Message 001-150",
+	["pages"] = {
+		"Один разоруженный бот сопровождения был оснащен \"Стелс-меном-54\", что позволило ему изменить облик и обмануть системы безопасности противника. Он идентифицировал вражеского командира с вероятностью 73,4%. Объект отличается огромным ростом и называет себя iR-T0. Другой информации добыть не удалось.",
+	},
+},
+["Расшифрованное сообщение 001-159"] = {
+	["english"] = "Decoded Message 001-159",
+	["pages"] = {
+		"Осознание военной угрозы и органическая реакция на нее распространяются среди роботов слишком быстро. Наземные боевые единицы, скорее всего, заражены. Необходимо разработать планы создания нового пульта управления \"Блескотронами\", чтобы удаленно вызывать роботов-ветеранов, которые могут вести разведку и уничтожать цели.",
+	},
+},
+["Расшифрованное сообщение 001-168"] = {
+	["english"] = "Decoded Message 001-168",
+	["pages"] = {
+		"Запасы подарков упали до неприемлемого уровня. Разрешен доступ к военному резерву.",
+	},
 },
 
 };

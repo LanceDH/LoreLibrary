@@ -47,6 +47,7 @@ local _loreList = {};
 local _playerName = GetUnitName("player", false);
 local _playerClass = UnitClass("player");
 local _playerSex = UnitSex("player");
+local _playerRace = UnitRace("player");
 	
 local _achievementsToCheck = {
 		1244 -- Well Read
@@ -69,7 +70,7 @@ local OPTION_SHOW_PINS = "Show pins";
 local OPTION_SHOW_COLLECTED = "Show collected";
 local SIZE_LISTBOOKHEIGHT = 40;
 local MAX_SOURCES = 9;
-local SOURCE_TITLE = "<HTML><BODY><BR/><P align=\"center\">This lore can be found in:</P><BR/></BODY></HTML>";
+local SOURCE_TITLE = "This lore can be found in:";
 local SOURCETYPE_OBJECT = "Object found in this area.";
 local SOURCETYPE_NPC = "Can drop from this npc.";
 local SOURCETYPE_CONTAINER = "Can be found in this container.";
@@ -266,21 +267,43 @@ end
 
 function _addon:FilterPageText(text)
 
-	-- < and >
-	text = text:gsub("&lt;", "<");
-	text = text:gsub("&gt;", ">");
-	
+	local group = text:match("&lt;.-&gt;");
+	while group ~= nil do
+		local m, f = group:match("&lt;(.+)/(.+)&gt");
+		if m then
+			-- because some have : like le/la:r for god knows what reason
+			m = m:sub(0, ((m:find(":")) and (m:find(":"))-1 or #m ));
+			f = f:sub(0, ((f:find(":")) and (f:find(":"))-1 or #f ));
+			text = text:gsub("&lt;.-&gt;", (_playerSex == 3 and f or m), 1);
+		else 
+			-- Nothing to do with sex, replace < > so we can search for the next one
+			text = text:gsub("&lt;", "<", 1);
+			text = text:gsub("&gt;", ">", 1);
+		end
+		group = text:match("&lt;.-&gt;");
+	end
 	-- player name
-	text = text:gsub("<name>", _playerName);
+	text = text:gsub("<name>", _playerName); -- ENG/BR
+	text = text:gsub("<Name>", _playerName); -- DE
+	text = text:gsub("<nom>", _playerName); -- FR
+	text = text:gsub("<имя>", _playerName); -- RU
+	text = text:gsub("<nombre>", _playerName); -- ES
+	
 	text = text:gsub("$p", _playerName);
 	
 	-- player class
-	text = text:gsub("<class>", _playerClass);
+	text = text:gsub("<class>", _playerClass); -- ENG/BR
+	text = text:gsub("<Klasse>", _playerClass); -- DE
+	text = text:gsub("<classe>", _playerClass); -- FR
+	text = text:gsub("<класс>", _playerClass); -- RU
+	text = text:gsub("<clase>", _playerClass); -- ES
 	
-	-- sex
-	text = text:gsub("<his/her>", (_playerSex == 3 and "her" or "his"));
-	text = text:gsub("<him/her>", (_playerSex == 3 and "her" or "him"));
-	text = text:gsub("<Brother/Sister>", (_playerSex == 3 and "Sister" or "Brother"));
+	-- player race
+	text = text:gsub("<race>", _playerRace); -- ENG/FR/BR
+	text = text:gsub("<Volk>", _playerRace); -- DE
+	text = text:gsub("<раса>", _playerRace); -- RU
+	text = text:gsub("<raza>", _playerRace); -- ES
+	
 	
 	text = text .. "\n\n";
 	
@@ -471,7 +494,7 @@ function _addon:UpdateBookDisplay(lore)
 		display.lore = lore;
 		display.pageText:SetText(self:FilterPageText(lore.pages[1]));
 	else
-		display.pageText:SetText(SOURCE_TITLE);
+		display.pageText:SetText("<HTML><BODY><BR/><P align=\"center\">" .. SOURCE_TITLE .. "</P><BR/></BODY></HTML>");
 		for k, location in ipairs(lore.locations) do
 			display.sources:Show();
 			local source = display.sources["s"..k];
@@ -833,6 +856,7 @@ function LoreLibrary:OnEnable()
 		_addon:CheckAchievementProgress(id);
 	end
 	_addon:ProcessQuests();
+	
 end
 
 ----------
@@ -857,6 +881,9 @@ function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)
 	_addon:UnlockNewLore(ItemTextGetItem())
 end
 
+local transCount = 0;
+local pageCount = 0;
+
 function _addon:LoadTranslation()
 	_translations = _addon.translations[_localization];
 	if not _translations then 
@@ -865,7 +892,16 @@ function _addon:LoadTranslation()
 	end
 	for localized, data in pairs(_translations) do
 		if _data[data.english] then
+			transCount = transCount + 1;
 			_data[data.english].localized = localized;
+			-- overwrite english pages with translations
+			if (data.pages) then
+				pageCount = pageCount + 1;
+				_data[data.english].pages = {};
+				for k, page in ipairs(data.pages) do
+					table.insert(_data[data.english].pages, page);
+				end
+			end
 		end
 	end
 end
@@ -886,7 +922,7 @@ function _addon:ShowLocalizationMessage()
 		elseif _localization == "esES" or _localization == "esMX" then
 			users = "Spanish";
 		elseif _localization == "itIT" then
-			users = "Itallian";
+			users = "Italian";
 		elseif _localization == "ptBR" then
 			users = "Portuguese";
 		elseif _localization == "ruRU" then
@@ -926,7 +962,7 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	for k, v in pairs(LoreLibrary.db.global.favorites) do
 		_addon:SetFavorite(k, true);
 	end
-
+	_addon.translations = nil;
 	SortLore();
 	_addon:InitCoreFrame();
 	_addon:InitMap();
@@ -945,6 +981,12 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
+	for k, v in pairs(_data) do
+		v.unlocked = true;
+	end
+	
+	print(transCount, pageCount);
+	
 	if LoreLibraryCore:IsShown() then
 		HideUIPanel(LoreLibraryCore);
 	else
