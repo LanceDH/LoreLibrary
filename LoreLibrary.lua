@@ -107,8 +107,8 @@ local function SortLoreUnlockFirst(list)
 	table.sort(list, function(a, b) 
 		if (a.favorite and b.favorite) or (not a.favorite and not b.favorite) then
 			if (a.unlocked and b.unlocked) or (not a.unlocked and not b.unlocked) then
-				if (a.localized and b.localized) then
-					return a.localized < b.localized;
+				if (a.translation and b.translation) then
+					return a.translation < b.translation;
 				else
 					return a.title < b.title;
 				end
@@ -304,9 +304,6 @@ function _addon:FilterPageText(text)
 	text = text:gsub("<раса>", _playerRace); -- RU
 	text = text:gsub("<raza>", _playerRace); -- ES
 	
-	
-	text = text .. "\n\n";
-	
 	return text;
 end
 
@@ -330,17 +327,24 @@ function _addon:ChangeDisplayPage(direction)
 end
 
 function _addon:GetEnglishTitle(title)
-	if _translations and _translations[title] then
-		return _translations[title].english;
+	local c = 0;
+	-- Good lord I wish we could use Ids
+	for english, data in pairs(_data) do
+		c = c + 1;
+		if data.translation == title then
+			return english
+		end
 	end
+	
+	print(c, title);
 		
 	return title;
 end
 
 function _addon:UnlockNewLore(title, silent)
-	local origional = nil;
+	--local origional = nil;
 	if not (_localization == "enGB" or _localization == "enUS") then
-		origional = title;
+		--origional = title;
 		title = self:GetEnglishTitle(title);
 	end
 
@@ -351,7 +355,8 @@ function _addon:UnlockNewLore(title, silent)
 	_unlockedLoreTitles[title] = true;
 	SortLore();
 	if not silent then
-		print(FORMAT_LORE_UNLOCK:format((origional or title)));
+		--print(FORMAT_LORE_UNLOCK:format((origional or title)));
+		print(FORMAT_LORE_UNLOCK:format(title));
 		self:UpdateBookList()
 	end
 end
@@ -386,6 +391,7 @@ function _addon:GetFilteredList(unlockedFirst)
 	local list = {};
 	local search = LoreLibraryCore.searchString;
 	
+	
 	-- Base list depending on collected or not
 	if (_filter.collected and _filter.notCollected) then
 		-- just copy paste when showing everything
@@ -408,7 +414,7 @@ function _addon:GetFilteredList(unlockedFirst)
 	if (search ~= nil and search ~= "") then
 		local searchList = {}
 		for k, lore in ipairs(list) do
-			if (string.find(string.lower(lore.localized or lore.title), search:lower())) then
+			if (string.find(string.lower(lore.translation or lore.title), search:lower(), 1, true)) then
 				table.insert(searchList, lore);
 			end
 		end
@@ -488,9 +494,10 @@ function _addon:UpdateBookDisplay(lore)
 	end	
 	display.sources:Hide();
 	
-	display.title:SetText(lore.localized or lore.title);
-	
+	display.title:SetText(lore.translation or lore.title);
+	display.id = lore.info.id;
 	if (lore.unlocked) then
+		
 		display.lore = lore;
 		display.pageText:SetText(self:FilterPageText(lore.pages[1]));
 	else
@@ -534,7 +541,8 @@ end
 
 function _addon:UpdateBookList()
 	self:HideFavoriteMenu();
-
+	
+	local display = LoreLibraryListInsetRight;
 	local scrollFrame = LoreLibraryListScrollFrame;
 	local offset = HybridScrollFrame_GetOffset(scrollFrame);
 	local buttons = scrollFrame.buttons;
@@ -551,8 +559,10 @@ function _addon:UpdateBookList()
 			local lore = list[displayIndex];
 			button.lore = lore;
 			button.title:SetFontObject((lore.unlocked) and "GameFontNormal" or "GameFontDisable");
-			button.title:SetText((lore.localized and lore.localized or lore.title));
-			if (button.title:GetText()== LoreLibraryListInsetRight.title:GetText()) then
+			button.title:SetText((lore.translation and lore.translation or lore.title));
+			button.id = lore.info.id;
+			--if (button.title:GetText() == LoreLibraryListInsetRight.title:GetText()) then
+			if (button.id == display.id) then
 				button.selectedTexture:Show();
 			else
 				button.selectedTexture:Hide();
@@ -561,6 +571,7 @@ function _addon:UpdateBookList()
 				button.favorite:Show();
 			end
 		else
+			button.id = -1;
 			button.lore = nil;
 			button.title:SetText("");
 			button.selectedTexture:Hide();
@@ -881,25 +892,22 @@ function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)
 	_addon:UnlockNewLore(ItemTextGetItem())
 end
 
-local transCount = 0;
-local pageCount = 0;
-
 function _addon:LoadTranslation()
 	_translations = _addon.translations[_localization];
 	if not _translations then 
 		print(FORMAT_LOC_NOSUPPORT:format(_localization));
 		return;
 	end
-	for localized, data in pairs(_translations) do
-		if _data[data.english] then
-			transCount = transCount + 1;
-			_data[data.english].localized = localized;
+	local currTrans = nil;
+	for title, data in pairs(_data) do
+		currTrans = _translations[title];
+		if currTrans then
+			data.translation = currTrans.translation;
 			-- overwrite english pages with translations
-			if (data.pages) then
-				pageCount = pageCount + 1;
-				_data[data.english].pages = {};
-				for k, page in ipairs(data.pages) do
-					table.insert(_data[data.english].pages, page);
+			if (currTrans.pages) then
+				data.pages = {};
+				for k, page in ipairs(currTrans.pages) do
+					table.insert(data.pages, page);
 				end
 			end
 		end
@@ -911,7 +919,7 @@ function _addon:ShowLocalizationMessage()
 	local FORMAT_LOC_GREETING = "Greetings %s users.";
 	local displayText = "<HTML><BODY>";
 	local users = "non-English";
-	local message = "Basic language support for your language has been added!<BR/>This means all titles are now in your language, allowing you to collect lore.<BR/>However, currently all lore text is still in English.<BR/>I hope to fully support all languages ,but as you can understand, this will take some time.<BR/><BR/>Until then, happy lore hunting!";
+	local message = "Lore localization has been added!<BR/>Using Wowhead data, all lore text has been translated to your client language.<BR/>Please note that Wowhead is missing some translations, meaning some things will show in english with [square brackets] around them.";
 	local issues = nil;
 	if _translations ~= nil then
 		if _localization == "deDE" then
@@ -923,8 +931,10 @@ function _addon:ShowLocalizationMessage()
 			users = "Spanish";
 		elseif _localization == "itIT" then
 			users = "Italian";
+			issues = "<P>Some of the titles have no Italian translation yet on Wowhead and therefore can't be collected for now.</P>";
 		elseif _localization == "ptBR" then
 			users = "Portuguese";
+			issues = "<P>Some of the titles have no Portuguese translation yet on Wowhead and therefore can't be collected for now.</P>";
 		elseif _localization == "ruRU" then
 			users = "Russian";
 			issues = "<P>I am unable to connect using the Russian client so sadly I can't test if your language works correctly.</P>";
@@ -981,12 +991,6 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	for k, v in pairs(_data) do
-		v.unlocked = true;
-	end
-	
-	print(transCount, pageCount);
-	
 	if LoreLibraryCore:IsShown() then
 		HideUIPanel(LoreLibraryCore);
 	else
