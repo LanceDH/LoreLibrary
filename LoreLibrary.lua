@@ -342,9 +342,9 @@ function _addon:GetEnglishTitle(title)
 end
 
 function _addon:UnlockNewLore(title, silent)
-	--local origional = nil;
+	local origional = nil;
 	if not (_localization == "enGB" or _localization == "enUS") then
-		--origional = title;
+		origional = title;
 		title = self:GetEnglishTitle(title);
 	end
 
@@ -352,11 +352,12 @@ function _addon:UnlockNewLore(title, silent)
 	if not title or not _data[title] or _data[title].unlocked then return; end
 
 	_data[title].unlocked = true;
-	_unlockedLoreTitles[title] = true;
+	table.insert(_unlockedLoreTitles, title);
+	--_unlockedLoreTitles[title] = true;
 	SortLore();
 	if not silent then
-		--print(FORMAT_LORE_UNLOCK:format((origional or title)));
-		print(FORMAT_LORE_UNLOCK:format(title));
+		print(FORMAT_LORE_UNLOCK:format((origional or title)));
+		--print(FORMAT_LORE_UNLOCK:format(title));
 		self:UpdateBookList()
 	end
 end
@@ -966,8 +967,14 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 		v.unlocked = false;
 		table.insert(_loreList, v);
 	end
-	for k, v in pairs(LoreLibrary.db.global.unlockedLore) do
-		_addon:UnlockNewLore(k, true);
+	if (#LoreLibrary.db.global.unlockedLore > 0) then
+		for k, v in ipairs(LoreLibrary.db.global.unlockedLore) do
+			_addon:UnlockNewLore(v, true);
+		end
+	else
+		for k, v in pairs(LoreLibrary.db.global.unlockedLore) do
+			_addon:UnlockNewLore(k, true);
+		end
 	end
 	for k, v in pairs(LoreLibrary.db.global.favorites) do
 		_addon:SetFavorite(k, true);
