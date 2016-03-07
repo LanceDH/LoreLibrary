@@ -13,7 +13,8 @@ local _defaults = {
 		favorites = {},
 		options = {
 			version = "";
-		}
+		},
+		suggestions = {["timeLast"] = 0}
 	}
 }
 
@@ -40,6 +41,7 @@ local _option = {
 local _localization = GetLocale();
 local _data = {}
 local _translations = {};
+local _suggestions = {["timeLast"] = 0};
 local _completedQuests = nil;
 local _unlockedLoreTitles = {};
 local _favoriteLore = {};
@@ -48,6 +50,7 @@ local _playerName = GetUnitName("player", false);
 local _playerClass = UnitClass("player");
 local _playerSex = UnitSex("player");
 local _playerRace = UnitRace("player");
+local _playerFaction = UnitFactionGroup("player");
 	
 local _achievementsToCheck = {
 		1244 -- Well Read
@@ -62,7 +65,11 @@ local _achievementsToCheck = {
 		,7230 -- Legend of the Brewfathers
 	}
 	
-local FORMAT_LORE_UNLOCK = "LoreLibrary added: %s";
+local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
+local STRING_SUGGESTION_COMPLETE = "You completed a daily Lore Library suggestion.";
+local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new one.";
+local FORMAT_SUGGESTION_REMOVECOOLDOWN = "You can remove this suggestion in\n %s.";
+local FORMAT_SUGGESTION_UNTILNEW = "New suggestions in %s."
 local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
 local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
@@ -70,6 +77,7 @@ local OPTION_SHOW_PINS = "Show pins";
 local OPTION_SHOW_COLLECTED = "Show collected";
 local SIZE_LISTBOOKHEIGHT = 40;
 local MAX_SOURCES = 9;
+local MAX_SUGGESTIONS = 3;
 local SOURCE_TITLE = "This lore can be found in:";
 local SOURCETYPE_OBJECT = "Object found in this area.";
 local SOURCETYPE_NPC = "Can drop from this npc.";
@@ -94,6 +102,31 @@ local _sourceData = {
 ----------
 -- Code
 ----------
+	
+function _addon:GetSuggestionTimeUntilDays(timestamp, days) 
+	days = (not days and 0 or days);
+	local text = "";
+	local stampTable = date("*t", timestamp);
+	--print(date("%c", timestamp))
+	local unlock = time{year = stampTable.year, month = stampTable.month, day = stampTable.day + days, hour = 0};
+	--print(date("%c", unlock))
+	local sec = unlock - time();
+	--print(date("%c", sec))
+	local t = date("!*t", sec);
+	-- time has passed, no need to create text
+	if (sec < 0) then return sec, text; end
+	
+	if t.day > 1 then
+		text = t.day .. " days";
+	elseif t.hour > 1 then
+		text = t.hour+1 .. "hours";
+	else
+		text = t.min+1 .. (t.min+1 > 1 and " minutes" or " minute");
+	end
+	
+	return sec, text
+end
+
 	
 local function SortLore(list) 
 	if list == nil then list = _loreList; end
@@ -353,10 +386,25 @@ function _addon:UnlockNewLore(title, silent)
 
 	_data[title].unlocked = true;
 	table.insert(_unlockedLoreTitles, title);
-	--_unlockedLoreTitles[title] = true;
+	
+	local completedSuggestion = false;
+	-- Check if unlock was a suggestion
+	for k, suggestion in ipairs(_suggestions) do
+		if suggestion.title == title then
+			completedSuggestion = true;
+			table.remove(_suggestions, k);
+			break;
+		end
+	end
+	
+	
 	SortLore();
 	if not silent then
 		print(FORMAT_LORE_UNLOCK:format((origional or title)));
+		if completedSuggestion then
+			print(STRING_SUGGESTION_COMPLETE);
+			self:UpdateSuggestions();
+		end
 		--print(FORMAT_LORE_UNLOCK:format(title));
 		self:UpdateBookList()
 	end
@@ -542,6 +590,7 @@ end
 
 function _addon:UpdateBookList()
 	self:HideFavoriteMenu();
+	LoreLibraryCore.suggestions:Hide();
 	
 	local display = LoreLibraryListInsetRight;
 	local scrollFrame = LoreLibraryListScrollFrame;
@@ -605,7 +654,104 @@ function _addon:ShowFavoriteMenu(anchorTo, lore)
 	ToggleDropDownMenu(1, nil, LoreLibraryList.favoriteMenu, anchorTo, 50, 0);
 end
 
+function _addon:UpdateSuggestions()
+
+	local buttonList = LoreLibraryCore.suggestions.buttons;
+	for k, button in ipairs(buttonList) do
+		button.title:SetText("");
+		button.lore = nil;
+		button.suggestion = nil;
+		button.remove:Hide();
+	end
+	for k, suggestion in ipairs(_suggestions) do
+		if k > MAX_SUGGESTIONS then break; end -- There's more than 3? VAC!
+		local lore = _data[suggestion.title];
+		local button = buttonList[k];
+		button.lore = lore;
+		button.title:SetText((lore.translation or lore.title));
+		button.suggestion = suggestion;
+		button.remove:Show();
+		if _addon:GetSuggestionTimeUntilDays(suggestion.timestamp, 3) < 0 then 
+			button.remove:SetAlpha(1);
+		else
+			button.remove:SetAlpha(0.5);
+		end
+	end
+	
+	if (#_suggestions == 0) then
+		-- Show time until we get a new one
+		local sec, text = _addon:GetSuggestionTimeUntilDays(_suggestions.timeLast, 1);
+		buttonList[1].title:SetText(FORMAT_SUGGESTION_UNTILNEW:format(text));
+	
+		LoreLibraryCore.suggestBtn.complete:Show();
+	else
+		LoreLibraryCore.suggestBtn.complete:Hide();
+	end
+	
+	if (LoreLibraryCore.suggestions:IsShown()) then
+		self:PlaySuggestionAnimations();
+	end	
+end
+
+function _addon:IsValidSuggestion(data)
+	-- must not yet be unlocked
+	if data.unlocked then
+		return false;
+	end
+	-- must hae 1 available source and not from a container (because might be impossible)
+	for k, v in ipairs(data.locations) do
+		if not v.sourceTyp or (v.sourceType:lower() ~= "unavailable" and v.sourceType:lower() ~= "container") then 
+			return true; 
+		end
+	end
+	return false;
+end
+
+function _addon:GetNewSuggestion(suggestion, silent, offsetDays)
+	if (#_suggestions >= MAX_SUGGESTIONS) then return; end
+	
+	offsetDays = offsetDays and offsetDays or 0;
+	
+	if not suggestion then
+		
+		-- Check if they can get a new suggestion today
+		if _addon:GetSuggestionTimeUntilDays(_suggestions.timeLast, 1) > 0 then
+			return; 
+		end
+		-- Set last check to now to prevent getting new one when removing one
+		_suggestions.timeLast = time() - (offsetDays * 86400);
+		
+		local applicable = {};
+		
+		for title, data in pairs(_data) do
+			if self:IsValidSuggestion(data) then
+				table.insert(applicable, title);
+			end
+		end
+
+		if (#applicable > 0) then
+			suggestion = {};
+			suggestion.title = applicable[math.random(#applicable)];
+			suggestion.timestamp = _suggestions.timeLast;
+			suggestion.isNew = true;
+		end
+		applicable = nil;
+	end
+
+	if suggestion == nil then return; end -- couldn't make suggestion
+	
+	table.insert(_suggestions, suggestion);
+
+	if not silent then
+		for k, data in ipairs(_suggestions) do
+			print(data.title, date("%x", data.timestamp));
+		end
+	end
+	
+end
+
 function LOLIB_ListBook_OnClick(self, button)
+	LoreLibraryCore.suggestions:Hide();
 	-- Only when these conidions are met do we want to save favoriteMenu.lore
 	_addon:HideFavoriteMenu((self.lore ~= nil and (button == "RightButton") and self.lore.unlocked));
 	if self.lore == nil then 
@@ -755,11 +901,78 @@ function _addon:ShowMainFrame()
 	ShowUIPanel(LoreLibraryCore);
 end
 
+function _addon:InitSugestionFrame()
+	LoreLibraryCore.suggestions.buttons = {};
+	table.insert(LoreLibraryCore.suggestions.buttons, LoreLibraryCore.suggestions.b1);
+	table.insert(LoreLibraryCore.suggestions.buttons, LoreLibraryCore.suggestions.b2);
+	table.insert(LoreLibraryCore.suggestions.buttons, LoreLibraryCore.suggestions.b3);
+	
+	for k, button in ipairs(LoreLibraryCore.suggestions.buttons) do
+		button:SetScript("OnClick", function() 
+					if button.lore then
+						_addon:UpdateBookDisplay(button.lore); 
+						_addon:UpdateBookList();
+					end 
+				end)
+				
+		button.remove:SetScript("OnClick", function(self) 
+					local suggestion = self:GetParent().suggestion;
+					if (_addon:GetSuggestionTimeUntilDays(suggestion.timestamp, 3) < 0) then
+						table.remove(_suggestions, self:GetParent():GetID())
+						_addon:UpdateSuggestions();
+					end
+				end)
+				
+		button.remove:SetScript("OnEnter", function(self) 
+					local lore = self:GetParent().lore;
+					local suggestion = self:GetParent().suggestion;
+					if (lore and suggestion) then
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+						GameTooltip:SetText((lore.translations or lore.title));
+						local sec, text = _addon:GetSuggestionTimeUntilDays(suggestion.timestamp, 3);
+						if (sec > 0) then
+							GameTooltip:AddLine(FORMAT_SUGGESTION_REMOVECOOLDOWN:format(text) ,1 ,1 ,1 ,true);
+							GameTooltip:Show();
+						else
+							GameTooltip:AddLine(STRING_SUGGESTION_REMOVE ,1 ,1 ,1 ,true);
+							GameTooltip:Show();
+						end
+					end
+				end)
+				
+		button.remove:SetScript("OnLeave", function(self) GameTooltip:Hide(); end)
+				
+		self:CreateSuggestionAnimation(button);
+	end
+end
+
 function _addon:InitCoreFrame()
 	table.insert(UISpecialFrames, "LoreLibraryCore")
 
+	LoreLibraryCore:SetScript("OnHide", function()
+							PlaySound("igCharacterInfoClose");
+							LoreLibraryCore.suggestions:Hide();
+						end);
+	
 	LoreLibraryCore.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
 	
+	LoreLibraryCore.suggestBtn:SetScript("OnClick", function() 
+										if not InCombatLockdown() then
+											_addon:GetNewSuggestion();
+											PlaySound("igMainMenuOptionCheckBoxOn");
+											if LoreLibraryCore.suggestions:IsShown() then
+												LoreLibraryCore.suggestions:Hide();
+											else
+												LoreLibraryCore.suggestions:Show();
+											end
+										end
+										
+										
+										
+									end);
+	LoreLibraryCore.suggestions:SetScript("OnShow", function() _addon:UpdateSuggestions(); end);
+	_addon:InitSugestionFrame()
+
 	LoreLibraryListScrollFrame.scrollBar.doNotHide = true;
 	HybridScrollFrame_CreateButtons(LoreLibraryListScrollFrame, "LOLIB_ListBookTemplate", 1, 0);
 	HybridScrollFrame_Update(LoreLibraryListScrollFrame, #_loreList * SIZE_LISTBOOKHEIGHT, LoreLibraryListScrollFrame:GetHeight());
@@ -777,11 +990,34 @@ function _addon:InitCoreFrame()
 	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
 end
 
+function _addon:CreateSuggestionAnimation(self)
+	self.animationA = self.title:CreateAnimationGroup();
+	self.animationA.alpha = self.animationA:CreateAnimation("ALPHA");
+	self.animationA.alpha:SetChange(-1);
+	self.animationA.alpha:SetSmoothing("NONE");
+	self.animationA.alpha:SetDuration(0.25);
+	self.animationA.trans = self.animationA:CreateAnimation("TRANSLATION");
+	self.animationA.trans:SetOffset(-25, 0);
+	self.animationA.trans:SetSmoothing("NONE");
+	self.animationA.trans:SetDuration(0.25);
+	self.animationA:SetLooping("NONE")
+end
+
+function _addon:PlaySuggestionAnimations()
+	for k, button in ipairs(LoreLibraryCore.suggestions.buttons) do
+		if (button.suggestion and button.suggestion.isNew) then
+			button:SetAlpha(1);
+			button.animationA:Play(true);
+			button.suggestion.isNew = false;
+		end
+	end
+end
+
 function _addon:CreatePinAnimation(self)
 	self.animationA = self.glow:CreateAnimationGroup();
-	self.animationA.alpha = self.animationA:CreateAnimation("ROTATION");
-	self.animationA.alpha:SetRadians(2*math.pi);
-	self.animationA.alpha:SetSmoothing("NONE");
+	self.animationA.rotation = self.animationA:CreateAnimation("ROTATION");
+	self.animationA.rotation:SetRadians(2*math.pi);
+	self.animationA.rotation:SetSmoothing("NONE");
 	self.animationA:SetLooping("REPEAT")
 end
 
@@ -789,7 +1025,7 @@ function _addon:PlayPinAnimations()
 	for k, pin in ipairs(LoreLibraryMap.pins) do
 		if (pin.lore and not pin.lore.unlocked) then
 			pin.glow:Show();
-			pin.animationA.alpha:SetDuration(2);
+			pin.animationA.rotation:SetDuration(2);
 			pin.animationA:Play(true);
 		end
 	end
@@ -863,12 +1099,22 @@ end
 function LoreLibrary:OnEnable()
 	LoreLibrary.db.global.unlockedLore = _unlockedLoreTitles;
 	LoreLibrary.db.global.favorites = _favoriteLore;
+	LoreLibrary.db.global.suggestions = _suggestions;
 	
 	for k, id in ipairs(_achievementsToCheck) do
 		_addon:CheckAchievementProgress(id);
 	end
 	_addon:ProcessQuests();
 	
+	-- Get new suggestions depending on how long since last one
+	local daysSinceLast = floor((time() - _suggestions.timeLast)/86400);
+	daysSinceLast = daysSinceLast > MAX_SUGGESTIONS - #_suggestions and MAX_SUGGESTIONS - #_suggestions or daysSinceLast;
+	daysSinceLast = _suggestions.timeLast == 0 and 1 or daysSinceLast;
+	for i = 1, daysSinceLast+1 do 
+		_addon:GetNewSuggestion(nil, true, daysSinceLast-i);
+	end
+	_suggestions.timeLast = time();
+	_addon:UpdateSuggestions();
 end
 
 ----------
@@ -979,6 +1225,10 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	for k, v in pairs(LoreLibrary.db.global.favorites) do
 		_addon:SetFavorite(k, true);
 	end
+	for k, v in ipairs(LoreLibrary.db.global.suggestions) do
+		_addon:GetNewSuggestion(v, true);
+	end
+	_suggestions.timeLast = LoreLibrary.db.global.suggestions.timeLast;
 	_addon.translations = nil;
 	SortLore();
 	_addon:InitCoreFrame();
@@ -998,6 +1248,18 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
+	if msg == "give" then
+		_addon:GetNewSuggestion();
+		return;
+	elseif msg == "test" then
+		local daysSinceLast = floor((time() - _suggestions.timeLast)/86400);
+		daysSinceLast = daysSinceLast > 3 and 3 or daysSinceLast;
+		daysSinceLast = _suggestions.timeLast == 0 and 1 or daysSinceLast;
+		for i = 1, daysSinceLast+1 do 
+			_addon:GetNewSuggestion(nil, true, daysSinceLast-i);
+		end
+		return;
+	end
 	if LoreLibraryCore:IsShown() then
 		HideUIPanel(LoreLibraryCore);
 	else

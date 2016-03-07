@@ -26,7 +26,7 @@
 			<OnEnter>
 				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
 				if (self.lore) then
-					GameTooltip:SetText(self.lore.title);
+					GameTooltip:SetText((self.lore.translation or self.lore.title));
 					if (self.lore.unlocked) then
 						GameTooltip:AddLine("Unlocked" ,1 ,1 ,1 ,true);
 						GameTooltip:Show();
@@ -324,6 +324,55 @@
 		</Layers>
 	</Frame>
 	
+	<Button name="LOLIB_SuggestionTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="200" y="40"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture atlas="PetList-ButtonBackground" parentKey="background"/>
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTitle" inherits="GameFontWhite" maxLines="2" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="20"/>
+						<Anchor point="BOTTOMRIGHT" x="-20"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+			<Layer level="OVERLAY">
+                <Texture parentKey="glow" atlas="PetList-ButtonSelect" hidden="true"/>
+			</Layer>
+		</Layers>
+		
+		<HighlightTexture atlas="PetList-ButtonHighlight">
+			<Color r="1" g="1" b="1" a="1"/>
+		</HighlightTexture>
+
+		<Frames>
+			<Button name="$parentRemove" parentKey="remove">
+				<Size x="10" y="10"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-2" y="-2"/>
+				</Anchors>
+				<NormalTexture file="Interface\AddOns\LoreLibrary\Images\icon_Unavailable">
+					<Color r="1" g="1" b="1" a="1"/>
+				</NormalTexture>
+			</Button>
+			<Scripts>
+				<OnLoad>
+					self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+				</OnLoad>
+			</Scripts>
+		</Frames>
+		
+		<Scripts>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
+		</Scripts>
+	</Button>
+	
 	<Button name="LOLIB_ListBookTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
 		<Size>
 			<AbsDimension x="250" y="40"/>
@@ -339,7 +388,6 @@
 						<Anchor point="BOTTOMRIGHT" x="-20"/>
 					</Anchors>
 				</FontString>
-				
 			</Layer>
 			<Layer level="OVERLAY">
                 <Texture parentKey="selectedTexture" atlas="PetList-ButtonSelect" hidden="true"/>
@@ -370,7 +418,77 @@
 		</Anchors>
 
 		<Frames>
+		
 			<StatusBar parentKey="progressBar" inherits="LOLIB_CoreStatusTemplate" />
+			
+			<Button name="$parentSuggestionButton" inherits="UIMenuButtonStretchTemplate" text="Daily Suggestions" parentKey="suggestBtn">
+				<Size x="135" y="22"/>
+				<Anchors>
+					<Anchor point="RIGHT" relativeKey="$parent.progressBar" relativePoint="LEFT" x="-25"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="complete" file="Interface\BUTTONS\UI-CheckBox-Check">
+							<Size x="12" y="14"/>
+							<Anchors>
+								<Anchor point="LEFT" x="7"/>
+							</Anchors>
+						</Texture>
+						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+							<Size x="10" y="12"/>
+							<Anchors>
+								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>			
+			</Button>
+			<Frame name="$parentSuggestionFrame" inherits="TooltipBorderedFrameTemplate" parentKey="suggestions" enableMouse="true" frameStrata="DIALOG" hidden="true">
+				<Size x="210" y="160"/>
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.suggestBtn" relativePoint="BOTTOM" />
+				</Anchors>
+				
+				
+				
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture parentKey="background">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="4" y="-4"/>
+								<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
+							</Anchors>
+							<Color r="0.05" g="0.05" b="0.05" a="1" />
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" text="Daily Suggestions" parentKey="title">
+							<Anchors>
+								<Anchor point="TOP" y="-13"/>
+							</Anchors>
+						</FontString>
+						
+					</Layer>
+				</Layers>
+				
+				<Frames>
+					<Button parentKey="b3" inherits="LOLIB_SuggestionTemplate" id="3">
+						<Anchors>
+							<Anchor point="BOTTOM" relativePoint="BOTTOM" y="5"/>
+						</Anchors>
+					</Button>
+					<Button parentKey="b2" inherits="LOLIB_SuggestionTemplate" id="2">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeKey="$parent.b3" relativePoint="TOP"/>
+						</Anchors>
+					</Button>
+					<Button parentKey="b1" inherits="LOLIB_SuggestionTemplate" id="1">
+						<Anchors>
+							<Anchor point="BOTTOM" relativeKey="$parent.b2" relativePoint="TOP"/>
+						</Anchors>
+					</Button>
+				</Frames>
+			</Frame>
 			
 			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
 				<Size x="115" y="20"/>
@@ -418,9 +536,6 @@
 			<OnShow>
 				PlaySound("igCharacterInfoOpen");
 			</OnShow>
-			<OnHide>
-				PlaySound("igCharacterInfoClose");
-			</OnHide>
 		</Scripts>
 	</Frame>
 	
