@@ -2460,8 +2460,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "49.1",  ["y"] = "42.4"},
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811, ["areaId"] = 811,  ["id"] = "5840",  ["level"] = "0",  ["x"] = "81.4",  ["y"] = "29.3"},
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811,  ["id"] = "6142",  ["level"] = "3",  ["x"] = "87.7",  ["y"] = "70.2"},
 	},
 },
 ["The General and the Grummle"] = {
@@ -2473,8 +2471,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["area"] = "Kun-Lai Summit", ["areaId"] = 809,  ["id"] = "5841",  ["level"] = "0",  ["x"] = "42.4",  ["y"] = "68.9"},
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811,  ["id"] = "6142",  ["level"] = "3",  ["x"] = "86.4",  ["y"] = "67.7"},
-		{["area"] = "Vale of Eternal Blossoms", ["areaId"] = 811,  ["id"] = "6141",  ["level"] = "1",  ["x"] = "59.6",  ["y"] = "15.8"},
 		{["area"] = "The Jade Forest", ["areaId"] = 806,  ["id"] = "5785",  ["level"] = "0",  ["x"] = "56.3",  ["y"] = "59.9"},
 		{["area"] = "Valley of the Four Winds", ["areaId"] = 807,  ["id"] = "5805",  ["level"] = "0",  ["x"] = "71.4",  ["y"] = "20.7"},
 	},

@@ -28,7 +28,7 @@
 				if (self.lore) then
 					GameTooltip:SetText((self.lore.translation or self.lore.title));
 					if (self.lore.unlocked) then
-						GameTooltip:AddLine("Unlocked" ,1 ,1 ,1 ,true);
+						GameTooltip:AddLine("Collected" ,1 ,1 ,1 ,true);
 						GameTooltip:Show();
 					end
 				end
@@ -339,7 +339,21 @@
 				</FontString>
 			</Layer>
 			<Layer level="OVERLAY">
-                <Texture parentKey="glow" atlas="PetList-ButtonSelect" hidden="true"/>
+				<FontString inherits="GameFontWhite" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="new" text="New!">
+					<Anchors>
+						<Anchor point="LEFT" x="20" y=""/>
+					</Anchors>
+				</FontString>
+			
+			<!--
+				<Texture parentKey="new" file="Interface\GLUES\CHARACTERCREATE\NewCharacterNotification" hidden="false">
+					<Size x="70" y="40"/>
+					<Anchors>
+						<Anchor point="LEFT" x="20" y="-3"/>
+					</Anchors>
+					<TexCoords left="0" right="1" top="0" bottom="0.5" />
+				</Texture>
+				-->
 			</Layer>
 		</Layers>
 		
@@ -467,6 +481,9 @@
 						</FontString>
 						
 					</Layer>
+					
+					
+					
 				</Layers>
 				
 				<Frames>

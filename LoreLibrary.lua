@@ -668,6 +668,7 @@ function _addon:UpdateSuggestions()
 		button.lore = nil;
 		button.suggestion = nil;
 		button.remove:Hide();
+		button.new:Hide();
 	end
 	for k, suggestion in ipairs(_suggestions) do
 		if k > MAX_SUGGESTIONS then break; end -- There's more than 3? VAC!
@@ -999,8 +1000,7 @@ function _addon:InitCoreFrame()
 	
 	UIDropDownMenu_Initialize(LoreLibraryListFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
 	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
-	
-	self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn);
+
 end
 
 function _addon:CreateNewSuggestionAnimation(self)
@@ -1013,6 +1013,8 @@ function _addon:CreateNewSuggestionAnimation(self)
 end
 
 function _addon:PlayNewSuggestionAnimations()
+	if (not LoreLibraryCore.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn); end
+	
 	local hasNewSuggestion = false;
 	for k, suggestion in ipairs(_suggestions) do
 		if (suggestion.isNew) then
@@ -1029,28 +1031,43 @@ function _addon:PlayNewSuggestionAnimations()
 end
 
 function _addon:StopNewSuggestionAnimations()
+	if (not LoreLibraryCore.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn); end
 	LoreLibraryCore.suggestBtn.glow:Hide();
 	LoreLibraryCore.suggestBtn.animation:Stop();
 end
 
 function _addon:CreateSuggestionAnimation(self)
-	self.animation = self.title:CreateAnimationGroup();
-	self.animation.alpha = self.animation:CreateAnimation("ALPHA");
-	self.animation.alpha:SetChange(-1);
-	self.animation.alpha:SetSmoothing("NONE");
-	self.animation.alpha:SetDuration(0.25);
-	self.animation.trans = self.animation:CreateAnimation("TRANSLATION");
-	self.animation.trans:SetOffset(-25, 0);
-	self.animation.trans:SetSmoothing("NONE");
-	self.animation.trans:SetDuration(0.25);
-	self.animation:SetLooping("NONE")
+	self.title.animation = self.title:CreateAnimationGroup();
+	self.title.animation.alpha = self.title.animation:CreateAnimation("ALPHA");
+	self.title.animation.alpha:SetChange(-1);
+	self.title.animation.alpha:SetSmoothing("NONE");
+	self.title.animation.alpha:SetDuration(0.35);
+	self.title.animation.trans = self.title.animation:CreateAnimation("TRANSLATION");
+	self.title.animation.trans:SetOffset(50, 0);
+	self.title.animation.trans:SetSmoothing("NONE");
+	self.title.animation.trans:SetDuration(0.35);
+	self.title.animation:SetLooping("NONE")
+	
+	self.new.animation = self.new:CreateAnimationGroup();
+	self.new.animation.alpha = self.new.animation:CreateAnimation("ALPHA");
+	self.new.animation.alpha:SetChange(1);
+	self.new.animation.alpha:SetSmoothing("OUT");
+	self.new.animation.alpha:SetDuration(0.35);
+	self.new.animation:SetLooping("NONE")
+	
+	self.new.animation:SetScript("OnFinished", function() 
+			self.title:SetAlpha(1);
+			self.title.animation:Play(true); 
+		end);
 end
 
 function _addon:PlaySuggestionAnimations()
 	for k, button in ipairs(LoreLibraryCore.suggestions.buttons) do
 		if (button.suggestion and button.suggestion.isNew) then
-			button:SetAlpha(1);
-			button.animation:Play(true);
+			button.title:SetAlpha(0);
+			button.new:SetAlpha(0);
+			button.new:Show();
+			button.new.animation:Play(true);
 			button.suggestion.isNew = false;
 		end
 	end
@@ -1077,7 +1094,7 @@ end
 function _addon:StopPinAnimations()
 	for k, pin in ipairs(LoreLibraryMap.pins) do
 		pin.glow:Hide();
-		pin.animationA:Stop();
+		pin.animation:Stop();
 	end
 end
 
