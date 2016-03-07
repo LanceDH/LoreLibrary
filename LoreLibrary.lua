@@ -69,7 +69,7 @@ local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
 local STRING_SUGGESTION_COMPLETE = "You completed a daily Lore Library suggestion.";
 local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new one.";
 local FORMAT_SUGGESTION_REMOVECOOLDOWN = "You can remove this suggestion in\n %s.";
-local FORMAT_SUGGESTION_UNTILNEW = "New suggestions in %s."
+local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
 local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
 local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
@@ -535,6 +535,12 @@ end
 function _addon:UpdateBookDisplay(lore)
 	local display = LoreLibraryListInsetRight;
 	
+	if (lore ~= LoreLibraryListInsetRight.currentLore) then
+		LoreLibraryListInsetRight.currentPage = 1;
+		LoreLibraryListInsetRight.currentLore = lore;
+	end
+	
+	
 	for i = 1, MAX_SOURCES do
 	    local source = display.sources["s"..i];
 		source:Hide();
@@ -759,8 +765,6 @@ function LOLIB_ListBook_OnClick(self, button)
 	end
 	
 	if ( button == "LeftButton" ) then
-		LoreLibraryListInsetRight.currentLore = self.lore;
-		LoreLibraryListInsetRight.currentPage = 1;
 		_addon:UpdateBookDisplay(self.lore);
 		_addon:UpdateBookList();
 	elseif (button == "RightButton") then
@@ -817,7 +821,7 @@ function _addon:InitFilter(self, level)
 		info.text = CHECK_ALL
 		info.func = function()
 						_addon:SetAllSourcesTo(true);
-						UIDropDownMenu_Refresh(LoreLibraryCoreFilterDropDown, 1, 2);
+						UIDropDownMenu_Refresh(LoreLibraryListFilterDropDown, 1, 2);
 						_addon:UpdateBookList();
 					end
 		UIDropDownMenu_AddButton(info, level)
@@ -825,7 +829,7 @@ function _addon:InitFilter(self, level)
 		info.text = UNCHECK_ALL
 		info.func = function()
 						_addon:SetAllSourcesTo(false);
-						UIDropDownMenu_Refresh(LoreLibraryCoreFilterDropDown, 1, 2);
+						UIDropDownMenu_Refresh(LoreLibraryListFilterDropDown, 1, 2);
 						_addon:UpdateBookList();
 					end
 		UIDropDownMenu_AddButton(info, level)
@@ -953,8 +957,12 @@ function _addon:InitCoreFrame()
 							PlaySound("igCharacterInfoClose");
 							LoreLibraryCore.suggestions:Hide();
 						end);
+	LoreLibraryCore:SetScript("OnShow", function()
+							PlaySound("igCharacterInfoOpen");
+							_addon:PlayNewSuggestionAnimations()
+						end);
 	
-	LoreLibraryCore.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
+	LoreLibraryList.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
 	
 	LoreLibraryCore.suggestBtn:SetScript("OnClick", function() 
 										if not InCombatLockdown() then
@@ -970,7 +978,10 @@ function _addon:InitCoreFrame()
 										
 										
 									end);
-	LoreLibraryCore.suggestions:SetScript("OnShow", function() _addon:UpdateSuggestions(); end);
+	LoreLibraryCore.suggestions:SetScript("OnShow", function() 
+										_addon:UpdateSuggestions(); 
+										_addon:StopNewSuggestionAnimations();
+									end);
 	_addon:InitSugestionFrame()
 
 	LoreLibraryListScrollFrame.scrollBar.doNotHide = true;
@@ -986,47 +997,79 @@ function _addon:InitCoreFrame()
 	
 	self:UpdateBookList();
 	
-	UIDropDownMenu_Initialize(LoreLibraryCoreFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
+	UIDropDownMenu_Initialize(LoreLibraryListFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
 	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
+	
+	self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn);
+end
+
+function _addon:CreateNewSuggestionAnimation(self)
+	self.animation = self.glow:CreateAnimationGroup();
+	self.animation.alpha = self.animation:CreateAnimation("ALPHA");
+	self.animation.alpha:SetChange(1);
+	self.animation.alpha:SetSmoothing("NONE");
+	self.animation.alpha:SetDuration(1);
+	self.animation:SetLooping("BOUNCE")
+end
+
+function _addon:PlayNewSuggestionAnimations()
+	local hasNewSuggestion = false;
+	for k, suggestion in ipairs(_suggestions) do
+		if (suggestion.isNew) then
+			hasNewSuggestion = true;
+			break;
+		end
+	end
+	
+	if (not hasNewSuggestion) then return; end
+	
+	LoreLibraryCore.suggestBtn.glow:Show();
+	LoreLibraryCore.suggestBtn.glow:SetAlpha(0);
+	LoreLibraryCore.suggestBtn.animation:Play(true);
+end
+
+function _addon:StopNewSuggestionAnimations()
+	LoreLibraryCore.suggestBtn.glow:Hide();
+	LoreLibraryCore.suggestBtn.animation:Stop();
 end
 
 function _addon:CreateSuggestionAnimation(self)
-	self.animationA = self.title:CreateAnimationGroup();
-	self.animationA.alpha = self.animationA:CreateAnimation("ALPHA");
-	self.animationA.alpha:SetChange(-1);
-	self.animationA.alpha:SetSmoothing("NONE");
-	self.animationA.alpha:SetDuration(0.25);
-	self.animationA.trans = self.animationA:CreateAnimation("TRANSLATION");
-	self.animationA.trans:SetOffset(-25, 0);
-	self.animationA.trans:SetSmoothing("NONE");
-	self.animationA.trans:SetDuration(0.25);
-	self.animationA:SetLooping("NONE")
+	self.animation = self.title:CreateAnimationGroup();
+	self.animation.alpha = self.animation:CreateAnimation("ALPHA");
+	self.animation.alpha:SetChange(-1);
+	self.animation.alpha:SetSmoothing("NONE");
+	self.animation.alpha:SetDuration(0.25);
+	self.animation.trans = self.animation:CreateAnimation("TRANSLATION");
+	self.animation.trans:SetOffset(-25, 0);
+	self.animation.trans:SetSmoothing("NONE");
+	self.animation.trans:SetDuration(0.25);
+	self.animation:SetLooping("NONE")
 end
 
 function _addon:PlaySuggestionAnimations()
 	for k, button in ipairs(LoreLibraryCore.suggestions.buttons) do
 		if (button.suggestion and button.suggestion.isNew) then
 			button:SetAlpha(1);
-			button.animationA:Play(true);
+			button.animation:Play(true);
 			button.suggestion.isNew = false;
 		end
 	end
 end
 
 function _addon:CreatePinAnimation(self)
-	self.animationA = self.glow:CreateAnimationGroup();
-	self.animationA.rotation = self.animationA:CreateAnimation("ROTATION");
-	self.animationA.rotation:SetRadians(2*math.pi);
-	self.animationA.rotation:SetSmoothing("NONE");
-	self.animationA:SetLooping("REPEAT")
+	self.animation = self.glow:CreateAnimationGroup();
+	self.animation.rotation = self.animation:CreateAnimation("ROTATION");
+	self.animation.rotation:SetRadians(2*math.pi);
+	self.animation.rotation:SetSmoothing("NONE");
+	self.animation:SetLooping("REPEAT")
 end
 
 function _addon:PlayPinAnimations()
 	for k, pin in ipairs(LoreLibraryMap.pins) do
 		if (pin.lore and not pin.lore.unlocked) then
 			pin.glow:Show();
-			pin.animationA.rotation:SetDuration(2);
-			pin.animationA:Play(true);
+			pin.animation.rotation:SetDuration(2);
+			pin.animation:Play(true);
 		end
 	end
 end

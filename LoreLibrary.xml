@@ -54,9 +54,7 @@
 			</Layer>
 		</Layers>
 	</StatusBar>
-	
-	
-	
+
 	<StatusBar name="LOLIB_ProgressBarTemplate" virtual="true">
 		<Size x="196" y="13"/>
 		<Layers>
@@ -424,7 +422,7 @@
 			<Button name="$parentSuggestionButton" inherits="UIMenuButtonStretchTemplate" text="Daily Suggestions" parentKey="suggestBtn">
 				<Size x="135" y="22"/>
 				<Anchors>
-					<Anchor point="RIGHT" relativeKey="$parent.progressBar" relativePoint="LEFT" x="-25"/>
+					<Anchor point="LEFT" relativeKey="$parent.progressBar" relativePoint="RIGHT" x="25"/>
 				</Anchors>
 				<Layers>
 					<Layer level="ARTWORK">
@@ -441,6 +439,14 @@
 							</Anchors>
 						</Texture>
 					</Layer>
+					<Layer level="OVERLAY">
+						<Texture parentKey="glow" atlas="PetList-ButtonSelect" hidden="true">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="2" y="-2"/>
+								<Anchor point="BOTTOMRIGHT" x="-2" y="2"/>
+							</Anchors>
+						</Texture>
+					</Layer>
 				</Layers>			
 			</Button>
 			<Frame name="$parentSuggestionFrame" inherits="TooltipBorderedFrameTemplate" parentKey="suggestions" enableMouse="true" frameStrata="DIALOG" hidden="true">
@@ -452,15 +458,7 @@
 				
 				
 				<Layers>
-					<Layer level="BACKGROUND">
-						<Texture parentKey="background">
-							<Anchors>
-								<Anchor point="TOPLEFT" x="4" y="-4"/>
-								<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
-							</Anchors>
-							<Color r="0.05" g="0.05" b="0.05" a="1" />
-						</Texture>
-					</Layer>
+					
 					<Layer level="ARTWORK">
 						<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" text="Daily Suggestions" parentKey="title">
 							<Anchors>
@@ -490,36 +488,7 @@
 				</Frames>
 			</Frame>
 			
-			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
-				<Size x="115" y="20"/>
-				<Anchors>
-					<Anchor point="TOPRIGHT" x="-107" y="-35"/>
-				</Anchors>
-			</EditBox>
 			
-			<Button name="$parentFilterButton" inherits="UIMenuButtonStretchTemplate" text="Filter">
-				<Size x="93" y="22"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeKey="$parent.searchBox" relativePoint="RIGHT" x="4"/>
-				</Anchors>
-				<Layers>
-					<Layer level="ARTWORK">
-						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
-							<Size x="10" y="12"/>
-							<Anchors>
-								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
-							</Anchors>
-						</Texture>
-					</Layer>
-				</Layers>
-				<Scripts>
-					<OnClick> 
-						PlaySound("igMainMenuOptionCheckBoxOn");
-						ToggleDropDownMenu(1, nil, LoreLibraryCoreFilterDropDown, "LoreLibraryCoreFilterButton", 74, 15);
-					</OnClick>	
-				</Scripts>						
-			</Button>
-			<Frame name="$parentFilterDropDown" inherits="UIDropDownMenuTemplate" />
 
 		</Frames>
 
@@ -533,9 +502,6 @@
 				SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
 				UIPanelWindows["LoreLibraryCore"] = { area = "left", pushable = 4 }
 			</OnLoad>
-			<OnShow>
-				PlaySound("igCharacterInfoOpen");
-			</OnShow>
 		</Scripts>
 	</Frame>
 	
@@ -671,7 +637,7 @@
 				
 			</Frame>
 			
-			<Frame name="$parentInsetLeft" inherits="LOLIB_InsetTemplate" >
+			<Frame name="$parentInsetLeft" inherits="InsetFrameTemplate" parentKey="insetLeft">
 				<Size x="260"/>
 				<Anchors>
 					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" y="4" x="4"/>
@@ -681,13 +647,13 @@
 			
 			<ScrollFrame name="$parentScrollFrame" parentKey="scrollFrame" inherits="HybridScrollFrameTemplate">
 				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="$parentInsetLeft" x="3" y="-4"/>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetLeft" x="3" y="-34"/>
 					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetLeft" x="-2" y="5"/>
 				</Anchors>
 				<Frames>
 					<Slider name="$parentScrollBar" inherits="HybridScrollBarTrimTemplate" parentKey="scrollBar">
 						<Anchors>
-							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="-11"/>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="19"/>
 							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="4" y="11"/>
 						</Anchors>
 						<Scripts>
@@ -701,6 +667,38 @@
 			</ScrollFrame>
 			
 			<Frame name="$parentFavoriteMenu" inherits="UIDropDownMenuTemplate" enableMouse="true" parentKey="favoriteMenu"/>
+			
+			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
+				<Size x="145" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeKey="$parent.insetLeft"  x="15" y="-9"/>
+				</Anchors>
+			</EditBox>
+			
+			<Button name="$parentFilterButton" inherits="UIMenuButtonStretchTemplate" text="Filter">
+				<Size x="93" y="22"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeKey="$parent.insetLeft" x="-5" y="-9"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+							<Size x="10" y="12"/>
+							<Anchors>
+								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick> 
+						PlaySound("igMainMenuOptionCheckBoxOn");
+						ToggleDropDownMenu(1, nil, LoreLibraryListFilterDropDown, "LoreLibraryListFilterButton", 74, 15);
+					</OnClick>	
+				</Scripts>						
+			</Button>
+			<Frame name="$parentFilterDropDown" inherits="UIDropDownMenuTemplate" />
+			
 		</Frames>
 		<Layers>
 		
@@ -758,4 +756,5 @@
 		</StatusBar>
 		</Frames>
 	</Frame>
+	
  </Ui>
