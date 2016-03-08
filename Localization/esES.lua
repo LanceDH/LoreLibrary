@@ -1,4 +1,6 @@
-﻿local _addonName, _addon = ...;
+﻿if GetLocale() ~= "esES" and GetLocale() ~= "esMX" then return; end
+
+local _addonName, _addon = ...;
 
 _addon.translations["esES"] = {
 ["A Treatise on Military Ranks"] = {

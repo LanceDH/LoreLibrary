@@ -75,7 +75,7 @@ _addon.data = {
 	["locations"] = {
 		{ ["sourceType"] = "chest",  ["area"] = "Frostfire Ridge", ["areaId"] = 941,  ["source"] = "Dusty Chest",  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
 		{ ["area"] = "Spires of Arak", ["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "55.3",  ["y"] = "18.1"},
-		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island", ["areaId"] = 974, ["source"] = "242519",  ["level"] = "0",  ["x"] = "53.2",  ["y"] = "60.4", },
+		{ ["sourceType"] = "chest",  ["area"] = "Darkmoon Island", ["areaId"] = 974, ["source"] = "Suspicious Mound",  ["level"] = "0",  ["x"] = "53.2",  ["y"] = "60.4", },
 	},
 },
 ["Diabolical Plans"] = {

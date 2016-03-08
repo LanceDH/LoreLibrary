@@ -68,6 +68,8 @@ local _achievementsToCheck = {
 local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
 local STRING_SUGGESTION_COMPLETE = "You completed a daily Lore Library suggestion.";
 local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new one.";
+local STRING_SUGGESTION_EMPTY1 = "You have collected so much lore!";
+local STRING_SUGGESTION_EMPTY2 = "There is nothing left to suggest.";
 local FORMAT_SUGGESTION_REMOVECOOLDOWN = "You can remove this suggestion in\n %s.";
 local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
 local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
@@ -686,9 +688,18 @@ function _addon:UpdateSuggestions()
 	end
 	
 	if (#_suggestions == 0) then
-		-- Show time until we get a new one
-		local sec, text = _addon:GetSuggestionTimeUntilDays(_suggestions.timeLast, 1);
-		buttonList[1].title:SetText(FORMAT_SUGGESTION_UNTILNEW:format(text));
+		local numAplicable = LoreLibraryCore.suggestions.numApplicable
+		numAplicable = numAplicable and numAplicable or #self:GetApplicableSuggestions();
+	
+		if numAplicable == 0 then
+			-- No more suggestions possible
+			buttonList[1].title:SetText(STRING_SUGGESTION_EMPTY1);
+			buttonList[2].title:SetText(STRING_SUGGESTION_EMPTY2);
+		else
+			-- Show time until we get a new one
+			local sec, text = _addon:GetSuggestionTimeUntilDays(_suggestions.timeLast, 1);
+			buttonList[1].title:SetText(FORMAT_SUGGESTION_UNTILNEW:format(text));
+		end
 	
 		LoreLibraryCore.suggestBtn.complete:Show();
 	else
@@ -701,17 +712,42 @@ function _addon:UpdateSuggestions()
 end
 
 function _addon:IsValidSuggestion(data)
+	-- can't already be a suggestion
+	for k, suggestion in ipairs(_suggestions) do
+		if suggestion.title:lower() == data.title:lower() then
+			return false;
+		end
+	end
+
 	-- must not yet be unlocked
 	if data.unlocked then
 		return false;
 	end
-	-- must hae 1 available source and not from a container (because might be impossible)
+	
+	-- Don't include missing translations
+	if data.translation and data.translation:find("[", true) then
+		return false;
+	end
+	
+	-- must have 1 available source and not from a container (because RNG)
 	for k, v in ipairs(data.locations) do
-		if not v.sourceTyp or (v.sourceType:lower() ~= "unavailable" and v.sourceType:lower() ~= "container") then 
+		if not v.sourceType or (v.sourceType:lower() ~= "unavailable" and v.sourceType:lower() ~= "container") then 
 			return true; 
 		end
 	end
 	return false;
+end
+
+function _addon:GetApplicableSuggestions()
+	local applicable = {};
+		
+		for title, data in pairs(_data) do
+			if self:IsValidSuggestion(data) then
+				table.insert(applicable, title);
+			end
+		end
+	
+	return applicable;
 end
 
 function _addon:GetNewSuggestion(suggestion, silent, offsetDays)
@@ -728,14 +764,10 @@ function _addon:GetNewSuggestion(suggestion, silent, offsetDays)
 		-- Set last check to now to prevent getting new one when removing one
 		_suggestions.timeLast = time() - (offsetDays * 86400);
 		
-		local applicable = {};
-		
-		for title, data in pairs(_data) do
-			if self:IsValidSuggestion(data) then
-				table.insert(applicable, title);
-			end
-		end
+		local applicable = self:GetApplicableSuggestions();
 
+		LoreLibraryCore.suggestions.numApplicable = #applicable;
+		
 		if (#applicable > 0) then
 			suggestion = {};
 			suggestion.title = applicable[math.random(#applicable)];
@@ -1308,18 +1340,6 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	if msg == "give" then
-		_addon:GetNewSuggestion();
-		return;
-	elseif msg == "test" then
-		local daysSinceLast = floor((time() - _suggestions.timeLast)/86400);
-		daysSinceLast = daysSinceLast > 3 and 3 or daysSinceLast;
-		daysSinceLast = _suggestions.timeLast == 0 and 1 or daysSinceLast;
-		for i = 1, daysSinceLast+1 do 
-			_addon:GetNewSuggestion(nil, true, daysSinceLast-i);
-		end
-		return;
-	end
 	if LoreLibraryCore:IsShown() then
 		HideUIPanel(LoreLibraryCore);
 	else

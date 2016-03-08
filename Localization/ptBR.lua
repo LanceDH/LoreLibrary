@@ -1,4 +1,6 @@
-﻿local _addonName, _addon = ...;
+﻿if GetLocale() ~= "ptBR" then return; end
+
+local _addonName, _addon = ...;
 
 _addon.translations["ptBR"] = {
 ["A Treatise on Military Ranks"] = {
