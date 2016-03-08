@@ -1,6 +1,6 @@
 ﻿
 local _addonName, _addon = ...;
-_addon.translations = {};
+_addon.localizeds = {};
 
 local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
 
@@ -131,7 +131,7 @@ end
 
 	
 local function SortLore(list) 
-	if list == nil then list = _loreList; end
+	list = list and list or _loreList;
 	table.sort(list, function(a, b) 
 			return a.title < b.title;
 	end);
@@ -142,11 +142,7 @@ local function SortLoreUnlockFirst(list)
 	table.sort(list, function(a, b) 
 		if (a.favorite and b.favorite) or (not a.favorite and not b.favorite) then
 			if (a.unlocked and b.unlocked) or (not a.unlocked and not b.unlocked) then
-				if (a.translation and b.translation) then
-					return a.translation < b.translation;
-				else
-					return a.title < b.title;
-				end
+				return a.title < b.title;
 			end
 			return (a.unlocked and not b.unlocked);
 		end
@@ -362,23 +358,20 @@ function _addon:ChangeDisplayPage(direction)
 end
 
 function _addon:GetEnglishTitle(title)
-	local c = 0;
 	-- Good lord I wish we could use Ids
 	for english, data in pairs(_data) do
-		c = c + 1;
-		if data.translation == title then
+		if data.title == title then
 			return english
 		end
 	end
-	
-	print(c, title);
 		
 	return title;
 end
 
 function _addon:UnlockNewLore(title, silent)
 	local origional = nil;
-	if not (_localization == "enGB" or _localization == "enUS") then
+	if title and not _data[title] then
+		-- Check for translation
 		origional = title;
 		title = self:GetEnglishTitle(title);
 	end
@@ -392,7 +385,7 @@ function _addon:UnlockNewLore(title, silent)
 	local completedSuggestion = false;
 	-- Check if unlock was a suggestion
 	for k, suggestion in ipairs(_suggestions) do
-		if suggestion.title == title then
+		if suggestion.key == title then
 			completedSuggestion = true;
 			table.remove(_suggestions, k);
 			break;
@@ -465,7 +458,7 @@ function _addon:GetFilteredList(unlockedFirst)
 	if (search ~= nil and search ~= "") then
 		local searchList = {}
 		for k, lore in ipairs(list) do
-			if (string.find(string.lower(lore.translation or lore.title), search:lower(), 1, true)) then
+			if (string.find(string.lower(lore.title), search:lower(), 1, true)) then
 				table.insert(searchList, lore);
 			end
 		end
@@ -515,7 +508,7 @@ function _addon:ProcessQuests()
 	
 	for k, lore in ipairs(_loreList) do
 		if self:LoreQuestCompleted(lore) then
-			self:UnlockNewLore(lore.title, true);
+			self:UnlockNewLore(lore.key, true);
 		end
 	end
 	
@@ -551,7 +544,7 @@ function _addon:UpdateBookDisplay(lore)
 	end	
 	display.sources:Hide();
 	
-	display.title:SetText(lore.translation or lore.title);
+	display.title:SetText(lore.title);
 	display.id = lore.info.id;
 	if (lore.unlocked) then
 		
@@ -569,12 +562,14 @@ function _addon:UpdateBookDisplay(lore)
 			local sourceType = _sourceData[sourceType].tooltip;
 
 			if location.sourceType == "drop" or location.sourceType == "pickpocket" or location.sourceType == "vendor" or location.sourceType == "chest" then
+				if (not location.area) then print("a", lore.key) end
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 			elseif location.sourceType == "container" then
 			    text = location.source;
 			elseif location.sourceType == "unavailable" then
 			    text = "This lore no longer has any\n available sources.";
 			elseif location.sourceType == "quest" then
+				if (not location.area) then print("b", lore.key) end
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 				if (location.level == "A") then
 					source.icon.factionAlliance:Show();
@@ -617,7 +612,7 @@ function _addon:UpdateBookList()
 			local lore = list[displayIndex];
 			button.lore = lore;
 			button.title:SetFontObject((lore.unlocked) and "GameFontNormal" or "GameFontDisable");
-			button.title:SetText((lore.translation and lore.translation or lore.title));
+			button.title:SetText(lore.title);
 			button.id = lore.info.id;
 			--if (button.title:GetText() == LoreLibraryListInsetRight.title:GetText()) then
 			if (button.id == display.id) then
@@ -674,10 +669,10 @@ function _addon:UpdateSuggestions()
 	end
 	for k, suggestion in ipairs(_suggestions) do
 		if k > MAX_SUGGESTIONS then break; end -- There's more than 3? VAC!
-		local lore = _data[suggestion.title];
+		local lore = _data[suggestion.key];
 		local button = buttonList[k];
 		button.lore = lore;
-		button.title:SetText((lore.translation or lore.title));
+		button.title:SetText(lore.title);
 		button.suggestion = suggestion;
 		button.remove:Show();
 		if _addon:GetSuggestionTimeUntilDays(suggestion.timestamp, 3) < 0 then 
@@ -714,7 +709,7 @@ end
 function _addon:IsValidSuggestion(data)
 	-- can't already be a suggestion
 	for k, suggestion in ipairs(_suggestions) do
-		if suggestion.title:lower() == data.title:lower() then
+		if suggestion.title:lower() == data.key:lower() then
 			return false;
 		end
 	end
@@ -725,7 +720,7 @@ function _addon:IsValidSuggestion(data)
 	end
 	
 	-- Don't include missing translations
-	if data.translation and data.translation:find("[", true) then
+	if data.localized and data.localized:find("[", true) then
 		return false;
 	end
 	
@@ -741,9 +736,9 @@ end
 function _addon:GetApplicableSuggestions()
 	local applicable = {};
 		
-		for title, data in pairs(_data) do
+		for key, data in pairs(_data) do
 			if self:IsValidSuggestion(data) then
-				table.insert(applicable, title);
+				table.insert(applicable, key);
 			end
 		end
 	
@@ -770,7 +765,7 @@ function _addon:GetNewSuggestion(suggestion, silent, offsetDays)
 		
 		if (#applicable > 0) then
 			suggestion = {};
-			suggestion.title = applicable[math.random(#applicable)];
+			suggestion.key = applicable[math.random(#applicable)];
 			suggestion.timestamp = _suggestions.timeLast;
 			suggestion.isNew = true;
 		end
@@ -780,12 +775,6 @@ function _addon:GetNewSuggestion(suggestion, silent, offsetDays)
 	if suggestion == nil then return; end -- couldn't make suggestion
 	
 	table.insert(_suggestions, suggestion);
-
-	if not silent then
-		for k, data in ipairs(_suggestions) do
-			print(data.title, date("%x", data.timestamp));
-		end
-	end
 	
 end
 
@@ -919,12 +908,12 @@ function _addon:InitFavoriteMenu(self, level)
 	if (_addon:MenuLoreIsFavorite()) then
 		info.text = BATTLE_PET_UNFAVORITE;
 		info.func = function(_, _, _, value)
-					_addon:SetFavorite(LoreLibraryList.favoriteMenu.lore.title, false);
+					_addon:SetFavorite(LoreLibraryList.favoriteMenu.lore.key, false);
 				end 
 	else
 		info.text = BATTLE_PET_FAVORITE;
 		info.func = function(_, _, _, value)
-					_addon:SetFavorite(LoreLibraryList.favoriteMenu.lore.title, true);
+					_addon:SetFavorite(LoreLibraryList.favoriteMenu.lore.key, true);
 				end 
 	end
 	UIDropDownMenu_AddButton(info, level)
@@ -965,7 +954,7 @@ function _addon:InitSugestionFrame()
 					local suggestion = self:GetParent().suggestion;
 					if (lore and suggestion) then
 						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-						GameTooltip:SetText((lore.translations or lore.title));
+						GameTooltip:SetText(lore.title);
 						local sec, text = _addon:GetSuggestionTimeUntilDays(suggestion.timestamp, 3);
 						if (sec > 0) then
 							GameTooltip:AddLine(FORMAT_SUGGESTION_REMOVECOOLDOWN:format(text) ,1 ,1 ,1 ,true);
@@ -1232,25 +1221,29 @@ function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)
 end
 
 function _addon:LoadTranslation()
-	_translations = _addon.translations[_localization];
-	if not _translations then 
-		print(FORMAT_LOC_NOSUPPORT:format(_localization));
-		return;
-	end
-	local currTrans = nil;
-	for title, data in pairs(_data) do
-		currTrans = _translations[title];
-		if currTrans then
-			data.translation = currTrans.translation;
-			-- overwrite english pages with translations
-			if (currTrans.pages) then
-				data.pages = {};
-				for k, page in ipairs(currTrans.pages) do
-					table.insert(data.pages, page);
+
+	local terms = _addon.translations.terms;
+	-- Load lore translations
+	if (_addon.translations.lore) then
+		local currTrans = nil;
+		for title, data in pairs(_data) do
+			currTrans = _addon.translations.lore[title];
+			if currTrans then
+				data.title = currTrans.translation;
+				-- overwrite english pages with translations
+				if (currTrans.pages) then
+					data.pages = {};
+					for k, page in ipairs(currTrans.pages) do
+						table.insert(data.pages, page);
+					end
 				end
 			end
 		end
+		
+		
+		
 	end
+
 end
 
 function _addon:ShowLocalizationMessage()
@@ -1260,24 +1253,22 @@ function _addon:ShowLocalizationMessage()
 	local users = "non-English";
 	local message = "Lore localization has been added!<BR/>Using Wowhead data, all lore text has been translated to your client language.<BR/>Please note that Wowhead is missing some translations, meaning some things will show in english with [square brackets] around them.";
 	local issues = nil;
-	if _translations ~= nil then
-		if _localization == "deDE" then
-			users = "German";
-			issues = "<P>Due to Blizzard using incorrect capitalization in their achievements, some previously collected lore might not be unlocked and will have to be collected again.</P>";
-		elseif _localization == "frFR" then
-			users = "French";
-		elseif _localization == "esES" or _localization == "esMX" then
-			users = "Spanish";
-		elseif _localization == "itIT" then
-			users = "Italian";
-			issues = "<P>Some of the titles have no Italian translation yet on Wowhead and therefore can't be collected for now.</P>";
-		elseif _localization == "ptBR" then
-			users = "Portuguese";
-			issues = "<P>Some of the titles have no Portuguese translation yet on Wowhead and therefore can't be collected for now.</P>";
-		elseif _localization == "ruRU" then
-			users = "Russian";
-			issues = "<P>I am unable to connect using the Russian client so sadly I can't test if your language works correctly.</P>";
-		end
+	if _localization == "deDE" then
+		users = "German";
+		issues = "<P>Due to Blizzard using incorrect capitalization in their achievements, some previously collected lore might not be unlocked and will have to be collected again.</P>";
+	elseif _localization == "frFR" then
+		users = "French";
+	elseif _localization == "esES" or _localization == "esMX" then
+		users = "Spanish";
+	elseif _localization == "itIT" then
+		users = "Italian";
+		issues = "<P>Some of the titles have no Italian translation yet on Wowhead and therefore can't be collected for now.</P>";
+	elseif _localization == "ptBR" then
+		users = "Portuguese";
+		issues = "<P>Some of the titles have no Portuguese translation yet on Wowhead and therefore can't be collected for now.</P>";
+	elseif _localization == "ruRU" then
+		users = "Russian";
+		issues = "<P>I am unable to connect using the Russian client so sadly I can't test if your language works correctly.</P>";
 	else
 		message = "Sadly Lore Library currently does not support your language.<BR/>This means you will not be able to collect any lore.<BR/><BR/>My apologies for the inconvenience."
 	end
@@ -1294,17 +1285,28 @@ end
 
 function _addon.events:ADDON_LOADED(loaded_addon)
 	if (loaded_addon ~= _addonName) then return; end
-	_data = _addon.data;
-	if not (_localization == "enGB" or _localization == "enUS") then
-		_localization = _localization == "esMX" and "esES" or _localization;
+	_data = _addon.data.lore;
+	
+	for k, lore in pairs(_data) do
+		lore.key = k;
+		lore.title = k;
+		lore.unlocked = false;
+		table.insert(_loreList, lore);
+		
+		for k, loc in ipairs(lore.locations) do
+			if (loc.areaId) then
+			local area = GetMapNameByID(loc.areaId);
+				loc.area = area and area or "";
+			end
+		end
+		
+	end
+	
+	if _addon.translations then
 		_addon:LoadTranslation();
 		_addon:ShowLocalizationMessage();
 	end
-	for k, v in pairs(_data) do
-		v.title = k;
-		v.unlocked = false;
-		table.insert(_loreList, v);
-	end
+	
 	if (#LoreLibrary.db.global.unlockedLore > 0) then
 		for k, v in ipairs(LoreLibrary.db.global.unlockedLore) do
 			_addon:UnlockNewLore(v, true);
@@ -1340,6 +1342,17 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
+	if msg == "test" then
+		for k, lore in pairs(_data) do
+			for k2, loc in ipairs(lore.locations) do
+				if (loc.area == "") then
+				print(lore.key, loc.areaId);
+				end
+			end
+		end
+		return;
+	end
+
 	if LoreLibraryCore:IsShown() then
 		HideUIPanel(LoreLibraryCore);
 	else

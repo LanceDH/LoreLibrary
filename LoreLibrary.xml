@@ -26,7 +26,7 @@
 			<OnEnter>
 				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
 				if (self.lore) then
-					GameTooltip:SetText((self.lore.translation or self.lore.title));
+					GameTooltip:SetText(self.lore.title);
 					if (self.lore.unlocked) then
 						GameTooltip:AddLine("Collected" ,1 ,1 ,1 ,true);
 						GameTooltip:Show();
@@ -692,7 +692,7 @@
 				</Anchors>
 			</EditBox>
 			
-			<Button name="$parentFilterButton" inherits="UIMenuButtonStretchTemplate" text="Filter">
+			<Button name="$parentFilterButton" inherits="UIMenuButtonStretchTemplate" text="FILTER">
 				<Size x="93" y="22"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativeKey="$parent.insetLeft" x="-5" y="-9"/>
