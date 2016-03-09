@@ -340,28 +340,17 @@
 				</FontString>
 			</Layer>
 			<Layer level="OVERLAY">
-				<FontString inherits="GameFontWhite" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="new" text="New!">
+				<FontString inherits="GameFontWhite" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="new" text="New !">
 					<Anchors>
 						<Anchor point="LEFT" x="20" y=""/>
 					</Anchors>
 				</FontString>
-			
-			<!--
-				<Texture parentKey="new" file="Interface\GLUES\CHARACTERCREATE\NewCharacterNotification" hidden="false">
-					<Size x="70" y="40"/>
-					<Anchors>
-						<Anchor point="LEFT" x="20" y="-3"/>
-					</Anchors>
-					<TexCoords left="0" right="1" top="0" bottom="0.5" />
-				</Texture>
-				-->
 			</Layer>
 		</Layers>
 		
 		<HighlightTexture atlas="PetList-ButtonHighlight">
 			<Color r="1" g="1" b="1" a="1"/>
 		</HighlightTexture>
-
 		<Frames>
 			<Button name="$parentRemove" parentKey="remove">
 				<Size x="10" y="10"/>
@@ -374,6 +363,7 @@
 			</Button>
 			<Scripts>
 				<OnLoad>
+
 					self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
 				</OnLoad>
 			</Scripts>
@@ -388,7 +378,7 @@
 	
 	<Button name="LOLIB_ListBookTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
 		<Size>
-			<AbsDimension x="250" y="40"/>
+			<AbsDimension x="252" y="40"/>
 		</Size>
 		<Layers>
 			<Layer level="BACKGROUND">
@@ -434,35 +424,31 @@
 		
 			<StatusBar parentKey="progressBar" inherits="LOLIB_CoreStatusTemplate" />
 			
-			<Button name="$parentSuggestionButton" inherits="UIMenuButtonStretchTemplate" text="Daily Suggestions" parentKey="suggestBtn">
-				<Size x="135" y="22"/>
+			<Button name="$parentSuggestionButton" inherits="UIMenuButtonStretchTemplate" text="" parentKey="suggestBtn">
+				<Size x="26" y="26"/>
 				<Anchors>
 					<Anchor point="LEFT" relativeKey="$parent.progressBar" relativePoint="RIGHT" x="25"/>
 				</Anchors>
 				<Layers>
 					<Layer level="ARTWORK">
-						<Texture parentKey="complete" file="Interface\BUTTONS\UI-CheckBox-Check">
-							<Size x="12" y="14"/>
+						<Texture parentKey="icon" file="Interface\GossipFrame\AvailableQuestIcon">
+							<Size x="16" y="16"/>
 							<Anchors>
-								<Anchor point="LEFT" x="7"/>
-							</Anchors>
-						</Texture>
-						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
-							<Size x="10" y="12"/>
-							<Anchors>
-								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+								<Anchor point="CENTER"/>
 							</Anchors>
 						</Texture>
 					</Layer>
 					<Layer level="OVERLAY">
-						<Texture parentKey="glow" atlas="PetList-ButtonSelect" hidden="true">
+						<Texture parentKey="glow" file="Interface\BUTTONS\CheckButtonGlow" hidden="true">
 							<Anchors>
-								<Anchor point="TOPLEFT" x="2" y="-2"/>
-								<Anchor point="BOTTOMRIGHT" x="-2" y="2"/>
+								<Anchor point="TOPLEFT" x="-6" y="6"/>
+								<Anchor point="BOTTOMRIGHT" x="6" y="-6"/>
 							</Anchors>
 						</Texture>
 					</Layer>
-				</Layers>			
+				</Layers>	
+				
+				<HighlightTexture file="Interface\BUTTONS\UI-Common-MouseHilight" alphaMode="ADD"/>
 			</Button>
 			<Frame name="$parentSuggestionFrame" inherits="TooltipBorderedFrameTemplate" parentKey="suggestions" enableMouse="true" frameStrata="DIALOG" hidden="true">
 				<Size x="210" y="160"/>
@@ -470,10 +456,7 @@
 					<Anchor point="TOP" relativeKey="$parent.suggestBtn" relativePoint="BOTTOM" />
 				</Anchors>
 				
-				
-				
 				<Layers>
-					
 					<Layer level="ARTWORK">
 						<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" text="Daily Suggestions" parentKey="title">
 							<Anchors>
@@ -482,9 +465,6 @@
 						</FontString>
 						
 					</Layer>
-					
-					
-					
 				</Layers>
 				
 				<Frames>
@@ -505,9 +485,6 @@
 					</Button>
 				</Frames>
 			</Frame>
-			
-			
-
 		</Frames>
 
 		<Scripts>
@@ -524,7 +501,7 @@
 	</Frame>
 	
 	<Frame name="LoreLibraryList" parent="LoreLibraryCore">
-		<Size y="540"/>
+		<Size y="541"/>
 		<Anchors>
 			<Anchor point="BOTTOMLEFT" x="0" y="0"/>
 			<Anchor point="BOTTOMRIGHT" x="0" y="0"/>
@@ -534,7 +511,7 @@
 		
 		<Frames>
 			<Frame name="$parentInsetRight" inherits="LOLIB_InsetTemplate" >
-				<Size x="407"/>
+				<Size x="414"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="4" x="-6"/>
 					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-6" y="5"/>
@@ -546,8 +523,6 @@
 				</Scripts>
 				
 				<Layers>
-					
-					
 					<Layer level="BACKGROUND">
 						<Texture name="$parentParchmentBg" file="Interface\QUESTFRAME\QuestBG">
 							<Anchors>

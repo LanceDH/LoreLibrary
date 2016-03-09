@@ -6861,28 +6861,3 @@ _addon.data = {
 },
 }
 };
-
-
-
---[[
-Lore that needs special care:
-"A Treatise on Military Ranks"
-"Military Ranks of the Horde & Alliance"
-"Dusty Journal"
-"Letter of Introduction to Wyrmrest Temple"
-"Faded Note"
-"Diabolical Plans"
-"Crystallized Note"
-"Hai-pu"
-"Decoded Twilight Text"
-"The Death Knights of Acherus"
-
-Need area Ids for:
-
-Darkmoon Island 974 ?
-Alterac Valley
-Tarren Mill vs South Shore
-
-Total: 577
-Legit: 556
-]]--

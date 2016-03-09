@@ -40,7 +40,6 @@ local _option = {
 
 local _localization = GetLocale();
 local _data = {}
-local _translations = {};
 local _suggestions = {["timeLast"] = 0};
 local _completedQuests = nil;
 local _unlockedLoreTitles = {};
@@ -109,11 +108,8 @@ function _addon:GetSuggestionTimeUntilDays(timestamp, days)
 	days = (not days and 0 or days);
 	local text = "";
 	local stampTable = date("*t", timestamp);
-	--print(date("%c", timestamp))
 	local unlock = time{year = stampTable.year, month = stampTable.month, day = stampTable.day + days, hour = 0};
-	--print(date("%c", unlock))
 	local sec = unlock - time();
-	--print(date("%c", sec))
 	local t = date("!*t", sec);
 	-- time has passed, no need to create text
 	if (sec < 0) then return sec, text; end
@@ -121,7 +117,7 @@ function _addon:GetSuggestionTimeUntilDays(timestamp, days)
 	if t.day > 1 then
 		text = t.day .. " days";
 	elseif t.hour > 1 then
-		text = t.hour+1 .. "hours";
+		text = t.hour+1 .. " hours";
 	else
 		text = t.min+1 .. (t.min+1 > 1 and " minutes" or " minute");
 	end
@@ -400,7 +396,6 @@ function _addon:UnlockNewLore(title, silent)
 			print(STRING_SUGGESTION_COMPLETE);
 			self:UpdateSuggestions();
 		end
-		--print(FORMAT_LORE_UNLOCK:format(title));
 		self:UpdateBookList()
 	end
 end
@@ -489,11 +484,8 @@ end
 
 function _addon:LoreQuestCompleted(lore)
 	for k, loc in ipairs(lore.locations) do
-		if (loc.sourceType == "quest") then 
-			--print(_completedQuests[loc.id]); 
-		if (_completedQuests[loc.id]) then
+		if (loc.sourceType == "quest" and _completedQuests[loc.id]) then 
 			return true;
-		end
 		end
 	end
 	
@@ -562,14 +554,12 @@ function _addon:UpdateBookDisplay(lore)
 			local sourceType = _sourceData[sourceType].tooltip;
 
 			if location.sourceType == "drop" or location.sourceType == "pickpocket" or location.sourceType == "vendor" or location.sourceType == "chest" then
-				if (not location.area) then print("a", lore.key) end
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 			elseif location.sourceType == "container" then
 			    text = location.source;
 			elseif location.sourceType == "unavailable" then
 			    text = "This lore no longer has any\n available sources.";
 			elseif location.sourceType == "quest" then
-				if (not location.area) then print("b", lore.key) end
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 				if (location.level == "A") then
 					source.icon.factionAlliance:Show();
@@ -695,10 +685,9 @@ function _addon:UpdateSuggestions()
 			local sec, text = _addon:GetSuggestionTimeUntilDays(_suggestions.timeLast, 1);
 			buttonList[1].title:SetText(FORMAT_SUGGESTION_UNTILNEW:format(text));
 		end
-	
-		LoreLibraryCore.suggestBtn.complete:Show();
+		LoreLibraryCore.suggestBtn.icon:SetDesaturated(true);
 	else
-		LoreLibraryCore.suggestBtn.complete:Hide();
+		LoreLibraryCore.suggestBtn.icon:SetDesaturated(false);
 	end
 	
 	if (LoreLibraryCore.suggestions:IsShown()) then
@@ -709,7 +698,7 @@ end
 function _addon:IsValidSuggestion(data)
 	-- can't already be a suggestion
 	for k, suggestion in ipairs(_suggestions) do
-		if suggestion.title:lower() == data.key:lower() then
+		if suggestion.title and suggestion.title:lower() == data.key:lower() then
 			return false;
 		end
 	end
@@ -1024,101 +1013,6 @@ function _addon:InitCoreFrame()
 
 end
 
-function _addon:CreateNewSuggestionAnimation(self)
-	self.animation = self.glow:CreateAnimationGroup();
-	self.animation.alpha = self.animation:CreateAnimation("ALPHA");
-	self.animation.alpha:SetChange(1);
-	self.animation.alpha:SetSmoothing("NONE");
-	self.animation.alpha:SetDuration(1);
-	self.animation:SetLooping("BOUNCE")
-end
-
-function _addon:PlayNewSuggestionAnimations()
-	if (not LoreLibraryCore.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn); end
-	
-	local hasNewSuggestion = false;
-	for k, suggestion in ipairs(_suggestions) do
-		if (suggestion.isNew) then
-			hasNewSuggestion = true;
-			break;
-		end
-	end
-	
-	if (not hasNewSuggestion) then return; end
-	
-	LoreLibraryCore.suggestBtn.glow:Show();
-	LoreLibraryCore.suggestBtn.glow:SetAlpha(0);
-	LoreLibraryCore.suggestBtn.animation:Play(true);
-end
-
-function _addon:StopNewSuggestionAnimations()
-	if (not LoreLibraryCore.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn); end
-	LoreLibraryCore.suggestBtn.glow:Hide();
-	LoreLibraryCore.suggestBtn.animation:Stop();
-end
-
-function _addon:CreateSuggestionAnimation(self)
-	self.title.animation = self.title:CreateAnimationGroup();
-	self.title.animation.alpha = self.title.animation:CreateAnimation("ALPHA");
-	self.title.animation.alpha:SetChange(-1);
-	self.title.animation.alpha:SetSmoothing("NONE");
-	self.title.animation.alpha:SetDuration(0.35);
-	self.title.animation.trans = self.title.animation:CreateAnimation("TRANSLATION");
-	self.title.animation.trans:SetOffset(50, 0);
-	self.title.animation.trans:SetSmoothing("NONE");
-	self.title.animation.trans:SetDuration(0.35);
-	self.title.animation:SetLooping("NONE")
-	
-	self.new.animation = self.new:CreateAnimationGroup();
-	self.new.animation.alpha = self.new.animation:CreateAnimation("ALPHA");
-	self.new.animation.alpha:SetChange(1);
-	self.new.animation.alpha:SetSmoothing("OUT");
-	self.new.animation.alpha:SetDuration(0.35);
-	self.new.animation:SetLooping("NONE")
-	
-	self.new.animation:SetScript("OnFinished", function() 
-			self.title:SetAlpha(1);
-			self.title.animation:Play(true); 
-		end);
-end
-
-function _addon:PlaySuggestionAnimations()
-	for k, button in ipairs(LoreLibraryCore.suggestions.buttons) do
-		if (button.suggestion and button.suggestion.isNew) then
-			button.title:SetAlpha(0);
-			button.new:SetAlpha(0);
-			button.new:Show();
-			button.new.animation:Play(true);
-			button.suggestion.isNew = false;
-		end
-	end
-end
-
-function _addon:CreatePinAnimation(self)
-	self.animation = self.glow:CreateAnimationGroup();
-	self.animation.rotation = self.animation:CreateAnimation("ROTATION");
-	self.animation.rotation:SetRadians(2*math.pi);
-	self.animation.rotation:SetSmoothing("NONE");
-	self.animation:SetLooping("REPEAT")
-end
-
-function _addon:PlayPinAnimations()
-	for k, pin in ipairs(LoreLibraryMap.pins) do
-		if (pin.lore and not pin.lore.unlocked) then
-			pin.glow:Show();
-			pin.animation.rotation:SetDuration(2);
-			pin.animation:Play(true);
-		end
-	end
-end
-
-function _addon:StopPinAnimations()
-	for k, pin in ipairs(LoreLibraryMap.pins) do
-		pin.glow:Hide();
-		pin.animation:Stop();
-	end
-end
-
 function _addon:InitMap()
 	LoreLibraryMap.pins = {};
 	LoreLibraryMap.pinsEnabled = true;
@@ -1173,51 +1067,99 @@ function _addon:SearchChanged(searchBox)
 	end
 end
 
-function LoreLibrary:OnInitialize()
-	self.db = LibStub("AceDB-3.0"):New("LoLibDB", _defaults, true);
+function _addon:CreateNewSuggestionAnimation(self)
+	self.animation = self.glow:CreateAnimationGroup();
+	self.animation.alpha = self.animation:CreateAnimation("ALPHA");
+	self.animation.alpha:SetChange(1);
+	self.animation.alpha:SetSmoothing("NONE");
+	self.animation.alpha:SetDuration(1);
+	self.animation:SetLooping("BOUNCE")
 end
 
-function LoreLibrary:OnEnable()
-	LoreLibrary.db.global.unlockedLore = _unlockedLoreTitles;
-	LoreLibrary.db.global.favorites = _favoriteLore;
-	LoreLibrary.db.global.suggestions = _suggestions;
+function _addon:PlayNewSuggestionAnimations()
+	if (not LoreLibraryCore.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn); end
 	
-	for k, id in ipairs(_achievementsToCheck) do
-		_addon:CheckAchievementProgress(id);
+	local hasNewSuggestion = false;
+	for k, suggestion in ipairs(_suggestions) do
+		if (suggestion.isNew) then
+			hasNewSuggestion = true;
+			break;
+		end
 	end
-	_addon:ProcessQuests();
 	
-	-- Get new suggestions depending on how long since last one
-	local daysSinceLast = floor((time() - _suggestions.timeLast)/86400);
-	daysSinceLast = daysSinceLast > MAX_SUGGESTIONS - #_suggestions and MAX_SUGGESTIONS - #_suggestions or daysSinceLast;
-	daysSinceLast = _suggestions.timeLast == 0 and 1 or daysSinceLast;
-	for i = 1, daysSinceLast+1 do 
-		_addon:GetNewSuggestion(nil, true, daysSinceLast-i);
-	end
-	_suggestions.timeLast = time();
-	_addon:UpdateSuggestions();
+	if (not hasNewSuggestion) then return; end
+	
+	LoreLibraryCore.suggestBtn.glow:Show();
+	LoreLibraryCore.suggestBtn.glow:SetAlpha(0);
+	LoreLibraryCore.suggestBtn.animation:Play(true);
 end
 
-----------
--- Events
-----------
+function _addon:StopNewSuggestionAnimations()
+	if (not LoreLibraryCore.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn); end
+	LoreLibraryCore.suggestBtn.glow:Hide();
+	LoreLibraryCore.suggestBtn.animation:Stop();
+end
 
-_addon.events = CreateFrame("FRAME", "LoLib_EventFrame"); 
-_addon.events:RegisterEvent("ITEM_TEXT_BEGIN");
-_addon.events:RegisterEvent("ADDON_LOADED");
-_addon.events:RegisterEvent("WORLD_MAP_UPDATE");
-_addon.events:RegisterEvent("PLAYER_REGEN_DISABLED");
-_addon.events:SetScript("OnEvent", function(self, event, ...) self[event](self, ...) end)
+function _addon:CreateSuggestionAnimation(self)
+	self.title.animation = self.title:CreateAnimationGroup();
+	self.title.animation.alpha = self.title.animation:CreateAnimation("ALPHA");
+	self.title.animation.alpha:SetChange(-1);
+	self.title.animation.alpha:SetSmoothing("NONE");
+	self.title.animation.alpha:SetDuration(0.3);
+	self.title.animation.trans = self.title.animation:CreateAnimation("TRANSLATION");
+	self.title.animation.trans:SetOffset(-25, 0);
+	self.title.animation.trans:SetSmoothing("NONE");
+	self.title.animation.trans:SetDuration(0.3);
+	self.title.animation:SetLooping("NONE")
+	
+	self.new.animation = self.new:CreateAnimationGroup();
+	self.new.animation.alpha = self.new.animation:CreateAnimation("ALPHA");
+	self.new.animation.alpha:SetChange(1);
+	self.new.animation.alpha:SetSmoothing("OUT");
+	self.new.animation.alpha:SetDuration(0.35);
+	self.new.animation:SetLooping("NONE")
+	
+	self.new.animation:SetScript("OnFinished", function() 
+			self.title:SetAlpha(1);
+			self.title.animation:Play(true); 
+		end);
+end
 
-function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
-	-- Only update when map is visible
-	if WorldMapFrame:IsShown() then
-		_addon:LorePiecesInMap();
+function _addon:PlaySuggestionAnimations()
+	for k, button in ipairs(LoreLibraryCore.suggestions.buttons) do
+		if (button.suggestion and button.suggestion.isNew) then
+			button.title:SetAlpha(0);
+			button.new:SetAlpha(0);
+			button.new:Show();
+			button.new.animation:Play(true);
+			button.suggestion.isNew = false;
+		end
 	end
 end
 
-function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)
-	_addon:UnlockNewLore(ItemTextGetItem())
+function _addon:CreatePinAnimation(self)
+	self.animation = self.glow:CreateAnimationGroup();
+	self.animation.rotation = self.animation:CreateAnimation("ROTATION");
+	self.animation.rotation:SetRadians(2*math.pi);
+	self.animation.rotation:SetSmoothing("NONE");
+	self.animation:SetLooping("REPEAT")
+end
+
+function _addon:PlayPinAnimations()
+	for k, pin in ipairs(LoreLibraryMap.pins) do
+		if (pin.lore and not pin.lore.unlocked) then
+			pin.glow:Show();
+			pin.animation.rotation:SetDuration(2);
+			pin.animation:Play(true);
+		end
+	end
+end
+
+function _addon:StopPinAnimations()
+	for k, pin in ipairs(LoreLibraryMap.pins) do
+		pin.glow:Hide();
+		pin.animation:Stop();
+	end
 end
 
 function _addon:LoadTranslation()
@@ -1284,6 +1226,53 @@ function _addon:ShowLocalizationMessage()
 	displayText = displayText .. "</BODY></HTML>";
 	
 	display.pageText:SetText(displayText);
+end
+
+function LoreLibrary:OnInitialize()
+	self.db = LibStub("AceDB-3.0"):New("LoLibDB", _defaults, true);
+end
+
+function LoreLibrary:OnEnable()
+	LoreLibrary.db.global.unlockedLore = _unlockedLoreTitles;
+	LoreLibrary.db.global.favorites = _favoriteLore;
+	LoreLibrary.db.global.suggestions = _suggestions;
+	
+	for k, id in ipairs(_achievementsToCheck) do
+		_addon:CheckAchievementProgress(id);
+	end
+	_addon:ProcessQuests();
+	
+	-- Get new suggestions depending on how long since last one
+	local daysSinceLast = floor((time() - _suggestions.timeLast)/86400);
+	daysSinceLast = daysSinceLast > MAX_SUGGESTIONS - #_suggestions and MAX_SUGGESTIONS - #_suggestions or daysSinceLast;
+	daysSinceLast = _suggestions.timeLast == 0 and 1 or daysSinceLast;
+	for i = 1, daysSinceLast+1 do 
+		_addon:GetNewSuggestion(nil, true, daysSinceLast-i);
+	end
+	_suggestions.timeLast = time();
+	_addon:UpdateSuggestions();
+end
+
+----------
+-- Events
+----------
+
+_addon.events = CreateFrame("FRAME", "LoLib_EventFrame"); 
+_addon.events:RegisterEvent("ITEM_TEXT_BEGIN");
+_addon.events:RegisterEvent("ADDON_LOADED");
+_addon.events:RegisterEvent("WORLD_MAP_UPDATE");
+_addon.events:RegisterEvent("PLAYER_REGEN_DISABLED");
+_addon.events:SetScript("OnEvent", function(self, event, ...) self[event](self, ...) end)
+
+function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
+	-- Only update when map is visible
+	if WorldMapFrame:IsShown() then
+		_addon:LorePiecesInMap();
+	end
+end
+
+function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)
+	_addon:UnlockNewLore(ItemTextGetItem())
 end
 
 function _addon.events:ADDON_LOADED(loaded_addon)
@@ -1363,9 +1352,6 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	if msg == "test" then
-		_addon:LoadTranslation()
-	end
 
 	if LoreLibraryCore:IsShown() then
 		HideUIPanel(LoreLibraryCore);
