@@ -1,0 +1,16 @@
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\bin\Debug\LoreTranslator.exe.config
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\bin\Debug\LoreTranslator.exe
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\bin\Debug\LoreTranslator.pdb
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.csprojResolveAssemblyReference.cache
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\MainWindow.baml
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\MainWindow.g.cs
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\App.g.cs
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator_MarkupCompile.cache
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.g.resources
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.Properties.Resources.resources
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.csproj.GenerateResource.Cache
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.exe
+D:\UserFiles\Documents\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.pdb
+D:\Program Files (x86)\World of Warcraft\Interface\AddOns\LoreLibrary\Tools\LoreTranslator\LoreTranslator\bin\Debug\LoreTranslator.exe.config
+D:\Program Files (x86)\World of Warcraft\Interface\AddOns\LoreLibrary\Tools\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.exe
+D:\Program Files (x86)\World of Warcraft\Interface\AddOns\LoreLibrary\Tools\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.pdb

@@ -1,0 +1,22 @@
+﻿<Window x:Class="WoWBookParcer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="466" Width="649">
+    <Grid>
+        <TextBox x:Name="txt_URL" Margin="10,10,10,0" TextWrapping="Wrap" Text="http://www.wowhead.com/objects=9#0+1" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox x:Name="txt_Output" Margin="10,65,0,0" TextWrapping="Wrap"/>
+        <TextBox x:Name="txt_Item" HorizontalAlignment="Left" Height="23" Margin="167,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="464"/>
+        <ComboBox x:Name="cmb_Type" HorizontalAlignment="Left" Margin="90,38,0,0" VerticalAlignment="Top" Width="72">
+            <ComboBoxItem Name="object" IsSelected="True">Object</ComboBoxItem>
+            <ComboBoxItem Name="quest">Quest</ComboBoxItem>
+            <ComboBoxItem Name="drop">Drop</ComboBoxItem>
+            <ComboBoxItem Name="container">Container</ComboBoxItem>
+            <ComboBoxItem Name="pickpocket">Pickpocket</ComboBoxItem>
+            <ComboBoxItem Name="vendor">Vendor</ComboBoxItem>
+            <ComboBoxItem Name="chest">Chest</ComboBoxItem>
+            <ComboBoxItem Name="unavailable">Unavailable</ComboBoxItem>
+        </ComboBox>
+
+    </Grid>
+</Window>

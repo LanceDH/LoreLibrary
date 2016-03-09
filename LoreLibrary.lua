@@ -81,10 +81,10 @@ local SIZE_LISTBOOKHEIGHT = 40;
 local MAX_SOURCES = 9;
 local MAX_SUGGESTIONS = 3;
 local SOURCE_TITLE = "This lore can be found in:";
-local SOURCETYPE_OBJECT = "Object found in this area.";
-local SOURCETYPE_NPC = "Can drop from this npc.";
-local SOURCETYPE_CONTAINER = "Can be found in this container.";
-local SOURCETYPE_STEALTH = "Can pickpocket from this npc.";
+local SOURCETYPE_OBJECT = "Object found in a zone.";
+local SOURCETYPE_NPC = "Can drop from an npc.";
+local SOURCETYPE_CONTAINER = "Can be found in a container.";
+local SOURCETYPE_STEALTH = "Can pickpocket from an npc.";
 local SOURCETYPE_QUEST = "Obtained during a quest.";
 local SOURCETYPE_VENDOR = "Sold by a vendor.";
 local SOURCETYPE_CHEST = "Found in a type of chest.";
@@ -1239,8 +1239,11 @@ function _addon:LoadTranslation()
 				end
 			end
 		end
-		
-		
+		if (terms) then
+			for k, v in pairs(terms) do
+				_addon.data.terms[k] = v;
+			end
+		end
 		
 	end
 
@@ -1292,19 +1295,37 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 		lore.title = k;
 		lore.unlocked = false;
 		table.insert(_loreList, lore);
-		
-		for k, loc in ipairs(lore.locations) do
-			if (loc.areaId) then
-			local area = GetMapNameByID(loc.areaId);
-				loc.area = area and area or "";
-			end
-		end
-		
 	end
 	
 	if _addon.translations then
 		_addon:LoadTranslation();
 		_addon:ShowLocalizationMessage();
+	end
+	
+	-- Localize sources
+	local terms = _addon.data.terms;
+	for k, lore in pairs(_data) do
+		for k, loc in ipairs(lore.locations) do
+			-- Get localized area names
+			if (loc.areaId) then
+				local area = GetMapNameByID(loc.areaId);
+				loc.area = area and area or "";
+			end
+			
+			if loc.id then
+				local prefix = "";
+				if (loc.sourceType == "quest") then
+					prefix = "q";
+				elseif (loc.sourceType == "container") then
+					prefix = "i";
+				elseif (loc.sourceType == "drop" or loc.sourceType == "vendor" or loc.sourceType == "pickpocket") then
+					prefix = "n";
+				elseif (loc.sourceType == "chest") then
+					prefix = "o";
+				end
+				loc.source = terms[prefix..loc.id] and terms[prefix..loc.id] or "";
+			end
+		end
 	end
 	
 	if (#LoreLibrary.db.global.unlockedLore > 0) then
@@ -1343,14 +1364,7 @@ SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
 	if msg == "test" then
-		for k, lore in pairs(_data) do
-			for k2, loc in ipairs(lore.locations) do
-				if (loc.area == "") then
-				print(lore.key, loc.areaId);
-				end
-			end
-		end
-		return;
+		_addon:LoadTranslation()
 	end
 
 	if LoreLibraryCore:IsShown() then

@@ -137,9 +137,10 @@
 		
 		<Layers>
 			<Layer level="ARTWORK">
-				<FontString inherits="QuestFont" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="text" text="This is where text goes">
+				<FontString inherits="QuestFont" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="text" maxLines="3" text="This is where text goes">
 					<Anchors>
 						<Anchor point="LEFT" relativeKey="$parent.icon" relativePoint="RIGHT" x="7"/>
+						<Anchor point="RIGHT" x="7"/>
 					</Anchors>
 				</FontString>
 			</Layer>

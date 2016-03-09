@@ -4,6 +4,265 @@ local AREA_WORLDDROP = "World and instances";
 local AREA_CITIES = "Major cities";
 
 _addon.data = {
+["terms"] = {
+	-- quests
+	["q13633"] = "The Black Knight of Westfall?",
+	["q13634"] = "The Black Knight of Silverpine?",
+	["q12122"] = "Gaining an Audience",
+	["q12124"] = "Informing the Queen",
+	["q12119"] = "Gaining an Audience",
+	["q12123"] = "Informing the Queen",
+	["q26443"] = "Diabolical Plans",
+	["q26447"] = "Diabolical Plans",
+	["q10009"] = "Crackin' Some Skulls",
+	["q26354"] = "Captain Sanders' Hidden Treasure",
+	["q26157"] = "Kasim Sharim",
+	["q31254"] = "The Road to Kun-Lai",
+	["q31255"] = "The Road to Kun-Lai",
+	["q10835"] = "Apothecary Antonivich",
+	["q11451"] = "Alicia's Poem",
+	["q30498"] = "Get Back Here!",
+	["q29935"] = "Orders are Orders",
+	["q24454"] = "Return To Caladis Brightspear",
+	["q24558"] = "Return To Myralion Sunblaze",
+	["q26355"] = "Captain Sanders' Hidden Treasure",
+	["q13831"] = "A Troubling Prescription",
+	["q24496"] = "Arcane Rune",
+	["q12140"] = "All Hail Roanauk!",
+	["q11983"] = "Blood Oath of the Horde",
+	["q26640"] = "Unspeakable Atrocities",
+	["q31141"] = "Calligraphed Letter",
+	["q31165"] = "Calligraphed Note",
+	["q31156"] = "Calligraphed Parchment",
+	["q31168"] = "Calligraphed Sigil",
+	["q26691"] = "Worgen in the Woods",
+	["q333"] = "Harlan Needs a Resupply",
+	["q3101"] = "Consecrated Letter",
+	["q27015"] = "Consecrated Note",
+	["q3107"] = "Consecrated Rune",
+	["q29021"] = "Samophlange",
+	["q11650"] = "Just a Few More Things...",
+	["q24667"] = "Firestone Point",
+	["q29034"] = "They Grow Up So Fast",
+	["q28096"] = "Welcome to the Machine",
+	["q27218"] = "Dastardly Denizens of the Deep",
+	["q8287"] = "A Terrible Purpose",
+	["q31150"] = "Elegant Rune",
+	["q31146"] = "Scribbled Scroll",
+	["q24494"] = "Empowered Rune",
+	["q3102"] = "Encrypted Letter",
+	["q3088"] = "Encrypted Parchment",
+	["q3109"] = "Encrypted Rune",
+	["q3096"] = "Encrypted Scroll",
+	["q3118"] = "Encrypted Sigil",
+	["q26910"] = "Etched Letter",
+	["q3092"] = "Etched Note",
+	["q3087"] = "Etched Parchment",
+	["q3108"] = "Etched Rune",
+	["q3117"] = "Etched Sigil",
+	["q27106"] = "A Villain Unmasked",
+	["q38934"] = "Silas' Secret Stash",
+	["q13139"] = "Into The Frozen Heart Of Northrend",
+	["q14233"] = "Orcs Can Write?",
+	["q14234"] = "The Enemy of My Enemy",
+	["q26356"] = "Captain Sanders' Hidden Treasure",
+	["q8228"] = "Could I get a Fishing Flier?",
+	["q8229"] = "Could I get a Fishing Flier?",
+	["q8149"] = "Honoring a Hero",
+	["q26841"] = "Forbidden Sigil",
+	["q184"] = "Furlbrow's Deed",
+	["q9706"] = "Galaen's Journal - The Fate of Vindicator Saruan",
+	["q3104"] = "Glyphic Letter",
+	["q25138"] = "Glyphic Parchment",
+	["q3098"] = "Glyphic Scroll",
+	["q9821"] = "Eating Damnation",
+	["q107"] = "Note to William",
+	["q10045"] = "Material Components",
+	["q6387"] = "Honor Students",
+	["q6391"] = "Ride to Ironforge",
+	["q6385"] = "Doras the Wind Rider Master",
+	["q6386"] = "Return to Razor Hill",
+	["q3103"] = "Hallowed Letter",
+	["q27014"] = "Hallowed Note",
+	["q3110"] = "Hallowed Rune",
+	["q3097"] = "Hallowed Scroll",
+	["q3119"] = "Hallowed Sigil",
+	["q13751"] = "Tell No One!",
+	["q26855"] = "A Pilot's Revenge",
+	["q30499"] = "Get Back Here!",
+	["q11089"] = "The Soul Cannon of Reth'hedron",
+	["q11013"] = "In Service of the Illidari",
+	["q301"] = "Report to Ironforge",
+	["q32317"] = "Seeking the Soulstones",
+	["q32309"] = "A Tale of Six Masters",
+	["q32310"] = "A Tale of Six Masters",
+	["q9621"] = "Envoy to the Horde",
+	["q12033"] = "Message from the West",
+	["q9626"] = "Meeting the Warchief",
+	["q26681"] = "Note to the Mayor",
+	["q8891"] = "Abandoned Investigations",
+	["q54"] = "Report to Goldshire",
+	["q106"] = "Young Lovers",
+	["q6323"] = "Ride to the Undercity",
+	["q6321"] = "Supplying Brill",
+	["q10183"] = "Off To Area 52",
+	["q10252"] = "Vision of the Dead",
+	["q12883"] = "Orders From Drakuru",
+	["q12884"] = "The Ebon Watch",
+	["q10120"] = "Arrival in Outland",
+	["q10289"] = "Journey to Thrallmar",
+	["q30015"] = "Dawn's Blossom",
+	["q29555"] = "The White Pawn",
+	["q7161"] = "Proving Grounds",
+	["q840"] = "Conscript of the Horde",
+	["q25696"] = "The Sunveil Excursion",
+	["q3093"] = "Rune-Inscribed Note",
+	["q3089"] = "Rune-Inscribed Parchment",
+	["q31068"] = "Sacred Recipe",
+	["q32376"] = "To the Valley!",
+	["q291"] = "The Reports",
+	["q3100"] = "Simple Letter",
+	["q3091"] = "Simple Note",
+	["q2383"] = "Simple Parchment",
+	["q3106"] = "Simple Rune",
+	["q3095"] = "Simple Scroll",
+	["q3116"] = "Simple Sigil",
+	["q6342"] = "An Unexpected Gift",
+	["q6341"] = "To Darnassus",
+	["q13848"] = "Bad News Bear-er",
+	["q27247"] = "Captain Vimes",
+	["q27246"] = "The Orc Report",
+	["q27244"] = "The Lost Report",
+	["q1338"] = "Stormpike's Order",
+	["q59"] = "Cloth and Leather Armor",
+	["q3105"] = "Tainted Letter",
+	["q3090"] = "Tainted Parchment",
+	["q3115"] = "Tainted Rune",
+	["q3099"] = "Tainted Scroll",
+	["q27551"] = "The Baroness' Missive",
+	["q28196"] = "The Battle for Hillsbrad",
+	["q123"] = "The Collector",
+	["q28643"] = "The Durnholde Challenge: Zephyrus",
+	["q7063"] = "The Feast of Winter Veil",
+	["q7061"] = "The Feast of Winter Veil",
+	["q7162"] = "Proving Grounds",
+	["q8150"] = "Honoring a Hero",
+	["q26671"] = "The Fate of Stalvan Mistmantle",
+	["q11695"] = "The Horn of Elemental Fury",
+	["q12757"] = "Scarlet Armies Approach...",
+	["q12756"] = "The Scarlet Onslaught Emerges",
+	["q26794"] = "Morgan Ladimore",
+	["q33332"] = "Hints From The Past",
+	["q13188"] = "Where Kings Walk",
+	["q13189"] = "Warchief's Blessing",
+	["q11242"] = "Free at Last!",
+	["q11403"] = "Free at Last!",
+	["q24962"] = "Trail-Worn Scroll",
+	["q9698"] = "Audience with the Prophet",
+	["q751"] = "The Ravaged Caravan",
+	["q3094"] = "Verdant Note",
+	["q3120"] = "Verdant Sigil",
+	["q35925"] = "The Gronn Strategy",
+	["q26667"] = "The Stolen Letters",
+	["q26669"] = "In A Dark Corner",
+	["q32257"] = "Voice of the Gods",
+	["q26545"] = "Yowler Must Die!",
+	["q26544"] = "They've Wised Up...",
+	["q26612"] = "Details of the Attack",
+	["q26744"] = "Deep Roots",
+	["q9917"] = "Do My Eyes Deceive Me",
+	["q34593"] = "Obtaining Ogre Offensive Orders",
+	["q35157"] = "Obtaining Ogre Offensive Orders",
+	["q27963"] = "A New Master... But Who?",
+	["q27235"] = "Renn McGill",
+	["q14017"] = "The Black Knight's Fate",
+	["q30129"] = "The Mogu Agenda",
+	["q30346"] = "Where are the Pools",
+	["q24709"] = "A Tale of Two Shovels",
+	["q35840"] = "Intercepting the Orders",
+	["q35846"] = "Intercepting the Orders",
+	["q26286"] = "In Defense of Westfall",
+	["q26503"] = "Still Assessing the Threat",
+	["q36209"] = "What's Under There?",
+	["q35041"] = "Xuk It!",
+	["q10774"] = "Blood Elf + Giant = ???",
+	["q10765"] = "When Worlds Collide...",
+	["q26295"] = "Propaganda",
+	["q26735"] = "The Fate of Kurzen",
+	["q12000"] = "Rifle the Bodies",
+	["q11999"] = "Rifle the Bodies",
+	["q26670"] = "Roland's Doom",
+	["q26214"] = "Hot On the Trail: Murlocs",
+	["q27305"] = "Of Love and Family",
+	["q27364"] = "On Whose Orders?",
+	["q25062"] = "What We Came For",
+	["q12755"] = "A Meeting With Fate",
+	["q12754"] = "Ambush At The Overlook",
+	["q24972"] = "Vital Intelligence",
+	["q24557"] = "The Silver Covenant's Scheme",
+	["q29900"] = "An Ancient Legend",
+	["q10570"] = "To Catch A Thistlehead",
+	["q14457"] = "The Sunreaver Plan",
+	["q12283"] = "The Truth Will Out",
+	["q12477"] = "The Path of Redemption",
+	["q36223"] = "Leave Every Soldier Behind",
+	["q35129"] = "Leave Every Soldier Behind",
+	["q9602"] = "Deliver Them From Evil...",
+	["q9537"] = "Show Gnomercy",
+	["q11886"] = "Unusual Activity",
+	["q24981"] = "A Thorn in our Side",
+	["q32397"] = "He Won't Even Miss It",
+	-- Items
+	["i20676"] = "Decoded Twilight Text",
+	["i114116"] = "Bag of Salvaged Goods",
+	["i114119"] = "Crate of Salvage",
+	["i114120"] = "Big Crate of Salvage",
+	["i46007"] = "Bag of Fishing Treasures",
+	["i94566"] = "Fortuitous Coffer",
+	["i49926"] = "Brazie's Black Book of Secrets",
+	["i6307"] = "Message in a Bottle",
+	["i34077"] = "Crudely Wrapped Gift",
+	["i21315"] = "Smokywood Satchel",
+	["i97153"] = "Spoils of the Thunder King",
+	["i113258"] = "Blingtron 5000 Gift Package",
+	-- NPCs
+	["n80882"] = "Crafticus Mindbender",
+	["n85115"] = "Dazzerian",
+	["n65003"] = "Martar the Not-So-Smart",
+	["n81171"] = "Frostdeep Cavedweller",
+	["n85715"] = "Lunarfall Cavedweller",
+	["n73305"] = "Mistweaver Ai",
+	["n28347"] = "Miles Sidney",
+	["n27539"] = "Frigid Necromancer",
+	["n37904"] = "Brazie Getz",
+	["n60767"] = "Captain Ripflesh",
+	["n24286"] = "Forsaken Spy",
+	["n33456"] = "Gorick Guzzledraught",
+	["n808"] = "Grik'nir the Cold",
+	["n88279"] = "Twisted Guardian",
+	["n88394"] = "Enthralled Mutant",
+	["n90107"] = "Demolitionist Megacharge",
+	["n78501"] = "Kaelynara Sunchaser",
+	["n6209"] = "Caverndeep Looter",
+	-- Chests
+	["o224217"] = "Dusty Chest",
+	["o242519"] = "Suspicious Mound",
+	["o152620"] = "Azsharite Formation",
+	["o235638"] = "Uratok's Strongbox",
+	["o235365"] = "Admiral Taylor's Coffer",
+	["o241433"] = "Forgotten Sack",
+	["o141596"] = "Witch Doctor's Chest",
+	["o240016"] = "Artificer's Journal",
+	["o2560"] = "Half-Buried Bottle",
+	["o242518"] = "Barnacle-Covered Bag",
+	["o242520"] = "Crystallized Note",
+	["o229328"] = "Envoy's Satchel",
+	["o13949"] = "Pitted Iron Chest",
+	["o242521"] = "Disturbed Dirt",
+	["o196462"] = "Giant-Sized Laxative",
+	["o193402"] = "Rusted Prisoner's Footlocker",
+	["o230401"] = "Sealed Jug",
+},
 ["lore"] = {
 ["A Treatise on Military Ranks"] = {
 	["info"] = {["type"] = "object", ["id"] = 179706},
@@ -44,8 +303,8 @@ _addon.data = {
 		"Leafing through the book's crumbling pages reveals nothing more than descriptions of life on the Valgan farm. The changing of seasons, planting and harvesting of crops are noted, along with the births and deaths of children.\n\nThe entries end abruptly with a short description of the plague. None of the children described could have been old enough to complete training as a knight, if any survived the plague at all.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 492, ["id"] = 13633,  ["source"] = "The Black Knight of Westfall?",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 492, ["id"] = 13634,  ["source"] = "The Black Knight of Silverpine?",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 492, ["id"] = 13633, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 492, ["id"] = 13634, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Letter of Introduction to Wyrmrest Temple"] = {
@@ -57,10 +316,10 @@ _addon.data = {
 		"My queen,\n\nIt has been discovered that the ley line intersection at Moonrest Gardens was unfettered by the blue dragonflight. Their forces used a surge needle to destroy the capstone, but instead of flowing the power back to the Nexus, they utilized a series of foci to clumsily run and augment the power under the land to the Azure Dragonshrine.\n\nNeedless to say, this has had dire consequences wherever the magic shot up through the ground. The Ancients of the woodlands, the Kalu'ak, and other creatures in the region have been adversely affected. &lt;name&gt;, the &lt;race&gt; who stands before you, was very helpful in tracking down and dealing with these issues.\n\nIn my opinion, &lt;name&gt; could be useful for Wyrmrest in dealing with the problems that the temple currently faces. I humbly ask that you consider &lt;him/her&gt; an asset, one which I found to be quite acceptable.\n\nYours ever respectfully,\n\nAethas Sunreaver\nArchmage and Member of the Six",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12122,  ["source"] = "Gaining an Audience",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12124,  ["source"] = "Informing the Queen",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12119,  ["source"] = "Gaining an Audience",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12123,  ["source"] = "Informing the Queen",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12122, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12124, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12119, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12123, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Faded Note"] = {
@@ -75,9 +334,9 @@ _addon.data = {
 		"Another note, another tease, it's enough to make you weak in the knees!\n\nYou're almost there, look for your next hint, next to a fellow that was negligent.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["source"] = "Dusty Chest",  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["id"] = 224217,  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
 		{ ["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "55.3",  ["y"] = "18.1"},
-		{ ["sourceType"] = "chest",  ["areaId"] = 823, ["source"] = "Suspicious Mound",  ["level"] = "0",  ["x"] = "53.2",  ["y"] = "60.4", },
+		{ ["sourceType"] = "chest",  ["areaId"] = 823, ["id"] = 242519,  ["level"] = "0",  ["x"] = "53.2",  ["y"] = "60.4", },
 	},
 },
 ["Diabolical Plans"] = {
@@ -91,8 +350,8 @@ _addon.data = {
 		"The time has come to retake a few of the lesser races, I think. Splintertree Post to the northwest makes a tempting target. We should confer on combining our forces for an attack before the next full moon of this pathetic world. If we subjugate them now they will come to remember what the word 'Horde' truly used to mean!\n\nRegards,\n\nGorgannon\n\np.s. - Stop using up all of the blood ink on love letters to my lashers! Night elf virgins are in short supply these days.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 43, ["id"] = 26443, ["source"] = "Diabolical Plans",  ["level"] = "A", },
-		{ ["sourceType"] = "quest",  ["areaId"] = 43, ["id"] = 23798, ["source"] = "Diabolical Plans",  ["level"] = "H", },
+		{ ["sourceType"] = "quest",  ["areaId"] = 43, ["id"] = 26443, ["level"] = "A", },
+		{ ["sourceType"] = "quest",  ["areaId"] = 43, ["id"] = 26447, ["level"] = "H", },
 	},
 },
 ["Crystallized Note"] = {
@@ -106,7 +365,7 @@ _addon.data = {
 		"Should any manner of intelligent life find this note, they must ask themselves something: \"Why in the hell are they romping around with violent thirty foot tall giants?\"\n\n- Mook",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 181,  ["source"] = "Azsharite Formation",  ["level"] = "0",  ["x"] = "49.5",  ["y"] = "77.4", },
+		{ ["sourceType"] = "chest",  ["areaId"] = 181,  ["id"] = 152620,  ["level"] = "0",  ["x"] = "49.5",  ["y"] = "77.4", },
 	},
 },
 ["Hai-pu"] = {
@@ -149,7 +408,7 @@ _addon.data = {
 		"Faith. Faith is the wellspring from which the joy of servitude showers us. Faith will keep us warm on the coldest Silithus nights. Faith will keep us in our Lords' good graces when the Ending Days arrive.\n\nFaith will save us.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Decoded True Believer Clippings",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 20676,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Death Knights of Acherus"] = {
@@ -3529,9 +3788,11 @@ _addon.data = {
 		"\"Never one like this.\" Raven replied with a wink.\n\n\"We need to work on that grip, it's too tight. Perhaps you have time for some practice?\" Marcus asked, peering into Raven's dark brown eyes.\n\nRaven grinned. \"I'll go tie up your horse...\"\n\n&lt;The remaining pages are not yet written. It appears to be a work in progress.&gt;",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["areaId"] = 978,  ["source"] = "Crafticus Mindbender",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "drop", ["areaId"] = 978,  ["source"] = "Dazzerian",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "container",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "drop", ["areaId"] = 978,  ["id"] = 80882,  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["areaId"] = 978,  ["id"] = 85115,  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container",  ["id"] = 114116,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114119,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114120,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 	},
 },
 ["A Steamy Romance Novel"] = {
@@ -3542,8 +3803,10 @@ _addon.data = {
 		"Marcus stepped toward her, bristling with a mixture of fear and anger. \"The reward is not negotiable!\" He paused for a moment while gathering his nerve, and pressed himself against her diminutive form. Their lips met hotly, melting her frost armor spell in a torrent of sweltering vapor.\n\n\"So, is there another step to this quest?\" she teased, her eyes glittering with excitement.\n\n&lt;This goes on for several hundred more pages, without advancing the plot.&gt;",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "container",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "drop", ["areaId"] = 806,  ["id"] = 65003,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container",  ["id"] = 114116,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114119,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114120,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 61 to 70 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
@@ -3558,8 +3821,10 @@ _addon.data = {
 		"\"No.  No.  I won't do that... but my sister will!\" the blonde giggled.  The dark-haired one silently raised a single eyebrow, nodding and shrugging her delicate shoulders at the same time.  With a subtle gesture, her body glowed with an intense inner fire, burning away what little clothing she wore.  As Marcus's muscular arms wrapped around her, she whispered something to him.  A symbol, unseen by Marcus, momentarily appeared above his head and surrounded him in a white glow.\n\n\"That... that feels amazing.  What did you do?\" he asked.\n\n\"Fortitude, my lord.  You will need it.\"  It was then that he noticed she was literally levitating off the ground, weightless in his arms.  His mind began to spin as countless scenarios played out in his head.  His strong hands began to...\n\n&lt;The remaining pages are shrouded in mist.&gt;",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["sourceType"] = "container",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "drop", ["areaId"] = 806, ["id"] = 65003,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114116,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114119,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114120,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 90 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
@@ -3573,12 +3838,14 @@ _addon.data = {
 		"Gritting his teeth, Marcus gestured as light flashed over him, restoring his strength.\n\nTavi stared anxiously as he rose to his full height, engulfing her in his shadow. He thrust his hand forward, sending a wave of righteous force through her. Eyes rolled back as she wavered for several seconds before regaining consciousness.\n\n\"I've recently taken the path of... retribution.\"\n\nThe mischievous smirk returned to her face, \"Well then, this is going to be fun.\"\n\n&lt;The remaining pages have a level 999 requirement to read.&gt;",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["areaId"] = 978,  ["source"] = "Dazzerian",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "drop", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "drop", ["areaId"] = 976,  ["source"] = "Frostdeep Cavedweller",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "drop", ["areaId"] = 971,  ["source"] = "Lunarfall Cavedweller",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "container",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
-		{["sourceType"] = "container",  ["source"] = "Bag of Fishing Treasures",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "drop", ["areaId"] = 978,  ["id"] = 85115,  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["areaId"] = 806, ["id"] = 65003,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["areaId"] = 976,  ["id"] = 81171,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "drop", ["areaId"] = 971,  ["id"] = 85715,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container",  ["id"] = 114116,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114119,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114120,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 46007,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 	},
 },
 ["A Steamy Romance Novel: Forbidden Love"] = {
@@ -3589,8 +3856,10 @@ _addon.data = {
 		"Leaning forward, she counted out loud until the invisible bubble dissipated with an audible pop. \"Twelve seconds? I know you have abilities that last longer than that.\"\n\nBony fingers worked effortlessly beneath his armor, unlatching his breastplate and exposing him to the cold air. \"Don't worry my sweet Marcus, that's not a finishing move tonight... I'm just getting started.\" He wrapped his arms around what remained of her waist, forcing an excited giggle as he nibbled at her neck vertebrae.\n\n&lt;The rest of the book has several sections that are apparently worn out from repeated readings.&gt;",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "container",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "drop", ["areaId"] = 806, ["id"] = 65003,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container",  ["id"] = 114116,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114119,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114120,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 71 to 80 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
@@ -3605,8 +3874,10 @@ _addon.data = {
 		"Jack nodded. \"What about that guy from the motor club you was datin'?\"\n \nThe leather-clad goblin scooped up her bag with one arm, and held up an outstretched hand. \"He never put a ring on it. A girl's gotta have her priorities.\" \n\nJack smiled and shook his head as he watched her walk out of the shop.\n \n&lt;The remaining pages require a secret goblin decoder ring to read.&gt;",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "container",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "drop", ["areaId"] = 806, ["id"] = 65003,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container",  ["id"] = 114116,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114119,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114120,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP,  ["source"] = "Level 81 to 85 npcs",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
@@ -3619,8 +3890,10 @@ _addon.data = {
 		"Despite the statement, her words seemed to do the trick. Marcus smirked roguishly as he adjusted his leg plates, \"Well you aren't the only gifted one.\"\n\nSilence penetrated the room with palpable force as the conversation shifted to the language shared by all races of Azeroth.\n\nMinutes became hours, until their passionate dialog was interrupted by lightning streaking from the cloudless sky, thunderously slamming into the lake's surface and bathing them in steam.\n\n\"Is something wrong?\", Marcus asked.\n\n\"No my Marcus, you're just off to a great start...\"\n\nThe remaining pages have been thoroughly destroyed by the elements.",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["areaId"] = 806,  ["source"] = "Martar the Not-So-Smart",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{["sourceType"] = "container",  ["source"] = "Garrison Salvage",  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "drop", ["areaId"] = 806, ["id"] = 65003,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{["sourceType"] = "container",  ["id"] = 114116,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114119,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
+		{["sourceType"] = "container",  ["id"] = 114120,  ["level"] = "0",  ["x"] = "44.2",  ["y"] = "42.6"},
 		{["sourceType"] = "pickpocket", ["area"] = "Trial of the Champion",  ["source"] = "Argent Confessor Paletress",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
@@ -3735,7 +4008,7 @@ _addon.data = {
 		"(3) Floon: Arakkoa. Lost many golds to Sal'salabim. Sal'salabim killed bird-man for not paying. Now ghost bird-man walks in northwest part of Bone Wastes.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 481, ["id"] = 10009,  ["source"] = "Crackin' Some Skulls",  ["level"] = "",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 481, ["id"] = 10009, ["level"] = "",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Clue to Sanders' Treasure"] = {
@@ -3744,7 +4017,7 @@ _addon.data = {
 		"Good work, matey! Now ye need to head due east. East up the bluffs, east to the road. Look for the ol' chimney ruins near the side of the road. There you'll find an old barrel with your next clue.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26354,  ["source"] = "Captain Sanders' Hidden Treasure",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26354, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Letter to Kasim Sharim"] = {
@@ -3753,7 +4026,7 @@ _addon.data = {
 		"Kasim,\n\nHe has returned.\n\n  - Watcher Mahar Ba",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 19, ["id"] = 26157,  ["source"] = "Kasim Sharim",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 19, ["id"] = 26157, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Missive from Lorewalker Cho"] = {
@@ -3762,8 +4035,8 @@ _addon.data = {
 		"$p,\n\nYour companions that survived the battle with the Sha of Doubt are now in the care of Binan Village, home to Pandaria's finest healers. It looks as though they shall recover their physical injuries.\n\nThe journey to Binan will take you up the Veiled Stair to the very doorstep of Kun-Lai Summit. I urge you to bring this missive to Mayor Bramblestaff in Binan Village. There, he can direct you to your companions.\n\nI look forward to our paths crossing again.\n\n-Lorewalker Cho",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 807, ["id"] = 31254,  ["source"] = "The Road to Kun-Lai",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 807, ["id"] = 31255,  ["source"] = "The Road to Kun-Lai",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 807, ["id"] = 31254, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 807, ["id"] = 31255, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Albreck's Findings"] = {
@@ -3773,7 +4046,7 @@ _addon.data = {
 		"It is impossible for Mannoroth's influence to reach across to Outland -- the beast has been dead for years -- but I fear another Pit Lord may be at play here. A Pit Lord of Mannoroth's power... one able to corrupt the indigenous orcs.\n\nI will continue my studies of Bleeding Hollow Blood, but I urge you to pursue the trail. And, I fear, that trail may lead deep into Hellfire Citadel.\n\nScholarly Yours,\nApothecary Albreck",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 465, ["id"] = 16588,  ["source"] = "Apothecary Antonivich",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 465, ["id"] = 10835, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Alicia's Poem"] = {
@@ -3782,7 +4055,7 @@ _addon.data = {
 		"Do not stand at my grave and weep, \nI am not there, I do not sleep.\n\nI am in a thousand winds that blow, \nacross Northrend's bright and shining snow.\n\nI am the gentle showers of rain, \non Westfall's fields of golden grain. \n\nI am in the morning hush, \nof Stranglethorn's jungle, green and lush.\n\nI am in the drums loud and grand,\nthe thunderous hooves across Nagrand.\n\nI am the stars warmly gleaming,\nover Darnassus softly dreaming.\n\nI am in the birds that sing,\nI am in each lovely thing.\n\nDo not stand at my grave and cry, \nI am not there. I do not die.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 11451,  ["source"] = "Alicia's Poem",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 11451, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Alliance Missive"] = {
@@ -3791,7 +4064,7 @@ _addon.data = {
 		"Whatever you're up to, &lt;name&gt;, make an end of it.\n\nThe Horde and their savage monkeys are preparing to attack.\n\nThey outnumber our forces considerably and must not be allowed the time to train their forces.\n\nPut an end to whatever distractions you're engaged in and return to Pearlfin Village at once.\n\n- Admiral Taylor",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 30498,  ["source"] = "Get Back Here!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 30498, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Alliance Orders"] = {
@@ -3800,7 +4073,7 @@ _addon.data = {
 		"By order of King Wrynn, this land is to be scoured in all haste until the White Pawn is found and returned to safety.\n\nNo expense is to be spared in this effort, including - if necessary - the blood of any subjects who find themselves serving in this foreign land.\n\nThe families of any such heroes lost in this noble endeavor will be well cared for, and the one who secures the asset may name his reward.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 29935,  ["source"] = "Orders are Orders",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 29935, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Ancient Dragonforged Blades"] = {
@@ -3809,8 +4082,8 @@ _addon.data = {
 		"Rare indeed are the 'prismatic' blades forged by the combined will of the five dragonflights. Among the greatest of these blades were the sister swords of Quel'Serrar and Quel'Delar.\n\nIn her wisdom, the dragon queen Alexstrasza gifted one of the blades to each of the elven peoples of Azeroth. Quel'Serrar was to be borne by a valiant kaldorei warrior, while Quel'Delar was entrusted to a quel'dorei champion.\n\nEach blade transformed in the hands of its wielder, molding its magic to its master's strengths...",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 504, ["id"] = 24454,  ["source"] = "Return To Caladis Brightspear",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 504, ["id"] = 24558,  ["source"] = "Return To Myralion Sunblaze",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 504, ["id"] = 24454, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 504, ["id"] = 24558, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Another Clue to Sanders' Treasure"] = {
@@ -3819,7 +4092,7 @@ _addon.data = {
 		"Now from this here barrel, face ye North. Straight as the crow flies, keep ye walkin' till you see the empty jug next to the lone windmill on the sea bluffs. If ye poke around that jug, ye just might find what you're lookin' for.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26355,  ["source"] = "Captain Sanders' Hidden Treasure",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26355, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Apothecary Furrows' Notes"] = {
@@ -3828,7 +4101,7 @@ _addon.data = {
 		"&lt;The Apothecary's notes are scribbled in a cramped hand, with complex alchemic formulas interspersed among childlike doodles of skulls and lightning bolts. Squinting, you can make out parts of a recent passage:&gt;\n\n...most magnificent corruption, embedding itself deep within living tissue. Extremely contagious when &lt;several words are smudged&gt; via food chain. Today's tests confirm it is only partially biological in origin. Foulhoof, my &lt;illegible&gt; companion, preoccupied with vengeance and blind to the more 'constructive' applications of his &lt;a greenish ichor stains the remainder of the paragraph.&gt; Research progresses slowly. Hope my companions at Althalaxx fare better.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 42, ["id"] = 13831,  ["source"] = "A Troubling Prescription",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 42, ["id"] = 13831, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Arcane Rune"] = {
@@ -3837,7 +4110,7 @@ _addon.data = {
 		"Those of us who are agile of mind, but not quite so agile of body, must find... alternative methods of self-preservation. Many such people choose to pursue a career in matters magical.\n\n&lt;name&gt;, I've been observing you, and you have a mind like a steel trap. However, to thrive in this time of upheaval, a person such as yourself will need to master the arcane arts. And to master the arcane arts, you're going to have to talk to me.\n\nCome speak with me in Anvilmar. We've much to discuss.\n\n-Teegli Merrowith",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 24496,  ["source"] = "Arcane Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 24496, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Blood Oath of the Horde"] = {
@@ -3846,8 +4119,8 @@ _addon.data = {
 		"Lok'tar ogar! Victory or death - it is these words that bind me to the Horde. For they are the most sacred and fundamental of truths to any warrior of the Horde.\n\nI give my flesh and blood freely to the Warchief. I am the instrument of my Warchief's desire. I am a weapon of my Warchief's command.\n\nFrom this moment until the end of days I live and die - For the Horde!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12140,  ["source"] = "All Hail Roanauk!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 11983,  ["source"] = "Blood Oath of the Horde",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12140, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 11983, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Brubaker's Report"] = {
@@ -3856,7 +4129,7 @@ _addon.data = {
 		"Keeshan, if you're reading this note, I'm dead. Likely that my position was compromised.\n\nOrcs are committing unspeakable atrocities against their prisoners. Yes, prisoners, Keeshan. They've got cages full of P.O.W's. If you're gonna blow up this valley, you'll need to free the prisoners first.\n\nTell my wife I love her and to take out the damned trash.\n\n-Brubaker\n\nPS - They've got black dragons.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26640,  ["source"] = "Unspeakable Atrocities",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26640, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Calligraphed Letter"] = {
@@ -3865,7 +4138,7 @@ _addon.data = {
 		"I am glad you are interested in taking up the ways of the monk. I have come from afar to bring the wisdom of my people to your kind.\nI have taken up residence in the abbey, training any who wish to learn our arts. Come, visit, and I shall train you.\n\nYours,\nBao",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 31141,  ["source"] = "Calligraphed Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 31141, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Calligraphed Note"] = {
@@ -3874,7 +4147,7 @@ _addon.data = {
 		"I have been visiting with your tribe for a while now, and while some have tried to learn our arts, none have shown the promise that you have. \n\nPlease, come meet me at Camp Narache. I have learned so much from your tribe, I feel it is time I return the favor.\n\n-Shoyu",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 31165,  ["source"] = "Calligraphed Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 31165, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Calligraphed Parchment"] = {
@@ -3883,7 +4156,7 @@ _addon.data = {
 		"I came here from afar to learn of your people's ways, and to teach you mine. You do me a great honor by volunteering to learn the ways of the Monk. In time, there is much I will show you, but for now, we must meet for our first lessons. Come, meet me in the Valley of Trials, and we will begin your training.\n\n-Gato",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 31156,  ["source"] = "Calligraphed Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 31156, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Calligraphed Sigil"] = {
@@ -3892,7 +4165,7 @@ _addon.data = {
 		"Hello, &lt;class&gt;. I have seen that you are interested in learning the ways of the monk. I would be honored to begin your training, as you seem like quite an auspicious pupil. Come to Aldrassil, on the lower levels.\n\n-Laoxi",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 31168,  ["source"] = "Calligraphed Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 31168, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Calor's Note"] = {
@@ -3901,7 +4174,7 @@ _addon.data = {
 		"Master Carevin,\n\nThe bearer of this note has shown &lt;himself/herself&gt; to be upstanding in the Light, capable of battling the undead and demons that plague the borders of Duskwood, and willing to join the Carevin family in their cause of Light.\n\nI would thereby suggest that you give this warrior of the Light further duties--perhaps to investigate some of the townsfolk that are under suspicion of succor to the enemies of the Light.\n\nYours faithfully,\nCalor",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26691,  ["source"] = "Worgen in the Woods",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26691, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Cloth Request"] = {
@@ -3910,7 +4183,7 @@ _addon.data = {
 		"To the Schneiders,\n\nGood day. I trust business in the canal district is good. We are booming here in the trader's square.\n\nWe are in need of knitted cloth goods, as our supply is all but depleted. Please send the standard load as soon as you are able.\n\nGood fortune, and I hope your son Thurman's studies progress well,\n\n--Harlan Bagley",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 333,  ["source"] = "Harlan Needs a Resupply",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 333, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Consecrated Letter"] = {
@@ -3919,7 +4192,7 @@ _addon.data = {
 		"I hope this letter finds you well, &lt;class&gt;. I say that with great pride, because not many can profess such profound faith, but also know that they are among the most elite of Azeroth's protectors.\n\nAlways remember, first and foremost, it is your duty to go to battle against those who seek to harm our world and bring corruption into our homes.\n\nI have been given authority over your training for the time being. When you are ready, seek me out inside Northshire Abbey.\n\n-Brother Sammuel, Paladin Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3101,  ["source"] = "Consecrated Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3101, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Consecrated Note"] = {
@@ -3928,7 +4201,7 @@ _addon.data = {
 		"I have been awaiting your arrival, sunwalker. Chief Hawkwind himself told me of your interest in our order and I have agreed to begin your training. Please meet with me in the circle at the center of Camp Narache when you are ready to begin your instruction.\n\nSunwalker Helaku",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 27015,  ["source"] = "Consecrated Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 27015, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Consecrated Rune"] = {
@@ -3937,7 +4210,7 @@ _addon.data = {
 		"Some fear our kind more than dragons. Some envy us more than the most skilled blacksmiths. Some praise our strength in battle. Others revel in our faith. Some are just jealous that we can drink them under the table! But know this, &lt;class&gt;, you are among the most elite protectors in all of Azeroth. The Holy Light gives us strength as much as we strengthen it.\n\nI would tell you more when you've gotten acquainted with the land some. Find me inside Anvilmar above the Valley.\n\n-Bromos Grummner, Paladin Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3107,  ["source"] = "Consecrated Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3107, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Control Console Operating Manual"] = {
@@ -3949,7 +4222,7 @@ _addon.data = {
 		"IV. Flow Controls\n\nIncrease or decrease the flow rates. This is automatically controlled by the samophlange control mechanism.\n\nV. Temperature Gauge\n\nDisplays the operating temperature of the system in general.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 11, ["id"] = 29021,  ["source"] = "Samophlange",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 11, ["id"] = 29021, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Crafty's Shopping List"] = {
@@ -3961,7 +4234,7 @@ _addon.data = {
 		"<HTML><BODY><BR/><H1 align=\"center\">A Handful of Rocknar's Grit</H1><BR/><P>This last bit might be a little tricky to get, but it's necessary to fashion the blaster's lens from only the finest sand. That means obtaining it from a top-notch elemental.</P><BR/><P>Rocknar will do nicely. He was spotted to the southeast in the Frozen Reach between Unu'pe and the Wailing Ziggurat. Go break down his icy exterior to get to his rocky core and bring me back a handful.</P></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 486, ["id"] = 11650,  ["source"] = "Just a Few More Things...",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 486, ["id"] = 11650, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Crawgol's Silithid Field Guide"] = {
@@ -3971,7 +4244,7 @@ _addon.data = {
 		"Burning makes them die. They have shells (called cara pieces because they are made from cara obviously) that can't be stabbed unless you do it hard.\n\nThey can dig fast but I don't know how fast because they dig in the dirt.\n\nTHE ORIGIN OF THE SILITHID\n\nAlmost all silithid come from holes, usually in the ground.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 607, ["id"] = 24667,  ["source"] = "Firestone Point",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 607, ["id"] = 24667, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Cub's First Toy"] = {
@@ -3980,7 +4253,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/Winterspring_Memento_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 281, ["id"] = 29034,  ["source"] = "They Grow Up So Fast",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 281, ["id"] = 29034, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Daily Report - Hillsbrad Foothills"] = {
@@ -3991,7 +4264,7 @@ _addon.data = {
 		"Azurelode Spider Farm Productivity Issues\n\nOur spider domestication operations in the area near Azurelode Mine, located in the southwest region of Hillsbrad, are seeing extremely low production numbers. Spider-Handler Sarus and Captain Keyton have requested assistance.\n\nRecommendation: Send capable heroes to investigate.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 28096,  ["source"] = "Welcome to the Machine",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 28096, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Dastardly Denizens of the Deep"] = {
@@ -4001,7 +4274,7 @@ _addon.data = {
 		"The mighty creature's maw opened wide, tossing bolts of icy water toward our vessel. Those terrible jaws clamped down upon the bow of our ship, tearing it from the hull. Sailors and cargo were thrown violently into the sea as the remnants of the ship disappeared beneath the waves.\n\nThe last thing I remember was flying from the broken hull, hitting the inky waters, and plunging beneath the waves. The world went dark and I thought for certain I'd drawn my last breath. When I awoke in Theramore's infirmary, I knew someone had to tell our story.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27218,  ["source"] = "Dastardly Denizens of the Deep",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27218, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Decoded Tablet Transcription"] = {
@@ -4012,7 +4285,7 @@ _addon.data = {
 		"Day 15\nOur dedication has paid off. We are the first camp to finish the construction of a wind stone. If the other fools had stayed with us we would've completed the task in less than a week! \n\nTomorrow we shall begin the rituals involved in summoning Baron Kazum himself. He demanded to be the first to test the system and we couldn't contradict him as he's quick to anger. \n\nI expect he will be most pleased with us.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 261, ["id"] = 8287, ["source"] = "A Terrible Purpose",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 261, ["id"] = 8287, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Elegant Rune"] = {
@@ -4021,7 +4294,7 @@ _addon.data = {
 		"Friend, I am honored that you have chosen to learn the ways of the monk, the art of my people. Your interest heartens me, and allows me to return the hospitality that I have been shown by your kind and generous people here. Come, meet me in Anvilmar, and I will train you in our ways.\n\nYours,\nLo",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 31150,  ["source"] = "Elegant Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 31150, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Elegant Scroll"] = {
@@ -4030,7 +4303,7 @@ _addon.data = {
 		"Hello,\n\nI am Ting, Strong of Stomach. I come from lands far away.\n\nI may not be one of you Forsaken, but it is clear that you are strong in mind and body. Some of my people do not believe that your people can be trained in the arts of the Monk, but I do not share their prejudice. Come to me, and I will teach you to fight!\n\n-Ting, Strong of Stomach",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 31146,  ["source"] = "Scribbled Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 31146, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Empowered Rune"] = {
@@ -4039,7 +4312,7 @@ _addon.data = {
 		"Know this: a shaman must never demand power; to do so would arouse the anger of the elements, and a shaman without the elements' protection is nothing. Those that follow the path of the shaman must never forget this most vital tenet.\n\nHowever, a shaman that works in a respectful union with the elements wields a power rivaled by few. If you feel you have the humility to do so, come visit with me in Anvilmar. I will teach you - much like I myself was taught - how to work with the elements of fire, earth, wind, water, and the wild.\n\n~Teo Hammerstorm",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 24494,  ["source"] = "Empowered Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 24494, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Encrypted Letter"] = {
@@ -4048,7 +4321,7 @@ _addon.data = {
 		"Never been more proud to be part of the trade as I am in these last few years. The need for assassins, spies, and scouts has never been more prevalent. You'd think war-time would have had higher demand, but suprisingly, war isn't a time we flourish like we do now--the times after peace starts to deteriorate.\n\nI was told you'd be in the area looking to learn a few things. When you have time, come see me by the stables in back of the abbey.\n\n-Jorik Kerridan, Rogue Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3102,  ["source"] = "Encrypted Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3102, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Encrypted Parchment"] = {
@@ -4057,7 +4330,7 @@ _addon.data = {
 		"I send greetings, &lt;name&gt;. I was lost in thought when it came to my attention that I needed to write to you.\n\nMany in our culture praise our shamans for being our spiritual leaders, like our great Warchief. Others think the sword and axe are even more noble pursuits, but never forget that battles--even wars--are won on the backs of those with more specialized skills. That is what I wish to speak to you about, &lt;name&gt;. Find me among the other orcs in the Valley of Trials.\n\n-Rwag, Rogue Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 3088,  ["source"] = "Encrypted Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 3088, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Encrypted Rune"] = {
@@ -4066,7 +4339,7 @@ _addon.data = {
 		"&lt;Brother/Sister&gt;, I hope this rune finds you well. I wanted to take a moment to let you know that I'm inside Anvilmar above Coldridge Valley.\n\nI know how important it is we all stick together, and in this time of strained peace it's becoming even more important to have our kind around. Look for me when you have the time. \n\n-Solm Hargrin, Rogue Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3109,  ["source"] = "Encrypted Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3109, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Encrypted Scroll"] = {
@@ -4075,7 +4348,7 @@ _addon.data = {
 		"Take care not to ignore my words, &lt;name&gt;. This is the time for subterfuge and deceit throughout all nations... even our great Undercity. Everyone loyal to Sylvanas is working towards creating a new era, one controlled by the Forsaken. And even though we possess no magical skills, nor will we take up weapons along our borders, we still have our own role to play.\n\nSeek me out in the inn in Deathknell. We'll speak more then.\n\n-David Trias, Rogue Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 3096,  ["source"] = "Encrypted Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 3096, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Encrypted Sigil"] = {
@@ -4084,7 +4357,7 @@ _addon.data = {
 		"Sael'ah, my friend. I hope this sigil finds you well. I was asked to offer you my services. I too am in Shadowglen, in the great tree of Aldrassil, and I wanted you to know that if you need any training that you could seek me out.\n\nIn these questionable times, I thought it prudent that those dealing in stealth remain even closer to one another. How else will we be able to protect Teldrassil and our ways?\n\nFind me when you can.\n\n-Frahun Shadewhisper, Rogue Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3118,  ["source"] = "Encrypted Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3118, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Etched Letter"] = {
@@ -4093,7 +4366,7 @@ _addon.data = {
 		"Northshire Valley is a dangerous place, ideally suited to the survival skills of a hunter. Needless to say I have been impressed with your contributions to the valley's defense and I look forward to meeting you. Please look for me by the entrance to the abbey.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 26910,  ["source"] = "Etched Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 26910, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Etched Note"] = {
@@ -4102,7 +4375,7 @@ _addon.data = {
 		"Mighty warriors defend our home. Our shamans guide our spirits and show us our ancestors' past. And our druids help us discover the Earthmother's will.\n\nBut you are one of our hunters, and our hunters learn many aspects of those roles and blend them together. You will find you represent the heart of our people--some of our tribe will look to you for guidance, some for protection. It is my duty to ensure you are prepared for that. Seek me out in Camp Narache.\n\n-Lanka Farshot, Hunter Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 9, ["id"] = 3092,  ["source"] = "Etched Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 9, ["id"] = 3092, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Etched Parchment"] = {
@@ -4111,7 +4384,7 @@ _addon.data = {
 		"I've seen you shuffling around the Valley, young one, with your flimsy bow and that shabby armor. You remind me of a young hunter I knew a long time ago...\n\nIf you're interested in learning a bit more about the trade, come visit me. The hunter's path can be a lonely one, and it helps to have allies along the way.\n\n-Karranisha, Hunter Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 3087,  ["source"] = "Etched Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 3087, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Etched Rune"] = {
@@ -4120,7 +4393,7 @@ _addon.data = {
 		"Tamer of beasts, master marskman, proven tracker--what else ya want to accomplish in this lifetime? All those things combined takes quite a bit of intelligence and a great deal of patience.\n\nThe path of the hunter ain't an easy one, that's fer sure. You're gonna need lots of training if you wanna be as good as even our lowest ranking rifleman. But that's why I'm here.\n\nFind me inside Anvilmar overlooking Coldridge Valley. I'll be waiting.\n\n-Thorgas Grimson, Hunter Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3108,  ["source"] = "Etched Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3108, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Etched Sigil"] = {
@@ -4129,7 +4402,7 @@ _addon.data = {
 		"Elune is with you, &lt;name&gt;. The wind whispers it to me, and I'm glad I can directly take part in the shaping of our next generation of hunters.\n\nFrom what I have been told, you are close to Aldrassil. I would meet with you inside the great tree when you have time.\n\nOur elders have charged me with ensuring that new hunters are properly trained for the trials ahead. You being one of the newest students, it would behoove you to visit me. Until then, be well.\n\n-Ayanna Everstride, Hunter Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3117,  ["source"] = "Etched Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3117, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Evidence Against Samuelson"] = {
@@ -4138,7 +4411,7 @@ _addon.data = {
 		"Your Holiness: Cho'gall has given us the directive to move forward: We're going to wipe your cathedral off the map. When the spiritual center of Stormwind is reduced to a crater in the center of the city, panic will spread, and disillusioned peasants will flock toward our true religion. I'm sending the explosives your way. For the Hammer! For Deathwing! For the glorious new world to come!  -Samuelson",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 27106,  ["source"] = "A Villain Unmasked",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 27106, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Faded Treasure Map"] = {
@@ -4147,7 +4420,7 @@ _addon.data = {
 		"If the Darkmoon Treasure you wish to find, then begin your search by using your mind.\n\nThe next clue that can be found, is on a home you can take out of town.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 823, ["id"] = 38934,  ["source"] = "Silas' Secret Stash",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 823, ["id"] = 38934, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Father Gustav's Report"] = {
@@ -4156,7 +4429,7 @@ _addon.data = {
 		"Highlord,\n\n&lt;name&gt; has successfully led the campaign against the Scourge of Scourgeholme and positioned us to march upon Icecrown.\n\nThe masons are equipped with the supplies that they need to begin construction of Justice Keep - thanks once again to &lt;name&gt; for &lt;his/her&gt; assistance in Crystalsong Forest.\n\nThere remains only one last challenge: the taking of Crusader's Pinnacle. For it is there, at the place where we have anguished most, that I wish to begin this final chapter.\n\nWe await your command, sir.\n\nLight protect you.\n\n-Gustav",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 492, ["id"] = 13139,  ["source"] = "Into The Frozen Heart Of Northrend",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 492, ["id"] = 13139, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Field Journal"] = {
@@ -4170,8 +4443,8 @@ _addon.data = {
 		"Day ?? and one:\n\nWe have a makeshift camp atop the island. Aggra has asked me to look for other survivors on the western shore. Kilag is to take a small group across the top looking for Alliance. Already a few have attacked us. They will not stop coming until they are all dead. Or we are.\n\nThere are sounds of goblins off in the distance, and I can see the wreckage of their ship. They are noisy. I will watch them later. First, I have found a cavern and strange sounds like animals and mining coming from within it.\n\nI will investigate.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 544, ["id"] = 14233,  ["source"] = "Orcs Can Write?",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 544, ["id"] = 14234,  ["source"] = "The Enemy of My Enemy",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 544, ["id"] = 14233, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 544, ["id"] = 14234, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Final Clue to Sanders' Treasure"] = {
@@ -4180,7 +4453,7 @@ _addon.data = {
 		"Now that ye found me ol' whiskey jug, you're almost to the treasure! Just face West from the bottle and walk down to the shore. Once ye get to the water, keep going! Swim straight west till you find the island with me treasure chest!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26356,  ["source"] = "Captain Sanders' Hidden Treasure",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26356, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Fishing Tournament!"] = {
@@ -4189,8 +4462,8 @@ _addon.data = {
 		"Stranglethorn Fishing Tournament!\nSunday Afternoon - 2pm to 4pm.\n\nFish anywhere along the coast of Stranglethorn (except for Booty Bay) and look for the schools of Tastyfish that will appear along the coast! Make sure your fishing bobber lands in the school and you will be catching special fish instead of the normal Stranglethorn variety. The first person to catch forty Tastyfish can turn them into Fishmaster Bassbait in Booty Bay for a prize!  \n\nEven if you are not the first person to catch forty tastyfish you can still turn them in for cash and there are special fish to be caught as well that will reward special prizes!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 8228,  ["source"] = "Could I get a Fishing Flier?",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 341, ["id"] = 8229,  ["source"] = "Could I get a Fishing Flier?",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 8228, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 341, ["id"] = 8229, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["For the Light!"] = {
@@ -4201,7 +4474,7 @@ _addon.data = {
 		"The tragic tale of this most holy knight\n\nwill never end with his unholy death.\n\nWe honor him, and we shall give him thanks!\n\nUther always shall know glory and Light!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 8149,  ["source"] = "Honoring a Hero",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 8149, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Forbidden Sigil"] = {
@@ -4210,7 +4483,7 @@ _addon.data = {
 		"I hope this sigil finds you well, &lt;name&gt;. The Archmage told me of your coming and I sent word immediately.\n\nWith all that has happened in the past years to bring arcane magic back to our race, you may find struggles and trials ahead. I can help with such things. When you are ready, find me inside Aldrassil, on the second level.\n\n-Rhyanda, Mage Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 26841,  ["source"] = "Forbidden Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 26841, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Furlbrow's Deed"] = {
@@ -4220,7 +4493,7 @@ _addon.data = {
 		"[The words below were quickly scrawled on the back of the deed]\n\nWe leaned on Furlbrow and got his deed. Thought it might be handy if you wanted to forge one of these for your own place. The Furlbrows won't give us trouble. Last I saw them they were on their way out of Westfall, stuck with a broken wagon.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 184,  ["source"] = "Furlbrow's Deed",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 184, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Galaen's Journal"] = {
@@ -4232,7 +4505,7 @@ _addon.data = {
 		"That the Sironas entity had plans for Saruan...\n\n&lt;The writing stops abruptly and a long line scrolls off the page. This draenei died while making the entry.&gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 476, ["id"] = 9706,  ["source"] = "Galaen's Journal - The Fate of\n Vindicator Saruan",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 476, ["id"] = 9706, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Glyphic Letter"] = {
@@ -4241,7 +4514,7 @@ _addon.data = {
 		"There are four rules to magic:\n\n  Magic is powerful.\n  Magic is corrupting.\n  Magic is addicting.\n  Magic draws the denizens of the Twisting Nether to those who wield the arcane.\n\nThose rules you can always guarantee. Those rules will govern your destiny if you chose to continue down the path as a mage.\n\nIf you're foolish enough to ignore this warning, then come speak to me inside the library wing of the abbey in Northshire. I'll be waiting for you upstairs.\n\n-Khelden Bremen, Mage Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3104,  ["source"] = "Glyphic Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3104, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Glyphic Parchment"] = {
@@ -4250,7 +4523,7 @@ _addon.data = {
 		"The others don't understand us. They pretend to get along with us, but they don't. Even the warlocks are afraid of us.\n\nThat's alright, because we've got each other. Orc mages unite! Me and you! Acrypha and... whatever your name is! Ha!\n\nWe'll show them what we're made of. Pay me a visit, and I'll share with you some of the secrets of the arcane that I've managed to master.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 25138,  ["source"] = "Glyphic Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 25138, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Glyphic Scroll"] = {
@@ -4259,7 +4532,7 @@ _addon.data = {
 		"The corruption and evil that rumor says travels with the arcane is nothing compared to the pain we've already felt. We are no longer victims, &lt;name&gt;. We are the ones who control our fate. Sylvanas has paved the way for us--she has proven that our will is our own; that we are no longer thralls to that bastard Arthas.\n\nSeek me out in the church, I shall instruct you further... if that is your desire.\n\n- Isabella, Mage Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 3098,  ["source"] = "Glyphic Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 3098, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Gordawg's Imprint"] = {
@@ -4268,7 +4541,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/24475_gordawg_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 9821,  ["source"] = "Eating Damnation",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 9821, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Gramma Stonefield's Note"] = {
@@ -4278,7 +4551,7 @@ _addon.data = {
 		"I fear the war between the Stonefields and the Maclures will kill Tommy Joe and Maybell's blossoming romance, and in times like these - where dark news and rumors of war loom over us - youth and love must be nurtured.\n\nSo, the favor: I ask that you use your skills and concoct a potion or elixir to aid these young lovers in their quest for each other.\n\nThank you, William. And please, when you have some time away from work, come visit. We'll have a few chuckles over the past.\n\n-Mildred",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 107,  ["source"] = "Note to William",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 107, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Greatmother's List of Herbs"] = {
@@ -4287,7 +4560,7 @@ _addon.data = {
 		"The Olemba root is a fairly common root found in the Terokkar Forest. Search near the Olemba trees that comprise the bulk of Terokkar's forests for upturned roots.\n\nThe marshberry only grows in Zangarmarsh. It can only be found at the Ango'rosh Stronghold, located in the northwestern region of the marsh. Beware the ogres that fervently guard the precious berries.\n\nThe Telaari frond is perhaps the most easily attainable of the herbs on this list. South of Garadar in the Talaari basin, you will find the fronds. They grow near the water.\n\nThe last herb on the list is unique to the Blade's Edge mountains. You will find Blade's Edge north of Zangarmarsh. Dragonspine grows upon the ends of the jagged rock formations that guard the canyons of Blade's Edge. You will know what I speak of when you first see Blade's Edge. The rock formations look like row upon row of sharp and pointed teeth.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 10045,  ["source"] = "Material Components",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 10045, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Gremlock's List"] = {
@@ -4296,8 +4569,8 @@ _addon.data = {
 		"Below is the list of students who obtained a Platinum Star grade at Gremlock's School of Caterers, earning them an Honorary Chef's Cleaver:\n\nMelia Stoneshaker\nBardin Ironband\nUmi Togglevolt\nRumi Togglevolt\nVorel Steelspire",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 6387,  ["source"] = "Honor Students",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 6391,  ["source"] = "Ride to Ironforge",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 6387, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 6391, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Gryshka's Letter"] = {
@@ -4306,8 +4579,8 @@ _addon.data = {
 		"Dear Grimtak,\n\nThe steaks you sent are fine. Well marbled, thickly sliced and packed in boar fat. They're just how I like them. When I eat them later, I will think of you as I gnaw on the last bits of bone and grisle. I will close my eyes and see your strong, scarred hands chopping and cutting...\n\nHah! That reminds me of when you had your accident and lost a finger... Oh, Grimtak! Thinking of that day makes me giggle like a little girl.\n\nYou're so cute when you're bleeding!\n\n-Gryshka",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 6385,  ["source"] = "Doras the Wind Rider Master",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 6386,  ["source"] = "Return to Razor Hill",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 6385, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 6386, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Hallowed Letter"] = {
@@ -4316,7 +4589,7 @@ _addon.data = {
 		"Your connection to the world, and its connection to you, are paramount to your success as a priest. Wisdom and compassion will allow you to help those who have a true need. Overeagerness and clumsy decisions only prevent others from becoming stronger or cause harm.\n\nAs you begin to understand what this means, you will need new abilities and spells to help you. That is where my role begins: find me in the library wing of Northshire Abbey when you are ready to train.\n\n-Priestess Anetta, Priest Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3103,  ["source"] = "Hallowed Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3103, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Hallowed Note"] = {
@@ -4325,7 +4598,7 @@ _addon.data = {
 		"The way of the priest is a new one for our people, but it draws on the ancient traditions of our seers. In your lessons, you will learn the wisdom of the Earthmother as illuminated by the Light. Meet with me in the circle at the center of Camp Narache and we will begin your lessons.\n\nSeer Ravenfeather",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 27014,  ["source"] = "Hallowed Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 27014, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Hallowed Rune"] = {
@@ -4334,7 +4607,7 @@ _addon.data = {
 		"With the Holy Light warmin' our backs and new discoveries being made every day, 'tis an exciting time to be one of Ironforge's &lt;sons/daughters&gt;. The Explorer's League makes headway every day in its search for long-lost answers to even older questions. And now we have you among our faithful to aid in the battle against the troggs and any other threat to our borders.\n\nFind me when ya have the time. I'll be in the back of Anvilmar, just up the hill. \n\n- Branstock Khalder, Priest Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3110,  ["source"] = "Hallowed Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3110, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Hallowed Scroll"] = {
@@ -4343,7 +4616,7 @@ _addon.data = {
 		"Feel blessed that your spirit was not released to the Nether, &lt;name&gt;. Feel even more blessed that I decided you were worth the effort to write this scroll for.\n\nThe people you once knew, perhaps even cared for, are no longer! You must learn to \"live\" with that for the rest of your now unnatural life. I suggest you learn to deal with that first.\n\nIf you think you're ready for the trials ahead, then seek me out in the church in Deathknell.\n\n- Dark Cleric Duesten, Priest Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 20, ["id"] = 3097,  ["source"] = "Hallowed Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 20, ["id"] = 3097, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Hallowed Sigil"] = {
@@ -4352,7 +4625,7 @@ _addon.data = {
 		"I hope this sigil finds you well, &lt;name&gt;. The spirits told me of your coming and I sent word immediately. I look forward to sharing my experiences with you, and helping guide you as you prepare to leave Teldrassil for more important matters.\n\nWith all that has happened in the last few years, there is much we can do to aid the other races of Azeroth. When you are ready, find me inside Aldrassil, on the second level.\n\n-Shanda, Priest Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["area"] = "Shadowglen ", ["id"] = 3119,  ["source"] = "Hallowed Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3119,  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Hastily Written Note"] = {
@@ -4361,7 +4634,7 @@ _addon.data = {
 		"Durak,\n\nThis &lt;race&gt; has assisted me in collecting enough fel fire to launch an assault on the elves.\n\nThe projectiles will be devastating - but impossible to control. I need a way to direct their trajectory.\n\nI'm sure to be forgiven for meddling with demonic powers once Splintertree is saved...\n\nDraaka",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 43, ["id"] = 13751,  ["source"] = "Tell No One!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 43, ["id"] = 13751, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Hildelve's Journal"] = {
@@ -4375,7 +4648,7 @@ _addon.data = {
 		"Day 6\n\nThe bear hasn't yet returned - I must have given him a good beating! But I can still hear his growling. I think he's waiting for me to die!\n\nTo whomever finds this book, I have a task for you. Kill that mangy bear. Kill it, and take this book back to my friend Hammerfoot. He'll want to know what happened.\n\nAnd take my armor. You'll need it against old Mangeclaw!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 26855,  ["source"] = "A Pilot's Revenge",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 26855, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Horde Missive"] = {
@@ -4384,7 +4657,7 @@ _addon.data = {
 		"Enough frolicking around, &lt;name&gt;!\n\nHave you forgotten our directive?\n\nFinal preparations must be made for our offensive, and I need you here.\n\nPut an end to whatever distractions you're engaged in and return to Grookin' Hill at once.\n\n- General Nazgrim",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 30499,  ["source"] = "Get Back Here!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 30499, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Illidari Lord Balthas' Instructions"] = {
@@ -4393,7 +4666,7 @@ _addon.data = {
 		"In the name of our great master... For the glory of Illidan!\n\nThe common components for the soul cannon are obtained through various trades. Engineers and miners should be able to provide you with the felsteel bars, khorium power core and adamantite frame.\n\nFor the flawless arcane essence you must travel to Terokkar Forest. In the center of the forest, above the Horde outpost of Stonebreaker Hold, you will find the home of Sar'this, an arakkoa heretic. The area is known as Lake Jorune.\n\nSpeak with Sar'this and tell him what it is that you seek. Be certain to mention that I sent you as he owes me a favor or two.\n\nDo as Sar'this asks and you should have the essence.\n\n-Balthas",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 11089,  ["source"] = "The Soul Cannon of Reth'hedron",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 11089, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Illidari Service Papers"] = {
@@ -4402,7 +4675,7 @@ _addon.data = {
 		"In the name of our great master... For the glory of Illidan!\n\nMor'ghor,\n\nI send this wretch to you now as a servant of Illidan. While he has no future as a death knight, you may find that he has skills suitable to your liking. Beat him into submission. Shape him into a warrior of the Illidari. \n\nAnd should he fail... Should he show weakness... Discard him. To the pits!\n\nLord Teron Gorefiend",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 473,  ["source"] = "In Service of the Illidari",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 11013, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Ironband's Progress Report"] = {
@@ -4413,7 +4686,7 @@ _addon.data = {
 		"Lastly, I must restate my request for blastpowder. My supplies are very low, which severely hampers the success of the excavation. I was told a resupply of blastpowder was forthcoming, though I have not yet received it.\n\nWhat, may I ask, is the delay?\n\nRespectfully,\nProspector Darteus Ironband",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 35, ["id"] = 301,  ["source"] = "Report to Ironforge",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 35, ["id"] = 301, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Jubeka's Journal"] = {
@@ -4432,8 +4705,8 @@ _addon.data = {
 		"(A ragged note is drawn onto the back cover of the leather journal)\n\nI'm convinced there is no chance that we will return from this next adventure alive. There's simply no way I can take the risk that my grimoires go unread. For that reason, I've contracted the imps to leave four fragments of my soulstone at the locations listed in my journal.\n\nI'm sending this journal to you, my trusted friend, that should the need to locate me arise, you bring the four stones together, find my body and ensure that my grimoires are brought back to Azeroth.\n\nSigned,\nJubeka Shadowbreaker",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 32317,  ["source"] = "Seeking the Soulstones",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 32317,  ["source"] = "Seeking the Soulstones",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 32317, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 32317, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Legacy of the Masters (Part 1)"] = {
@@ -4448,8 +4721,8 @@ _addon.data = {
 		"Ritssyn was a powerful warlock, and could probably defeat Kanrethad by himself. But against all five of us? We all saw his hesitation. We all let our hands drift toward our scrolls and weapons.\n\n\"Fine,\" Ritssyn reluctantly agreed. \"I can play along with your fool's errand, but first I must know, where will you and that miserable forsaken, Jubeka, be going?\"\n\n\"Me?\" spoke Kanrethad with a wicked grin. \"Why I'm returning... to Outland.\"",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 32309,  ["source"] = "A Tale of Six Masters",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 32310,  ["source"] = "A Tale of Six Masters",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 32309, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 301, ["id"] = 32310, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Legends of the Gurubashi, Volume 3"] = {
@@ -4468,7 +4741,7 @@ _addon.data = {
 		"Zul'Gurub. So the process continued for generations, the Stone appearing with the tide, and the Tidebearer leaving into the tide.\n\n\nModern day accounts of the Stone of the Tides have appeared from place to place, but one must still wonder why an object of such power would appear with such regularity, and by whose design.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "unavailable",  ["area"] = "???",  ["source"] = "Stormwind Library",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "unavailable"},
 	},
 },
 ["Letter from Lor'themar Theron"] = {
@@ -4478,7 +4751,7 @@ _addon.data = {
 		"\n\nPS - Our grand magister has received word back from Outland regarding Thrall's question. The answer is, with great certainty, yes.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 480, ["id"] = 9621,  ["source"] = "Envoy to the Horde",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 480, ["id"] = 9621, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Letter from Saurfang"] = {
@@ -4489,7 +4762,7 @@ _addon.data = {
 		"It is unfortunate, then, that Hellscream employs such savage tactics. As victory approaches, Hellscream gains further justification for his methods, which in turn brings us closer to a place we have not been in many years: a dark place.\n\nI have sent my son to command our forces at the Wrathgate. I know that he will battle with honor and I remain hopeful that his courage and tenacity will be noticed and emulated by our forces. He is my heart and strength in a place that I cannot be... You will be my eyes and ears. Together, we will make it right.\n\nBlood and Thunder... May your arrival bring them both.\n\nSaurfang",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12033,  ["source"] = "Message from the West",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12033, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Letter of Introduction to Wyrmrest Temple"] = {
@@ -4501,10 +4774,10 @@ _addon.data = {
 		"My queen,\n\nIt has been discovered that the ley line intersection at Moonrest Gardens was unfettered by the blue dragonflight. Their forces used a surge needle to destroy the capstone, but instead of flowing the power back to the Nexus, they utilized a series of foci to clumsily run and augment the power under the land to the Azure Dragonshrine.\n\nNeedless to say, this has had dire consequences wherever the magic shot up through the ground. The Ancients of the woodlands, the Kalu'ak, and other creatures in the region have been adversely affected. &lt;name&gt;, the &lt;race&gt; who stands before you, was very helpful in tracking down and dealing with these issues.\n\nIn my opinion, &lt;name&gt; could be useful for Wyrmrest in dealing with the problems that the temple currently faces. I humbly ask that you consider &lt;him/her&gt; an asset, one which I found to be quite acceptable.\n\nYours ever respectfully,\n\nAethas Sunreaver\nArchmage and Member of the Six",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12122,  ["source"] = "Gaining an Audience",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12124,  ["source"] = "Informing the Queen",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12119,  ["source"] = "Gaining an Audience",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12123,  ["source"] = "Informing the Queen",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12122, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12124, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12119, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12123, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Letter Sealed by Sylvanas"] = {
@@ -4514,7 +4787,7 @@ _addon.data = {
 		"PS - Our grand magister has received word back from Outland regarding Thrall's question. The answer is, with great certainty, yes.\n\n&lt;This letter bears the additional seal of Lady Sylvanas Windrunner&gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 382, ["id"] = 9626,  ["source"] = "Meeting the Warchief",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 382, ["id"] = 9626, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Letter to Ello"] = {
@@ -4523,7 +4796,7 @@ _addon.data = {
 		"The letters on this note seem to flicker and dance across its surface. It is impossible to glean meaning from them...",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26681,  ["source"] = "Note to the Mayor",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26681, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Magister Duskwither's Journal"] = {
@@ -4539,7 +4812,7 @@ _addon.data = {
 		"I was too late. A third apprentice had, unknowingly to me, been sharing the fouled research with some of the others. I am going to try to contain the situation, but first I must get the unaffected apprentices away.\n\nI will do so by letting them all know that I am going on sabbatical at the Farstrider Retreat, in the hopes of finding a new approach to the problem.\n\nI must find a way to atone for this horrible error in judgment.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 462, ["id"] = 8891,  ["source"] = "Abandoned Investigations",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 462, ["id"] = 8891, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Marshal McBride's Documents"] = {
@@ -4550,7 +4823,7 @@ _addon.data = {
 		"COMMENDATION:\n\nThe bearer of these documents is to be awarded Deputy status with the Stormwind Army, having served Northshire with eagerness and distinction. I am confident you will find this person useful in Elwynn Forest.\n\nsigned:\n-Marshal Douglas McBride, \nStormwind Army, Northshire",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 54,  ["source"] = "Report to Goldshire",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 54, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Maybell's Love Letter"] = {
@@ -4559,7 +4832,7 @@ _addon.data = {
 		"Tommy Joe -\n\nWith each passing hour, my heart withers from your absence. Oh, if only our folks could see beyond the silly crimes they have done to each other, and know that the only true crime is hate. Hate consumes, and I fear in these dimming times that hate will take hold of more than just our families.\n\nIf they realized this then we could, at long last, be together. It is for that day I hope, and for that day I live.\n\nYour love,\nMaybell",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 106,  ["source"] = "Young Lovers",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 106, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Morris's Order"] = {
@@ -4568,8 +4841,8 @@ _addon.data = {
 		"By order of Executor Zygand, below are the items deemed necessary in order to maintain the stock of Brill:\n\n12 Long swords\n9 Daggers\n8 Round Shields\n15 Axes\n1000 Arrows\n\nFulfillment of this order is to be considered a direct command of the Dark Lady, and those responsible will be brought to Her attention, as will any who oppose or otherwise hamper Her wishes.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 20, ["id"] = 6323,  ["source"] = "Ride to the Undercity",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 20, ["id"] = 6321,  ["source"] = "Supplying Brill",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 20, ["id"] = 6323, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 20, ["id"] = 6321, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Netherologist's Notes"] = {
@@ -4578,7 +4851,7 @@ _addon.data = {
 		"&lt;After a number of pages of mind-numbing 'science' that seem to make absolutely no sense, there is a note scribbled at the bottom of the last page....&gt;\n\nSorry, boss. It looks like the Netherstorm's gonna blow pretty soon. It'll probably take most of the rest of Outland with it.\n\nI'm not 100% certain, but I think the problem is related to whatever those blood elves are doing at the mana forges.\n\n Good thing you're building that rocket!\n\n-- Coppernickels\n\np.s. - do you think I could get a seat on the rocket? You're certain to need a netherologist while you're crusing through the Twisting Nether!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 479, ["id"] = 10183,  ["source"] = "Off To Area 52",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 479, ["id"] = 10183, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Nitrin's Instructions"] = {
@@ -4587,7 +4860,7 @@ _addon.data = {
 		"To grant the imbiber of the tincture vision to see the dead, certain material components must be gathered.\n\nFirst, an eyeball from the mountain gronn of western Nagrand, near the cursed forge camps of the Burning Legion, south of Warmaul Hill.\n\nAlso found in western Nagrand are the greater windrocs. Only a flawless specimen will do!\n\nLastly, from both western and southwestern Nagrand is the blubber from the aged clefthoof.\n\nGather these items and return them to me! Make haste!\n\n-Nitrin",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 10252,  ["source"] = "Vision of the Dead",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 10252, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Orders From Drakuru"] = {
@@ -4596,8 +4869,8 @@ _addon.data = {
 		"Minions be hearin' da call of your masta! Da Lich King be givin' Drakuru full control of da armies of da Scourge in Zul'Drak. We be commanded ta kill everyting.\n\nEVERYTING MUST DIE!\n\nWe be processin' all da corpses in da Dead Fields and sendin' em up ta Prince Navarius' crew in Zeramas for Scourgin'! Notin' goes ta waste on Drakuru's watch!\n\nSoon we be drinkin' da blood of da prophets ta become stronger dan eva before! Zul'Drak and Gundrak gonna fall to da Scourge!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 496, ["id"] = 12883,  ["source"] = "Orders From Drakuru",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 496, ["id"] = 12884,  ["source"] = "The Ebon Watch",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 496, ["id"] = 12883, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 496, ["id"] = 12884, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Orion's Report"] = {
@@ -4606,8 +4879,8 @@ _addon.data = {
 		"General,\n\nWe're holding the line at the Stair of Destiny, but the Legion sends wave after wave to assault our ranks. They must have a staging area nearby that our scouts have yet to locate. Though the Alliance forces here stand by our side, I fear the Legion's superior numbers will overrun our defenses. Send what help you can, lest the Portal fall - and we become trapped in this nightmare world forever.\n\nLieutenant General Orion",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 465, ["id"] = 10120,  ["source"] = "Arrival in Outland",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 465, ["id"] = 10289,  ["source"] = "Journey to Thrallmar",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 465, ["id"] = 10120, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 465, ["id"] = 10289, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Pandaren Scroll"] = {
@@ -4616,7 +4889,7 @@ _addon.data = {
 		"Well done, stranger.\n\nBy befriending the hozen, it is clear that you have followed the path I set you upon when last we spoke.\n\nBe diligent in your meditations, and perhaps our land will reveal other secrets to you as well.\n\nI invite you to join me in our village of Dawn's Blossom. Many of my people will be thrilled to meet one from outside the mists.\n\n- Lorewalker Cho",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 30015,  ["source"] = "Dawn's Blossom",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 30015, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Partially Soaked Pages"] = {
@@ -4629,7 +4902,7 @@ _addon.data = {
 		"The Vanguard has washed up on an unfamiliar shore. The ship is still, and all around me, I hear silence.\n\nNo one has come for me, and I fear that the crew is dead.\n\nThe cabin is filling with water, so I must find a way out soon.\n\nIf any Alliance soldier finds this, know that I, Prince Anduin Wrynn, am alive.\n\nI am going to travel inland and search for food and aid.\n\nPlease tell my father that I am well.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 29555,  ["source"] = "The White Pawn",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 29555, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Peeling the Onion"] = {
@@ -4645,7 +4918,7 @@ _addon.data = {
 		"Epilogue\n\nAfter having done all of this, you are left with the center of the onion: The sweet core. Vanndar Stormpike will be left defenseless and alone. Rules of military conduct require that we ask for his surrender before carrying out any executions. Be sure to mention the surrender thing when you see him... then kill him.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 7161,  ["source"] = "Proving Grounds",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 7161, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Recruitment Letter"] = {
@@ -4654,7 +4927,7 @@ _addon.data = {
 		"Horde Conscription Registration\n\nThis person has demonstrated incredible feats of strength and skill in the name of the Horde. They should immediately be assigned to work in the Crossroads.\n\nRespectfully yours,\nTakrin Pathseeker",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 4, ["id"] = 840,  ["source"] = "Conscript of the Horde",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 4, ["id"] = 840, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Reliquary Papers"] = {
@@ -4663,7 +4936,7 @@ _addon.data = {
 		"To Whom It May Concern:\n\nRohan Sunveil, a Reliquary member in high standing and leader of the Sunveil Excursion, seeks able-bodied adventurers to assist him in an archaeological study in the southern Blasted Lands. Participants will be compensated for their work.\n\nThe Sunveil Excursion is focused on the acquisition, cataloguing, and preservation of any and all magical artifacts found in the Tainted Forest region. Formerly known as the Tainted Scar, the area has recently been rejuvenated by a worgen druid, and is mostly covered with trees and brush. For further details, please contact Rohan or Clarya Sunveil.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 19, ["id"] = 25696,  ["source"] = "The Sunveil Excursion",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 19, ["id"] = 25696, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Rune-Inscribed Note"] = {
@@ -4672,7 +4945,7 @@ _addon.data = {
 		"I greet you, young &lt;class&gt;. The winds told me of your coming. The earth gave praise of your strength. And now the ancient spirits whisper of your accomplishments to come. Our people always need wise and great leaders. They often turn to our kind for both virtues. If you are willing, I would teach you more of our ways.\n\nSeek me out in Camp Narache on Red Cloud Mesa--we will speak more then.\n\n-Meela Dawnstrider, Shaman Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 3093,  ["source"] = "Rune-Inscribed Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 3093, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Rune-Inscribed Parchment"] = {
@@ -4681,7 +4954,7 @@ _addon.data = {
 		"Lok'tar, &lt;brother/sister&gt;. The elements beckon you closer and bid me to show you the path of the shaman. The spirits of our ancestors watch from beyond and swell with pride knowing you have joined our ranks.\n\nWhen you are ready, seek me out near the entrance to the Den. It is there that I will be training others of our kind. Until then, may the wind be at your back.\n\n-Shikrik, Shaman Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 3089,  ["source"] = "Rune-Inscribed Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 3089, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Scroll of Auspice"] = {
@@ -4691,7 +4964,7 @@ _addon.data = {
 		"Incantations fae and primal\nBought on promises of gold\nBind the glamour to the thing\nThat quenches fires and fears of old\n\nComprehend this sacred recipe\nPerform it as I've penned\nDrive its fruit through Blood of Ancients\nAnd your terror-war shall end.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 858, ["id"] = 31068,  ["source"] = "Sacred Recipe",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 858, ["id"] = 31068, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Sealed Note"] = {
@@ -4700,7 +4973,7 @@ _addon.data = {
 		"&lt;name&gt;,\n\nFirst, I would like to apologize for the cryptic note - but discretion is imperative.\n\nAs past events have taught us, others in the Horde may act without proper planning, or restraint. \n\nWe plan to move first towards our next objective and avoid further pointless losses.\n\nYou have shown yourself to be a highly skilled and reliable ally. We would like to invite you to join us - as soon as possible - at the Valley of the Emperors in Kun-Lai Summit.\n\nWe hope you will meet us with all due haste.\n\n-A Friend from Silvermoon",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 857, ["id"] = 32376,  ["source"] = "To the Valley!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 857, ["id"] = 32376, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Senir's Report"] = {
@@ -4712,7 +4985,7 @@ _addon.data = {
 		"Coldridge Valley and mercenaries (paid with funds set aside by the Senate prior to my dispatchment), I am confident that the problem will be solved in short order. \n\nThis action has been authorized with the sanction given to me by King Bronzebeard.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 291,  ["source"] = "The Reports",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 27, ["id"] = 291, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Simple Letter"] = {
@@ -4721,7 +4994,7 @@ _addon.data = {
 		"Tell me, &lt;class&gt;, have you heard an orc scream yet? Perhaps defended your home from gnolls as they seek to tear your throat out? Yeah, sounds harsh, doesn't it?\n\nWell, you're gonna need my help if you want to protect your loved ones. You'll find me inside the abbey in Northshire. My knowledge doesn't come cheap, but if you're experienced enough, I can give you training that will help you fight off the threats to Stormwind and beyond.\n\nLlane Beshere, Warrior Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3100,  ["source"] = "Simple Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3100, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Simple Note"] = {
@@ -4730,7 +5003,7 @@ _addon.data = {
 		"Many tribes claim that it is a gift to be blessed with the aptitude to use magic or to talk to our ancestors, but you should know this as well, &lt;class&gt;, you are just as gifted. Some do not have the strength in their arms to wield mighty weapons. Some do not have the skill to parry a blow from an assassin, or to even suffer the physical punishments from an arcane spellcaster, but you do. You are strong. And I will help you become stronger. Find me in Camp Narache.\n\n-Harutt Thunderhorn, Warrior Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 3091,  ["source"] = "Simple Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 3091, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Simple Parchment"] = {
@@ -4739,7 +5012,7 @@ _addon.data = {
 		"Throm-Ka, warrior. I won't fawn over your deeds of strength and valor. They're old news. Killed any humans lately? Not many, I wager. You're slowing down. Getting soft without a challenge.\n\nI need another pair of hands, and no matter what your toadies say, you need the training I can give you. Whenever you get that through your thick skull, I'll be waiting under the canopy just outside the Den.\n\n-Frang, Warrior Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 2383,  ["source"] = "Simple Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 2383, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Simple Rune"] = {
@@ -4748,7 +5021,7 @@ _addon.data = {
 		"By Magni's beard, there's much to discuss, and little time to do it, &lt;name&gt;. Find me in Anvilmar overlooking Coldridge Valley as soon as you can. We gotta get started.\n\nThere's a mess of things I can tell you about to get you caught up to speed, but all that's got nothing to do with us... for now. What we need to focus on is the grip of an axe, the weight of our armor, and the smell of our own sweat beadin' down our foreheads as we fight our enemies. We'll start with that.\n\n-Thran Khorman, Warrior Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3106,  ["source"] = "Simple Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3106, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Simple Scroll"] = {
@@ -4757,7 +5030,7 @@ _addon.data = {
 		"Many of our kind resort to the arcane and divine as a means to give themselves strength, but we know better, don't we, &lt;class&gt;? We know that our weapons are our holy symbols, our shield is our spell book, and our mail is our wisdom.\n\nEven in undeath we are strong, and we will only become stronger.\n\nFind me in the inn in Deathknell. I will speak to you more of these matters and other things.\n\n-Dannal Stern, Warrior Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 3095,  ["source"] = "Simple Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 3095, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Simple Sigil"] = {
@@ -4766,7 +5039,7 @@ _addon.data = {
 		"I hope my sigil finds you well, &lt;class&gt;. I write to you because our people have need for those strong with the blade, the glaive, and all other weapons. So much has happened since our people have been reintroduced to the other races of Azeroth that we have an even greater need for protectors of all kinds.\n\nThis is where you come in. I would tell you more, but I feel it should be in person. Find me inside Aldrassil... on the lower levels.\n\n-Alyissia, Warrior Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3116,  ["source"] = "Simple Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3116, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Sister Aquinne's Note"] = {
@@ -4775,8 +5048,8 @@ _addon.data = {
 		"Nyoma,\n\nYou can't imagine how surprised I was to receive the recipe book! Everything you included is just as I remember from home. I can't wait to try out the new recipes.\n\nWhen you have some time, you should come visit me in Darnassus. I'll even cook for you!\n\nYour friend,\nAquinne",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 381, ["id"] = 6342,  ["source"] = "An Unexpected Gift",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["area"] = "Teldrassil", ["id"] = 6341,  ["source"] = "Return to Nyoma",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 381, ["id"] = 6342, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 41, ["id"] = 6341, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Splintertree Post Report"] = {
@@ -4785,7 +5058,7 @@ _addon.data = {
 		"Grimfang,\n\nI report to you from Splintertree, and the news is unpleasant.\n\nThe post was recently attacked by the kaldorei, which prevented any reports from being delivered.\n\nThe siege has been broken, but many were lost and another attack looks imminent.\n\nWe shall continue sending elves to their graves as long as fate permits.\n\n- Kadrak",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 43, ["id"] = 13848,  ["source"] = "Bad News Bear-er",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 43, ["id"] = 13848, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Spy's Report"] = {
@@ -4796,9 +5069,9 @@ _addon.data = {
 		"--Day 17\nUleg returned from his mission. He failed, and Thargil was captured. I sent Uleg to deliver this report to Nazeer.\n\nI will remain here. I have witnessed increased shipping activity off the coast of Theramore. I will continue my watch and personally report any noteworthy events.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27247,  ["source"] = "Captain Vimes",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27246,  ["source"] = "The Orc Report",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27244,  ["source"] = "The Lost Report",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27247, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27246, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27244, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Stormpike's Request"] = {
@@ -4809,7 +5082,7 @@ _addon.data = {
 		"Payment will be made through the usual channels. And do give the bearer of this request a standard, delivery stipend. You may add it to the cost of the shield.\n\n\n\nSincerely, and many thanks,\n--Gringer Stormpike",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 35, ["id"] = 1338,  ["source"] = "Stormpike's Order",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 35, ["id"] = 1338, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Stormwind Armor Marker"] = {
@@ -4818,7 +5091,7 @@ _addon.data = {
 		"This Armor Marker is good for one piece of leather or cloth armor, redeemable at the Timberlain household within the Eastvale Logging Camp.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 59,  ["source"] = "Cloth and Leather Armor",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 59, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Tainted Letter"] = {
@@ -4827,7 +5100,7 @@ _addon.data = {
 		"Too often people like the followers of the Holy Light scare those curious about true power into thinking they cannot investigate any form of the arcane--not all things from outside this world are evil. Not all entities seek to dominate or subjugate others. If you are powerful enough, those same entities can become the followers.\n\nThis is something I would like to discuss more with you. Seek me out in the graveyard on the right side of the abbey.\n\n-Drusilla La Salle, Warlock Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3105,  ["source"] = "Tainted Letter",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 864, ["id"] = 3105, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Tainted Parchment"] = {
@@ -4836,7 +5109,7 @@ _addon.data = {
 		"I write this message in the most powerful inks I can create, &lt;name&gt;. It would instantly curse anyone who would dare read it besides yourself. I am that powerful. I summon demons from the Twisting Nether at my leisure. I plague my enemies in their sleep and in the field of battle. And now you too have seen the power of my path. My brothers are pleased by that.\n\nSeek me out near the entrance to the Den once you've found your way around. I would speak to you about important matters.\n\n-Nartok, Warlock Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 3090,  ["source"] = "Tainted Parchment",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 889, ["id"] = 3090, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Tainted Rune"] = {
@@ -4845,7 +5118,7 @@ _addon.data = {
 		"ATTENTION:\n\nRemain Silent! Don't look around at anyone! Someone could be watching you this very moment.\n\nMy name is Saripal Smolderbrew, &lt;name&gt;. I train those willing to seek knowledge and greater power from... worlds beyond. I've been asked to get in touch with you discretely and inform you that I can train you further in a real form of magic.\n\nWhen you can, come find me in the back of Anvilmar.\n\n-Saripal Smolderbrew, Warlock Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3115,  ["source"] = "Tainted Rune",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 866, ["id"] = 3115, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Tainted Scroll"] = {
@@ -4854,7 +5127,7 @@ _addon.data = {
 		"An awful predicament to find ourselves in, isn't it, &lt;name&gt;? Plagued by the Foul Prince. Ostracized and spurned by our own loved ones. We finally have our own will thanks to the beautiful Sylvanas, but what does that afford us now? Slaves to a different master is still a slave, or so I say.\n\nBut what if we were the masters? Yes, you know what I mean, don't you?\n\nWe are even more separated from the rest of the Forsaken, &lt;name&gt;. And that is why we must speak further. Find me in the church in Deathknell.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 3099,  ["source"] = "Tainted Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 3099, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Baroness' Missive"] = {
@@ -4863,7 +5136,7 @@ _addon.data = {
 		"Karthis, Omasum,\n\nThe time has come for the ritual of which we spoke. I will be leaving Stratholme to deal with the prisoner in Plaguewood's central slaughterhouse. Make certain that security is tight. Fail, and my lord will have both of your heads. Succeed, and you will have a new dwarven brother to join your ranks.\n\n- Anastari",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 23, ["id"] = 27551,  ["source"] = "The Baroness' Missive",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 23, ["id"] = 27551, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Battle for Hillsbrad"] = {
@@ -4886,7 +5159,7 @@ _addon.data = {
 		"Day 63\n\nI saw them take away Burnside and Verringtan last night. I can only assume that I'm next.\n\n&lt;The rest of the journal is full of incoherent scribbles.&gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 28196,  ["source"] = "The Battle for Hillsbrad",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 28196, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Collector's Schedule"] = {
@@ -4895,7 +5168,7 @@ _addon.data = {
 		"Below is the process and schedule of gold collection from the mines of Elwynn.\n \nCollection Schedule:\n\nSunday: 12:30pm\nWednesday: 12:30pm\n\nBy each specified day, gold gained from the Elwynn mines will be gathered at the Brackwell pumpkin patch. The agent in charge of these gatherings, \"The Collector,\" will be known by the engraved ring he possesses.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 123,  ["source"] = "The Collector",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 30, ["id"] = 123, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Durnholde Challenge"] = {
@@ -4908,7 +5181,7 @@ _addon.data = {
 		"The D-1000\n\nAwaits you at the old arena.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 28643,  ["source"] = "The Durnholde Challenge: Zephyrus",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 28643, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Feast of Winter Veil"] = {
@@ -4922,8 +5195,8 @@ _addon.data = {
 		"Modern Day Observation\n\nOther cultures have begun to recognize the Feast of Winter Veil as a time of great celebration, though not in the same traditions as the legend bases it in. Customs, often unrelated to anything other than a chance for celebration and gift exchange, have made their way into modern day observation of the season. Even the image of Greatfather Winter is sometimes used, but more as a harbinger of commercial exploit rather than as a supernatural titan.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 341, ["id"] = 7063,  ["source"] = "The Feast of Winter Veil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 7061,  ["source"] = "The Feast of Winter Veil",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 341, ["id"] = 7063, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 321, ["id"] = 7061, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Frostwolf Artichoke"] = {
@@ -4937,7 +5210,7 @@ _addon.data = {
 		"Epilogue\n\n\"Smother the heart of the artichoke with garlic butter and mayonnaise. Compliment the meal with an aged, heady ale.\"\n\nDrek'Thar now stands alone, his two mutts at his side. Capture the Frostwolf Relief Hut to aid in your battle and destroy Drek'Thar. When the General falls, this land will finally turn over to its rightful owner: The Stormpike.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 7162,  ["source"] = "Proving Grounds",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 24, ["id"] = 7162, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Horde's Hellscream"] = {
@@ -4948,7 +5221,7 @@ _addon.data = {
 		"Dangers everywhere!\nEnemies seek to bring us\nback to the shackles.\n\nWhen we fight, think of\nhe who did what must be done.\nHellscream, forever!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 4, ["id"] = 8150,  ["source"] = "Honoring a Hero",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 4, ["id"] = 8150, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Legend of Stalvan"] = {
@@ -4965,7 +5238,7 @@ _addon.data = {
 		". . .downward spiral of despair. First she mocks me and now she is engaged. The ungracious charlatan was pretending to love when truly she desired to hurt me all along. A black void lurks within me now and it grows with each waking moment. The blood I shall spill pales in comparison to the tears I have shed. . .",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26671,  ["source"] = "The Fate of Stalvan Mistmantle",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26671, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Legend of the Horn"] = {
@@ -4975,7 +5248,7 @@ _addon.data = {
 		"For five days, Stormhoof struggled against the wind. As the sixth day dawned, he banished the wind from Frostblade Peak and took possession of the horn. Battered and injured, Stormhoof departed the mountain for his village.\n\nThe North Wind gathered a host of lesser elementals and attacked Stormhoof as he neared home. The weakened warrior could not defend himself against the onslaught and the North Wind took its revenge. It broke the horn into two pieces, encased them in shiny baubles, and gave them to two powerful gorloc chieftains as tokens of their authority.\n\n&lt;The original text ends abruptly, but someone, perhaps Windtamer Barah, seems to have made an addendum below.&gt;\n\nAs they were instructed by the North Wind, the gorloc chieftains passed down these precious relics to their sons and grandsons. To this day, the horn's pieces remain with Chieftain Burblegobble and Chieftain Gurgleboggle.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 486, ["id"] = 11695,  ["source"] = "The Horn of Elemental Fury",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 486, ["id"] = 11695, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Path of Redemption"] = {
@@ -4990,8 +5263,8 @@ _addon.data = {
 		"<HTML><BODY><BR/><P>It is with trepidation that I gaze upon New Avalon, I somehow suspect for the last time. The fate of our cause lies in Northrend. I am filled with a sense of ominous foreboding for some reason. The mission ahead should shake away these concerns. I will put them out of my mind.</P><BR/><P>The Crimson Dawn is upon us.</P></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 502, ["id"] = 12757,  ["source"] = "Scarlet Armies Approach...",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 502, ["id"] = 12756,  ["source"] = "The Scarlet Onslaught Emerges",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 502, ["id"] = 12757, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 502, ["id"] = 12756, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Story of Morgan Ladimore"] = {
@@ -5008,8 +5281,7 @@ _addon.data = {
 		"wanders Duskwood, consumed by his grief over the loss of his wife and children and his own self-hatred. Mor'Ladim, as he now calls himself, roams Duskwood with mindless vengeance and hatred, and has been known to commit murder indiscriminately.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26794,  ["source"] = "Morgan Ladimore",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		--{ ["sourceType"] = "unavailable",  ["area"] = "???",  ["source"] = "Stormwind Library",  ["level"] = "",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26794,  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Time-Worn Journal"] = {
@@ -5044,8 +5316,8 @@ _addon.data = {
 		"Final Entry\n\nIt has found me! No, no no, I have found it! Yes! It was meant to be, this is where I was always meant to be, a portal to the future, to my future.\n\nThe lantern illuminates my scrawling, it helps me find the way. Vazuvius calls.\n\nAnd so I will answer. I will light the lantern and plunge my head into the stagnant waters, and breathe deep the salty air of my brethren.\n\nAND I WILL JOIN THE DREAD CREW IN ETERNAL PLUNDER.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 951, ["id"] = 33332,  ["source"] = "Hints From The Past",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "vendor",  ["areaId"] = 951,  ["source"] = "Mistweaver Ai",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 951, ["id"] = 33332, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "vendor",  ["areaId"] = 951,  ["id"] = 73305,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["To King Varian Wrynn of the Alliance"] = {
@@ -5056,7 +5328,7 @@ _addon.data = {
 		"Remember, sire, by blood and honor we all serve.\n\nRespectfully,\n\nHighlord Tirion Fordring",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 23, ["id"] = 13188,  ["source"] = "Where Kings Walk",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 23, ["id"] = 13188, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["To the Warchief of the Horde"] = {
@@ -5067,7 +5339,7 @@ _addon.data = {
 		"Remember, Warchief, by blood and honor we all serve.\n\nRespectfully,\n\nHighlord Tirion Fordring\n\nP.S. Give Eitrigg my regards and please inform him that I could use a good orc by my side in Northrend - with your permission, of course.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 23, ["id"] = 13189,  ["source"] = "Warchief's Blessing",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 23, ["id"] = 13189, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Tome of Thomas Thomson"] = {
@@ -5076,8 +5348,8 @@ _addon.data = {
 		"Kids: Joel and Gina. Wife: Suzannah",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["area"] = "Hallow's End", ["id"] = 11242,  ["source"] = "Free at Last!",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["area"] = "Hallow's End", ["id"] = 11403,  ["source"] = "Free at Last!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Hallow's End", ["id"] = 11242, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Hallow's End", ["id"] = 11403, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Trail-Worn Scroll"] = {
@@ -5086,7 +5358,7 @@ _addon.data = {
 		"As Forsaken, we fight against the Lich King, we fight against the Alliance... sometimes we even quarrel with the other races of the Horde. We are few, and we face great obstacles... but we will survive and prevail.\n\nAs a fellow hunter, you will do so from afar, with a bow in your hand and an animal companion at your side. Your power comes not from arcane wizardry or martial prowess, but your ability to live off the land.\n\nThe path of the hunter lies before you. It starts with me, your trainer. Where it ends... we do not know that yet.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 24962,  ["source"] = "Trail-Worn Scroll",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 24962, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Translated Sunhawk Missive"] = {
@@ -5095,7 +5367,7 @@ _addon.data = {
 		"Declaration from the Sun King\n\nSunhawks - my precious, loyal children - your king commends you. Your presence on Azeroth is of the utmost importance to both myself and the Master.\n\nSoon, the sun portal will be ready to transport reinforcements from Tempest Keep directly to Bloodmyst Isle. \n\nWe will reclaim the Exodar. We will slay the blue skinned mongrels where they stand. Velen will pay for his crimes.\n\n-King Kael'thas Sunstrider",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 476, ["id"] = 9698,  ["source"] = "Audience with the Prophet",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 476, ["id"] = 9698, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Venture Co. Documents"] = {
@@ -5105,7 +5377,7 @@ _addon.data = {
 		"a large scale operation so close to the tauren homeland, but do not feel that they pose a large impediment to our overall business plan in the area.\n\nWe are pleased to hear that mining has begun in the mineral rich plains of Mulgore. Because of this the board has approved your equipment request. In addition to mining, we feel that Mulgore also has much to offer in the way of lumber, thus you will also be provided with several of our newest model shredders and raw materials to construct a mill.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 9, ["id"] = 751,  ["source"] = "The Ravaged Caravan",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 9, ["id"] = 751, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Verdant Note"] = {
@@ -5114,7 +5386,7 @@ _addon.data = {
 		"The spirits came to me in my dreams last night. They told me of your coming, and that it would be my task to aid you. We have much to go over in our short time together--discussions about nature, the spirits, the Earthmother, and even the night elves. But I will save the lessons for your arrival, and I will do all that is in my power to ensure that you are ready for the trials ahead.\n\nMay wisdom guide you. I will be waiting.\n\n-Gart Mistrunner, Druid Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 3094,  ["source"] = "Verdant Note",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 890, ["id"] = 3094, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Verdant Sigil"] = {
@@ -5123,7 +5395,7 @@ _addon.data = {
 		"When word reached me that you were ready, I sent this sigil immediately. All of Cenarius' druids take great satisfaction in seeing our numbers bolster. The spirits even seem to have become stronger with our enhanced presence. In time, and with some patience, hopefully our strength will return to its former grandeur. Find me within Aldrassil when you are ready. I will be your guide as long as you are in Shadowglen.\n\n- Mardant Strongoak, Druid Trainer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3120,  ["source"] = "Verdant Sigil",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 888, ["id"] = 3120, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Weaponization Orders"] = {
@@ -5132,7 +5404,7 @@ _addon.data = {
 		"Raz,\n\nYour orders are to capture four additional gronn for weaponization.\n\nOf your first group, only one survived the entire process.\n\nOne attacked our soldiers relentlessly and had to be put down. Another fell victim to a misfire while being fitted. Yet another rolled onto its cannons in its sleep. We're still cleaning up that mess.\n\nRest assured, your efforts are not in vain.\n\n- Captain Brak",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 35925,  ["source"] = "The Gronn Strategy",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 35925, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Venomous Tome"] = {
@@ -5141,7 +5413,7 @@ _addon.data = {
 		"1. If you don't like the potency of a poison, double the ingredients or halve them.\n2. If a poison doesn't work the way you want, you're always more wrong than you think you are.\n3. Prototype, Prototype, Prototype (gnomes make great test subjects).\n4. Poisons should be easy to start using, hard to stop using.\n5. Simple ingredients work together to create interesting complexity.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "vendor",  ["areaId"] = 301,  ["source"] = "Miles Sidney",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "vendor",  ["areaId"] = 301,  ["id"] = 28347,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 
@@ -5156,7 +5428,7 @@ _addon.data = {
 		"My poems\nby Uratok\n\nold puddle...\na newt hops in\nwater's sound\n\nthe wind of Frostfire\nI've cloak on my shoulder!\na gift from Erda",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["source"] = "Uratok's Strongbox",  ["level"] = "0",  ["x"] = "63.1",  ["y"] = "75.7"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["id"] = 235638,  ["level"] = "0",  ["x"] = "63.1",  ["y"] = "75.7"},
 	},
 },
 ["A Mysterious Message"] = {
@@ -5177,7 +5449,7 @@ _addon.data = {
 		"I shall travel to meet you in person when the winter rains subside and the roads are suitable for travel once again.\n\nUntil then,\n\nStalvan Mistmantle of Silverpine",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26667,  ["source"] = "The Stolen Letters",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26667, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["A Torn Journal"] = {
@@ -5187,7 +5459,7 @@ _addon.data = {
 		". . .most strange and uncontrollable feeling. Never have I felt the way I did today. Whilst assisting Giles with his history lesson, Tilloa was outside tending to the flower garden. After a few minutes she came inside and placed a scarlet begonia in my open palm and smiled at me in such a way that my heart felt as though it was trembling within my chest. . . .",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26669,  ["source"] = "In A Dark Corner",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26669, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Admiral Taylor's Garrison Log"] = {
@@ -5205,7 +5477,7 @@ _addon.data = {
 		"Day 27\nMade it back. Chaos at the garrison. Goya's supplies never arrived. Dunberlin thought martial law was a good idea. He's taking orders from Ephial now. Wrathion nowhere to be found. Took some of my best followers with him. Time to roll up our sleeves and fix this.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 948,  ["source"] = "Admiral Taylor's Coffer",  ["level"] = "0",  ["x"] = "36.2",  ["y"] = "54.4"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 948,  ["id"] = 235365,  ["level"] = "0",  ["x"] = "36.2",  ["y"] = "54.4"},
 	},
 },
 ["Adventuring Journal"] = {
@@ -5215,7 +5487,7 @@ _addon.data = {
 		"&lt;The writing becomes increasingly frantic as the page goes on.&gt;\n\nHuge mistake - remembered my S.E.L.F.I.E. camera, somehow didn't bring my hearthstone.\n\nRavagers keep coming\n\nBackpack full\n\nTell my story",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 975,  ["source"] = "Forgotten Sack",  ["level"] = "0",  ["x"] = "56.9",  ["y"] = "65.1"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 975,  ["id"] = 241433,  ["level"] = "0",  ["x"] = "56.9",  ["y"] = "65.1"},
 	},
 },
 ["An Unopened Tome of Advice"] = {
@@ -5224,7 +5496,7 @@ _addon.data = {
 		"Table of Contents\n\nChapter 1 - The Dead and You\n\nChapter 2 - Maintaining a Ghoulish Figure: Seven Easy Exercises\n\nChapter 3 - Keeping the Chill Out: Choosing a Coordinated Coffin\n\nChapter 4 - Graveyard Guarantees: Fifty Sure Signs of Love\n\n&lt;The tome is in pristine condition and appears to be completely unread&gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 488,  ["source"] = "Frigid Necromancer",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 488,  ["id"] = 27539,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Ancient Korune Tablet"] = {
@@ -5233,7 +5505,7 @@ _addon.data = {
 		"In the one-hundred-and-seventieth year of the Thunder King's reign, the Korune spellweavers came to Lei Shen with their greatest creation. \n\nA bell cast from the makers' flesh, shaped by stars' fire, and bound by the breath of darkest shadow. This bell, when rung, could shake the world and call to the heavens.\n\nTaken to war, the bell's cacophonous tones stirred the hearts of Lei Shen's warriors. It fueled their hatred and anger, lending them strength on the field of battle. The bell's screaming voice struck fear and doubt into the hearts of the Emperor's enemies, sending them fleeing in his path.\n\nAwed by its power, the Thunder King described the instrument as \"the voice of the gods,\" and named it Shenqing, the Divine Bell.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 811, ["id"] = 32257,  ["source"] = "Voice of the Gods",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 811, ["id"] = 32257, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Ancient Tablet"] = {
@@ -5243,7 +5515,7 @@ _addon.data = {
 	},
 	["locations"] = {
 		{ ["sourceType"] = "drop",  ["areaId"] = 686,  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "chest",  ["areaId"] = 686,  ["source"] = "Witch Doctor's Chest",  ["level"] = "0",  ["x"] = "44.0",  ["y"] = "15.8"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 686,  ["id"] = 141596,  ["level"] = "0",  ["x"] = "44.0",  ["y"] = "15.8"},
 	},
 },
 ["Artificer Maatun's Journal"] = {
@@ -5263,7 +5535,7 @@ _addon.data = {
 		"I have been betrayed. We had completed the device, but before I was able to activate it and restore the crystal, the orcs turned on me. Stonefist stuck the blow, which left me broken and useless at the foot of the device. I could only watch as each orc took a piece of the crystal for themselves before I was dragged away. \n\nI now sit chained to the base of a heavy runestone, awaiting my fate. My only wish now is to see my people again one last time.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 948,  ["source"] = "Artificer's Journal",  ["level"] = "0",  ["x"] = "67.5",  ["y"] = "21.8"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 948,  ["id"] = 240016,  ["level"] = "0",  ["x"] = "67.5",  ["y"] = "21.8"},
 	},
 },
 ["Barely Readable Diary"] = {
@@ -5330,7 +5602,7 @@ _addon.data = {
 		"Shadowhide gnolls and Blackrock orcs are setting up a massive offensive to attack Stormwind.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26545,  ["source"] = "Yowler Must Die!",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26545, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Blackrock Orc Missive"] = {
@@ -5339,7 +5611,7 @@ _addon.data = {
 		"&lt;This entire page is written in orcish. You can't understand anything on the document.&gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26544,  ["source"] = "They've Wised Up...",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26544, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Blood-Spattered Zandalari Journal"] = {
@@ -5350,7 +5622,7 @@ _addon.data = {
 	},
 	["locations"] = {
 		{ ["sourceType"] = "drop",  ["areaId"] = 928,  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Fortuitous Coffer",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 94566,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Bloodsail Orders"] = {
@@ -5361,7 +5633,7 @@ _addon.data = {
 		"There is no exit plan here, boys. Once we arrive in Booty Bay, we burn her down and take her over, or we die trying. Take that message to heart.\n\n--Fleet-Master Firallon",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 673, ["id"] = 26612,  ["source"] = "Details of the Attack",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 673, ["id"] = 26612, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Bloodscalp Lore Tablet"] = {
@@ -5386,7 +5658,7 @@ _addon.data = {
 		"By moon and fire,\nBy flesh and bone,\nScribed in blood,\nCarved in stone.\n\nLeave this place\nOr meet your doom\nDeath stands guard\nOver the Emperor's Tomb.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 37, ["id"] = 26744,  ["source"] = "Deep Roots",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 37, ["id"] = 26744, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Boulderfist Plans"] = {
@@ -5395,7 +5667,7 @@ _addon.data = {
 		"Stupid,\n\nFind food. Blue taste good. Lantresor say it ok. Bring food back to Lump. Lump eat first then stupid eat. Ok? Go fast or Lump eat you.\n\n-Lump",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 9917,  ["source"] = "Do My Eyes Deceive Me",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 9917, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Brazie's Dictionary of Devilish Draenei Damsels"] = {
@@ -5407,8 +5679,8 @@ _addon.data = {
 		"The following 497 pages of this dictionary consistent entirely of oddly angled pictures taken from a Super Snapper FX 2000.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "vendor",  ["areaId"] = 604,  ["source"] = "Brazie Getz",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Brazie's Black Book of Secrets",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "vendor",  ["areaId"] = 604,  ["id"] = 37904,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 49926,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Brazie's Document on Dwarven Dates in Dun Morogh"] = {
@@ -5417,8 +5689,8 @@ _addon.data = {
 		"How to date a Dwarven woman:\n\n1. Ask her to buy you a drink.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "vendor",  ["areaId"] = 604,  ["source"] = "Brazie Getz",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Brazie's Black Book of Secrets",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "vendor",  ["areaId"] = 604, ["id"] = 37904,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 49926,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Brazie's Guide to Getting Good with Gnomish Girls"] = {
@@ -5428,8 +5700,8 @@ _addon.data = {
 		"\"Teasing\"\n\nTeasing is the art of making fun of a woman in a humorous way. Be careful, you can easily go too far. Calling her a \"Goblin Ganking Gnat\" will leave you walking home wearing that Green Gordok Grog you just bought. Try something a bit more subtle. \n\nIf she acts childish and refuses to stop jumping onto tables in the middle of the bar try:\n\n\"I hear there's an opening for star entertainer at the Stormwind orphanage.\"\n\nIf she won't stop talking about herself playfully try:\n\n\"Where's your off switch?\"\n\nIMPORTANT NOTE: Gnomish girls do NOT have an off switch. Attempting to find it may result in the loss of life, limbs or wallet.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "vendor",  ["areaId"] = 604,  ["source"] = "Brazie Getz",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Brazie's Black Book of Secrets",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "vendor",  ["areaId"] = 604, ["id"] = 37904,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 49926,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Brazie's Handbook to Handling Human Hunnies"] = {
@@ -5442,8 +5714,8 @@ _addon.data = {
 		"Troubleshooting\n\nWhile everything doesn't always go the way you expect, that's what make life unpredictable and exciting. However, there's a few tips to help you a long way in improving your life. Here's some common blunders:\n\n* Don't chase\n* Don't be needy\n* Don't get stuck on someone who dislikes you\n\nThese all stem from a core belief that women you must have the woman you're talking to right now. Break free - there's many women out there in this beautiful world and if one doesn't work out, let go. You'll find you become more attractive the less clingy you are.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "vendor",  ["areaId"] = 604,  ["source"] = "Brazie Getz",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Brazie's Black Book of Secrets",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "vendor",  ["areaId"] = 604, ["id"] = 37904,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 49926,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Brazie's Notes on Naughty Night Elves"] = {
@@ -5452,8 +5724,8 @@ _addon.data = {
 		"Let's be honest. Since the end of the Third War, Night Elf girls have heard it all. In fact, they'd already heard it all long before you or I was born. \n\nIf you want to engage the mind of a Night Elf girl, you're going to have to stand out. Sure, we've all heard the tales of Night Elf lasses dancing on mailboxes and stripping to pay for Nightsaber training. True or not, if you want to light that lovely lady's lips up with a smile, you gotta be unique, memorable and confident. \n\nStart off by showing that you're looking for more than a gal with looks. Sure, she can bounce, she can dance, but can she hold a decent conversation? Does she even understand the proper use of a samophlange? Does she know how to have a fun time?\n\nThere's nothing worse than bringing a Night Elf to a party, only to watch her stand awkwardly by herself, breaking conversation only to lament the loss of her Highborne sister during the War of the Ancients.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "vendor",  ["areaId"] = 604,  ["source"] = "Brazie Getz",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Brazie's Black Book of Secrets",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "vendor",  ["areaId"] = 604, ["id"] = 37904,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 49926,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Compendium of the Fallen"] = {
@@ -5473,8 +5745,8 @@ _addon.data = {
 		"I am nearing a breakthrough on imbuing armor with Felbreaker magic. If I accomplish this we can equip any soldier with this magic. We will be unstoppable! I am not to be disturbed for any reason. The Sorcerer King is already angry at how expensive and time consuming this is, we cannot afford any mistakes!\n\nReglaak",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 34593,  ["source"] = "Obtaining Ogre Offensive Orders",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35157,  ["source"] = "Obtaining Ogre Offensive Orders",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 34593, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35157, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Crumpled Bill of Sale"] = {
@@ -5484,7 +5756,7 @@ _addon.data = {
 		"*Effectiveness of Super-effective Gnoll Decoy may depend on intelligence of opponent. Not warranted for use against Humanoids, Dragonkin, or other semi-sentient creatures.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 809,  ["source"] = "Captain Ripflesh",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 809,  ["id"] = 60767,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Crumpled Note"] = {
@@ -5493,7 +5765,7 @@ _addon.data = {
 		"Fleeing from the Zanzil in that rotting boat seemed wise at the time, but I start to think death would have been a more suitable fate.\n\nI thought my ancestors had granted me a boon by allowing me to escape their wrath. But now I wonder what wisdom I shall gain if I live through my imprisonment.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 673,  ["source"] = "Half-Buried Bottle",  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "75.9"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 673,  ["id"] = 2560,  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "75.9"},
 	},
 },
 ["Damp Diary Page (Day 4)"] = {
@@ -5502,7 +5774,7 @@ _addon.data = {
 		"Diary - Day 4\n\nI have been stranded on the Island now for 4 days, left alone with my thoughts.  Bananas are pretty tasty, but what a long climb to reach them. When I am not getting food or protecting myself from the periodic rain, all my thoughts are of rescue.\n\nI would not be so hopeful if it were not for the boxes of paper and bottles that washed ashore with me. I laugh now to think of all the time I spent on that ship cursing that I was stuck with a boatload of Alchemists and Scribes.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Message in a Bottle",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 6307,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Damp Diary Page (Day 512)"] = {
@@ -5511,7 +5783,7 @@ _addon.data = {
 		"Diary - Day 512\n\nThe bananas have started talking to me and I have learned a great deal about their culture. I have ceased my senseless destruction of their homes and consumption of the young. How little I knew then of the great civilization that I was destroying. \n\nOn another topic I seem to be running low on bottles and paper. When I first looked at those huge stacks of paper that washed ashore I thought they would be inexhaustible. Woe with me, my diary must end soon.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Message in a Bottle",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 6307,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Damp Diary Page (Day 87)"] = {
@@ -5520,7 +5792,7 @@ _addon.data = {
 		"These months have given me time to ponder, to shuffle loose my old beliefs and bigotries. Alliance? Horde? Good? Evil? The meanings of these words, once so clear, now blur as my eyes gaze across the boundless sea.\n\nI now know what matters. The bananas are after me. \n\nPerched high in their tree, they eye me with cool malevolence. And the last one I tried to eat nearly gagged me! I could almost hear it scream as I smashed it, half bitten, on sea rocks.\n\nIt's war, and I will win it.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Message in a Bottle",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 6307,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Damp Note"] = {
@@ -5529,7 +5801,7 @@ _addon.data = {
 		"You've found my note and an ocean breeze, but the next clue won't come with such ease.\n\nTo find the spot where your hint hides, go to the place where four cats ride.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 823,["source"] = "Barnacle-Covered Bag",  ["level"] = "0",  ["x"] = "42.0",  ["y"] = "91.5"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 823, ["id"] = 242518,  ["level"] = "0",  ["x"] = "42.0",  ["y"] = "91.5"},
 	},
 },
 ["Dark Iron Memo"] = {
@@ -5539,7 +5811,7 @@ _addon.data = {
 		"Succeed in this task, and you will be rewarded. You should know, these orders do not come from me, but from Overseer Maltorius and the Archduke themselves.\n\nDig deep,\nDig-Boss Dinwhisker",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 28, ["id"] = 27963,  ["source"] = "A New Master... But Who?",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 28, ["id"] = 27963, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Defias Orders"] = {
@@ -5548,7 +5820,7 @@ _addon.data = {
 		"Garn,\n\nI needn't remind you of the importance of your mission -- protect your precious cargo at any cost. As I have promised, success and discretion will be richly rewarded. \n\nKeep the tongue-wagging of your \"associates\" to a minimum, heed the crew and all will be well. I shall await word of your success.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27235,  ["source"] = "Renn McGill",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 141, ["id"] = 27235, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Diary of Weavil"] = {
@@ -5574,7 +5846,7 @@ _addon.data = {
 		"To find the next, don't follow the signs, just listen to the very next rhyme.\n\nWhat you seek is a penitent man, the smaller of two, if you can.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 823,["source"] = "Crystallized Note",  ["level"] = "0",  ["x"] = "52.3",  ["y"] = "85.2"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 823, ["id"] = 242520,  ["level"] = "0",  ["x"] = "52.3",  ["y"] = "85.2"},
 	},
 },
 ["Diving Log"] = {
@@ -5585,7 +5857,7 @@ _addon.data = {
 		"Day 36: Third breath of air finally expired, and the veins in my left elbow filled with bubbles again on the way up. The drumming of the crabs is a constant companion now, a percussive backdrop to my blackened little corner of hell. Clearly, I've been forgotten by those wretches. If J-Y were down here, they wouldn't have forgotten him! They wouldn't have left Hans or Sylvia behind! Why me? \n\n&lt; The entries trail off in a despondent scrawl ... &gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 491,  ["source"] = "Forsaken Spy",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 491,  ["id"] = 24286,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Doctor Kohler's Orders"] = {
@@ -5594,7 +5866,7 @@ _addon.data = {
 		"Doctor Kohler,\n\nThe Black Knight has not yet served his purpose. Retrieve his remains from the tournament grounds and use your arts to return him to life. We will use the strength of the crusaders and their followers against them.\n\nTake prisoners and use their souls to empower my servant. Capture Crusader Kul, called reckless by his fellows, and sacrifice him upon your altar. His spirit will imbue the Black Knight with terrible strength and power. Then, deliver the Black Knight to me.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 492, ["id"] = 14017,  ["source"] = "The Black Knight's Fate",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 492, ["id"] = 14017, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Dog-Eared Note"] = {
@@ -5621,8 +5893,8 @@ _addon.data = {
 		"The Reclamation\n\nBy order of his exalted, the reclaimers shall be dispatched to the ruins of Dojan. There they are to recover any artifacts that may be used to arm our people.\n\nWe need guardian statues, scrolls, any arcane devices that will help us rekindle our ancient glory.\n\nPriority must be given to the Pools of Youth on the north side of Dojan. Those waters are vital to the continued strength of the empire.\n\n-Groundbreaker Brojai,\n\n The Lord Reclaimer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 857, ["id"] = 30129,  ["source"] = "The Mogu Agenda",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 857, ["id"] = 30346,  ["source"] = "Where are the Pools",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 857, ["id"] = 30129, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 857, ["id"] = 30346, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Durrin's Archaeological Findings"] = {
@@ -5633,7 +5905,7 @@ _addon.data = {
 		"The going has been slow, mainly because I've needed to cover up my work behind me. That blasted goblin, Nilminer, still has cronies digging in the area, and I mustn't risk any news of this discovery leaking before I send my final results back to Blackrock Mountain. This may be the key piece of information that tells us what the Titans were doing in Un'Goro!\n\nRegards,\n\nDurrin Direshovel",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 490, ["id"] = 24709,  ["source"] = "A Tale of Two Shovels",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 490, ["id"] = 24709, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Envoy's Log"] = {
@@ -5646,7 +5918,7 @@ _addon.data = {
 		"Day 15,\n\nBorgal refused to turn over the artifact!\n\nI will not allow that fat ogre to keep Iron Horde property!\n\nI have discussed the matter with my guards and we are going to return in the morning and force him to hand over the artifact or else!\n\n&lt;The following pages are blank.&gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["source"] = "Envoy's Satchel",  ["level"] = "0",  ["x"] = "40.9",  ["y"] = "20.1"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["id"] = 229328,  ["level"] = "0",  ["x"] = "40.9",  ["y"] = "20.1"},
 	},
 },
 ["Folded Letter"] = {
@@ -5655,7 +5927,7 @@ _addon.data = {
 		"Hi!\n\nI'm not good at letters and so the matron helped me write this down for you. I just want to say THANKS because you're a hero and maybe someday I can save people like you do.\n\nOk, I have to go play so THANKS AGAIN for being good and strong and and you're &lt;handsome/pretty&gt; too!\n\n--Your secret admirer",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Crudely Wrapped Gift",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 34077,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Frayed Zandalari Journal"] = {
@@ -5666,7 +5938,7 @@ _addon.data = {
 	},
 	["locations"] = {
 		{ ["sourceType"] = "drop",  ["areaId"] = 928,  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Fortuitous Coffer",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 94566,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Frostfire Mission Orders"] = {
@@ -5675,8 +5947,8 @@ _addon.data = {
 		"Research and engineering efforts must be doubled at the Iron Siegeworks in Frostfire Ridge. Do so with any means necessary. With superior technology, the Iron Horde can crush any foe.\n\n\n-- Warchief Grommash Hellscream",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35840,  ["source"] = "Intercepting the Orders",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35846,  ["source"] = "Intercepting the Orders",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35840, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35846, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Give to the Church and the Light Will Provide"] = {
@@ -5695,7 +5967,7 @@ _addon.data = {
 		"Minions, our leader has spoken. You are to sack Sentinel Hill and free the admiral. You may keep anything that you find in your rampage.\n\n-Helix",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26286,  ["source"] = "In Defense of Westfall",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26286, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Gnoll Battle Plans"] = {
@@ -5704,7 +5976,7 @@ _addon.data = {
 		"Step 1: KILL\nStep 4: Sleep?\nStep 2: EAT\nStep 1: Poop",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26503,  ["source"] = "Still Assessing the Threat",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26503, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Gnoll Orders"] = {
@@ -5713,7 +5985,7 @@ _addon.data = {
 		"You attack from down there!\nWe attack from up here!\nMeet in middle at humie town.\n\n-Yowler, Son of Yowler",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26503,  ["source"] = "Still Assessing the Threat",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26503, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Gnoll Strategy Guide"] = {
@@ -5722,7 +5994,7 @@ _addon.data = {
 		"&lt;This document is blank.&gt;\n\n&lt;Correction. This document was used recently as toilet paper.&gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26503,  ["source"] = "Still Assessing the Threat",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 36, ["id"] = 26503, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Gorick's Stash List"] = {
@@ -5737,7 +6009,7 @@ _addon.data = {
 		"<HTML><BODY><H1 align=\"center\">Location 6: The Grove in the Loch</H1><BR/><P>A small grove of three saplings in the center of the Loch serves as a well-isolated drop off point.</P><BR/><P>Draining of the Loch has left this space slightly less isolated. The crocolisks have helped to mitigate this.</P></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 35,  ["source"] = "Gorick Guzzledraught",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 35,  ["id"] = 33456,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Green Hills of Stranglethorn - Page 14"] = {
@@ -5759,7 +6031,7 @@ _addon.data = {
 		"numbers but are not well armed or organized. A small show of force should be more than adequate in dealing with the threat they pose.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 27,  ["source"] = "Grik'nir the Cold",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 27,  ["id"] = 808,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Grinning Tolg's Journal"] = {
@@ -5776,8 +6048,8 @@ _addon.data = {
 		"It is too late. Even now my body rebels against me as the infection of the botani takes hold. If my brothers come upon these writings, I would charge them to take their blades against the Skulltaker.\n\nBut first, burn my body and take my skull.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 949,  ["source"] = "Twisted Guardian",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "drop",  ["areaId"] = 949,  ["source"] = "Enthralled Mutant",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 949,  ["id"] = 88279,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 949,  ["id"] = 88394,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Grom'kar Dispatch"] = {
@@ -5786,8 +6058,8 @@ _addon.data = {
 		"General Orgrim,\n\nThe ogron have taken a squad of our men - snatched them from what we thought was a safe zone in broad daylight. \n\nThat's not the worst of it. Among the missing is Corporal Thukmar. He's gone, along with all of his latest notes. \n\nI have dispatched a squad into the Fissure of Fury to recover the notes, and perhaps our troops.\n\nI'll update you as soon as there is news.\n\n- Commander Gar",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 36209,  ["source"] = "What's Under There?",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 35041,  ["source"] = "Xuk It!",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 36209, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 35041, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Illidan's Command"] = {
@@ -5796,8 +6068,8 @@ _addon.data = {
 		"My Dear Chancellor,\n\nThe task of bringing the giants of Shadowmoon into the fold is now in your capable hands. Use your blood elf charm to make them see things my way. If that does not work, exterminate each and every last one of them...\n\n-Lord Illidan Stormrage",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 10774,  ["source"] = "Blood Elf + Giant = ???",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 10765,  ["source"] = "When Worlds Collide...",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 10774, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 10765, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Informational Pamphlet"] = {
@@ -5806,7 +6078,7 @@ _addon.data = {
 		"Give a man a tabard and he will pledge his undying loyalty to your cause. These men are now government sheep who care not for your hardships. They wear the tabard of their leader and care only for what he desires.\n\n-V",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26295, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Iron-Bound Zandalari Journal"] = {
@@ -5817,7 +6089,7 @@ _addon.data = {
 	},
 	["locations"] = {
 		{ ["sourceType"] = "drop",  ["areaId"] = 928,  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Fortuitous Coffer",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 94566,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Issue of the Moonbrook Times"] = {
@@ -5826,7 +6098,7 @@ _addon.data = {
 		"<HTML><BODY><body><H1>Group of Homeless Samaritans Brutally Murdered Behind Furlbrow Farm </H1><BR/><P>Witnesses state that the four men killed at the Furlbrow's farm were on their way to delivering dirt pies to a shelter on the east coast when attacked. Jimb \"Candles\" McHannigan, an eyewitness on the scene, had this to say, \"Yep, I saw the whole thing go down with my own two eyes. Was a $g male:female; $c. $g He:She; looked like $g he:she; may have been on something. $g He:She; slaughtered the poor bums in broad daylight while shouting obscenities and proclaiming $g his:her; love for Stormwind and King Varian Wrynn. I think $g he:she; may have killed Lou immediately afterward. I was too shaken up to see.\"</P></body></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26295, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Khazgorm's Journal"] = {
@@ -5837,7 +6109,7 @@ _addon.data = {
 		"The fact that we are dealing with various rogue elements out here leads me to believe we will need support from the King's Army. Not only will the excavation require military support, it would seem to my novice eye that the location of Bael Modan might be of strategic value to the Alliance considering the volatility of world politics in their current state.\n\nAlas, I have digressed. There is much work to be done beneath the rock. I have spent too much time writing and not enough digging...",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "unavailable",  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "unavailable"},
 	},
 },
 ["Kurzen Compound Officers' Dossier"] = {
@@ -5850,7 +6122,7 @@ _addon.data = {
 		"CHIEF ESQUIVEL\n\nInterim chief after the death of Colonel Kurzen. Responsible for overseeing all operations of Kurzen's Expedition.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 37, ["id"] = 26735,  ["source"] = "The Fate of Kurzen",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 37, ["id"] = 26735, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Kurzen Compound Prison Records"] = {
@@ -5864,7 +6136,7 @@ _addon.data = {
 		"COLONEL CONRAD KURZEN\n\nCrimes: Weakness\n\nPunishment: Flung from tower",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 37, ["id"] = 26735,  ["source"] = "The Fate of Kurzen",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 37, ["id"] = 26735, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Lorgalis Manuscript"] = {
@@ -5876,7 +6148,7 @@ _addon.data = {
 		"Aku'mai, Princess of the Deep, serves the Old Gods. She dwells in Blackfathom Deeps, blessing its caves with her ancient wisdom.  Brought to the Deeps by older mortals, Aku'mai is a symbol of divinity. She has but a sliver of the Old Gods' power and savagery, and yet hers is still beyond measure.\n\nAnd so she is worshipped. And she is feared, and loved.\n\n\n--Lorgalis",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 688,  ["source"] = "Pitted Iron Chest",  ["level"] = " 0",  ["x"] = "33.5",  ["y"] = "41.7"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 688,  ["id"] = 13949,  ["level"] = " 0",  ["x"] = "33.5",  ["y"] = "41.7"},
 	},
 },
 ["Mariner's Log"] = {
@@ -5893,7 +6165,7 @@ _addon.data = {
 		"Morning Watch, One Bell\nFire in Captain's quarters. All hands roused. Throwing powder overboard.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Bag of Fishing Treasures",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 46007,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Megacharge's Cookbook"] = {
@@ -5905,7 +6177,7 @@ _addon.data = {
 		"\"The final, and most important ingredient for the Arcane Bunker Buster, is a sizable quantity of demon blood. The unique properties of the magic-infused blood combine with the blasting powder into an incredibly potent mixture. \n\n\"When ignited by a high-voltage electric charge, this combination will explode in a magically-charged explosion, sufficient enough to take down most arcane barriers.\n\n\"Just make sure to take cover before the thing goes off.\"",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 947,  ["source"] = "Demolitionist Megacharge",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 947,  ["id"] = 90107,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Metzen's Letters and Notes"] = {
@@ -5917,7 +6189,7 @@ _addon.data = {
 		"More rapid than eagles his coursers they came,\n\nAnd he whistled, and shouted, and called them by name;\n\n\"Now, Mercer! now, Chilton! now, Jordan and Kaplan!\n\nOn, Nagle! on Pardo! on, Goodman and Metzen!\n\nTo the top of the porch! to the top of the wall!\n\nNow dash away! dash away! dash away all!\"",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Smokywood Satchel",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 21315,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Moonlit Note"] = {
@@ -5926,7 +6198,7 @@ _addon.data = {
 		"This is it, the final one! We hope you've had a lot of fun!\n\nYou seek a sail, not white or black, it must be the color of Silas' hat.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 823,["source"] = "Disturbed Dirt",  ["level"] = "0",  ["x"] = "52.0",  ["y"] = "30.2"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 823, ["id"] = 242521,  ["level"] = "0",  ["x"] = "52.0",  ["y"] = "30.2"},
 	},
 },
 ["Moonrest Gardens Plans"] = {
@@ -5935,8 +6207,8 @@ _addon.data = {
 		"Goramosh,\n\nI am sending a representative of the Ethereum to you. Ambassador Duyheen tells me that there are more of his kind who would like to join the cause. Feel him out, see if you can find a use for him.\n\nIf he proves helpful, I may consider accepting more of his kind into the fold.\n\nDon't be an idiot; burn this letter once you've read it!\n\nM",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12000,  ["source"] = "Rifle the Bodies",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 11999,  ["source"] = "Rifle the Bodies",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12000, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 11999, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Muddy Journal Pages"] = {
@@ -5946,7 +6218,7 @@ _addon.data = {
 		". . .anger and fury the likes of which I never knew existed! How dare she. As I was instructing Giles in the meaning of numbers, Tilloa appears before me with a suitor, holding hands in public nonetheless! What an uncouth young man. Rather than introduce me properly, Tilloa simply said, \"Oh that's just my tutor, Uncle Stalvan. He's a nice old man.\" Old! At that word my cheeks flushed with heat. I am but a few years older and yet she betrays. . .",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26670,  ["source"] = "Roland's Doom",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 34, ["id"] = 26670, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Murloc Clue"] = {
@@ -5955,7 +6227,7 @@ _addon.data = {
 		"&lt;The letter is missing entries as the ink has washed away in many places.&gt;\n\n... every form of ... has been based ... on the antagonism of oppressing and oppressed ...\n\n... nothing to lose, but your chains ...\n\n... the past cannot be forgotten ...\n\n... cannot be forgiven ...\n\n... will RISE AGAIN!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26214,  ["source"] = "Hot On the Trail: Murlocs",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26214, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Musings of the High General"] = {
@@ -5973,7 +6245,7 @@ _addon.data = {
 		"The hour of our redemption draws ever closer, brothers and sisters! Tonight we will shed the shell of our former lives and be reborn as heroes!\n\n-V",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26295,  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Mythology of the Titans"] = {
@@ -5994,7 +6266,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/14679_Tirion_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 765, ["id"] = 27305,  ["source"] = "Of Love and Family",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 765, ["id"] = 27305, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Orders from High Command"] = {
@@ -6003,7 +6275,7 @@ _addon.data = {
 		"Zaren,\n\nYour first objective is to take and hold the Cathedral Quarter of Gilneas City. From there I want you to work with Lord Crowley's worgen to push forward into enemy territory. Take out their near outposts and cut their lines of communication.\n\nKing Wrynn has assured me that a full armada of warships is en route and should be arriving any day. Once the rest of the fleet is here, we will launch an all out assault on Forsaken Forward Command and beat those worthless maggots back into Silverpine Forest\n\nOnce Gilneas is securely in Alliance control, we will begin preparations for retaking Lordaeron.\n\nFor the glory of the Alliance!\n\n-High Commander Halford Wyrmbane\n\nP.S. We will launch a signal flare when we are ready to attack Forsaken Forward Command. Keep your soldiers on high alert.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 684, ["id"] = 27364,  ["source"] = "On Whose Orders?",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 684, ["id"] = 27364, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Priestly Preening: Be Like Your Betters"] = {
@@ -6022,7 +6294,7 @@ _addon.data = {
 		"Attn: Mrs. Gadgetspring\n\nThe industrial-strength laxative agent you requested is enclosed. My condolences on the fate of Mr. Blimo Gadgetspring after his encounter with the cliff giant. I'm curious why you're opting for a laxative in an effort to recover him, as opposed to some sort of vomit-inducing agent? It seems to me you're doing Mr. Gadgetspring a disservice. Good luck with your endeavor!\n\n- Lomac Gearstrip",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 181,  ["source"] = "Giant-Sized Laxative",  ["level"] = "0",  ["x"] = "39.9",  ["y"] = "84.7"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 181,  ["id"] = 196462,  ["level"] = "0",  ["x"] = "39.9",  ["y"] = "84.7"},
 	},
 },
 ["Ripped Note"] = {
@@ -6031,7 +6303,7 @@ _addon.data = {
 		"That beast that reigns over this island is terribly powerful indeed. The other creatures here cower before him: Skyman and Jaguero alike. Even now I can hear his roars and they cause me to flinch.\n\nThese creatures will surely stop any who come to the island. I must have faith in my ancestors.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 673,  ["source"] = "Half-Buried Bottle",  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "75.9"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 673,  ["id"] = 2560,  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "75.9"},
 	},
 },
 ["Salt-Crusted Journal"] = {
@@ -6046,7 +6318,7 @@ _addon.data = {
 		"DELICIOUS JOURNAL I MUST EAT IT\n\n&lt;The rest of the pages are missing&gt;",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 161, ["id"] = 25062,  ["source"] = "What We Came For",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 161, ["id"] = 25062, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Scarlet Courier's Message"] = {
@@ -6055,8 +6327,8 @@ _addon.data = {
 		"High General,\n\nThe armies of Hearthglen and Tirisfal are less than a day's ride from New Avalon. We ride with the Light shining upon our backs and the wind at our heels. Soon the Scourge will have to contend with the full might of the Scarlet Crusade!\n\nLight Bless You,\n\nHigh Commander Galvar Pureblood",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 502, ["id"] = 12755,  ["source"] = "A Meeting With Fate",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 502, ["id"] = 12754,  ["source"] = "Ambush At The Overlook",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 502, ["id"] = 12755, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 502, ["id"] = 12754, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Scarlet Crusade Documents"] = {
@@ -6066,7 +6338,7 @@ _addon.data = {
 		"should be gathered about the organization of the undead in Brill.\n\nCaptain Vachon, there appears to be increased movement by the undead near the northern tower. This insurgence must be quickly and decisively dealt with.\n\nCaptain Melrache, there are concerns about the level of organization of the undead near the borders of the Plaguelands. A fresh group of men will be dispatched to your position in the coming weeks.\n\nGlory under the Light",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 24972,  ["source"] = "Vital Intelligence",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 892, ["id"] = 24972, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Secret Journal"] = {
@@ -6075,7 +6347,7 @@ _addon.data = {
 		"I can hardly believe it. We've endured this torment for four long years, but soon it will be over. The Brotherhood will be reborn and we will then wash across this land as a flood to cleanse it of its filth and corruption.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26295,  ["source"] = "Propaganda",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 39, ["id"] = 26295, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Shadowmoon Mission Orders"] = {
@@ -6084,8 +6356,8 @@ _addon.data = {
 		"The Iron Horde must gain greater air superiority if we are to conquer our enemies. A large population of wild rylak live in Shadowmoon Valley. Force these creatures to submit to our will. I want to see an air fleet of thousands darken the skies on Azeroth.\n\n\n-- Warlord Grommash Hellscream",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35840,  ["source"] = "Intercepting the Orders",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35846,  ["source"] = "Intercepting the Orders",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35840, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35846, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Silver Covenant Orders"] = {
@@ -6094,7 +6366,7 @@ _addon.data = {
 		"You must meet with Arcanist Tybalin on the top floor of the Silver Enclave. He will entrust you with a book that is beyond value. Be discreet in your movements and guard this book with your life. Carry it back to Caladis Brightspear at Quel'Delar's rest with all haste.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 504, ["id"] = 24557,  ["source"] = "The Silver Covenant's Scheme",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 504, ["id"] = 24557, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Song of the Vale"] = {
@@ -6103,7 +6375,7 @@ _addon.data = {
 		"There is a valley where dreamers sleep,\nWhere flowers bloom and willows weep,\nWhere loamy earth springs life anew,\nAnd waters sparkle, clear and blue,\nWhere every hearth brings peaceful ease,\nAnd beauty sings on every breeze.\n\nHere the Sacred Pools spring pure\nHere, seek any who desire cure\nHoly, nature, powers divine,\nTurn death to life, death to life.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 29900,  ["source"] = "An Ancient Legend",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 806, ["id"] = 29900, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Spires of Arak Mission Orders"] = {
@@ -6112,8 +6384,8 @@ _addon.data = {
 		"The arakkoa are a powerful ally and a dangerous foe. Through persuasion or force - it matters not which - we must subdue and subvert their magic.\n\n\n-- Warlord Grommash Hellscream",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35840,  ["source"] = "Intercepting the Orders",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35846,  ["source"] = "Intercepting the Orders",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35840, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35846, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Stormrage Missive"] = {
@@ -6122,7 +6394,7 @@ _addon.data = {
 		"Commander,\n\nThe Cipher is to be delivered to Zuluhed. It will remain in his custody until further notice.\n\n-Lord Illidan Stormrage",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 10570,  ["source"] = "To Catch A Thistlehead",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 473, ["id"] = 10570, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Sunreaver Orders"] = {
@@ -6131,7 +6403,7 @@ _addon.data = {
 		"You must meet with Magister Hathorel inside The Filthy Animal. He will entrust you with a book that is beyond value. Be discreet in your movements and guard this book with your life. Deliver it to Myralion Sunblaze at Quel'Delar's rest with all haste.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 504, ["id"] = 14457,  ["source"] = "The Sunreaver Plan",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 504, ["id"] = 14457, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Syndicate Missive"] = {
@@ -6149,7 +6421,7 @@ _addon.data = {
 		"Kaelynara,\n\n   It is with some regret that I must inform you that I am relieving you of your duties as my apprentice. I blame myself for being mistaken of your potential; I hope you can understand that even the most talented of mages sometimes make mistakes. At least now you can put your ineptitude behind you and pursue a reasonable goal. Perhaps basket weaving may prove more suitable for your...talents.\n\n   Unfortunately I do not associate myself with any basket weavers specifically and am too busy to write you a recommendation. Please return to Azeroth at your soonest convenience.\n\n   -Astalor",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 946,  ["source"] = "Kaelynara Sunchaser",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 946,  ["id"] = 78501,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Book of Ur"] = {
@@ -6198,7 +6470,7 @@ _addon.data = {
 		"<HTML><BODY><P>The first phase of construction is done. Admiral Westwind has ordered a group of my men to establish a toehold further to the north. He wouldn't go into detail, claiming that he was being \"guided\" to do so.</P><BR/><P>We caught four spies from the Forsaken town, Venomspite, this afternoon. I'm going to have LeCraft torture them for information. If we only caught four, how many more have slipped in amongst us?</P><BR/><P>Why do I feel as if things are beginning to unravel?</P></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12283,  ["source"] = "The Truth Will Out",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12283, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["The Path of Redemption"] = {
@@ -6231,7 +6503,7 @@ _addon.data = {
 		"<HTML><BODY><P>The first phase of construction is done. Admiral Westwind has ordered a group of my men to establish a toehold further to the north. He wouldn't go into detail, claiming that he was being \"guided\" to do so.</P><BR/><P>We caught four spies from the Forsaken town, Venomspite, this afternoon. I'm going to have LeCraft torture them for information. If we only caught four, how many more have slipped in amongst us?</P><BR/><P>Why do I feel as if things are beginning to unravel?</P></BODY></HTML>",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12477,  ["source"] = "The Path of Redemption",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 488, ["id"] = 12477, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Thukmar's Intel"] = {
@@ -6240,8 +6512,8 @@ _addon.data = {
 		"This is magnificent!\n\nI have unearthed an artifact of unknown origin. Touching it instantly floods my mind with a vision of every magnaron, gronn and the like that walks Gorgrond.\n\nWhat's more, I am overcome with a sense that each of these creatures are an appendage to me. I have found myself able to commune with them, manipulate them and even shape their thoughts.\n\nI am returning to the foundry to inform Blackhand directly. This discovery will hasten our purging of draenor, and many more worlds to come!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 36223,  ["source"] = "Leave Every Soldier Behind",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 35129,  ["source"] = "Leave Every Soldier Behind",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 36223, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 949, ["id"] = 35129, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Thulgork's Orders"] = {
@@ -6250,8 +6522,8 @@ _addon.data = {
 		"This fortress is in a sorry state of disrepair. It will be hard to improve the Felbreaker's armor here until we get this place into shape. We need space in case of arcane mishaps and safe areas to store our materials. Make this happen quickly!\n\nReglaak",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 34593,  ["source"] = "Obtaining Ogre Offensive Orders",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35157,  ["source"] = "Obtaining Ogre Offensive Orders",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 34593, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 950, ["id"] = 35157, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Torn Note"] = {
@@ -6260,7 +6532,7 @@ _addon.data = {
 		"I miss my tribe, and my home. I would gladly welcome the wind on the open plains or the sunset over Thunder Bluff to the heat of this jungle.\n\nI can see the ocean water not far from me, but it does nothing to cool my body or my temper. It only reminds me of my imprisonment.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 673,  ["source"] = "Half-Buried Bottle",  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "75.9"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 673,  ["id"] = 2560,  ["level"] = "0",  ["x"] = "50.2",  ["y"] = "75.9"},
 	},
 },
 ["Torn Zandalari Journal"] = {
@@ -6271,8 +6543,8 @@ _addon.data = {
 	},
 	["locations"] = {
 		{ ["sourceType"] = "drop",  ["areaId"] = 928,  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Fortuitous Coffer",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Spoils of the Thunder King",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 94566,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 97153,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Traitor's Communication"] = {
@@ -6282,8 +6554,8 @@ _addon.data = {
 		"Contact our spy and prepare for a full scale assault upon the draenei. Kill them all and recover my vessel. You are the only link I have on Azeroth that is able to repair the damage the brutes inflicted upon the Exodar.\n\nDo not fail me, gnome. Should your lust for riches interfere with my orders, you will spend eternity in prayer. You'll pray for death to come and release you from the tortures I'll unleash should you falter.\n\n-King Sunstrider",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 464, ["id"] = 9602,  ["source"] = "Deliver Them From Evil...",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "quest",  ["areaId"] = 464, ["id"] = 9537,  ["source"] = "Show Gnomercy",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 464, ["id"] = 9602, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 464, ["id"] = 9537, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Troubles From Without"] = {
@@ -6317,7 +6589,7 @@ _addon.data = {
 		"All our toils have worked toward this moment. Our masters will rise against one another in one glorious battle that will tear Azeroth asunder.\n\nWe live in the end times, my brothers. Hold to your tasks. Strive on. We will soon be triumphant!",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["area"] = "Major Cities", ["id"] = 11886,  ["source"] = "Unusual Activity",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["area"] = "Major Cities", ["id"] = 11886, ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Ur's Treatise on Shadow Magic"] = {
@@ -6335,7 +6607,7 @@ _addon.data = {
 		"An Urgent Message to all Scarlet Officers and Enlistees:\nThe Scourge agent known as Lilian Voss has escaped from her captivity at the Scarlet Palisade. She is to be considered highly dangerous, and should be killed on sight. She has already slain 15 of our men. None were left wounded.\n\nDo NOT try to apprehend her. Doing so will likely result in death. She is an enemy to the Crusade and must be crushed immediately.\n\nThe crusader who returns her head to the High Priest will be rewarded with 1,000 gold. Refer any questions to your commanding officer.\n\n\n~BV",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 20, ["id"] = 24981,  ["source"] = "A Thorn in our Side",  ["level"] = "H",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 20, ["id"] = 24981, ["level"] = "H",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Warchief's Orders"] = {
@@ -6353,7 +6625,7 @@ _addon.data = {
 		"Years and years I have been locked away in this magical prison. Tonight, I make my escape. I have everything I need to make my break.\n\n&lt;Water smeared ink has ruined this section of the letter&gt;\n\nWhy have I been here so long? What did I do to deserve this? Days and days of these thoughts running through my head. What could someone do to deserve this?\n\n&lt;Water smeared ink has ruined this section of the letter&gt;\n\nPerhaps I will find out in another life.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 504,  ["source"] = "Rusted Prisoner's Footlocker",  ["level"] = "0",  ["x"] = "64.5",  ["y"] = "73.8"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 504,  ["id"] = 193402,  ["level"] = "0",  ["x"] = "64.5",  ["y"] = "73.8"},
 	},
 },
 ["Waterlogged Journal"] = {
@@ -6363,7 +6635,7 @@ _addon.data = {
 		"Day 11. Though we are outnumbered I have managed to convince at least a dozen other orcs to attempt to take the boat tonight. Telmek has found a length of chain that he believes we can use to quietly kill the overnight guard before attempting to rush the deck.\nDay 12. The escape did not work. The ogres are simply too strong and too numerous. Several slaves were killed in the attempt, and those who survived had our knees broken. My fighting days are over. I will be lucky to walk again someday.\nDay 19. Land has been sighted. I must abandon this journal now or it will surely be taken. Should this journal find its way home - Palleae, I love you.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["source"] = "Sealed Jug",  ["level"] = "0",  ["x"] = "9.8",  ["y"] = "45.5"},
+		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["id"] = 230401,  ["level"] = "0",  ["x"] = "9.8",  ["y"] = "45.5"},
 	},
 },
 ["Waterlogged Zandalari Journal"] = {
@@ -6374,7 +6646,7 @@ _addon.data = {
 	},
 	["locations"] = {
 		{ ["sourceType"] = "drop",  ["areaId"] = 928,  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
-		{ ["sourceType"] = "container",  ["source"] = "Fortuitous Coffer",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 94566,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Weathered Journal"] = {
@@ -6383,7 +6655,7 @@ _addon.data = {
 		"In the one-hundred-and-seventieth year of the Thunder King's reign, the Korune spellweavers came to Lei Shen with their greatest creation. \n\nA bell cast from the makers' flesh, shaped by stars' fire, and bound by the breath of darkest shadow. This bell, when rung, could shake the world and call to the heavens.\n\nTaken to war, the bell's cacophonous tones stirred the hearts of Lei Shen's warriors. It fueled their hatred and anger, lending them strength on the field of battle. The bell's screaming voice struck fear and doubt into the hearts of the Emperor's enemies, sending them fleeing in his path.\n\nAwed by its power, the Thunder King described the instrument as \"the voice of the gods,\" and named it Shenqing, the Divine Bell.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "quest",  ["areaId"] = 809, ["id"] = 32397, ["source"] = "He Won't Even Miss It",  ["level"] = "A",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "quest",  ["areaId"] = 809, ["id"] = 32397, ["level"] = "A",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["White Punch Card"] = {
@@ -6392,7 +6664,7 @@ _addon.data = {
 		"SUPER CRITICAL TRIPLE-ENCODED DATA CARD\n\n01010100 01101000 01110010 01100001 01101100 01101100 00100000 01100001 01101110 01100100 00100000 01001010 01100001 01101001 01101110 01100001 00100000 01110011 01101001 01110100 01110100 01101001 01101110 01100111 00100000 01101001 01101110 00100000 01100001 00100000 01110100 01110010 01100101 01100101 00101100 00100000 01001011 00101101 01001001 00101101 01010011 00101101 01010011 00101101 01001001 00101101 01001110 00101101 01000111",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "drop",  ["areaId"] = 895,  ["source"] = "Caverndeep Looter",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "drop",  ["areaId"] = 895,  ["id"] = 6209,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 
@@ -6521,7 +6793,7 @@ _addon.data = {
 		"Unidentified threats have attacked Peacekeeper 011 units in deepest caves of the Magnetic Chasm. Initiate protocol 54.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 113258,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Decoded Message 001-014"] = {
@@ -6530,7 +6802,7 @@ _addon.data = {
 		"121,172 robo-units have been assembled and now march to face unknown threat in the Magnetic Chasm below the Molten Eternium Sea. Increase generosity circuits in all Blingtron units to minimize organic awareness.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 113258,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Decoded Message 001-107"] = {
@@ -6539,7 +6811,7 @@ _addon.data = {
 		"Allied destruction total has increased to 64%. Request supplies.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 113258,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Decoded Message 001-111"] = {
@@ -6548,7 +6820,7 @@ _addon.data = {
 		"Massive shipment of Alarm-o-Bots received, disassembled, and reconstructed as frag grenades.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 113258,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Decoded Message 001-119"] = {
@@ -6557,7 +6829,7 @@ _addon.data = {
 		"The virus infecting our units has been identified: a clockwork assembly system hack. Because it appears to be beneficial in many ways, the robot will accept it readily, until it begins to corrupt their AI by overloading generosity circuits. There is no known way to nullify the effect without destroying the host. Do not hesitate.\n\nYour Leader (0x0001)",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 113258,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Decoded Message 001-150"] = {
@@ -6566,7 +6838,7 @@ _addon.data = {
 		"A single de-weaponized companion unit was fitted with a Stealthman 54z, enabling it to appear harmless and bypass the enemy's significant security systems. It has identified the enemy's leader with a 73.4% accuracy. The enemy leader is monstrous in size and calls itself iR-T0. No further information was obtained.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 113258,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Decoded Message 001-159"] = {
@@ -6575,7 +6847,7 @@ _addon.data = {
 		"Organic awareness of The War is growing too quickly. Above-ground units possibly infected. Seed plans for next-gen Blingtron remote to call on veteran units that can assess and destroy.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 113258,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 ["Decoded Message 001-168"] = {
@@ -6584,44 +6856,13 @@ _addon.data = {
 		"Gift supply decreasing to inadequate levels. Use of war surplus authorized.",
 	},
 	["locations"] = {
-		{ ["sourceType"] = "container",  ["source"] = "Blingtron 5000 Gift Package",  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
+		{ ["sourceType"] = "container",  ["id"] = 113258,  ["level"] = " ",  ["x"] = "",  ["y"] = ""},
 	},
 },
 }
 };
 
 
---[[
-["Faded Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 127145},
-	["pages"] = {
-		"Another note, another tease, it's enough to make you weak in the knees!\n\nYou're almost there, look for your next hint, next to a fellow that was negligent.",
-	},
-	["locations"] = {
-		{ ["sourceType"] = "chest",  ["source"] = "",  ["level"] = " ",  ["x"] = "",  ["y"] = "", },
-	},
-},
-["Faded Note"] = {
-	["info"] = {["type"] = "object", ["id"] = 237697},
-	["pages"] = {
-		"My love... I hope you can forgive me. All I could do was run. If I let them catch us both, there would be no way to save you. Now all I feel is a terrible emptyness for not having stayied by your side. This morning I intend to face the flying beasts the way I should have before. I pledge to seek you endlessly in the afterlife... I desire only to be with you. Whatever the sacrifice...",
-	},
-	["locations"] = {
-		{["areaId"] = 948,  ["id"] = "6722",  ["level"] = "0",  ["x"] = "55.3",  ["y"] = "18.1"},
-	},
-},
-["Faded Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 106902},
-	["pages"] = {
-		"Son,\n\nIf you are reading this, then you have completed the rite of om'riggor. You are no longer a child. You are a warrior.\n\nThis trinket belonged to your mother, rest her spirit. She never got to meet you, but she loved you with all her heart.\n\nHer memory kept me safe in countless battles - kept me coming home so I could raise you into the orc you are today.\n\nTake it with you, that you may serve our clan with honor.\n\n- Your father",
-	
-		
-	},
-	["locations"] = {
-		{ ["sourceType"] = "chest",  ["areaId"] = 941,  ["source"] = "Dusty Chest",  ["level"] = "0",  ["x"] = "45.5",  ["y"] = "50.8"},
-	},
-},
-]]--
 
 --[[
 Lore that needs special care:
