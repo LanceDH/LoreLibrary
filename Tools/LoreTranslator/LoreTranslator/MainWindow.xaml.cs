@@ -126,14 +126,18 @@ namespace LoreTranslator
             string input = txt_Source.Text;
 
             //@"(?<=\[""type""\] = "").*?(?="")"
-
+            DateTime start = DateTime.Now;
             MatchCollection mCol = Regex.Matches(input, @"(?<=\n\["").*?(?=\[""pages)", RegexOptions.Singleline);
             txt_Output.Text = "";
+            string outputText = "";
             foreach (Match m in mCol)
             {
-                txt_Output.Text += GetTranslation(m.ToString());
+                outputText += GetTranslation(m.ToString());
             }
             
+            txt_Output.Text = outputText;
+            TimeSpan difference = DateTime.Now - start;
+            lbl_time.Content = difference.ToString();
         }
 
         private void txt_Source_TextChanged(object sender, TextChangedEventArgs e)
@@ -193,18 +197,18 @@ namespace LoreTranslator
         {
             string input = txt_Source.Text;
 
+            string output = "";
 
-            /*
             // Quests
             Dictionary<string, string> quests = new Dictionary<string, string>();
             
             MatchCollection mCol = Regex.Matches(input, @"(?<=""quest"", ).*?(?=\[""level""\])", RegexOptions.Singleline);
-            txt_Output.Text += "\t-- Quests\n";
+            output += "\t-- Quests\n";
             foreach (Match m in mCol)
             {
                 string id = Regex.Match(m.ToString(), @"(?<=\[""id""\] = ).*?(?=, )", RegexOptions.Singleline).ToString();
                 if (id == "") {
-                    txt_Output.Text = "Missing Id for " + m.ToString();
+                    output = "Missing Id for " + m.ToString();
                     return;
                 }
                 if (!quests.ContainsKey("q" + id))
@@ -220,22 +224,22 @@ namespace LoreTranslator
 
             foreach (KeyValuePair<string, string> quest in quests)
             {
-                txt_Output.Text += "\t[\"" + quest.Key + "\"] = \"" + quest.Value + "\",\n"; 
+                output += "\t[\"" + quest.Key + "\"] = \"" + quest.Value + "\",\n"; 
             }
-            */
+            
 
-            /*
+            
             // Items (container)
             Dictionary<string, string> items = new Dictionary<string, string>();
 
             MatchCollection mColItems = Regex.Matches(input, @"(?<=""container"", ).*?(?=\},)", RegexOptions.Singleline);
-            txt_Output.Text += "\t-- Items\n";
+            output += "\t-- Items\n";
             foreach (Match m in mColItems)
             {
                 string id = Regex.Match(m.ToString(), @"(?<=\[""id""\] = ).*?(?=, )", RegexOptions.Singleline).ToString();
                 if (id == "")
                 {
-                    txt_Output.Text = "Missing Id for " + m.ToString();
+                    output = "Missing Id for " + m.ToString();
                     return;
                 }
                 if (!items.ContainsKey("i" + id))
@@ -252,16 +256,16 @@ namespace LoreTranslator
 
             foreach (KeyValuePair<string, string> item in items)
             {
-                txt_Output.Text += "\t[\"" + item.Key + "\"] = \"" + item.Value + "\",\n";
+                output += "\t[\"" + item.Key + "\"] = \"" + item.Value + "\",\n";
             }
-             * */
+             
 
-            /*
+            
             // NPC
             Dictionary<string, string> npcs = new Dictionary<string, string>();
 
             MatchCollection mColNPCs = Regex.Matches(input, @"(?<=""(drop|pickpocket|vendor)"", ).*?(?=\},)", RegexOptions.Singleline);
-            txt_Output.Text += "\t-- NPCs\n";
+            output += "\t-- NPCs\n";
             foreach (Match m in mColNPCs)
             {
                 string id = Regex.Match(m.ToString(), @"(?<=\[""id""\] = ).*?(?=, )", RegexOptions.Singleline).ToString();
@@ -283,15 +287,15 @@ namespace LoreTranslator
 
             foreach (KeyValuePair<string, string> npc in npcs)
             {
-                txt_Output.Text += "\t[\"" + npc.Key + "\"] = \"" + npc.Value + "\",\n";
+                output += "\t[\"" + npc.Key + "\"] = \"" + npc.Value + "\",\n";
             }
-            */
+            
 
             // Chest
             Dictionary<string, string> chests = new Dictionary<string, string>();
 
             MatchCollection mColChests = Regex.Matches(input, @"(?<=""(chest)"", ).*?(?=\},)", RegexOptions.Singleline);
-            txt_Output.Text += "\t-- Chests\n";
+            output += "\t-- Chests\n";
             foreach (Match m in mColChests)
             {
                 string id = Regex.Match(m.ToString(), @"(?<=\[""id""\] = ).*?(?=, )", RegexOptions.Singleline).ToString();
@@ -313,8 +317,10 @@ namespace LoreTranslator
 
             foreach (KeyValuePair<string, string> chest in chests)
             {
-                txt_Output.Text += "\t[\"" + chest.Key + "\"] = \"" + chest.Value + "\",\n";
+                output += "\t[\"" + chest.Key + "\"] = \"" + chest.Value + "\",\n";
             }
+
+            txt_Output.Text = output;
         }
     }
 }
