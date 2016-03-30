@@ -224,23 +224,36 @@ namespace WoWBookParcer
             foreach (Location loc in _locations)
             {
                 output += "\t\t{";
-                if (_loreType == "item")
+
+                if (_sourceType != "object")
                 {
                     output += " [\"sourceType\"] = \"" + _sourceType + "\", ";
                 }
-
-                
-                output += " [\"area\"] = \"" + loc.Area + "\", ";
-                if(_loreType == "item"){
-                    output += " [\"source\"] = \"\", ";
-                }
-                //output += " [\"id\"] = \"" + loc.AreaId + "\", ";
-                output += " [\"level\"] = \"" + loc.Level + "\", ";
-                if (_sourceType == "" || _sourceType == "chest")
+                if (_sourceType != "unavailable")
                 {
-                    output += " [\"x\"] = \"" + loc.X + "\", ";
-                    output += " [\"y\"] = \"" + loc.Y + "\", ";
+                    output += " [\"areaId\"] = \"\", ";
+                    output += " [\"id\"] = \"\", ";
                 }
+                switch (_sourceType)
+                {
+                    case "object":
+                        output += " [\"level\"] = \"\", ";
+                        output += " [\"x\"] = \"\", ";
+                        output += " [\"y\"] = \"\", ";
+                        break;
+                    case "quest":
+                        output += " [\"level\"] = \" \", ";
+                        break;
+                    case "chest":
+                        output += " [\"level\"] = \"\", ";
+                        output += " [\"x\"] = \"\", ";
+                        output += " [\"y\"] = \"\", ";
+                        break;
+                    case "unavailable":
+
+                        break;
+                }
+
                 output += "},\n";
             }
             output += "\t},\n";

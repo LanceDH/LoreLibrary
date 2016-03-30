@@ -17,5 +17,6 @@
         <Button x:Name="btn_Generate" Content="Translate" HorizontalAlignment="Left" Margin="87,38,0,0" VerticalAlignment="Top" Width="75" Click="btn_Generate_Click"/>
         <TextBox x:Name="txt_Output" Margin="10,65,5,5" TextWrapping="Wrap"/>
         <Button x:Name="btn_Terms" Content="Terms" HorizontalAlignment="Left" Margin="167,38,0,0" VerticalAlignment="Top" Width="75" Click="btn_Terms_Click"/>
+        <Label x:Name="lbl_time" Content="fek" HorizontalAlignment="Left" Margin="247,38,0,0" VerticalAlignment="Top" Width="184"/>
     </Grid>
 </Window>

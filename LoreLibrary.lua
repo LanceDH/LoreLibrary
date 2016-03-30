@@ -69,7 +69,7 @@ local STRING_SUGGESTION_COMPLETE = "You completed a daily Lore Library suggestio
 local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new one.";
 local STRING_SUGGESTION_EMPTY1 = "You have collected so much lore!";
 local STRING_SUGGESTION_EMPTY2 = "There is nothing left to suggest.";
-local FORMAT_SUGGESTION_REMOVECOOLDOWN = "You can remove this suggestion in\n %s.";
+local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
 local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
 local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
 local FORMAT_SOURCE = "%s\n%s";
@@ -110,13 +110,13 @@ function _addon:GetSuggestionTimeUntilDays(timestamp, days)
 	local stampTable = date("*t", timestamp);
 	local unlock = time{year = stampTable.year, month = stampTable.month, day = stampTable.day + days, hour = 0};
 	local sec = unlock - time();
-	local t = date("!*t", sec);
 	-- time has passed, no need to create text
 	if (sec < 0) then return sec, text; end
+	local t = date("!*t", sec);
 	
 	if t.day > 1 then
 		text = t.day .. " days";
-	elseif t.hour > 1 then
+	elseif t.hour >= 1 then
 		text = t.hour+1 .. " hours";
 	else
 		text = t.min+1 .. (t.min+1 > 1 and " minutes" or " minute");
@@ -1352,7 +1352,6 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-
 	if LoreLibraryCore:IsShown() then
 		HideUIPanel(LoreLibraryCore);
 	else
