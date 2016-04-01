@@ -24,6 +24,8 @@ namespace LoreTranslator
     public partial class MainWindow : Window
     {
         private string _locale = "";
+        private string _errors = "";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -127,6 +129,7 @@ namespace LoreTranslator
 
             //@"(?<=\[""type""\] = "").*?(?="")"
             DateTime start = DateTime.Now;
+            lbl_time.Content = "Working";
             MatchCollection mCol = Regex.Matches(input, @"(?<=\n\["").*?(?=\[""pages)", RegexOptions.Singleline);
             txt_Output.Text = "";
             string outputText = "";
@@ -198,129 +201,62 @@ namespace LoreTranslator
             string input = txt_Source.Text;
 
             string output = "";
+            _errors = "";
+            DateTime start = DateTime.Now;
+            lbl_time.Content = "Working";
+            output += AddTerms(input, "quest", "quest", "q");
+            output += AddTerms(input, "container", "item", "i");
+            output += AddTerms(input, "(drop|pickpocket|vendor)", "npc", "n");
+            output += AddTerms(input, "chest", "object", "o");
+            TimeSpan difference = DateTime.Now - start;
+            lbl_time.Content = difference.ToString();
 
-            // Quests
-            Dictionary<string, string> quests = new Dictionary<string, string>();
-            
-            MatchCollection mCol = Regex.Matches(input, @"(?<=""quest"", ).*?(?=\[""level""\])", RegexOptions.Singleline);
-            output += "\t-- Quests\n";
+            txt_Output.Text = "";
+            if (_errors != "")
+            {
+                txt_Output.Text = _errors + "\n\n";
+            }
+
+            txt_Output.Text += output;
+        }
+
+        private string AddTerms(string input, string pattern, string urlPiece, string prefix)
+        {
+            string output = "";
+
+            Dictionary<string, string> pairs = new Dictionary<string, string>();
+            MatchCollection mCol = Regex.Matches(input, @"(?<="""+ pattern + @""".*\[""id""\] = ).*?(?=[,\}])", RegexOptions.Multiline);
+            output += "\t-- " + pattern + "\n";
             foreach (Match m in mCol)
             {
-                string id = Regex.Match(m.ToString(), @"(?<=\[""id""\] = ).*?(?=, )", RegexOptions.Singleline).ToString();
-                if (id == "") {
-                    output = "Missing Id for " + m.ToString();
-                    return;
-                }
-                if (!quests.ContainsKey("q" + id))
-                {
-                    string url = "http://" + cmb_Locale.Text + ".wowhead.com/quest=" + id;
-                    string title = GetTitle(url);
-                    if (title.Equals("")) {
-                        return; 
-                    }
-                    quests.Add("q"+id, title);
-                }
-            }
-
-            foreach (KeyValuePair<string, string> quest in quests)
-            {
-                output += "\t[\"" + quest.Key + "\"] = \"" + quest.Value + "\",\n"; 
-            }
-            
-
-            
-            // Items (container)
-            Dictionary<string, string> items = new Dictionary<string, string>();
-
-            MatchCollection mColItems = Regex.Matches(input, @"(?<=""container"", ).*?(?=\},)", RegexOptions.Singleline);
-            output += "\t-- Items\n";
-            foreach (Match m in mColItems)
-            {
-                string id = Regex.Match(m.ToString(), @"(?<=\[""id""\] = ).*?(?=, )", RegexOptions.Singleline).ToString();
+                string id = m.ToString();
                 if (id == "")
                 {
-                    output = "Missing Id for " + m.ToString();
-                    return;
+                    _errors += "Missing Id for " + m.ToString() + "\n";
+                    continue;
                 }
-                if (!items.ContainsKey("i" + id))
+                if (!pairs.ContainsKey(prefix + id))
                 {
-                    string url = "http://" + cmb_Locale.Text + ".wowhead.com/item=" + id;
+                    string url = "http://" + cmb_Locale.Text + ".wowhead.com/" + urlPiece + "=" + id;
                     string title = GetTitle(url);
                     if (title.Equals(""))
                     {
-                        return;
+                        _errors += url + " has no title\n";
                     }
-                    items.Add("i" + id, title);
-                }
-            }
-
-            foreach (KeyValuePair<string, string> item in items)
-            {
-                output += "\t[\"" + item.Key + "\"] = \"" + item.Value + "\",\n";
-            }
-             
-
-            
-            // NPC
-            Dictionary<string, string> npcs = new Dictionary<string, string>();
-
-            MatchCollection mColNPCs = Regex.Matches(input, @"(?<=""(drop|pickpocket|vendor)"", ).*?(?=\},)", RegexOptions.Singleline);
-            output += "\t-- NPCs\n";
-            foreach (Match m in mColNPCs)
-            {
-                string id = Regex.Match(m.ToString(), @"(?<=\[""id""\] = ).*?(?=, )", RegexOptions.Singleline).ToString();
-                if (id != "")
-                {
-                    if (!npcs.ContainsKey("n" + id))
+                    else
                     {
-                        string url = "http://" + cmb_Locale.Text + ".wowhead.com/npc=" + id;
-                        string title = GetTitle(url);
-                        if (title.Equals(""))
-                        {
-                            return;
-                        }
-                        npcs.Add("n" + id, title);
+                        pairs.Add(prefix + id, title);
                     }
                 }
-                
             }
 
-            foreach (KeyValuePair<string, string> npc in npcs)
+
+            foreach (KeyValuePair<string, string> quest in pairs)
             {
-                output += "\t[\"" + npc.Key + "\"] = \"" + npc.Value + "\",\n";
-            }
-            
-
-            // Chest
-            Dictionary<string, string> chests = new Dictionary<string, string>();
-
-            MatchCollection mColChests = Regex.Matches(input, @"(?<=""(chest)"", ).*?(?=\},)", RegexOptions.Singleline);
-            output += "\t-- Chests\n";
-            foreach (Match m in mColChests)
-            {
-                string id = Regex.Match(m.ToString(), @"(?<=\[""id""\] = ).*?(?=, )", RegexOptions.Singleline).ToString();
-                if (id != "")
-                {
-                    if (!chests.ContainsKey("o" + id))
-                    {
-                        string url = "http://" + cmb_Locale.Text + ".wowhead.com/object=" + id;
-                        string title = GetTitle(url);
-                        if (title.Equals(""))
-                        {
-                            return;
-                        }
-                        chests.Add("o" + id, title);
-                    }
-                }
-
+                output += "\t[\"" + quest.Key + "\"] = \"" + quest.Value + "\",\n";
             }
 
-            foreach (KeyValuePair<string, string> chest in chests)
-            {
-                output += "\t[\"" + chest.Key + "\"] = \"" + chest.Value + "\",\n";
-            }
-
-            txt_Output.Text = output;
+            return output;
         }
     }
 }

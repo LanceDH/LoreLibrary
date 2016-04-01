@@ -190,22 +190,29 @@ function _addon:ShowLoreMapPins(list)
 end
 
 function _addon:LorePiecesInMap() 
+	local areaId = GetCurrentMapAreaID();
+	local level = GetCurrentMapDungeonLevel();
+	-- Hide PoI if map changes
+	if not LoreLibraryMap.lastMapId or LoreLibraryMap.lastMapId ~= areaId or not LoreLibraryMap.lastLevel or LoreLibraryMap.lastLevel ~= level then
+		LoreLibraryMap.PoI:Hide();
+	end
+	LoreLibraryMap.lastMapId = areaId;
+	LoreLibraryMap.lastLevel = level
 	-- reset pins
 	for k, pin in ipairs(LoreLibraryMap.pins) do
 		pin:Hide();
 		pin.lore = nil;
 	end
-	local areaId = GetCurrentMapAreaID();
+
 	if (areaId == nil or not _option.showPins) then return; end
 
-	local level = GetCurrentMapDungeonLevel();
 	local levelLore = {};
 	local countAll = 0;
 	local countLocked = 0;
 	local new = {};
 	for k, lore in pairs(_data) do
 		for kl, loc in ipairs(lore.locations) do
-			if (loc.sourceType == nil or loc.sourceType == "chest") and loc.areaId == areaId  then
+			if (loc.sourceType == "object" or loc.sourceType == "chest") and loc.areaId == areaId  then
 				-- If it's the same area, this location becomes the lore's point of interest
 				lore.poi = loc;
 				countAll = countAll + 1;
@@ -225,6 +232,27 @@ function _addon:LorePiecesInMap()
 	self:ShowLoreMapPins(levelLore);
 
 	_addon:UpdateMapProgressBar(countAll - countLocked, countAll);
+end
+
+function _addon:ShowMapPointOfInterest(loreTitle, location)
+	if (not loreTitle or not location or location.sourceType == "container" or location.sourceType == "unavailable") then return; end
+
+	local width = WorldMapDetailFrame:GetWidth();
+	local height = WorldMapDetailFrame:GetHeight();
+	local sourceType = location.sourceType;
+	location.x = ((location.x and tonumber(location.x)) and location.x or -100);
+	location.y = ((location.y and tonumber(location.y)) and location.y or -100);
+	
+	
+	ShowUIPanel(WorldMapFrame);
+	SetMapByID(location.areaId);
+	if (location.level) then
+		SetDungeonMapLevel(location.level);
+	end
+	LoreLibraryMap.PoI:Show();
+	LoreLibraryMap.PoI:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", width * (location.x/100), -height * (location.y/100));
+	LoreLibraryMap.PoI.icon:SetTexture(_sourceData[sourceType].icon);
+	
 end
 
 function _addon:GetNumUnlockedLore()
@@ -533,6 +561,8 @@ function _addon:UpdateBookDisplay(lore)
 		source:Hide();
 		source.icon.factionAlliance:Hide();
 		source.icon.factionHorde:Hide();
+		source.lore = nil;
+		source.PoI = nil;
 	end	
 	display.sources:Hide();
 	
@@ -553,6 +583,12 @@ function _addon:UpdateBookDisplay(lore)
 			local text = location.area;
 			local sourceType = _sourceData[sourceType].tooltip;
 
+			-- Disable button if source has no specific area (containers, unavailable, ...)
+			source:Enable();
+			if not location.areaId then
+				source:Disable();
+			end
+			
 			if location.sourceType == "drop" or location.sourceType == "pickpocket" or location.sourceType == "vendor" or location.sourceType == "chest" then
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 			elseif location.sourceType == "container" then
@@ -561,16 +597,20 @@ function _addon:UpdateBookDisplay(lore)
 			    text = "This lore no longer has any\n available sources.";
 			elseif location.sourceType == "quest" then
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
-				if (location.level == "A") then
-					source.icon.factionAlliance:Show();
-				elseif  (location.level == "H") then
-					source.icon.factionHorde:Show();
-				end
+				
 			end
 			
-			source.icon:SetNormalTexture(texture);
+			if (location.faction == "A") then
+				source.icon.factionAlliance:Show();
+			elseif  (location.faction == "H") then
+				source.icon.factionHorde:Show();
+			end
+			
+			source.icon.tex:SetTexture(texture);
 			source.icon.sourceType = sourceType;
 			source.text:SetText(text);
+			source.lore = lore;
+			source.PoI = location;
 		end
 	
 		
@@ -1011,6 +1051,13 @@ function _addon:InitCoreFrame()
 	UIDropDownMenu_Initialize(LoreLibraryListFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
 	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
 
+	
+	local display = LoreLibraryListInsetRight;
+
+	for i = 1, MAX_SOURCES do
+	    local source = display.sources["s"..i];
+		source:SetScript("OnClick", function(self) _addon:ShowMapPointOfInterest(self.lore, self.PoI) end);
+	end	
 end
 
 function _addon:InitMap()
@@ -1251,6 +1298,9 @@ function LoreLibrary:OnEnable()
 	end
 	_suggestions.timeLast = time();
 	_addon:UpdateSuggestions();
+	
+	-- display first lore in the list
+	_addon:UpdateBookDisplay(_addon:GetFilteredList(true)[1]);
 end
 
 ----------
@@ -1288,9 +1338,8 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	
 	if _addon.translations then
 		_addon:LoadTranslation();
-		_addon:ShowLocalizationMessage();
+		--_addon:ShowLocalizationMessage();
 	end
-	
 	-- Localize sources
 	local terms = _addon.data.terms;
 	for k, lore in pairs(_data) do
@@ -1337,7 +1386,7 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	SortLore();
 	_addon:InitCoreFrame();
 	_addon:InitMap();
-	
+
 	self:UnregisterEvent("ADDON_LOADED");
 end
 

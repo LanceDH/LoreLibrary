@@ -4,7 +4,7 @@ local _addonName, _addon = ...;
 
 _addon.translations = {
 ["terms"] = {
-	-- quests
+	-- quest
 	["q13633"] = "O Cavaleiro Negro de Cerro Oeste?",
 	["q13634"] = "O Cavaleiro Negro de Pinhaprata?",
 	["q12122"] = "Requerimento de audiência",
@@ -126,11 +126,11 @@ _addon.translations = {
 	["q3106"] = "Runa simples",
 	["q3095"] = "Pergaminho simples",
 	["q3116"] = "O selo simples",
-	["q6342"] = "Um presente inesperado",
 	["q6341"] = "Para Darnassus",
+	["q6342"] = "Um presente inesperado",
 	["q13848"] = "Mensageiro das más notícias",
-	["q27247"] = "O Capitão Valente",
 	["q27246"] = "O relatório orc",
+	["q27247"] = "O Capitão Valente",
 	["q27244"] = "O relatório perdido",
 	["q1338"] = "Ordens dos Lançatroz",
 	["q59"] = "Armadura de pano e couro",
@@ -148,8 +148,8 @@ _addon.translations = {
 	["q8150"] = "Homenagem a um herói",
 	["q26671"] = "O destino de Galvão Brumanto",
 	["q11695"] = "A Trompa da Fúria Elemental",
-	["q12757"] = "Os exércitos da Cruzada se aproximam...",
 	["q12756"] = "Surge a Ofensiva Escarlate",
+	["q12757"] = "Os exércitos da Cruzada se aproximam...",
 	["q26794"] = "Morgan Ladimore",
 	["q33332"] = "Pistas do passado",
 	["q13188"] = "Onde reis caminham",
@@ -195,8 +195,8 @@ _addon.translations = {
 	["q27305"] = "Do Amor e da Família",
 	["q27364"] = "A mando de quem?",
 	["q25062"] = "À procura de respostas",
-	["q12755"] = "Um encontro com o destino",
 	["q12754"] = "Emboscada no penhasco",
+	["q12755"] = "Um encontro com o destino",
 	["q24972"] = "Informações cruciais",
 	["q24557"] = "O plano do Pacto de Prata",
 	["q29900"] = "Uma antiga lenda",
@@ -206,12 +206,12 @@ _addon.translations = {
 	["q12477"] = "O Caminho da Redenção",
 	["q36223"] = "Deixe todos os soldados para trás",
 	["q35129"] = "Deixe todos os soldados para trás",
-	["q9602"] = "Livrai-os de todo mal...",
 	["q9537"] = "Gnomicídio",
+	["q9602"] = "Livrai-os de todo mal...",
 	["q11886"] = "Atividade incomum",
 	["q24981"] = "Um espinho em nosso flanco",
 	["q32397"] = "Ele nem vai dar pela falta",
-	-- Items
+	-- container
 	["i20676"] = "Texto Decodificado do Crepúsculo",
 	["i114116"] = "Bolsa de Mercadorias Recuperadas",
 	["i114119"] = "Caixote de Resgate",
@@ -224,12 +224,13 @@ _addon.translations = {
 	["i21315"] = "Algibeira do Bosque Defumado",
 	["i97153"] = "Espólios do Rei Trovão",
 	["i113258"] = "Pacote de Prêmio Blingtron 5000",
-	-- NPCs
+	-- (drop|pickpocket|vendor)
 	["n80882"] = "Crafticus Dobramentes",
 	["n85115"] = "Dazzerian",
 	["n65003"] = "Martar, o Não Tão Esperto",
 	["n81171"] = "Cavernícola Glacial",
 	["n85715"] = "Cavernícola Quedaluna",
+	["n34928"] = "Confessora Argêntea Albamecha",
 	["n73305"] = "Tecelã da Névoa Ai",
 	["n28347"] = "Sidney Lonjura",
 	["n27539"] = "Necromante Frígido",
@@ -242,8 +243,14 @@ _addon.translations = {
 	["n88394"] = "Mutante Escravizado",
 	["n90107"] = "Demolidor Megabomba",
 	["n78501"] = "Kaelynara Buscassol",
+	["n66932"] = "Akkalou",
+	["n66937"] = "Akkalar",
+	["n66938"] = "Odd'nirok",
+	["n66933"] = "Kishak",
+	["n66935"] = "Clamstok",
+	["n66934"] = "Damlak",
 	["n6209"] = "Gatuno de Furnafunda",
-	-- Chests
+	-- chest
 	["o224217"] = "Baú Empoeirado",
 	["o242519"] = "Monturo Suspeito",
 	["o152620"] = "Formação de Azsharita",

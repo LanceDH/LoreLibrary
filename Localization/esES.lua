@@ -4,7 +4,7 @@ local _addonName, _addon = ...;
 
 _addon.translations = {
 ["terms"] = {
-	-- quests
+	-- quest
 	["q13633"] = "¿El Caballero Negro de los Páramos de Poniente?",
 	["q13634"] = "¿El Caballero Negro del Bosque de Argénteos?",
 	["q12122"] = "Conseguir una audiencia",
@@ -126,11 +126,11 @@ _addon.translations = {
 	["q3106"] = "Runa simple",
 	["q3095"] = "Un pergamino simple",
 	["q3116"] = "El sigilo simple",
-	["q6342"] = "Un regalo inesperado",
 	["q6341"] = "A Darnassus",
+	["q6342"] = "Un regalo inesperado",
 	["q13848"] = "Malas noticias",
-	["q27247"] = "El capitán Vimes",
 	["q27246"] = "El informe orco",
+	["q27247"] = "El capitán Vimes",
 	["q27244"] = "El informe perdido",
 	["q1338"] = "Un pedido de Pico Tormenta",
 	["q59"] = "Armadura de paño y cuero",
@@ -148,8 +148,8 @@ _addon.translations = {
 	["q8150"] = "En honor a un héroe",
 	["q26671"] = "El sino de Stalvan Mantoniebla",
 	["q11695"] = "El Cuerno de Furia Elemental",
-	["q12757"] = "El ejército escarlata se acerca…",
 	["q12756"] = "El Embate Escarlata aparece",
+	["q12757"] = "El ejército escarlata se acerca…",
 	["q26794"] = "Morgan Ladimor",
 	["q33332"] = "Pistas del pasado",
 	["q13188"] = "El camino de los reyes",
@@ -195,8 +195,8 @@ _addon.translations = {
 	["q27305"] = "Del amor y la familia",
 	["q27364"] = "¿Quién lo ordena?",
 	["q25062"] = "A lo que vinimos",
-	["q12755"] = "Una reunión con el destino",
 	["q12754"] = "Emboscada en el mirador",
+	["q12755"] = "Una reunión con el destino",
 	["q24972"] = "Información decisiva",
 	["q24557"] = "El plan de El Pacto de Plata",
 	["q29900"] = "Una leyenda antigua",
@@ -206,12 +206,12 @@ _addon.translations = {
 	["q12477"] = "El Camino de la Redención",
 	["q36223"] = "Dejar atrás a todos los soldados",
 	["q35129"] = "Deja a todos los soldados atrás",
-	["q9602"] = "Líbralos del mal...",
 	["q9537"] = "Justicia para el gnomo",
+	["q9602"] = "Líbralos del mal...",
 	["q11886"] = "Actividad sospechosa",
 	["q24981"] = "Una espina clavada",
 	["q32397"] = "Ni lo echará de menos",
-	-- Items
+	-- container
 	["i20676"] = "Texto descifrado Crepuscular",
 	["i114116"] = "Bolsa de bienes recuperados",
 	["i114119"] = "Cajón de objetos recuperados",
@@ -224,12 +224,13 @@ _addon.translations = {
 	["i21315"] = "Cartera de Bosquehumeante",
 	["i97153"] = "Botín del Rey del Trueno",
 	["i113258"] = "Paquete de regalo de Joyatrón 5000",
-	-- NPCs
+	-- (drop|pickpocket|vendor)
 	["n80882"] = "Crafticus Dominomente",
 	["n85115"] = "Dazzerian",
 	["n65003"] = "Martar el Tontaco",
 	["n81171"] = "Morador de cuevas de Profundidades de Escarcha",
 	["n85715"] = "Morador de cuevas de Bajaluna",
+	["n34928"] = "Confesora Argenta Cabelloclaro",
 	["n73305"] = "Tejedora de niebla Ai",
 	["n28347"] = "Miles Sidney",
 	["n27539"] = "Nigromante gélido",
@@ -242,8 +243,14 @@ _addon.translations = {
 	["n88394"] = "Mutante sometido",
 	["n90107"] = "Demoledor Megacarga",
 	["n78501"] = "Kaelynara Cazasol",
+	["n66932"] = "Akkalou",
+	["n66937"] = "Akkalar",
+	["n66938"] = "Odd'nirok",
+	["n66933"] = "Kishak",
+	["n66935"] = "Pinzatok",
+	["n66934"] = "Damlak",
 	["n6209"] = "Despojador Cueva Honda",
-	-- Chests
+	-- chest
 	["o224217"] = "Cofre polvoriento",
 	["o242519"] = "Montículo sospechoso",
 	["o152620"] = "Formación Azsharita",

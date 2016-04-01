@@ -225,33 +225,20 @@ namespace WoWBookParcer
             {
                 output += "\t\t{";
 
-                if (_sourceType != "object")
-                {
-                    output += " [\"sourceType\"] = \"" + _sourceType + "\", ";
-                }
+                output += "[\"sourceType\"] = \"" + _sourceType + "\", ";
                 if (_sourceType != "unavailable")
                 {
-                    output += " [\"areaId\"] = \"\", ";
-                    output += " [\"id\"] = \"\", ";
+                    output += "[\"id\"] = , ";
+                    if (_sourceType != "container")
+                    {
+                         output += "[\"areaId\"] = , ";
+                        output += "[\"x\"] = , ";
+                        output += "[\"y\"] = , ";
+                    }
                 }
-                switch (_sourceType)
+                if (_sourceType == "quest")
                 {
-                    case "object":
-                        output += " [\"level\"] = \"\", ";
-                        output += " [\"x\"] = \"\", ";
-                        output += " [\"y\"] = \"\", ";
-                        break;
-                    case "quest":
-                        output += " [\"level\"] = \" \", ";
-                        break;
-                    case "chest":
-                        output += " [\"level\"] = \"\", ";
-                        output += " [\"x\"] = \"\", ";
-                        output += " [\"y\"] = \"\", ";
-                        break;
-                    case "unavailable":
-
-                        break;
+                    output += "[\"faction\"] = \"\", ";
                 }
 
                 output += "},\n";

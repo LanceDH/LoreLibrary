@@ -4,7 +4,7 @@ local _addonName, _addon = ...;
 
 _addon.translations = {
 ["terms"] = {
-	-- quests
+	-- quest
 	["q13633"] = "Il Cavaliere Nero delle Marche Occidentali?",
 	["q13634"] = "Il Cavaliere Nero della Selva Pinargento?",
 	["q12122"] = "Ottenere un'udienza",
@@ -126,11 +126,11 @@ _addon.translations = {
 	["q3106"] = "[Simple Rune]",
 	["q3095"] = "Pergamena Semplice",
 	["q3116"] = "[Simple Sigil]",
-	["q6342"] = "Un dono inaspettato",
 	["q6341"] = "A Darnassus",
+	["q6342"] = "Un dono inaspettato",
 	["q13848"] = "Uccello del malaugurio",
-	["q27247"] = "Capitano Vimes",
 	["q27246"] = "Rapporto degli Orchi",
+	["q27247"] = "Capitano Vimes",
 	["q27244"] = "Il rapporto smarrito",
 	["q1338"] = "L'ordine di Piccatonante",
 	["q59"] = "Armature di stoffa e cuoio",
@@ -148,8 +148,8 @@ _addon.translations = {
 	["q8150"] = "Onore all'eroe",
 	["q26671"] = "Il destino di Stalvan Foscomanto",
 	["q11695"] = "Il Corno della Furia Elementale",
-	["q12757"] = "Le armate Scarlatte si avvicinano...",
 	["q12756"] = "Nascita della Furia Scarlatta",
+	["q12757"] = "Le armate Scarlatte si avvicinano...",
 	["q26794"] = "Morgan Ladimore",
 	["q33332"] = "Indizi dal passato",
 	["q13188"] = "Dove camminano i re",
@@ -195,8 +195,8 @@ _addon.translations = {
 	["q27305"] = "Amore e Famiglia",
 	["q27364"] = "Per ordine di chi?",
 	["q25062"] = "Cosa siamo venuti a fare",
-	["q12755"] = "Appuntamento con il destino",
 	["q12754"] = "Imboscata al promontorio",
+	["q12755"] = "Appuntamento con il destino",
 	["q24972"] = "Informazioni vitali",
 	["q24557"] = "Il piano del Patto d'Argento",
 	["q29900"] = "Un'antica leggenda",
@@ -206,12 +206,12 @@ _addon.translations = {
 	["q12477"] = "La Via della Redenzione",
 	["q36223"] = "Lascia ogni soldato indietro",
 	["q35129"] = "Lascia ogni soldato indietro",
-	["q9602"] = "Liberali dal male...",
 	["q9537"] = "Senza pietà",
+	["q9602"] = "Liberali dal male...",
 	["q11886"] = "Attività insolita",
 	["q24981"] = "Una spina nel fianco",
 	["q32397"] = "Non se ne accorgerà neppure",
-	-- Items
+	-- container
 	["i20676"] = "Testo del Crepuscolo Decifrato",
 	["i114116"] = "Borsa di Elementi Riciclabili",
 	["i114119"] = "Cassa di Riciclaggio",
@@ -224,12 +224,13 @@ _addon.translations = {
 	["i21315"] = "Sacco della Masseria Buongusto",
 	["i97153"] = "Spoglie del Re del Tuono",
 	["i113258"] = "Regalo di Orotron 5000",
-	-- NPCs
+	-- (drop|pickpocket|vendor)
 	["n80882"] = "Plagiamente Creaticus",
 	["n85115"] = "Dazzerian",
 	["n65003"] = "Martar il Somaro",
 	["n81171"] = "Murloc Cavernicolo del Gelo Profondo",
 	["n85715"] = "Murloc Cavernicolo di Calaluna",
+	["n34928"] = "Espiatrice Paletress",
 	["n73305"] = "Teurga del Misticismo Ai",
 	["n28347"] = "Miles Sidney",
 	["n27539"] = "Negromante Gelido",
@@ -242,8 +243,14 @@ _addon.translations = {
 	["n88394"] = "Mutante Ammaliato",
 	["n90107"] = "Demolitore Megabomba",
 	["n78501"] = "Kaelynara Calcasole",
+	["n66932"] = "Akkalou",
+	["n66937"] = "Akkalar",
+	["n66938"] = "Odd'nirok",
+	["n66933"] = "Kishak",
+	["n66935"] = "Clamstok",
+	["n66934"] = "Damlak",
 	["n6209"] = "Saccheggiatore Antrofondo",
-	-- Chests
+	-- chest
 	["o224217"] = "Scrigno Polveroso",
 	["o242519"] = "Mucchio Sospetto",
 	["o152620"] = "Formazione di Azsharite",

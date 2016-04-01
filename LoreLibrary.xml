@@ -39,6 +39,8 @@
 		</Scripts>
 	</Frame>
 	
+	
+	
 	<StatusBar name="LOLIB_CoreStatusTemplate" inherits="LOLIB_ProgressBarTemplate" virtual="true">
 		<Anchors>
 			<Anchor point="TOP" x="0" y="-39"/>
@@ -80,19 +82,25 @@
 		<BarColor r="0.03125" g="0.85" b="0.0" />
 	</StatusBar>
 	
-	<Frame name="LOLIB_SourceTemplate" virtual="true">
+	<Button name="LOLIB_SourceTemplate" virtual="true">
 		<Size y="40"/>
 		<Anchors>
 			<Anchor point="LEFT"/>
 			<Anchor point="RIGHT"/>
 		</Anchors>
 		<Frames>
-			<Button parentKey="icon">
+			<Frame parentKey="icon">
 				<Size x="32" y="32"/>
 				<Anchors>
-					<Anchor point="LEFT" x="4"/>
+					<Anchor point="LEFT"/>
 				</Anchors>
 				<NormalTexture file="Interface\AddOns\LoreLibrary\Images\icon_Container" />
+				
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="tex" file="Interface\AddOns\LoreLibrary\Images\icon_Container" />
+					</Layer>
+				</Layers>
 				
 				<Frames>
 					<Frame parentKey="factionAlliance" hidden="true">
@@ -131,7 +139,7 @@
 						GameTooltip:Hide();
 					</OnLeave>
 				</Scripts>
-			</Button>
+			</Frame>
 			
 		</Frames>
 		
@@ -145,55 +153,59 @@
 				</FontString>
 			</Layer>
 		</Layers>
-	</Frame>
+		
+		<HighlightTexture file="Interface\PaperDollInfoFrame\UI-Character-Tab-Highlight-yellow" alphaMode="ADD">
+			<Color r="1" g="1" b="1" a="0.3"/>
+		</HighlightTexture>
+	</Button>
 	
 	<Frame name="LOLIB_SourceContainerTemplate" virtual="true">
 		<Frames>
-			<Frame parentKey="s1" inherits="LOLIB_SourceTemplate" id="1">
+			<Button parentKey="s1" inherits="LOLIB_SourceTemplate" id="1">
 				<Anchors>
 					<Anchor point="TOP"/>
 				</Anchors>
-			</Frame>
-			<Frame parentKey="s2" inherits="LOLIB_SourceTemplate" id="2">
+			</Button>
+			<Button parentKey="s2" inherits="LOLIB_SourceTemplate" id="2">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s1" relativePoint="BOTTOM"/>
 				</Anchors>
-			</Frame>
-			<Frame parentKey="s3" inherits="LOLIB_SourceTemplate" id="3">
+			</Button>
+			<Button parentKey="s3" inherits="LOLIB_SourceTemplate" id="3">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s2" relativePoint="BOTTOM"/>
 				</Anchors>
-			</Frame>
-			<Frame parentKey="s4" inherits="LOLIB_SourceTemplate" id="4">
+			</Button>
+			<Button parentKey="s4" inherits="LOLIB_SourceTemplate" id="4">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s3" relativePoint="BOTTOM"/>
 				</Anchors>
-			</Frame>
-			<Frame parentKey="s5" inherits="LOLIB_SourceTemplate" id="5">
+			</Button>
+			<Button parentKey="s5" inherits="LOLIB_SourceTemplate" id="5">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s4" relativePoint="BOTTOM"/>
 				</Anchors>
-			</Frame>
-			<Frame parentKey="s6" inherits="LOLIB_SourceTemplate" id="6">
+			</Button>
+			<Button parentKey="s6" inherits="LOLIB_SourceTemplate" id="6">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s5" relativePoint="BOTTOM"/>
 				</Anchors>
-			</Frame>
-			<Frame parentKey="s7" inherits="LOLIB_SourceTemplate" id="7">
+			</Button>
+			<Button parentKey="s7" inherits="LOLIB_SourceTemplate" id="7">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s6" relativePoint="BOTTOM"/>
 				</Anchors>
-			</Frame>
-			<Frame parentKey="s8" inherits="LOLIB_SourceTemplate" id="8">
+			</Button>
+			<Button parentKey="s8" inherits="LOLIB_SourceTemplate" id="8">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s7" relativePoint="BOTTOM"/>
 				</Anchors>
-			</Frame>
-			<Frame parentKey="s9" inherits="LOLIB_SourceTemplate" id="9">
+			</Button>
+			<Button parentKey="s9" inherits="LOLIB_SourceTemplate" id="9">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s8" relativePoint="BOTTOM"/>
 				</Anchors>
-			</Frame>
+			</Button>
 		</Frames>
 	</Frame>
 	
@@ -557,7 +569,7 @@
 					
 					<Frame parentKey="sources" inherits="LOLIB_SourceContainerTemplate" hidden="true">
 						<Anchors>
-							<Anchor point="TOPLEFT" relativeTo="$parentPageText" relativePoint="TOPLEFT" y="-45"/>
+							<Anchor point="TOPLEFT" relativeTo="$parentPageText" relativePoint="TOPLEFT" x="5" y="-45"/>
 							<Anchor point="BOTTOMRIGHT" relativeTo="$parentPageText" relativePoint="BOTTOMRIGHT"/>
 						</Anchors>
 					</Frame>
@@ -746,7 +758,40 @@
 					<Color r="1" g="1" b="1" a="1"/>
 				</HighlightTexture>
 			</Frames>
+			
 		</StatusBar>
+		
+		<Frame name="$parentPoI" parentKey="PoI">
+			<Size x="25" y="25"/>
+			<Anchors>
+				<Anchor point="CENTER"/>
+			</Anchors>
+			<Layers>
+				<Layer level="OVERLAY">
+					<Texture parentKey="glow" file="Interface\MINIMAP\Ping\ping4" alphaMode="ADD">
+						<Size x="50" y="50"/>
+						<Anchors>
+							<Anchor point="CENTER"/>
+						</Anchors>
+					</Texture>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture parentKey="icon" file="Interface\AddOns\LoreLibrary\Images\icon_NPC" />
+				</Layer>
+			</Layers>
+			
+			<Scripts>
+				<OnEnter>
+					GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+					if (self.lore) then
+						GameTooltip:SetText(self.lore.title);
+					end
+				</OnEnter>
+				<OnLeave>
+					GameTooltip:Hide();
+				</OnLeave>
+			</Scripts>
+		</Frame>
 		</Frames>
 	</Frame>
 	

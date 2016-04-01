@@ -4,7 +4,7 @@ local _addonName, _addon = ...;
 
 _addon.translations = {
 ["terms"] = {
-	-- quests
+	-- quest
 	["q13633"] = "Le Chevalier noir de la marche de l'Ouest ?",
 	["q13634"] = "Le Chevalier noir des Pins-Argentés ?",
 	["q12122"] = "Obtenir une audience",
@@ -126,11 +126,11 @@ _addon.translations = {
 	["q3106"] = "Rune simple",
 	["q3095"] = "Parchemin simple",
 	["q3116"] = "Le cachet simple",
-	["q6342"] = "Le présent inattendu",
 	["q6341"] = "Dolanaar-Darnassus sans escale",
+	["q6342"] = "Le présent inattendu",
 	["q13848"] = "Un oiseau de mauvais augure",
-	["q27247"] = "Le capitaine Vimaire",
 	["q27246"] = "Le rapport orc",
+	["q27247"] = "Le capitaine Vimaire",
 	["q27244"] = "Le rapport perdu",
 	["q1338"] = "La mission de Foudrepique",
 	["q59"] = "Les armures de cuir et d'étoffe",
@@ -148,8 +148,8 @@ _addon.translations = {
 	["q8150"] = "En l'honneur d'un héros",
 	["q26671"] = "Le destin de Stalvan Mantebrume",
 	["q11695"] = "Le cor de fureur élémentaire",
-	["q12757"] = "L’approche des armées écarlates",
 	["q12756"] = "L’Assaut écarlate émerge",
+	["q12757"] = "L’approche des armées écarlates",
 	["q26794"] = "Morgan Ladimore",
 	["q33332"] = "Les secrets du passé",
 	["q13188"] = "Là où marche le roi",
@@ -195,8 +195,8 @@ _addon.translations = {
 	["q27305"] = "De l'amour et de la famille",
 	["q27364"] = "Mais quels sont leurs ordres ?",
 	["q25062"] = "Les petits hommes verts",
-	["q12755"] = "Une rencontre avec le destin",
 	["q12754"] = "Embuscade au surplomb",
+	["q12755"] = "Une rencontre avec le destin",
 	["q24972"] = "Des renseignements primordiaux",
 	["q24557"] = "Le plan du Concordat argenté",
 	["q29900"] = "Une légende ancienne",
@@ -206,12 +206,12 @@ _addon.translations = {
 	["q12477"] = "Le Chemin de la rédemption",
 	["q36223"] = "Tout sauf une opération de sauvetage",
 	["q35129"] = "Tout sauf une opération de sauvetage",
-	["q9602"] = "Délivrez-les du mal…",
 	["q9537"] = "Le gnominé est…",
+	["q9602"] = "Délivrez-les du mal…",
 	["q11886"] = "Une activité inhabituelle",
 	["q24981"] = "Une épine dans notre flanc",
 	["q32397"] = "Il ne lui manquera même pas",
-	-- Items
+	-- container
 	["i20676"] = "Texte du Crépuscule décodé",
 	["i114116"] = "Sac de marchandises de récupération",
 	["i114119"] = "Caisse de marchandises de récupération",
@@ -224,12 +224,13 @@ _addon.translations = {
 	["i21315"] = "Sacoche Fumebois",
 	["i97153"] = "Butin du roi-tonnerre",
 	["i113258"] = "Paquet-cadeau du Bling-o-tron 5000",
-	-- NPCs
+	-- (drop|pickpocket|vendor)
 	["n80882"] = "Artificius Torciboulot",
 	["n85115"] = "Dazzerian",
 	["n65003"] = "Martar le Pas Fute-Fute",
 	["n81171"] = "Troglodyte givre-profond",
 	["n85715"] = "Troglodyte de Chutelune",
+	["n34928"] = "Confesseur d'argent Paletress",
 	["n73305"] = "Tisse-brume Ai",
 	["n28347"] = "Miles Sidney",
 	["n27539"] = "Nécromancien algide",
@@ -242,8 +243,14 @@ _addon.translations = {
 	["n88394"] = "Mutant ensorcelé",
 	["n90107"] = "Démolisseur Mégacharge",
 	["n78501"] = "Kaelynara Courresoleil",
+	["n66932"] = "Akkalou",
+	["n66937"] = "Akkalar",
+	["n66938"] = "Zarb’nirok",
+	["n66933"] = "Kishak",
+	["n66935"] = "Palourok",
+	["n66934"] = "Damlak",
 	["n6209"] = "Pillard des Basses-Cavernes",
-	-- Chests
+	-- chest
 	["o224217"] = "Coffre poussiéreux",
 	["o242519"] = "Monticule suspicieux",
 	["o152620"] = "Formation d'azsharite",

@@ -4,7 +4,7 @@ local _addonName, _addon = ...;
 
 _addon.translations = {
 ["terms"] = {
-	-- quests
+	-- quest
 	["q13633"] = "Der schwarze Ritter von Westfall?",
 	["q13634"] = "Der schwarze Ritter von Silberwald?",
 	["q12122"] = "Eine Audienz erhalten",
@@ -126,11 +126,11 @@ _addon.translations = {
 	["q3106"] = "Einfache Rune",
 	["q3095"] = "Einfache Rolle",
 	["q3116"] = "Einfaches Siegelzeichen",
-	["q6342"] = "Ein unerwartetes Geschenk",
 	["q6341"] = "Auf nach Darnassus",
+	["q6342"] = "Ein unerwartetes Geschenk",
 	["q13848"] = "Überbringer schlechter Nachrichten",
-	["q27247"] = "Hauptmann Mumm",
 	["q27246"] = "Der Orcbericht",
+	["q27247"] = "Hauptmann Mumm",
 	["q27244"] = "Der verlorene Bericht",
 	["q1338"] = "Sturmlanzes Bestellung",
 	["q59"] = "Rüstung aus Tuch und aus Leder",
@@ -148,8 +148,8 @@ _addon.translations = {
 	["q8150"] = "Die Ehrung eines Helden",
 	["q26671"] = "Das Schicksal von Stalvan Dunstmantel",
 	["q11695"] = "Das Horn des Elementarfurors",
-	["q12757"] = "Die Armeen des Scharlachroten Ansturms rücken näher...",
 	["q12756"] = "Der Scharlachrote Ansturm tritt hervor",
+	["q12757"] = "Die Armeen des Scharlachroten Ansturms rücken näher...",
 	["q26794"] = "Morgan Ladimore",
 	["q33332"] = "Hinweise aus der Vergangenheit",
 	["q13188"] = "Auf den Spuren der Könige",
@@ -195,8 +195,8 @@ _addon.translations = {
 	["q27305"] = "Von Liebe und Familie",
 	["q27364"] = "Auf wessen Befehl?",
 	["q25062"] = "Warum wir hier sind",
-	["q12755"] = "Begegnung mit dem Schicksal",
 	["q12754"] = "Überfall am Rundblick",
+	["q12755"] = "Begegnung mit dem Schicksal",
 	["q24972"] = "Entscheidende Informationen",
 	["q24557"] = "Der Plan des Silberbunds",
 	["q29900"] = "Eine alte Legende",
@@ -206,12 +206,12 @@ _addon.translations = {
 	["q12477"] = "Der Weg der Erlösung",
 	["q36223"] = "Lasst jeden Soldaten zurück",
 	["q35129"] = "Lasst jeden Soldaten zurück",
-	["q9602"] = "Unheilvolle Mitteilung",
 	["q9537"] = "Keine Gnade mit dem Gnom",
+	["q9602"] = "Unheilvolle Mitteilung",
 	["q11886"] = "Ungewöhnliche Aktivitäten",
 	["q24981"] = "Ein Dorn in unserem Auge",
 	["q32397"] = "Es wird ihm gar nicht auffallen",
-	-- Items
+	-- container
 	["i20676"] = "Entschlüsselter Schattenhammertext",
 	["i114116"] = "Sack mit geborgenen Teilen",
 	["i114119"] = "Kiste mit Bergungsgut",
@@ -224,12 +224,13 @@ _addon.translations = {
 	["i21315"] = "Kokelwälder Ranzen",
 	["i97153"] = "Schatz des Donnerkönigs",
 	["i113258"] = "Blingtron-5000-Geschenkpaket",
-	-- NPCs
+	-- (drop|pickpocket|vendor)
 	["n80882"] = "Magor Geistbeuger",
 	["n85115"] = "Dazzerian",
 	["n65003"] = "Martar der Nicht-sehr-Kluge",
 	["n81171"] = "Höhlenbewohner der Frosttiefen",
 	["n85715"] = "Höhlenbewohner von Mondsturz",
+	["n34928"] = "Argentumbeichtpatin Blondlocke",
 	["n73305"] = "Nebelwirkerin Ai",
 	["n28347"] = "Miles Sidney",
 	["n27539"] = "Eisiger Nekromant",
@@ -242,8 +243,14 @@ _addon.translations = {
 	["n88394"] = "Gedankenkontrollierter Mutant",
 	["n90107"] = "Sprengmeister Megakrach",
 	["n78501"] = "Kaelynara Sonnenjäger",
+	["n66932"] = "Akkalou",
+	["n66937"] = "Akkalar",
+	["n66938"] = "Ulk'nirok",
+	["n66933"] = "Kishak",
+	["n66935"] = "Muschelstok",
+	["n66934"] = "Damlak",
 	["n6209"] = "Ausplünderer der Tiefentroggs",
-	-- Chests
+	-- chest
 	["o224217"] = "Verstaubte Kiste",
 	["o242519"] = "Verdächtiger Erdhaufen",
 	["o152620"] = "Azsharitformation",
