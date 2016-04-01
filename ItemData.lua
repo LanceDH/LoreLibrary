@@ -1260,7 +1260,7 @@ _addon.data = {
 		"Commander of the Alliance Fleets\n\nFriend of Stormwind",
 	},
 	["locations"] = {
-		{["sourceType"]="unavailable", ["areaId"] = 301, ["id"] = 1519, ["level"] = 0, ["x"] = 69.8, ["y"] = 29.7},
+		{["sourceType"]="unavailable"},
 	},
 },
 ["Green Hills of Stranglethorn"] = {
@@ -3815,7 +3815,7 @@ _addon.data = {
 		{["sourceType"] = "container", ["id"] = 114116},
 		{["sourceType"] = "container", ["id"] = 114119},
 		{["sourceType"] = "container", ["id"] = 114120},
-		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP, ["source"] = "Level 61 to 70 NPCs", ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP, ["source"] = "Level 61 to 70 NPCs"},
 	},
 },
 ["A Steamy Romance Novel: Hot and Misty"] = {
@@ -3886,7 +3886,7 @@ _addon.data = {
 		{["sourceType"] = "container", ["id"] = 114116},
 		{["sourceType"] = "container", ["id"] = 114119},
 		{["sourceType"] = "container", ["id"] = 114120},
-		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP, ["source"] = "Level 81 to 85 NPCs", ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "pickpocket", ["area"] = AREA_WORLDDROP, ["source"] = "Level 81 to 85 NPCs"},
 	},
 },
 ["A Steamy Romance Novel: Blue Moon"] = {
@@ -3920,7 +3920,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP, ["source"] = "Level 50 to 58 NPCs", ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP, ["source"] = "Level 50 to 58 NPCs"},
 	},
 },
 ["Libram of Constitution"] = {
@@ -3933,7 +3933,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_nightdragon_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP, ["source"] = "Level 50 to 58 NPCs", ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP, ["source"] = "Level 50 to 58 NPCs"},
 	},
 },
 ["Libram of Rumination"] = {
@@ -3945,7 +3945,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP, ["source"] = "Level 50 to 58 NPCs", ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP, ["source"] = "Level 50 to 58 NPCs"},
 	},
 },
 ["Libram of Resilience"] = {
@@ -3957,7 +3957,7 @@ _addon.data = {
 		"<HTML><BODY><IMG src=\"Interface/Pictures/11733_ungoro_256\" /></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP, ["source"] = "Level 50 to 58 NPCs", ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "drop", ["area"] = AREA_WORLDDROP, ["source"] = "Level 50 to 58 NPCs"},
 	},
 },
 ["Libram of Rapidity"] = {
@@ -4840,7 +4840,7 @@ _addon.data = {
 		"Tommy Joe -\n\nWith each passing hour, my heart withers from your absence. Oh, if only our folks could see beyond the silly crimes they have done to each other, and know that the only true crime is hate. Hate consumes, and I fear in these dimming times that hate will take hold of more than just our families.\n\nIf they realized this then we could, at long last, be together. It is for that day I hope, and for that day I live.\n\nYour love,\nMaybell",
 	},
 	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 30, ["id"] = 106, ["faction"] = "A", ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "quest", ["areaId"] = 30, ["id"] = 106, ["faction"] = "A"},
 	},
 },
 ["Morris's Order"] = {
@@ -5029,7 +5029,7 @@ _addon.data = {
 		"By Magni's beard, there's much to discuss, and little time to do it, &lt;name&gt;. Find me in Anvilmar overlooking Coldridge Valley as soon as you can. We gotta get started.\n\nThere's a mess of things I can tell you about to get you caught up to speed, but all that's got nothing to do with us... for now. What we need to focus on is the grip of an axe, the weight of our armor, and the smell of our own sweat beadin' down our foreheads as we fight our enemies. We'll start with that.\n\n-Thran Khorman, Warrior Trainer",
 	},
 	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 3106, ["faction"] = "A", ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 3106, ["faction"] = "A"},
 	},
 },
 ["Simple Scroll"] = {
@@ -5357,8 +5357,8 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["sourceType"] = "unavailable"},
-		--{["sourceType"] = "quest", ["area"] = "Hallow's End", ["id"] = 11242, ["faction"] = "A", ["x"] = "", ["y"] = ""},
-		--{["sourceType"] = "quest", ["area"] = "Hallow's End", ["id"] = 11403, ["faction"] = "H", ["x"] = "", ["y"] = ""},
+		--{["sourceType"] = "quest", ["area"] = "Hallow's End", ["id"] = 11242, ["faction"] = "A"},
+		--{["sourceType"] = "quest", ["area"] = "Hallow's End", ["id"] = 11403, ["faction"] = "H"},
 	},
 },
 ["Trail-Worn Scroll"] = {
@@ -5936,7 +5936,7 @@ _addon.data = {
 		"Hi!\n\nI'm not good at letters and so the matron helped me write this down for you. I just want to say THANKS because you're a hero and maybe someday I can save people like you do.\n\nOk, I have to go play so THANKS AGAIN for being good and strong and and you're &lt;handsome/pretty&gt; too!\n\n--Your secret admirer",
 	},
 	["locations"] = {
-		{["sourceType"] = "container", ["id"] = 34077, ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "container", ["id"] = 34077},
 	},
 },
 ["Frayed Zandalari Journal"] = {
@@ -6660,7 +6660,7 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["sourceType"] = "drop", ["areaId"] = 928, ["source"] = SOURCE_VARIOUS},
-		{["sourceType"] = "container", ["id"] = 94566, ["x"] = "", ["y"] = ""},
+		{["sourceType"] = "container", ["id"] = 94566},
 	},
 },
 ["Weathered Journal"] = {
