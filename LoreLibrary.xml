@@ -795,4 +795,62 @@
 		</Frames>
 	</Frame>
 	
+	<Frame name="LoreLibraryUnlockPopup" toplevel="true" parent="ItemTextScrollFrame" enableMouse="false" hidden="true">
+		<Size>
+			<AbsDimension x="210" y="50"/>
+		</Size>
+		
+		<Anchors>
+			<Anchor point="BOTTOM" y="20"/>
+		</Anchors>
+		
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BGTL" file="Interface\Garrison\GarrisonMissionUI2">
+					
+					<TexCoords left="0.423828125" right="0.6513671875" top="0.6142578125" bottom="0.6845703125" />
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="This is a title right here but longer">
+					<Size y="10"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="13" y="-11"/>
+						<Anchor point="RIGHT" x="-13"/>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentSubText" inherits="GameFontWhite" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="text" text="Added to your library.">
+					<Anchors>
+						<Anchor point="BOTTOM" y="11"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		
+		<Frames>
+			<Frame parentKey="suggestion" hidden="true">
+				<Size x="150" y="17"/>
+				<Anchors>
+						<Anchor point="TOP" relativePoint="BOTTOM" y="6"/>
+					</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture parentKey="BGTL" file="Interface\Garrison\GarrisonMissionUI2">
+							<TexCoords left="0.423828125" right="0.6513671875" top="0.6242578125" bottom="0.6845703125" />
+							<Color r="0.75" g="0.75" b="0.75" a="1" />
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString name="$parentTitle" inherits="GameFontNormalSmall" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="Suggestion completed">
+							<Size c="120" y="10"/>
+							<Anchors>
+								<Anchor point="TOP" y="-2"/>
+							</Anchors>
+							<Color r="0.9" g="0.75" b="0" a="1" />
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
  </Ui>

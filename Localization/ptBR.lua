@@ -773,7 +773,7 @@ _addon.translations = {
 		},
 	},
 	["Danath Trollbane"] = {
-		["translation"] = "[Danath Trollbane]",
+		["translation"] = "Danath Matatroll",
 		["pages"] = {
 			"Danath Matatroll\n\nComandante da Milícia de Stromgarde. Conselheiro Tático do General Turalyon, Comandante da Força da Expedição da Aliança que marchou sobre o mundo dos orcs, Draenor. Dado como morto.\n\nSua memória é honrada, sobrinho, e também seu sacrifício. Desde a fundação de nosso glorioso império, o caminho dos valorosos sempre foi banhado com o sangue de heróis.\n\nTorcato Matatroll, Senhor de Stromgarde",
 		},
@@ -944,7 +944,7 @@ _addon.translations = {
 		},
 	},
 	["General Turalyon"] = {
-		["translation"] = "[General Turalyon]",
+		["translation"] = "General Turalyon",
 		["pages"] = {
 			"General Turalyon\n\nAntigo Tenente sob comando de Lorde Anduin Lothar. Cavaleiro do Punho de Prata. Alto-general da Expedição da Aliança que marchou sobre o mundo dos orcs, Draenor. Dado como morto.\n\nEsarus thar no'Darador', por honra e sangue servimos.\nVocê foi a mão direita da justiça e da virtude, velho amigo. Seu nome será para sempre honrado em nossos salões.\n\nLorde Uther, o Arauto da Luz, Cavaleiro do Punho de Prata",
 		},
@@ -1259,7 +1259,7 @@ _addon.translations = {
 		},
 	},
 	["Kurdran Wildhammer"] = {
-		["translation"] = "[Kurdran Wildhammer]",
+		["translation"] = "Kurdran Martelo Feroz",
 		["pages"] = {
 			"Kurdran Martelo Feroz\n\nRenomado matador de dragões. Mestre de grifos do Ninho da Águia. Comandante da Divisão de Cavalga-grifos da Expedição da Aliança que marchou sobre o mundo dos orcs, Draenor. Dado como morto.\n\nEscutaremos nos ventos os clamores de Celeril. Escutaremos no cume das montanhas o trovejar de seu martelo. Cavalgue rumo ao além, irmão. Nossos irmãos ancestrais o aguardam em seus salões.\n\nGrão-thane Falstad Martelo Feroz",
 		},

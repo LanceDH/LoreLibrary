@@ -7,13 +7,13 @@ local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
 local _db = nil;
 
 local _defaults = {
-	global = {
-		
+	global = {	
 		unlockedLore = {},
 		favorites = {},
 		options = {
 			version = "";
 		},
+		unlocksUsed = 0;
 		suggestions = {["timeLast"] = 0}
 	}
 }
@@ -393,10 +393,10 @@ function _addon:GetEnglishTitle(title)
 end
 
 function _addon:UnlockNewLore(title, silent)
-	local origional = nil;
+	local localizedTitle = title;
+	
 	if title and not _data[title] then
 		-- Check for translation
-		origional = title;
 		title = self:GetEnglishTitle(title);
 	end
 
@@ -419,9 +419,11 @@ function _addon:UnlockNewLore(title, silent)
 	
 	SortLore();
 	if not silent then
-		print(FORMAT_LORE_UNLOCK:format((origional or title)));
+		LoreLibraryUnlockPopup.title:SetText(localizedTitle);
+		LoreLibraryUnlockPopup:Show();
+		LoreLibraryUnlockPopup.suggestion:Hide();
 		if completedSuggestion then
-			print(STRING_SUGGESTION_COMPLETE);
+			LoreLibraryUnlockPopup.suggestion:Show();
 			self:UpdateSuggestions();
 		end
 		self:UpdateBookList()
@@ -1058,6 +1060,30 @@ function _addon:InitCoreFrame()
 	    local source = display.sources["s"..i];
 		source:SetScript("OnClick", function(self) _addon:ShowMapPointOfInterest(self.lore, self.PoI) end);
 	end	
+	
+	LoreLibraryUnlockPopup.fadeIn = LoreLibraryUnlockPopup:CreateAnimationGroup();
+	LoreLibraryUnlockPopup.fadeIn.alpha = LoreLibraryUnlockPopup.fadeIn:CreateAnimation("ALPHA");
+	--LoreLibraryUnlockPopup.fadeIn.alpha:SetChange(1);
+	LoreLibraryUnlockPopup.fadeIn.alpha:SetSmoothing("NONE");
+	LoreLibraryUnlockPopup.fadeIn.alpha:SetDuration(0.3);
+	LoreLibraryUnlockPopup.fadeIn.alpha:SetFromAlpha(1)
+	LoreLibraryUnlockPopup.fadeIn.alpha:SetToAlpha(0)
+	LoreLibraryUnlockPopup.fadeIn.alpha:SetStartDelay(1);
+	LoreLibraryUnlockPopup.fadeIn:SetLooping("BOUNCE");
+	
+	LoreLibraryUnlockPopup:SetScript("OnShow", function(self)
+			self.fadeIn:Play(true); 
+	end);
+	LoreLibraryUnlockPopup.fadeIn:SetScript("OnLoop", function(self, state) 
+			if (state == "REVERSE") then
+				self:Stop();
+				LoreLibraryUnlockPopup:Hide();
+			end
+	end);
+	hooksecurefunc("CloseItemText", function()
+			LoreLibraryUnlockPopup.fadeIn:Stop();
+			LoreLibraryUnlockPopup:Hide();
+	end);
 end
 
 function _addon:InitMap()
