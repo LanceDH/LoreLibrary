@@ -433,7 +433,6 @@
 		</Anchors>
 
 		<Frames>
-		
 			<StatusBar parentKey="progressBar" inherits="LOLIB_CoreStatusTemplate" />
 			
 			<Button name="$parentSuggestionButton" inherits="UIMenuButtonStretchTemplate" text="" parentKey="suggestBtn">
@@ -497,6 +496,38 @@
 					</Button>
 				</Frames>
 			</Frame>
+			
+			<Button name="$parentOptionsButton" inherits="UIMenuButtonStretchTemplate" text="">
+				<Size x="35" y="22"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-15" y="-35"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="gear" file="Interface\Worldmap\Gear_64Grey">
+							<Size x="16" y="16"/>
+							<Anchors>
+								<Anchor point="LEFT" relativeKey="$parent.Left" relativePoint="LEFT" x="5"/>
+							</Anchors>
+						</Texture>
+						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+							<Size x="10" y="12"/>
+							<Anchors>
+								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<HighlightTexture file="Interface\BUTTONS\UI-Common-MouseHilight" alphaMode="ADD"/>
+				<Scripts>
+					<OnClick> 
+						PlaySound("igMainMenuOptionCheckBoxOn");
+						ToggleDropDownMenu(1, nil, LoreLibraryCoreOptionsDropDown, "LoreLibraryCoreOptionsButton", -40, 0);
+					</OnClick>	
+				</Scripts>						
+			</Button>
+			<Frame name="$parentOptionsDropDown" inherits="UIDropDownMenuTemplate" />
+			
 		</Frames>
 
 		<Scripts>

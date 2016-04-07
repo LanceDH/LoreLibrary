@@ -4,6 +4,24 @@ _addon.localizeds = {};
 
 local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
 
+local _LDB = LibStub("LibDataBroker-1.1"):NewDataObject(_addonName, {
+	type = "launcher",
+	text = "Lore Library",
+	icon = "Interface\\ICONS\\INV_Misc_Book_07",
+	OnClick = function(self, button, down)
+		if (LoreLibraryCore:IsShown()) then
+			HideUIPanel(LoreLibraryCore);
+		else
+			ShowUIPanel(LoreLibraryCore);
+		end
+	end,
+	OnTooltipShow = function(tt)
+		tt:AddLine("Lore Library", 1, 1, 1);
+		tt:AddLine("Click to open your library.")
+	end	
+})
+local _icon = LibStub("LibDBIcon-1.0")
+
 local _db = nil;
 
 local _defaults = {
@@ -12,6 +30,9 @@ local _defaults = {
 		favorites = {},
 		options = {
 			version = "";
+			minimap = {
+				hide = true,
+			},
 		},
 		unlocksUsed = 0;
 		suggestions = {["timeLast"] = 0}
@@ -64,18 +85,20 @@ local _achievementsToCheck = {
 		,7230 -- Legend of the Brewfathers
 	}
 	
-local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
+
 local STRING_SUGGESTION_COMPLETE = "You completed a daily Lore Library suggestion.";
 local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new one.";
 local STRING_SUGGESTION_EMPTY1 = "You have collected so much lore!";
 local STRING_SUGGESTION_EMPTY2 = "There is nothing left to suggest.";
+local STRING_OPTIONS_MINIMAP = "Minimap button"
+local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
 local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
 local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
 local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
 local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
-local OPTION_SHOW_PINS = "Show pins";
-local OPTION_SHOW_COLLECTED = "Show collected";
+local PINS_OPTIONS_SHOW = "Show pins";
+local PINS_OPTIONS_COLLECTED = "Show collected";
 local SIZE_LISTBOOKHEIGHT = 40;
 local MAX_SOURCES = 9;
 local MAX_SUGGESTIONS = 3;
@@ -88,6 +111,7 @@ local SOURCETYPE_QUEST = "Obtained during a quest.";
 local SOURCETYPE_VENDOR = "Sold by a vendor.";
 local SOURCETYPE_CHEST = "Found in a type of chest.";
 local SOURCETYPE_UNAVAILABLE = "Can no longer be obtained.";
+
 
 local _sourceData = {
 				["object"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Object", ["tooltip"] = SOURCETYPE_OBJECT},
@@ -901,12 +925,36 @@ function _addon:InitFilter(self, level)
 	end
 end
 
+function _addon:InitOptions(self, level)
+	local info = UIDropDownMenu_CreateInfo();
+	info.keepShownOnClick = true;	
+
+	if (level == 1) then
+		info.text = STRING_OPTIONS_MINIMAP;
+		info.func = function(_, _, _, value)
+						LoreLibrary.db.global.options.minimap.hide = not value;
+						_addon:UpdateOptions();
+					end 
+		info.checked = function() return not LoreLibrary.db.global.options.minimap.hide end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+	end
+end
+
+function _addon:UpdateOptions()
+	if (LoreLibrary.db.global.options.minimap.hide) then
+		_icon:Hide(_addonName);
+	else
+		_icon:Show(_addonName);
+	end
+end
+
 function _addon:InitOptionDropdown(self, level)
 	local info = UIDropDownMenu_CreateInfo();
 	info.keepShownOnClick = true;	
 
 	if (level == 1) then
-		info.text = OPTION_SHOW_PINS;
+		info.text = PINS_OPTIONS_SHOW;
 		info.func = function(_, _, _, value)
 						_option.showPins = value;
 						_addon:LorePiecesInMap();
@@ -915,7 +963,7 @@ function _addon:InitOptionDropdown(self, level)
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 	
-		info.text = OPTION_SHOW_COLLECTED;
+		info.text = PINS_OPTIONS_COLLECTED;
 		info.func = function(_, _, _, value)
 						_option.showCollected = value;
 						_addon:LorePiecesInMap();
@@ -1050,6 +1098,7 @@ function _addon:InitCoreFrame()
 	
 	self:UpdateBookList();
 	
+	UIDropDownMenu_Initialize(LoreLibraryCoreOptionsDropDown, function(self, level) _addon:InitOptions(self, level) end, "MENU");
 	UIDropDownMenu_Initialize(LoreLibraryListFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
 	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
 
@@ -1303,6 +1352,7 @@ end
 
 function LoreLibrary:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("LoLibDB", _defaults, true);
+	_icon:Register(_addonName, _LDB, self.db.global.options.minimap);
 end
 
 function LoreLibrary:OnEnable()
