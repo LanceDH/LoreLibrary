@@ -2,6 +2,36 @@
 local _addonName, _addon = ...;
 _addon.localizeds = {};
 
+local STRING_SUGGESTION_COMPLETE = "You completed a daily Lore Library suggestion.";
+local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new one.";
+local STRING_SUGGESTION_EMPTY1 = "You have collected so much lore!";
+local STRING_SUGGESTION_EMPTY2 = "There is nothing left to suggest.";
+local STRING_OPTIONS_MINIMAP = "Minimap button";
+local STRING_LOSTPAGES_INFO = "You can use a lost page\nto unlock this lore.";
+local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
+local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
+local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
+local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
+local FORMAT_SOURCE = "%s\n%s";
+local FORMAT_PROGRESS = "%d/%d";
+local FORMAT_LORE_CONTENT = "Lore content:\nWords: %d \nPages: %d \nImages: %d";
+local PINS_OPTIONS_SHOW = "Show pins";
+local PINS_OPTIONS_COLLECTED = "Show collected";
+local SIZE_LISTBOOKHEIGHT = 40;
+local MAX_SOURCES = 9;
+local MAX_SUGGESTIONS = 3;
+local NUM_SUGGESTION_FOR_TOKEN = 5;
+local NUM_LORE_FOR_TOKEN = 20;
+local SOURCE_TITLE = "This lore can be found in:";
+local SOURCETYPE_OBJECT = "Object found in a zone.";
+local SOURCETYPE_NPC = "Can drop from an npc.";
+local SOURCETYPE_CONTAINER = "Can be found in a container.";
+local SOURCETYPE_STEALTH = "Can pickpocket from an npc.";
+local SOURCETYPE_QUEST = "Obtained during a quest.";
+local SOURCETYPE_VENDOR = "Sold by a vendor.";
+local SOURCETYPE_CHEST = "Found in a type of chest.";
+local SOURCETYPE_UNAVAILABLE = "Can no longer be obtained.";
+
 local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
 
 local _LDB = LibStub("LibDataBroker-1.1"):NewDataObject(_addonName, {
@@ -31,10 +61,9 @@ local _defaults = {
 		options = {
 			version = "";
 			minimap = {
-				hide = true,
+				hide = false,
 			},
 		},
-		unlocksUsed = 0;
 		suggestions = {["timeLast"] = 0}
 	}
 }
@@ -50,7 +79,7 @@ local _filter = {
 					["Pickpocket"] = true,
 					["Vendor"] = true,
 					["Chest"] = true,
-					["Unavailable"] = false,
+					["Unavailable"] = true,
 				}
 			}
 			
@@ -84,33 +113,6 @@ local _achievementsToCheck = {
 		,6856 -- Ballad of Liu Lang
 		,7230 -- Legend of the Brewfathers
 	}
-	
-
-local STRING_SUGGESTION_COMPLETE = "You completed a daily Lore Library suggestion.";
-local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new one.";
-local STRING_SUGGESTION_EMPTY1 = "You have collected so much lore!";
-local STRING_SUGGESTION_EMPTY2 = "There is nothing left to suggest.";
-local STRING_OPTIONS_MINIMAP = "Minimap button"
-local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
-local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
-local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
-local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
-local FORMAT_SOURCE = "%s\n%s";
-local FORMAT_PROGRESS = "%d/%d";
-local PINS_OPTIONS_SHOW = "Show pins";
-local PINS_OPTIONS_COLLECTED = "Show collected";
-local SIZE_LISTBOOKHEIGHT = 40;
-local MAX_SOURCES = 9;
-local MAX_SUGGESTIONS = 3;
-local SOURCE_TITLE = "This lore can be found in:";
-local SOURCETYPE_OBJECT = "Object found in a zone.";
-local SOURCETYPE_NPC = "Can drop from an npc.";
-local SOURCETYPE_CONTAINER = "Can be found in a container.";
-local SOURCETYPE_STEALTH = "Can pickpocket from an npc.";
-local SOURCETYPE_QUEST = "Obtained during a quest.";
-local SOURCETYPE_VENDOR = "Sold by a vendor.";
-local SOURCETYPE_CHEST = "Found in a type of chest.";
-local SOURCETYPE_UNAVAILABLE = "Can no longer be obtained.";
 
 
 local _sourceData = {
@@ -258,8 +260,8 @@ function _addon:LorePiecesInMap()
 	_addon:UpdateMapProgressBar(countAll - countLocked, countAll);
 end
 
-function _addon:ShowMapPointOfInterest(loreTitle, location)
-	if (not loreTitle or not location or location.sourceType == "container" or location.sourceType == "unavailable") then return; end
+function _addon:ShowMapPointOfInterest(lore, location)
+	if (not lore or not location or location.sourceType == "container" or location.sourceType == "unavailable") then return; end
 
 	local width = WorldMapDetailFrame:GetWidth();
 	local height = WorldMapDetailFrame:GetHeight();
@@ -276,6 +278,7 @@ function _addon:ShowMapPointOfInterest(loreTitle, location)
 	LoreLibraryMap.PoI:Show();
 	LoreLibraryMap.PoI:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", width * (location.x/100), -height * (location.y/100));
 	LoreLibraryMap.PoI.icon:SetTexture(_sourceData[sourceType].icon);
+	LoreLibraryMap.PoI.lore = lore;
 	
 end
 
@@ -302,9 +305,9 @@ end
 function _addon:GetNumAvailableLore()
 	local count = 0;
 	for k, lore in ipairs(_loreList) do
-		if (self:IsStillObtainable(lore)) then
+		--if (self:IsStillObtainable(lore)) then
 			count = count + 1;
-		end
+		--end
 	end
 	return count;
 end
@@ -429,6 +432,11 @@ function _addon:UnlockNewLore(title, silent)
 
 	_data[title].unlocked = true;
 	table.insert(_unlockedLoreTitles, title);
+	self:UpdateLostPageCount();
+	self:UpdateBookDisplay();
+	self:UpdateBookList();
+	
+	if (LoreLibraryMap.PoI.lore and LoreLibraryMap.PoI.lore.key == title) then LoreLibraryMap.PoI:Hide(); end
 	
 	local completedSuggestion = false;
 	-- Check if unlock was a suggestion
@@ -450,8 +458,39 @@ function _addon:UnlockNewLore(title, silent)
 			LoreLibraryUnlockPopup.suggestion:Show();
 			self:UpdateSuggestions();
 		end
-		self:UpdateBookList()
 	end
+end
+
+function _addon:UpdateLostPageCount()
+	local numUnavailable, numUnavailableLocked = self:GetNumUnavailable();
+	local spentPages = numUnavailable - numUnavailableLocked;
+	local pages = math.floor(self:GetNumUnlockedLore()/NUM_LORE_FOR_TOKEN) - spentPages;
+	LoreLibraryCore.tokenCount.count:SetText(pages);
+	LoreLibraryCore.tokenCount.untilNext = NUM_LORE_FOR_TOKEN - (self:GetNumUnlockedLore() % NUM_LORE_FOR_TOKEN);
+	return pages;
+end
+
+function _addon:UnlockUnavailableLore()
+	local lore = LoreLibraryListInsetRight.currentLore;
+	if lore == nil or lore.unlocked or lore.locations[1].sourceType ~= "unavailable" then return; end;
+	
+	_addon:UnlockNewLore(lore.key, true);
+end
+
+function _addon:GetNumUnavailable()
+	local lockedCount = 0;
+	local total = 0;
+	
+	for title, lore in pairs(_data) do
+		if (lore.locations[1].sourceType == "unavailable") then
+			total = total + 1;
+			if (not lore.unlocked) then
+				lockedCount = lockedCount + 1;
+			end
+		end
+	end
+	
+	return total, lockedCount;
 end
 
 function _addon:SetFavorite(title, value, silent)
@@ -576,9 +615,12 @@ end
 function _addon:UpdateBookDisplay(lore)
 	local display = LoreLibraryListInsetRight;
 	
-	if (lore ~= LoreLibraryListInsetRight.currentLore) then
-		LoreLibraryListInsetRight.currentPage = 1;
-		LoreLibraryListInsetRight.currentLore = lore;
+	lore = (lore and lore or display.currentLore);
+	if (not lore) then return; end
+	
+	if (lore ~= display.currentLore) then
+		display.currentPage = 1;
+		display.currentLore = lore;
 	end
 	
 	
@@ -591,6 +633,7 @@ function _addon:UpdateBookDisplay(lore)
 		source.PoI = nil;
 	end	
 	display.sources:Hide();
+	LoreLibraryLostPages:Hide();
 	
 	display.title:SetText(lore.title);
 	display.id = lore.info.id;
@@ -621,6 +664,7 @@ function _addon:UpdateBookDisplay(lore)
 			    text = location.source;
 			elseif location.sourceType == "unavailable" then
 			    text = "This lore no longer has any\n available sources.";
+				_addon:ShowLostPages();
 			elseif location.sourceType == "quest" then
 				text = string.format(FORMAT_SOURCE, location.source, location.area);
 				
@@ -645,6 +689,30 @@ function _addon:UpdateBookDisplay(lore)
 	self:UpdateListDisplayNavigation();
 	
 	display.soundHandle = select(2, PlaySound("igSpellBookOpen"));
+end
+
+function _addon:ShowLostPages()
+	local lore = LoreLibraryListInsetRight.currentLore;
+	local wordCount = 0;
+	local pageCount = #lore.pages;
+	local imageCount = 0;
+	
+	for k, page in ipairs(lore.pages) do
+		local _, count = page:gsub("<IMG ", "");
+		imageCount = imageCount + count;
+		_, count = page:gsub("%S+","");
+		wordCount = wordCount + count;
+	end
+	
+	LoreLibraryLostPages:Show();
+	LoreLibraryLostPages.info:SetText(STRING_LOSTPAGES_INFO);
+	LoreLibraryLostPages.content:SetText(FORMAT_LORE_CONTENT:format(wordCount, pageCount, imageCount));
+	
+	LoreLibraryLostPages.button:Disable();
+	if (self:UpdateLostPageCount() > 0) then
+		LoreLibraryLostPages.button:Enable();
+	end
+	
 end
 
 function _addon:UpdateBookList()
@@ -1133,6 +1201,8 @@ function _addon:InitCoreFrame()
 			LoreLibraryUnlockPopup.fadeIn:Stop();
 			LoreLibraryUnlockPopup:Hide();
 	end);
+	
+	LoreLibraryLostPages.button:SetScript("OnClick", function() _addon:UnlockUnavailableLore(); end); 
 end
 
 function _addon:InitMap()
@@ -1377,6 +1447,8 @@ function LoreLibrary:OnEnable()
 	
 	-- display first lore in the list
 	_addon:UpdateBookDisplay(_addon:GetFilteredList(true)[1]);
+	
+	_addon:UpdateLostPageCount();
 end
 
 ----------
