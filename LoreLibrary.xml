@@ -166,6 +166,7 @@
 					<Anchor point="TOP"/>
 				</Anchors>
 			</Button>
+			
 			<Button parentKey="s2" inherits="LOLIB_SourceTemplate" id="2">
 				<Anchors>
 					<Anchor point="TOP" relativeKey="$parent.s1" relativePoint="BOTTOM"/>
@@ -497,6 +498,40 @@
 				</Frames>
 			</Frame>
 			
+			<Frame parentKey="tokenCount" inherits="InsetFrameTemplate3" enableMouse="true">
+				<Size x="50" y="20"/>
+				<Anchors>
+					<Anchor point="LEFT" relativeKey="$parent.suggestBtn" relativePoint="RIGHT" x="25"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString parentKey="count" inherits="GameFontHighlightSmall" justifyH="RIGHT" text="25">
+							<Anchors>
+								<Anchor point="TOP" x="-7" y="-5"/>
+							</Anchors>
+						</FontString>
+						<Texture parentKey="icon" file="Interface\GossipFrame\WorkOrderGossipIcon">
+							<Size x="14" y="14"/>
+							<Anchors>
+								<Anchor point="RIGHT" x="-7"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+						GameTooltip:SetText("Lost pages" ,1 ,1 ,1);
+						GameTooltip:AddLine("Pages are gained with every 20 pieces of lore you unlock, and can be used to unlock unavailable lore." ,1 ,0.83 ,0 ,true);
+						GameTooltip:AddDoubleLine("Unlocks until next:", (self.untilNext or 20) ,1 ,1 ,1 ,1 ,1 ,1 );
+						GameTooltip:Show();
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Frame>
+			
 			<Button name="$parentOptionsButton" inherits="UIMenuButtonStretchTemplate" text="">
 				<Size x="35" y="22"/>
 				<Anchors>
@@ -603,7 +638,74 @@
 							<Anchor point="TOPLEFT" relativeTo="$parentPageText" relativePoint="TOPLEFT" x="5" y="-45"/>
 							<Anchor point="BOTTOMRIGHT" relativeTo="$parentPageText" relativePoint="BOTTOMRIGHT"/>
 						</Anchors>
+						<Frames>
+							<Frame name="LoreLibraryLostPages">
+								<Size y="100"/>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeKey="$parent.s1" relativePoint="BOTTOMLEFT" y="-10"/>
+									<Anchor point="TOPRIGHT" relativeKey="$parent.s1" relativePoint="BOTTOMRIGHT" y="-10"/>
+								</Anchors>
+								
+								<Layers>
+									<Layer level="BACKGROUND">
+										<Texture file="Interface\Garrison\GarrisonMissionTypeIcons" parentKey="pageIcon">
+											<Size x="56" y="56"/>
+											<Anchors>
+												<Anchor point="BOTTOMRIGHT" x="-60"/>
+											</Anchors>
+											<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
+										</Texture>
+									</Layer>
+									<Layer level="ARTWORK">
+										<FontString inherits="GameFontBlack" justifyH="CENTER" maxLines="2" parentKey="info" text="You can use a lost page\nto unlock this lore.">
+											<Anchors>
+												<Anchor point="TOPLEFT" x="5" y="-15"/>
+												<Anchor point="TOPRIGHT" x="-5" y="-15"/>
+											</Anchors>
+										</FontString>
+										<FontString inherits="GameFontBlack" justifyH="LEFT" maxLines="5" parentKey="content" text="">
+											<Anchors>
+												<Anchor point="BOTTOMLEFT" x="60" y="5"/>
+											</Anchors>
+										</FontString>
+									</Layer>
+								</Layers>
+								
+								<Frames>
+									<Button parentKey="button">
+										<Size x="32" y="32"/>
+										<NormalTexture file="Interface\PETBATTLES\PetBattle-LockIcon" parentKey="normal"/>
+										<PushedTexture file="Interface\PETBATTLES\PetBattle-LockIcon" parentKey="pushed"/>
+										<DisabledTexture file="Interface\PETBATTLES\PetBattle-LockIcon"  parentKey="disabled"/>
+										<HighlightTexture file="Interface\PETBATTLES\PetBattle-LockIcon" alphaMode="ADD"/>
+										<Anchors>
+											<Anchor point="BOTTOMLEFT" relativeKey="$parent.pageIcon" x="-5" y="-5"/>
+										</Anchors>
+										<Scripts>
+											<OnLoad> 
+												self.disabled:SetDesaturated(true);
+												self.pushed:SetPoint("TOPLEFT", self, "TOPLEFT", 1, -1);
+												self.pushed:SetPoint("BOTTOMRIGHT", self, "BOTTOMRIGHT", 1, -1);
+											</OnLoad>	
+											<OnEnter>
+												GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+												if (self:IsEnabled()) then
+													GameTooltip:SetText("Use a lost page to unlock this lore.");
+												else
+													GameTooltip:SetText("You have no lost pages available.");
+												end
+											</OnEnter>
+											<OnLeave>
+												GameTooltip:Hide();
+											</OnLeave>
+										</Scripts>	
+									</Button>
+								</Frames>
+							</Frame>
+						</Frames>
 					</Frame>
+				
+					
 				
 					<Frame name="$parentNav" parentKey="navigation" hidden="true">
 						<Size>
