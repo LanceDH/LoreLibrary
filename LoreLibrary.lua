@@ -7,6 +7,8 @@ local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new 
 local STRING_SUGGESTION_EMPTY1 = "You have collected so much lore!";
 local STRING_SUGGESTION_EMPTY2 = "There is nothing left to suggest.";
 local STRING_OPTIONS_MINIMAP = "Minimap button";
+local STRING_OPTIONS_WORLDMAP_OVERLAY = "World map overlay"
+local STRING_OPTIONS_TOOLTIP = "Tooltip indicator"
 local STRING_LOSTPAGES_INFO = "You can use a lost page\nto unlock this lore.";
 local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
 local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
@@ -60,6 +62,8 @@ local _defaults = {
 		favorites = {},
 		options = {
 			version = "";
+			showMapOverlay = true;
+			showTooltipText = true;
 			minimap = {
 				hide = false,
 			},
@@ -409,23 +413,25 @@ function _addon:ChangeDisplayPage(direction)
 end
 
 function _addon:GetEnglishTitle(title)
+
+	if not title then return; end
+	
+	if _data[title] then return title; end
+
 	-- Good lord I wish we could use Ids
-	for english, data in pairs(_data) do
+	for key, data in pairs(_data) do
 		if data.title == title then
-			return english
+			return key
 		end
 	end
 		
-	return title;
+	return nil;
 end
 
 function _addon:UnlockNewLore(title, silent)
 	local localizedTitle = title;
 	
-	if title and not _data[title] then
-		-- Check for translation
-		title = self:GetEnglishTitle(title);
-	end
+	title = self:GetEnglishTitle(title);
 
 	-- Not in database or already unlocked
 	if not title or not _data[title] or _data[title].unlocked then return; end
@@ -447,7 +453,6 @@ function _addon:UnlockNewLore(title, silent)
 			break;
 		end
 	end
-	
 	
 	SortLore();
 	if not silent then
@@ -1006,6 +1011,23 @@ function _addon:InitOptions(self, level)
 		info.checked = function() return not LoreLibrary.db.global.options.minimap.hide end;
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
+		
+		info.text = STRING_OPTIONS_WORLDMAP_OVERLAY;
+		info.func = function(_, _, _, value)
+						LoreLibrary.db.global.options.showMapOverlay = value;
+						_addon:UpdateOptions();
+					end 
+		info.checked = function() return LoreLibrary.db.global.options.showMapOverlay end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+		
+		info.text = STRING_OPTIONS_TOOLTIP;
+		info.func = function(_, _, _, value)
+						LoreLibrary.db.global.options.showTooltipText = value;
+					end 
+		info.checked = function() return LoreLibrary.db.global.options.showTooltipText end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
 	end
 end
 
@@ -1014,6 +1036,12 @@ function _addon:UpdateOptions()
 		_icon:Hide(_addonName);
 	else
 		_icon:Show(_addonName);
+	end
+	
+	if (LoreLibrary.db.global.options.showMapOverlay) then
+		LoreLibraryMap:Show();
+	else
+		LoreLibraryMap:Hide();
 	end
 end
 
@@ -1203,6 +1231,27 @@ function _addon:InitCoreFrame()
 	end);
 	
 	LoreLibraryLostPages.button:SetScript("OnClick", function() _addon:UnlockUnavailableLore(); end); 
+
+	GameTooltip:HookScript('OnTooltipCleared', function(self) GameTooltip.LL_Checked = false; end);
+	-- OnUpdate because there is no OnTooltupSet function that supports objects
+	GameTooltip:HookScript('OnUpdate', function(self) 
+		if (LoreLibrary.db.global.options.showTooltipText and not GameTooltip.LL_Checked) then
+			GameTooltip.LL_Checked = true;
+			if (_G["GameTooltipTextLeft1"]:GetNumLines() == 1) then
+				local key = _addon:GetEnglishTitle(_G["GameTooltipTextLeft1"]:GetText());
+				if key then 
+					if (_data[key].unlocked) then
+						GameTooltip:AddLine("Lore Collected",0.2 ,1 ,0.2);
+					else
+						GameTooltip:AddLine("Lore not collected",1 ,0.2 ,0.2);
+					end
+					GameTooltip:Show();
+				end
+			end
+			
+		end
+	end)
+	
 end
 
 function _addon:InitMap()
@@ -1449,6 +1498,7 @@ function LoreLibrary:OnEnable()
 	_addon:UpdateBookDisplay(_addon:GetFilteredList(true)[1]);
 	
 	_addon:UpdateLostPageCount();
+
 end
 
 ----------
