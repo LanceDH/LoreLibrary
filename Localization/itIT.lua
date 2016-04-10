@@ -624,7 +624,7 @@ _addon.translations = {
 		},
 	},
 	["Archmage Khadgar of the Kirin Tor"] = {
-		["translation"] = "[Archmage Khadgar of the Kirin Tor]",
+		["translation"] = "Arcimago Khadgar del Kirin Tor",
 		["pages"] = {
 			"Arcimago Khadgar del Kirin Tor\n\nEx apprendista di Medivh. Comandante Supremo della spedizione dell'Alleanza che marciò su Draenor, la terra natale degli Orchi. Dato per morto.\n\nMai nessuno aveva indagato a fondo sul cuore oscuro della magia e della guerra in maniera così altruista. Buona fortuna, pellegrino coraggioso, ovunque tu sia.\n\nAntonidas, Arcimago di Dalaran",
 		},
@@ -774,7 +774,7 @@ _addon.translations = {
 		},
 	},
 	["Danath Trollbane"] = {
-		["translation"] = "[Danath Trollbane]",
+		["translation"] = "Danath Cacciatroll",
 		["pages"] = {
 			"Danath Cacciatroll\n\nComandante della Milizia di Stromgarde. Consigliere Tattico del Generale Turalyon, Comandante delle Forze di Spedizione dell'Alleanza che marciarono su Draenor, la terra natale degli Orchi. Dato per morto.\n\nNipote, noi onoriamo la tua memoria e il tuo sacrificio. Sin dalla fondazione del nostro glorioso impero, la strada che porta al valore è stata sempre segnata dal sangue degli eroi.\n\nThoras Cacciatroll, Signore di Stromgarde",
 		},
@@ -945,7 +945,7 @@ _addon.translations = {
 		},
 	},
 	["General Turalyon"] = {
-		["translation"] = "[General Turalyon]",
+		["translation"] = "Generale Turalyon",
 		["pages"] = {
 			"Generale Turalyon\n\nEx Tenente di Ser Anduin Lothar. Cavaliere della Mano d'Argento. Gran Generale della Spedizione dell'Alleanza che marciò su Draenor, la terra natale degli Orchi. Dato per morto.\n\nEsarus thar no'Darador: noi serviamo nel sangue e nell'onore. Tu eri il braccio destro della giustizia e della virtù, amico mio. Il tuo nome sarà onorato in eterno nelle nostre sale.\n\nSer Uther l'Araldo della Luce, Cavaliere della Mano d'Argento",
 		},
@@ -1260,7 +1260,7 @@ _addon.translations = {
 		},
 	},
 	["Kurdran Wildhammer"] = {
-		["translation"] = "[Kurdran Wildhammer]",
+		["translation"] = "Kurdran Granmartello",
 		["pages"] = {
 			"Kurdran Granmartello\n\nNoto combattente di draghi. Maestro dei Grifoni di Picco dell'Aquila. Comandante della Divisione dei Cavalieri di Grifoni che prese parte alla Spedizione dell'Alleanza che marciò su Draenor, la terra natale degli Orchi. Dato per morto.\n\nSentiremo la chiamata di Sky'ree nel vento. Udiremo il tuo martello tuonare tra le cime delle montagne. Cavalca deciso nell'aldilà, fratello. Le sale dei nostri antenati ti attendono.\n\nGran Thane Falstad Granmartello",
 		},
@@ -1542,7 +1542,7 @@ _addon.translations = {
 		},
 	},
 	["Ranger Captain Alleria Windrunner"] = {
-		["translation"] = "[Ranger Captain Alleria Windrunner]",
+		["translation"] = "Capitano dei Guardaboschi Alleria Ventolesto",
 		["pages"] = {
 			"Capitano dei Guardaboschi Alleria Ventolesto\n\nNota Cacciatrice Troll di Quel'Thalas. Esploratrice Capo e Spia della Spedizione dell'Alleanza che marciò su Draenor, la terra natale degli Orchi. Data per morta.\n\nIl tuo cuore è volato dritto come una freccia nel vento, sorella. Eri la migliore del nostro Ordine e la più amata della nostra razza.\n\nSylvanas Ventolesto, Generale dei Guardaboschi di Quel'Thalas",
 		},

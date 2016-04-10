@@ -27,10 +27,6 @@
 				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
 				if (self.lore) then
 					GameTooltip:SetText(self.lore.title);
-					if (self.lore.unlocked) then
-						GameTooltip:AddLine("Collected" ,1 ,1 ,1 ,true);
-						GameTooltip:Show();
-					end
 				end
 			</OnEnter>
 			<OnLeave>
@@ -38,8 +34,6 @@
 			</OnLeave>
 		</Scripts>
 	</Frame>
-	
-	
 	
 	<StatusBar name="LOLIB_CoreStatusTemplate" inherits="LOLIB_ProgressBarTemplate" virtual="true">
 		<Anchors>

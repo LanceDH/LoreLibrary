@@ -10,6 +10,8 @@ local STRING_OPTIONS_MINIMAP = "Minimap button";
 local STRING_OPTIONS_WORLDMAP_OVERLAY = "World map overlay"
 local STRING_OPTIONS_TOOLTIP = "Tooltip indicator"
 local STRING_LOSTPAGES_INFO = "You can use a lost page\nto unlock this lore.";
+local STRING_PINS_OPTIONS_SHOW = "Show pins";
+local STRING_PINS_OPTIONS_COLLECTED = "Show collected";
 local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
 local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
 local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
@@ -17,8 +19,6 @@ local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
 local FORMAT_SOURCE = "%s\n%s";
 local FORMAT_PROGRESS = "%d/%d";
 local FORMAT_LORE_CONTENT = "Lore content:\nWords: %d \nPages: %d \nImages: %d";
-local PINS_OPTIONS_SHOW = "Show pins";
-local PINS_OPTIONS_COLLECTED = "Show collected";
 local SIZE_LISTBOOKHEIGHT = 40;
 local MAX_SOURCES = 9;
 local MAX_SUGGESTIONS = 3;
@@ -87,7 +87,7 @@ local _filter = {
 				}
 			}
 			
-local _option = {
+local _mapOptions = {
 		["showPins"] = true,
 		["showCollected"] = false,
 	}
@@ -117,7 +117,6 @@ local _achievementsToCheck = {
 		,6856 -- Ballad of Liu Lang
 		,7230 -- Legend of the Brewfathers
 	}
-
 
 local _sourceData = {
 				["object"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Object", ["tooltip"] = SOURCETYPE_OBJECT},
@@ -234,7 +233,7 @@ function _addon:LorePiecesInMap()
 		pin.lore = nil;
 	end
 
-	if (areaId == nil or not _option.showPins) then return; end
+	if (areaId == nil or not _mapOptions.showPins) then return; end
 
 	local levelLore = {};
 	local countAll = 0;
@@ -251,7 +250,7 @@ function _addon:LorePiecesInMap()
 					countLocked = countLocked + 1;
 				end
 				
-				if (_option.showCollected or not lore.unlocked) and tonumber(loc.level) == level then
+				if (_mapOptions.showCollected or not lore.unlocked) and tonumber(loc.level) == level then
 					-- Same area, still locked, and on the current map level? Show this one!
 					table.insert(levelLore, lore);
 				end
@@ -338,7 +337,6 @@ function _addon:UpdateListDisplayNavigation()
 	
 	nav.prev:Disable();
 	nav.next:Disable();
-
 	
 	if display.currentLore.unlocked and page > 1 then
 		nav.prev:Enable();
@@ -1045,26 +1043,26 @@ function _addon:UpdateOptions()
 	end
 end
 
-function _addon:InitOptionDropdown(self, level)
+function _addon:InitMapOptionsDropdown(self, level)
 	local info = UIDropDownMenu_CreateInfo();
 	info.keepShownOnClick = true;	
 
 	if (level == 1) then
-		info.text = PINS_OPTIONS_SHOW;
+		info.text = STRING_PINS_OPTIONS_SHOW;
 		info.func = function(_, _, _, value)
-						_option.showPins = value;
+						_mapOptions.showPins = value;
 						_addon:LorePiecesInMap();
 					end 
-		info.checked = function() return _option.showPins end;
+		info.checked = function() return _mapOptions.showPins end;
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 	
-		info.text = PINS_OPTIONS_COLLECTED;
+		info.text = STRING_PINS_OPTIONS_COLLECTED;
 		info.func = function(_, _, _, value)
-						_option.showCollected = value;
+						_mapOptions.showCollected = value;
 						_addon:LorePiecesInMap();
 					end 
-		info.checked = function() return _option.showCollected end;
+		info.checked = function() return _mapOptions.showCollected end;
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 	end
@@ -1284,7 +1282,7 @@ function _addon:InitMap()
 	
 	LoreLibraryMap.progressBar.button:SetScript("OnClick", function(self, button) 
 									if (button == "LeftButton") then
-										_option.showPins = not _option.showPins;
+										_mapOptions.showPins = not _mapOptions.showPins;
 										_addon:LorePiecesInMap();
 										UIDropDownMenu_Refresh(LolibOptionDropDown, 1);
 									else
@@ -1293,7 +1291,11 @@ function _addon:InitMap()
 									end
 								end)	
 	
-	UIDropDownMenu_Initialize(LolibOptionDropDown, function(self, level) _addon:InitOptionDropdown(self, level) end, "MENU");
+	UIDropDownMenu_Initialize(LolibOptionDropDown, function(self, level) _addon:InitMapOptionsDropdown(self, level) end, "MENU");
+	
+	if (not LoreLibrary.db.global.options.showMapOverlay) then
+		LoreLibraryMap:Hide();
+	end
 end
 
 function _addon:SearchChanged(searchBox)
