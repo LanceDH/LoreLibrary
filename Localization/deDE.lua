@@ -3409,12 +3409,6 @@ _addon.translations = {
 			"Das macht es bedauerlich, dass Höllschrei solch barbarische Taktiken anwendet. Mit dem Sieg vor Augen erhält Höllschrei noch weitere Bestätigung für seine Vorgehensweisen, was uns im Gegenzug wieder an einen Punkt bringt, an dem wir schon viele Jahre nicht mehr waren: ein dunkler Ort.\n\nIch habe meinen Sohn geschickt, um unsere Truppen an der Pforte des Zorns zu kommandieren. Ich weiß, dass er ehrenhaft kämpfen wird, und ich hoffe, dass sein Mut und seine Beharrlichkeit von unseren Streitkräften bemerkt und übernommen werden. Er ist mein Herz und meine Stärke an einem Ort, an dem ich nicht zu sein vermag... Ihr werdet meine Augen und Ohren sein. Zusammen ebnen wir den Weg.\n\nBlut und Donner... Möge Eure Ankunft ihnen beides bescheren.\n\nSaurfang",
 		},
 	},
-	["Letter of Introduction to Wyrmrest Temple"] = {
-		["translation"] = "Vorstellungsschreiben für den Wyrmruhtempel",
-		["pages"] = {
-			"Meine Königin,\n\nEntdeckungen zufolge wurde die Energie des Leylinienknotenpunkts bei den Mondruhgärten vom blauen Drachenschwarm freigesetzt. Ihre Streitkräfte zerstörten den Deckstein mit Hilfe einer Sognadel, doch anstatt die Energie zurück zum Nexus zu leiten, verwendeten sie mehrere Fokusse, um die Energie zu verstärken und unter der Erde zum Azurdrachenschrein zu leiten.\n\nNatürlich hatte dies an Stellen, an denen die Magie durch den Boden brach, schreckliche Konsequenzen. Die Urtume des Waldes, die Kalu'ak, und andere Kreaturen in dieser Region sind nun davon betroffen. Zu unserem Glück war &lt;Name&gt; &lt;der/die:c&gt; &lt;Klasse&gt; maßgeblich am Beseitigen dieser Probleme beteiligt.\n\nMeines Erachtens nach und hinsichtlich der Probleme, denen der Wyrmruhtempel derzeit gegenübersteht, könnte &lt;Name&gt; Euch von großer Hilfe sein. Ich bitte ergebenst darum, &lt;ihn, der/sie&gt; die; mir unverzichtbar war, als dienliche Kraft zu betrachten.\n\nHochachtungsvoll, Eure\n\nModera\nErzmagierin und Mitglied der Sechs",
-		},
-	},
 	["Letter Sealed by Sylvanas"] = {
 		["translation"] = "Brief mit Sylvanas' Siegel",
 		["pages"] = {

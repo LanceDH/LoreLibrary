@@ -3409,12 +3409,6 @@ _addon.translations = {
 			"É um grande infortúnio, portanto, que as estratégias empregadas por Grito Infernal sejam tão brutais. À medida que a vitória se aproxima, os métodos dele parecem mais justificáveis, e nos levam mais e mais a algo de que nos mantivemos afastados por muitos anos: as sombras.\n\nEnviei meu filho para comandar as forças no Portão da Ira. Sei que ele lutará com honra, e espero que sua coragem e tenacidade sejam notadas e sirvam de modelo para nossas forças. Ele será meu coração e minha força onde não posso estar... e você será meus olhos e ouvidos. Juntos triunfaremos.\n\nSangue e trovão! Que ambos acompanhem sua chegada, &lt;name&gt;.\n\nSaurfang",
 		},
 	},
-	["Letter of Introduction to Wyrmrest Temple"] = {
-		["translation"] = "Carta de Apresentação ao Templo do Repouso das Serpes",
-		["pages"] = {
-			"Minha rainha,\n\nDescobrimos que a intersecção das linhas de meridiano nos Jardins Lua Serena foi liberada pela Revoada Dragônica Azul. As forças deles usaram uma agulha de mana para destruir a pedra selante, mas em vez de levar o poder de volta ao Nexus, eles usaram vários focos para dirigir e aumentar o poder sob a terra para o Santuário Dragônico Lazúli.\n\nNão precisamos frisar que isso teve graves conseqüências quando a magia irrompeu do chão. Os Kalu’ak, os ancientes dos bosques e outras criaturas da região foram afetados negativamente. Por sorte, &lt;name&gt;, &lt;o/a&gt; &lt;race&gt; que está diante de você foi bastante útil rastreando e lidando com esses problemas.\n\nNa minha opinião, &lt;name&gt; pode ser útil ao Repouso das Serpes lidando com os problemas que o templo agora enfrenta. Eu humildemente peço que você &lt;o/a&gt; considere uma ferramenta útil, uma que eu creio ser bastante aceitável.\n\nRespeitosamente,\n\nModera\nArquimago e membro dos Seis.",
-		},
-	},
 	["Letter Sealed by Sylvanas"] = {
 		["translation"] = "Carta Selada por Sylvana",
 		["pages"] = {

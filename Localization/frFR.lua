@@ -3409,12 +3409,6 @@ _addon.translations = {
 			"Il est par conséquent regrettable que Hurlenfer emploie des tactiques aussi sauvages. Au fur et à mesure que la victoire approche, les méthodes de Hurlenfer paraissent de plus en plus justifiées. Et cela nous rapproche d’un lieu où nous n’avons plus été depuis bien des années, un lieu sombre.\n\nJ’ai envoyé mon fils prendre le commandement des forces au portail du Courroux. Je sais qu’elles se battront avec honneur. J’espère que leur ténacité et leur courage seront remarqués et imités par le reste de nos troupes. Il est mon cœur et ma force en un lieu où je ne peux être… Quant à vous, vous serez mes yeux et mes oreilles. Ensemble, nous redresserons tout cela.\n\nSang et tonnerre… puisse votre arrivée causer l’un et l’autre. \n\nSaurcroc",
 		},
 	},
-	["Letter of Introduction to Wyrmrest Temple"] = {
-		["translation"] = "Lettre d'introduction au temple du Repos du ver",
-		["pages"] = {
-			"Ma reine,\n\nNous avons découvert que l’intersection de lignes telluriques dans les jardins de Repos-de-lune a été ouverte par les dragons du Vol bleu. Ils ont utilisé un capteur tellurique pour détruire la chape de pierre mais, au lieu de renvoyer l’énergie vers le Nexus, ils ont utilisé des focalisateurs pour l’amplifier et maladroitement la détourner vers le Sanctuaire azur.\n\nBien entendu, partout où l’énergie magique est passée, les conséquences sont terribles. Les Anciens de la forêt, les Kalu’aks et d’autres créatures de la région ont été affectés. Par chance, &lt;nom&gt;, &lt;le/la:r&gt; noble &lt;race&gt; qui se présente à vous, a joué un rôle crucial dans la résolution de ces problèmes.\n\nD’après moi, &lt;nom&gt; pourrait être d’une grande aide pour régler les problèmes rencontrés au temple du Repos du ver. Je vous demande humblement de &lt;le/la&gt; considérer comme &lt;un allié/une alliée&gt; qui m’a été &lt;précieux/précieuse&gt;.\n\nRespectueusement vôtre,\n\nModera\nArchimage et membre des Six",
-		},
-	},
 	["Letter Sealed by Sylvanas"] = {
 		["translation"] = "Lettre scellée par Sylvanas",
 		["pages"] = {

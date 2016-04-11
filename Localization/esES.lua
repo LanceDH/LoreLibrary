@@ -3409,12 +3409,6 @@ _addon.translations = {
 			"Es poco afortunado, entonces, que Grito Infernal use unas tácticas tan salvajes. A medida que la victoria se aproxima, Grito Infernal gana más justificación para sus métodos, lo cual nos acerca a la vez a un lugar al que no hemos ido en muchos años: un lugar oscuro.\n\nHe enviado a mi hijo a dirigir nuestras fuerzas a la Puerta de Cólera. Sé que luchará con honor y espero que las fuerzas se den cuenta de su coraje y tenacidad y los imiten. Está en mi corazón y en mi fuerza en un lugar donde no puedo estar... Serás mis ojos y mis oídos. Juntos, lo lograremos.\n\nSangre y truenos... Que nuestra llegada cause ambos.\n\nColmillosauro",
 		},
 	},
-	["Letter of Introduction to Wyrmrest Temple"] = {
-		["translation"] = "Carta de presentación para el Templo del Reposo del Dragón",
-		["pages"] = {
-			"Mi reina,\n\nHemos descubierto que el Vuelo Azul había liberado la intersección de líneas Ley situada en los Jardines Reposo Lunar. Sus fuerzas usaron una aguja de flujo para destruir la piedra que la tapaba, pero en vez de guiar el poder de vuelta a El Nexo, usaron una serie de focos para transportarlo con torpeza y aumentar el poder bajo el suelo del Santuario de Dragones Azur.\n\nHuelga decir que esto ha tenido consecuencias tremendas allí donde la magia se ha filtrado a través de la tierra. Los Ancestros del bosque, los Kalu'ak, y otras criaturas de la zona se han visto afectadas negativamente. Por suerte, &lt;nombre&gt;, &lt;el/la&gt; &lt;raza&gt; que se encuentra ante ti, desempeñó un papel decisivo en su investigación y control.\n\nEn mi opinión, &lt;nombre&gt; podría ser de gran ayuda en la lucha contra los problemas que afectan al Reposo del Dragón. Te pido humildemente que consideres valerte de su ayuda; a mí me resultó de incalculable valor.\n\nSiempre con respeto,\n\nModera\nArchimaga y miembro de Los Seis",
-		},
-	},
 	["Letter Sealed by Sylvanas"] = {
 		["translation"] = "Carta sellada por Sylvanas",
 		["pages"] = {

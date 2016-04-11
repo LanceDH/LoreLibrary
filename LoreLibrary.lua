@@ -24,6 +24,7 @@ local MAX_SOURCES = 9;
 local MAX_SUGGESTIONS = 3;
 local NUM_SUGGESTION_FOR_TOKEN = 5;
 local NUM_LORE_FOR_TOKEN = 20;
+local NUM_PAGETEXT_WIDTH = 280;
 local SOURCE_TITLE = "This lore can be found in:";
 local SOURCETYPE_OBJECT = "Object found in a zone.";
 local SOURCETYPE_NPC = "Can drop from an npc.";
@@ -391,6 +392,20 @@ function _addon:FilterPageText(text)
 	return text;
 end
 
+function _addon:SetDisplayText(text)
+	local display = LoreLibraryListInsetRight;
+	local increase = 10;
+	
+	display.pageText:SetWidth(NUM_PAGETEXT_WIDTH);
+	display.pageText:SetText(text);
+	
+	while(display.pageText:GetContentHeight() > display.pageText:GetHeight() and (display.pageText:GetWidth() < display:GetWidth() - 20)) do
+		display.pageText:SetWidth(NUM_PAGETEXT_WIDTH + increase);
+		display.pageText:SetText(text);
+		increase = increase + 10;
+	end
+end
+
 function _addon:ChangeDisplayPage(direction)
 	local display = LoreLibraryListInsetRight;
 	local lastPage = display.currentPage;
@@ -403,8 +418,11 @@ function _addon:ChangeDisplayPage(direction)
 	display.currentPage = display.currentPage > #lore.pages and #lore.pages or display.currentPage;
 	
 	if display.currentPage ~= lastPage then
-		display.pageText:SetText(self:FilterPageText(lore.pages[display.currentPage]));
+		self:SetDisplayText(self:FilterPageText(lore.pages[display.currentPage]))
+		--display.pageText:SetText(self:FilterPageText(lore.pages[display.currentPage]));
 		PlaySound("igAbiliityPageTurn");
+		
+		
 	end
 	
 	self:UpdateListDisplayNavigation();
@@ -643,7 +661,9 @@ function _addon:UpdateBookDisplay(lore)
 	if (lore.unlocked) then
 		
 		display.lore = lore;
-		display.pageText:SetText(self:FilterPageText(lore.pages[1]));
+		self:SetDisplayText(self:FilterPageText(lore.pages[1]))
+		--display.pageText:SetText(self:FilterPageText(lore.pages[1]));
+	
 	else
 		display.pageText:SetText("<HTML><BODY><BR/><P align=\"center\">" .. SOURCE_TITLE .. "</P><BR/></BODY></HTML>");
 		for k, location in ipairs(lore.locations) do
@@ -688,6 +708,7 @@ function _addon:UpdateBookDisplay(lore)
 	
 		
 	end
+	
 	
 	self:UpdateListDisplayNavigation();
 	

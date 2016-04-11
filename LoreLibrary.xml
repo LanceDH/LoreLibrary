@@ -236,14 +236,14 @@
 				<Texture parentKey="OverlayShadowLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
 					<Anchors>
 						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="4" y="-17"/>
-						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="17"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="16"/>
 					</Anchors>
 					<TexCoords left="0" right="1" top="0.9999" bottom="1"/>
 				</Texture>
 
 				<Texture parentKey="OverlayShadowBottomLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
 					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="4"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="3"/>
 					</Anchors>
 					<TexCoords left="0" right="1" top="1" bottom="0"/>
 				</Texture>
@@ -251,22 +251,22 @@
 				<Texture parentKey="OverlayShadowRight" atlas="collections-background-shadow-small" useAtlasSize="true">
 					<Anchors>
 						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-4" y="-17"/>
-						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="17"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="16"/>
 					</Anchors>
 					<TexCoords left="1" right="0" top="0.9999" bottom="1"/>
 				</Texture>
 
 				<Texture parentKey="OverlayShadowBottomRight" atlas="collections-background-shadow-small" useAtlasSize="true">
 					<Anchors>
-						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="4"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="3"/>
 					</Anchors>
 					<TexCoords left="1" right="0" top="1" bottom="0"/>
 				</Texture>
 
 				<Texture parentKey="OverlayShadowBottom" atlas="collections-background-shadow-small" useAtlasSize="true">
 					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="17" y="4"/>
-						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-17" y="4"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="17" y="3"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-17" y="3"/>
 					</Anchors>
 					<TexCoords left="0.9999" right="1" top="1" bottom="0"/>
 				</Texture>
@@ -435,10 +435,44 @@
 		<Frames>
 			<StatusBar parentKey="progressBar" inherits="LOLIB_CoreStatusTemplate" />
 			
+			<Frame parentKey="tokenCount" inherits="InsetFrameTemplate3" enableMouse="true">
+				<Size x="50" y="20"/>
+				<Anchors>
+					<Anchor point="LEFT" relativeKey="$parent.progressBar" relativePoint="RIGHT" x="25"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString parentKey="count" inherits="GameFontHighlightSmall" justifyH="RIGHT" text="25">
+							<Anchors>
+								<Anchor point="TOP" x="-7" y="-5"/>
+							</Anchors>
+						</FontString>
+						<Texture parentKey="icon" file="Interface\GossipFrame\WorkOrderGossipIcon">
+							<Size x="14" y="14"/>
+							<Anchors>
+								<Anchor point="RIGHT" x="-7"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+						GameTooltip:SetText("Lost pages" ,1 ,1 ,1);
+						GameTooltip:AddLine("Pages are gained with every 20 pieces of lore you unlock, and can be used to unlock unavailable lore." ,1 ,0.83 ,0 ,true);
+						GameTooltip:AddDoubleLine("Unlocks until next:", (self.untilNext or 20) ,1 ,1 ,1 ,1 ,1 ,1 );
+						GameTooltip:Show();
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Frame>
+			
 			<Button name="$parentSuggestionButton" inherits="UIMenuButtonStretchTemplate" text="" parentKey="suggestBtn">
 				<Size x="26" y="26"/>
 				<Anchors>
-					<Anchor point="LEFT" relativeKey="$parent.progressBar" relativePoint="RIGHT" x="25"/>
+					<Anchor point="LEFT" relativeKey="$parent.tokenCount" relativePoint="RIGHT" x="25"/>
 				</Anchors>
 				<Layers>
 					<Layer level="ARTWORK">
@@ -497,40 +531,6 @@
 				</Frames>
 			</Frame>
 			
-			<Frame parentKey="tokenCount" inherits="InsetFrameTemplate3" enableMouse="true">
-				<Size x="50" y="20"/>
-				<Anchors>
-					<Anchor point="LEFT" relativeKey="$parent.suggestBtn" relativePoint="RIGHT" x="25"/>
-				</Anchors>
-				<Layers>
-					<Layer level="ARTWORK">
-						<FontString parentKey="count" inherits="GameFontHighlightSmall" justifyH="RIGHT" text="25">
-							<Anchors>
-								<Anchor point="TOP" x="-7" y="-5"/>
-							</Anchors>
-						</FontString>
-						<Texture parentKey="icon" file="Interface\GossipFrame\WorkOrderGossipIcon">
-							<Size x="14" y="14"/>
-							<Anchors>
-								<Anchor point="RIGHT" x="-7"/>
-							</Anchors>
-						</Texture>
-					</Layer>
-				</Layers>
-				<Scripts>
-					<OnEnter>
-						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-						GameTooltip:SetText("Lost pages" ,1 ,1 ,1);
-						GameTooltip:AddLine("Pages are gained with every 20 pieces of lore you unlock, and can be used to unlock unavailable lore." ,1 ,0.83 ,0 ,true);
-						GameTooltip:AddDoubleLine("Unlocks until next:", (self.untilNext or 20) ,1 ,1 ,1 ,1 ,1 ,1 );
-						GameTooltip:Show();
-					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide();
-					</OnLeave>
-				</Scripts>
-			</Frame>
-			
 			<Button name="$parentOptionsButton" inherits="UIMenuButtonStretchTemplate" text="">
 				<Size x="35" y="22"/>
 				<Anchors>
@@ -587,7 +587,7 @@
 		
 		
 		<Frames>
-			<Frame name="$parentInsetRight" inherits="LOLIB_InsetTemplate" >
+			<Frame name="$parentInsetRight" inherits="LOLIB_InsetTemplate">
 				<Size x="414"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="4" x="-6"/>
@@ -601,21 +601,20 @@
 				
 				<Layers>
 					<Layer level="BACKGROUND">
-						<Texture name="$parentParchmentBg" file="Interface\QUESTFRAME\QuestBG">
+						<Texture name="$parentParchmentBg" file="Interface\AddOns\LoreLibrary\Images\QuestBG">
 							<Anchors>
 								<Anchor point="TOPLEFT" x="4" y="-4"/>
-								<Anchor point="BOTTOMRIGHT" x="-4" y="4"/>
+								<Anchor point="BOTTOMRIGHT" x="-4" y="3"/>
 							</Anchors>
 							<TexCoords left="0" right="0.587890625" top="0" bottom="0.65625"/>
 						</Texture>
-
 					</Layer>
 					<Layer level="ARTWORK">
 						<FontString name="$parentTitle" inherits="QuestTitleFont" justifyH="CENTER" parentKey="title">
 							<Size y="40"/>
 							<Anchors>
-								<Anchor point="TOPLEFT" x="60" y="-20"/>
-								<Anchor point="TOPRIGHT" x="-60" y="-20"/>
+								<Anchor point="TOPLEFT" x="60" y="-25"/>
+								<Anchor point="TOPRIGHT" x="-60" y="-25"/>
 							</Anchors>
 							<Color r="0" g="0" b="0"/>
 						</FontString>
@@ -625,9 +624,9 @@
 				<Frames>
 					
 					<SimpleHTML name="$parentPageText" parentKey="pageText">
-						<Size x="280" y="404"/>
+						<Size x="280" y="420"/>
 						<Anchors>
-							<Anchor point="TOP" x="0" y="-60"/>
+							<Anchor point="TOP" x="0" y="-75"/>
 						</Anchors>
 						<FontString inherits="QuestFont"/>
 					</SimpleHTML>

@@ -4773,21 +4773,6 @@ _addon.data = {
 		{["sourceType"] = "quest", ["areaId"] = 488, ["id"] = 12033, ["faction"] = "H", ["x"] = 37.2, ["y"] = 46.8},
 	},
 },
-["Letter of Introduction to Wyrmrest Temple"] = {
-	["info"] = {["type"] = "item", ["id"] = 36832}, -- 36833
-	["pages"] = {
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Alliance Version</H1></BODY></HTML>",
-		"My queen,\n\nIt has been discovered that the ley line intersection at Moonrest Gardens was unfettered by the blue dragonflight. Their forces used a surge needle to destroy the capstone, but instead of flowing the power back to the Nexus, they utilized a series of foci to clumsily run and augment the power under the land to the Azure Dragonshrine.\n\nNeedless to say, this has had dire consequences wherever the magic shot up through the ground. The Ancients of the woodlands, the Kalu'ak, and other creatures in the region have been adversely affected. Luckily for us, &lt;name&gt;, the &lt;race&gt; who stands before you, was instrumental in tracking down and dealing with all of these problems.\n\nIn my opinion, &lt;name&gt; could be a great asset to Wyrmrest in helping to deal with the problems that the temple currently faces. I humbly ask that you consider &lt;him/her&gt; a resource, one which I found to be invaluable.\n\nYours ever respectfully,\n\nModera\nArchmage and Member of the Six",
-		"<HTML><BODY><BR/><BR/><H1 align=\"center\">Horde Version</H1></BODY></HTML>",
-		"My queen,\n\nIt has been discovered that the ley line intersection at Moonrest Gardens was unfettered by the blue dragonflight. Their forces used a surge needle to destroy the capstone, but instead of flowing the power back to the Nexus, they utilized a series of foci to clumsily run and augment the power under the land to the Azure Dragonshrine.\n\nNeedless to say, this has had dire consequences wherever the magic shot up through the ground. The Ancients of the woodlands, the Kalu'ak, and other creatures in the region have been adversely affected. &lt;name&gt;, the &lt;race&gt; who stands before you, was very helpful in tracking down and dealing with these issues.\n\nIn my opinion, &lt;name&gt; could be useful for Wyrmrest in dealing with the problems that the temple currently faces. I humbly ask that you consider &lt;him/her&gt; an asset, one which I found to be quite acceptable.\n\nYours ever respectfully,\n\nAethas Sunreaver\nArchmage and Member of the Six",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 488, ["id"] = 12122, ["faction"] = "H", ["x"] = 38, ["y"] = 46.2},
-		{["sourceType"] = "quest", ["areaId"] = 488, ["id"] = 12124, ["faction"] = "H", ["x"] = 57.8, ["y"] = 54.2},
-		{["sourceType"] = "quest", ["areaId"] = 488, ["id"] = 12119, ["faction"] = "A", ["x"] = 29, ["y"] = 55.4},
-		{["sourceType"] = "quest", ["areaId"] = 488, ["id"] = 12123, ["faction"] = "A", ["x"] = 57.8, ["y"] = 54.2},
-	},
-},
 ["Letter Sealed by Sylvanas"] = {
 	["info"] = {["type"] = "item", ["id"] = 23930},
 	["pages"] = {

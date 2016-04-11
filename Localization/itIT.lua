@@ -3410,12 +3410,6 @@ _addon.translations = {
 			"Purtroppo i metodi impiegati da Malogrido sono veramente selvaggi. Mentre la vittoria si fa più vicina, Malogrido si vede sempre più giustificato a usarli, cosa che ci porta sempre più vicini a un luogo che non frequentavamo da anni: un luogo oscuro.\n\nHo inviato mio figlio perché comandi le nostre forze al Cancello dell'Ira. So che si batterà con onore e spero che il suo coraggio e la sua tenacia saranno ammirati ed emulati dalle nostre forze. Egli rappresenta il mio cuore e la mia forza in un luogo dove non posso essere presente... Tu sarai i miei occhi e le mie orecchie. Insieme ce la faremo.\n\nSangue e tuono... Che il tuo arrivo li porti entrambi.\n\nFaucisaure",
 		},
 	},
-	["Letter of Introduction to Wyrmrest Temple"] = {
-		["translation"] = "Lettera di Presentazione al Tempio della Lega dei Draghi",
-		["pages"] = {
-			"[My queen,\n\nIt has been discovered that the ley line intersection at Moonrest Gardens was unfettered by the blue dragonflight. Their forces used a surge needle to destroy the capstone, but instead of flowing the power back to the Nexus, they utilized a series of foci to clumsily run and augment the power under the land to the Azure Dragonshrine.\n\nNeedless to say, this has had dire consequences wherever the magic shot up through the ground. The Ancients of the woodlands, the Kalu'ak, and other creatures in the region have been adversely affected. Luckily for us, &lt;name&gt;, the &lt;race&gt; who stands before you, was instrumental in tracking down and dealing with all of these problems.\n\nIn my opinion, &lt;name&gt; could be a great asset to Wyrmrest in helping to deal with the problems that the temple currently faces. I humbly ask that you consider &lt;him/her&gt; a resource, one which I found to be invaluable.\n\nYours ever respectfully,\n\nModera\nArchmage and Member of the Six]",
-		},
-	},
 	["Letter Sealed by Sylvanas"] = {
 		["translation"] = "Lettera Sigillata da Sylvanas",
 		["pages"] = {
