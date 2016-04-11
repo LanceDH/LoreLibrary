@@ -270,9 +270,10 @@ function _addon:ShowMapPointOfInterest(lore, location)
 	local width = WorldMapDetailFrame:GetWidth();
 	local height = WorldMapDetailFrame:GetHeight();
 	local sourceType = location.sourceType;
+	sourceType = (_sourceData[sourceType] and sourceType or "object");
+	
 	location.x = ((location.x and tonumber(location.x)) and location.x or -100);
 	location.y = ((location.y and tonumber(location.y)) and location.y or -100);
-	
 	
 	ShowUIPanel(WorldMapFrame);
 	SetMapByID(location.areaId);
@@ -327,7 +328,7 @@ function _addon:UpdateProgressBar()
 end
 
 function _addon:UpdateListDisplayNavigation()
-	local display = LoreLibraryListInsetRight;
+	local display = LoreLibraryListDisplay;
 	local nav = display.navigation;
 
 	if display.currentLore == nil then return; end;
@@ -393,7 +394,7 @@ function _addon:FilterPageText(text)
 end
 
 function _addon:SetDisplayText(text)
-	local display = LoreLibraryListInsetRight;
+	local display = LoreLibraryListDisplay;
 	local increase = 10;
 	
 	display.pageText:SetWidth(NUM_PAGETEXT_WIDTH);
@@ -407,7 +408,7 @@ function _addon:SetDisplayText(text)
 end
 
 function _addon:ChangeDisplayPage(direction)
-	local display = LoreLibraryListInsetRight;
+	local display = LoreLibraryListDisplay;
 	local lastPage = display.currentPage;
 	local lore = display.currentLore;
 	-- prevent page changing for locked lore
@@ -492,7 +493,7 @@ function _addon:UpdateLostPageCount()
 end
 
 function _addon:UnlockUnavailableLore()
-	local lore = LoreLibraryListInsetRight.currentLore;
+	local lore = LoreLibraryListDisplay.currentLore;
 	if lore == nil or lore.unlocked or lore.locations[1].sourceType ~= "unavailable" then return; end;
 	
 	_addon:UnlockNewLore(lore.key, true);
@@ -634,7 +635,7 @@ function _addon:CheckAchievementProgress(id)
 end
 
 function _addon:UpdateBookDisplay(lore)
-	local display = LoreLibraryListInsetRight;
+	local display = LoreLibraryListDisplay;
 	
 	lore = (lore and lore or display.currentLore);
 	if (not lore) then return; end
@@ -716,7 +717,7 @@ function _addon:UpdateBookDisplay(lore)
 end
 
 function _addon:ShowLostPages()
-	local lore = LoreLibraryListInsetRight.currentLore;
+	local lore = LoreLibraryListDisplay.currentLore;
 	local wordCount = 0;
 	local pageCount = #lore.pages;
 	local imageCount = 0;
@@ -743,7 +744,7 @@ function _addon:UpdateBookList()
 	self:HideFavoriteMenu();
 	LoreLibraryCore.suggestions:Hide();
 	
-	local display = LoreLibraryListInsetRight;
+	local display = LoreLibraryListDisplay;
 	local scrollFrame = LoreLibraryListScrollFrame;
 	local offset = HybridScrollFrame_GetOffset(scrollFrame);
 	local buttons = scrollFrame.buttons;
@@ -762,7 +763,7 @@ function _addon:UpdateBookList()
 			button.title:SetFontObject((lore.unlocked) and "GameFontNormal" or "GameFontDisable");
 			button.title:SetText(lore.title);
 			button.id = lore.info.id;
-			--if (button.title:GetText() == LoreLibraryListInsetRight.title:GetText()) then
+			--if (button.title:GetText() == LoreLibraryListDisplay.title:GetText()) then
 			if (button.id == display.id) then
 				button.selectedTexture:Show();
 			else
@@ -1206,10 +1207,10 @@ function _addon:InitCoreFrame()
 	
 	LoreLibraryListScrollFrame.update = function() _addon:UpdateBookList() end;
 	
-	local nav = LoreLibraryListInsetRight.navigation;
+	local nav = LoreLibraryListDisplay.navigation;
 	nav.prev:SetScript("OnClick", function() _addon:ChangeDisplayPage(-1) end);
 	nav.next:SetScript("OnClick", function() _addon:ChangeDisplayPage(1) end);
-	LoreLibraryListInsetRight:SetScript("OnMouseWheel", function(self, delta) _addon:ChangeDisplayPage(-delta) end);
+	LoreLibraryListDisplay:SetScript("OnMouseWheel", function(self, delta) _addon:ChangeDisplayPage(-delta) end);
 	
 	self:UpdateBookList();
 	
@@ -1218,7 +1219,7 @@ function _addon:InitCoreFrame()
 	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
 
 	
-	local display = LoreLibraryListInsetRight;
+	local display = LoreLibraryListDisplay;
 
 	for i = 1, MAX_SOURCES do
 	    local source = display.sources["s"..i];
@@ -1456,7 +1457,7 @@ function _addon:LoadTranslation()
 end
 
 function _addon:ShowLocalizationMessage()
-	local display = LoreLibraryListInsetRight;
+	local display = LoreLibraryListDisplay;
 	local FORMAT_LOC_GREETING = "Greetings %s users.";
 	local displayText = "<HTML><BODY>";
 	local users = "non-English";

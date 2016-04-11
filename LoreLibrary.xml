@@ -587,7 +587,7 @@
 		
 		
 		<Frames>
-			<Frame name="$parentInsetRight" inherits="LOLIB_InsetTemplate">
+			<Frame name="$parentDisplay" inherits="LOLIB_InsetTemplate">
 				<Size x="414"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="4" x="-6"/>
@@ -595,7 +595,7 @@
 				</Anchors>
 				<Scripts>
 					<OnLoad>
-						LoreLibraryListInsetRightBg:Hide();
+						LoreLibraryListDisplayBg:Hide();
 					</OnLoad>
 				</Scripts>
 				

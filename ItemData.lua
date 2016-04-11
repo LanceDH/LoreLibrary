@@ -606,7 +606,7 @@ _addon.data = {
 		"WARNING: AIRBASE-IN-A-BOX IS NOT UNDER ANY CIRCUMSTANCES TO BE DEPLOYED ON A MOUNTAIN PEAK.",
 	},
 	["locations"] = {
-		{["sourceType"] = object, ["areaId"] = 700, ["id"] = 4922, ["level"] = 0, ["x"] = 70.5, ["y"] = 45.1},
+		{["sourceType"] = "object", ["areaId"] = 700, ["id"] = 4922, ["level"] = 0, ["x"] = 70.5, ["y"] = 45.1},
 	},
 },
 ["Airwyn's Journal"] = {
@@ -1886,7 +1886,7 @@ _addon.data = {
 		"Dangerous!\n\nThe following humans of Hillsbrad have been deemed dangerous and are marked for bounty by High Executor Darthalia:\n\nClerk Horrace Whitesteed. Wanted for the murder of Deathguard Toma.\n\nCitizen Wilkes. Wanted for the murder of Apothecary Eli.\n\nMiner Hackett. Wanted for the murder of Deathstalker Fry.\n\nFarmer Kalaba. Wanted for the ambush of supplies from the Undercity.\n\nAll of these enemies are hiding and will be hard to find. A reward will be granted upon notice of their death.",
 	},
 	["locations"] = {
-		{["area"] = "Tarren Mill vs Southshore", ["id"] = 7107, ["level"] = 0, ["x"] = 61.4, ["y"] = 24.4},
+		{["sourceType"] = "unavailable"},
 	},
 },
 ["On Naxxramas"] = {
