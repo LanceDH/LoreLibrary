@@ -1,0 +1,509 @@
+ <Ui xmlns="http://www.blizzard.com/wow/ui/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ../../FrameXML/UI.xsd">
+	
+	
+	<Button name="LOLIB_ListZoneTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="252" y="30"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="bgLeft" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="30"/>
+					</Anchors>
+					<TexCoords left="0.498046875" right="0.591796875" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+				<Texture parentKey="bgRight" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPRIGHT"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-30"/>
+					</Anchors>
+					<TexCoords left="0.814453125" right="0.90625" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+				<Texture parentKey="bgCenter" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.bgLeft" relativePoint="TOPRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgRight" relativePoint="BOTTOMLEFT"/>
+					</Anchors>
+					<TexCoords left="0.591796875" right="0.814453125" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="20"/>
+						<Anchor point="BOTTOMRIGHT" x="-20"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+			<!--
+			<Layer level="OVERLAY">
+                <Texture parentKey="selectedTexture" atlas="PetList-ButtonSelect" hidden="true"/>
+			</Layer>
+			-->
+			<Layer level="HIGHLIGHT">
+                <Texture parentKey="hlLeft" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="30"/>
+					</Anchors>
+					<TexCoords left="0.498046875" right="0.591796875" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+				<Texture parentKey="hlRight" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPRIGHT"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-30"/>
+					</Anchors>
+					<TexCoords left="0.814453125" right="0.90625" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+				<Texture parentKey="hlCenter" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.hlLeft" relativePoint="TOPRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.hlRight" relativePoint="BOTTOMLEFT"/>
+					</Anchors>
+					<TexCoords left="0.591796875" right="0.814453125" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		
+		<Frames>
+			<Frame parentKey="selectedTexture" hidden="true">
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+					<Anchor point="BOTTOMRIGHT"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="left" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="30"/>
+							</Anchors>
+							<TexCoords left="0.498046875" right="0.591796875" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+						<Texture parentKey="right" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPRIGHT"/>
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-30"/>
+							</Anchors>
+							<TexCoords left="0.814453125" right="0.90625" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+						<Texture parentKey="center" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.left" relativePoint="TOPRIGHT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.right" relativePoint="BOTTOMLEFT"/>
+							</Anchors>
+							<TexCoords left="0.591796875" right="0.814453125" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+
+		<Scripts>
+			<OnClick function="LOLIB_ListZone_OnClick"/>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
+		</Scripts>
+	</Button>
+	
+	<Button name="LOLIB_PoIDetailTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
+		<Size x="375" y="260"/>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" inherits="GameFontBlack" hidden="false" justifyH="LEFT" justifyV="TOP" parentKey="text">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="20" y="-20"/>
+						<Anchor point="TOPRIGHT" x="-20" y="-20"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Button>
+	
+	<Button name="LOLIB_ListPointTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="375" y="35"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="bgLeft" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="35"/>
+					</Anchors>
+					<TexCoords left="0.498046875" right="0.591796875" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+				<Texture parentKey="bgRight" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPRIGHT"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-35"/>
+					</Anchors>
+					<TexCoords left="0.814453125" right="0.90625" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+				<Texture parentKey="bgCenter" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.bgLeft" relativePoint="TOPRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgRight" relativePoint="BOTTOMLEFT"/>
+					</Anchors>
+					<TexCoords left="0.591796875" right="0.814453125" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<Texture parentKey="icon" file="Interface\AddOns\LoreLibrary\Images\icon_PoI">
+					<Size x="25" y="25"/>
+					<Anchors>
+						<Anchor point="LEFT" x="10"/>
+					</Anchors>
+				</Texture>
+				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="40"/>
+						<Anchor point="BOTTOMRIGHT" x="-20"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+			
+			<Layer level="HIGHLIGHT">
+                <Texture parentKey="hlLeft" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="35"/>
+					</Anchors>
+					<TexCoords left="0.498046875" right="0.591796875" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+				<Texture parentKey="hlRight" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPRIGHT"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-35"/>
+					</Anchors>
+					<TexCoords left="0.814453125" right="0.90625" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+				<Texture parentKey="hlCenter" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.hlLeft" relativePoint="TOPRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.hlRight" relativePoint="BOTTOMLEFT"/>
+					</Anchors>
+					<TexCoords left="0.591796875" right="0.814453125" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		
+		<Frames>
+			<Frame parentKey="selectedTexture" hidden="true">
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+					<Anchor point="BOTTOMRIGHT"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="left" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="35"/>
+							</Anchors>
+							<TexCoords left="0.498046875" right="0.591796875" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+						<Texture parentKey="right" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPRIGHT"/>
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-35"/>
+							</Anchors>
+							<TexCoords left="0.814453125" right="0.90625" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+						<Texture parentKey="center" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.left" relativePoint="TOPRIGHT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.right" relativePoint="BOTTOMLEFT"/>
+							</Anchors>
+							<TexCoords left="0.591796875" right="0.814453125" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		
+		<Scripts>
+			<OnClick function="LOLIB_ListPoint_OnClick"/>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
+		</Scripts>
+	</Button>
+	
+	<Frame name="LoreLibraryPoI" parent="LoreLibraryCore" hidden="true">
+		<Size y="541"/>
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" x="0" y="0"/>
+			<Anchor point="BOTTOMRIGHT" x="0" y="0"/>
+		</Anchors>
+
+		<Frames>
+			<StatusBar parentKey="progressBar" inherits="LOLIB_LibraryProgressTemplate" />
+			
+			<Frame name="$parentTitleCard" parentKey="titleCard">
+				<Size x="414" y="50"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-5"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BARCKGROUND">
+						<Texture parentKey="bgLeft" file="Interface\Challenges\ChallengeModeHud">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="50"/>
+							</Anchors>
+							<TexCoords left="0.4375" right="0.5546875" top="0.09765625" bottom="0.33203125"/>
+						</Texture>
+						<Texture parentKey="bgRight" file="Interface\Challenges\ChallengeModeHud">
+							<Anchors>
+								<Anchor point="TOPRIGHT"/>
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-50"/>
+							</Anchors>
+							<TexCoords left="0.5546875" right="0.4375" top="0.09765625" bottom="0.33203125"/>
+						</Texture>
+						<Texture parentKey="bgCenter" file="Interface\Challenges\ChallengeModeHud">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.bgLeft" relativePoint="TOPRIGHT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgRight" relativePoint="BOTTOMLEFT"/>
+							</Anchors>
+							<TexCoords left="0.513671875" right="0.84375" top="0.09765625" bottom="0.33203125"/>
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString name="$parentTitle" inherits="QuestFont_Shadow_Huge" maxLines="1" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="title">
+							<Size y="40"/>
+							<Anchors>
+								<Anchor point="LEFT" x="15"/>
+								<Anchor point="RIGHT" x="-15"/>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Frame parentKey="progressBar">
+						<Size x="128" y="6"/>
+						<Anchors>
+							<Anchor point="BOTTOM" y="3"/>
+						</Anchors>
+						<Layers>
+							<Layer level="BARCKGROUND">
+								<Texture parentKey="bg">
+									<Color r="0" g="0" b="0"/>
+								</Texture>
+							</Layer>
+							<Layer level="ARTWORK">
+								<Texture parentKey="progress" file="Interface\TARGETINGFRAME\BarFill2">
+									<Size x="128" y="6"/>
+									<Anchors>
+										<Anchor point="LEFT"/>
+									</Anchors>
+									<Color r="0.2" g="0.8" b="0.2"/>
+								</Texture>
+							</Layer>
+							<Layer level="OVERLAY">
+								<Texture parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorderHighlight">
+									<Anchors>
+										<Anchor point="TOPLEFT" x="-3" y="4"/>
+										<Anchor point="BOTTOMRIGHT" x="3" y="-4"/>
+									</Anchors>
+								</Texture>
+							</Layer>
+							<Layer level="OVERLAY" textureSubLevel="2">
+								<Texture parentKey="decoLeft" file="Interface\Garrison\GarrisonBuildingUI">
+									<Size x="8" y="8"/>
+									<Anchors>
+										<Anchor point="BOTTOMRIGHT" relativeKey="$parent.border" relativePoint="BOTTOMLEFT" x="2" y="3"/>
+									</Anchors>
+									<TexCoords left="0.5078125" right="0.5380859375" top="0.26171875" bottom="0.31640625"/>
+									<Color r="0.8" g="0.8" b="0.8"/>
+								</Texture>
+								<Texture parentKey="decoRight" file="Interface\Garrison\GarrisonBuildingUI">
+									<Size x="8" y="8"/>
+									<Anchors>
+										<Anchor point="BOTTOMLEFT" relativeKey="$parent.border" relativePoint="BOTTOMRIGHT" x="-2" y="3"/>
+									</Anchors>
+									<TexCoords left="0.5380859375" right="0.5078125" top="0.26171875" bottom="0.31640625"/>
+									<Color r="0.8" g="0.8" b="0.8"/>
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+				</Frames>
+			</Frame>
+		
+			<Frame name="$parentInsetRight" inherits="LOLIB_InsetTemplate">
+				<Size x="414" y="210"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="-48" x="-6"/>
+				</Anchors>
+			</Frame>
+			
+			<ScrollFrame name="$parentPointList" parentKey="scrollFramePoints" inherits="HybridScrollFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetRight" x="10" y="-5"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetRight" x="-25" y="5"/>
+				</Anchors>
+				<Frames>
+					<Slider name="$parentScrollBar" inherits="HybridScrollBarTrimTemplate" parentKey="scrollBar">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="-13"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="4" y="11"/>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								self.trackBG:Show();
+								self.trackBG:SetVertexColor(0, 0, 0, 0.75);
+							</OnLoad>
+						</Scripts>
+					</Slider>
+				</Frames>
+			</ScrollFrame>
+			
+			<Frame name="$parentInsetDetail" inherits="LOLIB_InsetTemplate_Light">
+				<Size x="414"/>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentInsetRight" relativePoint="BOTTOM" y="-15"/>
+					<Anchor point="BOTTOM" relativePoint="BOTTOM" y="6"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentParchmentBg" file="Interface\ACHIEVEMENTFRAME\UI-GuildAchievement-Parchment-Horizontal">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="4" y="-4"/>
+								<Anchor point="BOTTOMRIGHT" x="-4" y="3"/>
+							</Anchors>
+							<TexCoords left="0.3" right="0.9" top="0" bottom="1"/>
+							
+						</Texture>
+					</Layer>
+				</Layers>
+				
+				<Frames>
+					<Button parentKey="mapButton" hidden="true">
+						<Size x="180" y="48"/>
+						<Anchors>
+							<Anchor point="CENTER"/>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<Texture parentKey="background" file="Interface\Challenges\ChallengeModeHud">
+									<TexCoords left="0.4375" right="0.9140625" top="0.09765625" bottom="0.33203125"/>
+								</Texture>
+							</Layer>
+							<Layer level="ARTWORK">
+								<Texture file="Interface\PETBATTLES\PETJOURNAL">
+									<Size x="32" y="32"/>
+									<Anchors>
+										<Anchor point="LEFT" x="15"/>
+									</Anchors>
+									<TexCoords left="0.3203125" right="0.404296875" top="0.0234375" bottom="0.0625"/>
+								</Texture>
+								
+								<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="2" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="text" text="Mark area on the world map">
+									<Anchors>
+										<Anchor point="TOPLEFT" x="60"/>
+										<Anchor point="BOTTOMRIGHT" x="-20"/>
+									</Anchors>
+								</FontString>
+							</Layer>
+						</Layers>
+						<HighlightTexture atlas="PetList-ButtonHighlight"/>
+					</Button>
+				</Frames>
+			</Frame>
+			
+			<ScrollFrame name="$parentDetailScroll" parentKey="scrollFrameDetail" inherits="HybridScrollFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetDetail" x="10" y="-5"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetDetail" x="-25" y="5"/>
+				</Anchors>
+				<Frames>
+					<Slider name="$parentScrollBar" inherits="HybridScrollBarTrimTemplate" parentKey="scrollBar">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="-13"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="4" y="11"/>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								self.trackBG:Show();
+								self.trackBG:SetVertexColor(0, 0, 0, 0.75);
+							</OnLoad>
+						</Scripts>
+					</Slider>
+				</Frames>
+			</ScrollFrame>
+			
+			
+			<Frame name="$parentInsetLeft" inherits="InsetFrameTemplate" parentKey="insetLeft">
+				<Size x="260"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" y="4" x="4"/>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="5"/>
+				</Anchors>
+			</Frame>
+			
+			<ScrollFrame name="$parentZoneList" parentKey="scrollFrame" inherits="HybridScrollFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetLeft" x="3" y="-34"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetLeft" x="-2" y="5"/>
+				</Anchors>
+				<Frames>
+					<Slider name="$parentScrollBar" inherits="HybridScrollBarTrimTemplate" parentKey="scrollBar">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="19"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="4" y="11"/>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								self.trackBG:Show();
+								self.trackBG:SetVertexColor(0, 0, 0, 0.75);
+							</OnLoad>
+						</Scripts>
+					</Slider>
+				</Frames>
+			</ScrollFrame>
+			
+			<Frame name="$parentFavoriteMenu" inherits="UIDropDownMenuTemplate" enableMouse="true" parentKey="favoriteMenu"/>
+			
+			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
+				<Size x="145" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeKey="$parent.insetLeft"  x="15" y="-9"/>
+				</Anchors>
+			</EditBox>
+			
+			<Button name="$parentFilterButton" inherits="UIMenuButtonStretchTemplate" text="FILTER">
+				<Size x="93" y="22"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeKey="$parent.insetLeft" x="-5" y="-9"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+							<Size x="10" y="12"/>
+							<Anchors>
+								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick> 
+						PlaySound("igMainMenuOptionCheckBoxOn");
+						ToggleDropDownMenu(1, nil, LoreLibraryPoIFilterDropDown, "LoreLibraryPoIFilterButton", 74, 15);
+					</OnClick>	
+				</Scripts>						
+			</Button>
+			<Frame name="$parentFilterDropDown" inherits="UIDropDownMenuTemplate" />
+			
+		</Frames>
+		<Layers>
+		</Layers>
+	</Frame>
+
+ </Ui>

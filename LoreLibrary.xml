@@ -11,6 +11,29 @@
 	<Include file="libs\AceDB-3.0\AceDB-3.0.xml"/>
 	
 	
+	<Frame name="LOLIB_MapOverviewListing" virtual="true">
+		<Size y="32"/>
+		<Anchors>
+			<Anchor point="LEFT"/>
+			<Anchor point="RIGHT"/>
+		</Anchors>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture parentKey="icon" file="Interface\InventoryItems\WoWUnknownItem01">
+					<Size x="32" y="32"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="20"/>
+					</Anchors>
+				</Texture>
+				<FontString parentKey="text" inherits="GameFontNormalLarge" justifyH="CENTER" text="8/12">
+					<Anchors>
+						<Anchor point="RIGHT" x="-20"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+	
 	<Frame name="LOLIB_MapPinTemplate" virtual="true">
 		<Size x="16" y="16"/>
 		<Layers>
@@ -28,21 +51,24 @@
 		</Layers>
 		
 		<Scripts>
+		<!--
 			<OnEnter>
 				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-				if (self.lore) then
+				print(self.showTooltips);
+				if (self.showTooltips and self.lore) then
 					GameTooltip:SetText(self.lore.title);
 				end
 			</OnEnter>
+		-->
 			<OnLeave>
 				GameTooltip:Hide();
 			</OnLeave>
 		</Scripts>
 	</Frame>
 	
-	<StatusBar name="LOLIB_CoreStatusTemplate" inherits="LOLIB_ProgressBarTemplate" virtual="true">
+	<StatusBar name="LOLIB_LibraryProgressTemplate" inherits="LOLIB_ProgressBarTemplate" virtual="true">
 		<Anchors>
-			<Anchor point="TOP" x="0" y="-39"/>
+			<Anchor point="BOTTOM" relativePoint="TOP" x="0" y="12"/>
 		</Anchors>
 		<Layers>
 			<Layer level="OVERLAY">
@@ -207,6 +233,71 @@
 				</Anchors>
 			</Button>
 		</Frames>
+	</Frame>
+	
+	<Frame name="LOLIB_InsetTemplate_Light" inherits="InsetFrameTemplate" virtual="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<Texture parentKey="OverlayShadowTopLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="4" y="-4"/>
+					</Anchors>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowTop" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="17" y="-4"/>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-17" y="-4"/>
+					</Anchors>
+					<TexCoords left="0.9999" right="1" top="0" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowTopRight" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-4" y="-4"/>
+					</Anchors>
+					<TexCoords left="1" right="0" top="0" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="4" y="-17"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="16"/>
+					</Anchors>
+					<TexCoords left="0" right="1" top="0.9999" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowBottomLeft" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="3"/>
+					</Anchors>
+					<TexCoords left="0" right="1" top="1" bottom="0"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowRight" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" x="-4" y="-17"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="16"/>
+					</Anchors>
+					<TexCoords left="1" right="0" top="0.9999" bottom="1"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowBottomRight" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-4" y="3"/>
+					</Anchors>
+					<TexCoords left="1" right="0" top="1" bottom="0"/>
+				</Texture>
+
+				<Texture parentKey="OverlayShadowBottom" atlas="collections-background-shadow-small" useAtlasSize="true">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="17" y="3"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-17" y="3"/>
+					</Anchors>
+					<TexCoords left="0.9999" right="1" top="1" bottom="0"/>
+				</Texture>
+			</Layer>
+		</Layers>
 	</Frame>
 	
 	<Frame name="LOLIB_InsetTemplate" inherits="InsetFrameTemplate" virtual="true">
@@ -426,6 +517,15 @@
 		</Scripts>
 	</Button>
 	
+	<Button name="LOLIBCollectionTab" inherits="CharacterFrameTabButtonTemplate" virtual="true">
+		<Scripts>
+			<OnClick>
+				LOLIB_SetTab(self:GetParent(), self:GetID());
+				PlaySound("UI_Toybox_Tabs");
+			</OnClick>
+		</Scripts>
+	</Button>
+	
 	<Frame name="LoreLibraryCore" inherits="PortraitFrameTemplate" movable="true" toplevel="true" frameStrata="HIGH" enableMouse="true" parent="UIParent" hidden="true">
 		<Size x="703" y="606"/>
 		<Anchors>
@@ -433,7 +533,76 @@
 		</Anchors>
 
 		<Frames>
-			<StatusBar parentKey="progressBar" inherits="LOLIB_CoreStatusTemplate" />
+			<Button name="$parentTab1" inherits="LOLIBCollectionTab" text="Documents" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="BOTTOMLEFT" x="11" y="2"/>
+				</Anchors>
+			</Button>
+			<Button name="$parentTab2" inherits="LOLIBCollectionTab" text="Areas" id="2">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTab1" relativePoint="RIGHT" x="-16" y="0"/>
+				</Anchors>
+			</Button>
+			
+			<Button name="$parentOptionsButton" inherits="UIMenuButtonStretchTemplate" text="">
+				<Size x="35" y="22"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-15" y="-35"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="gear" file="Interface\Worldmap\Gear_64Grey">
+							<Size x="16" y="16"/>
+							<Anchors>
+								<Anchor point="LEFT" relativeKey="$parent.Left" relativePoint="LEFT" x="5"/>
+							</Anchors>
+						</Texture>
+						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+							<Size x="10" y="12"/>
+							<Anchors>
+								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<HighlightTexture file="Interface\BUTTONS\UI-Common-MouseHilight" alphaMode="ADD"/>
+				<Scripts>
+					<OnClick> 
+						PlaySound("igMainMenuOptionCheckBoxOn");
+						ToggleDropDownMenu(1, nil, LoreLibraryCoreOptionsDropDown, "LoreLibraryCoreOptionsButton", -40, 0);
+					</OnClick>	
+				</Scripts>						
+			</Button>
+			<Frame name="$parentOptionsDropDown" inherits="UIDropDownMenuTemplate" />
+			
+		</Frames>
+
+		<Scripts>
+			<OnLoad>
+				self:SetClampedToScreen(true);
+				self.TitleText:SetText("Document Library");
+				self:RegisterForDrag("LeftButton");
+				self:SetScript("OnDragStart", self.StartMoving );
+				self:SetScript("OnDragStop", self.StopMovingOrSizing);
+				SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
+				UIPanelWindows["LoreLibraryCore"] = { area = "left", pushable = 4 }
+				PanelTemplates_SetNumTabs(self, 2);
+				PanelTemplates_SetTab(self, 1);
+			</OnLoad>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="LoreLibraryList" parent="LoreLibraryCore" hidden="false">
+		<Size y="541"/>
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" x="0" y="0"/>
+			<Anchor point="BOTTOMRIGHT" x="0" y="0"/>
+		</Anchors>
+		
+		
+		
+		<Frames>
+			<StatusBar parentKey="progressBar" inherits="LOLIB_LibraryProgressTemplate" />
 			
 			<Frame parentKey="tokenCount" inherits="InsetFrameTemplate3" enableMouse="true">
 				<Size x="50" y="20"/>
@@ -530,63 +699,7 @@
 					</Button>
 				</Frames>
 			</Frame>
-			
-			<Button name="$parentOptionsButton" inherits="UIMenuButtonStretchTemplate" text="">
-				<Size x="35" y="22"/>
-				<Anchors>
-					<Anchor point="TOPRIGHT" x="-15" y="-35"/>
-				</Anchors>
-				<Layers>
-					<Layer level="ARTWORK">
-						<Texture parentKey="gear" file="Interface\Worldmap\Gear_64Grey">
-							<Size x="16" y="16"/>
-							<Anchors>
-								<Anchor point="LEFT" relativeKey="$parent.Left" relativePoint="LEFT" x="5"/>
-							</Anchors>
-						</Texture>
-						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
-							<Size x="10" y="12"/>
-							<Anchors>
-								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
-							</Anchors>
-						</Texture>
-					</Layer>
-				</Layers>
-				<HighlightTexture file="Interface\BUTTONS\UI-Common-MouseHilight" alphaMode="ADD"/>
-				<Scripts>
-					<OnClick> 
-						PlaySound("igMainMenuOptionCheckBoxOn");
-						ToggleDropDownMenu(1, nil, LoreLibraryCoreOptionsDropDown, "LoreLibraryCoreOptionsButton", -40, 0);
-					</OnClick>	
-				</Scripts>						
-			</Button>
-			<Frame name="$parentOptionsDropDown" inherits="UIDropDownMenuTemplate" />
-			
-		</Frames>
-
-		<Scripts>
-			<OnLoad>
-				self:SetClampedToScreen(true);
-				self.TitleText:SetText("Lore Library");
-				self:RegisterForDrag("LeftButton");
-				self:SetScript("OnDragStart", self.StartMoving );
-				self:SetScript("OnDragStop", self.StopMovingOrSizing);
-				SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
-				UIPanelWindows["LoreLibraryCore"] = { area = "left", pushable = 4 }
-			</OnLoad>
-		</Scripts>
-	</Frame>
-	
-	<Frame name="LoreLibraryList" parent="LoreLibraryCore">
-		<Size y="541"/>
-		<Anchors>
-			<Anchor point="BOTTOMLEFT" x="0" y="0"/>
-			<Anchor point="BOTTOMRIGHT" x="0" y="0"/>
-		</Anchors>
 		
-		
-		
-		<Frames>
 			<Frame name="$parentDisplay" inherits="LOLIB_InsetTemplate">
 				<Size x="414"/>
 				<Anchors>
@@ -847,10 +960,34 @@
 			<Anchor point="BOTTOMRIGHT"/>
 		</Anchors>
 		<Frames>
+			<Frame name="$parentOverview" parentKey="overview">
+				<Size x="140" y="90"/>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" x="10" y="10"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture parentKey="bg" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" />
+					</Layer>
+				</Layers>
+				<Frames>
+					<Frame parentKey="listingLore" inherits="LOLIB_MapOverviewListing">
+						<Anchors>
+							<Anchor point="TOP" y="-15"/>
+						</Anchors>
+					</Frame>
+					<Frame parentKey="listingPoI" inherits="LOLIB_MapOverviewListing">
+						<Anchors>
+							<Anchor point="TOP" relativeKey="$parent.listingLore" relativePoint="BOTTOM" y="0"/>
+						</Anchors>
+					</Frame>
+				</Frames>
+			</Frame>
+			
 			<StatusBar name="$parentProgressBar" inherits="LOLIB_ProgressBarTemplate" parentKey="progressBar">
 			<Size x="100" y="13"/>
 			<Anchors>
-				<Anchor point="BOTTOMLEFT" x="10" y="10"/>
+				<Anchor point="TOPLEFT" x="10" y="10"/>
 			</Anchors>
 			<Layers>
 				<Layer level="OVERLAY">
@@ -906,7 +1043,7 @@
 						</Anchors>
 					</Texture>
 				</Layer>
-				<Layer level="ARTWORK">
+				<Layer level="ARTWORK" textureSubLevel="2">
 					<Texture parentKey="icon" file="Interface\AddOns\LoreLibrary\Images\icon_NPC" />
 				</Layer>
 			</Layers>
@@ -914,8 +1051,8 @@
 			<Scripts>
 				<OnEnter>
 					GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-					if (self.lore) then
-						GameTooltip:SetText(self.lore.title);
+					if (self.title) then
+						GameTooltip:SetText(self.title);
 					end
 				</OnEnter>
 				<OnLeave>

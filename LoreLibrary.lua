@@ -7,11 +7,18 @@ local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new 
 local STRING_SUGGESTION_EMPTY1 = "You have collected so much lore!";
 local STRING_SUGGESTION_EMPTY2 = "There is nothing left to suggest.";
 local STRING_OPTIONS_MINIMAP = "Minimap button";
-local STRING_OPTIONS_WORLDMAP_OVERLAY = "World map overlay"
-local STRING_OPTIONS_TOOLTIP = "Tooltip indicator"
+local STRING_OPTIONS_WORLDMAP_OVERLAY = "World map overlay";
+local STRING_OPTIONS_TOOLTIP = "Tooltip indicator";
+local STRING_OPTIONS_MAPOPTIONS = "World map pins";
+local STRING_OPTIONS_PINS_LORE = "Lore";
+local STRING_OPTIONS_PINS_AREA = "Area";
+local STRING_OPTIONS_PINS_UNLOCKED = "Unlocked";
+local STRING_OPTIONS_PINS_TOOLTIPS = "Tooltips";
 local STRING_LOSTPAGES_INFO = "You can use a lost page\nto unlock this lore.";
 local STRING_PINS_OPTIONS_SHOW = "Show pins";
 local STRING_PINS_OPTIONS_COLLECTED = "Show collected";
+local STRING_TITLE_DOCUMENT = "Document Library";
+local STRING_TITLE_AREA = "Area Library";
 local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
 local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
 local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
@@ -60,14 +67,21 @@ local _db = nil;
 local _defaults = {
 	global = {	
 		unlockedLore = {},
+		unlockedPoI = {},
 		favorites = {},
 		options = {
-			version = "";
-			showMapOverlay = true;
-			showTooltipText = true;
+			version = "",
+			showMapOverlay = true,
+			showTooltipText = true,
 			minimap = {
 				hide = false,
 			},
+			pins = {
+				lore = true,
+				poi = true,
+				unlocked = true,
+				tooltips = true,
+			}
 		},
 		suggestions = {["timeLast"] = 0}
 	}
@@ -176,21 +190,38 @@ local function SortLoreUnlockFirst(list)
 	end);
 end
 
-function _addon:UpdateMapProgressBar(currentProgress, maxProgress)
-	local level = GetCurrentMapDungeonLevel();
-
+function _addon:UpdateMapOverviewLore(currentProgress, maxProgress)
+	LoreLibraryMap.overview.listingLore.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
+	
 	if maxProgress == 0 then
-		LoreLibraryMap.progressBar:Hide();
-		return;
+		LoreLibraryMap.overview.listingLore.text:Hide();
+	else
+		LoreLibraryMap.overview:Show();
+		LoreLibraryMap.overview.listingLore.text:Show();
+	end
+
+end
+
+function _addon:UpdateMapPins()
+	local areaId = GetCurrentMapAreaID();
+	local level = GetCurrentMapDungeonLevel();
+	-- Hide PoI if map changes
+	if not LoreLibraryMap.lastMapId or LoreLibraryMap.lastMapId ~= areaId or not LoreLibraryMap.lastLevel or LoreLibraryMap.lastLevel ~= level then
+		LoreLibraryMap.PoI:Hide();
+	end
+	LoreLibraryMap.lastMapId = areaId;
+	LoreLibraryMap.lastLevel = level
+	-- reset pins
+	for k, pin in ipairs(LoreLibraryMap.pins) do
+		pin:Hide();
+		pin.lore = nil;
+		pin.type = nil;
 	end
 	
-	LoreLibraryMap.progressBar:Show();
-	LoreLibraryMap.progressBar:SetMinMaxValues(0, maxProgress);
-	LoreLibraryMap.progressBar:SetValue(currentProgress);
-
-	LoreLibraryMap.progressBar.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
-	LoreLibraryMap.progressBar.currentProg = currentProgress;
-	LoreLibraryMap.progressBar.maxProg = maxProgress;
+	LoreLibraryMap.overview:Hide();
+	
+	_addon:LorePiecesInMap();
+	_addon:PoIInMap();
 end
 
 function _addon:ShowLoreMapPins(list)
@@ -198,8 +229,9 @@ function _addon:ShowLoreMapPins(list)
 	local height = WorldMapDetailFrame:GetHeight();
 	local pin = nil;
 	for k, lore in ipairs(list) do
-		pin = LoreLibraryMap.pins[k];
+		pin = self:GetUnusedMapPin();
 		if pin ~= nil then
+			pin.type = "lore";
 			pin.lore = lore;
 			pin:ClearAllPoints();
 			pin:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", width * (lore.poi.x/100), -height * (lore.poi.y/100));
@@ -222,21 +254,11 @@ end
 function _addon:LorePiecesInMap() 
 	local areaId = GetCurrentMapAreaID();
 	local level = GetCurrentMapDungeonLevel();
-	-- Hide PoI if map changes
-	if not LoreLibraryMap.lastMapId or LoreLibraryMap.lastMapId ~= areaId or not LoreLibraryMap.lastLevel or LoreLibraryMap.lastLevel ~= level then
-		LoreLibraryMap.PoI:Hide();
-	end
-	LoreLibraryMap.lastMapId = areaId;
-	LoreLibraryMap.lastLevel = level
-	-- reset pins
-	for k, pin in ipairs(LoreLibraryMap.pins) do
-		pin:Hide();
-		pin.lore = nil;
-	end
+	
 
-	if (areaId == nil or not _mapOptions.showPins) then return; end
+	if (areaId == nil) then return; end
 
-	local levelLore = {};
+	local loreOnLevel = {};
 	local countAll = 0;
 	local countLocked = 0;
 	local new = {};
@@ -251,20 +273,22 @@ function _addon:LorePiecesInMap()
 					countLocked = countLocked + 1;
 				end
 				
-				if (_mapOptions.showCollected or not lore.unlocked) and tonumber(loc.level) == level then
+				if (_addon.options.pins.unlocked or not lore.unlocked) and tonumber(loc.level) == level then
 					-- Same area, still locked, and on the current map level? Show this one!
-					table.insert(levelLore, lore);
+					table.insert(loreOnLevel, lore);
 				end
 				
 			end
 		end
 	end
-	self:ShowLoreMapPins(levelLore);
+	if _addon.options.pins.lore then
+		self:ShowLoreMapPins(loreOnLevel);
+	end
 
-	_addon:UpdateMapProgressBar(countAll - countLocked, countAll);
+	_addon:UpdateMapOverviewLore(countAll - countLocked, countAll);
 end
 
-function _addon:ShowMapPointOfInterest(lore, location)
+function _addon:ShowMapLorePoI(lore, location)
 	if (not lore or not location or location.sourceType == "container" or location.sourceType == "unavailable") then return; end
 
 	local width = WorldMapDetailFrame:GetWidth();
@@ -283,8 +307,7 @@ function _addon:ShowMapPointOfInterest(lore, location)
 	LoreLibraryMap.PoI:Show();
 	LoreLibraryMap.PoI:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", width * (location.x/100), -height * (location.y/100));
 	LoreLibraryMap.PoI.icon:SetTexture(_sourceData[sourceType].icon);
-	LoreLibraryMap.PoI.lore = lore;
-	
+	LoreLibraryMap.PoI.title = lore.title;
 end
 
 function _addon:GetNumUnlockedLore()
@@ -317,14 +340,14 @@ function _addon:GetNumAvailableLore()
 	return count;
 end
 
-function _addon:UpdateProgressBar()
+function _addon:UpdateDocumentProgressBar()
 	local maxProgress = self:GetNumAvailableLore();
 	local currentProgress = self:GetNumUnlockedLore();
 
-	LoreLibraryCore.progressBar:SetMinMaxValues(0, maxProgress);
-	LoreLibraryCore.progressBar:SetValue(currentProgress);
+	LoreLibraryList.progressBar:SetMinMaxValues(0, maxProgress);
+	LoreLibraryList.progressBar:SetValue(currentProgress);
 
-	LoreLibraryCore.progressBar.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
+	LoreLibraryList.progressBar.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
 end
 
 function _addon:UpdateListDisplayNavigation()
@@ -420,10 +443,7 @@ function _addon:ChangeDisplayPage(direction)
 	
 	if display.currentPage ~= lastPage then
 		self:SetDisplayText(self:FilterPageText(lore.pages[display.currentPage]))
-		--display.pageText:SetText(self:FilterPageText(lore.pages[display.currentPage]));
 		PlaySound("igAbiliityPageTurn");
-		
-		
 	end
 	
 	self:UpdateListDisplayNavigation();
@@ -487,8 +507,8 @@ function _addon:UpdateLostPageCount()
 	local numUnavailable, numUnavailableLocked = self:GetNumUnavailable();
 	local spentPages = numUnavailable - numUnavailableLocked;
 	local pages = math.floor(self:GetNumUnlockedLore()/NUM_LORE_FOR_TOKEN) - spentPages;
-	LoreLibraryCore.tokenCount.count:SetText(pages);
-	LoreLibraryCore.tokenCount.untilNext = NUM_LORE_FOR_TOKEN - (self:GetNumUnlockedLore() % NUM_LORE_FOR_TOKEN);
+	LoreLibraryList.tokenCount.count:SetText(pages);
+	LoreLibraryList.tokenCount.untilNext = NUM_LORE_FOR_TOKEN - (self:GetNumUnlockedLore() % NUM_LORE_FOR_TOKEN);
 	return pages;
 end
 
@@ -663,8 +683,7 @@ function _addon:UpdateBookDisplay(lore)
 		
 		display.lore = lore;
 		self:SetDisplayText(self:FilterPageText(lore.pages[1]))
-		--display.pageText:SetText(self:FilterPageText(lore.pages[1]));
-	
+
 	else
 		display.pageText:SetText("<HTML><BODY><BR/><P align=\"center\">" .. SOURCE_TITLE .. "</P><BR/></BODY></HTML>");
 		for k, location in ipairs(lore.locations) do
@@ -742,7 +761,7 @@ end
 
 function _addon:UpdateBookList()
 	self:HideFavoriteMenu();
-	LoreLibraryCore.suggestions:Hide();
+	LoreLibraryList.suggestions:Hide();
 	
 	local display = LoreLibraryListDisplay;
 	local scrollFrame = LoreLibraryListScrollFrame;
@@ -751,8 +770,7 @@ function _addon:UpdateBookList()
 	if buttons == nil then return; end
 	
 	local list = _addon:GetFilteredList(true);
-	
-	local numMounts = #list;
+
 	for i=1, #buttons do
 		local button = buttons[i];
 		local displayIndex = i + offset;
@@ -782,7 +800,7 @@ function _addon:UpdateBookList()
 	
 	HybridScrollFrame_Update(scrollFrame, #list * SIZE_LISTBOOKHEIGHT, scrollFrame:GetHeight());
 	
-	_addon:UpdateProgressBar();
+	_addon:UpdateDocumentProgressBar();
 end
 
 function _addon:HideFavoriteMenu(saveLore)
@@ -808,7 +826,7 @@ end
 
 function _addon:UpdateSuggestions()
 
-	local buttonList = LoreLibraryCore.suggestions.buttons;
+	local buttonList = LoreLibraryList.suggestions.buttons;
 	for k, button in ipairs(buttonList) do
 		button.title:SetText("");
 		button.lore = nil;
@@ -832,7 +850,7 @@ function _addon:UpdateSuggestions()
 	end
 	
 	if (#_suggestions == 0) then
-		local numAplicable = LoreLibraryCore.suggestions.numApplicable
+		local numAplicable = LoreLibraryList.suggestions.numApplicable
 		numAplicable = numAplicable and numAplicable or #self:GetApplicableSuggestions();
 	
 		if numAplicable == 0 then
@@ -844,12 +862,12 @@ function _addon:UpdateSuggestions()
 			local sec, text = _addon:GetSuggestionTimeUntilDays(_suggestions.timeLast, 1);
 			buttonList[1].title:SetText(FORMAT_SUGGESTION_UNTILNEW:format(text));
 		end
-		LoreLibraryCore.suggestBtn.icon:SetDesaturated(true);
+		LoreLibraryList.suggestBtn.icon:SetDesaturated(true);
 	else
-		LoreLibraryCore.suggestBtn.icon:SetDesaturated(false);
+		LoreLibraryList.suggestBtn.icon:SetDesaturated(false);
 	end
 	
-	if (LoreLibraryCore.suggestions:IsShown()) then
+	if (LoreLibraryList.suggestions:IsShown()) then
 		self:PlaySuggestionAnimations();
 	end	
 end
@@ -909,7 +927,7 @@ function _addon:GetNewSuggestion(suggestion, silent, offsetDays)
 		
 		local applicable = self:GetApplicableSuggestions();
 
-		LoreLibraryCore.suggestions.numApplicable = #applicable;
+		LoreLibraryList.suggestions.numApplicable = #applicable;
 		
 		if (#applicable > 0) then
 			suggestion = {};
@@ -926,8 +944,27 @@ function _addon:GetNewSuggestion(suggestion, silent, offsetDays)
 	
 end
 
+function _addon:UpdateSelectedTab(self)
+	local selected = PanelTemplates_GetSelectedTab(self);
+
+	LoreLibraryList:Hide();
+	LoreLibraryPoI:Hide();
+	if selected == 1 then
+		LoreLibraryList:Show();
+		self.TitleText:SetText(STRING_TITLE_DOCUMENT);
+	elseif selected == 2 then
+		LoreLibraryPoI:Show();
+		self.TitleText:SetText(STRING_TITLE_AREA);
+	end
+end
+
+function LOLIB_SetTab(self, tab)
+	PanelTemplates_SetTab(self, tab);
+	_addon:UpdateSelectedTab(self)
+end
+
 function LOLIB_ListBook_OnClick(self, button)
-	LoreLibraryCore.suggestions:Hide();
+	LoreLibraryList.suggestions:Hide();
 	-- Only when these conidions are met do we want to save favoriteMenu.lore
 	_addon:HideFavoriteMenu((self.lore ~= nil and (button == "RightButton") and self.lore.unlocked));
 	if self.lore == nil then 
@@ -1019,33 +1056,80 @@ function _addon:InitFilter(self, level)
 end
 
 function _addon:InitOptions(self, level)
+	
 	local info = UIDropDownMenu_CreateInfo();
 	info.keepShownOnClick = true;	
 
 	if (level == 1) then
 		info.text = STRING_OPTIONS_MINIMAP;
 		info.func = function(_, _, _, value)
-						LoreLibrary.db.global.options.minimap.hide = not value;
+						_addon.options.minimap.hide = not value;
 						_addon:UpdateOptions();
 					end 
-		info.checked = function() return not LoreLibrary.db.global.options.minimap.hide end;
+		info.checked = function() return not _addon.options.minimap.hide end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+
+		info.text = STRING_OPTIONS_TOOLTIP;
+		info.func = function(_, _, _, value)
+						_addon.options.showTooltipText = value;
+					end 
+		info.checked = function() return _addon.options.showTooltipText end;
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 		
 		info.text = STRING_OPTIONS_WORLDMAP_OVERLAY;
 		info.func = function(_, _, _, value)
-						LoreLibrary.db.global.options.showMapOverlay = value;
+						_addon.options.showMapOverlay = value;
 						_addon:UpdateOptions();
 					end 
-		info.checked = function() return LoreLibrary.db.global.options.showMapOverlay end;
+		info.checked = function() return _addon.options.showMapOverlay end;
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 		
-		info.text = STRING_OPTIONS_TOOLTIP;
+		info.checked = 	nil;
+		info.isNotRadio = nil;
+		info.func =  nil;
+		info.hasArrow = true;
+		info.notCheckable = true;
+		info.text = STRING_OPTIONS_MAPOPTIONS;
+		info.value = 1;
+		UIDropDownMenu_AddButton(info, level)
+		
+	elseif (level == 2) then
+		info.text = STRING_OPTIONS_PINS_LORE;
 		info.func = function(_, _, _, value)
-						LoreLibrary.db.global.options.showTooltipText = value;
+						_addon.options.pins.lore = value;
+						_addon:UpdateMapPins()
 					end 
-		info.checked = function() return LoreLibrary.db.global.options.showTooltipText end;
+		info.checked = function() return _addon.options.pins.lore end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+		
+		info.text = STRING_OPTIONS_PINS_AREA;
+		info.func = function(_, _, _, value)
+						_addon.options.pins.poi = value;
+						_addon:UpdateMapPins()
+					end 
+		info.checked = function() return _addon.options.pins.poi end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+		
+		info.text = STRING_OPTIONS_PINS_UNLOCKED;
+		info.func = function(_, _, _, value)
+						_addon.options.pins.unlocked = value;
+						_addon:UpdateMapPins()
+					end 
+		info.checked = function() return _addon.options.pins.unlocked end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+		
+		info.text = STRING_OPTIONS_PINS_TOOLTIPS;
+		info.func = function(_, _, _, value)
+						_addon.options.pins.tooltips = value;
+						_addon:UpdateMapPins()
+					end 
+		info.checked = function() return _addon.options.pins.tooltips end;
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 	end
@@ -1123,12 +1207,12 @@ function _addon:ShowMainFrame()
 end
 
 function _addon:InitSugestionFrame()
-	LoreLibraryCore.suggestions.buttons = {};
-	table.insert(LoreLibraryCore.suggestions.buttons, LoreLibraryCore.suggestions.b1);
-	table.insert(LoreLibraryCore.suggestions.buttons, LoreLibraryCore.suggestions.b2);
-	table.insert(LoreLibraryCore.suggestions.buttons, LoreLibraryCore.suggestions.b3);
+	LoreLibraryList.suggestions.buttons = {};
+	table.insert(LoreLibraryList.suggestions.buttons, LoreLibraryList.suggestions.b1);
+	table.insert(LoreLibraryList.suggestions.buttons, LoreLibraryList.suggestions.b2);
+	table.insert(LoreLibraryList.suggestions.buttons, LoreLibraryList.suggestions.b3);
 	
-	for k, button in ipairs(LoreLibraryCore.suggestions.buttons) do
+	for k, button in ipairs(LoreLibraryList.suggestions.buttons) do
 		button:SetScript("OnClick", function() 
 					if button.lore then
 						_addon:UpdateBookDisplay(button.lore); 
@@ -1172,7 +1256,7 @@ function _addon:InitCoreFrame()
 
 	LoreLibraryCore:SetScript("OnHide", function()
 							PlaySound("igCharacterInfoClose");
-							LoreLibraryCore.suggestions:Hide();
+							LoreLibraryList.suggestions:Hide();
 						end);
 	LoreLibraryCore:SetScript("OnShow", function()
 							PlaySound("igCharacterInfoOpen");
@@ -1181,21 +1265,21 @@ function _addon:InitCoreFrame()
 	
 	LoreLibraryList.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
 	
-	LoreLibraryCore.suggestBtn:SetScript("OnClick", function() 
+	LoreLibraryList.suggestBtn:SetScript("OnClick", function() 
 										if not InCombatLockdown() then
 											_addon:GetNewSuggestion();
 											PlaySound("igMainMenuOptionCheckBoxOn");
-											if LoreLibraryCore.suggestions:IsShown() then
-												LoreLibraryCore.suggestions:Hide();
+											if LoreLibraryList.suggestions:IsShown() then
+												LoreLibraryList.suggestions:Hide();
 											else
-												LoreLibraryCore.suggestions:Show();
+												LoreLibraryList.suggestions:Show();
 											end
 										end
 										
 										
 										
 									end);
-	LoreLibraryCore.suggestions:SetScript("OnShow", function() 
+	LoreLibraryList.suggestions:SetScript("OnShow", function() 
 										_addon:UpdateSuggestions(); 
 										_addon:StopNewSuggestionAnimations();
 									end);
@@ -1223,7 +1307,7 @@ function _addon:InitCoreFrame()
 
 	for i = 1, MAX_SOURCES do
 	    local source = display.sources["s"..i];
-		source:SetScript("OnClick", function(self) _addon:ShowMapPointOfInterest(self.lore, self.PoI) end);
+		source:SetScript("OnClick", function(self) _addon:ShowMapLorePoI(self.lore, self.PoI) end);
 	end	
 	
 	LoreLibraryUnlockPopup.fadeIn = LoreLibraryUnlockPopup:CreateAnimationGroup();
@@ -1255,7 +1339,7 @@ function _addon:InitCoreFrame()
 	GameTooltip:HookScript('OnTooltipCleared', function(self) GameTooltip.LL_Checked = false; end);
 	-- OnUpdate because there is no OnTooltupSet function that supports objects
 	GameTooltip:HookScript('OnUpdate', function(self) 
-		if (LoreLibrary.db.global.options.showTooltipText and not GameTooltip.LL_Checked) then
+		if ((GameTooltip:GetOwner() == UIParent or GameTooltip:GetItem() ~= nil) and LoreLibrary.db.global.options.showTooltipText and not GameTooltip.LL_Checked) then
 			GameTooltip.LL_Checked = true;
 			if (_G["GameTooltipTextLeft1"]:GetNumLines() == 1) then
 				local key = _addon:GetEnglishTitle(_G["GameTooltipTextLeft1"]:GetText());
@@ -1274,46 +1358,54 @@ function _addon:InitCoreFrame()
 	
 end
 
+function _addon:GetUnusedMapPin()
+	for k, pin in ipairs(LoreLibraryMap.pins) do
+		if not pin.lore then 
+			pin.type = nil;
+			return pin; 
+		end
+	end
+	
+	-- No pins available, make new one
+	local pin = CreateFrame("FRAME", nil, LoreLibraryMap, "LOLIB_MapPinTemplate");
+	pin:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", -20, -20);
+	pin:Hide();
+	pin:SetScript("OnEnter", function(self)
+				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+				if (_addon.options.pins.tooltips and self.lore) then
+					GameTooltip:SetText(self.lore.title);
+				end
+		end)
+	self:CreatePinAnimation(pin);
+	table.insert(LoreLibraryMap.pins, pin)
+	
+	return pin;
+end
+
 function _addon:InitMap()
 	LoreLibraryMap.pins = {};
 	LoreLibraryMap.pinsEnabled = true;
 	
-	for i=1, 100 do 
-		local pin = CreateFrame("FRAME", nil, LoreLibraryMap, "LOLIB_MapPinTemplate");
-		pin:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", i * 20, -20);
-		pin:Hide();
-		self:CreatePinAnimation(pin);
-		table.insert(LoreLibraryMap.pins, pin)
-	end
+	local lore = LoreLibraryMap.overview.listingLore;
+	local poi = LoreLibraryMap.overview.listingPoI;
 	
-	LoreLibraryMap.progressBar.button:SetScript("OnEnter", function(self) 
-									GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-									GameTooltip:SetText("Lore Library");
-									GameTooltip:AddDoubleLine("Unlocked", LoreLibraryMap.progressBar.currentProg ,1 ,1 ,1 ,1 ,1 ,1);
-									GameTooltip:AddDoubleLine("Total", LoreLibraryMap.progressBar.maxProg ,1 ,1 ,1 ,1 ,1 ,1);
-									GameTooltip:AddLine("Right click for options" ,1 ,0.83 ,0 ,true);
-									GameTooltip:Show();
-									
-									_addon:PlayPinAnimations();
-								end)
-	LoreLibraryMap.progressBar.button:SetScript("OnLeave", function(self) 
-									GameTooltip:Hide();
-									
-									_addon:StopPinAnimations();
-								end)	
-	
-	LoreLibraryMap.progressBar.button:SetScript("OnClick", function(self, button) 
-									if (button == "LeftButton") then
-										_mapOptions.showPins = not _mapOptions.showPins;
-										_addon:LorePiecesInMap();
-										UIDropDownMenu_Refresh(LolibOptionDropDown, 1);
-									else
-										PlaySound("igMainMenuOptionCheckBoxOn");
-										ToggleDropDownMenu(1, nil, LolibOptionDropDown, "LoreLibraryMapProgressBarOptionsButton", 74, 13);
-									end
-								end)	
+	lore:SetScript("OnEnter", function(self) 
+					_addon:PlayPinAnimations("lore");
+				end)
+	lore:SetScript("OnLeave", function(self) 
+					_addon:StopPinAnimations();
+				end)	
+	poi:SetScript("OnEnter", function(self) 
+					_addon:PlayPinAnimations("poi");
+				end)
+	poi:SetScript("OnLeave", function(self) 
+					_addon:StopPinAnimations();
+				end)	
 	
 	UIDropDownMenu_Initialize(LolibOptionDropDown, function(self, level) _addon:InitMapOptionsDropdown(self, level) end, "MENU");
+	
+	lore.icon:SetTexture("Interface\\AddOns\\LoreLibrary\\Images\\icon_Object");
+	poi.icon:SetTexture("Interface\\AddOns\\LoreLibrary\\Images\\icon_PoI");
 	
 	if (not LoreLibrary.db.global.options.showMapOverlay) then
 		LoreLibraryMap:Hide();
@@ -1342,7 +1434,7 @@ function _addon:CreateNewSuggestionAnimation(self)
 end
 
 function _addon:PlayNewSuggestionAnimations()
-	if (not LoreLibraryCore.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn); end
+	if (not LoreLibraryList.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryList.suggestBtn); end
 	
 	local hasNewSuggestion = false;
 	for k, suggestion in ipairs(_suggestions) do
@@ -1354,15 +1446,15 @@ function _addon:PlayNewSuggestionAnimations()
 	
 	if (not hasNewSuggestion) then return; end
 	
-	LoreLibraryCore.suggestBtn.glow:Show();
-	LoreLibraryCore.suggestBtn.glow:SetAlpha(0);
-	LoreLibraryCore.suggestBtn.animation:Play(true);
+	LoreLibraryList.suggestBtn.glow:Show();
+	LoreLibraryList.suggestBtn.glow:SetAlpha(0);
+	LoreLibraryList.suggestBtn.animation:Play(true);
 end
 
 function _addon:StopNewSuggestionAnimations()
-	if (not LoreLibraryCore.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryCore.suggestBtn); end
-	LoreLibraryCore.suggestBtn.glow:Hide();
-	LoreLibraryCore.suggestBtn.animation:Stop();
+	if (not LoreLibraryList.suggestBtn.animation) then self:CreateNewSuggestionAnimation(LoreLibraryList.suggestBtn); end
+	LoreLibraryList.suggestBtn.glow:Hide();
+	LoreLibraryList.suggestBtn.animation:Stop();
 end
 
 function _addon:CreateSuggestionAnimation(self)
@@ -1391,7 +1483,7 @@ function _addon:CreateSuggestionAnimation(self)
 end
 
 function _addon:PlaySuggestionAnimations()
-	for k, button in ipairs(LoreLibraryCore.suggestions.buttons) do
+	for k, button in ipairs(LoreLibraryList.suggestions.buttons) do
 		if (button.suggestion and button.suggestion.isNew) then
 			button.title:SetAlpha(0);
 			button.new:SetAlpha(0);
@@ -1410,9 +1502,9 @@ function _addon:CreatePinAnimation(self)
 	self.animation:SetLooping("REPEAT")
 end
 
-function _addon:PlayPinAnimations()
+function _addon:PlayPinAnimations(pinType)
 	for k, pin in ipairs(LoreLibraryMap.pins) do
-		if (pin.lore and not pin.lore.unlocked) then
+		if (pin.lore and not pin.lore.unlocked and pin.type == pinType) then
 			pin.glow:Show();
 			pin.animation.rotation:SetDuration(2);
 			pin.animation:Play(true);
@@ -1495,7 +1587,9 @@ end
 
 function LoreLibrary:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("LoLibDB", _defaults, true);
+	_addon.db = self.db;
 	_icon:Register(_addonName, _LDB, self.db.global.options.minimap);
+	_addon.options = LoreLibrary.db.global.options;
 end
 
 function LoreLibrary:OnEnable()
@@ -1539,7 +1633,7 @@ _addon.events:SetScript("OnEvent", function(self, event, ...) self[event](self, 
 function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
 	-- Only update when map is visible
 	if WorldMapFrame:IsShown() then
-		_addon:LorePiecesInMap();
+		_addon:UpdateMapPins();
 	end
 end
 
@@ -1607,6 +1701,7 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	_addon.translations = nil;
 	SortLore();
 	_addon:InitCoreFrame();
+	_addon:InitPoIFrame();
 	_addon:InitMap();
 
 	self:UnregisterEvent("ADDON_LOADED");
@@ -1623,11 +1718,12 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	if LoreLibraryCore:IsShown() then
-		HideUIPanel(LoreLibraryCore);
-	else
-		_addon:ShowMainFrame();
-	end
+	-- if LoreLibraryCore:IsShown() then
+		-- HideUIPanel(LoreLibraryCore);
+	-- else
+		-- _addon:ShowMainFrame();
+	-- end
+	_addon:Test();
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd
 
