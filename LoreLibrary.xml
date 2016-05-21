@@ -10,6 +10,33 @@
 	<Include file="libs\AceAddon-3.0\AceAddon-3.0.xml"/>
 	<Include file="libs\AceDB-3.0\AceDB-3.0.xml"/>
 	
+	<Frame name="LoreLibraryUnlockPopup" virtual="true">
+		<Size>
+			<AbsDimension x="210" y="50"/>
+		</Size>
+		
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BGTL" file="Interface\Garrison\GarrisonMissionUI2">
+					<TexCoords left="0.423828125" right="0.6513671875" top="0.6142578125" bottom="0.6845703125" />
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="This is a title right here but longer">
+					<Size y="10"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="13" y="-11"/>
+						<Anchor point="RIGHT" x="-13"/>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentSubText" inherits="GameFontWhite" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="text" text="Added to your library.">
+					<Anchors>
+						<Anchor point="BOTTOM" y="11"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
 	
 	<Frame name="LOLIB_MapOverviewListing" virtual="true">
 		<Size y="32"/>
@@ -37,7 +64,7 @@
 	<Frame name="LOLIB_MapPinTemplate" virtual="true">
 		<Size x="16" y="16"/>
 		<Layers>
-			<Layer level="OVERLAY">
+			<Layer level="BACKGROUND">
 				<Texture parentKey="glow" file="Interface\MINIMAP\Ping\ping5" hidden="true" alphaMode="ADD">
 					<Size x="24" y="24"/>
 					<Anchors>
@@ -1063,35 +1090,21 @@
 		</Frames>
 	</Frame>
 	
-	<Frame name="LoreLibraryUnlockPopup" toplevel="true" parent="ItemTextScrollFrame" enableMouse="false" hidden="true">
-		<Size>
-			<AbsDimension x="210" y="50"/>
-		</Size>
+	<Frame name="LoreLibraryUnlockPopup" inherits="LoreLibraryUnlockPopup" toplevel="true" parent="ItemTextScrollFrame" enableMouse="false" hidden="true">
 		
 		<Anchors>
 			<Anchor point="BOTTOM" y="20"/>
 		</Anchors>
 		
 		<Layers>
-			<Layer level="BACKGROUND">
-				<Texture parentKey="BGTL" file="Interface\Garrison\GarrisonMissionUI2">
-					
-					<TexCoords left="0.423828125" right="0.6513671875" top="0.6142578125" bottom="0.6845703125" />
+			<Layer level="BACKGROUND" textureSubLevel="2">
+				<Texture parentKey="Icon" file="Interface\Garrison\GarrisonMissionTypeIcons">
+					<Size x="16" y="16"/>
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" x="-15" y="8"/>
+					</Anchors>
+					<TexCoords left="0" right="0.12890625" top="0.7734375" bottom="0.90234375" />
 				</Texture>
-			</Layer>
-			<Layer level="ARTWORK">
-				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="This is a title right here but longer">
-					<Size y="10"/>
-					<Anchors>
-						<Anchor point="TOPLEFT" x="13" y="-11"/>
-						<Anchor point="RIGHT" x="-13"/>
-					</Anchors>
-				</FontString>
-				<FontString name="$parentSubText" inherits="GameFontWhite" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="text" text="Added to your library.">
-					<Anchors>
-						<Anchor point="BOTTOM" y="11"/>
-					</Anchors>
-				</FontString>
 			</Layer>
 		</Layers>
 		

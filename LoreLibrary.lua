@@ -81,6 +81,10 @@ local _defaults = {
 				poi = true,
 				unlocked = true,
 				tooltips = true,
+			},
+			popups = {
+				lore = true,
+				poi = true,
 			}
 		},
 		suggestions = {["timeLast"] = 0}
@@ -492,7 +496,7 @@ function _addon:UnlockNewLore(title, silent)
 	end
 	
 	SortLore();
-	if not silent then
+	if not silent and _addon.options.popups.lore then
 		LoreLibraryUnlockPopup.title:SetText(localizedTitle);
 		LoreLibraryUnlockPopup:Show();
 		LoreLibraryUnlockPopup.suggestion:Hide();
@@ -1096,42 +1100,70 @@ function _addon:InitOptions(self, level)
 		info.value = 1;
 		UIDropDownMenu_AddButton(info, level)
 		
+		info.checked = 	nil;
+		info.isNotRadio = nil;
+		info.func =  nil;
+		info.hasArrow = true;
+		info.notCheckable = true;
+		info.text = STRING_OPTIONS_POPUPOPTIONS;
+		info.value = 2;
+		UIDropDownMenu_AddButton(info, level)
+		
 	elseif (level == 2) then
-		info.text = STRING_OPTIONS_PINS_LORE;
-		info.func = function(_, _, _, value)
-						_addon.options.pins.lore = value;
-						_addon:UpdateMapPins()
-					end 
-		info.checked = function() return _addon.options.pins.lore end;
-		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		if (UIDROPDOWNMENU_MENU_VALUE == 1) then -- pin options
+			info.text = STRING_OPTIONS_PINS_LORE;
+			info.func = function(_, _, _, value)
+							_addon.options.pins.lore = value;
+							_addon:UpdateMapPins()
+						end 
+			info.checked = function() return _addon.options.pins.lore; end;
+			info.isNotRadio = true;
+			UIDropDownMenu_AddButton(info, level)
+			
+			info.text = STRING_OPTIONS_PINS_AREA;
+			info.func = function(_, _, _, value)
+							_addon.options.pins.poi = value;
+							_addon:UpdateMapPins()
+						end 
+			info.checked = function() return _addon.options.pins.poi; end;
+			info.isNotRadio = true;
+			UIDropDownMenu_AddButton(info, level)
+			
+			info.text = STRING_OPTIONS_PINS_UNLOCKED;
+			info.func = function(_, _, _, value)
+							_addon.options.pins.unlocked = value;
+							_addon:UpdateMapPins()
+						end 
+			info.checked = function() return _addon.options.pins.unlocked; end;
+			info.isNotRadio = true;
+			UIDropDownMenu_AddButton(info, level)
+			
+			info.text = STRING_OPTIONS_PINS_TOOLTIPS;
+			info.func = function(_, _, _, value)
+							_addon.options.pins.tooltips = value;
+							_addon:UpdateMapPins()
+						end 
+			info.checked = function() return _addon.options.pins.tooltips; end;
+			info.isNotRadio = true;
+			UIDropDownMenu_AddButton(info, level)
 		
-		info.text = STRING_OPTIONS_PINS_AREA;
-		info.func = function(_, _, _, value)
-						_addon.options.pins.poi = value;
-						_addon:UpdateMapPins()
-					end 
-		info.checked = function() return _addon.options.pins.poi end;
-		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
-		
-		info.text = STRING_OPTIONS_PINS_UNLOCKED;
-		info.func = function(_, _, _, value)
-						_addon.options.pins.unlocked = value;
-						_addon:UpdateMapPins()
-					end 
-		info.checked = function() return _addon.options.pins.unlocked end;
-		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
-		
-		info.text = STRING_OPTIONS_PINS_TOOLTIPS;
-		info.func = function(_, _, _, value)
-						_addon.options.pins.tooltips = value;
-						_addon:UpdateMapPins()
-					end 
-		info.checked = function() return _addon.options.pins.tooltips end;
-		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		elseif (UIDROPDOWNMENU_MENU_VALUE == 2) then -- popup options
+			info.text = STRING_OPTIONS_PINS_LORE;
+			info.func = function(_, _, _, value)
+							_addon.options.popups.lore = value;
+						end 
+			info.checked = function() return _addon.options.popups.lore; end;
+			info.isNotRadio = true;
+			UIDropDownMenu_AddButton(info, level)
+			
+			info.text = STRING_OPTIONS_PINS_AREA;
+			info.func = function(_, _, _, value)
+							_addon.options.popups.poi = value;
+						end 
+			info.checked = function() return _addon.options.popups.poi; end;
+			info.isNotRadio = true;
+			UIDropDownMenu_AddButton(info, level)
+		end
 	end
 end
 

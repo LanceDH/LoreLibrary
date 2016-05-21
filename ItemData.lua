@@ -2417,7 +2417,7 @@ _addon.data = {
 		"These demon plates were worn by the creature that first cursed our people with bloodlust. By the heroic act of one brave orc - he was defeated. Mannoroth the Destructor is no more. Let these plates always remind us of how far we've come and how hard we fought to regain our honor.\n\n- Thrall, Warchief of the Horde",
 	},
 	["locations"] = {
-		{["sourceType"] = "object", ["areaId"] = 321, ["id"] = 1637, ["level"] = 1, ["x"] = 45.3, ["y"] = 34.9},
+		{["sourceType"] = "unavailable"},
 	},
 },
 ["The Battle of Grim Batol"] = {

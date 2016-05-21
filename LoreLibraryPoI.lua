@@ -162,6 +162,18 @@ function _addon:UpdateAreaProgressBar()
 	LoreLibraryPoI.progressBar.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
 end
 
+function _addon:ZoneIsCompleted(zone)
+	local points = _addon.PoI["points"];
+	
+	for k, pointId in ipairs(zone.pointIds) do
+		if (not points[pointId].unlocked) then
+			return false;
+		end
+	end
+	
+	return true;
+end
+
 function _addon:UpdatePoITitleCardProgress()
 
 
@@ -229,6 +241,7 @@ function _addon:UpdateZoneList()
 		local button = buttons[i];
 		local displayIndex = i + offset;
 		button:Disable();
+		button.completeIcon:Hide();
 		if ( displayIndex <= #list) then
 			local zone = list[displayIndex];
 			button:Enable();
@@ -239,6 +252,11 @@ function _addon:UpdateZoneList()
 			else
 				button.selectedTexture:Hide();
 			end
+			
+			if (self:ZoneIsCompleted(zone)) then
+				button.completeIcon:Show();
+			end
+			
 		else
 			button.id = -1;
 			button.title:SetText("");
@@ -395,24 +413,53 @@ function _addon:InitPoIFrame()
 	
 	_addon:UpdateAreaProgressBar();
 	
+	LoreLibraryPoIPopup.fadeIn = LoreLibraryPoIPopup:CreateAnimationGroup();
+	LoreLibraryPoIPopup.fadeIn.alpha = LoreLibraryPoIPopup.fadeIn:CreateAnimation("ALPHA");
+	LoreLibraryPoIPopup.fadeIn.alpha:SetSmoothing("NONE");
+	LoreLibraryPoIPopup.fadeIn.alpha:SetDuration(0.3);
+	LoreLibraryPoIPopup.fadeIn.alpha:SetFromAlpha(1)
+	LoreLibraryPoIPopup.fadeIn.alpha:SetToAlpha(0)
+	LoreLibraryPoIPopup.fadeIn.alpha:SetStartDelay(1);
+	LoreLibraryPoIPopup.fadeIn:SetLooping("BOUNCE");
+	
+	LoreLibraryPoIPopup:SetScript("OnShow", function(self)
+			self.fadeIn:Play(true); 
+	end);
+	LoreLibraryPoIPopup.fadeIn:SetScript("OnLoop", function(self, state) 
+			if (state == "REVERSE") then
+				self:Stop();
+				HideUIPanel(LoreLibraryPoIPopup);
+			end
+	end);
+	
+	
 end
 
-function _addon:GetPointsFromZoneId(zoneId)
+function _addon:GetPointsFromZoneId(zoneId, ignoreLevel)
 	local list = {};
 	local zones = _addon.PoI["zones"];
-	local points = _addon.PoI["points"];
+	local points = _addon.PoI["points"];	
+	local level = GetCurrentMapDungeonLevel();
 	
 	for k, zone in ipairs(zones) do
 		if (zone.id == zoneId) then
 			if (not zone.pointIds) then return {}; end
 			for pk, id in ipairs(zone.pointIds) do
-				table.insert(list, points[id]);
+				if (ignoreLevel or (not points[id].level and (level == 0 or level == 1)) or points[id].level == level) then
+					table.insert(list, points[id]);
+				end
 			end
 			return list;
 		end
 	end
 	
 	return list;
+end
+
+function _addon:ShowPoIPopup(point)
+	if not _addon.options.popups.poi then return end
+	ShowUIPanel(LoreLibraryPoIPopup);
+	LoreLibraryPoIPopup.title:SetText(point.title);
 end
 
 function _addon:FrameUpdate(elapsed)
@@ -427,24 +474,27 @@ function _addon:FrameUpdate(elapsed)
 			local zoneId = GetCurrentMapAreaID();
 			if (self.updateFrame.zoneId ~= zoneId) then
 				self.updateFrame.zoneId = zoneId;
-				self.updateFrame.relevantPoints = self:GetPointsFromZoneId(zoneId);
+				self.updateFrame.relevantPoints = self:GetPointsFromZoneId(zoneId, true);
 			end
-			
-			
 		end
 		output = output .. "\nZone: " .. self.updateFrame.zoneId .. "\n# Points: " .. #self.updateFrame.relevantPoints;
 		for k, point in ipairs(self.updateFrame.relevantPoints) do
 			local distance = math.sqrt(math.pow(self.updateFrame.playerX - (point.x / 100), 2) + math.pow(self.updateFrame.playerY - (point.y / 100), 2));
-			if (not point.unlocked and distance < DISTANCE_POINT_UNLOCK) then
+			local pLevel = (point.level and point.level or 1);
+			local mLevel = GetCurrentMapDungeonLevel();
+			local scaledReqDistance = (point.scale and point.scale * DISTANCE_POINT_UNLOCK or DISTANCE_POINT_UNLOCK);
+			if ((mLevel == 0 or pLevel == mLevel) and not point.unlocked and distance < scaledReqDistance) then
+				_addon:ShowPoIPopup(point);
 				table.insert(self.db.global.unlockedPoI, point.id);
 				point.unlocked = true;
 				_addon:UpdateZoneList();
 				_addon:UpdatePointList();
 				_addon:UpdatePointDetailScroller();
 				_addon:UpdateAreaProgressBar();
+				_addon:UpdateMapPins();
 			end
 			--
-			output = output .. "\n " .. (distance < DISTANCE_POINT_UNLOCK and "[X] " or "[  ] ") .. point.title .. "    " .. distance;
+			output = output .. "\n " .. (distance < scaledReqDistance and "[X] " or "[  ] ") .. point.title .. "    " .. distance;
 		end
 		LOLIBDEBUGTHING.text:SetText(output);
 	end
@@ -474,7 +524,7 @@ end
 
 function _addon:PoIInMap()
 	local zoneId = GetCurrentMapAreaID();
-	local relevantPoints = self:GetPointsFromZoneId(zoneId);
+	local relevantPoints = self:GetPointsFromZoneId(zoneId, true);
 	local total = 0;
 	local unlocked = 0;
 	
