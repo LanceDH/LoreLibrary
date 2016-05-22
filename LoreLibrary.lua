@@ -10,6 +10,8 @@ local STRING_OPTIONS_MINIMAP = "Minimap button";
 local STRING_OPTIONS_WORLDMAP_OVERLAY = "World map overlay";
 local STRING_OPTIONS_TOOLTIP = "Tooltip indicator";
 local STRING_OPTIONS_MAPOPTIONS = "World map pins";
+local STRING_OPTIONS_POPUPOPTIONS = "Popups";
+local STRING_OPTIONS_MOVEPOPUP = "Move popup";
 local STRING_OPTIONS_PINS_LORE = "Lore";
 local STRING_OPTIONS_PINS_AREA = "Area";
 local STRING_OPTIONS_PINS_UNLOCKED = "Unlocked";
@@ -163,7 +165,7 @@ function _addon:GetSuggestionTimeUntilDays(timestamp, days)
 	local t = date("!*t", sec);
 	
 	if t.day > 1 then
-		text = t.day .. " days";
+		text = t.day-1 .. " days";
 	elseif t.hour >= 1 then
 		text = t.hour+1 .. " hours";
 	else
@@ -1148,6 +1150,20 @@ function _addon:InitOptions(self, level)
 			UIDropDownMenu_AddButton(info, level)
 		
 		elseif (UIDROPDOWNMENU_MENU_VALUE == 2) then -- popup options
+			
+		
+			info.hasArrow = false;
+			info.isNotRadio = true;
+			info.notCheckable = true;
+			info.text = STRING_OPTIONS_MOVEPOPUP;
+			info.func = function()
+							LoreLibraryPoIPopup.positioning = true;
+							LoreLibraryPoIPopup.title:SetText("Right click to hide.")
+							ShowUIPanel(LoreLibraryPoIPopup);
+						end
+			UIDropDownMenu_AddButton(info, level)
+		
+			info.notCheckable = false;
 			info.text = STRING_OPTIONS_PINS_LORE;
 			info.func = function(_, _, _, value)
 							_addon.options.popups.lore = value;
@@ -1289,10 +1305,12 @@ function _addon:InitCoreFrame()
 	LoreLibraryCore:SetScript("OnHide", function()
 							PlaySound("igCharacterInfoClose");
 							LoreLibraryList.suggestions:Hide();
+							CancelEmote();
 						end);
 	LoreLibraryCore:SetScript("OnShow", function()
 							PlaySound("igCharacterInfoOpen");
 							_addon:PlayNewSuggestionAnimations()
+							DoEmote("READ", nil, true);
 						end);
 	
 	LoreLibraryList.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
@@ -1750,12 +1768,11 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	-- if LoreLibraryCore:IsShown() then
-		-- HideUIPanel(LoreLibraryCore);
-	-- else
-		-- _addon:ShowMainFrame();
-	-- end
-	_addon:Test();
+	if LoreLibraryCore:IsShown() then
+		HideUIPanel(LoreLibraryCore);
+	else
+		_addon:ShowMainFrame();
+	end
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd
 

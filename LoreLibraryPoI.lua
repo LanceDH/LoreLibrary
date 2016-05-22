@@ -200,21 +200,45 @@ function _addon:UpdatePoITitleCardProgress()
 	end
 end
 	
+local function PointUnlockedInZoneMatchesSearch(zone)
+	if not zone or not zone.pointIds then return; end
+	local points = _addon.PoI["points"];
+	local search = LoreLibraryPoI.searchString;
+	
+	for kp, id in ipairs(zone.pointIds) do
+		if (points[id].unlocked and string.find(string.lower(points[id].title), search:lower(), 1, true)) then
+			return true;
+		end
+	end
+	
+	return false;
+end
+	
 function _addon:GetFilteredZoneList()
 	local list = _addon.PoI["zones"];
 	local search = LoreLibraryPoI.searchString;
 
-	-- Apply search
+	-- Apply search for zones
 	if (search ~= nil and search ~= "") then
 		local searchList = {};
 		for k, zone in ipairs(list) do
-			if (string.find(string.lower(zone.name), search:lower(), 1, true)) then
+			if (string.find(string.lower(zone.name), search:lower(), 1, true)) or PointUnlockedInZoneMatchesSearch(zone)then
 				table.insert(searchList, zone);
 			end
 		end
 		
 		list = searchList;
 	end
+	
+	-- Extend search for points
+	-- if (search ~= nil and search ~= "") then
+		-- local searchListPoints = {};
+		-- for k, zone in ipairs(list) do
+			-- 
+		-- end
+		
+		-- list = searchList;
+	-- end
 	
 	local filterList = {};
 	for k, zone in ipairs(list) do
@@ -346,9 +370,30 @@ function _addon:UpdatePointDetailScroller()
 	end
 end
 
+function _addon:SortZonePointsByName(zone)
+	local points = self.PoI["points"];
+	
+	-- create a list with all point info
+	local pointList = {};
+	for k, pointId in ipairs(zone.pointIds) do
+		table.insert(pointList, points[pointId]);
+	end
+	
+	-- sort list
+	table.sort(pointList, function(a, b) 
+			return a.title < b.title;
+	end);
+	
+	-- replace old id list with sorted one
+	zone.pointIds = {};
+	for k, point in ipairs(pointList) do
+		table.insert(zone.pointIds, point.id);
+	end
+end
+
 function _addon:InitPoIFrame()
-	local zones = _addon.PoI["zones"];
-	local points = _addon.PoI["points"];
+	local zones = self.PoI["zones"];
+	local points = self.PoI["points"];
 	-- add id as variable to points (less manual work)
 	for k, point in pairs(points) do
 		point.id = k;
@@ -358,6 +403,8 @@ function _addon:InitPoIFrame()
 	for k, zone in ipairs(zones) do
 		zone.pointIds = zone.pointIds and zone.pointIds or {};
 		zone.name = GetMapNameByID(zone.id);
+		
+		self:SortZonePointsByName(zone);
 	end
 	
 	for k, pointId in pairs(_addon.db.global.unlockedPoI) do
@@ -423,7 +470,9 @@ function _addon:InitPoIFrame()
 	LoreLibraryPoIPopup.fadeIn:SetLooping("BOUNCE");
 	
 	LoreLibraryPoIPopup:SetScript("OnShow", function(self)
-			self.fadeIn:Play(true); 
+			if not LoreLibraryPoIPopup.positioning then
+				self.fadeIn:Play(true); 
+			end
 	end);
 	LoreLibraryPoIPopup.fadeIn:SetScript("OnLoop", function(self, state) 
 			if (state == "REVERSE") then
@@ -431,7 +480,9 @@ function _addon:InitPoIFrame()
 				HideUIPanel(LoreLibraryPoIPopup);
 			end
 	end);
-	
+	LoreLibraryPoIPopup:SetScript("OnHide", function(self)
+			HideUIPanel(LoreLibraryPoIPopup.completed);
+	end);
 	
 end
 
@@ -456,10 +507,26 @@ function _addon:GetPointsFromZoneId(zoneId, ignoreLevel)
 	return list;
 end
 
-function _addon:ShowPoIPopup(point)
+function _addon:GetZoneById(zoneId)
+	for k, zone in ipairs(self.PoI["zones"]) do
+		if zone.id == zoneId then
+			return zone;
+		end
+	end
+	
+	return nil;
+end
+
+function _addon:ShowPoIPopup(point, zoneId)
+	local zones = _addon.PoI["zones"];
 	if not _addon.options.popups.poi then return end
-	ShowUIPanel(LoreLibraryPoIPopup);
+	
+	if self:ZoneIsCompleted(self:GetZoneById(zoneId)) then
+		ShowUIPanel(LoreLibraryPoIPopup.completed);
+	end
+	
 	LoreLibraryPoIPopup.title:SetText(point.title);
+	ShowUIPanel(LoreLibraryPoIPopup);
 end
 
 function _addon:FrameUpdate(elapsed)
@@ -468,6 +535,7 @@ function _addon:FrameUpdate(elapsed)
 		self.updateFrame.counter = self.updateFrame.counter - self.updateFrame.interval;
 		local x, y = GetPlayerMapPosition("player");
 		local output = "#Map pins: " .. #LoreLibraryMap.pins;
+		local mLevel = GetCurrentMapDungeonLevel();
 		if (x ~= self.updateFrame.playerX or y ~= self.updateFrame.playerY) then
 			self.updateFrame.playerX = x;
 			self.updateFrame.playerY = y;
@@ -477,16 +545,17 @@ function _addon:FrameUpdate(elapsed)
 				self.updateFrame.relevantPoints = self:GetPointsFromZoneId(zoneId, true);
 			end
 		end
-		output = output .. "\nZone: " .. self.updateFrame.zoneId .. "\n# Points: " .. #self.updateFrame.relevantPoints;
+		
+		output = output .. "\nZone: " .. self.updateFrame.zoneId .. "   Level: " .. mLevel .."\n# Points: " .. #self.updateFrame.relevantPoints;
 		for k, point in ipairs(self.updateFrame.relevantPoints) do
 			local distance = math.sqrt(math.pow(self.updateFrame.playerX - (point.x / 100), 2) + math.pow(self.updateFrame.playerY - (point.y / 100), 2));
 			local pLevel = (point.level and point.level or 1);
-			local mLevel = GetCurrentMapDungeonLevel();
+			
 			local scaledReqDistance = (point.scale and point.scale * DISTANCE_POINT_UNLOCK or DISTANCE_POINT_UNLOCK);
 			if ((mLevel == 0 or pLevel == mLevel) and not point.unlocked and distance < scaledReqDistance) then
-				_addon:ShowPoIPopup(point);
 				table.insert(self.db.global.unlockedPoI, point.id);
 				point.unlocked = true;
+				_addon:ShowPoIPopup(point, self.updateFrame.zoneId);
 				_addon:UpdateZoneList();
 				_addon:UpdatePointList();
 				_addon:UpdatePointDetailScroller();
@@ -494,7 +563,7 @@ function _addon:FrameUpdate(elapsed)
 				_addon:UpdateMapPins();
 			end
 			--
-			output = output .. "\n " .. (distance < scaledReqDistance and "[X] " or "[  ] ") .. point.title .. "    " .. distance;
+			output = output .. "\n " .. (distance < scaledReqDistance and "[X] " or (point.unlocked and "[  ] " or "[?] ")) .. point.title .. "    " .. distance;
 		end
 		LOLIBDEBUGTHING.text:SetText(output);
 	end
