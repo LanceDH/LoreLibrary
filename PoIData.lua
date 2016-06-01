@@ -50,7 +50,7 @@ _addon.PoI = {
 	-- ,{["id"] = 34	,["continent"] = "Eastern Kingdoms"	,["name"] = "Duskwood"}
 	-- ,{["id"] = 23	,["continent"] = "Eastern Kingdoms"	,["name"] = "Eastern Plaguelands"}
 	,{["id"] = 30	,["continent"] = "Eastern Kingdoms"	,["name"] = "Elwynn Forest"		,["pointIds"] = {12, 13}}
-	-- ,{["id"] = 462	,["continent"] = "Eastern Kingdoms"	,["name"] = "Eversong Woods"}
+	,{["id"] = 462	,["continent"] = "Eastern Kingdoms"	,["name"] = "Eversong Woods"	,["pointIds"] = {80, 81, 82}}
 	-- ,{["id"] = 463	,["continent"] = "Eastern Kingdoms"	,["name"] = "Ghostlands"}
 	-- ,{["id"] = 545	,["continent"] = "Eastern Kingdoms"	,["name"] = "Gilneas"}
 	-- ,{["id"] = 611	,["continent"] = "Eastern Kingdoms"	,["name"] = "Gilneas City"}
@@ -67,7 +67,7 @@ _addon.PoI = {
 	-- ,{["id"] = 685	,["continent"] = "Eastern Kingdoms"	,["name"] = "Ruins of Gilneas City"}
 	-- ,{["id"] = 28	,["continent"] = "Eastern Kingdoms"	,["name"] = "Searing Gorge"}
 	-- ,{["id"] = 615	,["continent"] = "Eastern Kingdoms"	,["name"] = "Shimmering Expanse"}
-	,{["id"] = 480	,["continent"] = "Eastern Kingdoms"	,["name"] = "Silvermoon City"	,["pointIds"] = {70,71}}
+	,{["id"] = 480	,["continent"] = "Eastern Kingdoms"	,["name"] = "Silvermoon City"	,["pointIds"] = {70,71, 72, 73, 74, 75, 76}}
 	-- ,{["id"] = 21	,["continent"] = "Eastern Kingdoms"	,["name"] = "Silverpine Forest"}
 	,{["id"] = 301	,["continent"] = "Eastern Kingdoms"	,["name"] = "Stormwind City"	,["pointIds"] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}}
 	-- ,{["id"] = 893	,["continent"] = "Eastern Kingdoms"	,["name"] = "Sunstrider Isle"}
@@ -201,6 +201,16 @@ _addon.PoI = {
 	,[67] = {["title"] = "Trade Quarter"		,["x"] = 68.60	,["y"] = 48.03	,["lore"] = "As the name implies, the Trade Quarter is the central hub of trade of the Undercity."}
 	,[70] = {["title"] = "Sunfury Spire"		,["x"] = 55.66	,["y"] = 22.38	,["lore"] = "Sunfury Spire is Silvermoon City's palace.\nIt is here that Regent Lord Lor'themar Theron, ruler of Quel'Thalas, governs the country with the advice and counsel of Ranger General Halduron Brightwing and Grand Magister Rommath."}
 	,[71] = {["title"] = "Hall of Blood"		,["x"] = 89.78	,["y"] = 37.49	,["lore"] = "The Hall of Blood is the headquarters of the Blood Knights, an order of blood elf paladins serving as the backbone of the Thalassian army.\n\nWith the strong support of the Magisters and the blood elven guard force, the former of which had a hand in their creation, the Blood Knights rose from unproven and scorned beginnings to become a popular group within sin'dorei society.\nThey are led by their matriarch, Lady Liadrin, who was the first of their order."}
+	,[72] = {["title"] = "Reliquary"			,["x"] = 81.33	,["y"] = 63.88	,["lore"] = "The Reliquary is the headquarters of the blood elf organization zith the same name.\nThe Reliquary is a blood elven organization dedicated to the acquisition of powerful magical artifacts and studying the past, serving as the Horde counterpart to the Explorer's League.\n\nThe leader of the Reliquary, Tae'thelan Bloodwatcher, had spent a lifetime mastering the arts of sorcery and furthering his pursuit of magical knowledge.\nGathering like-minded blood elves, he formed the Reliquary, a primarily blood elven (but nonetheless multiracial) organization to acquire powerful magical artifacts for the sin'dorei and their Horde allies.\nTae'thelan maintains that such power not only should not be feared, but can be safety utilized with proper teaching, a creed he aims to instill in allies of the Reliquary.\nThrough these moderate and controlled methods, Tae'thelan ultimately aims to free his people from their magical addiction, and unite them as the proud, mighty race they once were."}
+	,[73] = {["title"] = "Bazaar"				,["x"] = 61.18	,["y"] = 70.69	,["lore"] = "The Bazaar is Silvermoon's main hub of trade.\n\nNearby, two speakers adress the concerns af a gathering of concernd blood elves."}
+	,[74] = {["title"] = "Dead Scar"			,["x"] = 54.30	,["y"] = 56.51	,["lore"] = "A gate protects the city from the Dead Scar, a path of Blight that runs through the Kingdom of Quel'Thalas\nThe Dead Scar cuts right through Silvermoon, cutting off part of the city."}
+	,[75] = {["title"] = "The Sanctum"			,["x"] = 75.77	,["y"] = 44.03	,["lore"] = "The Sanctum is the warlock guild of Silvermoon City."}
+	,[76] = {["title"] = "Shepherd's Gate"		,["x"] = 72.40	,["y"] = 85.95	,["lore"] = "The Shepherd's Gate serves as the main entry into Silvermoon from Eversong Woods.\nThe Shepherd's Gate was not the original entrance to the city.\nRemnants of the original entry can be seen down the Dead Scar, and a large, sealed gate in the Bazaar blocks the path."}
+	,[80] = {["title"] = "Silvermoon"			,["x"] = 56.66	,["y"] = 50.24	,["scale"] = 0.5	,["lore"] = "The crown jewel of the blood elves is their capital of Silvermoon City, nestled in the Eversong Woods in their ancestral lands of Quel'Thalas.\nAt the northernmost tip of the Eastern Kingdoms the beauty of the spires and thoroughfares of Silvermoon stand in stark contrast to the Dead Scar, the tainted path that Arthas tore through the city in his quest for power.\nThough nearly destroyed by Arthas' attack on the Sunwell, Silvermoon is once again a thriving city.\n\nMost recently, the rebirth of the Sunwell has lifted spirits among the elves, and they have continued to heal Silvermoon's scars in the hopes of returning their beloved capital to its former glory."}
+	,[81] = {["title"] = "Duskwither Spire"		,["x"] = 68.92	,["y"] = 51.97	,["scale"] = 0.5	,["lore"] = "Duskwither Spire is a floating tower located in northeastern Eversong Woods.\nIt was once a magical academy run by Magister Duskwither, but fell into disrepair after the magister began looking into ill-fated ways to solve his race's addiction to magic."}
+	,[82] = {["title"] = "Dead Scar"			,["x"] = 50.34	,["y"] = 50.49	,["lore"] = "The Dead Scar is a path of Blight that runs through the Kingdom of Quel'Thalas.\nDuring the Third War, the armies of the Scourge — led by the death knight Arthas Menethil, Crown Prince of Lordaeron — marched up this path from Lordaeron all the way to the Sunwell Plateau, killing everyone and destroying everything in its path.\nThe Dead Scar practically splits Quel'Thalas in half, all the way through Silvermoon itself.\n\nToday, the Dead Scar remains in the rebuilt Quel'Thalas, as a reminder to all who live there of the horrors committed by the Scourge — and as an incentive to seek their destiny beyond the Dark Portal."}
+	--,[30] = {["title"] = ""			,["x"] = 0	,["y"] = 0	,["lore"] = ""}
+	--,[30] = {["title"] = ""			,["x"] = 0	,["y"] = 0	,["lore"] = ""}
 	--,[30] = {["title"] = ""			,["x"] = 0	,["y"] = 0	,["lore"] = ""}
 	--,[30] = {["title"] = ""			,["x"] = 0	,["y"] = 0	,["lore"] = ""}
 	--,[30] = {["title"] = ""			,["x"] = 0	,["y"] = 0	,["lore"] = ""}

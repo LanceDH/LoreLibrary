@@ -580,13 +580,10 @@ function _addon:ZoneSearchChanged(searchBox)
 end
 
 function _addon:UpdateMapOverviewPoI(unlocked, total)
-	LoreLibraryMap.overview.listingPoI.text:SetFormattedText(FORMAT_PROGRESS, unlocked, total);
-	
-	if total == 0 then
-		LoreLibraryMap.overview.listingPoI.text:Hide();
-	else
-		LoreLibraryMap.overview:Show();
-		LoreLibraryMap.overview.listingPoI.text:Show();
+	LoreLibraryMap.overview.listingPoI:Hide();
+	if total > 0 then
+		LoreLibraryMap.overview.listingPoI.text:SetFormattedText(FORMAT_PROGRESS, unlocked, total);
+		self:ShowOverviewListing(LoreLibraryMap.overview.listingPoI);
 	end
 
 end

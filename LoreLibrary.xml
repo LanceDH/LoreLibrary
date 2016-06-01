@@ -52,7 +52,7 @@
 						<Anchor point="TOPLEFT" x="20"/>
 					</Anchors>
 				</Texture>
-				<FontString parentKey="text" inherits="GameFontNormalLarge" justifyH="CENTER" text="8/12">
+				<FontString parentKey="text" inherits="GameFontNormalLarge" justifyH="CENTER" text="--/--">
 					<Anchors>
 						<Anchor point="RIGHT" x="-20"/>
 					</Anchors>

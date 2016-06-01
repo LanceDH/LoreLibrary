@@ -34,6 +34,7 @@ local MAX_SUGGESTIONS = 3;
 local NUM_SUGGESTION_FOR_TOKEN = 5;
 local NUM_LORE_FOR_TOKEN = 20;
 local NUM_PAGETEXT_WIDTH = 280;
+local NUM_OVERVIEW_MARGIN = 15;
 local SOURCE_TITLE = "This lore can be found in:";
 local SOURCETYPE_OBJECT = "Object found in a zone.";
 local SOURCETYPE_NPC = "Can drop from an npc.";
@@ -197,13 +198,11 @@ local function SortLoreUnlockFirst(list)
 end
 
 function _addon:UpdateMapOverviewLore(currentProgress, maxProgress)
-	LoreLibraryMap.overview.listingLore.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
+	LoreLibraryMap.overview.listingLore:Hide();
 	
-	if maxProgress == 0 then
-		LoreLibraryMap.overview.listingLore.text:Hide();
-	else
-		LoreLibraryMap.overview:Show();
-		LoreLibraryMap.overview.listingLore.text:Show();
+	if maxProgress > 0 then
+		LoreLibraryMap.overview.listingLore.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
+		self:ShowOverviewListing(LoreLibraryMap.overview.listingLore);
 	end
 
 end
@@ -225,9 +224,36 @@ function _addon:UpdateMapPins()
 	end
 	
 	LoreLibraryMap.overview:Hide();
+	LoreLibraryMap.overview.shown = {};
 	
 	_addon:LorePiecesInMap();
 	_addon:PoIInMap();
+end
+
+function _addon:ShowOverviewListing(listing)
+	local shown = LoreLibraryMap.overview.shown;
+	local height = NUM_OVERVIEW_MARGIN * 2;
+
+	ShowUIPanel(LoreLibraryMap.overview);
+	ShowUIPanel(listing);
+	--:Show();
+	--listing:Show();
+	if #shown == 0 then
+		-- None yet shown, anchor to overview
+		listing:SetPoint("TOP", LoreLibraryMap.overview, "TOP", 0, -NUM_OVERVIEW_MARGIN);
+	else
+		-- Anchor to previous
+		listing:SetPoint("TOP", shown[#shown], "BOTTOM", 0, 0);
+	end
+
+	table.insert(shown, listing);
+
+	-- Change bg height
+	for k, listing in ipairs(shown) do
+		height = height + listing:GetHeight();
+	end	
+	
+	LoreLibraryMap.overview:SetHeight(height);
 end
 
 function _addon:ShowLoreMapPins(list)
@@ -241,7 +267,8 @@ function _addon:ShowLoreMapPins(list)
 			pin.lore = lore;
 			pin:ClearAllPoints();
 			pin:SetPoint("CENTER", LoreLibraryMap, "TOPLEFT", width * (lore.poi.x/100), -height * (lore.poi.y/100));
-			pin:Show();
+			ShowUIPanel(pin);
+			--pin:Show();
 			pin.tex:SetDesaturated(lore.unlocked);
 			pin.tex:SetVertexColor(1, 1, 1, 1);
 			if (lore.unlocked) then
