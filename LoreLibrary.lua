@@ -21,6 +21,7 @@ local STRING_PINS_OPTIONS_SHOW = "Show pins";
 local STRING_PINS_OPTIONS_COLLECTED = "Show collected";
 local STRING_TITLE_DOCUMENT = "Document Library";
 local STRING_TITLE_AREA = "Area Library";
+local STRING_ERROR_COMBATLOCKDOWN = "|cFFFF0000You can't open Lore Library while in combat.|r";
 local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
 local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
 local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
@@ -52,11 +53,7 @@ local _LDB = LibStub("LibDataBroker-1.1"):NewDataObject(_addonName, {
 	text = "Lore Library",
 	icon = "Interface\\ICONS\\INV_Misc_Book_07",
 	OnClick = function(self, button, down)
-		if (LoreLibraryCore:IsShown()) then
-			HideUIPanel(LoreLibraryCore);
-		else
-			ShowUIPanel(LoreLibraryCore);
-		end
+		_addon:ToggleCoreFrame();
 	end,
 	OnTooltipShow = function(tt)
 		tt:AddLine("Lore Library", 1, 1, 1);
@@ -154,6 +151,18 @@ local _sourceData = {
 ----------
 -- Code
 ----------
+	
+function _addon:ToggleCoreFrame(show)
+	if (show or not LoreLibraryCore:IsShown()) then
+		if InCombatLockdown() then
+			print(STRING_ERROR_COMBATLOCKDOWN);
+		else
+			ShowUIPanel(LoreLibraryCore);
+		end
+	else
+		HideUIPanel(LoreLibraryCore);
+	end
+end
 	
 function _addon:GetSuggestionTimeUntilDays(timestamp, days) 
 	days = (not days and 0 or days);
@@ -980,13 +989,13 @@ end
 function _addon:UpdateSelectedTab(self)
 	local selected = PanelTemplates_GetSelectedTab(self);
 
-	LoreLibraryList:Hide();
-	LoreLibraryPoI:Hide();
+	HideUIPanel(LoreLibraryList);
+	HideUIPanel(LoreLibraryPoI:Hide());
 	if selected == 1 then
-		LoreLibraryList:Show();
+		ShowUIPanel(LoreLibraryList);
 		self.TitleText:SetText(STRING_TITLE_DOCUMENT);
 	elseif selected == 2 then
-		LoreLibraryPoI:Show();
+		ShowUIPanel(LoreLibraryPoI);
 		self.TitleText:SetText(STRING_TITLE_AREA);
 	end
 end
@@ -1795,11 +1804,7 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	if LoreLibraryCore:IsShown() then
-		HideUIPanel(LoreLibraryCore);
-	else
-		_addon:ShowMainFrame();
-	end
+	_addon:ToggleCoreFrame();
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd
 

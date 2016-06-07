@@ -34,8 +34,8 @@
 			<Layer level="ARTWORK">
 				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title">
 					<Anchors>
-						<Anchor point="TOPLEFT" x="20"/>
-						<Anchor point="BOTTOMRIGHT" x="-20"/>
+						<Anchor point="TOPLEFT" x="25"/>
+						<Anchor point="BOTTOMRIGHT" x="-25"/>
 					</Anchors>
 				</FontString>
 				<Texture parentKey="completeIcon" file="Interface\Scenarios\ScenarioIcon-Combat">
@@ -46,11 +46,6 @@
 					<Color r="1" g="1" b="1" a="0.75"/>
 				</Texture>
 			</Layer>
-			<!--
-			<Layer level="OVERLAY">
-                <Texture parentKey="selectedTexture" atlas="PetList-ButtonSelect" hidden="true"/>
-			</Layer>
-			-->
 			<Layer level="HIGHLIGHT">
                 <Texture parentKey="hlLeft" file="Interface\PETBATTLES\PETJOURNAL">
 					<Anchors>
@@ -255,7 +250,7 @@
 			<Frame name="$parentTitleCard" parentKey="titleCard">
 				<Size x="414" y="50"/>
 				<Anchors>
-					<Anchor point="TOPRIGHT" x="-5"/>
+					<Anchor point="TOPRIGHT" x="-5" y="5"/>
 				</Anchors>
 				<Layers>
 					<Layer level="BARCKGROUND">
@@ -344,9 +339,9 @@
 			</Frame>
 		
 			<Frame name="$parentInsetRight" inherits="LOLIB_InsetTemplate">
-				<Size x="414" y="210"/>
+				<Size x="414" y="220"/>
 				<Anchors>
-					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="-48" x="-6"/>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="-43" x="-6"/>
 				</Anchors>
 			</Frame>
 			
@@ -443,6 +438,7 @@
 						</Scripts>
 					</Slider>
 				</Frames>
+				
 			</ScrollFrame>
 			
 			
@@ -560,17 +556,11 @@
 		<Scripts>
 			<OnLoad>
 				self:SetClampedToScreen(true);
-				self:RegisterForClicks("RightButtonUp");
+				self:RegisterForClicks("RightButtonUp", "LeftButtonUp");
 				self:RegisterForDrag("LeftButton");
 				self:SetScript("OnDragStart", self.StartMoving );
 				self:SetScript("OnDragStop", self.StopMovingOrSizing);
 			</OnLoad>
-			<OnClick>
-				if (button == "RightButton") then
-					self.positioning = false;
-					HideUIPanel(self);
-				end
-			</OnClick>
 		</Scripts>
 	</Button>
 

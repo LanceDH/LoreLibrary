@@ -43,15 +43,32 @@ function LOLIB_ListZone_OnClick(self, button)
 	LoreLibraryPoI.zone = self.zone;
 	LoreLibraryPoI.titleCard.title:SetText(self.zone.name);
 	LoreLibraryPoI.point = (self.zone.pointIds and _addon.PoI["points"][self.zone.pointIds[1]] or nil);
+	LoreLibraryPoIZoneList.scrollBar:SetValue(0);
 	_addon:UpdatePointList();
 	_addon:UpdateZoneList();
 	_addon:UpdatePointDetailScroller();
+	
 end
 
 function LOLIB_ListPoint_OnClick(self, button)
 	LoreLibraryPoI.point = self.point;
+	LoreLibraryPoIDetailScroll.scrollBar:SetValue(0);
 	_addon:UpdatePointList();
 	_addon:UpdatePointDetailScroller();
+	
+end
+
+function _addon:OpenToPoIPoint(point, zoneId)
+	if not point or not zoneId then return; end
+	local zone = self:GetZoneById(zoneId);
+	LoreLibraryPoI.zone = zone;
+	LoreLibraryPoI.titleCard.title:SetText(zone.name);
+	LoreLibraryPoI.point = point;
+	self:UpdatePointList();
+	self:UpdateZoneList();
+	self:UpdatePointDetailScroller();
+	self:ToggleCoreFrame(true);
+	LOLIB_SetTab(LoreLibraryCore, 2);
 end
 
 function _addon:ShowMapPoI()
@@ -350,7 +367,7 @@ function _addon:UpdatePointDetailScroller()
 	local buttons = scrollFrame.buttons;
 	local point = LoreLibraryPoI.point;
 	if buttons == nil then return; end
-
+	
 	buttons[1].text:SetText("");
 	if point then
 		if point.unlocked then
@@ -361,7 +378,6 @@ function _addon:UpdatePointDetailScroller()
 		end
 	end
 	buttons[1]:SetHeight(buttons[1].text:GetHeight());
-	
 	HybridScrollFrame_Update(scrollFrame, buttons[1]:GetHeight() +40, scrollFrame:GetHeight());
 	
 	buttons = scrollFrame.buttons;
@@ -412,7 +428,6 @@ function _addon:InitPoIFrame()
 			points[pointId].unlocked = true;
 		end
 	end
-
 	SortZoneList();
 	
 	LoreLibraryPoI.searchBox:SetScript("OnTextChanged", function(self) _addon:ZoneSearchChanged(self) end);
@@ -436,8 +451,9 @@ function _addon:InitPoIFrame()
 	HybridScrollFrame_CreateButtons(LoreLibraryPoIDetailScroll, "LOLIB_PoIDetailTemplate", 1, 0);
 	HybridScrollFrame_Update(LoreLibraryPoIDetailScroll, LoreLibraryPoIDetailScroll:GetHeight(), LoreLibraryPoIDetailScroll:GetHeight());
 	LoreLibraryPoIDetailScroll.update = function() _addon:UpdatePointDetailScroller(); end;
-	
+
 	LoreLibraryPoI.zone = zones[1];
+	LoreLibraryPoI.point = points[LoreLibraryPoI.zone.pointIds[1]];
 	self:UpdateZoneList();
 	self:UpdatePointList();
 	self:UpdatePointDetailScroller();
@@ -483,6 +499,14 @@ function _addon:InitPoIFrame()
 	LoreLibraryPoIPopup:SetScript("OnHide", function(self)
 			HideUIPanel(LoreLibraryPoIPopup.completed);
 	end);
+	LoreLibraryPoIPopup:SetScript("OnClick", function(self, button)
+			if (button == "RightButton") then
+				self.positioning = false;
+				HideUIPanel(self);
+			elseif (button == "LeftButton" and not LoreLibraryPoIPopup.positioning) then
+				_addon:OpenToPoIPoint(self.point, self.zoneId);
+			end
+	end);
 	
 end
 
@@ -518,14 +542,17 @@ function _addon:GetZoneById(zoneId)
 end
 
 function _addon:ShowPoIPopup(point, zoneId)
-	local zones = _addon.PoI["zones"];
 	if not _addon.options.popups.poi then return end
+	
+	local zones = _addon.PoI["zones"];
 	
 	if self:ZoneIsCompleted(self:GetZoneById(zoneId)) then
 		ShowUIPanel(LoreLibraryPoIPopup.completed);
 	end
 	
 	LoreLibraryPoIPopup.title:SetText(point.title);
+	LoreLibraryPoIPopup.point = point;
+	LoreLibraryPoIPopup.zoneId = zoneId;
 	ShowUIPanel(LoreLibraryPoIPopup);
 end
 
@@ -563,7 +590,10 @@ function _addon:FrameUpdate(elapsed)
 				_addon:UpdateMapPins();
 			end
 			--
-			output = output .. "\n " .. (distance < scaledReqDistance and "[X] " or (point.unlocked and "[  ] " or "[?] ")) .. point.title .. "    " .. distance;
+			if (distance < scaledReqDistance) then
+				output = output .. "\n" .. point.title;
+			end
+			-- output = output .. "\n " .. (distance < scaledReqDistance and "[X] " or (point.unlocked and "[  ] " or "[?] ")) .. point.title .. "    " .. distance;
 		end
 		LOLIBDEBUGTHING.text:SetText(output);
 	end
