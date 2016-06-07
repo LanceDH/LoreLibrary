@@ -419,26 +419,67 @@
 				</Frames>
 			</Frame>
 			
-			<ScrollFrame name="$parentDetailScroll" parentKey="scrollFrameDetail" inherits="HybridScrollFrameTemplate">
+			<ScrollFrame name="$parentDetailScroll" parentKey="scrollFrameDetail" inherits="UIPanelScrollFrameCodeTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeTo="$parentInsetDetail" x="10" y="-5"/>
 					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetDetail" x="-25" y="5"/>
 				</Anchors>
 				<Frames>
-					<Slider name="$parentScrollBar" inherits="HybridScrollBarTrimTemplate" parentKey="scrollBar">
+					<Slider name="$parentScrollBar" inherits="UIPanelScrollBarTemplate" parentKey="scrollBar">
 						<Anchors>
-							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="-13"/>
-							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="4" y="11"/>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="6" y="-14"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="6" y="13"/>
 						</Anchors>
-						<Scripts>
-							<OnLoad>
-								self.trackBG:Show();
-								self.trackBG:SetVertexColor(0, 0, 0, 0.75);
-							</OnLoad>
-						</Scripts>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parentTop" file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+									<Size x="27" y="48"/>
+									<Anchors>
+										<Anchor point="TOPLEFT" x="-6" y="19"/>
+									</Anchors>
+									<TexCoords left="0" right="0.484375" top="0" bottom=".20"/>
+								</Texture>
+								<Texture name="$parentBottom" file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+									<Size x="27" y="64"/>
+									<Anchors>
+										<Anchor point="BOTTOMLEFT" x="-6" y="-17"/>
+									</Anchors>
+									<TexCoords left="0.515625" right="1.0" top="0.1440625" bottom="0.4140625"/>
+								</Texture>
+								<Texture name="$parentMiddle" file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+									<Anchors>
+										<Anchor point="TOPLEFT" relativeTo="$parentTop" relativePoint="BOTTOMLEFT"/>
+										<Anchor point="BOTTOMRIGHT" relativeTo="$parentBottom" relativePoint="TOPRIGHT"/>
+									</Anchors>
+									<TexCoords left="0" right="0.484375" top="0.1640625" bottom="1"/>
+								</Texture>
+							</Layer>	
+							<Layer level="BACKGROUND">
+								<Texture name="$parentBG">
+									<Anchors>
+										<Anchor point="TOPLEFT" relativeTo="$parentTop" x="3"/>
+										<Anchor point="BOTTOMRIGHT" relativeTo="$parentBottom" x="-3"/>
+									</Anchors>
+									<Color r="0" g="0" b="0" a=".85"/>
+								</Texture>
+							</Layer>
+						</Layers>
 					</Slider>
 				</Frames>
-				
+				<ScrollChild>
+					<Frame name="LOLIB_PoIDetailScrollChild">
+						<Size x="10" y="10"/>
+						<Frames>
+							<SimpleHTML parentKey="text">
+								<Size x="340" y="200"/>
+								<Anchors>
+									<Anchor point="TOPLEFT" x="20" y="-15"/>
+								</Anchors>
+								<FontString inherits="GameFontBlack"/>
+							</SimpleHTML>
+						</Frames>
+					</Frame>
+				</ScrollChild>
 			</ScrollFrame>
 			
 			

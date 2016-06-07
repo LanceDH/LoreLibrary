@@ -363,26 +363,16 @@ end
 
 function _addon:UpdatePointDetailScroller()
 	local scrollFrame = LoreLibraryPoIDetailScroll;
-	local offset = HybridScrollFrame_GetOffset(scrollFrame);
-	local buttons = scrollFrame.buttons;
 	local point = LoreLibraryPoI.point;
-	if buttons == nil then return; end
-	
-	buttons[1].text:SetText("");
+	LOLIB_PoIDetailScrollChild.text:SetText("");
 	if point then
 		if point.unlocked then
-			buttons[1].text:SetText(point.lore);
+			LOLIB_PoIDetailScrollChild.text:SetText(point.lore .. "\n\n");
 			LoreLibraryPoIInsetDetail.mapButton:Hide();
 		else
 			LoreLibraryPoIInsetDetail.mapButton:Show();
 		end
-	end
-	buttons[1]:SetHeight(buttons[1].text:GetHeight());
-	HybridScrollFrame_Update(scrollFrame, buttons[1]:GetHeight() +40, scrollFrame:GetHeight());
-	
-	buttons = scrollFrame.buttons;
-	for i=2, #buttons do
-		buttons[i]:Hide();
+		
 	end
 end
 
@@ -447,10 +437,11 @@ function _addon:InitPoIFrame()
 	LoreLibraryPoIPointList.update = function() _addon:UpdatePointList(); end;
 	
 	-- Detail Scrollframe
-	LoreLibraryPoIDetailScroll.scrollBar.doNotHide = false;
-	HybridScrollFrame_CreateButtons(LoreLibraryPoIDetailScroll, "LOLIB_PoIDetailTemplate", 1, 0);
-	HybridScrollFrame_Update(LoreLibraryPoIDetailScroll, LoreLibraryPoIDetailScroll:GetHeight(), LoreLibraryPoIDetailScroll:GetHeight());
-	LoreLibraryPoIDetailScroll.update = function() _addon:UpdatePointDetailScroller(); end;
+	LoreLibraryPoIDetailScroll.scrollBarHideable = 1
+	--LoreLibraryPoIDetailScroll.scrollBar.doNotHide = false;
+	--HybridScrollFrame_CreateButtons(LoreLibraryPoIDetailScroll, "LOLIB_PoIDetailTemplate", 1, 0);
+	--HybridScrollFrame_Update(LoreLibraryPoIDetailScroll, LoreLibraryPoIDetailScroll:GetHeight(), LoreLibraryPoIDetailScroll:GetHeight());
+	--LoreLibraryPoIDetailScroll.update = function() _addon:UpdatePointDetailScroller(); end;
 
 	LoreLibraryPoI.zone = zones[1];
 	LoreLibraryPoI.point = points[LoreLibraryPoI.zone.pointIds[1]];
