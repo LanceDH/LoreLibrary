@@ -4,132 +4,132 @@ local _addonName, _addon = ...;
 _addon.PoI = {
 ["zones"] = {
 -- Kalimdor
-	--{["id"] = 43	,["continent"] = "Kalimdor"	,["name"] = "Ashenvale"}
-	-- ,{["id"] = 181	,["continent"] = "Kalimdor"	,["name"] = "Azshara"}
-	{["id"] = 464	,["continent"] = "Kalimdor"	,["name"] = "Azuremyst Isle"	,["pointIds"] = {120}}
-	-- ,{["id"] = 476	,["continent"] = "Kalimdor"	,["name"] = "Bloodmyst Isle"}
-	-- ,{["id"] = 42	,["continent"] = "Kalimdor"	,["name"] = "Darkshore"}
-	,{["id"] = 381	,["continent"] = "Kalimdor"	,["name"] = "Darnassus"			,["pointIds"] = {30, 31, 32, 33}}
-	-- ,{["id"] = 101	,["continent"] = "Kalimdor"	,["name"] = "Desolace"}
-	-- ,{["id"] = 4	,["continent"] = "Kalimdor"	,["name"] = "Durotar"}
-	-- ,{["id"] = 141	,["continent"] = "Kalimdor"	,["name"] = "Dustwallow Marsh"}
-	-- ,{["id"] = 182	,["continent"] = "Kalimdor"	,["name"] = "Felwood"}
-	-- ,{["id"] = 121	,["continent"] = "Kalimdor"	,["name"] = "Feralas"}
-	-- ,{["id"] = 795	,["continent"] = "Kalimdor"	,["name"] = "Molten Front"}
-	-- ,{["id"] = 241	,["continent"] = "Kalimdor"	,["name"] = "Moonglade"}
-	-- ,{["id"] = 606	,["continent"] = "Kalimdor"	,["name"] = "Mount Hyjal"}
-	-- ,{["id"] = 9	,["continent"] = "Kalimdor"	,["name"] = "Mulgore"}
-	-- ,{["id"] = 11	,["continent"] = "Kalimdor"	,["name"] = "Northern Barrens"}
-	,{["id"] = 321	,["continent"] = "Kalimdor"	,["name"] = "Orgrimmar"			,["pointIds"] = {40, 41, 42, 43, 44, 45, 46, 47, 48, 49}}
-	-- ,{["id"] = 261	,["continent"] = "Kalimdor"	,["name"] = "Silithus"}
-	-- ,{["id"] = 607	,["continent"] = "Kalimdor"	,["name"] = "Southern Barrens"}
-	-- ,{["id"] = 81	,["continent"] = "Kalimdor"	,["name"] = "Stonetalon Mountains"}
-	-- ,{["id"] = 161	,["continent"] = "Kalimdor"	,["name"] = "Tanaris"}
-	,{["id"] = 41	,["continent"] = "Kalimdor"	,["name"] = "Teldrassil"		,["pointIds"] = {114, 115, 116, 117, 118, 119}}
-	,{["id"] = 471	,["continent"] = "Kalimdor"		,["name"] = "The Exodar"	,["pointIds"] = {35, 36, 37, 38}}
-	-- ,{["id"] = 61	,["continent"] = "Kalimdor"	,["name"] = "Thousand Needles"}
-	,{["id"] = 362	,["continent"] = "Kalimdor"	,["name"] = "Thunder Bluff"		,["pointIds"] = {50, 51, 52, 53, 54, 55, 56}}
-	-- ,{["id"] = 720	,["continent"] = "Kalimdor"	,["name"] = "Uldum"}
-	-- ,{["id"] = 201	,["continent"] = "Kalimdor"	,["name"] = "Un'Goro Crater"}
-	-- ,{["id"] = 281	,["continent"] = "Kalimdor"	,["name"] = "Winterspring"}
+	--{["id"] = 43	,["continent"] = 1	,["name"] = "Ashenvale"}
+	-- ,{["id"] = 181	,["continent"] = 1	,["name"] = "Azshara"}
+	{["id"] = 464	,["continent"] = 1	,["name"] = "Azuremyst Isle"	,["pointIds"] = {120}}
+	-- ,{["id"] = 476	,["continent"] = 1	,["name"] = "Bloodmyst Isle"}
+	-- ,{["id"] = 42	,["continent"] = 1	,["name"] = "Darkshore"}
+	,{["id"] = 381	,["continent"] = 1	,["name"] = "Darnassus"			,["pointIds"] = {30, 31, 32, 33}}
+	-- ,{["id"] = 101	,["continent"] = 1	,["name"] = "Desolace"}
+	-- ,{["id"] = 4	,["continent"] = 1	,["name"] = "Durotar"}
+	-- ,{["id"] = 141	,["continent"] = 1	,["name"] = "Dustwallow Marsh"}
+	-- ,{["id"] = 182	,["continent"] = 1	,["name"] = "Felwood"}
+	-- ,{["id"] = 121	,["continent"] = 1	,["name"] = "Feralas"}
+	-- ,{["id"] = 795	,["continent"] = 1	,["name"] = "Molten Front"}
+	-- ,{["id"] = 241	,["continent"] = 1	,["name"] = "Moonglade"}
+	-- ,{["id"] = 606	,["continent"] = 1	,["name"] = "Mount Hyjal"}
+	-- ,{["id"] = 9	,["continent"] = 1	,["name"] = "Mulgore"}
+	-- ,{["id"] = 11	,["continent"] = 1	,["name"] = "Northern Barrens"}
+	,{["id"] = 321	,["continent"] = 1	,["name"] = "Orgrimmar"			,["pointIds"] = {40, 41, 42, 43, 44, 45, 46, 47, 48, 49}}
+	-- ,{["id"] = 261	,["continent"] = 1	,["name"] = "Silithus"}
+	-- ,{["id"] = 607	,["continent"] = 1	,["name"] = "Southern Barrens"}
+	-- ,{["id"] = 81	,["continent"] = 1	,["name"] = "Stonetalon Mountains"}
+	-- ,{["id"] = 161	,["continent"] = 1	,["name"] = "Tanaris"}
+	,{["id"] = 41	,["continent"] = 1	,["name"] = "Teldrassil"		,["pointIds"] = {114, 115, 116, 117, 118, 119}}
+	,{["id"] = 471	,["continent"] = 1		,["name"] = "The Exodar"	,["pointIds"] = {35, 36, 37, 38}}
+	-- ,{["id"] = 61	,["continent"] = 1	,["name"] = "Thousand Needles"}
+	,{["id"] = 362	,["continent"] = 1	,["name"] = "Thunder Bluff"		,["pointIds"] = {50, 51, 52, 53, 54, 55, 56}}
+	-- ,{["id"] = 720	,["continent"] = 1	,["name"] = "Uldum"}
+	-- ,{["id"] = 201	,["continent"] = 1	,["name"] = "Un'Goro Crater"}
+	-- ,{["id"] = 281	,["continent"] = 1	,["name"] = "Winterspring"}
 	
 	-- Eastern Kingdoms
-	-- ,{["id"] = 614	,["continent"] = "Eastern Kingdoms"	,["name"] = "Abyssal Depths"	,["pointIds"] = {}}
-	-- ,{["id"] = 16	,["continent"] = "Eastern Kingdoms"	,["name"] = "Arathi Highlands"}
-	-- ,{["id"] = 17	,["continent"] = "Eastern Kingdoms"	,["name"] = "Badlands"}
-	-- ,{["id"] = 19	,["continent"] = "Eastern Kingdoms"	,["name"] = "Blasted Lands"}
-	-- ,{["id"] = 29	,["continent"] = "Eastern Kingdoms"	,["name"] = "Burning Steppes"}
-	-- ,{["id"] = 32	,["continent"] = "Eastern Kingdoms"	,["name"] = "Deadwind Pass"}
-	,{["id"] = 27	,["continent"] = "Eastern Kingdoms"	,["name"] = "Dun Morogh"		,["pointIds"] = {107, 108, 109, 110, 111, 112, 113}}
-	-- ,{["id"] = 34	,["continent"] = "Eastern Kingdoms"	,["name"] = "Duskwood"}
-	-- ,{["id"] = 23	,["continent"] = "Eastern Kingdoms"	,["name"] = "Eastern Plaguelands"}
-	,{["id"] = 30	,["continent"] = "Eastern Kingdoms"	,["name"] = "Elwynn Forest"		,["pointIds"] = {91, 92, 92, 93, 94, 95, 96, 97, 98, 99}}
-	,{["id"] = 462	,["continent"] = "Eastern Kingdoms"	,["name"] = "Eversong Woods"	,["pointIds"] = {80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90}}
-	-- ,{["id"] = 463	,["continent"] = "Eastern Kingdoms"	,["name"] = "Ghostlands"}
-	-- ,{["id"] = 545	,["continent"] = "Eastern Kingdoms"	,["name"] = "Gilneas"}
-	-- ,{["id"] = 611	,["continent"] = "Eastern Kingdoms"	,["name"] = "Gilneas City"}
-	-- ,{["id"] = 24	,["continent"] = "Eastern Kingdoms"	,["name"] = "Hillsbrad Foothills"}
-	,{["id"] = 341	,["continent"] = "Eastern Kingdoms"	,["name"] = "Ironforge"			,["pointIds"] = {20, 21, 22, 23, 24, 25, 26 ,27 ,28 ,29}}
-	-- ,{["id"] = 499	,["continent"] = "Eastern Kingdoms"	,["name"] = "Isle of Quel'Danas"}
-	-- ,{["id"] = 610	,["continent"] = "Eastern Kingdoms"	,["name"] = "Kelp'thar Forest"}
-	-- ,{["id"] = 35	,["continent"] = "Eastern Kingdoms"	,["name"] = "Loch Modan"}
-	-- ,{["id"] = 37	,["continent"] = "Eastern Kingdoms"	,["name"] = "Northern Stranglethorn"}
-	-- ,{["id"] = 36	,["continent"] = "Eastern Kingdoms"	,["name"] = "Redridge Mountains"}
-	-- ,{["id"] = 684	,["continent"] = "Eastern Kingdoms"	,["name"] = "Ruins of Gilneas"}
-	-- ,{["id"] = 685	,["continent"] = "Eastern Kingdoms"	,["name"] = "Ruins of Gilneas City"}
-	-- ,{["id"] = 28	,["continent"] = "Eastern Kingdoms"	,["name"] = "Searing Gorge"}
-	-- ,{["id"] = 615	,["continent"] = "Eastern Kingdoms"	,["name"] = "Shimmering Expanse"}
-	,{["id"] = 480	,["continent"] = "Eastern Kingdoms"	,["name"] = "Silvermoon City"	,["pointIds"] = {70,71, 72, 73, 74, 75, 76}}
-	-- ,{["id"] = 21	,["continent"] = "Eastern Kingdoms"	,["name"] = "Silverpine Forest"}
-	,{["id"] = 301	,["continent"] = "Eastern Kingdoms"	,["name"] = "Stormwind City"	,["pointIds"] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}}
-	-- ,{["id"] = 38	,["continent"] = "Eastern Kingdoms"	,["name"] = "Swamp of Sorrows"}
-	-- ,{["id"] = 673	,["continent"] = "Eastern Kingdoms"	,["name"] = "The Cape of Stranglethorn"}
-	-- ,{["id"] = 26	,["continent"] = "Eastern Kingdoms"	,["name"] = "The Hinterlands"}
-	-- ,{["id"] = 502	,["continent"] = "Eastern Kingdoms"	,["name"] = "The Scarlet Enclave"}
-	-- ,{["id"] = 20	,["continent"] = "Eastern Kingdoms"	,["name"] = "Tirisfal Glades"}
-	-- ,{["id"] = 708	,["continent"] = "Eastern Kingdoms"	,["name"] = "Tol Barad"}
-	-- ,{["id"] = 709	,["continent"] = "Eastern Kingdoms"	,["name"] = "Tol Barad Peninsula"}
-	-- ,{["id"] = 700	,["continent"] = "Eastern Kingdoms"	,["name"] = "Twilight Highlands"}
-	,{["id"] = 382	,["continent"] = "Eastern Kingdoms"	,["name"] = "Undercity"			,["pointIds"] = {60, 61, 62, 63, 64, 65, 66, 67}}
-	-- ,{["id"] = 613	,["continent"] = "Eastern Kingdoms"	,["name"] = "Vashj'ir"}
-	-- ,{["id"] = 22	,["continent"] = "Eastern Kingdoms"	,["name"] = "Western Plaguelands"}
-	,{["id"] = 39	,["continent"] = "Eastern Kingdoms"	,["name"] = "Westfall"			,["pointIds"] = {100, 101, 102, 103, 104, 105, 106}}
-	-- ,{["id"] = 40	,["continent"] = "Eastern Kingdoms"	,["name"] = "Wetlands"}
+	-- ,{["id"] = 614	,["continent"] = 2	,["name"] = "Abyssal Depths"	,["pointIds"] = {}}
+	-- ,{["id"] = 16	,["continent"] = 2	,["name"] = "Arathi Highlands"}
+	-- ,{["id"] = 17	,["continent"] = 2	,["name"] = "Badlands"}
+	-- ,{["id"] = 19	,["continent"] = 2	,["name"] = "Blasted Lands"}
+	-- ,{["id"] = 29	,["continent"] = 2	,["name"] = "Burning Steppes"}
+	-- ,{["id"] = 32	,["continent"] = 2	,["name"] = "Deadwind Pass"}
+	,{["id"] = 27	,["continent"] = 2	,["name"] = "Dun Morogh"		,["pointIds"] = {107, 108, 109, 110, 111, 112, 113}}
+	-- ,{["id"] = 34	,["continent"] = 2	,["name"] = "Duskwood"}
+	-- ,{["id"] = 23	,["continent"] = 2	,["name"] = "Eastern Plaguelands"}
+	,{["id"] = 30	,["continent"] = 2	,["name"] = "Elwynn Forest"		,["pointIds"] = {91, 92, 92, 93, 94, 95, 96, 97, 98, 99}}
+	,{["id"] = 462	,["continent"] = 2	,["name"] = "Eversong Woods"	,["pointIds"] = {80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90}}
+	-- ,{["id"] = 463	,["continent"] = 2	,["name"] = "Ghostlands"}
+	-- ,{["id"] = 545	,["continent"] = 2	,["name"] = "Gilneas"}
+	-- ,{["id"] = 611	,["continent"] = 2	,["name"] = "Gilneas City"}
+	-- ,{["id"] = 24	,["continent"] = 2	,["name"] = "Hillsbrad Foothills"}
+	,{["id"] = 341	,["continent"] = 2	,["name"] = "Ironforge"			,["pointIds"] = {20, 21, 22, 23, 24, 25, 26 ,27 ,28 ,29}}
+	-- ,{["id"] = 499	,["continent"] = 2	,["name"] = "Isle of Quel'Danas"}
+	-- ,{["id"] = 610	,["continent"] = 2	,["name"] = "Kelp'thar Forest"}
+	-- ,{["id"] = 35	,["continent"] = 2	,["name"] = "Loch Modan"}
+	-- ,{["id"] = 37	,["continent"] = 2	,["name"] = "Northern Stranglethorn"}
+	-- ,{["id"] = 36	,["continent"] = 2	,["name"] = "Redridge Mountains"}
+	-- ,{["id"] = 684	,["continent"] = 2	,["name"] = "Ruins of Gilneas"}
+	-- ,{["id"] = 685	,["continent"] = 2	,["name"] = "Ruins of Gilneas City"}
+	-- ,{["id"] = 28	,["continent"] = 2	,["name"] = "Searing Gorge"}
+	-- ,{["id"] = 615	,["continent"] = 2	,["name"] = "Shimmering Expanse"}
+	,{["id"] = 480	,["continent"] = 2	,["name"] = "Silvermoon City"	,["pointIds"] = {70,71, 72, 73, 74, 75, 76}}
+	-- ,{["id"] = 21	,["continent"] = 2	,["name"] = "Silverpine Forest"}
+	,{["id"] = 301	,["continent"] = 2	,["name"] = "Stormwind City"	,["pointIds"] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}}
+	-- ,{["id"] = 38	,["continent"] = 2	,["name"] = "Swamp of Sorrows"}
+	-- ,{["id"] = 673	,["continent"] = 2	,["name"] = "The Cape of Stranglethorn"}
+	-- ,{["id"] = 26	,["continent"] = 2	,["name"] = "The Hinterlands"}
+	-- ,{["id"] = 502	,["continent"] = 2	,["name"] = "The Scarlet Enclave"}
+	-- ,{["id"] = 20	,["continent"] = 2	,["name"] = "Tirisfal Glades"}
+	-- ,{["id"] = 708	,["continent"] = 2	,["name"] = "Tol Barad"}
+	-- ,{["id"] = 709	,["continent"] = 2	,["name"] = "Tol Barad Peninsula"}
+	-- ,{["id"] = 700	,["continent"] = 2	,["name"] = "Twilight Highlands"}
+	,{["id"] = 382	,["continent"] = 2	,["name"] = "Undercity"			,["pointIds"] = {60, 61, 62, 63, 64, 65, 66, 67}}
+	-- ,{["id"] = 613	,["continent"] = 2	,["name"] = "Vashj'ir"}
+	-- ,{["id"] = 22	,["continent"] = 2	,["name"] = "Western Plaguelands"}
+	,{["id"] = 39	,["continent"] = 2	,["name"] = "Westfall"			,["pointIds"] = {100, 101, 102, 103, 104, 105, 106}}
+	-- ,{["id"] = 40	,["continent"] = 2	,["name"] = "Wetlands"}
 	
 	-- Outland
-	-- ,{["id"] = 466	,["continent"] = "Outland"	,["name"] = "Outland"}
-	-- ,{["id"] = 475	,["continent"] = "Outland"	,["name"] = "Blade's Edge Mountains"}
-	-- ,{["id"] = 465	,["continent"] = "Outland"	,["name"] = "Hellfire Peninsula"}
-	-- ,{["id"] = 477	,["continent"] = "Outland"	,["name"] = "Nagrand"}
-	-- ,{["id"] = 479	,["continent"] = "Outland"	,["name"] = "Netherstorm"}
-	-- ,{["id"] = 473	,["continent"] = "Outland"	,["name"] = "Shadowmoon Valley"}
-	-- ,{["id"] = 481	,["continent"] = "Outland"	,["name"] = "Shattrath City"}
-	-- ,{["id"] = 478	,["continent"] = "Outland"	,["name"] = "Terokkar Forest"}
-	-- ,{["id"] = 467	,["continent"] = "Outland"	,["name"] = "Zangarmarsh"}
+	-- ,{["id"] = 466	,["continent"] = 3	,["name"] = 3}
+	-- ,{["id"] = 475	,["continent"] = 3	,["name"] = "Blade's Edge Mountains"}
+	-- ,{["id"] = 465	,["continent"] = 3	,["name"] = "Hellfire Peninsula"}
+	-- ,{["id"] = 477	,["continent"] = 3	,["name"] = "Nagrand"}
+	-- ,{["id"] = 479	,["continent"] = 3	,["name"] = "Netherstorm"}
+	-- ,{["id"] = 473	,["continent"] = 3	,["name"] = "Shadowmoon Valley"}
+	-- ,{["id"] = 481	,["continent"] = 3	,["name"] = "Shattrath City"}
+	-- ,{["id"] = 478	,["continent"] = 3	,["name"] = "Terokkar Forest"}
+	-- ,{["id"] = 467	,["continent"] = 3	,["name"] = "Zangarmarsh"}
 	
 	-- Northrend
-	-- ,{["id"] = 485	,["continent"] = "Northrend"	,["name"] = "Northrend"}
-	-- ,{["id"] = 486	,["continent"] = "Northrend"	,["name"] = "Borean Tundra"}
-	-- ,{["id"] = 510	,["continent"] = "Northrend"	,["name"] = "Crystalsong Forest"}
-	-- ,{["id"] = 504	,["continent"] = "Northrend"	,["name"] = "Dalaran"}
-	-- ,{["id"] = 488	,["continent"] = "Northrend"	,["name"] = "Dragonblight"}
-	-- ,{["id"] = 490	,["continent"] = "Northrend"	,["name"] = "Grizzly Hills"}
-	-- ,{["id"] = 491	,["continent"] = "Northrend"	,["name"] = "Howling Fjord"}
-	-- ,{["id"] = 541	,["continent"] = "Northrend"	,["name"] = "Hrothgar's Landing"}
-	-- ,{["id"] = 492	,["continent"] = "Northrend"	,["name"] = "Icecrown"}
-	-- ,{["id"] = 493	,["continent"] = "Northrend"	,["name"] = "Sholazar Basin"}
-	-- ,{["id"] = 495	,["continent"] = "Northrend"	,["name"] = "The Storm Peaks"}
-	-- ,{["id"] = 501	,["continent"] = "Northrend"	,["name"] = "Wintergrasp"}
-	-- ,{["id"] = 496	,["continent"] = "Northrend"	,["name"] = "Zul'Drak"}
+	-- ,{["id"] = 485	,["continent"] = 4	,["name"] = 4}
+	-- ,{["id"] = 486	,["continent"] = 4	,["name"] = "Borean Tundra"}
+	-- ,{["id"] = 510	,["continent"] = 4	,["name"] = "Crystalsong Forest"}
+	-- ,{["id"] = 504	,["continent"] = 4	,["name"] = "Dalaran"}
+	-- ,{["id"] = 488	,["continent"] = 4	,["name"] = "Dragonblight"}
+	-- ,{["id"] = 490	,["continent"] = 4	,["name"] = "Grizzly Hills"}
+	-- ,{["id"] = 491	,["continent"] = 4	,["name"] = "Howling Fjord"}
+	-- ,{["id"] = 541	,["continent"] = 4	,["name"] = "Hrothgar's Landing"}
+	-- ,{["id"] = 492	,["continent"] = 4	,["name"] = "Icecrown"}
+	-- ,{["id"] = 493	,["continent"] = 4	,["name"] = "Sholazar Basin"}
+	-- ,{["id"] = 495	,["continent"] = 4	,["name"] = "The Storm Peaks"}
+	-- ,{["id"] = 501	,["continent"] = 4	,["name"] = "Wintergrasp"}
+	-- ,{["id"] = 496	,["continent"] = 4	,["name"] = "Zul'Drak"}
 	
 	-- Pandaria
-	-- ,{["id"] = 862	,["continent"] = "Pandaria"	,["name"] = "Pandaria"}
-	-- ,{["id"] = 858	,["continent"] = "Pandaria"	,["name"] = "Dread Wastes"}
-	-- ,{["id"] = 929	,["continent"] = "Pandaria"	,["name"] = "Isle of Giants"}
-	-- ,{["id"] = 928	,["continent"] = "Pandaria"	,["name"] = "Isle of Thunder"}
-	-- ,{["id"] = 857	,["continent"] = "Pandaria"	,["name"] = "Krasarang Wilds"}
-	-- ,{["id"] = 809	,["continent"] = "Pandaria"	,["name"] = "Kun-Lai Summit"}
-	-- ,{["id"] = 905	,["continent"] = "Pandaria"	,["name"] = "Shrine of Seven Stars"}
-	-- ,{["id"] = 903	,["continent"] = "Pandaria"	,["name"] = "Shrine of Two Moons"}
-	-- ,{["id"] = 806	,["continent"] = "Pandaria"	,["name"] = "The Jade Forest"}
-	-- ,{["id"] = 873	,["continent"] = "Pandaria"	,["name"] = "The Veiled Stair"}
-	-- ,{["id"] = 808	,["continent"] = "Pandaria"	,["name"] = "The Wandering Isle"}
-	-- ,{["id"] = 951	,["continent"] = "Pandaria"	,["name"] = "Timeless Isle"}
-	-- ,{["id"] = 810	,["continent"] = "Pandaria"	,["name"] = "Townlong Steppes"}
-	-- ,{["id"] = 811	,["continent"] = "Pandaria"	,["name"] = "Vale of Eternal Blossoms"}
-	-- ,{["id"] = 807	,["continent"] = "Pandaria"	,["name"] = "Valley of the Four Winds"}
+	-- ,{["id"] = 862	,["continent"] = 5	,["name"] = 5}
+	-- ,{["id"] = 858	,["continent"] = 5	,["name"] = "Dread Wastes"}
+	-- ,{["id"] = 929	,["continent"] = 5	,["name"] = "Isle of Giants"}
+	-- ,{["id"] = 928	,["continent"] = 5	,["name"] = "Isle of Thunder"}
+	-- ,{["id"] = 857	,["continent"] = 5	,["name"] = "Krasarang Wilds"}
+	-- ,{["id"] = 809	,["continent"] = 5	,["name"] = "Kun-Lai Summit"}
+	-- ,{["id"] = 905	,["continent"] = 5	,["name"] = "Shrine of Seven Stars"}
+	-- ,{["id"] = 903	,["continent"] = 5	,["name"] = "Shrine of Two Moons"}
+	-- ,{["id"] = 806	,["continent"] = 5	,["name"] = "The Jade Forest"}
+	-- ,{["id"] = 873	,["continent"] = 5	,["name"] = "The Veiled Stair"}
+	-- ,{["id"] = 808	,["continent"] = 5	,["name"] = "The Wandering Isle"}
+	-- ,{["id"] = 951	,["continent"] = 5	,["name"] = "Timeless Isle"}
+	-- ,{["id"] = 810	,["continent"] = 5	,["name"] = "Townlong Steppes"}
+	-- ,{["id"] = 811	,["continent"] = 5	,["name"] = "Vale of Eternal Blossoms"}
+	-- ,{["id"] = 807	,["continent"] = 5	,["name"] = "Valley of the Four Winds"}
 	
 	-- Draenor
-	-- ,{["id"] = 962	,["continent"] = "Draenor"	,["name"] = "Draenor"}
-	-- ,{["id"] = 978	,["continent"] = "Draenor"	,["name"] = "Ashran"}
-	-- ,{["id"] = 941	,["continent"] = "Draenor"	,["name"] = "Frostfire Ridge"}
-	-- ,{["id"] = 949	,["continent"] = "Draenor"	,["name"] = "Gorgrond"}
-	-- ,{["id"] = 950	,["continent"] = "Draenor"	,["name"] = "Nagrand"}
-	-- ,{["id"] = 947	,["continent"] = "Draenor"	,["name"] = "Shadowmoon Valley"}
-	-- ,{["id"] = 948	,["continent"] = "Draenor"	,["name"] = "Spires of Arak"}
-	-- ,{["id"] = 1009	,["continent"] = "Draenor"	,["name"] = "Stormshield"}
-	-- ,{["id"] = 946	,["continent"] = "Draenor"	,["name"] = "Talador"}
-	-- ,{["id"] = 945	,["continent"] = "Draenor"	,["name"] = "Tanaan Jungle"}
+	-- ,{["id"] = 962	,["continent"] = 6	,["name"] = 6}
+	-- ,{["id"] = 978	,["continent"] = 6	,["name"] = "Ashran"}
+	-- ,{["id"] = 941	,["continent"] = 6	,["name"] = "Frostfire Ridge"}
+	-- ,{["id"] = 949	,["continent"] = 6	,["name"] = "Gorgrond"}
+	-- ,{["id"] = 950	,["continent"] = 6	,["name"] = "Nagrand"}
+	-- ,{["id"] = 947	,["continent"] = 6	,["name"] = "Shadowmoon Valley"}
+	-- ,{["id"] = 948	,["continent"] = 6	,["name"] = "Spires of Arak"}
+	-- ,{["id"] = 1009	,["continent"] = 6	,["name"] = "Stormshield"}
+	-- ,{["id"] = 946	,["continent"] = 6	,["name"] = "Talador"}
+	-- ,{["id"] = 945	,["continent"] = 6	,["name"] = "Tanaan Jungle"}
 }
 ,["points"] = {
 	[1]		= 	{["title"] = "Cathedral of Light"	,["x"] = 53.16	,["y"] = 51.50	,["scale"] = 2	,["lore"] = "The Cathedral is home to some of the most powerful and influential holy leaders in the world.\nDuthorian Rall is perhaps Stormwind City's most accomplished paladin.\nThe archbishop himself also resides within the hallowed chambers."}

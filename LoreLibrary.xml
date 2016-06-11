@@ -22,14 +22,14 @@
 				</Texture>
 			</Layer>
 			<Layer level="ARTWORK">
-				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="This is a title right here but longer">
+				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="">
 					<Size y="10"/>
 					<Anchors>
 						<Anchor point="TOPLEFT" x="13" y="-11"/>
 						<Anchor point="RIGHT" x="-13"/>
 					</Anchors>
 				</FontString>
-				<FontString name="$parentSubText" inherits="GameFontWhite" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="text" text="Added to your library.">
+				<FontString name="$parentSubText" inherits="GameFontWhite" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="text" text="LOLIB_LIBRARY_ADDED">
 					<Anchors>
 						<Anchor point="BOTTOM" y="11"/>
 					</Anchors>
@@ -78,15 +78,6 @@
 		</Layers>
 		
 		<Scripts>
-		<!--
-			<OnEnter>
-				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-				print(self.showTooltips);
-				if (self.showTooltips and self.lore) then
-					GameTooltip:SetText(self.lore.title);
-				end
-			</OnEnter>
-		-->
 			<OnLeave>
 				GameTooltip:Hide();
 			</OnLeave>
@@ -197,7 +188,7 @@
 		
 		<Layers>
 			<Layer level="ARTWORK">
-				<FontString inherits="QuestFont" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="text" maxLines="3" text="This is where text goes">
+				<FontString inherits="QuestFont" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="text" maxLines="3" text="">
 					<Anchors>
 						<Anchor point="LEFT" relativeKey="$parent.icon" relativePoint="RIGHT" x="7"/>
 						<Anchor point="RIGHT" x="7"/>
@@ -470,7 +461,7 @@
 				</FontString>
 			</Layer>
 			<Layer level="OVERLAY">
-				<FontString inherits="GameFontWhite" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="new" text="New !">
+				<FontString inherits="GameFontWhite" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="new" text="LOLIB_NEW">
 					<Anchors>
 						<Anchor point="LEFT" x="20" y=""/>
 					</Anchors>
@@ -560,12 +551,12 @@
 		</Anchors>
 
 		<Frames>
-			<Button name="$parentTab1" inherits="LOLIBCollectionTab" text="Documents" id="1">
+			<Button name="$parentTab1" inherits="LOLIBCollectionTab" text="LOLIB_TAB_LORE" id="1">
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="BOTTOMLEFT" x="11" y="2"/>
 				</Anchors>
 			</Button>
-			<Button name="$parentTab2" inherits="LOLIBCollectionTab" text="Areas" id="2">
+			<Button name="$parentTab2" inherits="LOLIBCollectionTab" text="LOLIB_TAB_POI" id="2">
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="$parentTab1" relativePoint="RIGHT" x="-16" y="0"/>
 				</Anchors>
@@ -607,7 +598,7 @@
 		<Scripts>
 			<OnLoad>
 				self:SetClampedToScreen(true);
-				self.TitleText:SetText("Document Library");
+				self.TitleText:SetText(LOLIB_TITLE_DOCUMENT);
 				self:RegisterForDrag("LeftButton");
 				self:SetScript("OnDragStart", self.StartMoving );
 				self:SetScript("OnDragStop", self.StopMovingOrSizing);
@@ -638,7 +629,7 @@
 				</Anchors>
 				<Layers>
 					<Layer level="ARTWORK">
-						<FontString parentKey="count" inherits="GameFontHighlightSmall" justifyH="RIGHT" text="25">
+						<FontString parentKey="count" inherits="GameFontHighlightSmall" justifyH="RIGHT" text="">
 							<Anchors>
 								<Anchor point="TOP" x="-7" y="-5"/>
 							</Anchors>
@@ -652,13 +643,7 @@
 					</Layer>
 				</Layers>
 				<Scripts>
-					<OnEnter>
-						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-						GameTooltip:SetText("Lost pages" ,1 ,1 ,1);
-						GameTooltip:AddLine("Pages are gained with every 20 pieces of lore you unlock, and can be used to unlock unavailable lore." ,1 ,0.83 ,0 ,true);
-						GameTooltip:AddDoubleLine("Unlocks until next:", (self.untilNext or 20) ,1 ,1 ,1 ,1 ,1 ,1 );
-						GameTooltip:Show();
-					</OnEnter>
+					
 					<OnLeave>
 						GameTooltip:Hide();
 					</OnLeave>
@@ -699,7 +684,7 @@
 				
 				<Layers>
 					<Layer level="ARTWORK">
-						<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" text="Daily Suggestions" parentKey="title">
+						<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" text="LOLIB_DAILY_SUGGESTIONS" parentKey="title">
 							<Anchors>
 								<Anchor point="TOP" y="-13"/>
 							</Anchors>
@@ -795,7 +780,7 @@
 										</Texture>
 									</Layer>
 									<Layer level="ARTWORK">
-										<FontString inherits="GameFontBlack" justifyH="CENTER" maxLines="2" parentKey="info" text="You can use a lost page\nto unlock this lore.">
+										<FontString inherits="GameFontBlack" justifyH="CENTER" maxLines="2" parentKey="info" text="LOLIB_LOSTPAGE_UNLOCK_INFO">
 											<Anchors>
 												<Anchor point="TOPLEFT" x="5" y="-15"/>
 												<Anchor point="TOPRIGHT" x="-5" y="-15"/>
@@ -825,14 +810,6 @@
 												self.pushed:SetPoint("TOPLEFT", self, "TOPLEFT", 1, -1);
 												self.pushed:SetPoint("BOTTOMRIGHT", self, "BOTTOMRIGHT", 1, -1);
 											</OnLoad>	
-											<OnEnter>
-												GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-												if (self:IsEnabled()) then
-													GameTooltip:SetText("Use a lost page to unlock this lore.");
-												else
-													GameTooltip:SetText("You have no lost pages available.");
-												end
-											</OnEnter>
 											<OnLeave>
 												GameTooltip:Hide();
 											</OnLeave>
@@ -859,7 +836,7 @@
 					
 						<Layers>
 							<Layer level="OVERLAY">
-								<FontString name="$parentText" inherits="GameFontBlack" justifyH="RIGHT" parentKey="text" text="Page 1">
+								<FontString name="$parentText" inherits="GameFontBlack" justifyH="RIGHT" parentKey="text" text="">
 									<Size>
 										<AbsDimension x="102" y="0"/>
 									</Size>
@@ -1122,7 +1099,7 @@
 						</Texture>
 					</Layer>
 					<Layer level="ARTWORK">
-						<FontString name="$parentTitle" inherits="GameFontNormalSmall" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="Suggestion completed">
+						<FontString name="$parentTitle" inherits="GameFontNormalSmall" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="LOLIB_SUGGESTION_COMPLETE">
 							<Size c="120" y="10"/>
 							<Anchors>
 								<Anchor point="TOP" y="-2"/>

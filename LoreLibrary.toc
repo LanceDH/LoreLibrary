@@ -4,10 +4,8 @@
 ## Author: LanceDH
 ## Version: 6.2.08
 ## SavedVariables: LoLibDB
-LoreLibrary.xml
-LoreLibrary.lua
-LoreLibraryPoI.xml
-LoreLibraryPoI.lua
+
+Locals.lua
 ItemData.lua
 PoIData.lua
 Localization/deDE.lua
@@ -16,3 +14,9 @@ Localization/frFR.lua
 Localization/esES.lua
 Localization/ptBR.lua
 Localization/itIT.lua
+
+LoreLibrary.lua
+LoreLibrary.xml
+LoreLibraryPoI.lua
+LoreLibraryPoI.xml
+

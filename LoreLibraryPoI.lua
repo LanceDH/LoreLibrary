@@ -3,25 +3,18 @@ local _addonName, _addon = ...;
 
 local LoreLibrary = _addon.aceAddon;
 
+local _L = _addon.locals;
+
 local _filter = {
 			["continents"] = {
-					["Kalimdor"] = true,
-					["Eastern Kingdoms"] = true,
-					["Outland"] = true,
-					["Northrend"] = true,
-					["Pandaria"] = true,
-					["Draenor"] = true
+					[1] = {["enabled"] = true, ["name"] = _L["S_CONTINENT_KALIMDOR"]},
+					[2] = {["enabled"] = true, ["name"] = _L["S_CONTINENT_EK"]},
+					[3] = {["enabled"] = true, ["name"] = _L["S_CONTINENT_OUTLAND"]},
+					[4] = {["enabled"] = true, ["name"] = _L["S_CONTINENT_NORTHREND"]},
+					[5] = {["enabled"] = true, ["name"] = _L["S_CONTINENT_PANDARIA"]},
+					[6] = {["enabled"] = true, ["name"] = _L["S_CONTINENT_DRAENOR"]},
 				}
 			}
-
-local STRING_UNKNOWN_POINT = "Unknown Area"; 
-local STRING_UNKNOWN_POINT_DETAIL = "You have not yet explored this area"; 
-local FORMAT_PROGRESS = "%d/%d";
-local SIZE_LISTHEIGHT_ZONE = 30;
-local SIZE_LISTHEIGHT_POINT = 35;
-local SIZE_LISTHEIGHT_POINT_SELECTED = 15;
-local DISTANCE_POINT_UNLOCK = 0.01;
-local FORMAT_PROGRESS = "%d/%d";
 
 local BACKDROP_LIST_POINT = {
 		bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background"
@@ -114,7 +107,7 @@ end
 
 local function SetAllZoneSourcesTo(enable)
 	for k, v in pairs(_filter.continents) do
-		_filter.continents[k] = enable;
+		_filter.continents[k].enabled = enable;
 	end
 end
 
@@ -145,12 +138,12 @@ local function InitZoneFilter(self, level)
 
 		info.notCheckable = false;
 		for k, v in pairs(_filter.continents) do
-			info.text = k;
+			info.text = v.name;
 			info.func = function(_, _, _, value)
-								_filter.continents[k] = value;
+								_filter.continents[k].enabled = value;
 								_addon:UpdateZoneList();
 							end
-			info.checked = function() return _filter.continents[k] end;
+			info.checked = function() return _filter.continents[k].enabled end;
 			UIDropDownMenu_AddButton(info, level);			
 		end
 	end
@@ -176,7 +169,7 @@ function _addon:UpdateAreaProgressBar()
 	LoreLibraryPoI.progressBar:SetMinMaxValues(0, maxProgress);
 	LoreLibraryPoI.progressBar:SetValue(currentProgress);
 
-	LoreLibraryPoI.progressBar.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
+	LoreLibraryPoI.progressBar.text:SetFormattedText(_L["F_PROGRESS"], currentProgress, maxProgress);
 end
 
 function _addon:ZoneIsCompleted(zone)
@@ -259,7 +252,7 @@ function _addon:GetFilteredZoneList()
 	
 	local filterList = {};
 	for k, zone in ipairs(list) do
-		if _filter.continents[zone.continent] then
+		if _filter.continents[zone.continent].enabled then
 			table.insert(filterList, zone);
 		end
 	end
@@ -305,7 +298,7 @@ function _addon:UpdateZoneList()
 		end
 	end
 	
-	HybridScrollFrame_Update(scrollFrame, #list * SIZE_LISTHEIGHT_ZONE, scrollFrame:GetHeight());
+	HybridScrollFrame_Update(scrollFrame, #list * _L["N_LISTHEIGHT_ZONE"], scrollFrame:GetHeight());
 end
 
 function _addon:UpdatePointList()
@@ -336,7 +329,7 @@ function _addon:UpdatePointList()
 			if (point.unlocked) then
 				button.title:SetText(point.title);
 			else
-				button.title:SetText(STRING_UNKNOWN_POINT);
+				button.title:SetText(_L["S_UNKNOWN_POINT"]);
 			end
 			button.icon:SetDesaturated(not point.unlocked);
 			
@@ -348,7 +341,7 @@ function _addon:UpdatePointList()
 		end
 	end
 	
-	HybridScrollFrame_Update(scrollFrame, #list * SIZE_LISTHEIGHT_POINT, scrollFrame:GetHeight());
+	HybridScrollFrame_Update(scrollFrame, #list * _L["N_LISTHEIGHT_POINT"], scrollFrame:GetHeight());
 	
 	-- hide excess buttons
 	buttons = scrollFrame.buttons;
@@ -426,22 +419,17 @@ function _addon:InitPoIFrame()
 	-- Zone Scrollframe
 	LoreLibraryPoIZoneList.scrollBar.doNotHide = true;
 	HybridScrollFrame_CreateButtons(LoreLibraryPoIZoneList, "LOLIB_ListZoneTemplate", 1, 0);
-	HybridScrollFrame_Update(LoreLibraryPoIZoneList, #_addon.PoI["zones"] * SIZE_LISTHEIGHT_ZONE, LoreLibraryPoIZoneList:GetHeight());
+	HybridScrollFrame_Update(LoreLibraryPoIZoneList, #_addon.PoI["zones"] * _L["N_LISTHEIGHT_ZONE"], LoreLibraryPoIZoneList:GetHeight());
 	LoreLibraryPoIZoneList.update = function() _addon:UpdateZoneList(); end;
 	
 	
 	-- Points Scrollframe
 	LoreLibraryPoIPointList.scrollBar.doNotHide = true;
 	HybridScrollFrame_CreateButtons(LoreLibraryPoIPointList, "LOLIB_ListPointTemplate", 1, 0);
-	HybridScrollFrame_Update(LoreLibraryPoIPointList, #_addon.PoI["zones"] * SIZE_LISTHEIGHT_POINT, LoreLibraryPoIPointList:GetHeight());
+	HybridScrollFrame_Update(LoreLibraryPoIPointList, #_addon.PoI["zones"] * _L["N_LISTHEIGHT_POINT"], LoreLibraryPoIPointList:GetHeight());
 	LoreLibraryPoIPointList.update = function() _addon:UpdatePointList(); end;
-	
-	-- Detail Scrollframe
+
 	LoreLibraryPoIDetailScroll.scrollBarHideable = 1
-	--LoreLibraryPoIDetailScroll.scrollBar.doNotHide = false;
-	--HybridScrollFrame_CreateButtons(LoreLibraryPoIDetailScroll, "LOLIB_PoIDetailTemplate", 1, 0);
-	--HybridScrollFrame_Update(LoreLibraryPoIDetailScroll, LoreLibraryPoIDetailScroll:GetHeight(), LoreLibraryPoIDetailScroll:GetHeight());
-	--LoreLibraryPoIDetailScroll.update = function() _addon:UpdatePointDetailScroller(); end;
 
 	LoreLibraryPoI.zone = zones[1];
 	LoreLibraryPoI.point = points[LoreLibraryPoI.zone.pointIds[1]];
@@ -569,7 +557,7 @@ function _addon:FrameUpdate(elapsed)
 			local distance = math.sqrt(math.pow(self.updateFrame.playerX - (point.x / 100), 2) + math.pow(self.updateFrame.playerY - (point.y / 100), 2));
 			local pLevel = (point.level and point.level or 1);
 			
-			local scaledReqDistance = (point.scale and point.scale * DISTANCE_POINT_UNLOCK or DISTANCE_POINT_UNLOCK);
+			local scaledReqDistance = (point.scale and point.scale * _L["N_DISTANCE_POINT_UNLOCK"] or _L["N_DISTANCE_POINT_UNLOCK"]);
 			if ((mLevel == 0 or pLevel == mLevel) and not point.unlocked and distance < scaledReqDistance) then
 				table.insert(self.db.global.unlockedPoI, point.id);
 				point.unlocked = true;
@@ -584,7 +572,6 @@ function _addon:FrameUpdate(elapsed)
 			if (distance < scaledReqDistance) then
 				output = output .. "\n" .. point.title;
 			end
-			-- output = output .. "\n " .. (distance < scaledReqDistance and "[X] " or (point.unlocked and "[  ] " or "[?] ")) .. point.title .. "    " .. distance;
 		end
 		LOLIBDEBUGTHING.text:SetText(output);
 	end
@@ -603,7 +590,7 @@ end
 function _addon:UpdateMapOverviewPoI(unlocked, total)
 	LoreLibraryMap.overview.listingPoI:Hide();
 	if total > 0 then
-		LoreLibraryMap.overview.listingPoI.text:SetFormattedText(FORMAT_PROGRESS, unlocked, total);
+		LoreLibraryMap.overview.listingPoI.text:SetFormattedText(_L["F_PROGRESS"], unlocked, total);
 		self:ShowOverviewListing(LoreLibraryMap.overview.listingPoI);
 	end
 

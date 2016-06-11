@@ -2,62 +2,32 @@
 local _addonName, _addon = ...;
 _addon.localizeds = {};
 
-local STRING_SUGGESTION_COMPLETE = "You completed a daily Lore Library suggestion.";
-local STRING_SUGGESTION_REMOVE = "Remove this suggestion to make room for a new one.";
-local STRING_SUGGESTION_EMPTY1 = "You have collected so much lore!";
-local STRING_SUGGESTION_EMPTY2 = "There is nothing left to suggest.";
-local STRING_OPTIONS_MINIMAP = "Minimap button";
-local STRING_OPTIONS_WORLDMAP_OVERLAY = "World map overlay";
-local STRING_OPTIONS_TOOLTIP = "Tooltip indicator";
-local STRING_OPTIONS_MAPOPTIONS = "World map pins";
-local STRING_OPTIONS_POPUPOPTIONS = "Popups";
-local STRING_OPTIONS_MOVEPOPUP = "Move popup";
-local STRING_OPTIONS_PINS_LORE = "Lore";
-local STRING_OPTIONS_PINS_AREA = "Area";
-local STRING_OPTIONS_PINS_UNLOCKED = "Unlocked";
-local STRING_OPTIONS_PINS_TOOLTIPS = "Tooltips";
-local STRING_LOSTPAGES_INFO = "You can use a lost page\nto unlock this lore.";
-local STRING_PINS_OPTIONS_SHOW = "Show pins";
-local STRING_PINS_OPTIONS_COLLECTED = "Show collected";
-local STRING_TITLE_DOCUMENT = "Document Library";
-local STRING_TITLE_AREA = "Area Library";
-local STRING_ERROR_COMBATLOCKDOWN = "|cFFFF0000You can't open Lore Library while in combat.|r";
-local FORMAT_LORE_UNLOCK = "Lore Library added: %s";
-local FORMAT_SUGGESTION_REMOVECOOLDOWN = "Can be removed in %s.";
-local FORMAT_SUGGESTION_UNTILNEW = "New suggestion in %s."
-local FORMAT_LOC_NOSUPPORT = "LoreLibrary: %s is not supported";
-local FORMAT_SOURCE = "%s\n%s";
-local FORMAT_PROGRESS = "%d/%d";
-local FORMAT_LORE_CONTENT = "Lore content:\nWords: %d \nPages: %d \nImages: %d";
-local SIZE_LISTBOOKHEIGHT = 40;
-local MAX_SOURCES = 9;
-local MAX_SUGGESTIONS = 3;
-local NUM_SUGGESTION_FOR_TOKEN = 5;
-local NUM_LORE_FOR_TOKEN = 20;
-local NUM_PAGETEXT_WIDTH = 280;
-local NUM_OVERVIEW_MARGIN = 15;
-local SOURCE_TITLE = "This lore can be found in:";
-local SOURCETYPE_OBJECT = "Object found in a zone.";
-local SOURCETYPE_NPC = "Can drop from an npc.";
-local SOURCETYPE_CONTAINER = "Can be found in a container.";
-local SOURCETYPE_STEALTH = "Can pickpocket from an npc.";
-local SOURCETYPE_QUEST = "Obtained during a quest.";
-local SOURCETYPE_VENDOR = "Sold by a vendor.";
-local SOURCETYPE_CHEST = "Found in a type of chest.";
-local SOURCETYPE_UNAVAILABLE = "Can no longer be obtained.";
+local _L = _addon.locals;
+
+-- Making globals for certain locals to use in XML
+LOLIB_TAB_LORE =				_L["S_TAB_LORE"];
+LOLIB_TAB_POI =					_L["S_TAB_POI"];
+LOLIB_LIBRARY_ADDED =			_L["S_LIBRARY_ADDED"];
+LOLIB_NEW = 					_L["S_NEW"];
+LOLIB_DAILY_SUGGESTIONS =		_L["S_DAILY_SUGGESTIONS"];
+LOLIB_LOSTPAGE_UNLOCK_INFO =	_L["S_LOSTPAGE_UNLOCK_INFO"];
+LOLIB_SUGGESTION_COMPLETE =		_L["S_SUGGESTION_COMPLETE"];
+LOLIB_MARK_WORLDMAP =			_L["S_MARK_WORLDMAP"];
+LOLIB_ZONE_COMPLETE =			_L["S_ZONE_COMPLETE"];
+LOLIB_TITLE_DOCUMENT =			_L["S_TITLE_DOCUMENT"];
 
 local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
 
 local _LDB = LibStub("LibDataBroker-1.1"):NewDataObject(_addonName, {
 	type = "launcher",
-	text = "Lore Library",
+	text = _L["S_LORE_LIBRARY"],
 	icon = "Interface\\ICONS\\INV_Misc_Book_07",
 	OnClick = function(self, button, down)
 		_addon:ToggleCoreFrame();
 	end,
 	OnTooltipShow = function(tt)
-		tt:AddLine("Lore Library", 1, 1, 1);
-		tt:AddLine("Click to open your library.")
+		tt:AddLine(_L["S_LORE_LIBRARY"], 1, 1, 1);
+		tt:AddLine(_L["S_MINIMAPBUTTON_INFO"]);
 	end	
 })
 local _icon = LibStub("LibDBIcon-1.0")
@@ -95,14 +65,14 @@ local _filter = {
 			["collected"] = true,
 			["notCollected"] = true,
 			["sources"] = {
-					["Object"] = true,
-					["Quest"] = true,
-					["Drop"] = true,
-					["Container"] = true,
-					["Pickpocket"] = true,
-					["Vendor"] = true,
-					["Chest"] = true,
-					["Unavailable"] = true,
+					["object"] = 		{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_OBJECT"]},
+					["quest"] = 		{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_QUEST"]},
+					["drop"] = 			{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_NPC"]},
+					["container"] = 	{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_CONTAINER"]},
+					["pickpocket"] = 	{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_STEALTH"]},
+					["vendor"] = 		{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_VENDOR"]},
+					["chest"] = 		{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_CHEST"]},
+					["unavailable"] = 	{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_UNAVAILABLE"]},
 				}
 			}
 			
@@ -138,14 +108,14 @@ local _achievementsToCheck = {
 	}
 
 local _sourceData = {
-				["object"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Object", ["tooltip"] = SOURCETYPE_OBJECT},
-				["drop"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_NPC", ["tooltip"] = SOURCETYPE_NPC},
-				["container"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Container", ["tooltip"] = SOURCETYPE_CONTAINER},
-				["pickpocket"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Stealth", ["tooltip"] = SOURCETYPE_STEALTH},
-				["vendor"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Vendor", ["tooltip"] = SOURCETYPE_VENDOR},
-				["chest"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Chest", ["tooltip"] = SOURCETYPE_CHEST},
-				["quest"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Quest", ["tooltip"] = SOURCETYPE_QUEST},
-				["unavailable"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Unavailable", ["tooltip"] = SOURCETYPE_UNAVAILABLE},
+				["object"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Object", ["tooltip"] = _L["S_SOURCEINFO_OBJECT"]},
+				["drop"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_NPC", ["tooltip"] = _L["S_SOURCEINFO_NPC"]},
+				["container"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Container", ["tooltip"] = _L["S_SOURCEINFO_CONTAINER"]},
+				["pickpocket"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Stealth", ["tooltip"] = _L["S_SOURCEINFO_STEALTH"]},
+				["vendor"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Vendor", ["tooltip"] = _L["S_SOURCEINFO_VENDOR"]},
+				["chest"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Chest", ["tooltip"] = _L["S_SOURCEINFO_CHEST"]},
+				["quest"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Quest", ["tooltip"] = _L["S_SOURCEINFO_QUEST"]},
+				["unavailable"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Unavailable", ["tooltip"] = _L["S_SOURCEINFO_UNAVAILABLE"]},
 	}
 
 ----------
@@ -155,7 +125,7 @@ local _sourceData = {
 function _addon:ToggleCoreFrame(show)
 	if (show or not LoreLibraryCore:IsShown()) then
 		if InCombatLockdown() then
-			print(STRING_ERROR_COMBATLOCKDOWN);
+			print(_L["S_ERROR_COMBATLOCKDOWN"]);
 		else
 			ShowUIPanel(LoreLibraryCore);
 		end
@@ -210,7 +180,7 @@ function _addon:UpdateMapOverviewLore(currentProgress, maxProgress)
 	LoreLibraryMap.overview.listingLore:Hide();
 	
 	if maxProgress > 0 then
-		LoreLibraryMap.overview.listingLore.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
+		LoreLibraryMap.overview.listingLore.text:SetFormattedText(_L["F_PROGRESS"], currentProgress, maxProgress);
 		self:ShowOverviewListing(LoreLibraryMap.overview.listingLore);
 	end
 
@@ -241,7 +211,7 @@ end
 
 function _addon:ShowOverviewListing(listing)
 	local shown = LoreLibraryMap.overview.shown;
-	local height = NUM_OVERVIEW_MARGIN * 2;
+	local height = _L["N_OVERVIEW_MARGIN"] * 2;
 
 	ShowUIPanel(LoreLibraryMap.overview);
 	ShowUIPanel(listing);
@@ -249,7 +219,7 @@ function _addon:ShowOverviewListing(listing)
 	--listing:Show();
 	if #shown == 0 then
 		-- None yet shown, anchor to overview
-		listing:SetPoint("TOP", LoreLibraryMap.overview, "TOP", 0, -NUM_OVERVIEW_MARGIN);
+		listing:SetPoint("TOP", LoreLibraryMap.overview, "TOP", 0, -_L["N_OVERVIEW_MARGIN"]);
 	else
 		-- Anchor to previous
 		listing:SetPoint("TOP", shown[#shown], "BOTTOM", 0, 0);
@@ -389,7 +359,7 @@ function _addon:UpdateDocumentProgressBar()
 	LoreLibraryList.progressBar:SetMinMaxValues(0, maxProgress);
 	LoreLibraryList.progressBar:SetValue(currentProgress);
 
-	LoreLibraryList.progressBar.text:SetFormattedText(FORMAT_PROGRESS, currentProgress, maxProgress);
+	LoreLibraryList.progressBar.text:SetFormattedText(_L["F_PROGRESS"], currentProgress, maxProgress);
 end
 
 function _addon:UpdateListDisplayNavigation()
@@ -413,7 +383,7 @@ function _addon:UpdateListDisplayNavigation()
 		nav.next:Enable();
 	end
 	
-	nav.text:SetText("Page ".. page);
+	nav.text:SetFormattedText(_L["F_PAGE"], page);
 end
 
 function _addon:FilterPageText(text)
@@ -462,11 +432,11 @@ function _addon:SetDisplayText(text)
 	local display = LoreLibraryListDisplay;
 	local increase = 10;
 	
-	display.pageText:SetWidth(NUM_PAGETEXT_WIDTH);
+	display.pageText:SetWidth(_L["N_PAGETEXT_WIDTH"]);
 	display.pageText:SetText(text);
 	
 	while(display.pageText:GetContentHeight() > display.pageText:GetHeight() and (display.pageText:GetWidth() < display:GetWidth() - 20)) do
-		display.pageText:SetWidth(NUM_PAGETEXT_WIDTH + increase);
+		display.pageText:SetWidth(_L["N_PAGETEXT_WIDTH"] + increase);
 		display.pageText:SetText(text);
 		increase = increase + 10;
 	end
@@ -548,9 +518,9 @@ end
 function _addon:UpdateLostPageCount()
 	local numUnavailable, numUnavailableLocked = self:GetNumUnavailable();
 	local spentPages = numUnavailable - numUnavailableLocked;
-	local pages = math.floor(self:GetNumUnlockedLore()/NUM_LORE_FOR_TOKEN) - spentPages;
+	local pages = math.floor(self:GetNumUnlockedLore()/_L["N_LORE_FOR_TOKEN"]) - spentPages;
 	LoreLibraryList.tokenCount.count:SetText(pages);
-	LoreLibraryList.tokenCount.untilNext = NUM_LORE_FOR_TOKEN - (self:GetNumUnlockedLore() % NUM_LORE_FOR_TOKEN);
+	LoreLibraryList.tokenCount.untilNext = _L["N_LORE_FOR_TOKEN"] - (self:GetNumUnlockedLore() % _L["N_LORE_FOR_TOKEN"]);
 	return pages;
 end
 
@@ -589,8 +559,8 @@ function _addon:SetFavorite(title, value, silent)
 end
 
 function _addon:HasFilteredSource(lore)
-	for sourceType, fEnabled in pairs(_filter.sources) do
-		if (fEnabled) then
+	for sourceType, filter in pairs(_filter.sources) do
+		if (filter.enabled) then
 			for k, location in ipairs(lore.locations) do
 				local loreSource = location.sourceType == nil and "object" or location.sourceType;
 				if (loreSource:lower() == sourceType:lower()) then
@@ -708,7 +678,7 @@ function _addon:UpdateBookDisplay(lore)
 	end
 	
 	
-	for i = 1, MAX_SOURCES do
+	for i = 1, _L["N_MAX_SOURCES"] do
 	    local source = display.sources["s"..i];
 		source:Hide();
 		source.icon.factionAlliance:Hide();
@@ -727,7 +697,7 @@ function _addon:UpdateBookDisplay(lore)
 		self:SetDisplayText(self:FilterPageText(lore.pages[1]))
 
 	else
-		display.pageText:SetText("<HTML><BODY><BR/><P align=\"center\">" .. SOURCE_TITLE .. "</P><BR/></BODY></HTML>");
+		display.pageText:SetText("<HTML><BODY><BR/><P align=\"center\">" .. _L["S_SOURCE_TITLE"] .. "</P><BR/></BODY></HTML>");
 		for k, location in ipairs(lore.locations) do
 			display.sources:Show();
 			local source = display.sources["s"..k];
@@ -744,14 +714,14 @@ function _addon:UpdateBookDisplay(lore)
 			end
 			
 			if location.sourceType == "drop" or location.sourceType == "pickpocket" or location.sourceType == "vendor" or location.sourceType == "chest" then
-				text = string.format(FORMAT_SOURCE, location.source, location.area);
+				text = string.format(_L["F_SOURCE"], location.source, location.area);
 			elseif location.sourceType == "container" then
 			    text = location.source;
 			elseif location.sourceType == "unavailable" then
-			    text = "This lore no longer has any\n available sources.";
+			    text = _L["S_UNAVAILABLE_DETAIL"];
 				_addon:ShowLostPages();
 			elseif location.sourceType == "quest" then
-				text = string.format(FORMAT_SOURCE, location.source, location.area);
+				text = string.format(_L["F_SOURCE"], location.source, location.area);
 				
 			end
 			
@@ -791,8 +761,8 @@ function _addon:ShowLostPages()
 	end
 	
 	LoreLibraryLostPages:Show();
-	LoreLibraryLostPages.info:SetText(STRING_LOSTPAGES_INFO);
-	LoreLibraryLostPages.content:SetText(FORMAT_LORE_CONTENT:format(wordCount, pageCount, imageCount));
+	LoreLibraryLostPages.info:SetText(_L["S_LOSTPAGES_INFO"]);
+	LoreLibraryLostPages.content:SetText(_L["F_LORE_CONTENT"]:format(wordCount, pageCount, imageCount));
 	
 	LoreLibraryLostPages.button:Disable();
 	if (self:UpdateLostPageCount() > 0) then
@@ -840,7 +810,7 @@ function _addon:UpdateBookList()
 		end
 	end
 	
-	HybridScrollFrame_Update(scrollFrame, #list * SIZE_LISTBOOKHEIGHT, scrollFrame:GetHeight());
+	HybridScrollFrame_Update(scrollFrame, #list * _L["N_LISTBOOKHEIGHT"], scrollFrame:GetHeight());
 	
 	_addon:UpdateDocumentProgressBar();
 end
@@ -877,7 +847,7 @@ function _addon:UpdateSuggestions()
 		button.new:Hide();
 	end
 	for k, suggestion in ipairs(_suggestions) do
-		if k > MAX_SUGGESTIONS then break; end -- There's more than 3? VAC!
+		if k > _L["N_MAX_SUGGESTIONS"] then break; end -- There's more than 3? VAC!
 		local lore = _data[suggestion.key];
 		local button = buttonList[k];
 		button.lore = lore;
@@ -897,12 +867,12 @@ function _addon:UpdateSuggestions()
 	
 		if numAplicable == 0 then
 			-- No more suggestions possible
-			buttonList[1].title:SetText(STRING_SUGGESTION_EMPTY1);
-			buttonList[2].title:SetText(STRING_SUGGESTION_EMPTY2);
+			buttonList[1].title:SetText(_L["S_SUGGESTION_EMPTY1"]);
+			buttonList[2].title:SetText(_L["S_SUGGESTION_EMPTY2"]);
 		else
 			-- Show time until we get a new one
 			local sec, text = _addon:GetSuggestionTimeUntilDays(_suggestions.timeLast, 1);
-			buttonList[1].title:SetText(FORMAT_SUGGESTION_UNTILNEW:format(text));
+			buttonList[1].title:SetText(_L["F_SUGGESTION_UNTILNEW"]:format(text));
 		end
 		LoreLibraryList.suggestBtn.icon:SetDesaturated(true);
 	else
@@ -954,7 +924,7 @@ function _addon:GetApplicableSuggestions()
 end
 
 function _addon:GetNewSuggestion(suggestion, silent, offsetDays)
-	if (#_suggestions >= MAX_SUGGESTIONS) then return; end
+	if (#_suggestions >= _L["N_MAX_SUGGESTIONS"]) then return; end
 	
 	offsetDays = offsetDays and offsetDays or 0;
 	
@@ -993,10 +963,10 @@ function _addon:UpdateSelectedTab(self)
 	HideUIPanel(LoreLibraryPoI:Hide());
 	if selected == 1 then
 		ShowUIPanel(LoreLibraryList);
-		self.TitleText:SetText(STRING_TITLE_DOCUMENT);
+		self.TitleText:SetText(_L["S_TITLE_DOCUMENT"]);
 	elseif selected == 2 then
 		ShowUIPanel(LoreLibraryPoI);
-		self.TitleText:SetText(STRING_TITLE_AREA);
+		self.TitleText:SetText(_L["S_TITLE_AREA"]);
 	end
 end
 
@@ -1025,7 +995,7 @@ end
 
 function _addon:SetAllSourcesTo(enable)
 	for k, v in pairs(_filter.sources) do
-			_filter.sources[k] = enable;
+			_filter.sources[k].enabled = enable;
 	end
 end
 
@@ -1086,12 +1056,12 @@ function _addon:InitFilter(self, level)
 		
 		info.notCheckable = false;
 		for k, v in pairs(_filter.sources) do
-			info.text = k;
+			info.text = v.text;
 			info.func = function(_, _, _, value)
-								_filter.sources[k] = value;
+								_filter.sources[k].enabled = value;
 								_addon:UpdateBookList();
 							end
-			info.checked = function() return _filter.sources[k] end;
+			info.checked = function() return _filter.sources[k].enabled end;
 			UIDropDownMenu_AddButton(info, level);			
 		end
 	end
@@ -1103,7 +1073,7 @@ function _addon:InitOptions(self, level)
 	info.keepShownOnClick = true;	
 
 	if (level == 1) then
-		info.text = STRING_OPTIONS_MINIMAP;
+		info.text = _L["S_OPTIONS_MINIMAP"];
 		info.func = function(_, _, _, value)
 						_addon.options.minimap.hide = not value;
 						_addon:UpdateOptions();
@@ -1112,7 +1082,7 @@ function _addon:InitOptions(self, level)
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 
-		info.text = STRING_OPTIONS_TOOLTIP;
+		info.text = _L["S_OPTIONS_TOOLTIP"];
 		info.func = function(_, _, _, value)
 						_addon.options.showTooltipText = value;
 					end 
@@ -1120,7 +1090,7 @@ function _addon:InitOptions(self, level)
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 		
-		info.text = STRING_OPTIONS_WORLDMAP_OVERLAY;
+		info.text = _L["S_OPTIONS_WORLDMAP_OVERLAY"];
 		info.func = function(_, _, _, value)
 						_addon.options.showMapOverlay = value;
 						_addon:UpdateOptions();
@@ -1134,7 +1104,7 @@ function _addon:InitOptions(self, level)
 		info.func =  nil;
 		info.hasArrow = true;
 		info.notCheckable = true;
-		info.text = STRING_OPTIONS_MAPOPTIONS;
+		info.text = _L["S_OPTIONS_MAPOPTIONS"];
 		info.value = 1;
 		UIDropDownMenu_AddButton(info, level)
 		
@@ -1143,13 +1113,13 @@ function _addon:InitOptions(self, level)
 		info.func =  nil;
 		info.hasArrow = true;
 		info.notCheckable = true;
-		info.text = STRING_OPTIONS_POPUPOPTIONS;
+		info.text = _L["S_OPTIONS_POPUPOPTIONS"];
 		info.value = 2;
 		UIDropDownMenu_AddButton(info, level)
 		
 	elseif (level == 2) then
 		if (UIDROPDOWNMENU_MENU_VALUE == 1) then -- pin options
-			info.text = STRING_OPTIONS_PINS_LORE;
+			info.text = _L["S_OPTIONS_PINS_LORE"];
 			info.func = function(_, _, _, value)
 							_addon.options.pins.lore = value;
 							_addon:UpdateMapPins()
@@ -1158,7 +1128,7 @@ function _addon:InitOptions(self, level)
 			info.isNotRadio = true;
 			UIDropDownMenu_AddButton(info, level)
 			
-			info.text = STRING_OPTIONS_PINS_AREA;
+			info.text = _L["S_OPTIONS_PINS_AREA"];
 			info.func = function(_, _, _, value)
 							_addon.options.pins.poi = value;
 							_addon:UpdateMapPins()
@@ -1167,7 +1137,7 @@ function _addon:InitOptions(self, level)
 			info.isNotRadio = true;
 			UIDropDownMenu_AddButton(info, level)
 			
-			info.text = STRING_OPTIONS_PINS_UNLOCKED;
+			info.text = _L["S_OPTIONS_PINS_UNLOCKED"];
 			info.func = function(_, _, _, value)
 							_addon.options.pins.unlocked = value;
 							_addon:UpdateMapPins()
@@ -1176,7 +1146,7 @@ function _addon:InitOptions(self, level)
 			info.isNotRadio = true;
 			UIDropDownMenu_AddButton(info, level)
 			
-			info.text = STRING_OPTIONS_PINS_TOOLTIPS;
+			info.text = _L["S_OPTIONS_PINS_TOOLTIPS"];
 			info.func = function(_, _, _, value)
 							_addon.options.pins.tooltips = value;
 							_addon:UpdateMapPins()
@@ -1191,16 +1161,16 @@ function _addon:InitOptions(self, level)
 			info.hasArrow = false;
 			info.isNotRadio = true;
 			info.notCheckable = true;
-			info.text = STRING_OPTIONS_MOVEPOPUP;
+			info.text = _L["S_OPTIONS_MOVEPOPUP"];
 			info.func = function()
 							LoreLibraryPoIPopup.positioning = true;
-							LoreLibraryPoIPopup.title:SetText("Right click to hide.")
+							LoreLibraryPoIPopup.title:SetText(_L["S_RIGHTCLICK_HIDE"])
 							ShowUIPanel(LoreLibraryPoIPopup);
 						end
 			UIDropDownMenu_AddButton(info, level)
 		
 			info.notCheckable = false;
-			info.text = STRING_OPTIONS_PINS_LORE;
+			info.text = _L["S_OPTIONS_PINS_LORE"];
 			info.func = function(_, _, _, value)
 							_addon.options.popups.lore = value;
 						end 
@@ -1208,7 +1178,7 @@ function _addon:InitOptions(self, level)
 			info.isNotRadio = true;
 			UIDropDownMenu_AddButton(info, level)
 			
-			info.text = STRING_OPTIONS_PINS_AREA;
+			info.text = _L["S_OPTIONS_PINS_AREA"];
 			info.func = function(_, _, _, value)
 							_addon.options.popups.poi = value;
 						end 
@@ -1238,7 +1208,7 @@ function _addon:InitMapOptionsDropdown(self, level)
 	info.keepShownOnClick = true;	
 
 	if (level == 1) then
-		info.text = STRING_PINS_OPTIONS_SHOW;
+		info.text = _L["S_PINS_OPTIONS_SHOW"];
 		info.func = function(_, _, _, value)
 						_mapOptions.showPins = value;
 						_addon:LorePiecesInMap();
@@ -1247,7 +1217,7 @@ function _addon:InitMapOptionsDropdown(self, level)
 		info.isNotRadio = true;
 		UIDropDownMenu_AddButton(info, level)
 	
-		info.text = STRING_PINS_OPTIONS_COLLECTED;
+		info.text = _L["S_PINS_OPTIONS_COLLECTED"];
 		info.func = function(_, _, _, value)
 						_mapOptions.showCollected = value;
 						_addon:LorePiecesInMap();
@@ -1320,10 +1290,10 @@ function _addon:InitSugestionFrame()
 						GameTooltip:SetText(lore.title);
 						local sec, text = _addon:GetSuggestionTimeUntilDays(suggestion.timestamp, 3);
 						if (sec > 0) then
-							GameTooltip:AddLine(FORMAT_SUGGESTION_REMOVECOOLDOWN:format(text) ,1 ,1 ,1 ,true);
+							GameTooltip:AddLine(_L["F_SUGGESTION_REMOVECOOLDOWN"]:format(text) ,1 ,1 ,1 ,true);
 							GameTooltip:Show();
 						else
-							GameTooltip:AddLine(STRING_SUGGESTION_REMOVE ,1 ,1 ,1 ,true);
+							GameTooltip:AddLine(_L["S_SUGGESTION_REMOVE"] ,1 ,1 ,1 ,true);
 							GameTooltip:Show();
 						end
 					end
@@ -1373,7 +1343,7 @@ function _addon:InitCoreFrame()
 
 	LoreLibraryListScrollFrame.scrollBar.doNotHide = true;
 	HybridScrollFrame_CreateButtons(LoreLibraryListScrollFrame, "LOLIB_ListBookTemplate", 1, 0);
-	HybridScrollFrame_Update(LoreLibraryListScrollFrame, #_loreList * SIZE_LISTBOOKHEIGHT, LoreLibraryListScrollFrame:GetHeight());
+	HybridScrollFrame_Update(LoreLibraryListScrollFrame, #_loreList * _L["N_LISTBOOKHEIGHT"], LoreLibraryListScrollFrame:GetHeight());
 	
 	LoreLibraryListScrollFrame.update = function() _addon:UpdateBookList() end;
 	
@@ -1391,7 +1361,7 @@ function _addon:InitCoreFrame()
 	
 	local display = LoreLibraryListDisplay;
 
-	for i = 1, MAX_SOURCES do
+	for i = 1, _L["N_MAX_SOURCES"] do
 	    local source = display.sources["s"..i];
 		source:SetScript("OnClick", function(self) _addon:ShowMapLorePoI(self.lore, self.PoI) end);
 	end	
@@ -1421,6 +1391,24 @@ function _addon:InitCoreFrame()
 	end);
 	
 	LoreLibraryLostPages.button:SetScript("OnClick", function() _addon:UnlockUnavailableLore(); end); 
+	LoreLibraryLostPages.button:SetScript("OnEnter", function(self)
+			GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+			if (self:IsEnabled()) then
+				GameTooltip:SetText(_L["S_LOSTPAGE_USE"]);
+			else
+				GameTooltip:SetText(_L["S_LOSTPAGE_NONE"]);
+			end
+	end);
+	
+	LoreLibraryList.tokenCount:SetScript("OnEnter", function(self)
+			GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+			GameTooltip:SetText(_L["S_LOST_PAGES"] ,1 ,1 ,1);
+			GameTooltip:AddLine(string.format(_L["F_LOSTPAGE_INFO"], _L["N_LORE_FOR_TOKEN"]) ,1 ,0.83 ,0 ,true);
+			GameTooltip:AddDoubleLine(_L["S_UNLOCK_UNTIL_NEXT"], (self.untilNext or _L["N_LORE_FOR_TOKEN"]) ,1 ,1 ,1 ,1 ,1 ,1 );
+			GameTooltip:Show();
+	end); 
+	
+	
 
 	GameTooltip:HookScript('OnTooltipCleared', function(self) GameTooltip.LL_Checked = false; end);
 	-- OnUpdate because there is no OnTooltupSet function that supports objects
@@ -1431,9 +1419,9 @@ function _addon:InitCoreFrame()
 				local key = _addon:GetEnglishTitle(_G["GameTooltipTextLeft1"]:GetText());
 				if key then 
 					if (_data[key].unlocked) then
-						GameTooltip:AddLine("Lore Collected",0.2 ,1 ,0.2);
+						GameTooltip:AddLine(_L["S_LORE_COLLECTED"],0.2 ,1 ,0.2);
 					else
-						GameTooltip:AddLine("Lore not collected",1 ,0.2 ,0.2);
+						GameTooltip:AddLine(_L["S_LORE_NOT_COLLECTED"],1 ,0.2 ,0.2);
 					end
 					GameTooltip:Show();
 				end
@@ -1634,43 +1622,6 @@ function _addon:LoadTranslation()
 
 end
 
-function _addon:ShowLocalizationMessage()
-	local display = LoreLibraryListDisplay;
-	local FORMAT_LOC_GREETING = "Greetings %s users.";
-	local displayText = "<HTML><BODY>";
-	local users = "non-English";
-	local message = "Lore localization has been added!<BR/>Using Wowhead data, all lore text has been translated to your client language.<BR/>Please note that Wowhead is missing some translations, meaning some things will show in english with [square brackets] around them.";
-	local issues = nil;
-	if _localization == "deDE" then
-		users = "German";
-		issues = "<P>Due to Blizzard using incorrect capitalization in their achievements, some previously collected lore might not be unlocked and will have to be collected again.</P>";
-	elseif _localization == "frFR" then
-		users = "French";
-	elseif _localization == "esES" or _localization == "esMX" then
-		users = "Spanish";
-	elseif _localization == "itIT" then
-		users = "Italian";
-		issues = "<P>Some of the titles have no Italian translation yet on Wowhead and therefore can't be collected for now.</P>";
-	elseif _localization == "ptBR" then
-		users = "Portuguese";
-		issues = "<P>Some of the titles have no Portuguese translation yet on Wowhead and therefore can't be collected for now.</P>";
-	elseif _localization == "ruRU" then
-		users = "Russian";
-		issues = "<P>I am unable to connect using the Russian client so sadly I can't test if your language works correctly.</P>";
-	else
-		message = "Sadly Lore Library currently does not support your language.<BR/>This means you will not be able to collect any lore.<BR/><BR/>My apologies for the inconvenience."
-	end
-	displayText = displayText .. "<BR/><BR/><H1 align=\"center\">" .. FORMAT_LOC_GREETING:format(users) .."</H1><BR/>";
-	displayText = displayText .. "<P>" .. message .. "</P>";
-	if issues then
-		displayText = displayText .. "<BR/><P>Your language currently has the following issues:</P>";
-		displayText = displayText .. issues;
-	end
-	displayText = displayText .. "</BODY></HTML>";
-	
-	display.pageText:SetText(displayText);
-end
-
 function LoreLibrary:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("LoLibDB", _defaults, true);
 	_addon.db = self.db;
@@ -1690,7 +1641,7 @@ function LoreLibrary:OnEnable()
 	
 	-- Get new suggestions depending on how long since last one
 	local daysSinceLast = floor((time() - _suggestions.timeLast)/86400);
-	daysSinceLast = daysSinceLast > MAX_SUGGESTIONS - #_suggestions and MAX_SUGGESTIONS - #_suggestions or daysSinceLast;
+	daysSinceLast = daysSinceLast > _L["N_MAX_SUGGESTIONS"] - #_suggestions and _L["N_MAX_SUGGESTIONS"] - #_suggestions or daysSinceLast;
 	daysSinceLast = _suggestions.timeLast == 0 and 1 or daysSinceLast;
 	for i = 1, daysSinceLast+1 do 
 		_addon:GetNewSuggestion(nil, true, daysSinceLast-i);
@@ -1730,7 +1681,7 @@ end
 function _addon.events:ADDON_LOADED(loaded_addon)
 	if (loaded_addon ~= _addonName) then return; end
 	_data = _addon.data.lore;
-	
+
 	for k, lore in pairs(_data) do
 		lore.key = k;
 		lore.title = k;
@@ -1740,7 +1691,6 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	
 	if _addon.translations then
 		_addon:LoadTranslation();
-		--_addon:ShowLocalizationMessage();
 	end
 	-- Localize sources
 	local terms = _addon.data.terms;
@@ -1804,7 +1754,10 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	_addon:ToggleCoreFrame();
+	for k, v in pairs(_L) do
+		print(k, v);
+	end
+	--_addon:ToggleCoreFrame();
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd
 

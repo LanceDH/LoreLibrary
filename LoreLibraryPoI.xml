@@ -406,7 +406,7 @@
 									<TexCoords left="0.3203125" right="0.404296875" top="0.0234375" bottom="0.0625"/>
 								</Texture>
 								
-								<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="2" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="text" text="Mark area on the world map">
+								<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="2" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="text" text="LOLIB_MARK_WORLDMAP">
 									<Anchors>
 										<Anchor point="TOPLEFT" x="60"/>
 										<Anchor point="BOTTOMRIGHT" x="-20"/>
@@ -582,7 +582,7 @@
 						</Texture>
 					</Layer>
 					<Layer level="ARTWORK">
-						<FontString name="$parentTitle" inherits="GameFontNormalSmall" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="Zone completed">
+						<FontString name="$parentTitle" inherits="GameFontNormalSmall" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="LOLIB_ZONE_COMPLETE">
 							<Size c="120" y="10"/>
 							<Anchors>
 								<Anchor point="TOP" y="-2"/>
