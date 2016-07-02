@@ -1,8 +1,8 @@
-﻿## Interface: 60200
+﻿## Interface: 70000
 ## Title: LoreLibrary
 ## Notes: A collection of all the lore you found.
 ## Author: LanceDH
-## Version: 6.2.08
+## Version: 7.0.1
 ## SavedVariables: LoLibDB
 
 Locals.lua
@@ -15,8 +15,9 @@ Localization/esES.lua
 Localization/ptBR.lua
 Localization/itIT.lua
 
-LoreLibrary.lua
 LoreLibrary.xml
-LoreLibraryPoI.lua
+LoreLibrary.lua
 LoreLibraryPoI.xml
+LoreLibraryPoI.lua
+
 

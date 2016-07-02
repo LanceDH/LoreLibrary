@@ -2,7 +2,8 @@
 local _addonName, _addon = ...;
 
 _addon.locals = {
-	 ["S_CONTINENT_DRAENOR"] =			"Draenor"
+	 ["S_AREA_NOLORE"] =				"<HTML><BODY><BR/><P align=\"CENTER\">Not much is known about this area.</P></BODY></HTML>"
+	,["S_CONTINENT_DRAENOR"] =			"Draenor"
 	,["S_CONTINENT_EK"] =				"Eastern Kingdoms"
 	,["S_CONTINENT_KALIMDOR"] =			"Kalimdor"
 	,["S_CONTINENT_NORTHREND"] =		"Northrend"
@@ -20,13 +21,15 @@ _addon.locals = {
 	,["S_LOSTPAGE_USE"] = 				"Use a lost page to unlock this lore."
 	,["S_LOST_PAGES"] =					"Lost pages"
 	,["S_MARK_WORLDMAP"] = 				"Mark area on the world map"
+	,["S_MATCH_AREA"] = 				"Discovered areas"
+	,["S_MATCH_ZONE"] = 				"Zones"
 	,["S_MINIMAPBUTTON_INFO"] =			"Click to open your library."
 	,["S_NEW"] =						"New !"
 	,["S_OPTIONS_MAPOPTIONS"] =			"World map pins"
 	,["S_OPTIONS_MINIMAP"] =			"Minimap button"
 	,["S_OPTIONS_MOVEPOPUP"] =			"Move popup"
 	,["S_OPTIONS_PINS_AREA"] =			"Area"
-	,["S_OPTIONS_PINS_LORE"] =			"Lore"
+	,["S_OPTIONS_PINS_LORE"] =			"Document"
 	,["S_OPTIONS_PINS_TOOLTIPS"] =		"Tooltips"
 	,["S_OPTIONS_PINS_UNLOCKED"] =		"Unlocked"
 	,["S_OPTIONS_POPUPOPTIONS"] =		"Popups"
@@ -34,6 +37,9 @@ _addon.locals = {
 	,["S_OPTIONS_WORLDMAP_OVERLAY"] =	"World map overlay"
 	,["S_PINS_OPTIONS_COLLECTED"] =		"Show collected"
 	,["S_PINS_OPTIONS_SHOW"] =			"Show pins"
+	,["S_POI_BY_CONTINENT"] =			"Sort by continent"
+	,["S_POI_COMPLETED"] =				"Completed"
+	,["S_POI_NOT_COMPLETED"] =			"Not completed"
 	,["S_RIGHTCLICK_HIDE"] =			"Right click to hide."
 	,["S_SOURCEINFO_CHEST"] =			"Found in a type of chest."
 	,["S_SOURCEINFO_CONTAINER"] =		"Can be found in a container."
@@ -83,4 +89,18 @@ _addon.locals = {
 	,["N_MAX_SUGGESTIONS"] =			3
 	,["N_OVERVIEW_MARGIN"] =			15
 	,["N_PAGETEXT_WIDTH"] =				280
+	
+	,["B_ENABLE_POI"] =					false
 };
+
+-- Making globals for certain locals to use in XML
+LOLIB_TAB_LORE =				_addon.locals["S_TAB_LORE"];
+LOLIB_TAB_POI =					_addon.locals["S_TAB_POI"];
+LOLIB_LIBRARY_ADDED =			_addon.locals["S_LIBRARY_ADDED"];
+LOLIB_NEW = 					_addon.locals["S_NEW"];
+LOLIB_DAILY_SUGGESTIONS =		_addon.locals["S_DAILY_SUGGESTIONS"];
+LOLIB_LOSTPAGE_UNLOCK_INFO =	_addon.locals["S_LOSTPAGE_UNLOCK_INFO"];
+LOLIB_SUGGESTION_COMPLETE =		_addon.locals["S_SUGGESTION_COMPLETE"];
+LOLIB_MARK_WORLDMAP =			_addon.locals["S_MARK_WORLDMAP"];
+LOLIB_ZONE_COMPLETE =			_addon.locals["S_ZONE_COMPLETE"];
+LOLIB_TITLE_DOCUMENT =			_addon.locals["S_TITLE_DOCUMENT"];

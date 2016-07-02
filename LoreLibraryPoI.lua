@@ -14,6 +14,8 @@ local _filter = {
 					[5] = {["enabled"] = true, ["name"] = _L["S_CONTINENT_PANDARIA"]},
 					[6] = {["enabled"] = true, ["name"] = _L["S_CONTINENT_DRAENOR"]},
 				}
+			,["completed"] = true
+			,["notCompleted"] = true
 			}
 
 local BACKDROP_LIST_POINT = {
@@ -22,13 +24,17 @@ local BACKDROP_LIST_POINT = {
 		,tile = true, tileSize = 300, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }
 	}
 
-local function SortZoneList(list)
+local function SortZoneList(list, byContinent)
 	list = list and list or _addon.PoI["zones"];
 	table.sort(list, function(a, b) 
-			if (a.name == b.name) then
-				return a.id < b.id;
+			if (not byContinent or a.continent == b.continent) then
+				if (a.name == b.name) then
+					return a.id < b.id;
+				end
+				return a.name < b.name;
 			end
-			return a.name < b.name;
+			return a.continent < b.continent;
+			
 	end);
 end
 
@@ -36,7 +42,7 @@ function LOLIB_ListZone_OnClick(self, button)
 	LoreLibraryPoI.zone = self.zone;
 	LoreLibraryPoI.titleCard.title:SetText(self.zone.name);
 	LoreLibraryPoI.point = (self.zone.pointIds and _addon.PoI["points"][self.zone.pointIds[1]] or nil);
-	LoreLibraryPoIZoneList.scrollBar:SetValue(0);
+	LoreLibraryPoIPointList.scrollBar:SetValue(0);
 	_addon:UpdatePointList();
 	_addon:UpdateZoneList();
 	_addon:UpdatePointDetailScroller();
@@ -116,6 +122,42 @@ local function InitZoneFilter(self, level)
 	info.keepShownOnClick = true;	
 
 	if level == 1 then
+		info.text = _L["S_POI_BY_CONTINENT"];
+		info.func = function(_, _, _, value)
+						_addon.options.poI.sortByContinent = value;
+						_addon:UpdateZoneList();
+					end 
+		info.checked = function() return _addon.options.poI.sortByContinent end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+		
+		info.text = _L["S_POI_COMPLETED"];
+		info.func = function(_, _, _, value)
+						_filter.completed = value;
+						_addon:UpdateZoneList();
+					end 
+		info.checked = function() return _filter.completed end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+		
+		info.text = _L["S_POI_NOT_COMPLETED"];
+		info.func = function(_, _, _, value)
+						_filter.notCompleted = value;
+						_addon:UpdateZoneList();
+					end 
+		info.checked = function() return _filter.notCompleted end;
+		info.isNotRadio = true;
+		UIDropDownMenu_AddButton(info, level)
+	
+		info.checked = 	nil;
+		info.isNotRadio = nil;
+		info.func =  nil;
+		info.hasArrow = true;
+		info.notCheckable = true;
+		info.text = "Continents";
+		info.value = 1;
+		UIDropDownMenu_AddButton(info, level)
+	elseif (level == 2) then
 		info.hasArrow = false;
 		info.isNotRadio = true;
 		info.notCheckable = true;
@@ -196,17 +238,12 @@ function _addon:UpdatePoITitleCardProgress()
 		if (points[pointId].unlocked) then collected = collected + 1; end
 	end
 	
-	if (collected == 0) then
-		bar.progress:SetWidth(1);
-		bar.progress:Hide();
+	bar:SetMinMaxValues(0, total);
+	bar:SetValue(collected);
+	if (collected == total) then
+		bar:SetStatusBarColor(1, 0.82, 0, 1);
 	else
-		bar.progress:SetWidth(128 * collected / total);
-		bar.progress:Show();
-		if (collected / total == 1) then
-			bar.progress:SetVertexColor(1, 0.82, 0);
-		else
-			bar.progress:SetVertexColor(0.2, 0.8, 0.2);
-		end
+		bar:SetStatusBarColor(0.2, 0.8, 0.2);
 	end
 end
 	
@@ -224,46 +261,73 @@ local function PointUnlockedInZoneMatchesSearch(zone)
 	return false;
 end
 	
+function _addon:ListContainsZoneName(list, name)
+	for k, zone in ipairs(list) do
+		if zone.name == name then return true; end
+	end
+	return false;
+end
+	
 function _addon:GetFilteredZoneList()
 	local list = _addon.PoI["zones"];
 	local search = LoreLibraryPoI.searchString;
-
-	-- Apply search for zones
-	if (search ~= nil and search ~= "") then
-		local searchList = {};
-		for k, zone in ipairs(list) do
-			if (string.find(string.lower(zone.name), search:lower(), 1, true)) or PointUnlockedInZoneMatchesSearch(zone)then
-				table.insert(searchList, zone);
-			end
-		end
-		
-		list = searchList;
-	end
-	
-	-- Extend search for points
-	-- if (search ~= nil and search ~= "") then
-		-- local searchListPoints = {};
-		-- for k, zone in ipairs(list) do
-			-- 
-		-- end
-		
-		-- list = searchList;
-	-- end
-	
 	local filterList = {};
+	
+	SortZoneList(list, _addon.options.poI.sortByContinent);
+	
+	local lastContinent = 0;
 	for k, zone in ipairs(list) do
 		if _filter.continents[zone.continent].enabled then
-			table.insert(filterList, zone);
+			-- add depending on completed filter
+			local completed =  self:ZoneIsCompleted(zone);
+			if ((completed and _filter.completed) or (not completed and _filter.notCompleted)) then
+				-- add continent title with setting
+				if (_addon.options.poI.sortByContinent and lastContinent ~= zone.continent) then
+					table.insert(filterList, {["isTitle"] = true, ["name"] = _filter.continents[zone.continent].name});
+					lastContinent = zone.continent;
+				end
+				table.insert(filterList, zone);
+			end
 		end
 	end
 	list = filterList;
 	
-	SortZoneList(list);
+	if (search ~= nil and search ~= "") then
+		-- Apply search for zones
+		local matches = {};
+		local addedTitle = false;
+		for k, zone in ipairs(list) do
+			if (string.find(string.lower(zone.name), search:lower(), 1, true))then
+				if (not addedTitle) then
+					table.insert(matches, {["isTitle"] = true, ["name"] = _L["S_MATCH_ZONE"]});
+					addedTitle = true;
+				end
+				table.insert(matches, zone);
+			end
+		end
+
+		-- Extend search for points
+		addedTitle = false;
+		for k, zone in ipairs(list) do
+			-- not self:ListContainsZoneName(matches, zone.name) and 
+			if (PointUnlockedInZoneMatchesSearch(zone)) then
+				if (not addedTitle) then
+					table.insert(matches, {["isTitle"] = true, ["name"] = _L["S_MATCH_AREA"]});
+					addedTitle = true;
+				end
+				table.insert(matches, zone);
+			end
+		end
+		list = matches;
+	end
+	
+	
 
 	return list;
 end
 
 function _addon:UpdateZoneList()
+	if not LoreLibraryCore:IsShown() then return; end
 	local scrollFrame = LoreLibraryPoIZoneList;
 	local offset = HybridScrollFrame_GetOffset(scrollFrame);
 	local buttons = scrollFrame.buttons;
@@ -276,25 +340,32 @@ function _addon:UpdateZoneList()
 		local displayIndex = i + offset;
 		button:Disable();
 		button.completeIcon:Hide();
+		button.id = -1;
+		button.title:SetText("");
+		button.title:SetFontObject("GameFontNormal");
+		button.title:SetJustifyH("LEFT");
+		button.bgTitle:Hide();
+		button.selectedTexture:Hide();
 		if ( displayIndex <= #list) then
 			local zone = list[displayIndex];
-			button:Enable();
-			button.zone = zone;
 			button.title:SetText(zone.name);
-			if (button.zone.id == LoreLibraryPoI.zone.id) then
-				button.selectedTexture:Show();
+			if zone.isTitle then
+				button.title:SetFontObject("GameFontWhite");
+				button.title:SetJustifyH("CENTER");
+				button.bgTitle:Show();
 			else
-				button.selectedTexture:Hide();
+				button:Enable();
+				button.zone = zone;
+				if (button.zone.id == LoreLibraryPoI.zone.id) then
+					button.selectedTexture:Show();
+				else
+					button.selectedTexture:Hide();
+				end
+				
+				if (self:ZoneIsCompleted(zone)) then
+					button.completeIcon:Show();
+				end
 			end
-			
-			if (self:ZoneIsCompleted(zone)) then
-				button.completeIcon:Show();
-			end
-			
-		else
-			button.id = -1;
-			button.title:SetText("");
-			button.selectedTexture:Hide();
 		end
 	end
 	
@@ -302,6 +373,7 @@ function _addon:UpdateZoneList()
 end
 
 function _addon:UpdatePointList()
+	if not LoreLibraryCore:IsShown() then return; end
 	local zone = LoreLibraryPoI.zone;
 	local scrollFrame = LoreLibraryPoIPointList;
 	local offset = HybridScrollFrame_GetOffset(scrollFrame);
@@ -341,7 +413,7 @@ function _addon:UpdatePointList()
 		end
 	end
 	
-	HybridScrollFrame_Update(scrollFrame, #list * _L["N_LISTHEIGHT_POINT"], scrollFrame:GetHeight());
+	HybridScrollFrame_Update(scrollFrame, (#list) * _L["N_LISTHEIGHT_POINT"], scrollFrame:GetHeight());
 	
 	-- hide excess buttons
 	buttons = scrollFrame.buttons;
@@ -355,12 +427,13 @@ function _addon:UpdatePointList()
 end
 
 function _addon:UpdatePointDetailScroller()
+	if not LoreLibraryCore:IsShown() then return; end
 	local scrollFrame = LoreLibraryPoIDetailScroll;
 	local point = LoreLibraryPoI.point;
 	LOLIB_PoIDetailScrollChild.text:SetText("");
 	if point then
 		if point.unlocked then
-			LOLIB_PoIDetailScrollChild.text:SetText(point.lore .. "\n\n");
+			LOLIB_PoIDetailScrollChild.text:SetText(point.lore == "" and _L["S_AREA_NOLORE"] or point.lore .. "\n\n");
 			LoreLibraryPoIInsetDetail.mapButton:Hide();
 		else
 			LoreLibraryPoIInsetDetail.mapButton:Show();
@@ -391,6 +464,7 @@ function _addon:SortZonePointsByName(zone)
 end
 
 function _addon:InitPoIFrame()
+	_addon:CREATEDEBUG()
 	local zones = self.PoI["zones"];
 	local points = self.PoI["points"];
 	-- add id as variable to points (less manual work)
@@ -401,7 +475,7 @@ function _addon:InitPoIFrame()
 	-- add zoneid to points for later reference, also less manual work
 	for k, zone in ipairs(zones) do
 		zone.pointIds = zone.pointIds and zone.pointIds or {};
-		zone.name = GetMapNameByID(zone.id);
+		--zone.name = GetMapNameByID(zone.id);
 		
 		self:SortZonePointsByName(zone);
 	end
@@ -430,6 +504,7 @@ function _addon:InitPoIFrame()
 	LoreLibraryPoIPointList.update = function() _addon:UpdatePointList(); end;
 
 	LoreLibraryPoIDetailScroll.scrollBarHideable = 1
+	LOLIB_PoIDetailScrollChild.text:SetFontObject("h1", "QuestTitleFont");
 
 	LoreLibraryPoI.zone = zones[1];
 	LoreLibraryPoI.point = points[LoreLibraryPoI.zone.pointIds[1]];
@@ -451,7 +526,11 @@ function _addon:InitPoIFrame()
 	_addon.updateFrame.playerY = 0;
 	_addon.updateFrame.zoneId = 0;
 	_addon.updateFrame.relevantPoints = {};
-	_addon.updateFrame:SetScript("OnUpdate", function(self, elapsed) _addon:FrameUpdate(elapsed); end)
+	--_addon.updateFrame:SetScript("OnUpdate", function(self, elapsed)
+	--			if not InCombatLockdown() then
+	--				_addon:FrameUpdate(elapsed);
+	--			end
+	--		end)
 	
 	_addon:UpdateAreaProgressBar();
 	
@@ -542,7 +621,7 @@ function _addon:FrameUpdate(elapsed)
 		local x, y = GetPlayerMapPosition("player");
 		local output = "#Map pins: " .. #LoreLibraryMap.pins;
 		local mLevel = GetCurrentMapDungeonLevel();
-		if (x ~= self.updateFrame.playerX or y ~= self.updateFrame.playerY) then
+		if (not IsFlying() and (x ~= self.updateFrame.playerX or y ~= self.updateFrame.playerY)) then
 			self.updateFrame.playerX = x;
 			self.updateFrame.playerY = y;
 			local zoneId = GetCurrentMapAreaID();
@@ -613,26 +692,10 @@ function _addon:PoIInMap()
 	end
 end
 
-function _addon:Test()
-	
-end
 
 
-local L_LOLIBDEBUGTHING = CreateFrame("frame", "LOLIBDEBUGTHING", UIParent) 
-LOLIBDEBUGTHING:SetFrameLevel(5)
-LOLIBDEBUGTHING:SetMovable(true)
-LOLIBDEBUGTHING:SetPoint("Center", 250, 0)
-LOLIBDEBUGTHING:RegisterForDrag("LeftButton")
-LOLIBDEBUGTHING:SetScript("OnDragStart", LOLIBDEBUGTHING.StartMoving )
-LOLIBDEBUGTHING:SetScript("OnDragStop", LOLIBDEBUGTHING.StopMovingOrSizing)
-LOLIBDEBUGTHING.text = LOLIBDEBUGTHING:CreateFontString(nil, nil, "GameFontNormal")
-LOLIBDEBUGTHING.text:SetPoint("topleft", 10, -15)
-LOLIBDEBUGTHING.text:SetText("0000")
-LOLIBDEBUGTHING.text:SetJustifyH("left")
-LOLIBDEBUGTHING:SetWidth(65)
-LOLIBDEBUGTHING:SetHeight(LOLIBDEBUGTHING.text:GetStringHeight()+20)
-LOLIBDEBUGTHING:SetClampedToScreen(true)
-LOLIBDEBUGTHING:Show()
+
+
 
 local function ToggleLockbutton() 
 	if LOLIBDEBUGTHING:IsMouseEnabled() then
@@ -650,7 +713,22 @@ local function ToggleLockbutton()
 	end
 end
 
-------------------------------------------------------------------------------------------------------------------------------
+function _addon:CREATEDEBUG()
+local L_LOLIBDEBUGTHING = CreateFrame("frame", "LOLIBDEBUGTHING", UIParent) 
+LOLIBDEBUGTHING:SetFrameLevel(5)
+LOLIBDEBUGTHING:SetMovable(true)
+LOLIBDEBUGTHING:SetPoint("Center", 250, 0)
+LOLIBDEBUGTHING:RegisterForDrag("LeftButton")
+LOLIBDEBUGTHING:SetScript("OnDragStart", LOLIBDEBUGTHING.StartMoving )
+LOLIBDEBUGTHING:SetScript("OnDragStop", LOLIBDEBUGTHING.StopMovingOrSizing)
+LOLIBDEBUGTHING.text = LOLIBDEBUGTHING:CreateFontString(nil, nil, "GameFontNormal")
+LOLIBDEBUGTHING.text:SetPoint("topleft", 10, -15)
+LOLIBDEBUGTHING.text:SetText("0000")
+LOLIBDEBUGTHING.text:SetJustifyH("left")
+LOLIBDEBUGTHING:SetWidth(65)
+LOLIBDEBUGTHING:SetHeight(LOLIBDEBUGTHING.text:GetStringHeight()+20)
+LOLIBDEBUGTHING:SetClampedToScreen(true)
+LOLIBDEBUGTHING:Show()
 
 local L_FPS_MoveButton = CreateFrame("Button", "FPS_MoveButton", LOLIBDEBUGTHING)
 FPS_MoveButton:SetWidth(8)
@@ -673,3 +751,8 @@ FPS_MoveButton:SetScript("OnEnter",  function()
 	FPS_MoveButton.tex:SetVertexColor(1, 1, 1 )
 	
 end)
+end
+
+
+------------------------------------------------------------------------------------------------------------------------------
+

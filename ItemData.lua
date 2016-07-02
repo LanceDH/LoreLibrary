@@ -270,6 +270,8 @@ _addon.data = {
 	["o196462"] = "Giant-Sized Laxative",
 	["o193402"] = "Rusted Prisoner's Footlocker",
 	["o230401"] = "Sealed Jug",
+	-- 7.0
+	["q40031"] = "Vrykul Herblore",
 },
 ["lore"] = {
 ["A Treatise on Military Ranks"] = {
@@ -6854,6 +6856,119 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["sourceType"] = "container", ["id"] = 113258},
+	},
+},
+
+------------------------------------------------------------------------------------------
+-- Patch 7.0 Pre launch event
+------------------------------------------------------------------------------------------
+
+["Tattered Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140262},
+	["pages"] = {
+		"FOR SALE: EZ-123 BUNKER BUILDER\n\nThe end is approaching, but you and your loved ones can survive with your very own B.B.! The Bunker Builder is the latest in gnomish engineering. Simple to operate, small enough for a mountain ram to carry, the B.B. can deploy in almost any terrain (see disclaimers). With the press of a button, the device will tunnel deep underground and hollow out a cozy cavern where you can live in peace. Each purchase comes with two air fresheners, a rope ladder (see disclaimers), and an operator's manual.\n\nDisclaimers: Not for use in sand, water, or Dalaran. Deploy rope ladder BEFORE entering the B.B. tunnel.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Worn Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140263},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Damp Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140264},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Crumpled Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140267},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Odorous Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140268},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Prophetic Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140270},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Scribbled Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140279},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Stained Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140280},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Ominous Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140281},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Demonic Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140282},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Blackened Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140283},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
+	},
+},
+["Scrawled Pamphlet"] = {
+	["info"] = {["type"] = "item", ["id"] = 140284},
+	["pages"] = {
+		"Due to lack of Wowhead data, text will be added in a later patch.",
+	},
+	["locations"] = {
+		{["sourceType"] = "unavailable", },
 	},
 },
 }

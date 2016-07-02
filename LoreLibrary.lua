@@ -4,18 +4,6 @@ _addon.localizeds = {};
 
 local _L = _addon.locals;
 
--- Making globals for certain locals to use in XML
-LOLIB_TAB_LORE =				_L["S_TAB_LORE"];
-LOLIB_TAB_POI =					_L["S_TAB_POI"];
-LOLIB_LIBRARY_ADDED =			_L["S_LIBRARY_ADDED"];
-LOLIB_NEW = 					_L["S_NEW"];
-LOLIB_DAILY_SUGGESTIONS =		_L["S_DAILY_SUGGESTIONS"];
-LOLIB_LOSTPAGE_UNLOCK_INFO =	_L["S_LOSTPAGE_UNLOCK_INFO"];
-LOLIB_SUGGESTION_COMPLETE =		_L["S_SUGGESTION_COMPLETE"];
-LOLIB_MARK_WORLDMAP =			_L["S_MARK_WORLDMAP"];
-LOLIB_ZONE_COMPLETE =			_L["S_ZONE_COMPLETE"];
-LOLIB_TITLE_DOCUMENT =			_L["S_TITLE_DOCUMENT"];
-
 local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
 
 local _LDB = LibStub("LibDataBroker-1.1"):NewDataObject(_addonName, {
@@ -43,6 +31,9 @@ local _defaults = {
 			version = "",
 			showMapOverlay = true,
 			showTooltipText = true,
+			poI = {
+				sortByContinent = true;
+			},
 			minimap = {
 				hide = false,
 			},
@@ -88,6 +79,7 @@ local _completedQuests = nil;
 local _unlockedLoreTitles = {};
 local _favoriteLore = {};
 local _loreList = {};
+local _tempList = {}; -- used to optimise filtering
 local _playerName = GetUnitName("player", false);
 local _playerClass = UnitClass("player");
 local _playerSex = UnitSex("player");
@@ -105,6 +97,7 @@ local _achievementsToCheck = {
 		,6857 -- Heart of the Mantid Swarm
 		,6856 -- Ballad of Liu Lang
 		,7230 -- Legend of the Brewfathers
+		,11065 -- It All Makes Sense Now
 	}
 
 local _sourceData = {
@@ -206,7 +199,9 @@ function _addon:UpdateMapPins()
 	LoreLibraryMap.overview.shown = {};
 	
 	_addon:LorePiecesInMap();
-	_addon:PoIInMap();
+	if _L["B_ENABLE_POI"] then
+		_addon:PoIInMap();
+	end
 end
 
 function _addon:ShowOverviewListing(listing)
@@ -573,6 +568,62 @@ function _addon:HasFilteredSource(lore)
 	return false;
 end
 
+local function copyList(target, source, keepSource)
+	for i=#target, 1, -1 do
+		target[i] = nil;
+	end
+	
+	for i=#source, 1, -1 do
+		target[i] = source[i];
+		if (not keepSource) then
+			source[i] = nil;
+		end
+	end
+end
+
+function _addon:UpdateFilteredLoreList()
+	local search = LoreLibraryCore.searchString;
+	local list = LoreLibraryList.filteredList;
+	if not list then list = {} end
+
+	copyList(list, _loreList, true);
+	-- Base list depending on collected or not
+	if (not _filter.collected or not _filter.notCollected) then
+
+		for k, lore in ipairs(list) do
+			if (_filter.collected and lore.unlocked) or (_filter.notCollected and not lore.unlocked) then
+				table.insert(_tempList, lore);
+			end
+		end
+		copyList(list, _tempList)
+	end
+	
+	
+	-- Apply search
+	if (search ~= nil and search ~= "") then
+		for k, lore in ipairs(list) do
+			if (string.find(string.lower(lore.title), search:lower(), 1, true)) then
+				table.insert(_tempList, lore);
+			end
+		end
+
+		copyList(list, _tempList)
+	end
+	
+	
+	-- Apply filters
+	for lk, lore in ipairs(list) do
+		if (self:HasFilteredSource(lore)) then
+			table.insert(_tempList, lore);
+		end
+		
+	end
+	
+	copyList(list, _tempList)
+	LoreLibraryList.filteredList = list;
+end
+
+--[[
 function _addon:GetFilteredList(unlockedFirst)
 	local list = {};
 	local search = LoreLibraryCore.searchString;
@@ -595,7 +646,8 @@ function _addon:GetFilteredList(unlockedFirst)
 			end
 		end
 	end
-
+	
+	
 	-- Apply search
 	if (search ~= nil and search ~= "") then
 		local searchList = {}
@@ -608,6 +660,7 @@ function _addon:GetFilteredList(unlockedFirst)
 		list = searchList;
 	end
 	
+	
 	-- Apply filters
 	local sourcelist = {}
 	
@@ -619,6 +672,7 @@ function _addon:GetFilteredList(unlockedFirst)
 	end
 	list = sourcelist;
 	
+	
 	-- Sort the list
 	if (unlockedFirst) then
 		SortLoreUnlockFirst(list);
@@ -628,6 +682,7 @@ function _addon:GetFilteredList(unlockedFirst)
 
 	return list;
 end
+]]--
 
 function _addon:LoreQuestCompleted(lore)
 	for k, loc in ipairs(lore.locations) do
@@ -781,7 +836,10 @@ function _addon:UpdateBookList()
 	local buttons = scrollFrame.buttons;
 	if buttons == nil then return; end
 	
-	local list = _addon:GetFilteredList(true);
+	local list = LoreLibraryList.filteredList --_addon:GetFilteredList(true);
+	if not list then list = {} end
+	
+	SortLoreUnlockFirst(list);
 
 	for i=1, #buttons do
 		local button = buttons[i];
@@ -837,7 +895,6 @@ function _addon:ShowFavoriteMenu(anchorTo, lore)
 end
 
 function _addon:UpdateSuggestions()
-
 	local buttonList = LoreLibraryList.suggestions.buttons;
 	for k, button in ipairs(buttonList) do
 		button.title:SetText("");
@@ -1007,6 +1064,7 @@ function _addon:InitFilter(self, level)
 		info.text = COLLECTED;
 		info.func = function(_, _, _, value)
 						_filter.collected = value;
+						_addon:UpdateFilteredLoreList();
 						_addon:UpdateBookList();
 					end 
 		info.checked = _filter.collected;
@@ -1016,6 +1074,7 @@ function _addon:InitFilter(self, level)
 		info.text = NOT_COLLECTED;
 		info.func = function(_, _, _, value)
 						_filter.notCollected = value;
+						_addon:UpdateFilteredLoreList();
 						_addon:UpdateBookList();
 					end 
 		info.checked = _filter.notCollected;
@@ -1041,6 +1100,7 @@ function _addon:InitFilter(self, level)
 		info.func = function()
 						_addon:SetAllSourcesTo(true);
 						UIDropDownMenu_Refresh(LoreLibraryListFilterDropDown, 1, 2);
+						_addon:UpdateFilteredLoreList();
 						_addon:UpdateBookList();
 					end
 		UIDropDownMenu_AddButton(info, level)
@@ -1049,6 +1109,7 @@ function _addon:InitFilter(self, level)
 		info.func = function()
 						_addon:SetAllSourcesTo(false);
 						UIDropDownMenu_Refresh(LoreLibraryListFilterDropDown, 1, 2);
+						_addon:UpdateFilteredLoreList();
 						_addon:UpdateBookList();
 					end
 		UIDropDownMenu_AddButton(info, level)
@@ -1059,6 +1120,7 @@ function _addon:InitFilter(self, level)
 			info.text = v.text;
 			info.func = function(_, _, _, value)
 								_filter.sources[k].enabled = value;
+								_addon:UpdateFilteredLoreList();
 								_addon:UpdateBookList();
 							end
 			info.checked = function() return _filter.sources[k].enabled end;
@@ -1108,14 +1170,17 @@ function _addon:InitOptions(self, level)
 		info.value = 1;
 		UIDropDownMenu_AddButton(info, level)
 		
-		info.checked = 	nil;
-		info.isNotRadio = nil;
-		info.func =  nil;
-		info.hasArrow = true;
-		info.notCheckable = true;
-		info.text = _L["S_OPTIONS_POPUPOPTIONS"];
-		info.value = 2;
-		UIDropDownMenu_AddButton(info, level)
+		if (_L["B_ENABLE_POI"]) then
+			info.checked = 	nil;
+			info.isNotRadio = nil;
+			info.func =  nil;
+			info.hasArrow = true;
+			info.notCheckable = true;
+			info.text = _L["S_OPTIONS_POPUPOPTIONS"];
+			info.value = 2;
+			UIDropDownMenu_AddButton(info, level)
+		end
+		
 		
 	elseif (level == 2) then
 		if (UIDROPDOWNMENU_MENU_VALUE == 1) then -- pin options
@@ -1128,14 +1193,16 @@ function _addon:InitOptions(self, level)
 			info.isNotRadio = true;
 			UIDropDownMenu_AddButton(info, level)
 			
-			info.text = _L["S_OPTIONS_PINS_AREA"];
-			info.func = function(_, _, _, value)
-							_addon.options.pins.poi = value;
-							_addon:UpdateMapPins()
-						end 
-			info.checked = function() return _addon.options.pins.poi; end;
-			info.isNotRadio = true;
-			UIDropDownMenu_AddButton(info, level)
+			if (_L["B_ENABLE_POI"]) then
+				info.text = _L["S_OPTIONS_PINS_AREA"];
+				info.func = function(_, _, _, value)
+								_addon.options.pins.poi = value;
+								_addon:UpdateMapPins()
+							end 
+				info.checked = function() return _addon.options.pins.poi; end;
+				info.isNotRadio = true;
+				UIDropDownMenu_AddButton(info, level)
+			end
 			
 			info.text = _L["S_OPTIONS_PINS_UNLOCKED"];
 			info.func = function(_, _, _, value)
@@ -1317,8 +1384,25 @@ function _addon:InitCoreFrame()
 							PlaySound("igCharacterInfoOpen");
 							_addon:PlayNewSuggestionAnimations()
 							DoEmote("READ", nil, true);
+							_addon:UpdatePointList();
+							_addon:UpdateZoneList();
+							_addon:UpdatePointDetailScroller();
 						end);
 	
+	LoreLibraryCore:SetClampedToScreen(true);
+	LoreLibraryCore.TitleText:SetText(LOLIB_TITLE_DOCUMENT);
+	LoreLibraryCore:RegisterForDrag("LeftButton");
+	LoreLibraryCore:SetScript("OnDragStart", LoreLibraryCore.StartMoving );
+	LoreLibraryCore:SetScript("OnDragStop", LoreLibraryCore.StopMovingOrSizing);
+	SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
+	UIPanelWindows["LoreLibraryCore"] = { area = "left", pushable = 4 }
+	if (_L["B_ENABLE_POI"]) then
+		PanelTemplates_SetNumTabs(LoreLibraryCore, 2);
+		PanelTemplates_SetTab(LoreLibraryCore, 1);
+	end
+	
+	
+	self:UpdateFilteredLoreList();
 	LoreLibraryList.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
 	
 	LoreLibraryList.suggestBtn:SetScript("OnClick", function() 
@@ -1368,7 +1452,6 @@ function _addon:InitCoreFrame()
 	
 	LoreLibraryUnlockPopup.fadeIn = LoreLibraryUnlockPopup:CreateAnimationGroup();
 	LoreLibraryUnlockPopup.fadeIn.alpha = LoreLibraryUnlockPopup.fadeIn:CreateAnimation("ALPHA");
-	--LoreLibraryUnlockPopup.fadeIn.alpha:SetChange(1);
 	LoreLibraryUnlockPopup.fadeIn.alpha:SetSmoothing("NONE");
 	LoreLibraryUnlockPopup.fadeIn.alpha:SetDuration(0.3);
 	LoreLibraryUnlockPopup.fadeIn.alpha:SetFromAlpha(1)
@@ -1494,6 +1577,7 @@ function _addon:SearchChanged(searchBox)
 	
 	if ( oldText ~= LoreLibraryCore.searchString ) then		
 		LoreLibraryCore.currentPage = 1;
+		self:UpdateFilteredLoreList();
 		self:UpdateBookList();
 	end
 end
@@ -1501,7 +1585,8 @@ end
 function _addon:CreateNewSuggestionAnimation(self)
 	self.animation = self.glow:CreateAnimationGroup();
 	self.animation.alpha = self.animation:CreateAnimation("ALPHA");
-	self.animation.alpha:SetChange(1);
+	self.animation.alpha:SetFromAlpha(0);
+	self.animation.alpha:SetToAlpha(1);
 	self.animation.alpha:SetSmoothing("NONE");
 	self.animation.alpha:SetDuration(1);
 	self.animation:SetLooping("BOUNCE")
@@ -1534,7 +1619,8 @@ end
 function _addon:CreateSuggestionAnimation(self)
 	self.title.animation = self.title:CreateAnimationGroup();
 	self.title.animation.alpha = self.title.animation:CreateAnimation("ALPHA");
-	self.title.animation.alpha:SetChange(-1);
+	self.title.animation.alpha:SetFromAlpha(1);
+	self.title.animation.alpha:SetToAlpha(0);
 	self.title.animation.alpha:SetSmoothing("NONE");
 	self.title.animation.alpha:SetDuration(0.3);
 	self.title.animation.trans = self.title.animation:CreateAnimation("TRANSLATION");
@@ -1545,7 +1631,8 @@ function _addon:CreateSuggestionAnimation(self)
 	
 	self.new.animation = self.new:CreateAnimationGroup();
 	self.new.animation.alpha = self.new.animation:CreateAnimation("ALPHA");
-	self.new.animation.alpha:SetChange(1);
+	self.new.animation.alpha:SetFromAlpha(0);
+	self.new.animation.alpha:SetToAlpha(1);
 	self.new.animation.alpha:SetSmoothing("OUT");
 	self.new.animation.alpha:SetDuration(0.35);
 	self.new.animation:SetLooping("NONE")
@@ -1650,7 +1737,7 @@ function LoreLibrary:OnEnable()
 	_addon:UpdateSuggestions();
 	
 	-- display first lore in the list
-	_addon:UpdateBookDisplay(_addon:GetFilteredList(true)[1]);
+	_addon:UpdateBookDisplay(LoreLibraryList.filteredList[1]);
 	
 	_addon:UpdateLostPageCount();
 
@@ -1737,7 +1824,10 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	_addon.translations = nil;
 	SortLore();
 	_addon:InitCoreFrame();
+	if (_L["B_ENABLE_POI"]) then
 	_addon:InitPoIFrame();
+	end
+	
 	_addon:InitMap();
 
 	self:UnregisterEvent("ADDON_LOADED");
@@ -1754,8 +1844,8 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	for k, v in pairs(_L) do
-		print(k, v);
+	for k1, v1 in pairs(_addon.PoI) do
+		print(k1, v1, #v1)
 	end
 	--_addon:ToggleCoreFrame();
 end

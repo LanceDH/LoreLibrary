@@ -550,7 +550,8 @@
 			<Anchor point="CENTER" x="0" y="0"/>
 		</Anchors>
 
-		<Frames>
+		<Frames>	
+			<!--
 			<Button name="$parentTab1" inherits="LOLIBCollectionTab" text="LOLIB_TAB_LORE" id="1">
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="BOTTOMLEFT" x="11" y="2"/>
@@ -561,6 +562,7 @@
 					<Anchor point="LEFT" relativeTo="$parentTab1" relativePoint="RIGHT" x="-16" y="0"/>
 				</Anchors>
 			</Button>
+			-->
 			
 			<Button name="$parentOptionsButton" inherits="UIMenuButtonStretchTemplate" text="">
 				<Size x="35" y="22"/>
@@ -595,6 +597,7 @@
 			
 		</Frames>
 
+		<!--
 		<Scripts>
 			<OnLoad>
 				self:SetClampedToScreen(true);
@@ -608,6 +611,7 @@
 				PanelTemplates_SetTab(self, 1);
 			</OnLoad>
 		</Scripts>
+		-->
 	</Frame>
 	
 	<Frame name="LoreLibraryList" parent="LoreLibraryCore" hidden="false">
@@ -712,7 +716,7 @@
 				</Frames>
 			</Frame>
 		
-			<Frame name="$parentDisplay" inherits="LOLIB_InsetTemplate">
+			<Frame name="$parentDisplay" inherits="LOLIB_InsetTemplate_Light">
 				<Size x="414"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="4" x="-6"/>
@@ -726,12 +730,13 @@
 				
 				<Layers>
 					<Layer level="BACKGROUND">
-						<Texture name="$parentParchmentBg" file="Interface\AddOns\LoreLibrary\Images\QuestBG">
+						<Texture name="$parentParchmentBg" file="Interface\ItemTextFrame\Book">
 							<Anchors>
 								<Anchor point="TOPLEFT" x="4" y="-4"/>
 								<Anchor point="BOTTOMRIGHT" x="-4" y="3"/>
 							</Anchors>
-							<TexCoords left="0" right="0.587890625" top="0" bottom="0.65625"/>
+							<TexCoords left="0" right="0.953125" top="0" bottom="0.96875"/>
+							<Color r="0.9" g="0.9" b="0.9"/>
 						</Texture>
 					</Layer>
 					<Layer level="ARTWORK">
@@ -975,12 +980,12 @@
 					</Layer>
 				</Layers>
 				<Frames>
-					<Frame parentKey="listingLore" inherits="LOLIB_MapOverviewListing">
+					<Frame parentKey="listingLore" inherits="LOLIB_MapOverviewListing" hidden="true">
 						<Anchors>
 							<Anchor point="TOP" y="-15"/>
 						</Anchors>
 					</Frame>
-					<Frame parentKey="listingPoI" inherits="LOLIB_MapOverviewListing">
+					<Frame parentKey="listingPoI" inherits="LOLIB_MapOverviewListing" hidden="true">
 						<Anchors>
 							<Anchor point="TOP" relativeKey="$parent.listingLore" relativePoint="BOTTOM" y="0"/>
 						</Anchors>
