@@ -1183,6 +1183,7 @@ function _addon:InitOptions(self, level)
 		
 		
 	elseif (level == 2) then
+		
 		if (UIDROPDOWNMENU_MENU_VALUE == 1) then -- pin options
 			info.text = _L["S_OPTIONS_PINS_LORE"];
 			info.func = function(_, _, _, value)
@@ -1224,7 +1225,6 @@ function _addon:InitOptions(self, level)
 		
 		elseif (UIDROPDOWNMENU_MENU_VALUE == 2) then -- popup options
 			
-		
 			info.hasArrow = false;
 			info.isNotRadio = true;
 			info.notCheckable = true;
@@ -1442,6 +1442,9 @@ function _addon:InitCoreFrame()
 	UIDropDownMenu_Initialize(LoreLibraryListFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
 	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
 
+	-- LoreLibraryCoreOptionsDropDown.initialize = function(self, level) _addon:InitOptions(self, level) end
+	-- LoreLibraryListFilterDropDown.initialize = function(self, level) _addon:InitFilter(self, level) end
+	-- LoreLibraryList.favoriteMenu.initialize = function(self, level) _addon:InitFavoriteMenu(self, level) end
 	
 	local display = LoreLibraryListDisplay;
 
@@ -1560,6 +1563,7 @@ function _addon:InitMap()
 				end)	
 	
 	UIDropDownMenu_Initialize(LolibOptionDropDown, function(self, level) _addon:InitMapOptionsDropdown(self, level) end, "MENU");
+	--LolibOptionDropDown.initialize = function(self, level) _addon:InitMapOptionsDropdown(self, level) end
 	
 	lore.icon:SetTexture("Interface\\AddOns\\LoreLibrary\\Images\\icon_Object");
 	poi.icon:SetTexture("Interface\\AddOns\\LoreLibrary\\Images\\icon_PoI");
@@ -1844,10 +1848,7 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	for k1, v1 in pairs(_addon.PoI) do
-		print(k1, v1, #v1)
-	end
-	--_addon:ToggleCoreFrame();
+	_addon:ToggleCoreFrame();
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd
 

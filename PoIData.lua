@@ -1,7 +1,7 @@
 ﻿
 local _addonName, _addon = ...;
 
-_L = _addon.locals;
+local _L = _addon.locals;
 
 if (_L["B_ENABLE_POI"]) then
 

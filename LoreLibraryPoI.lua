@@ -51,7 +51,7 @@ end
 
 function LOLIB_ListPoint_OnClick(self, button)
 	LoreLibraryPoI.point = self.point;
-	LoreLibraryPoIDetailScroll.scrollBar:SetValue(0);
+	LoreLibraryPoIDetailScroll.ScrollBar:SetValue(0); -- Capital S because ScrollFrame_OnLoad(self) in SharedUIPanelTemplates
 	_addon:UpdatePointList();
 	_addon:UpdatePointDetailScroller();
 	

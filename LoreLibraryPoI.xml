@@ -477,7 +477,7 @@
 					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetDetail" x="-25" y="5"/>
 				</Anchors>
 				<Frames>
-					<Slider name="$parentScrollBar" inherits="UIPanelScrollBarTemplate" parentKey="scrollBar">
+					<Slider name="$parentScrollBar" inherits="UIPanelScrollBarTemplate" parentKey="ScrollBar"> <!-- Capital S because ScrollFrame_OnLoad(self) in SharedUIPanelTemplates !-->
 						<Anchors>
 							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="6" y="-14"/>
 							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="6" y="13"/>
