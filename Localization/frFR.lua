@@ -4879,5 +4879,78 @@ _addon.translations = {
 			"Réserve de cadeaux réduite à un niveau inadéquat. Utilisation du surplus militaire autorisée.",
 		},
 	},
+	
+	["Tattered Pamphlet"] = {
+		["translation"] = "Fascicule en lambeaux",
+		["pages"] = {
+			"À VENDRE : FOREUSE DE BUNKER EZ-123\n\nLa fin est proche, mais vous et les vôtres allez pouvoir survivre grâce à votre F.B. personnelle ! La Foreuse de Bunker est la dernière-née de la technologie gnome. Simple d’utilisation et assez compacte pour être transportée par un bélier des montagnes, elle peut être déployée sur tout type de terrain, ou presque (voir les avertissements préalables). D’une simple pression de l’index, le dispositif se met en marche et fore le sol afin de vous créer une caverne confortable dans laquelle vous pourrez vivre en paix. Chaque F.B. achetée est livrée avec deux désodorisants, une échelle de corde (voir les avertissements préalables) et une notice d’utilisation.\n\nAvertissements préalables : ne pas utiliser dans le sable, sous l’eau ou à Dalaran. Déployez l’échelle de corde AVANT de vous engager dans le tunnel de la F.B.",
+		},
+	},
+	["Worn Pamphlet"] = {
+		["translation"] = "Fascicule usé",
+		["pages"] = {
+			"L’ASCENSION D’ÉMERAUDE\n\nNe redoutez pas le moment où l’ombre du grand Sargeras éclipsera le soleil.\n\nCar ce sera l’heure de notre ascension.\n\nLa mort qui s’ensuivra ne sera qu’une porte vers un ailleurs.\n\nFranchissez-la sans crainte et vous quitterez votre délicate enveloppe charnelle pour revêtir une forme embrassée par le feu d’émeraude.\n\nChassez la cendre de vos yeux et vous trouverez une nouvelle raison d’être aux côtés de Sargeras.",
+		},
+	},
+	["Damp Pamphlet"] = {
+		["translation"] = "Fascicule humide",
+		["pages"] = {
+			"PRÉPARATION AUX CATASTROPHES : ÉDITION SPÉCIALE INVASION DÉMONIAQUE\n\n<Ce parchemin dresse une liste d’instructions visant à se préparer en cas d’invasion de la Légion ardente, mais toutes les lignes ont été biffées et sont illisibles. Les mots « brûlez tout » et « nul ne peut vous sauver » ont été griffonnés à plusieurs reprises en lettres de sang sur la page.>",
+		},
+	},
+	["Crumpled Pamphlet"] = {
+		["translation"] = "Fascicule chiffonné",
+		["pages"] = {
+			"ACCUEILLEZ LA LÉGION À BRAS OUVERTS\n\nLes démons ne sont pas les ennemis que l’on veut nous faire croire. Ils ne cherchent qu’à chasser la corruption qui ronge le cœur de la Horde et de l’Alliance. Si nos chefs veulent nous persuader du contraire, c’est pour que nous luttions contre les démons afin qu’eux puissent conserver leurs titres pompeux et leur précieux trône.\n\nNe mourez pas pour eux. Quand les démons seront là, déposez les armes et ils feront preuve de compassion à votre égard.",
+		},
+	},
+	["Odorous Pamphlet"] = {
+		["translation"] = "Fascicule odorant",
+		["pages"] = {
+			"LE ZEPPELIN DE L’OUBLI, PRÉSENTÉ PAR LE PRINCE MARCHAND GALLYWIX\n\nUne pluie de flammes vertes s’abat sur notre monde. Une marée démoniaque déferle sur notre civilisation.\n\nTout va mal, n’est-ce pas ? Sauf si vous assistez au spectacle depuis le zeppelin de l’Oubli de Gallywix !\n\nN’hésitez plus et offrez-vous un billet pour réserver votre place à bord de l’überzeppelin du prince marchand (voir conditions de vente). Le palais des plaisirs flottant fera la tournée des plus grandes cités alors que la Légion ardente dansera son tango gangrené partout dans le monde. Commandez un cocktail et profitez du spectacle de l’apocalypse sur fond de musique du Quatuor de Baille-Fonds !\n\nConditions de vente : billets pour les toboggans à rhum et les jacuzzis à pudding de l’überzeppelin vendus séparément.",
+		},
+	},
+	["Prophetic Pamphlet"] = {
+		["translation"] = "Fascicule prophétique",
+		["pages"] = {
+			"LA PROPHÉTIE DES TROIS AUSPICES\n\nVoici les trois signes de notre perte, tels qu’annoncés par les sages. Quand tous se seront manifestés, c’est que la Légion ardente l’aura emporté et que nous vivrons nos dernières heures.\n\nLe roi d’en bas de sa couronne de diamants se débarrassera.\n\nSur la cité de la nuit éternelle l’aube se lèvera.\n\nD’une meute de sang le louveteau héritera.",
+		},
+	},
+	["Scribbled Pamphlet"] = {
+		["translation"] = "Fascicule gribouillé",
+		["pages"] = {
+			"QUANTITÉ LIMITÉE : DÉGUISEMENTS DÉMONIAQUES D’EXCELLENTE QUALITÉ\n\nImaginons que l’inévitable se produise. Vous vaquez tranquillement à vos occupations quand une meute de démons frappe à votre porte. Que faire ? Heureusement pour vous, la compagnie théâtrale de Sombrelune a la réponse !\n\nNos talentueux accessoiristes ont en effet créé une collection de costumes démoniaques intégraux que même Kil’jaeden le Trompeur ne manquerait pas d’applaudir. Notre gamme de déguisements actuelle inclut : seigneur des abîmes (conçu pour deux personnes), garde funeste, mo’arg et gangrechien (à éviter en cas de douleurs dorsales).\n\nEnfilez l’un de ces costumes et les démons n’y verront que du feu. L’illusion est garantie.",
+		},
+	},
+	["Stained Pamphlet"] = {
+		["translation"] = "Fascicule taché",
+		["pages"] = {
+			"LA FIN DE TOUTE CHOSE\n\nLe serpent tortueux dépourvu d’yeux guette depuis les cieux infinis.\n\nLes langues fourchues frétillent dans les cratères noirs des étoiles mortes.\n\nLe voile entre le songe et le rêveur tombe lentement, telle la chair qui se détache des os.\n\nEt même les ténèbres hurlent pour revoir la lumière qu’elles haïssaient autrefois.\n\n<Le reste de la note est couvert de glyphes étranges et de gribouillis illisibles.>",
+		},
+	},
+	["Ominous Pamphlet"] = {
+		["translation"] = "Fascicule inquiétant",
+		["pages"] = {
+			"DÉFIEZ LA LÉGION\n\nNul ne peut nous sauver des démons, mais nous pouvons les priver de la gloire de la victoire.\n\nBrûlez toutes vos possessions matérielles. Incendiez la ville et abandonnez-vous aux tentations du chaos. Laissez-vous aller à tous les excès, qu’il ne reste plus que cendres et ossements pour accueillir la Légion. Ainsi, elle n’aura plus rien à conquérir.",
+		},
+	},
+	["Demonic Pamphlet"] = {
+		["translation"] = "Fascicule démoniaque",
+		["pages"] = {
+			"LES AUGURES DE FEU\n\nLes flammes connaissent notre destinée.\n\nÉcoutez-les qui crépitent dans l’âtre et vous entendrez le pas cadencé des démons qui marchent sur nos cités. Cent mille lames sortent de leurs fourreaux et cent mille cris de guerre leur répondent en écho.\n\nContemplez la lueur des bougies et vous les verrez à l’heure de leur triomphe. Une armée innombrable constituée de soldats difformes et grotesques. Une Légion drapée dans un manteau de flammes vertes.",
+		},
+	},
+	["Blackened Pamphlet"] = {
+		["translation"] = "Fascicule noirci",
+		["pages"] = {
+			"LE JOUR VERT APPROCHE\n\nNotre vie est fugace. Nos exploits ne sont que poussière. Notre existence n’est que souffrance.\n\nSargeras souhaite nous délivrer de ces tourments. Ceci est votre seule et unique chance de prendre place à ses côtés et d’avoir un impact véritable et durable sur le cosmos. Une éternité de servitude vaut mieux qu’un bref instant de liberté. Si vous en êtes digne, la Légion ardente vous acceptera, vous formera et vous rendra plus fort avant de vous envoyer dévaster l’univers.\n\nDans le cas contraire, votre fin sera rapide et indolore.",
+		},
+	},
+	["Scrawled Pamphlet"] = {
+		["translation"] = "Fascicule griffonné",
+		["pages"] = {
+			"VOUS POUVEZ SAUVER VOTRE FAMILLE\n\nAzeroth finira par brûler, car nul ne peut se dresser contre la Légion. Ni vous, ni votre famille, ni même vos plus vaillants champions.\n\nAlors, sauvez ceux que vous pouvez tant que c’est encore possible.\n\nRejoignez la Légion. Maintenant ou jamais. Le jour viendra où tous les idiots de ce monde finiront par accepter l’inévitable, et alors, une marée de mortels viendra implorer la clémence de la Légion. Mais pour l’heure, beaucoup s’accrochent encore à l’espoir, aussi insensé soit-il. C’est votre chance de rallier les rangs des démons avant qu’il ne soit trop tard. Amenez vos amis. Vos enfants. (Profitez-en pour vous débarrasser de ceux qui vous insupportent.)\n\nMais faites vite, car le temps presse.",
+		},
+	},
 }
 };

@@ -118,7 +118,7 @@ local function SetAllZoneSourcesTo(enable)
 end
 
 local function InitZoneFilter(self, level)
-	local info = UIDropDownMenu_CreateInfo();
+	local info = Lib_UIDropDownMenu_CreateInfo();
 	info.keepShownOnClick = true;	
 
 	if level == 1 then
@@ -129,7 +129,7 @@ local function InitZoneFilter(self, level)
 					end 
 		info.checked = function() return _addon.options.poI.sortByContinent end;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 		
 		info.text = _L["S_POI_COMPLETED"];
 		info.func = function(_, _, _, value)
@@ -138,7 +138,7 @@ local function InitZoneFilter(self, level)
 					end 
 		info.checked = function() return _filter.completed end;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 		
 		info.text = _L["S_POI_NOT_COMPLETED"];
 		info.func = function(_, _, _, value)
@@ -147,7 +147,7 @@ local function InitZoneFilter(self, level)
 					end 
 		info.checked = function() return _filter.notCompleted end;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 	
 		info.checked = 	nil;
 		info.isNotRadio = nil;
@@ -156,7 +156,7 @@ local function InitZoneFilter(self, level)
 		info.notCheckable = true;
 		info.text = "Continents";
 		info.value = 1;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 	elseif (level == 2) then
 		info.hasArrow = false;
 		info.isNotRadio = true;
@@ -165,18 +165,18 @@ local function InitZoneFilter(self, level)
 		info.text = CHECK_ALL
 		info.func = function()
 						SetAllZoneSourcesTo(true);
-						UIDropDownMenu_Refresh(LoreLibraryPoIFilterDropDown, 1, 1);
+						Lib_UIDropDownMenu_Refresh(LoreLibraryPoIFilterDropDown, 1, 1);
 						_addon:UpdateZoneList();
 					end
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 		
 		info.text = UNCHECK_ALL
 		info.func = function()
 						SetAllZoneSourcesTo(false);
-						UIDropDownMenu_Refresh(LoreLibraryPoIFilterDropDown, 1, 1);
+						Lib_UIDropDownMenu_Refresh(LoreLibraryPoIFilterDropDown, 1, 1);
 						_addon:UpdateZoneList();
 					end
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 
 		info.notCheckable = false;
 		for k, v in pairs(_filter.continents) do
@@ -186,7 +186,7 @@ local function InitZoneFilter(self, level)
 								_addon:UpdateZoneList();
 							end
 			info.checked = function() return _filter.continents[k].enabled end;
-			UIDropDownMenu_AddButton(info, level);			
+			Lib_UIDropDownMenu_AddButton(info, level);			
 		end
 	end
 end
@@ -512,7 +512,7 @@ function _addon:InitPoIFrame()
 	self:UpdatePointList();
 	self:UpdatePointDetailScroller();
 	
-	UIDropDownMenu_Initialize(LoreLibraryPoIFilterDropDown, function(self, level) InitZoneFilter(self, level) end, "MENU");
+	Lib_UIDropDownMenu_Initialize(LoreLibraryPoIFilterDropDown, function(self, level) InitZoneFilter(self, level) end, "MENU");
 	
 	LoreLibraryPoI.titleCard.bgLeft:SetDesaturated(false);
 	LoreLibraryPoI.titleCard.bgRight:SetDesaturated(false);

@@ -4879,5 +4879,78 @@ _addon.translations = {
 			"Geschenkvorrat auf nicht akzeptables Niveau gesunken. Kriegsnachschublieferungen autorisiert.",
 		},
 	},
+	
+	["Tattered Pamphlet"] = {
+		["translation"] = "Zerfledderter Handzettel",
+		["pages"] = {
+			"ANGEBOT: BUNKERBAUER FIX-123\n\nDas Ende naht, aber Ihr und Eure Lieben könnt überleben – mit einem eigenen BB! Der Bunkerbauer ist eine Neuheit der Gnomeningenieurskunst. Der BB ist benutzerfreundlich, klein genug, um von einem Bergwidder transportiert zu werden, und lässt sich in fast jedem Terrain nutzen (s. Haftungsausschluss). Per Tastendruck gräbt das Gerät einen tiefen Tunnel und eine gemütliche Höhle, wo Ihr in Frieden leben könnt. Bei jedem Kauf erhaltet Ihr zwei Luftauffrischer, eine Strickleiter (s. Haftungsausschluss) und eine Benutzeranleitung.\n\nHaftungsausschluss: Nicht zur Verwendung in Sand, Wasser oder Dalaran geeignet. Strickleiter VOR dem Betreten des BB-Tunnels anbringen.",
+		},
+	},
+	["Worn Pamphlet"] = {
+		["translation"] = "Abgegriffener Handzettel",
+		["pages"] = {
+			"DER SMARAGDGRÜNE AUFSTIEG\n\nFürchtet nicht die Zeit, wenn der Schatten des großen Sargeras die Sonne verdunkelt.\n\nDenn das ist der Moment unseres Aufstiegs.\n\nDer Tod wird folgen, aber er ist nichts weiter als ein Tor.\n\nSchreitet hindurch, und Ihr werdet Eure schwache Hülle abwerfen und eine Gestalt annehmen, die von smaragdgrünem Feuer geküsst wurde.\n\nReibt die Asche von Euren Augen und Ihr findet ein höheres Ziel an der Seite von Sargeras.",
+		},
+	},
+	["Damp Pamphlet"] = {
+		["translation"] = "Feuchter Handzettel",
+		["pages"] = {
+			"KATASTROPHENVORSORGE: AUFLAGE ZUR DÄMONENINVASION\n\n<Die Schriftrolle enthält eine Liste mit Anweisungen dazu, wie man sich auf die Invasion der Brennenden Legion vorbereitet, aber die Einträge wurden durchgestrichen und unkenntlich gemacht. Phrasen wie \"Verbrennt alles\" und \"Nichts kann Euch retten\" wurden unzählige Male mit Blut auf das Pergament geschmiert.>",
+		},
+	},
+	["Crumpled Pamphlet"] = {
+		["translation"] = "Zerknitterter Handzettel",
+		["pages"] = {
+			"HEISST DIE LEGION WILLKOMMEN\n\nDie Dämonen sind nicht der Feind, den man uns glauben gemacht hat. Sie wollen nur die Verderbtheit ausrotten, die im Herzen der Horde und der Allianz sitzt. Unsere Anführer vermitteln uns ein falsches Bild. Sie wollen, dass wir gegen die Dämonen kämpfen, damit sie ihre wertvollen Throne und vornehmen Titel behalten.\n\nGebt nicht Euer Leben für sie. Wenn die Dämonen kommen, legt Eure Waffen nieder und sie werden Mitgefühl zeigen.",
+		},
+	},
+	["Odorous Pamphlet"] = {
+		["translation"] = "Müffelnder Handzettel",
+		["pages"] = {
+			"ZEPPELIN INS VERDERBEN, PRÄSENTIERT VON HANDELSPRINZ GALLYWIX\n\nGrüner Feuerregen aus dem Himmel. Eine Dämonenflut überschwemmt die Zivilisation.\n\nKlingt übel, oder? Nicht, wenn man sich den Niedergang vom \"Zeppelin ins Verderben\" des Handelsprinzen Gallywix aus ansehen kann!\n\nHandelt jetzt und kauft ein Ticket (s. Haftungsausschluss) für einen Platz an Bord des Superzeppelins des Handelsprinzen. Dieser schwebende Vergnügungspalast besucht auf seiner Tour jede größere Stadt, die die Brennende Legion gerade in Schutt und Asche legt. Schnappt Euch ein Getränk, genießt einen Auftritt des Bilgewasser-Quartetts und übersteht die Apokalypse mit Stil!\n\nHaftungsausschluss: Zutritt zu den Rum-Rutschen und Pudding-Sprudelbädern nicht im Preis inbegriffen.",
+		},
+	},
+	["Prophetic Pamphlet"] = {
+		["translation"] = "Prophetischer Handzettel",
+		["pages"] = {
+			"PROPHEZEIUNG DER DREI ZEICHEN\n\nDies sind die drei Zeichen unserer Verdammnis, die von den Weisen vorausgesagt wurden. Wenn all diese Ereignisse eingetreten sind, wissen wir, dass die Brennende Legion gewonnen hat und unser Untergang bevorsteht.\n\nDer König in der Tiefe wird seine diamantene Krone abwerfen.\n\nIn der Stadt der ewigen Nacht wird der Tag anbrechen.\n\nDer Wolfswelpe wird ein blutiges Rudel erben.",
+		},
+	},
+	["Scribbled Pamphlet"] = {
+		["translation"] = "Bekritzelter Handzettel",
+		["pages"] = {
+			"BEGRENZTER VORRAT: HOCHWERTIGE DÄMONENVERKLEIDUNGEN\n\nAngenommen, das Unvermeidliche tritt ein. Ihr seid gerade mit etwas beschäftigt, als ein Rudel Dämonen vor Eurer Tür steht. Was tut Ihr dann? Das Dunkelmond-Theaterensemble kennt die Antwort!\n\nUnsere preisgekrönten Gesichtskonstrukteure haben eine Reihe von Ganzkörper-Dämonenkostümen designt, die sogar Kil'jaeden der Betrüger bejubeln würde. Zur aktuellen Verkleidungskollektion gehören Grubenlord (zwei Personen zum Tragen erforderlich), Verdammniswache, Mo'arg und Teufelshund (nicht empfohlen bei Rückenproblemen).\n\nWenn die Dämonen Euch in einer dieser Verkleidungen sehen, werden sie keinen Unterschied erkennen. Garantiert.",
+		},
+	},
+	["Stained Pamphlet"] = {
+		["translation"] = "Befleckter Handzettel",
+		["pages"] = {
+			"DAS ENDE ALLER DINGE\n\nDie gewundene, augenlose Schlange späht vom endlosen Himmel herab.\n\nEine gespaltene Zunge zischelt durch dunkle Gruben in toten Sternen.\n\nDer Schleier zwischen Traum und Träumer fällt herab wie die Haut vom Knochen.\n\nUnd selbst die Finsternis heult nach dem Licht, das sie einst verachtet hatte.\n\n<Der Rest der Notiz ist unleserlich und mit seltsamen Glyphen und Kritzeleien übersät.>",
+		},
+	},
+	["Ominous Pamphlet"] = {
+		["translation"] = "Ominöser Handzettel",
+		["pages"] = {
+			"TROTZT DER LEGION\n\nEs kann uns zwar niemand vor den Dämonen retten, aber wir können ihnen den Ruhm ihres Sieges nehmen.\n\nVerbrennt alle weltlichen Besitztümer, setzt die Straßen in Flammen und gebt Euch den Versuchungen des Chaos hin. Hört nicht eher auf zu wüten, bis die Legion nur noch Staub und Knochen erobern kann.",
+		},
+	},
+	["Demonic Pamphlet"] = {
+		["translation"] = "Dämonischer Handzettel",
+		["pages"] = {
+			"FEUEROMEN\n\nDie Flammen sagen unser Schicksal voraus.\n\nLauscht dem knisternden Feuer im Kamin und Ihr werdet die Dämonen hören, die auf unsere Städten zumarschieren. Hunderttausend Klingen, die gezogen werden. Hunderttausend Schlachtrufe, die in Einklang erschallen.\n\nBlickt in das Kerzenlicht und Ihr seht die Dämonen im Augenblick ihres Triumphs. Eine unüberschaubare Armee voller entstellter und grotesker Soldaten. Eine Legion in einem Umhang aus grünem Feuer.",
+		},
+	},
+	["Blackened Pamphlet"] = {
+		["translation"] = "Geschwärzter Handzettel",
+		["pages"] = {
+			"EIN GROSSER TAG ERWARTET UNS\n\nUnser Leben ist vergänglich. Unsere Errungenschaften nichts als Staub. Unsere Existenz bedeutet Schmerz.\n\nSargeras möchte uns von dieser Qual erlösen. Dies die einzige Chance, Euch an seine Seite zu stellen und wirklich etwas Dauerhaftes im Kosmos zu bewirken. Ewige Knechtschaft ist besser als ein flüchtiger Augenblick der Freiheit. Wenn Ihr würdig seid, nimmt Euch die Brennende Legion auf, bildet Euch aus und lässt Euch auf die gesamte Existenz los.\n\nUnd wenn Ihr nicht würdig seid, werdet Ihr ein schnelles Ende haben.",
+		},
+	},
+	["Scrawled Pamphlet"] = {
+		["translation"] = "Verschmierter Handzettel",
+		["pages"] = {
+			"IHR KÖNNT EURE FAMILIE RETTEN\n\nAzeroth wird brennen. Niemand kann der Legion trotzen. Nicht Ihr, nicht Eure Familie, nicht Eure größten Champions.\n\nAlso rettet, was Ihr könnt, solange es noch geht.\n\nTretet der Legion bei. Jetzt. Nicht später. Der Tag wird kommen, an dem alle sterblichen Narren endlich das Unausweichliche akzeptieren, und dann wird es eine Flut von Leuten geben, die die Legion um Gnade anflehen. Aber heute klammern sich immer noch viele an eine nutzlose Hoffnung. Jetzt ist Eure Chance, einen Platz in den Rängen der Dämonen einzunehmen, bevor es zu spät ist. Bringt Eure Freunde mit. Bringt Eure Kinder mit. (Lasst ruhig die zurück, die Euch auf die Nerven gehen.)\n\nDie Zeit wird knapp.",
+		},
+	},
 }
 };

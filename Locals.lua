@@ -57,7 +57,7 @@ _addon.locals = {
 	,["S_SOURCETYPE_STEALTH"] =			"Pickpocket"
 	,["S_SOURCETYPE_UNAVAILABLE"] =		"Unavailable"
 	,["S_SOURCETYPE_VENDOR"] =			"Vendor"
-	,["S_SOURCE_TITLE"] =				"This lore can be found in:"
+	,["S_SOURCE_TITLE"] =				"<HTML><BODY><BR/><P align=\"center\">This lore can be obtained from:</P><BR/></BODY></HTML>"
 	,["S_SUGGESTION_COMPLETE"] =		"Suggestion completed"
 	,["S_SUGGESTION_EMPTY1"] =			"You have collected so much lore!"
 	,["S_SUGGESTION_EMPTY2"] =			"There is nothing left to suggest."

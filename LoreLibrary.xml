@@ -10,6 +10,10 @@
 	<Include file="libs\AceAddon-3.0\AceAddon-3.0.xml"/>
 	<Include file="libs\AceDB-3.0\AceDB-3.0.xml"/>
 	
+	<Include file="libs\DropDownMenu\UIDropDownMenuTemplates.xml"/>
+	<Script file="Libs\DropDownMenu\UIDropDownMenu.lua"/>
+	
+	
 	<Button name="LoreLibraryUnlockPopup" virtual="true">
 		<Size>
 			<AbsDimension x="210" y="50"/>
@@ -203,6 +207,19 @@
 	</Button>
 	
 	<Frame name="LOLIB_SourceContainerTemplate" virtual="true">
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture parentKey="tex" file="Interface\LFGFRAME\UI-LFG-SEPARATOR" >
+					<size x="250" y="3" />
+					<Anchors>
+						<Anchor point="BOTTOM" relativePoint="TOP" y="2"/>
+					</Anchors>
+					<TexCoords left="0" right="0.65625" top="0.2421875" bottom="0.265625"/>
+					<Color r="0.5" g="0.5" b="0.5" a="0.5"/>
+				</Texture>
+			</Layer>
+		</Layers>
+	
 		<Frames>
 			<Button parentKey="s1" inherits="LOLIB_SourceTemplate" id="1">
 				<Anchors>
@@ -589,11 +606,11 @@
 				<Scripts>
 					<OnClick> 
 						PlaySound("igMainMenuOptionCheckBoxOn");
-						ToggleDropDownMenu(1, nil, LoreLibraryCoreOptionsDropDown, "LoreLibraryCoreOptionsButton", -40, 0);
+						Lib_ToggleDropDownMenu(1, nil, LoreLibraryCoreOptionsDropDown, "LoreLibraryCoreOptionsButton", -40, 0);
 					</OnClick>	
 				</Scripts>						
 			</Button>
-			<Frame name="$parentOptionsDropDown" inherits="UIDropDownMenuTemplate" />
+			<Frame name="$parentOptionsDropDown" inherits="Lib_UIDropDownMenuTemplate" />
 			
 		</Frames>
 
@@ -763,7 +780,7 @@
 					
 					<Frame parentKey="sources" inherits="LOLIB_SourceContainerTemplate" hidden="true">
 						<Anchors>
-							<Anchor point="TOPLEFT" relativeTo="$parentPageText" relativePoint="TOPLEFT" x="5" y="-45"/>
+							<Anchor point="TOPLEFT" relativeTo="$parentPageText" relativePoint="TOPLEFT" x="5" y="-50"/>
 							<Anchor point="BOTTOMRIGHT" relativeTo="$parentPageText" relativePoint="BOTTOMRIGHT"/>
 						</Anchors>
 						<Frames>
@@ -924,7 +941,7 @@
 				</Frames>
 			</ScrollFrame>
 			
-			<Frame name="$parentFavoriteMenu" inherits="UIDropDownMenuTemplate" enableMouse="true" parentKey="favoriteMenu"/>
+			<Frame name="$parentFavoriteMenu" inherits="Lib_UIDropDownMenuTemplate" enableMouse="true" parentKey="favoriteMenu"/>
 			
 			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
 				<Size x="145" y="20"/>
@@ -951,11 +968,11 @@
 				<Scripts>
 					<OnClick> 
 						PlaySound("igMainMenuOptionCheckBoxOn");
-						ToggleDropDownMenu(1, nil, LoreLibraryListFilterDropDown, "LoreLibraryListFilterButton", 74, 15);
+						Lib_ToggleDropDownMenu(1, nil, LoreLibraryListFilterDropDown, "LoreLibraryListFilterButton", 74, 15);
 					</OnClick>	
 				</Scripts>						
 			</Button>
-			<Frame name="$parentFilterDropDown" inherits="UIDropDownMenuTemplate" />
+			<Frame name="$parentFilterDropDown" inherits="Lib_UIDropDownMenuTemplate" />
 			
 		</Frames>
 		<Layers>
@@ -1030,7 +1047,7 @@
 						</OnLoad>
 					</Scripts>						
 				</Button>
-				<Frame name="LolibOptionDropDown" inherits="UIDropDownMenuTemplate" />
+				<Frame name="LolibOptionDropDown" inherits="Lib_UIDropDownMenuTemplate" />
 				<HighlightTexture atlas="PetList-ButtonHighlight">
 					<Color r="1" g="1" b="1" a="1"/>
 				</HighlightTexture>

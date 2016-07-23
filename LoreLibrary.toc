@@ -2,7 +2,7 @@
 ## Title: LoreLibrary
 ## Notes: A collection of all the lore you found.
 ## Author: LanceDH
-## Version: 7.0.1
+## Version: 7.0.02
 ## SavedVariables: LoLibDB
 
 Locals.lua

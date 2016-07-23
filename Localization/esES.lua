@@ -4879,5 +4879,79 @@ _addon.translations = {
 			"Suministro de regalos alcanzando niveles insuficientes. Uso del excedente de guerra autorizado.",
 		},
 	},
+	
+	["Tattered Pamphlet"] = {
+		["translation"] = "Panfleto andrajoso",
+		["pages"] = {
+			"SE VENDE: CONSTRUCTOR DE BÚNKERES EZ-123\n\nSe acerca el final, ¡pero tú y tus seres queridos podréis sobrevivir gracias a vuestro EZ-123! El constructor de búnkeres es lo último en ingeniería gnómica. De fácil manejo y un tamaño tan reducido que hasta un carnero montañés puede transportarlo, el constructor de búnkeres se puede utilizar en casi cualquier terreno (ver descargo de responsabilidad). Con solo pulsar un botón, el dispositivo cavará un profundo túnel hasta formar una acogedora caverna donde podrás vivir en paz. Con cada compra recibirás dos ambientadores, una escalera de cuerda (ver descargo de responsabilidad) y un manual de instrucciones.\n\nDescargo de responsabilidad: No utilizar en arena, agua o Dalaran. Colocar la escalera de cuerda ANTES de entrar en el túnel del EZ-123.",
+		},
+	},
+	["Worn Pamphlet"] = {
+		["translation"] = "Panfleto gastado",
+		["pages"] = {
+			"LA ASCENSIÓN ESMERALDA\n\nNo temas la hora en que la sombra del gran Sargeras eclipse el sol.\n\nEse será el momento de nuestra ascensión.\n\nLuego vendrá la muerte, pero solo será un portal.\n\nAtraviésalo y mudarás tu frágil piel para adoptar una apariencia besada por el fuego esmeralda.\n\nLimpia la ceniza de tus ojos y encontrarás un propósito superior al lado de Sargeras.",
+		},
+	},
+	["Damp Pamphlet"] = {
+		["translation"] = "Panfleto húmedo",
+		["pages"] = {
+			"PREPARACIÓN PARA LOS DESASTRES: EDICIÓN INVASIÓN DEMONÍACA\n\n<El pergamino contiene una lista de instrucciones para prepararse ante una invasión de la Legión Ardiente, pero las entradas están tachadas y resultan ilegibles. Las frases \"quemadlo todo\" y \"no hay salvación posible\" están garabateadas con sangre una y otra vez por todo el pergamino.>",
+		},
+	},
+	["Crumpled Pamphlet"] = {
+		["translation"] = "Panfleto arrugado",
+		["pages"] = {
+			"ENTREGAOS A LA LEGIÓN\n\nLos demonios no son los enemigos que nos han hecho creer. Su único objetivo es erradicar la corrupción que pudre el corazón de la Horda y la Alianza. Nuestros líderes quieren que creamos otra cosa. Quieren que luchemos contra los demonios para poder mantener sus preciados tronos y títulos de alta alcurnia.\n\nNo muráis por ellos. Cuando lleguen los demonios, bajad las armas y se os mostrará piedad.",
+		},
+	},
+	["Odorous Pamphlet"] = {
+		["translation"] = "Panfleto maloliente",
+		["pages"] = {
+			"ZEPELÍN HACIA EL OLVIDO, PRESENTADO POR EL PRÍNCIPE MERCANTE GALLYWIX\n\nUn fuego verde llueve desde los cielos. Una marea de demonios se lleva por delante a la civilización.\n\nNo suena nada bien, ¿verdad? ¡Pues es todo un espectáculo si se ve desde el zepelín hacia el olvido del príncipe mercante Gallywix!\n\nNo te duermas en los laureles y compra ya tu billete (ver descargo de responsabilidad) para el superzepelín del príncipe mercante. Este palacete flotante sobrevolará las ciudades más importantes mientras la Legión Ardiente baila su tango vil por todo el mundo. ¡Hazte con una bebida, disfruta de la actuación en directo del Cuarteto Pantoque y capea el apocalipsis con estilo!\n\nDescargo de responsabilidad: Los pases para los toboganes de ron y los jacuzzis de pudin se venden por separado.",
+		},
+	},
+	["Prophetic Pamphlet"] = {
+		["translation"] = "Panfleto profético",
+		["pages"] = {
+			"PROFECÍA DE LAS TRES SEÑALES\n\nComo ya predijeron los sabios, existen tres señales de nuestra perdición. Cuando sucedan, sabremos que la Legión Ardiente ha triunfado y que nuestro fin se acerca.\n\nEl rey se deshará de su corona de diamantes.\n\nEl día se abrirá sobre la ciudad de la noche eterna.\n\nEl lobezno heredará una manada sangrienta.",
+		},
+	},
+	["Scribbled Pamphlet"] = {
+		["translation"] = "Panfleto emborronado",
+		["pages"] = {
+			"UNIDADES LIMITADAS: DISFRACES DE DEMONIO DE ALTA CALIDAD\n\nImagina que lo inevitable acaba por suceder. Suponte que estás a lo tuyo y una manada de demonios llama a tu puerta. ¿Qué haces? ¡La compañía de teatro de la Luna Negra tiene la respuesta!\n\nNuestros galardonados artesanos han confeccionado una serie de disfraces de demonio de cuerpo entero que haría las delicias del mismísimo Kil'jaeden, el Impostor. Entre nuestra gama de disfraces tenemos: señor del foso (son necesarias dos personas), guardia apocalíptico, Mo'arg y can manáfago (no recomendado para quien sufra problemas de espalda).\n\nLos demonios no notarán la diferencia si te ven con uno de estos disfraces. Garantizado.",
+		},
+	},
+	["Stained Pamphlet"] = {
+		["translation"] = "Panfleto manchado",
+		["pages"] = {
+			"EL FIN DE TODAS LAS COSAS\n\nLa serpiente retorcida sin ojos observa desde el cielo infinito.\n\nLenguas bífidas titilan a través de fosos negros en estrellas muertas.\n\nEl velo entre sueño y soñador se desprende como la piel de los huesos.\n\nIncluso la oscuridad aúlla por la luz que una vez odió.\n\n<El resto de la nota es ilegible y está cubierto de extraños glifos y garabatos.>",
+		},
+	},
+	["Ominous Pamphlet"] = {
+		["translation"] = "Panfleto agorero",
+		["pages"] = {
+			"DESAFIAD A LA LEGIÓN\n\nNadie puede salvarnos de los demonios, pero podemos impedir que saboreen la gloria de su victoria.\n\nQuemad vuestras posesiones terrenales. Incendiad las calles y entregaos a las tentaciones del caos. No detengáis la destrucción hasta que la Legión solo pueda conquistar polvo y huesos.",
+		},
+	},
+	["Demonic Pamphlet"] = {
+		["translation"] = "Panfleto demoníaco",
+		["pages"] = {
+			"AUGURIOS DE FUEGO\n\nLas llamas predicen nuestro destino.\n\nEscuchad el crepitar del fuego en el hogar y oiréis el desfile de los demonios por nuestras ciudades. Cien mil hojas desenvainadas. Cien mil gritos de guerra que retumban al unísono.\n\nContemplad la luz de las velas y veréis a los demonios celebrar su triunfo. Un ejército incontable de soldados retorcidos y grotescos. Una Legión envuelta en una capa de fuego verde.",
+		},
+	},
+	["Blackened Pamphlet"] = {
+		["translation"] = "Panfleto ennegrecido",
+		["pages"] = {
+			"LLEGA UN GRAN DÍA\n\nNuestras vidas son fugaces. Nuestros logros son polvo. Nuestra existencia es dolor.\n\nSargeras busca liberarnos de este tormento. Esta es tu única oportunidad de ocupar un sitio a su lado para gozar de un verdadero y perdurable impacto en el cosmos. Una eternidad de servidumbre es mejor que un destello de libertad. Muestra tu valía y la Legión Ardiente te aceptará, te entrenará, te potenciará y te liberará sobre toda la existencia.\n\nSi no demuestras tu valía, tu muerte será rápida.",
+		},
+	},
+	["Scrawled Pamphlet"] = {
+		["translation"] = "Panfleto garabateado",
+		["pages"] = {
+			"PODÉIS SALVAR A VUESTRAS FAMILIAS\n\nAzeroth arderá. Ninguno de vosotros sobrevivirá a la Legión. Ni vosotros, ni vuestras familias, ni vuestros mejores campeones.\n\nAsí que salvad lo que podáis, mientras podáis.\n\nUníos a la Legión. Ahora. No esperéis. Llegará el día en que todos los necios mortales terminen por aceptar lo inevitable y entonces una gran marea de gente que suplicará clemencia a la Legión. Pero ahora, muchos siguen aferrados a una esperanza vana. Ha llegado vuestra oportunidad de ocupar un puesto en las filas de los demonios, antes de que sea demasiado tarde. Traed a vuestros amigos. A vuestros hijos. (Podéis abandonar a quienes os molesten).\n\nEl tiempo se agota.",
+		},
+	},
+
 }                                                                                                                                                                                                                        
 };

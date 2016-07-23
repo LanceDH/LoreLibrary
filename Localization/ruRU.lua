@@ -4880,5 +4880,78 @@ _addon.translations = {
 			"Запасы подарков упали до неприемлемого уровня. Разрешен доступ к военному резерву.",
 		},
 	},
+	
+	["Tattered Pamphlet"] = {
+		["translation"] = "Рваная листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Worn Pamphlet"] = {
+		["translation"] = "Истрепанная листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Damp Pamphlet"] = {
+		["translation"] = "Подмоченная листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Crumpled Pamphlet"] = {
+		["translation"] = "Мятая листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Odorous Pamphlet"] = {
+		["translation"] = "Благоухающая листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Prophetic Pamphlet"] = {
+		["translation"] = "Листовка с пророчеством",
+		["pages"] = {
+			"",
+		},
+	},
+	["Scribbled Pamphlet"] = {
+		["translation"] = "Листовка с каракулями",
+		["pages"] = {
+			"",
+		},
+	},
+	["Stained Pamphlet"] = {
+		["translation"] = "Заляпанная листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Ominous Pamphlet"] = {
+		["translation"] = "Зловещая листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Demonic Pamphlet"] = {
+		["translation"] = "Демоническая листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Blackened Pamphlet"] = {
+		["translation"] = "Почерневшая листовка",
+		["pages"] = {
+			"",
+		},
+	},
+	["Scrawled Pamphlet"] = {
+		["translation"] = "Почерканная листовка",
+		["pages"] = {
+			"",
+		},
+	},
 }
 };

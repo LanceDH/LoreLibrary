@@ -752,7 +752,7 @@ function _addon:UpdateBookDisplay(lore)
 		self:SetDisplayText(self:FilterPageText(lore.pages[1]))
 
 	else
-		display.pageText:SetText("<HTML><BODY><BR/><P align=\"center\">" .. _L["S_SOURCE_TITLE"] .. "</P><BR/></BODY></HTML>");
+		display.pageText:SetText(_L["S_SOURCE_TITLE"]);
 		for k, location in ipairs(lore.locations) do
 			display.sources:Show();
 			local source = display.sources["s"..k];
@@ -874,8 +874,8 @@ function _addon:UpdateBookList()
 end
 
 function _addon:HideFavoriteMenu(saveLore)
-	if (UIDropDownMenu_GetCurrentDropDown() == LoreLibraryList.favoriteMenu) then
-		HideDropDownMenu(1);
+	if (Lib_UIDropDownMenu_GetCurrentDropDown() == LoreLibraryList.favoriteMenu) then
+		Lib_HideDropDownMenu(1);
 	end
 	if not saveLore then
 		LoreLibraryList.favoriteMenu.lore = nil;
@@ -891,7 +891,7 @@ function _addon:ShowFavoriteMenu(anchorTo, lore)
 
 	LoreLibraryList.favoriteMenu.lore = lore;
 	
-	ToggleDropDownMenu(1, nil, LoreLibraryList.favoriteMenu, anchorTo, 50, 0);
+	Lib_ToggleDropDownMenu(1, nil, LoreLibraryList.favoriteMenu, anchorTo, 50, 0);
 end
 
 function _addon:UpdateSuggestions()
@@ -1057,7 +1057,7 @@ function _addon:SetAllSourcesTo(enable)
 end
 
 function _addon:InitFilter(self, level)
-	local info = UIDropDownMenu_CreateInfo();
+	local info = Lib_UIDropDownMenu_CreateInfo();
 	info.keepShownOnClick = true;	
 
 	if level == 1 then
@@ -1069,7 +1069,7 @@ function _addon:InitFilter(self, level)
 					end 
 		info.checked = _filter.collected;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 
 		info.text = NOT_COLLECTED;
 		info.func = function(_, _, _, value)
@@ -1079,7 +1079,7 @@ function _addon:InitFilter(self, level)
 					end 
 		info.checked = _filter.notCollected;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 	
 		info.checked = 	nil;
 		info.isNotRadio = nil;
@@ -1089,7 +1089,7 @@ function _addon:InitFilter(self, level)
 		
 		info.text = SOURCES;
 		info.value = 1;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 	else --if level == 2 then
 		
 		info.hasArrow = false;
@@ -1099,7 +1099,7 @@ function _addon:InitFilter(self, level)
 		info.text = CHECK_ALL
 		info.func = function()
 						_addon:SetAllSourcesTo(true);
-						UIDropDownMenu_Refresh(LoreLibraryListFilterDropDown, 1, 2);
+						Lib_UIDropDownMenu_Refresh(LoreLibraryListFilterDropDown, 1, 2);
 						_addon:UpdateFilteredLoreList();
 						_addon:UpdateBookList();
 					end
@@ -1108,11 +1108,11 @@ function _addon:InitFilter(self, level)
 		info.text = UNCHECK_ALL
 		info.func = function()
 						_addon:SetAllSourcesTo(false);
-						UIDropDownMenu_Refresh(LoreLibraryListFilterDropDown, 1, 2);
+						Lib_UIDropDownMenu_Refresh(LoreLibraryListFilterDropDown, 1, 2);
 						_addon:UpdateFilteredLoreList();
 						_addon:UpdateBookList();
 					end
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 
 		
 		info.notCheckable = false;
@@ -1124,14 +1124,14 @@ function _addon:InitFilter(self, level)
 								_addon:UpdateBookList();
 							end
 			info.checked = function() return _filter.sources[k].enabled end;
-			UIDropDownMenu_AddButton(info, level);			
+			Lib_UIDropDownMenu_AddButton(info, level);			
 		end
 	end
 end
 
 function _addon:InitOptions(self, level)
 	
-	local info = UIDropDownMenu_CreateInfo();
+	local info = Lib_UIDropDownMenu_CreateInfo();
 	info.keepShownOnClick = true;	
 
 	if (level == 1) then
@@ -1142,7 +1142,7 @@ function _addon:InitOptions(self, level)
 					end 
 		info.checked = function() return not _addon.options.minimap.hide end;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 
 		info.text = _L["S_OPTIONS_TOOLTIP"];
 		info.func = function(_, _, _, value)
@@ -1150,7 +1150,7 @@ function _addon:InitOptions(self, level)
 					end 
 		info.checked = function() return _addon.options.showTooltipText end;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 		
 		info.text = _L["S_OPTIONS_WORLDMAP_OVERLAY"];
 		info.func = function(_, _, _, value)
@@ -1159,7 +1159,7 @@ function _addon:InitOptions(self, level)
 					end 
 		info.checked = function() return _addon.options.showMapOverlay end;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 		
 		info.checked = 	nil;
 		info.isNotRadio = nil;
@@ -1168,7 +1168,7 @@ function _addon:InitOptions(self, level)
 		info.notCheckable = true;
 		info.text = _L["S_OPTIONS_MAPOPTIONS"];
 		info.value = 1;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 		
 		if (_L["B_ENABLE_POI"]) then
 			info.checked = 	nil;
@@ -1178,13 +1178,13 @@ function _addon:InitOptions(self, level)
 			info.notCheckable = true;
 			info.text = _L["S_OPTIONS_POPUPOPTIONS"];
 			info.value = 2;
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 		end
 		
 		
 	elseif (level == 2) then
 		
-		if (UIDROPDOWNMENU_MENU_VALUE == 1) then -- pin options
+		if (LIB_UIDROPDOWNMENU_MENU_VALUE == 1) then -- pin options
 			info.text = _L["S_OPTIONS_PINS_LORE"];
 			info.func = function(_, _, _, value)
 							_addon.options.pins.lore = value;
@@ -1192,7 +1192,7 @@ function _addon:InitOptions(self, level)
 						end 
 			info.checked = function() return _addon.options.pins.lore; end;
 			info.isNotRadio = true;
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 			
 			if (_L["B_ENABLE_POI"]) then
 				info.text = _L["S_OPTIONS_PINS_AREA"];
@@ -1202,7 +1202,7 @@ function _addon:InitOptions(self, level)
 							end 
 				info.checked = function() return _addon.options.pins.poi; end;
 				info.isNotRadio = true;
-				UIDropDownMenu_AddButton(info, level)
+				Lib_UIDropDownMenu_AddButton(info, level)
 			end
 			
 			info.text = _L["S_OPTIONS_PINS_UNLOCKED"];
@@ -1212,7 +1212,7 @@ function _addon:InitOptions(self, level)
 						end 
 			info.checked = function() return _addon.options.pins.unlocked; end;
 			info.isNotRadio = true;
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 			
 			info.text = _L["S_OPTIONS_PINS_TOOLTIPS"];
 			info.func = function(_, _, _, value)
@@ -1221,9 +1221,9 @@ function _addon:InitOptions(self, level)
 						end 
 			info.checked = function() return _addon.options.pins.tooltips; end;
 			info.isNotRadio = true;
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 		
-		elseif (UIDROPDOWNMENU_MENU_VALUE == 2) then -- popup options
+		elseif (LIB_UIDROPDOWNMENU_MENU_VALUE == 2) then -- popup options
 			
 			info.hasArrow = false;
 			info.isNotRadio = true;
@@ -1234,7 +1234,7 @@ function _addon:InitOptions(self, level)
 							LoreLibraryPoIPopup.title:SetText(_L["S_RIGHTCLICK_HIDE"])
 							ShowUIPanel(LoreLibraryPoIPopup);
 						end
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 		
 			info.notCheckable = false;
 			info.text = _L["S_OPTIONS_PINS_LORE"];
@@ -1243,7 +1243,7 @@ function _addon:InitOptions(self, level)
 						end 
 			info.checked = function() return _addon.options.popups.lore; end;
 			info.isNotRadio = true;
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 			
 			info.text = _L["S_OPTIONS_PINS_AREA"];
 			info.func = function(_, _, _, value)
@@ -1251,7 +1251,7 @@ function _addon:InitOptions(self, level)
 						end 
 			info.checked = function() return _addon.options.popups.poi; end;
 			info.isNotRadio = true;
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 		end
 	end
 end
@@ -1271,7 +1271,7 @@ function _addon:UpdateOptions()
 end
 
 function _addon:InitMapOptionsDropdown(self, level)
-	local info = UIDropDownMenu_CreateInfo();
+	local info = Lib_UIDropDownMenu_CreateInfo();
 	info.keepShownOnClick = true;	
 
 	if (level == 1) then
@@ -1282,7 +1282,7 @@ function _addon:InitMapOptionsDropdown(self, level)
 					end 
 		info.checked = function() return _mapOptions.showPins end;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 	
 		info.text = _L["S_PINS_OPTIONS_COLLECTED"];
 		info.func = function(_, _, _, value)
@@ -1291,7 +1291,7 @@ function _addon:InitMapOptionsDropdown(self, level)
 					end 
 		info.checked = function() return _mapOptions.showCollected end;
 		info.isNotRadio = true;
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 	end
 end
 
@@ -1301,7 +1301,7 @@ function _addon:MenuLoreIsFavorite()
 end
 
 function _addon:InitFavoriteMenu(self, level)
-	local info = UIDropDownMenu_CreateInfo();
+	local info = Lib_UIDropDownMenu_CreateInfo();
 	info.notCheckable = true;	
 	
 	-- Kill it with fire
@@ -1316,11 +1316,11 @@ function _addon:InitFavoriteMenu(self, level)
 					_addon:SetFavorite(LoreLibraryList.favoriteMenu.lore.key, true);
 				end 
 	end
-	UIDropDownMenu_AddButton(info, level)
+	Lib_UIDropDownMenu_AddButton(info, level)
 	
 	info.text = CANCEL;
 	info.func = nil;
-	UIDropDownMenu_AddButton(info, level)
+	Lib_UIDropDownMenu_AddButton(info, level)
 end
 
 function _addon:ShowMainFrame()
@@ -1438,9 +1438,9 @@ function _addon:InitCoreFrame()
 	
 	self:UpdateBookList();
 	
-	UIDropDownMenu_Initialize(LoreLibraryCoreOptionsDropDown, function(self, level) _addon:InitOptions(self, level) end, "MENU");
-	UIDropDownMenu_Initialize(LoreLibraryListFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
-	UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
+	Lib_UIDropDownMenu_Initialize(LoreLibraryCoreOptionsDropDown, function(self, level) _addon:InitOptions(self, level) end, "MENU");
+	Lib_UIDropDownMenu_Initialize(LoreLibraryListFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
+	Lib_UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
 
 	-- LoreLibraryCoreOptionsDropDown.initialize = function(self, level) _addon:InitOptions(self, level) end
 	-- LoreLibraryListFilterDropDown.initialize = function(self, level) _addon:InitFilter(self, level) end
@@ -1562,8 +1562,8 @@ function _addon:InitMap()
 					_addon:StopPinAnimations();
 				end)	
 	
-	UIDropDownMenu_Initialize(LolibOptionDropDown, function(self, level) _addon:InitMapOptionsDropdown(self, level) end, "MENU");
-	--LolibOptionDropDown.initialize = function(self, level) _addon:InitMapOptionsDropdown(self, level) end
+	Lib_UIDropDownMenu_Initialize(LolibOptionDropDown, function(self, level) _addon:InitMapOptionsDropdown(self, level) end, "MENU");
+	-- LolibOptionDropDown.initialize = function(self, level) _addon:InitMapOptionsDropdown(self, level) end
 	
 	lore.icon:SetTexture("Interface\\AddOns\\LoreLibrary\\Images\\icon_Object");
 	poi.icon:SetTexture("Interface\\AddOns\\LoreLibrary\\Images\\icon_PoI");
@@ -1695,10 +1695,14 @@ function _addon:LoadTranslation()
 			if currTrans then
 				data.title = currTrans.translation;
 				-- overwrite english pages with translations
-				if (currTrans.pages) then
+				if (currTrans.pages and currTrans.pages[1] ~= "") then
 					data.pages = {};
 					for k, page in ipairs(currTrans.pages) do
 						table.insert(data.pages, page);
+					end
+				elseif (currTrans.pages[1] == "") then
+					for k, page in ipairs(data.pages) do
+						data.pages[k] = "[Translation currently missing]\n\n" .. page;
 					end
 				end
 			end

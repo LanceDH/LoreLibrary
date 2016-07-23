@@ -6869,106 +6869,118 @@ _addon.data = {
 		"FOR SALE: EZ-123 BUNKER BUILDER\n\nThe end is approaching, but you and your loved ones can survive with your very own B.B.! The Bunker Builder is the latest in gnomish engineering. Simple to operate, small enough for a mountain ram to carry, the B.B. can deploy in almost any terrain (see disclaimers). With the press of a button, the device will tunnel deep underground and hollow out a cozy cavern where you can live in peace. Each purchase comes with two air fresheners, a rope ladder (see disclaimers), and an operator's manual.\n\nDisclaimers: Not for use in sand, water, or Dalaran. Deploy rope ladder BEFORE entering the B.B. tunnel.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Worn Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140263},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"THE EMERALD ASCENSION\n\nFear not the time when great Sargeras's shadow eclipses the sun. \n\nThat is the moment of our ascension. \n\nDeath will follow, but it is only a doorway. \n\nStep through, and you will shed your frail skin and take on a form kissed by emerald fire.\n\nDig the ash from your eyes, and you will find a higher purpose at Sargeras's side.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Damp Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140264},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"DISASTER PREPAREDNESS: DEMON INVASION EDITION\n\n<The scroll contains a list of instructions on how to prepare for the Burning Legion's invasion, but the items have been crossed out and are illegible. The phrases \"burn everything\" and \"nothing can save you\" have been scrawled in blood over and over again across the parchment.>",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Crumpled Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140267},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"EMBRACE THE LEGION\n\nThe demons are not the enemy we have been led to believe. They seek only to purge the corruption that rots at the heart of the Horde and the Alliance. Our leaders want us to think otherwise. They want us to fight the demons so that they can keep their precious thrones and lofty titles. \n\nDo not die for them. When the demons come, lay down your arms, and they will show you compassion.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Odorous Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140268},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"ZEPPELIN TO OBLIVION, PRESENTED BY TRADE PRINCE GALLYWIX\n\nGreen fire rains from the heavens. A tide of demons washes over civilization. \n\nSounds bad, right? Not if you're seeing it all go down from Trade Prince Gallywix's Zeppelin to Oblivion! \n\nAct now and buy a ticket (see disclaimer) for a place on the trade prince's uberzeppelin. This floating pleasure palace will tour every major city as the Burning Legion dances the fel tango over the world. Grab a drink, enjoy a live performance by the Bilgewater Quartet, and ride out the apocalypse in style! \n\nDisclaimer: Access to the uberzeppelin's rum slides and pudding jacuzzis sold separately.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Prophetic Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140270},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"PROPHECY OF THE THREE SIGNS\n\nThese are the three signs of our doom, as foretold by the sages. When all of these events have come to pass, we will know the Burning Legion has won and our oblivion is at hand.\n\nThe king below will cast away his diamond crown.\n\nDay will break over the city of eternal night.\n\nThe wolf cub will inherit a bloody pack.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Scribbled Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140279},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"LIMITED SUPPLY: HIGH-QUALITY DEMON DISGUISES\n\nSay the inevitable happens. You're minding your own business when a pack of demons comes knocking at your door. What do you do? The Darkmoon Theatre Troupe has your answer! \n\nOur award-winning face-gineers have created a series of full-body demon costumes that even Kil'jaeden the Deceiver would applaud. Current disguises include pit lord (requires two people to wear), doomguard, mo'arg, and felhound (not recommended if you have back problems).\n\nWhen the demons see you in one of these suits, they'll never know the difference. That's a guarantee.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Stained Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140280},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"THE END OF ALL THINGS\n\nThe crooked serpent with no eyes is watching from the endless sky.\n\nForked tongues flicker through the black pits in dead stars.\n\nThe veil between dream and dreamer slides away like skin from bone.\n\nAnd even the darkness howls for the light it once despised.\n\n<The rest of the note is illegible, covered in strange glyphs and scribbles.>",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Ominous Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140281},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"DEFY THE LEGION\n\nNo one can save us from the demons, but we can deny them the glory of their victory. \n\nBurn your worldly possessions. Set the streets alight and give in to the temptations of chaos. Do not stop the rampage until only dust and bones remain for the Legion to conquer.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Demonic Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140282},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"FIRE OMENS\n\nThe flames foretell our destiny.\n\nListen to the fire crackling in the hearth, and you will hear the demons marching on our cities. A hundred thousands blades sliding from their scabbards. A hundred thousand war cries screaming in unison.\n\nStare into the candlelight, and you will see the demons in their moment of triumph. An army without number, its soldiers twisted and grotesque. A Legion wreathed in a cloak of green fire.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Blackened Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140283},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"A GREAT DAY COMES\n\nOur lives are fleeting. Our accomplishments are dust. Our existence is pain. \n\nSargeras seeks to free us from this torment. This is your only chance to take your place at his side and have a true, lasting impact on the cosmos. An eternity of servitude is better than a flash of freedom. If you are worthy, the Burning Legion will accept you, train you, empower you, and set you loose upon all existence. \n\nAnd if you are not worthy, your passing will be quick.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 ["Scrawled Pamphlet"] = {
 	["info"] = {["type"] = "item", ["id"] = 140284},
 	["pages"] = {
-		"Due to lack of Wowhead data, text will be added in a later patch.",
+		"YOU CAN SAVE YOUR FAMILY\nAzeroth will burn. None of you can stand against the Legion. Not you, not your family, not your greatest champions.\n\nSo save what you can, while you can.\n\nJoin the Legion. Now. Not later. The day will come when all mortal fools finally accept the inevitable, and there will be a great tide of people pleading for the Legion's mercy. But right now, many still cling to worthless hope. Now is your chance to claim a place in the demons' numbers, before it is too late. Bring your friends. Bring your children. (Feel free to abandon those who annoy you.) \n\nTime is running out.",
 	},
 	["locations"] = {
-		{["sourceType"] = "unavailable", },
+		{["sourceType"] = "drop", ["areaId"] = 321, ["source"] = "Speak with Doomsayers.", ["faction"] = "H"},
+		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
 }

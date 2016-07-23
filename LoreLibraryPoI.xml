@@ -564,7 +564,7 @@
 				</Frames>
 			</ScrollFrame>
 			
-			<Frame name="$parentFavoriteMenu" inherits="UIDropDownMenuTemplate" enableMouse="true" parentKey="favoriteMenu"/>
+			<Frame name="$parentFavoriteMenu" inherits="Lib_UIDropDownMenuTemplate" enableMouse="true" parentKey="favoriteMenu"/>
 			
 			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
 				<Size x="145" y="20"/>
@@ -595,7 +595,7 @@
 					</OnClick>	
 				</Scripts>						
 			</Button>
-			<Frame name="$parentFilterDropDown" inherits="UIDropDownMenuTemplate" />
+			<Frame name="$parentFilterDropDown" inherits="Lib_UIDropDownMenuTemplate" />
 			
 		</Frames>
 		<Layers>

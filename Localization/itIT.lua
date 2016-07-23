@@ -4880,5 +4880,79 @@ _addon.translations = {
 			"Il livello dei rifornimenti di regali sta decrescendo a livelli insufficienti. Utilizzo di potenza distruttiva addizionale autorizzato.",
 		},
 	},
+	
+	["Tattered Pamphlet"] = {
+		["translation"] = "Opuscolo Lacero",
+		["pages"] = {
+			"IN VENDITA: COSTRUTTORE FORTILISTICO EZ-123\n\nLa fine si avvicina, ma tu e i tuoi cari potrete sopravvivere grazie al vostro personalissimo C.F.! Il Costruttore Fortilistico è l'ultimo ritrovato dell'Ingegneria degli Gnomi. Semplice da usare e abbastanza piccolo da essere trasportato da un montone, il C.F. può essere posizionato su qualsiasi tipo di terreno (leggere l'avviso più avanti). Con la pressione di un pulsante, lo strumento scava in profondità e ricava un'accogliente caverna dove vivere in pace. Ogni acquisto include due purificatori per l'aria, una scala di corda (leggere l'avviso più avanti) e un manuale operativo.\n\nAvviso: non usare sulla sabbia, in acqua o a Dalaran. Stendere la scala di corda PRIMA di entrare nella galleria del C.F.",
+		},
+	},
+	["Worn Pamphlet"] = {
+		["translation"] = "Opuscolo Consumato",
+		["pages"] = {
+			"L'ASCESA DI SMERALDO\n\nNon temere l'eventuale oscuramento del sole a opera di Sargeras.\n\nPerché quello sarà il momento della nostra ascensione.\n\nLa morte seguirà, ma sarà solo una soglia.\n\nAttraversala e abbandona la tua fragile pelle per assumere una forma baciata dal fuoco di smeraldo.\n\nApri gli occhi e troverai uno scopo più elevato al fianco di Sargeras.",
+		},
+	},
+	["Damp Pamphlet"] = {
+		["translation"] = "Opuscolo Bagnato",
+		["pages"] = {
+			"PREPARARSI AL PEGGIO: EDIZIONE INVASIONE DEMONIACA\n\n<La pergamena contiene un elenco di istruzioni su come prepararsi all'invasione della Legione Infuocata. Le frasi \"tutto brucerà\" e \"niente può salvarvi\" sono state scarabocchiate con il sangue più e più volte su tutta la cartapecora.>",
+		},
+	},
+	["Crumpled Pamphlet"] = {
+		["translation"] = "Opuscolo Accartocciato",
+		["pages"] = {
+			"ACCOGLI LA LEGIONE\n\nI demoni non sono i nemici che vogliono farci credere. Cercano solo di combattere la corruzione che alberga nei cuori dell'Orda e dell'Alleanza. I nostri capi vogliono convincerci che non è così. Vogliono che combattiamo i demoni affinché mantengano le loro posizioni di prestigio.\n\nNon morire per loro. Quando i demoni arriveranno, abbassa le armi e conoscerai la loro compassione.",
+		},
+	},
+	["Odorous Pamphlet"] = {
+		["translation"] = "Opuscolo Profumato",
+		["pages"] = {
+			"ZEPPELIN VERSO L'OBLIO, PRESENTATO DAL PRINCIPE DEL COMMERCIO GALLYWIX\n\nIl fuoco verde piove dai cieli. Un'orda di demoni si abbatte sulla civiltà.\n\nBrutto, vero? Non se ti godi lo spettacolo del Principe del Commercio Gallywix a bordo dello Zeppelin verso l'Oblio!\n\nAccaparrati il tuo biglietto (leggere l'avviso più avanti) per un posto sulla fortezza volante del Principe del Commercio. Questo palazzo alato farà tappa nelle principali città mentre la Legione Infuocata balla tonanti passi di viltango sul nostro mondo. Bevi qualcosa, goditi il concerto del Quartetto degli Acqualorda e vivi l'apocalisse con stile!\n\nAvviso: accesso agli scivoli di rum e all'idromassaggio budinoso venduto a parte.",
+		},
+	},
+	["Prophetic Pamphlet"] = {
+		["translation"] = "Opuscolo Profetico",
+		["pages"] = {
+			"PROFEZIA DEI TRE SEGNI\n\nQuesti sono i tre segni della nostra rovina, come predetti dai saggi. Quando questi eventi avranno luogo, sapremo che la Legione Infuocata ha vinto e che la nostra fine è alle porte.\n\nIl re di sotto getterà la sua corona di diamante.\n\nIl giorno proromperà nella città della notte eterna.\n\nIl cucciolo di lupo erediterà un branco sanguinario.",
+		},
+	},
+	["Scribbled Pamphlet"] = {
+		["translation"] = "Opuscolo Illeggibile",
+		["pages"] = {
+			"SCORTE LIMITATE: TRAVESTIMENTI DEMONIACI DI ALTA QUALITÀ\n\nDiciamo che arriva l'inevitabile. Ti stai facendo gli affari tuoi quando un gruppo di demoni bussa alla porta. E tu cosa fai? La Compagnia Teatrale di Lunacupa ha la risposta!\n\nI nostri valenti costumisti hanno creato una serie di travestimenti da demone che conquisterebbero perfino il plauso di Kil'jaeden l'Ingannatore. Le varianti attuali includono il Signore delle Fosse (richiede due persone), il Demone Guardiano, il Mo'arg e il Vilsegugio (sconsigliato per chi ha problemi di schiena).\n\nQuando i demoni ti vedranno con indosso questi capolavori di dissimulazione, non noteranno la differenza. Risultato garantito.",
+		},
+	},
+	["Stained Pamphlet"] = {
+		["translation"] = "Opuscolo Macchiato",
+		["pages"] = {
+			"LA FINE DI TUTTE LE COSE\n\nIl curvo serpente senza occhi vi scruta dai cieli infiniti.\n\nLe lingue biforcute vibrano attraverso i fossi neri delle stelle morte.\n\nIl velo tra sogno e sognatore scivola via come pelle dalle ossa.\n\nE perfino l'oscurità desidera la luce che un tempo disprezzava.\n\n<Il resto della nota è illeggibile, coperto da strani scarabocchi e glifi.>",
+		},
+	},
+	["Ominous Pamphlet"] = {
+		["translation"] = "Opuscolo Inquietante",
+		["pages"] = {
+			"SFIDA LA LEGIONE\n\nNessuno può salvarci dai demoni, ma noi possiamo negare loro la gloria della vittoria.\n\nBrucia i tuoi averi terreni. Incendia le strade e abbandonati alle tentazioni del caos. Non fermare la tua furia finché alla Legione non resteranno altro che polvere e ossa da conquistare.",
+		},
+	},
+	["Demonic Pamphlet"] = {
+		["translation"] = "Opuscolo Demoniaco",
+		["pages"] = {
+			"PRESAGI DI FUOCO\n\nLe fiamme predicono il nostro destino.\n\nAscolta il fuoco che crepita nel focolare e sentirai i demoni marciare sulle nostre città. Centinaia di migliaia di spade estratte dai loro foderi. Centinaia di migliaia di grida di guerra all'unisono.\n\nFissa la luce della candela e vedrai i demoni nel momento del trionfo. Un esercito infinito di soldati corrotti e grotteschi. Una Legione ammantata di fuoco verde.",
+		},
+	},
+	["Blackened Pamphlet"] = {
+		["translation"] = "Opuscolo Annerito",
+		["pages"] = {
+			"IL GRANDE GIORNO\n\nLe nostre vite sfuggono. Le nostre imprese sono polvere. La nostra esistenza è dolore.\n\nSargeras intende liberarci da questo tormento. È la tua unica possibilità di sedergli accanto e avere un impatto reale e duraturo sul cosmo. Un'eternità di schiavitù è meglio di un attimo di libertà. Se sarai meritevole, la Legione Infuocata ti accetterà, ti addestrerà, ti potenzierà e ti abbandonerà all'intera esistenza.\n\nSe non sarai meritevole, la tua morte sarà rapida.",
+		},
+	},
+	["Scrawled Pamphlet"] = {
+		["translation"] = "Opuscolo Scarabocchiato",
+		["pages"] = {
+			"PUOI SALVARE LA TUA FAMIGLIA\n\nAzeroth brucerà. Nessuno di voi può contrastare la Legione. Non tu, non la tua famiglia, non i vostri più grandi campioni.\n\nPerciò, salva quello che puoi finché puoi.\n\nUnisciti alla Legione. Adesso. Non dopo. Verrà il giorno in cui tutti gli sciocchi mortali accetteranno l'inevitabile, e ci sarà una massa di gente che implorerà la pietà della Legione. Ma oggi, sono ancora molti coloro che si aggrappano a inutili speranze. Scegli oggi il tuo posto tra le schiere demoniache prima che sia troppo tardi. Porta i tuoi amici. Porta i tuoi figli. (Abbandona pure quelli che ti danno fastidio.)\n\nIl tempo stringe.",
+		},
+	},
+
 }                                                                                                                                                                                                                        
 };
