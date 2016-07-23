@@ -1103,7 +1103,7 @@ function _addon:InitFilter(self, level)
 						_addon:UpdateFilteredLoreList();
 						_addon:UpdateBookList();
 					end
-		Lib_UIDropDownMenu_AddButton(info, level)
+		UIDropDownMenu_AddButton(info, level)
 		
 		info.text = UNCHECK_ALL
 		info.func = function()
