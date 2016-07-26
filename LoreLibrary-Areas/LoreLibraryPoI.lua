@@ -1,9 +1,20 @@
 ﻿
 local _addonName, _addon = ...;
 
-local LoreLibrary = _addon.aceAddon;
+local LoreLibrary = LibStub("AceAddon-3.0"):GetAddon("LoreLibrary")
+local prototype = { ["OnEnable"] = function(self) _addon:InitPoIFrame() end }
+local PoI = LoreLibrary:NewModule("PoI", prototype);
 
-local _L = _addon.locals;
+_addon.options = LoreLibrary.db.global.options;
+local _L = LoreLibrary.locals;
+local _tempList = {}; -- used to optimize filter
+
+
+function PoI:OnShowFunction()
+	_addon:UpdatePointList();
+	_addon:UpdateZoneList();
+	_addon:UpdatePointDetailScroller();
+end
 
 local _filter = {
 			["continents"] = {
@@ -66,7 +77,7 @@ function _addon:OpenToPoIPoint(point, zoneId)
 	self:UpdatePointList();
 	self:UpdateZoneList();
 	self:UpdatePointDetailScroller();
-	self:ToggleCoreFrame(true);
+	LoreLibrary:ToggleCoreFrame(true);
 	LOLIB_SetTab(LoreLibraryCore, 2);
 end
 
@@ -88,12 +99,13 @@ function _addon:ShowMapPoI()
 end
 
 function _addon:ShowPoIMapPins()
+--function PoI:MapPins()
 	local width = WorldMapDetailFrame:GetWidth();
 	local height = WorldMapDetailFrame:GetHeight();
 	local pin = nil;
-	local points = self:GetPointsFromZoneId(GetCurrentMapAreaID());
+	local points = _addon:GetPointsFromZoneId(GetCurrentMapAreaID());
 	for k, point in ipairs(points) do
-		pin = self:GetUnusedMapPin();
+		pin = LoreLibrary:GetUnusedMapPin();
 		if ((_addon.options.pins.unlocked or not point.unlocked) and pin ~= nil) then
 			pin.type = "poi";
 			pin.lore = point;
@@ -125,6 +137,7 @@ local function InitZoneFilter(self, level)
 		info.text = _L["S_POI_BY_CONTINENT"];
 		info.func = function(_, _, _, value)
 						_addon.options.poI.sortByContinent = value;
+						_addon:UpdateFilteredPoIList();
 						_addon:UpdateZoneList();
 					end 
 		info.checked = function() return _addon.options.poI.sortByContinent end;
@@ -134,6 +147,7 @@ local function InitZoneFilter(self, level)
 		info.text = _L["S_POI_COMPLETED"];
 		info.func = function(_, _, _, value)
 						_filter.completed = value;
+						_addon:UpdateFilteredPoIList();
 						_addon:UpdateZoneList();
 					end 
 		info.checked = function() return _filter.completed end;
@@ -143,6 +157,7 @@ local function InitZoneFilter(self, level)
 		info.text = _L["S_POI_NOT_COMPLETED"];
 		info.func = function(_, _, _, value)
 						_filter.notCompleted = value;
+						_addon:UpdateFilteredPoIList();
 						_addon:UpdateZoneList();
 					end 
 		info.checked = function() return _filter.notCompleted end;
@@ -165,7 +180,8 @@ local function InitZoneFilter(self, level)
 		info.text = CHECK_ALL
 		info.func = function()
 						SetAllZoneSourcesTo(true);
-						Lib_UIDropDownMenu_Refresh(LoreLibraryPoIFilterDropDown, 1, 1);
+						Lib_UIDropDownMenu_Refresh(LoreLibraryPoIFilterDropDown, 1, 2);
+						_addon:UpdateFilteredPoIList();
 						_addon:UpdateZoneList();
 					end
 		Lib_UIDropDownMenu_AddButton(info, level)
@@ -173,7 +189,8 @@ local function InitZoneFilter(self, level)
 		info.text = UNCHECK_ALL
 		info.func = function()
 						SetAllZoneSourcesTo(false);
-						Lib_UIDropDownMenu_Refresh(LoreLibraryPoIFilterDropDown, 1, 1);
+						Lib_UIDropDownMenu_Refresh(LoreLibraryPoIFilterDropDown, 1, 2);
+						_addon:UpdateFilteredPoIList();
 						_addon:UpdateZoneList();
 					end
 		Lib_UIDropDownMenu_AddButton(info, level)
@@ -267,7 +284,66 @@ function _addon:ListContainsZoneName(list, name)
 	end
 	return false;
 end
+
+function _addon:UpdateFilteredPoIList()
+	local search = LoreLibraryPoI.searchString;
+	local list = LoreLibraryPoI.filteredList;
+	local emptySearch = (search == nil or search == "");
+	if not list then list = {} end
 	
+	LoreLibrary:CopyList(list, _addon.PoI["zones"], true);
+	
+	SortZoneList(list, (emptySearch and _addon.options.poI.sortByContinent));
+	
+	local lastContinent = 0;
+	for k, zone in ipairs(list) do
+		if _filter.continents[zone.continent].enabled then
+			-- add depending on completed filter
+			local completed =  self:ZoneIsCompleted(zone);
+			if ((completed and _filter.completed) or (not completed and _filter.notCompleted)) then
+				-- add continent title with setting
+				if (emptySearch and _addon.options.poI.sortByContinent and lastContinent ~= zone.continent) then
+					table.insert(_tempList, {["isTitle"] = true, ["name"] = _filter.continents[zone.continent].name});
+					lastContinent = zone.continent;
+				end
+				table.insert(_tempList, zone);
+			end
+		end
+	end
+	LoreLibrary:CopyList(list, _tempList);
+	
+	if (not emptySearch) then
+		-- Apply search for zones
+		local addedTitle = false;
+		for k, zone in ipairs(list) do
+			if (string.find(string.lower(zone.name), search:lower(), 1, true))then
+				if (not addedTitle) then
+					table.insert(_tempList, {["isTitle"] = true, ["name"] = _L["S_MATCH_ZONE"]});
+					addedTitle = true;
+				end
+				table.insert(_tempList, zone);
+			end
+		end
+
+		-- Extend search for points
+		addedTitle = false;
+		for k, zone in ipairs(list) do
+			-- not self:ListContainsZoneName(matches, zone.name) and 
+			if (PointUnlockedInZoneMatchesSearch(zone)) then
+				if (not addedTitle) then
+					table.insert(_tempList, {["isTitle"] = true, ["name"] = _L["S_MATCH_AREA"]});
+					addedTitle = true;
+				end
+				table.insert(_tempList, zone);
+			end
+		end
+		LoreLibrary:CopyList(list, _tempList);
+	end
+	
+	LoreLibraryPoI.filteredList = list;
+end
+	
+	--[[
 function _addon:GetFilteredZoneList()
 	local list = _addon.PoI["zones"];
 	local search = LoreLibraryPoI.searchString;
@@ -325,6 +401,7 @@ function _addon:GetFilteredZoneList()
 
 	return list;
 end
+]]--
 
 function _addon:UpdateZoneList()
 	if not LoreLibraryCore:IsShown() then return; end
@@ -333,7 +410,7 @@ function _addon:UpdateZoneList()
 	local buttons = scrollFrame.buttons;
 	if buttons == nil then return; end
 	
-	local list = self:GetFilteredZoneList();
+	local list = LoreLibraryPoI.filteredList;
 
 	for i=1, #buttons do
 		local button = buttons[i];
@@ -398,11 +475,8 @@ function _addon:UpdatePointList()
 			button.point = point;
 			button.icon:Show();
 			
-			if (point.unlocked) then
-				button.title:SetText(point.title);
-			else
-				button.title:SetText(_L["S_UNKNOWN_POINT"]);
-			end
+			button.title:SetText(point.title);
+			button.title:SetFontObject((point.unlocked) and "GameFontNormal" or "GameFontDisable");
 			button.icon:SetDesaturated(not point.unlocked);
 			
 			if (point.id == LoreLibraryPoI.point.id) then
@@ -480,12 +554,12 @@ function _addon:InitPoIFrame()
 		self:SortZonePointsByName(zone);
 	end
 	
-	for k, pointId in pairs(_addon.db.global.unlockedPoI) do
+	for k, pointId in pairs(LoreLibrary.db.global.unlockedPoI) do
 		if (points[pointId]) then
 			points[pointId].unlocked = true;
 		end
 	end
-	SortZoneList();
+	_addon:UpdateFilteredPoIList()
 	
 	LoreLibraryPoI.searchBox:SetScript("OnTextChanged", function(self) _addon:ZoneSearchChanged(self) end);
 	LoreLibraryPoIInsetDetail.mapButton:SetScript("OnClick", function() _addon:ShowMapPoI(); end)
@@ -512,6 +586,7 @@ function _addon:InitPoIFrame()
 	self:UpdatePointList();
 	self:UpdatePointDetailScroller();
 	
+	LoreLibraryPoIFilterDropDown.noResize = true;
 	Lib_UIDropDownMenu_Initialize(LoreLibraryPoIFilterDropDown, function(self, level) InitZoneFilter(self, level) end, "MENU");
 	
 	LoreLibraryPoI.titleCard.bgLeft:SetDesaturated(false);
@@ -526,11 +601,11 @@ function _addon:InitPoIFrame()
 	_addon.updateFrame.playerY = 0;
 	_addon.updateFrame.zoneId = 0;
 	_addon.updateFrame.relevantPoints = {};
-	--_addon.updateFrame:SetScript("OnUpdate", function(self, elapsed)
-	--			if not InCombatLockdown() then
-	--				_addon:FrameUpdate(elapsed);
-	--			end
-	--		end)
+	_addon.updateFrame:SetScript("OnUpdate", function(self, elapsed)
+				if not IsInInstance() and not InCombatLockdown() then
+					_addon:FrameUpdate(elapsed);
+				end
+			end)
 	
 	_addon:UpdateAreaProgressBar();
 	
@@ -638,14 +713,14 @@ function _addon:FrameUpdate(elapsed)
 			
 			local scaledReqDistance = (point.scale and point.scale * _L["N_DISTANCE_POINT_UNLOCK"] or _L["N_DISTANCE_POINT_UNLOCK"]);
 			if ((mLevel == 0 or pLevel == mLevel) and not point.unlocked and distance < scaledReqDistance) then
-				table.insert(self.db.global.unlockedPoI, point.id);
+				table.insert(LoreLibrary.db.global.unlockedPoI, point.id);
 				point.unlocked = true;
 				_addon:ShowPoIPopup(point, self.updateFrame.zoneId);
 				_addon:UpdateZoneList();
 				_addon:UpdatePointList();
 				_addon:UpdatePointDetailScroller();
 				_addon:UpdateAreaProgressBar();
-				_addon:UpdateMapPins();
+				LoreLibrary:UpdateMapPins();
 			end
 			--
 			if (distance < scaledReqDistance) then
@@ -661,7 +736,8 @@ function _addon:ZoneSearchChanged(searchBox)
 	
 	local oldText = LoreLibraryPoI.searchString;
 	LoreLibraryPoI.searchString = searchBox:GetText();
-	if (oldText ~= LoreLibraryPoI.searchString ) then		
+	if (oldText ~= LoreLibraryPoI.searchString ) then	
+		self:UpdateFilteredPoIList();
 		self:UpdateZoneList();
 	end
 end
@@ -670,14 +746,14 @@ function _addon:UpdateMapOverviewPoI(unlocked, total)
 	LoreLibraryMap.overview.listingPoI:Hide();
 	if total > 0 then
 		LoreLibraryMap.overview.listingPoI.text:SetFormattedText(_L["F_PROGRESS"], unlocked, total);
-		self:ShowOverviewListing(LoreLibraryMap.overview.listingPoI);
+		LoreLibrary:ShowOverviewListing(LoreLibraryMap.overview.listingPoI);
 	end
 
 end
 
-function _addon:PoIInMap()
+function PoI:PoIInMap()
 	local zoneId = GetCurrentMapAreaID();
-	local relevantPoints = self:GetPointsFromZoneId(zoneId, true);
+	local relevantPoints = _addon:GetPointsFromZoneId(zoneId, true);
 	local total = 0;
 	local unlocked = 0;
 	
@@ -686,7 +762,7 @@ function _addon:PoIInMap()
 		if (point.unlocked) then unlocked = unlocked + 1; end
 	end
 	
-	self:UpdateMapOverviewPoI(unlocked, total)
+	_addon:UpdateMapOverviewPoI(unlocked, total)
 	if _addon.options.pins.poi then
 		_addon:ShowPoIMapPins();
 	end
@@ -695,64 +771,32 @@ end
 
 
 
-
-
-local function ToggleLockbutton() 
-	if LOLIBDEBUGTHING:IsMouseEnabled() then
-		FPS_MoveButton.tex:SetVertexColor(DEFAULT_LOCKVERTEX_OFF, DEFAULT_LOCKVERTEX_OFF, DEFAULT_LOCKVERTEX_OFF )
-		PlaySound("igMainMenuOptionCheckBoxOff");
-		LOLIBDEBUGTHING:EnableMouse(false)
-		--BGS_LockButton.tex:SetVertexColor(DEFAULT_LOCKVERTEX_OFF, DEFAULT_LOCKVERTEX_OFF, DEFAULT_LOCKVERTEX_OFF )
-			
-	else	
-		FPS_MoveButton.tex:SetVertexColor(DEFAULT_LOCKVERTEX_ON, DEFAULT_LOCKVERTEX_ON, DEFAULT_LOCKVERTEX_ON )
-		PlaySound("igMainMenuOptionCheckBoxOn");
-		LOLIBDEBUGTHING:EnableMouse(true)
-		--BGS_LockButton.tex:SetVertexColor(DEFAULT_LOCKVERTEX_ON, DEFAULT_LOCKVERTEX_ON, DEFAULT_LOCKVERTEX_ON )
-			
-	end
-end
-
 function _addon:CREATEDEBUG()
 local L_LOLIBDEBUGTHING = CreateFrame("frame", "LOLIBDEBUGTHING", UIParent) 
 LOLIBDEBUGTHING:SetFrameLevel(5)
 LOLIBDEBUGTHING:SetMovable(true)
+LOLIBDEBUGTHING:EnableMouse(true)
 LOLIBDEBUGTHING:SetPoint("Center", 250, 0)
 LOLIBDEBUGTHING:RegisterForDrag("LeftButton")
 LOLIBDEBUGTHING:SetScript("OnDragStart", LOLIBDEBUGTHING.StartMoving )
 LOLIBDEBUGTHING:SetScript("OnDragStop", LOLIBDEBUGTHING.StopMovingOrSizing)
+LOLIBDEBUGTHING:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background"})
 LOLIBDEBUGTHING.text = LOLIBDEBUGTHING:CreateFontString(nil, nil, "GameFontNormal")
-LOLIBDEBUGTHING.text:SetPoint("topleft", 10, -15)
+LOLIBDEBUGTHING.text:SetPoint("topleft", 5, -5)
 LOLIBDEBUGTHING.text:SetText("0000")
 LOLIBDEBUGTHING.text:SetJustifyH("left")
-LOLIBDEBUGTHING:SetWidth(65)
-LOLIBDEBUGTHING:SetHeight(LOLIBDEBUGTHING.text:GetStringHeight()+20)
+LOLIBDEBUGTHING:SetWidth(135)
+LOLIBDEBUGTHING:SetHeight(60)
 LOLIBDEBUGTHING:SetClampedToScreen(true)
 LOLIBDEBUGTHING:Show()
 
-local L_FPS_MoveButton = CreateFrame("Button", "FPS_MoveButton", LOLIBDEBUGTHING)
-FPS_MoveButton:SetWidth(8)
-FPS_MoveButton:SetHeight(8)
-FPS_MoveButton.tex = FPS_MoveButton:CreateTexture("FPS_MoveButton_Tex")
-FPS_MoveButton.tex:SetTexture("Interface\\COMMON\\UI-ModelControlPanel")
-FPS_MoveButton.tex:SetPoint("topright", LOLIBDEBUGTHING, "topright", -5, -5)
-FPS_MoveButton.tex:SetTexCoord(18/64, 36/64, 37/128, 53/128)
-FPS_MoveButton.tex:SetSize(8,8)
-FPS_MoveButton.tex:SetVertexColor(.8, .8, .8 ) 
-
-FPS_MoveButton:SetPoint("topright", LOLIBDEBUGTHING, "topright", -5, -5)
-FPS_MoveButton:Show()
-
-FPS_MoveButton:SetScript("OnClick",  function() 
-	ToggleLockbutton()
-	
-end)
-FPS_MoveButton:SetScript("OnEnter",  function() 
-	FPS_MoveButton.tex:SetVertexColor(1, 1, 1 )
-	
-end)
+local L_LOLIBDEBUGCLOSE = CreateFrame("Button", "LOLIBDEBUGCLOSE", LOLIBDEBUGTHING, "UIPanelCloseButton")
+LOLIBDEBUGCLOSE:SetWidth(16)
+LOLIBDEBUGCLOSE:SetHeight(16)
+LOLIBDEBUGCLOSE:SetPoint("TOPRIGHT", LOLIBDEBUGTHING)
 end
 
 
 ------------------------------------------------------------------------------------------------------------------------------
 
+	

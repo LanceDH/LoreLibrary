@@ -67,7 +67,6 @@ _addon.locals = {
 	,["S_TITLE_AREA"] =					"Area Library"
 	,["S_TITLE_DOCUMENT"] =				"Document Library"
 	,["S_UNAVAILABLE_DETAIL"] =			"This lore no longer has any\n available sources."
-	,["S_UNKNOWN_POINT"] =				"Unknown Area"
 	,["S_UNLOCK_UNTIL_NEXT"] =			"Unlocks until next:"
 	,["S_ZONE_COMPLETE"] =				"Zone completed"
 	
@@ -89,8 +88,7 @@ _addon.locals = {
 	,["N_MAX_SUGGESTIONS"] =			3
 	,["N_OVERVIEW_MARGIN"] =			15
 	,["N_PAGETEXT_WIDTH"] =				280
-	
-	,["B_ENABLE_POI"] =					false
+
 };
 
 -- Making globals for certain locals to use in XML

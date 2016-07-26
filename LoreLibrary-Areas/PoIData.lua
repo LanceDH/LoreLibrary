@@ -3,8 +3,6 @@ local _addonName, _addon = ...;
 
 local _L = _addon.locals;
 
-if (_L["B_ENABLE_POI"]) then
-
 _addon.PoI = {
 ["zones"] = {
 -- Kalimdor
@@ -290,10 +288,3 @@ _addon.PoI = {
 	
 	}
 }
-
-else
-	_addon.PoI = {
-		["zones"] = {}
-		,["points"] = {}
-		}
-end

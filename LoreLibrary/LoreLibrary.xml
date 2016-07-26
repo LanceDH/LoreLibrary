@@ -561,14 +561,13 @@
 		</Scripts>
 	</Button>
 	
-	<Frame name="LoreLibraryCore" inherits="PortraitFrameTemplate" movable="true" toplevel="true" frameStrata="HIGH" enableMouse="true" parent="UIParent" hidden="true">
+	<Frame name="LoreLibraryCore" inherits="PortraitFrameTemplate" movable="tcopyListrue" toplevel="true" frameStrata="HIGH" enableMouse="true" parent="UIParent" hidden="true">
 		<Size x="703" y="606"/>
 		<Anchors>
 			<Anchor point="CENTER" x="0" y="0"/>
 		</Anchors>
 
 		<Frames>	
-			<!--
 			<Button name="$parentTab1" inherits="LOLIBCollectionTab" text="LOLIB_TAB_LORE" id="1">
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="BOTTOMLEFT" x="11" y="2"/>
@@ -579,7 +578,6 @@
 					<Anchor point="LEFT" relativeTo="$parentTab1" relativePoint="RIGHT" x="-16" y="0"/>
 				</Anchors>
 			</Button>
-			-->
 			
 			<Button name="$parentOptionsButton" inherits="UIMenuButtonStretchTemplate" text="">
 				<Size x="35" y="22"/>

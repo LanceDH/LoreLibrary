@@ -4,14 +4,16 @@ _addon.localizeds = {};
 
 local _L = _addon.locals;
 
-local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary")
+LoreLibraryCore.modules = {};
+local _modules = LoreLibraryCore.modules;
+local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary");
 
 local _LDB = LibStub("LibDataBroker-1.1"):NewDataObject(_addonName, {
 	type = "launcher",
 	text = _L["S_LORE_LIBRARY"],
 	icon = "Interface\\ICONS\\INV_Misc_Book_07",
 	OnClick = function(self, button, down)
-		_addon:ToggleCoreFrame();
+		LoreLibrary:ToggleCoreFrame();
 	end,
 	OnTooltipShow = function(tt)
 		tt:AddLine(_L["S_LORE_LIBRARY"], 1, 1, 1);
@@ -20,6 +22,8 @@ local _LDB = LibStub("LibDataBroker-1.1"):NewDataObject(_addonName, {
 })
 local _icon = LibStub("LibDBIcon-1.0")
 
+
+LoreLibrary.locals = _addon.locals;
 local _db = nil;
 
 local _defaults = {
@@ -115,7 +119,7 @@ local _sourceData = {
 -- Code
 ----------
 	
-function _addon:ToggleCoreFrame(show)
+function LoreLibrary:ToggleCoreFrame(show)
 	if (show or not LoreLibraryCore:IsShown()) then
 		if InCombatLockdown() then
 			print(_L["S_ERROR_COMBATLOCKDOWN"]);
@@ -174,12 +178,12 @@ function _addon:UpdateMapOverviewLore(currentProgress, maxProgress)
 	
 	if maxProgress > 0 then
 		LoreLibraryMap.overview.listingLore.text:SetFormattedText(_L["F_PROGRESS"], currentProgress, maxProgress);
-		self:ShowOverviewListing(LoreLibraryMap.overview.listingLore);
+		LoreLibrary:ShowOverviewListing(LoreLibraryMap.overview.listingLore);
 	end
 
 end
 
-function _addon:UpdateMapPins()
+function LoreLibrary:UpdateMapPins()
 	local areaId = GetCurrentMapAreaID();
 	local level = GetCurrentMapDungeonLevel();
 	-- Hide PoI if map changes
@@ -187,7 +191,7 @@ function _addon:UpdateMapPins()
 		LoreLibraryMap.PoI:Hide();
 	end
 	LoreLibraryMap.lastMapId = areaId;
-	LoreLibraryMap.lastLevel = level
+	LoreLibraryMap.lastLevel = level;
 	-- reset pins
 	for k, pin in ipairs(LoreLibraryMap.pins) do
 		pin:Hide();
@@ -199,12 +203,13 @@ function _addon:UpdateMapPins()
 	LoreLibraryMap.overview.shown = {};
 	
 	_addon:LorePiecesInMap();
-	if _L["B_ENABLE_POI"] then
-		_addon:PoIInMap();
+	local poi = LoreLibrary:GetModule("PoI", true);
+	if (poi) then
+		poi:PoIInMap();
 	end
 end
 
-function _addon:ShowOverviewListing(listing)
+function LoreLibrary:ShowOverviewListing(listing)
 	local shown = LoreLibraryMap.overview.shown;
 	local height = _L["N_OVERVIEW_MARGIN"] * 2;
 
@@ -235,7 +240,7 @@ function _addon:ShowLoreMapPins(list)
 	local height = WorldMapDetailFrame:GetHeight();
 	local pin = nil;
 	for k, lore in ipairs(list) do
-		pin = self:GetUnusedMapPin();
+		pin = LoreLibrary:GetUnusedMapPin();
 		if pin ~= nil then
 			pin.type = "lore";
 			pin.lore = lore;
@@ -568,7 +573,7 @@ function _addon:HasFilteredSource(lore)
 	return false;
 end
 
-local function copyList(target, source, keepSource)
+function LoreLibrary:CopyList(target, source, keepSource)
 	for i=#target, 1, -1 do
 		target[i] = nil;
 	end
@@ -586,7 +591,7 @@ function _addon:UpdateFilteredLoreList()
 	local list = LoreLibraryList.filteredList;
 	if not list then list = {} end
 
-	copyList(list, _loreList, true);
+	LoreLibrary:CopyList(list, _loreList, true);
 	-- Base list depending on collected or not
 	if (not _filter.collected or not _filter.notCollected) then
 
@@ -595,7 +600,7 @@ function _addon:UpdateFilteredLoreList()
 				table.insert(_tempList, lore);
 			end
 		end
-		copyList(list, _tempList)
+		LoreLibrary:CopyList(list, _tempList)
 	end
 	
 	
@@ -607,7 +612,7 @@ function _addon:UpdateFilteredLoreList()
 			end
 		end
 
-		copyList(list, _tempList)
+		LoreLibrary:CopyList(list, _tempList)
 	end
 	
 	
@@ -619,70 +624,10 @@ function _addon:UpdateFilteredLoreList()
 		
 	end
 	
-	copyList(list, _tempList)
+	LoreLibrary:CopyList(list, _tempList)
 	LoreLibraryList.filteredList = list;
 end
 
---[[
-function _addon:GetFilteredList(unlockedFirst)
-	local list = {};
-	local search = LoreLibraryCore.searchString;
-	
-	
-	-- Base list depending on collected or not
-	if (_filter.collected and _filter.notCollected) then
-		-- just copy paste when showing everything
-		list = _loreList;
-	elseif (_filter.collected) then
-		for k, lore in ipairs(_loreList) do
-			if (lore.unlocked) then
-				table.insert(list, lore);
-			end
-		end
-	elseif (_filter.notCollected) then
-		for k, lore in ipairs(_loreList) do
-			if (not lore.unlocked) then
-				table.insert(list, lore);
-			end
-		end
-	end
-	
-	
-	-- Apply search
-	if (search ~= nil and search ~= "") then
-		local searchList = {}
-		for k, lore in ipairs(list) do
-			if (string.find(string.lower(lore.title), search:lower(), 1, true)) then
-				table.insert(searchList, lore);
-			end
-		end
-		
-		list = searchList;
-	end
-	
-	
-	-- Apply filters
-	local sourcelist = {}
-	
-	for lk, lore in ipairs(list) do
-		if (self:HasFilteredSource(lore)) then
-			table.insert(sourcelist, lore);
-		end
-		
-	end
-	list = sourcelist;
-	
-	
-	-- Sort the list
-	if (unlockedFirst) then
-		SortLoreUnlockFirst(list);
-	else
-		SortLore(list);
-	end
-
-	return list;
-end
-]]--
 
 function _addon:LoreQuestCompleted(lore)
 	for k, loc in ipairs(lore.locations) do
@@ -1170,7 +1115,7 @@ function _addon:InitOptions(self, level)
 		info.value = 1;
 		Lib_UIDropDownMenu_AddButton(info, level)
 		
-		if (_L["B_ENABLE_POI"]) then
+		if (LoreLibrary:GetModule("PoI", true)) then
 			info.checked = 	nil;
 			info.isNotRadio = nil;
 			info.func =  nil;
@@ -1188,17 +1133,17 @@ function _addon:InitOptions(self, level)
 			info.text = _L["S_OPTIONS_PINS_LORE"];
 			info.func = function(_, _, _, value)
 							_addon.options.pins.lore = value;
-							_addon:UpdateMapPins()
+							LoreLibrary:UpdateMapPins()
 						end 
 			info.checked = function() return _addon.options.pins.lore; end;
 			info.isNotRadio = true;
 			Lib_UIDropDownMenu_AddButton(info, level)
 			
-			if (_L["B_ENABLE_POI"]) then
+			if (LoreLibrary:GetModule("PoI", true)) then
 				info.text = _L["S_OPTIONS_PINS_AREA"];
 				info.func = function(_, _, _, value)
 								_addon.options.pins.poi = value;
-								_addon:UpdateMapPins()
+								LoreLibrary:UpdateMapPins()
 							end 
 				info.checked = function() return _addon.options.pins.poi; end;
 				info.isNotRadio = true;
@@ -1208,7 +1153,7 @@ function _addon:InitOptions(self, level)
 			info.text = _L["S_OPTIONS_PINS_UNLOCKED"];
 			info.func = function(_, _, _, value)
 							_addon.options.pins.unlocked = value;
-							_addon:UpdateMapPins()
+							LoreLibrary:UpdateMapPins()
 						end 
 			info.checked = function() return _addon.options.pins.unlocked; end;
 			info.isNotRadio = true;
@@ -1217,7 +1162,7 @@ function _addon:InitOptions(self, level)
 			info.text = _L["S_OPTIONS_PINS_TOOLTIPS"];
 			info.func = function(_, _, _, value)
 							_addon.options.pins.tooltips = value;
-							_addon:UpdateMapPins()
+							LoreLibrary:UpdateMapPins()
 						end 
 			info.checked = function() return _addon.options.pins.tooltips; end;
 			info.isNotRadio = true;
@@ -1372,6 +1317,19 @@ function _addon:InitSugestionFrame()
 	end
 end
 
+function _addon:UpdateTabs()
+	PanelTemplates_ShowTab(LoreLibraryCore, 1)
+	PanelTemplates_ShowTab(LoreLibraryCore, 2)
+	
+	if not (LoreLibrary:GetModule("PoI", true)) then
+		PanelTemplates_HideTab(LoreLibraryCore, 1)
+	end
+	
+	if not (LoreLibrary:GetModule("PoI", true)) then
+		PanelTemplates_HideTab(LoreLibraryCore, 2)
+	end
+end
+
 function _addon:InitCoreFrame()
 	table.insert(UISpecialFrames, "LoreLibraryCore")
 
@@ -1384,9 +1342,11 @@ function _addon:InitCoreFrame()
 							PlaySound("igCharacterInfoOpen");
 							_addon:PlayNewSuggestionAnimations()
 							DoEmote("READ", nil, true);
-							_addon:UpdatePointList();
-							_addon:UpdateZoneList();
-							_addon:UpdatePointDetailScroller();
+							local poi = LoreLibrary:GetModule("PoI", true);
+							if(poi) then
+								poi:OnShowFunction();
+							end
+							_addon:UpdateTabs();
 						end);
 	
 	LoreLibraryCore:SetClampedToScreen(true);
@@ -1396,11 +1356,9 @@ function _addon:InitCoreFrame()
 	LoreLibraryCore:SetScript("OnDragStop", LoreLibraryCore.StopMovingOrSizing);
 	SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
 	UIPanelWindows["LoreLibraryCore"] = { area = "left", pushable = 4 }
-	if (_L["B_ENABLE_POI"]) then
-		PanelTemplates_SetNumTabs(LoreLibraryCore, 2);
-		PanelTemplates_SetTab(LoreLibraryCore, 1);
-	end
 	
+	PanelTemplates_SetNumTabs(LoreLibraryCore, 2);
+	PanelTemplates_SetTab(LoreLibraryCore, 1);
 	
 	self:UpdateFilteredLoreList();
 	LoreLibraryList.searchBox:SetScript("OnTextChanged", function(self) _addon:SearchChanged(self) end);
@@ -1438,13 +1396,12 @@ function _addon:InitCoreFrame()
 	
 	self:UpdateBookList();
 	
+	LoreLibraryCoreOptionsDropDown.noResize = true;
+	LoreLibraryListFilterDropDown.noResize = true;
 	Lib_UIDropDownMenu_Initialize(LoreLibraryCoreOptionsDropDown, function(self, level) _addon:InitOptions(self, level) end, "MENU");
 	Lib_UIDropDownMenu_Initialize(LoreLibraryListFilterDropDown, function(self, level) _addon:InitFilter(self, level) end, "MENU");
 	Lib_UIDropDownMenu_Initialize(LoreLibraryList.favoriteMenu, function(self, level) _addon:InitFavoriteMenu(self, level) end, "MENU");
 
-	-- LoreLibraryCoreOptionsDropDown.initialize = function(self, level) _addon:InitOptions(self, level) end
-	-- LoreLibraryListFilterDropDown.initialize = function(self, level) _addon:InitFilter(self, level) end
-	-- LoreLibraryList.favoriteMenu.initialize = function(self, level) _addon:InitFavoriteMenu(self, level) end
 	
 	local display = LoreLibraryListDisplay;
 
@@ -1518,7 +1475,7 @@ function _addon:InitCoreFrame()
 	
 end
 
-function _addon:GetUnusedMapPin()
+function LoreLibrary:GetUnusedMapPin()
 	for k, pin in ipairs(LoreLibraryMap.pins) do
 		if not pin.lore then 
 			pin.type = nil;
@@ -1536,7 +1493,7 @@ function _addon:GetUnusedMapPin()
 					GameTooltip:SetText(self.lore.title);
 				end
 		end)
-	self:CreatePinAnimation(pin);
+	_addon:CreatePinAnimation(pin);
 	table.insert(LoreLibraryMap.pins, pin)
 	
 	return pin;
@@ -1765,7 +1722,7 @@ _addon.events:SetScript("OnEvent", function(self, event, ...) self[event](self, 
 function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
 	-- Only update when map is visible
 	if WorldMapFrame:IsShown() then
-		_addon:UpdateMapPins();
+		LoreLibrary:UpdateMapPins();
 	end
 end
 
@@ -1831,10 +1788,14 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	_suggestions.timeLast = LoreLibrary.db.global.suggestions.timeLast;
 	_addon.translations = nil;
 	SortLore();
+
 	_addon:InitCoreFrame();
-	if (_L["B_ENABLE_POI"]) then
-	_addon:InitPoIFrame();
-	end
+	-- if () then
+		-- local poi = LoreLibrary:GetModule("PoI", true);
+		-- poi:Init()
+	-- end
+	LoadAddOn("LoreLibrary-Areas")
+	_addon:UpdateTabs()
 	
 	_addon:InitMap();
 
@@ -1852,7 +1813,11 @@ end
 SLASH_LOLIBSLASH1 = '/lolib';
 SLASH_LOLIBSLASH2 = '/lorelibrary';
 local function slashcmd(msg, editbox)
-	_addon:ToggleCoreFrame();
+	if msg == "debug" and LOLIBDEBUGTHING then
+		ShowUIPanel(LOLIBDEBUGTHING);
+		return;
+	end
+	LoreLibrary:ToggleCoreFrame();
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd
 
