@@ -3,6 +3,7 @@ local _addonName, _addon = ...;
 
 _addon.locals = {
 	 ["S_AREA_NOLORE"] =				"<HTML><BODY><BR/><P align=\"CENTER\">Not much is known about this area.</P></BODY></HTML>"
+	,["S_CONTINENTS"] =					"Continents"
 	,["S_CONTINENT_DRAENOR"] =			"Draenor"
 	,["S_CONTINENT_EK"] =				"Eastern Kingdoms"
 	,["S_CONTINENT_KALIMDOR"] =			"Kalimdor"
@@ -69,6 +70,12 @@ _addon.locals = {
 	,["S_UNAVAILABLE_DETAIL"] =			"This lore no longer has any\n available sources."
 	,["S_UNLOCK_UNTIL_NEXT"] =			"Unlocks until next:"
 	,["S_ZONE_COMPLETE"] =				"Zone completed"
+	,["S_TIME_DAYS"] =					"days"
+	,["S_TIME_DAY"] =					"day"
+	,["S_TIME_HOURS"] = 				"hours"
+	,["S_TIME_MINS"] = 					"minutes"
+	,["S_TIME_MIN"] = 					"minute"
+	
 	
 	,["F_LORE_CONTENT"] =				"Lore content:\nWords: %d \nPages: %d \nImages: %d"
 	,["F_LORE_UNLOCK"] = 				"Lore Library added: %s"
@@ -78,12 +85,13 @@ _addon.locals = {
 	,["F_SOURCE"] =						"%s\n%s"
 	,["F_SUGGESTION_REMOVECOOLDOWN"] =	"Can be removed in %s."
 	,["F_SUGGESTION_UNTILNEW"] =		"New suggestion in %s."
+	,["F_TIME"] =						"%d %s"
 	
 	,["N_DISTANCE_POINT_UNLOCK"] = 		0.01
 	,["N_LISTBOOKHEIGHT"] =				40
 	,["N_LISTHEIGHT_POINT"] = 			35
 	,["N_LISTHEIGHT_ZONE"] = 			30
-	,["N_LORE_FOR_TOKEN"] =				20
+	,["N_LORE_FOR_TOKEN"] =				15
 	,["N_MAX_SOURCES"] = 				9
 	,["N_MAX_SUGGESTIONS"] =			3
 	,["N_OVERVIEW_MARGIN"] =			15
@@ -91,14 +99,3 @@ _addon.locals = {
 
 };
 
--- Making globals for certain locals to use in XML
-LOLIB_TAB_LORE =				_addon.locals["S_TAB_LORE"];
-LOLIB_TAB_POI =					_addon.locals["S_TAB_POI"];
-LOLIB_LIBRARY_ADDED =			_addon.locals["S_LIBRARY_ADDED"];
-LOLIB_NEW = 					_addon.locals["S_NEW"];
-LOLIB_DAILY_SUGGESTIONS =		_addon.locals["S_DAILY_SUGGESTIONS"];
-LOLIB_LOSTPAGE_UNLOCK_INFO =	_addon.locals["S_LOSTPAGE_UNLOCK_INFO"];
-LOLIB_SUGGESTION_COMPLETE =		_addon.locals["S_SUGGESTION_COMPLETE"];
-LOLIB_MARK_WORLDMAP =			_addon.locals["S_MARK_WORLDMAP"];
-LOLIB_ZONE_COMPLETE =			_addon.locals["S_ZONE_COMPLETE"];
-LOLIB_TITLE_DOCUMENT =			_addon.locals["S_TITLE_DOCUMENT"];

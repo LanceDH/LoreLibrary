@@ -26,19 +26,11 @@ _addon.translations = {
 	["q24558"] = "Retourner voir Myralion Solembrase",
 	["q26355"] = "Le trésor caché du capitaine Sanders",
 	["q13831"] = "Une troublante prescription",
-	["q24496"] = "Rune des Arcanes",
 	["q12140"] = "Gloire à Roanauk !",
 	["q11983"] = "Le serment de sang de la Horde",
 	["q26640"] = "Des atrocités sans nom",
-	["q31141"] = "Lettre calligraphiée",
-	["q31165"] = "Note calligraphiée",
-	["q31156"] = "Parchemin calligraphié",
-	["q31168"] = "Cachet calligraphié",
 	["q26691"] = "Des worgens dans les bois",
 	["q333"] = "Harlan a besoin d'être approvisionné",
-	["q3101"] = "La lettre consacrée",
-	["q27015"] = "La note consacrée",
-	["q3107"] = "Rune consacrée",
 	["q29021"] = "Samophlange",
 	["q11650"] = "Encore quelques bricoles…",
 	["q24667"] = "La halte de Pierre-feu",
@@ -46,19 +38,6 @@ _addon.translations = {
 	["q28096"] = "Bienvenue dans le système",
 	["q27218"] = "Créatures ignobles des profondeurs",
 	["q8287"] = "Un terrible but",
-	["q31150"] = "Rune élégante",
-	["q31146"] = "Un parchemin gribouillé",
-	["q24494"] = "Rune investie",
-	["q3102"] = "La lettre codée",
-	["q3088"] = "Parchemin codé",
-	["q3109"] = "Rune codée",
-	["q3096"] = "Parchemin codé",
-	["q3118"] = "Le cachet codé",
-	["q26910"] = "La lettre gravée",
-	["q3092"] = "Note gravée",
-	["q3087"] = "Parchemin gravé",
-	["q3108"] = "Rune gravée",
-	["q3117"] = "Le cachet gravé",
 	["q27106"] = "Le malfaisant démasqué",
 	["q38934"] = "Planque secrète de Silas",
 	["q13139"] = "Dans le cœur gelé du Norfendre",
@@ -68,12 +47,8 @@ _addon.translations = {
 	["q8228"] = "Puis-je avoir un prospectus sur la pêche ?",
 	["q8229"] = "Puis-je avoir un prospectus sur la pêche ?",
 	["q8149"] = "En l'honneur d'un héros",
-	["q26841"] = "Le cachet interdit",
 	["q184"] = "Titre de propriété de Froncebouille",
 	["q9706"] = "Le journal de Galaen - Le destin du redresseur de torts Saruan",
-	["q3104"] = "La lettre glyphée",
-	["q25138"] = "Parchemin glyphé",
-	["q3098"] = "Rouleau glyphé",
 	["q9821"] = "Damnation au menu",
 	["q107"] = "Note pour William",
 	["q10045"] = "Composants matériels",
@@ -81,11 +56,6 @@ _addon.translations = {
 	["q6391"] = "Voyage vers Forgefer",
 	["q6385"] = "Doras, le maître des coursiers du vent",
 	["q6386"] = "Retour à Tranchecolline",
-	["q3103"] = "La lettre bénie",
-	["q27014"] = "La note bénie",
-	["q3110"] = "Rune bénie",
-	["q3097"] = "Parchemin béni",
-	["q3119"] = "Le cachet béni",
 	["q13751"] = "Ne le dis à personne !",
 	["q26855"] = "La revanche du pilote perdu",
 	["q30499"] = "Revenez au plus vite !",
@@ -115,17 +85,9 @@ _addon.translations = {
 	["q7161"] = "Montrer sa valeur",
 	["q840"] = "Sous les drapeaux de la Horde",
 	["q25696"] = "L’expédition de Solevoile",
-	["q3093"] = "Note runique",
-	["q3089"] = "Parchemin runique",
 	["q31068"] = "Une recette sacrée",
 	["q32376"] = "Dans la vallée !",
 	["q291"] = "Les rapports",
-	["q3100"] = "Une lettre simple",
-	["q3091"] = "Note simple",
-	["q2383"] = "Parchemin simple",
-	["q3106"] = "Rune simple",
-	["q3095"] = "Parchemin simple",
-	["q3116"] = "Le cachet simple",
 	["q6341"] = "Dolanaar-Darnassus sans escale",
 	["q6342"] = "Le présent inattendu",
 	["q13848"] = "Un oiseau de mauvais augure",
@@ -134,10 +96,6 @@ _addon.translations = {
 	["q27244"] = "Le rapport perdu",
 	["q1338"] = "La mission de Foudrepique",
 	["q59"] = "Les armures de cuir et d'étoffe",
-	["q3105"] = "La lettre contaminée",
-	["q3090"] = "Parchemin contaminé",
-	["q3115"] = "Rune contaminée",
-	["q3099"] = "Rouleau contaminé",
 	["q27551"] = "La missive de la baronne",
 	["q28196"] = "La bataille de Hautebrande",
 	["q123"] = "Le collecteur",
@@ -159,8 +117,6 @@ _addon.translations = {
 	["q24962"] = "Un parchemin abîmé",
 	["q9698"] = "Une audience avec le Prophète",
 	["q751"] = "La caravane dévastée",
-	["q3094"] = "Note verdoyante",
-	["q3120"] = "Le cachet verdoyant",
 	["q35925"] = "Opération « Gronn »",
 	["q26667"] = "Les lettres volées",
 	["q26669"] = "Dans un coin sombre",
@@ -2953,12 +2909,6 @@ _addon.translations = {
 			"&lt;L’apothicaire a griffonné ses notes d’une main malhabile et les a émaillées de formules alchimiques complexes, ornées de gribouillages enfantins représentant des têtes de mort et des éclairs. En plissant les yeux, vous arrivez à déchiffrer quelques passages de la dernière partie :&gt;\n\n...une superbe corruption, qui s’enfonce profondément dans les tissus vivants. Extrêmement contagieuse lorsque &lt;plusieurs mots sont effacés&gt; par la chaîne alimentaire. Nos tests de ce jour ont confirmé que ce n’est que partiellement biologique à l’origine. Vilsabot, mon &lt;illisible&gt; compagnon, préoccupé par sa vengeance et aveugle à toute application plus « constructive » de son &lt;un ichor verdâtre recouvre le reste du paragraphe&gt;. Les recherches progressent lentement. J’espère que nos amis d’Althalaxx s’en sortent mieux.",
 		},
 	},
-	["Arcane Rune"] = {
-		["translation"] = "Rune des Arcanes",
-		["pages"] = {
-			"Ceux d’entre nous dont le corps n’est pas aussi agile que l’esprit doivent trouver... d’autres méthodes de préservation de soi. Nombreux sont ceux qui parmi eux choisissent de poursuivre une carrière dans la magie.\n\n&lt;nom&gt;, je vous ai bien &lt;observé/observée&gt;, et votre esprit est aussi aiguisé qu’une lame de couteau. Cependant, pour réussir en ces temps de crise, une personne telle que vous aura besoin de maîtriser les arts arcaniques. Et pour maîtriser ces arts, vous allez devoir vous adresser à moi.\n\nVenez me parler à Courbenclume. Nous avons beaucoup à nous dire.\n\n-Teegli Merrowith",
-		},
-	},
 	["Blood Oath of the Horde"] = {
 		["translation"] = "Serment de sang de la Horde",
 		["pages"] = {
@@ -2971,30 +2921,6 @@ _addon.translations = {
 			"Keeshan, si vous lisez ce message, c’est que je suis mort. Je me suis sans doute fait prendre.\n\nLes orcs commettent d’indicibles atrocités sur les prisonniers. Oui, Keeshan, les prisonniers ! Ils ont des cages pleines de prisonniers de guerre. Il faut absolument les sortir de là avant de raser la vallée. \n\nDites à ma femme que je l’aime, et qu’elle n’oublie pas de sortir cette fichue poubelle. \n\n-Brubaker\n\nPS : Ils ont des dragons noirs.",
 		},
 	},
-	["Calligraphed Letter"] = {
-		["translation"] = "Lettre calligraphiée",
-		["pages"] = {
-			"Je me réjouis de l’intérêt que vous portez à la voie des moines. Je viens de territoires fort lointains pour vous apporter un peu de la sagesse de mon peuple.\nJ’ai pris mes quartiers à l’abbaye, et je me propose d’entraîner quiconque désire s’initier à nos arts. Venez à ma rencontre et je vous enseignerai notre voie.\n\nCordialement,\nBao",
-		},
-	},
-	["Calligraphed Note"] = {
-		["translation"] = "Note calligraphiée",
-		["pages"] = {
-			"J’entretiens des contacts avec votre tribu depuis un certain temps déjà, et bien que certains de ses membres ont essayé d’apprendre nos arts, aucun ne s’est encore montré aussi prometteur que vous.\n\nRejoignez-moi donc au Camp Narache. J’ai tant appris de votre tribu qu’il me semble être temps de lui rendre la pareille.\n\n-Shoyu",
-		},
-	},
-	["Calligraphed Parchment"] = {
-		["translation"] = "Parchemin calligraphié",
-		["pages"] = {
-			"[I came here from afar to learn of your people's ways, and to teach you mine. You do me a great honor by volunteering to learn the ways of the Monk. In time, there is much I will show you, but for now, we must meet for our first lessons. Come, meet me in the Valley of Trials, and we will begin your training.\n\n-Gato]",
-		},
-	},
-	["Calligraphed Sigil"] = {
-		["translation"] = "Cachet calligraphié",
-		["pages"] = {
-			"[Hello, &lt;classe&gt;. I have seen that you are interested in learning the ways of the monk. I would be honored to begin your training, as you seem like quite an auspicious pupil. Come to Aldrassil, on the lower levels.\n\n-Laoxi]",
-		},
-	},
 	["Calor's Note"] = {
 		["translation"] = "Note de Calor",
 		["pages"] = {
@@ -3005,24 +2931,6 @@ _addon.translations = {
 		["translation"] = "Demande de tissu",
 		["pages"] = {
 			"Aux Schneider,\n\nSalutations. J’espère que les affaires vont bien. Dans le quartier commerçant, c’est l’explosion.\n\nNous avons grand besoin de tricots, car nos stocks sont vides. Veuillez nous envoyer le chargement habituel dès que vous le pourrez.\n\nJe vous souhaite bonne fortune et j’espère que les études de votre fils Thurman progressent bien,\n\n—Harlan Bagley",
-		},
-	},
-	["Consecrated Letter"] = {
-		["translation"] = "Lettre consacrée",
-		["pages"] = {
-			"J’espère que vous allez bien, &lt;classe&gt;. Je le dis avec fierté, car peu peuvent se targuer d’une telle foi, mais ils font également partie de l’élite vraie des protecteurs d’Azeroth.\n\nSouvenez-vous toujours et avant tout que votre devoir est de vous battre contre ceux qui veulent blesser notre monde et corrompre nos foyers.\n\nJ’ai reçu toute autorité pour vous former. Quand vous le voudrez, venez me voir à l’Abbaye de Comté-du-Nord.\n\n-Frère Sammuel, Maître des paladins",
-		},
-	},
-	["Consecrated Note"] = {
-		["translation"] = "Note consacrée",
-		["pages"] = {
-			"J’attendais votre arrivée, marche-soleil. Le chef Vent-du-faucon en personne m’a parlé de votre intérêt pour notre ordre, et j’ai accepté de commencer votre formation. Lorsque vous serez &lt;prêt/prête&gt; à recevoir mon enseignement, venez me voir dans le cercle, au centre de Camp Narache.\n\nMarche-soleil Helaku",
-		},
-	},
-	["Consecrated Rune"] = {
-		["translation"] = "Rune consacrée",
-		["pages"] = {
-			"Certains nous craignent plus encore que les dragons. D'autres nous envient davantage que les forgerons les plus habiles. Certains se divertissent de notre foi. D'autres sont jaloux de nous voir si bien tenir la bière. Mais en tout état de cause, &lt;classe&gt;, vous faites partie de l'élite des protecteurs d'Azeroth. La Sainte Lumière nous donne notre force et nous lui donnons la nôtre.\n\nJe vous en dirai plus quand vous connaîtrez mieux ces terres. Vous me trouverez à Courbenclume, au-dessus de la Vallée.\n\n-Bromos Grummneur, Maître des paladins",
 		},
 	},
 	["Control Console Operating Manual"] = {
@@ -3079,84 +2987,6 @@ _addon.translations = {
 			"Jour 15\nNotre dévouement a fini par porter ses fruits. Nous sommes le premier camp à avoir terminé la construction d’une pierre des vents. Si les autres imbéciles étaient restés avec nous, nous aurions achevé notre tâche en moins d’une semaine ! \n\nDemain, nous commencerons les rituels qui invoqueront le baron Kazum en personne. Il a demandé d’être le premier à tester le système, et nous n’avons pas pu le contredire, car il s’emporte facilement.\n\nJe pense qu’il sera très content de nous.",
 		},
 	},
-	["Elegant Rune"] = {
-		["translation"] = "Rune élégante",
-		["pages"] = {
-			"C’est un honneur de voir que vous avez choisi d’apprendre la voie des moines, cet art dans lequel ceux de mon peuple excellent. Votre intérêt me fait chaud au cœur et me permet de vous retourner un peu de l’hospitalité qui m’a été réservée par votre peuple si généreux. Venez me retrouver à Courbenclume, et je vous entraînerai dans le plus pur style des moines.\n\nSalutations,\nLo",
-		},
-	},
-	["Elegant Scroll"] = {
-		["translation"] = "Parchemin élégant",
-		["pages"] = {
-			"Salutations,\n\nJe suis Ting, le Ventre gaillard. Je viens d’une contrée fort lointaine.\n\nJe ne fais peut-être pas partie de vos Réprouvés, mais je vois clairement que vous êtes fort de corps aussi bien que d’esprit. D’aucuns parmi mon peuple doutent de la capacité de vos semblables à suivre l’entraînement pour mener l’existence du moine, mais je ne partage pas leur préjugé. Rencontrons-nous et je vous apprendrai à vous battre !\n\nTing, le Ventre gaillard",
-		},
-	},
-	["Empowered Rune"] = {
-		["translation"] = "Rune investie",
-		["pages"] = {
-			"Sachez-le : un chaman ne doit jamais réclamer la puissance ; un tel comportement éveillerait la colère des éléments, et sans la protection des éléments un chaman n’est rien. Ceux qui suivent la voie du chaman ne doivent jamais oublier ce principe, pour eux d’une importance vitale.\n\nCependant, un chaman qui œuvre dans le cadre d’une union respectueuse avec les éléments détient une puissance avec laquelle bien peu peuvent rivaliser. Si vous pensez avoir suffisamment d’humilité pour cela, venez me voir à Courbenclume. Je vous enseignerai, comme on me l’a enseigné, à travailler avec les éléments du feu, de la terre, du vent, de l’eau et de la nature.\n\n-Teo Martel-tempête",
-		},
-	},
-	["Encrypted Letter"] = {
-		["translation"] = "Lettre codée",
-		["pages"] = {
-			"Je n’ai jamais été aussi fier de travailler dans ce commerce que lors de ces dernières années. Le besoin en assassins, espions et éclaireurs n’a jamais été aussi important. Vous pourriez penser que les périodes de guerre entraînent une forte demande, mais curieusement, elles ne sont pas aussi rentables que des temps comme les nôtres, quand la paix commence à se détériorer.\n\nJ’ai entendu dire que vous cherchiez à apprendre quelques trucs. Quand vous aurez le temps, venez me voir près des écuries derrière l’abbaye.\n\n-Jorik Kerridan, maître des voleurs",
-		},
-	},
-	["Encrypted Parchment"] = {
-		["translation"] = "Parchemin codé",
-		["pages"] = {
-			"Je vous transmets mes salutations, &lt;nom&gt;. J’étais perdu dans mes pensées, quand il m’est venu à l’esprit qu’il fallait que je vous écrive.\n\nDans notre culture, beaucoup de gens louent nos chamans car ils sont nos chefs spirituels, à l’exemple de notre grand Chef de guerre. D’autres pensent que l’épée et la hache sont des carrières encore plus nobles, mais n’oubliez jamais que les batailles, et même les guerres, sont gagnées à l’aide de compétences plus spécialisées. C’est de cela dont je souhaite vous entretenir, &lt;nom&gt;. Retrouvez-moi parmi les autres orcs dans la vallée des Épreuves.\n\n-Rwag, maître des voleurs",
-		},
-	},
-	["Encrypted Rune"] = {
-		["translation"] = "Rune codée",
-		["pages"] = {
-			"&lt;Frère/Sœur&gt;, j'espère que cette rune vous trouvera en bonne forme. Je voulais prendre un moment pour vous faire savoir que je suis à Courbenclume, au-dessus de la vallée des Frigères.\n\nJe sais qu'il est vital que nous restions soudés et en ces temps de troubles, il est plus important que jamais que nous soyons rassemblés. Venez me voir quand vous aurez le temps. \n\n-Solm Hargrin, Maître des voleurs",
-		},
-	},
-	["Encrypted Scroll"] = {
-		["translation"] = "Parchemin codé",
-		["pages"] = {
-			"Prenez garde à ne pas ignorer mes paroles, &lt;nom&gt;. Voici venue l’heure des subterfuges et des mensonges parmi toutes les nations... même à Fossoyeuse. Tous ceux qui sont loyaux à Sylvanas travaillent pour construire une nouvelle ère, une ère où les Réprouvés auront le pouvoir. Et même si nous ne possédons pas de compétences magiques, et que nous ne défendons pas nos frontières par les armes, nous avons tout de même un rôle à jouer.\n\nVenez me trouver dans l’auberge du Glas. Nous parlerons.\n\n-David Trias, maître des voleurs",
-		},
-	},
-	["Encrypted Sigil"] = {
-		["translation"] = "Cachet codé",
-		["pages"] = {
-			"Sael'ah, j'espère que ce message vous trouvera en pleine forme. On m'a demandé de vous offrir mes services. Je suis moi aussi à Sombrevallon, dans le Grand arbre d'Aldrassil, et je voulais vous faire savoir que si vous avez besoin d'une formation plus poussée, vous pouvez venir me voir.\n\nEn ces temps difficiles, je crois prudent que ceux qui ont l'ombre pour vocation restent proches les uns des autres. Comment, sans cela, pourrions-nous protéger Teldrassil et notre manière de vivre ?\n\nVous me trouverez quand vous en aurez besoin.\n\n-Frahun Murmombre, maître des voleurs",
-		},
-	},
-	["Etched Letter"] = {
-		["translation"] = "Lettre gravée",
-		["pages"] = {
-			"La vallée de Comté-du-Nord est un endroit dangereux, idéal pour mettre à l’épreuve les talents de survie d’un chasseur. Vos impressionnantes contributions à la défense de la vallée ont été remarquées, et je désire vous rencontrer. Vous me trouverez près de l’entrée de l’abbaye.",
-		},
-	},
-	["Etched Note"] = {
-		["translation"] = "Note gravée",
-		["pages"] = {
-			"De puissants guerriers défendent notre foyer. Nos chamans guident nos esprits et nous montrent le passé de nos ancêtres. Nos druides nous aident à comprendre la volonté de la Terre-mère.\n\nMais vous êtes un de nos chasseurs, et nos chasseurs apprennent de nombreux aspects de nos traditions et les mélangent. Vous comprendrez que vous représentez le cœur de notre peuple, une partie des nôtres vous demandera de les guider, de les protéger. Mon devoir est de m’assurer que vous pourrez assumer ce rôle. Vous me trouverez au Camp Narache.\n\n-Lanka Vise-loin, Maître des chasseurs",
-		},
-	},
-	["Etched Parchment"] = {
-		["translation"] = "Parchemin gravé",
-		["pages"] = {
-			"Je vous ai vu traîner dans la vallée, &lt;jeunot/jeunette&gt;, avec votre petit arc fragile et votre armure miteuse. Vous m’avez rappelé &lt;un jeune chasseur/une jeune chasseresse&gt; que j’ai &lt;connu/connue&gt; il y a bien longtemps…\n\nSi vous souhaitez en apprendre un peu plus sur notre art, venez me voir. La voie du chasseur peut être solitaire, et il est toujours bon d’avoir des alliés.\n\n-- Karranisha, maître des chasseurs.",
-		},
-	},
-	["Etched Rune"] = {
-		["translation"] = "Rune gravée",
-		["pages"] = {
-			"Dompteur des bêtes, maître du tir, pisteur confirmé : que peut-on accomplir de plus en une seule vie ? Toutes ces choses, une fois combinées, demandent de l’intelligence et de la patience.\n\nLa voie du chasseur n’est pas facile, c’est certain. Vous aurez besoin de beaucoup d’entraînement si vous voulez vous aligner avec le plus mauvais de nos tireurs d’élite. Mais c’est pour cela que je suis ici.\n\nVous me trouverez dans Courbenclume, au-dessus de la vallée des Frigères. J’attendrai.\n\n-Thorgas Grimson, Maître des chasseurs",
-		},
-	},
-	["Etched Sigil"] = {
-		["translation"] = "Cachet gravé",
-		["pages"] = {
-			"Élune soit avec vous, &lt;nom&gt;. Les vents me murmurent bien des choses, et j’ai plaisir à pouvoir former la prochaine génération de chasseurs.\n\nD’après ce que j’ai entendu, vous êtes proche d’Aldrassil. Je vous rencontrerai dans le Grand arbre quand vous en aurez le temps.\n\nNos aînés m’ont demandé de m’assurer que les nouveaux chasseurs soient formés de façon appropriée, car les temps sont durs. Vous êtes encore novice, vous devriez venir me voir. Jusque-là, portez-vous bien.\n\n-Ayanna Vassanfin, Maître des chasseurs",
-		},
-	},
 	["Evidence Against Samuelson"] = {
 		["translation"] = "Preuve contre Samuelson",
 		["pages"] = {
@@ -3206,12 +3036,6 @@ _addon.translations = {
 			"L’histoire tragique de ce chevalier si saint\n\njamais ne se terminera par sa terrible mort.\n\nNous l’honorons, et lui rendons grâce !\n\nUther connaîtra toujours la gloire et la Lumière !",
 		},
 	},
-	["Forbidden Sigil"] = {
-		["translation"] = "Cachet interdit",
-		["pages"] = {
-			"J’espère que ce message vous trouvera en bonne santé, &lt;nom&gt;. J’ai eu vent de votre arrivée par l’archimage, et j’ai tenu à vous contacter immédiatement.\n\nAu cours de ces dernières années, nous nous sommes efforcés de rendre la magie à notre peuple, mais luttes et tribulations vous attendent encore. Je peux vous aider. Lorsque vous serez &lt;prêt/prête&gt; venez me voir. Je suis à l’intérieur d’Aldrassil, au second niveau.\n\n- Rhyanda, maître des mages",
-		},
-	},
 	["Furlbrow's Deed"] = {
 		["translation"] = "Titre de propriété de Froncebouille",
 		["pages"] = {
@@ -3226,24 +3050,6 @@ _addon.translations = {
 			"Après ce qui m’a semblé une éternité, le redresseur de torts a perdu conscience. La douleur était trop forte, même pour lui. Le plus cruel, que les autres appelaient Matis, a essayé de réveiller Saruan en éclaboussant son corps brisé d’eau croupie par la contagion. Mais Saruan n’a pas repris conscience.",
 			"Je voulais hurler mais seul un faible hoquet est sorti de ma bouche. J’ai aussitôt reçu une volée de coups pour cet acte de rébellion. Je me suis retrouvé étendu au sol, et j’ai vu que Matis faisait les cent pas devant le corps de Saruan. Il avait l’air visiblement inquiet. Il a dit que Sironas, ou Sirona, ou une entité de ce type lui arracherait la chair des os si Saruan était mort à cause d’eux.",
 			"Que cette entité Sironas avait des projets pour Saruan…\n\n&lt;L’écriture s’arrête brusquement sur une longue ligne en travers de la page. Ce draeneï est probablement mort pendant qu’il était en train d’écrire.&gt;",
-		},
-	},
-	["Glyphic Letter"] = {
-		["translation"] = "Lettre glyphée",
-		["pages"] = {
-			"Il y a quatre lois de la magie :\n\n La Magie est puissante.\n La Magie corrompt.\n La Magie est une drogue.\n La Magie attire les habitants du Néant distordu vers ceux qui manient les arcanes.\n\nCes règles existeront toujours. Ces règles gouverneront votre destinée si vous choisissez de poursuivre plus avant la voie de la magie.\n\nSi vous êtes assez stupide pour ignorer cet avertissement, alors venez me parler dans l’aile de la bibliothèque de l’abbaye, à Comté-du-Nord. Je vous attendrai en haut.\n\n-Khelden Bremen, maître des mages",
-		},
-	},
-	["Glyphic Parchment"] = {
-		["translation"] = "Parchemin glyphé",
-		["pages"] = {
-			"Les autres ne nous comprennent pas. Ils font mine de nous tolérer, mais ils mentent. Même les démonistes ont peur de nous.\n\nPas de problème, parce que nous pouvons compter les uns sur les autres. Mages orques, tous unis ! Vous et moi ! Acrypha et… quel que soit votre nom ! Ha !\n\nNous allons leur montrer de quel bois nous sommes faits. Rendez-moi visite, et je partagerai avec vous les secrets des arcanes que j’ai réussi à maîtriser.",
-		},
-	},
-	["Glyphic Scroll"] = {
-		["translation"] = "Rouleau glyphé",
-		["pages"] = {
-			"La corruption et le mal, dont on dit qu’ils voyagent avec les arcanes, ne sont rien face à la douleur que nous avons déjà ressentie. Nous ne sommes plus des victimes, &lt;nom&gt;. Nous contrôlons désormais notre destin. Sylvanas nous a indiqué le chemin. Elle nous a prouvé que notre volonté nous appartient, que nous ne sommes plus les esclaves de ce maudit Arthas.\n\nTrouvez-moi dans l’église, je vous en dirai davantage... si tel est votre désir.\n\n- Isabella, Maître des mages",
 		},
 	},
 	["Gordawg's Imprint"] = {
@@ -3275,36 +3081,6 @@ _addon.translations = {
 		["translation"] = "Lettre de Gryshka",
 		["pages"] = {
 			"Cher Grimtak,\n\nLes steaks que vous avez envoyés sont excellents. Marbrés, bien épais et enrobés de graisse de sanglier. Je ne les aime pas autrement. Quand je les mangerai plus tard, je penserai à vous tandis que je rongerai les derniers os. Je fermerai mes yeux et je verrai vos mains puissantes et balafrées donner des coups de hache et de couteau...\n\nHa ! Ça me rappelle la fois où vous avez eu cet accident, et que vous avez perdu un doigt... Oh, Grimtak ! En repensant à ce jour, je suis guillerette comme une petite fille.\n\nVous êtes si mignon lorsque vous saignez !\n\n-Gryshka",
-		},
-	},
-	["Hallowed Letter"] = {
-		["translation"] = "Lettre bénie",
-		["pages"] = {
-			"Votre connexion avec le monde, et sa connexion avec vous, sont d’une importance vitale pour votre formation de prêtre. Sagesse et compassion vous permettront d’aider ceux qui en ont vraiment besoin. La précipitation et la maladresse causeront des désastres et affaibliront les autres.\n\nAu fur et à mesure que vous comprendrez ce que cela signifie, vous aurez besoin de nouvelles techniques et de nouveaux sorts pour vous aider. C’est là que mon rôle commence : venez me voir dans la bibliothèque de l’abbaye de Comté-du-Nord quand vous penserez l’heure venue.\n\n-Prêtresse Anetta, Maître des prêtres",
-		},
-	},
-	["Hallowed Note"] = {
-		["translation"] = "Note bénie",
-		["pages"] = {
-			"La voie du prêtre est nouvelle pour notre peuple, mais elle puise dans les antiques traditions de nos prophètes. Lors de vos leçons, vous découvrirez la sagesse de la Terre-Mère éclairée par la Lumière. Vous me trouverez dans le cercle, au centre de Camp Narache, lorsque vous voudrez commencer votre apprentissage.\n\nProphétesse Plume-de-corbeau",
-		},
-	},
-	["Hallowed Rune"] = {
-		["translation"] = "Rune bénie",
-		["pages"] = {
-			"La Sainte Lumière nous soutient et nous faisons chaque jour de nouvelles découvertes. L'heure est à l'enthousiasme pour les enfants de Forgefer. La Ligue des explorateurs avance chaque jour pour révéler les réponses à nos plus anciennes questions. Et aujourd'hui, vous rejoignez nos fidèles pour les aider au combat contre les troggs et les autres menaces qui rôdent à nos frontières.\n\nVenez me voir quand vous en aurez le temps. Je serai derrière Courbenclume, en haut de la colline. \n\n- Branstock Kahlder, Maître des prêtres",
-		},
-	},
-	["Hallowed Scroll"] = {
-		["translation"] = "Parchemin béni",
-		["pages"] = {
-			"Réjouissez-vous que votre esprit n’ait pas été lâché dans le Néant, &lt;nom&gt;. Réjouissez-vous davantage que je vous pense apte à recevoir ce parchemin.\n\nLes gens que vous avez connus naguère, que vous avez aimés peut-être, ne sont plus. Vous devez apprendre à \"vivre\" avec cela jusqu’à la fin de votre vie... quelle qu’elle soit. Avant toutes choses, le vous suggère d’apprendre à l’accepter.\n\nSi vous pensez pouvoir affronter les épreuves à venir, venez me voir dans l’église du Glas.\n\n- Sombre clerc Duesten, Maître des prêtres",
-		},
-	},
-	["Hallowed Sigil"] = {
-		["translation"] = "Cachet béni",
-		["pages"] = {
-			"J’espère que vous allez bien, &lt;nom&gt;. Les esprits m’annoncent votre venue et c’est pour cela que je vous écris vite. J’ai hâte de partager avec vous mon expérience et de vous guider vers les affaires importantes qui vous attendent hors de Teldrassil.\n\nAvec tout ce qui est survenu au cours des dernières années, nous pouvons faire beaucoup pour aider les autres races d’Azeroth. Venez me voir quand vous penserez l’heure venue, je serai à Aldrassil, au deuxième niveau.\n\n-Shanda, maître des prêtres",
 		},
 	},
 	["Hastily Written Note"] = {
@@ -3520,18 +3296,6 @@ _addon.translations = {
 			"Aux intéressés :\n\nRohan Solevoile, membre de haut rang du Reliquaire et chef de l’Expédition de Solevoile, est à la recherche d’aventuriers valides pour l’assister lors d’une étude archéologique dans le sud des terres Foudroyées. Les participants seront rémunérés pour leur travail.\n\nL’Expédition de Solevoile a pour mission l’acquisition, le recensement et la préservation de tous les artéfacts magiques de la forêt Impure. Autrefois connue sous le nom de Balafre impure, cette région a récemment été réhabilitée par un druide worgen et est pour la plus grande part couverte d’arbres et de broussailles. Pour plus d’informations, veuillez contacter Rohan ou Clarya Solevoile.",
 		},
 	},
-	["Rune-Inscribed Note"] = {
-		["translation"] = "Note runique",
-		["pages"] = {
-			"Je vous salue, jeune &lt;classe&gt;. Les vents m’ont annoncé votre arrivée. La terre loue votre force. Et désormais les esprits anciens annoncent vos futurs accomplissements. Notre peuple a besoin de chefs importants et sages. Il se tourne souvent vers nous pour ces deux vertus. Si vous le désirez, je vous instruirai.\n\nTrouvez-moi dans le Camp Narache sur la Mesa de Nuage rouge. Nous discuterons plus amplement.\n\n-Meela Aube-glorieuse, Maître des chamans",
-		},
-	},
-	["Rune-Inscribed Parchment"] = {
-		["translation"] = "Parchemin runique",
-		["pages"] = {
-			"Lok’tar, &lt;frère/sœur&gt;. Les éléments vous font dire d’approcher et me demandent de vous guider sur la voie du chaman. Les esprits de nos ancêtres observent depuis l’au-delà et sont emplis de fierté de voir que vous avez rejoint nos rangs.\n\nQuand vous le jugerez bon, venez me voir à l’entrée de l’Antre. C’est là que je forme les nôtres. Jusque-là, que les vents vous soient favorables.\n\n– Shikrik, maître des chamans",
-		},
-	},
 	["Scroll of Auspice"] = {
 		["translation"] = "Parchemin d’auspice",
 		["pages"] = {
@@ -3552,42 +3316,6 @@ _addon.translations = {
 			"pense qu'ils ne nous menacent pas directement, tant que nous ne mordons pas sur leur territoire. Cette situation n'est pas confortable pour la population des nains, mais vu la dispersion des ressources militaires, il semble prudent de reléguer l'extermination des trolls à un niveau moindre d'importance et de continuer à nous concentrer sur la menace posée par les troggs et les Sombrefer.\n\nVous trouverez ci-joint un exemplaire du rapport de mon frère Grelin sur Courbenclume.\n\nSigné,\nSenir Blanchebarbe",
 			"Rapport sur les trolls crins-de-givre dans la région de la vallée des Frigères\n\nPréparé par Grelin Blanchebarbe, Envoyé spécial du Sénat\n\nAprès avoir passé du temps à observer les mouvements des trolls Crins-de-givre dans la région de la vallée des Frigères, je suis en mesure de dire qu'ils ne représentent pas une menace sérieuse pour les comptoirs des nains dans la zone. Bien plus, avec une petite aide de l'armée, la question pourrait rapidement être réglée. Avec le soutien des Montagnards déjà présents dans la",
 			"vallée des Frigères et de mercenaires (payés par les fonds débloqués avant mon départ par le Sénat), je suis convaincu que le problème sera résolu rapidement. \n\nCette action a été autorisée par le roi Barbe-de-bronze.",
-		},
-	},
-	["Simple Letter"] = {
-		["translation"] = "Lettre simple",
-		["pages"] = {
-			"Dites-moi, &lt;classe&gt;, avez-vous jamais entendu hurler un orc ? Défendu votre foyer contre des gnolls qui cherchent à vous égorger ? Oui, je sais, c’est dur à entendre.\n\nMa foi, vous aurez besoin de mon aide si vous voulez protéger les vôtres. Vous me trouverez dans l’abbaye de Comté-du-Nord. Mes connaissances ne sont pas données, mais si vous avez l’expérience requise, je pourrai vous enseigner bien des choses qui vous aideront à affronter les menaces de Hurlevent et d’ailleurs.\n\nLlane Beshere, maître des guerriers",
-		},
-	},
-	["Simple Note"] = {
-		["translation"] = "Note simple",
-		["pages"] = {
-			"Bien des tribus affirment que c’est un don de savoir utiliser la magie ou de pouvoir parler aux ancêtres. Mais sachez que vous aussi avez des dons, &lt;classe&gt;. Il est des gens qui n’ont pas le bras assez puissant pour tenir le bouclier, parer le coup d’un assassin, souffrir les douleurs infligées par un maître des arcanes. Vous, si. Vous avez cette force. Et je vous aiderai à en profiter. Vous me trouverez au Camp Narache.\n\n-Harutt Corne-tonnerre, Maître des guerriers",
-		},
-	},
-	["Simple Parchment"] = {
-		["translation"] = "Parchemin simple",
-		["pages"] = {
-			"Throm-Ka, guerrier. Je ne m’attarderai pas sur votre valeur et votre force. Tout ça est connu. Vous avez tué des humains dernièrement ? Pas beaucoup, je suppose. Vous mollissez. Sans défis, vous vous embourgeoisez.\n\nJ’ai besoin d’un peu d’aide et, quoi que vous en pensiez, vous aurez l’usage des leçons que je peux vous donner. Quand vous aurez réussi à vous enfoncer ça dans le crâne, je vous attendrai sous l’auvent.\n\n-Frang, Maître des guerriers",
-		},
-	},
-	["Simple Rune"] = {
-		["translation"] = "Rune simple",
-		["pages"] = {
-			"Par la barbe de Magni, nous avons beaucoup à dire, et peu de temps à y consacrer, &lt;nom&gt;. Trouvez-moi à Courbenclume, qui surplombe la vallée des Frigères, dès que vous le pourrez. Nous pourrons alors commencer.\n\nIl y a beaucoup de choses que je voudrais vous dire mais cela nous éloigne du sujet. Nous devons nous concentrer sur la manière d'empoigner une hache, sur le poids de notre armure, sur l'odeur de notre transpiration qui coule de notre front tandis que nous combattons nos ennemis. Nous débuterons avec cela.\n\n-Thran Khorman, Maître des guerriers",
-		},
-	},
-	["Simple Scroll"] = {
-		["translation"] = "Parchemin simple",
-		["pages"] = {
-			"Beaucoup parmi nous ont recours aux arcanes et aux divinités pour gagner en force, mais nous savons ce qu'il en est, n'est-ce pas, &lt;classe&gt; ? Nous savons que nos armes sont nos symboles sacrés, que notre bouclier est notre livre de sorts et que nos mailles sont notre sagesse.\n\nMême dans la non-mort nous sommes forts, et nous deviendrons plus forts encore.\n\nTrouvez-moi à l'auberge du village du Glas. Je vous en dirai davantage sur tout ceci et sur d'autres choses encore.\n\n-Dannal Stern, Maître des guerriers",
-		},
-	},
-	["Simple Sigil"] = {
-		["translation"] = "Cachet simple",
-		["pages"] = {
-			"J'espère que mon message vous trouvera en bonne forme, &lt;classe&gt;. Je vous écris parce que notre peuple a grand besoin de ceux qui savent manier l'épée, le glaive, toutes les armes. Il est arrivé tant de choses depuis que notre peuple a rencontré les autres races d'Azeroth que nous avons besoin de toutes sortes de protecteurs.\n\nC'est là que vous entrez en jeu. Je vous en dirai plus, mais vous devez venir en personne. Vous me trouverez dans Aldrassil... dans les niveaux inférieurs.\n\n-Alyissia, maître des guerriers",
 		},
 	},
 	["Sister Aquinne's Note"] = {
@@ -3622,30 +3350,6 @@ _addon.translations = {
 		["translation"] = "Bon pour une pièce d'armure de Hurlevent",
 		["pages"] = {
 			"Ce bon permet d’obtenir un élément d’armure en cuir ou en étoffe à la demeure de Timberlain, dans le Camp de bûcherons du Val d’Est.",
-		},
-	},
-	["Tainted Letter"] = {
-		["translation"] = "Lettre contaminée",
-		["pages"] = {
-			"Trop souvent des personnes comme les disciples du Feu sacré effraient ceux qui recherchent le vrai pouvoir en les induisant à croire qu’ils ne peuvent maîtriser aucune forme des arcanes. Toutes les choses extérieures à ce monde ne sont pas mauvaises. Toutes les entités ne cherchent pas à dominer ou à soumettre les autres. Si vous êtes assez puissant, ces mêmes entités peuvent devenir vos disciples.\n\nC’est quelque chose dont j’aimerais discuter davantage avec vous. Trouvez-moi dans le cimetière situé sur le côté droit de l’abbaye.\n\n-Drusilla La Salle, Maître des démonistes",
-		},
-	},
-	["Tainted Parchment"] = {
-		["translation"] = "Parchemin contaminé",
-		["pages"] = {
-			"J'ai écrit ce message avec l'encre la plus puissante que je suis arrivé à créer, &lt;nom&gt;. Une malédiction s'abattra sur quiconque tentera de le lire à part vous. Je suis assez puissant pour cela. J'invoque des démons du Néant distordu selon mes bons plaisirs. Je tourmente mes ennemis durant leur sommeil et sur le champ de bataille. Et désormais, vous aussi connaissez la puissance qui est la mienne. Mes frères sont très contents de cela.\n\nTrouvez-moi dans les profondeurs de l'Antre une fois que vous aurez trouvé votre chemin. Je vous parlerais alors de certaines choses importantes.\n\n-Nartok, Maître des démonistes",
-		},
-	},
-	["Tainted Rune"] = {
-		["translation"] = "Rune contaminée",
-		["pages"] = {
-			"ATTENTION :\n\nNe dites rien ! Ne regardez personne ! Quelqu'un est peut-être en train de vous surveiller en ce moment même.\n\nMon nom est Saripal Couvebrassin, &lt;nom&gt;. J'entraîne ceux qui sont à la recherche d'une connaissance et d'un pouvoir venant... de mondes lointains. On m'a demandé de me mettre en contact avec vous discrètement et de vous informer que je peux vous enseigner une forme de magie véritable.\n\nQuand vous le pourrez, venez me trouver à l'arrière de Courbenclume.\n\n-Saripal Couvebrassin, Maître des démonistes",
-		},
-	},
-	["Tainted Scroll"] = {
-		["translation"] = "Rouleau contaminé",
-		["pages"] = {
-			"Pas facile de nous trouver, &lt;nom&gt;, n’est-ce pas ? Tourmentés par le vil prince. Ostracisés par nos propres familles. Nous avons retrouvé notre volonté propre, grâce à la belle Sylvanas, mais qu’y avons-nous gagné ? Changer de maître ne libère pas un esclave, telle est mon opinion.\n\nMais si nous devenions les maîtres à notre tour ? Oui, vous me comprenez, j’en suis certain.\n\nNous sommes séparés du reste des Réprouvés, &lt;nom&gt;. Et c’est pourquoi nous devons parler. Vous me trouverez à l’église du Glas.",
 		},
 	},
 	["The Baroness' Missive"] = {
@@ -3838,18 +3542,6 @@ _addon.translations = {
 		["pages"] = {
 			"Superviseur Vibrouage, veuillez trouver ci-joint la liste des équipements que vous avez réquisitionnés, approuvée par le président Razdunk.\n\nIl m’a demandé de vous rappeler les intérêts que la KapitalRisk a investis dans les opérations de Kalimdor. Nos postes de minage et de forage dans les Tarides se sont montrés efficaces et avantageux, mais nous attendons de meilleurs chiffres de Mulgore, votre juridiction.\n\nLe conseil d’administration comprend la difficulté qu’il y a à établir",
 			"une opération de grande envergure si près des terres des taurens, mais ne pense pas qu’ils posent un problème majeur à nos plans d’exploitation dans la région.\n\nNous sommes heureux d’apprendre que le minage a commencé dans les riches plaines de Mulgore. C’est la raison pour laquelle le conseil a décidé d’approuver votre demande d’équipement. En plus du minage, nous pensons que Mulgore a également beaucoup à offrir en ce qui concerne le bois, vous recevrez en conséquence plusieurs de nos nouveaux modèles de découpeuses et des matériaux bruts pour construire une scierie.",
-		},
-	},
-	["Verdant Note"] = {
-		["translation"] = "Note verdoyante",
-		["pages"] = {
-			"Les esprits me sont apparus en rêve la nuit dernière. Ils m’ont annoncé votre visite et m’ont expliqué que ma tâche serait de vous aider. Nous aurons beaucoup à faire pendant le temps trop court que nous passerons ensemble : parler de la nature, des esprits, de la Terre-mère, des elfes de la nuit... Mais je vous enseignerai ces leçons à votre venue, et je ferai tout ce qui sera en mon pouvoir pour vous préparer aux épreuves à venir.\n\nQue la sagesse vous guide. J’attendrai.\n\n-Gart Cours-la-Brume, Maître des druides",
-		},
-	},
-	["Verdant Sigil"] = {
-		["translation"] = "Cachet verdoyant",
-		["pages"] = {
-			"Lorsque j’ai entendu dire que l’heure pour vous était venue, j’ai immédiatement envoyé ce cachet. Tous les druides de Cénarius ont plaisir à voir grandir notre nombre. Les esprits semblent même avoir gagné en puissance à votre arrivée. En temps voulu, et avec un peu de patience, nous retrouverons notre grandeur passée. Vous pourrez me trouver dans Aldrassil quand vous le voudrez. Je serai votre guide tant que vous serez à Sombrevallon.\n\n- Mardant Chênefort, maître des druides",
 		},
 	},
 	["Weaponization Orders"] = {

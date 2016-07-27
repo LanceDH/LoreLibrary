@@ -169,7 +169,7 @@ local function InitZoneFilter(self, level)
 		info.func =  nil;
 		info.hasArrow = true;
 		info.notCheckable = true;
-		info.text = "Continents";
+		info.text = _L["S_CONTINENTS"];
 		info.value = 1;
 		Lib_UIDropDownMenu_AddButton(info, level)
 	elseif (level == 2) then
@@ -343,65 +343,6 @@ function _addon:UpdateFilteredPoIList()
 	LoreLibraryPoI.filteredList = list;
 end
 	
-	--[[
-function _addon:GetFilteredZoneList()
-	local list = _addon.PoI["zones"];
-	local search = LoreLibraryPoI.searchString;
-	local filterList = {};
-	
-	SortZoneList(list, _addon.options.poI.sortByContinent);
-	
-	local lastContinent = 0;
-	for k, zone in ipairs(list) do
-		if _filter.continents[zone.continent].enabled then
-			-- add depending on completed filter
-			local completed =  self:ZoneIsCompleted(zone);
-			if ((completed and _filter.completed) or (not completed and _filter.notCompleted)) then
-				-- add continent title with setting
-				if (_addon.options.poI.sortByContinent and lastContinent ~= zone.continent) then
-					table.insert(filterList, {["isTitle"] = true, ["name"] = _filter.continents[zone.continent].name});
-					lastContinent = zone.continent;
-				end
-				table.insert(filterList, zone);
-			end
-		end
-	end
-	list = filterList;
-	
-	if (search ~= nil and search ~= "") then
-		-- Apply search for zones
-		local matches = {};
-		local addedTitle = false;
-		for k, zone in ipairs(list) do
-			if (string.find(string.lower(zone.name), search:lower(), 1, true))then
-				if (not addedTitle) then
-					table.insert(matches, {["isTitle"] = true, ["name"] = _L["S_MATCH_ZONE"]});
-					addedTitle = true;
-				end
-				table.insert(matches, zone);
-			end
-		end
-
-		-- Extend search for points
-		addedTitle = false;
-		for k, zone in ipairs(list) do
-			-- not self:ListContainsZoneName(matches, zone.name) and 
-			if (PointUnlockedInZoneMatchesSearch(zone)) then
-				if (not addedTitle) then
-					table.insert(matches, {["isTitle"] = true, ["name"] = _L["S_MATCH_AREA"]});
-					addedTitle = true;
-				end
-				table.insert(matches, zone);
-			end
-		end
-		list = matches;
-	end
-	
-	
-
-	return list;
-end
-]]--
 
 function _addon:UpdateZoneList()
 	if not LoreLibraryCore:IsShown() then return; end
@@ -549,7 +490,7 @@ function _addon:InitPoIFrame()
 	-- add zoneid to points for later reference, also less manual work
 	for k, zone in ipairs(zones) do
 		zone.pointIds = zone.pointIds and zone.pointIds or {};
-		--zone.name = GetMapNameByID(zone.id);
+		zone.name = GetMapNameByID(zone.id);
 		
 		self:SortZonePointsByName(zone);
 	end
@@ -788,7 +729,7 @@ LOLIBDEBUGTHING.text:SetJustifyH("left")
 LOLIBDEBUGTHING:SetWidth(135)
 LOLIBDEBUGTHING:SetHeight(60)
 LOLIBDEBUGTHING:SetClampedToScreen(true)
-LOLIBDEBUGTHING:Show()
+LOLIBDEBUGTHING:Hide()
 
 local L_LOLIBDEBUGCLOSE = CreateFrame("Button", "LOLIBDEBUGCLOSE", LOLIBDEBUGTHING, "UIPanelCloseButton")
 LOLIBDEBUGCLOSE:SetWidth(16)

@@ -2,7 +2,6 @@
 ## Title: LoreLibrary-Areas
 ## Notes: LoreLibrary module: Discover areas in the world.
 ## Author: LanceDH
-## Version: 7.0.03a1
 ## Dependencies: LoreLibrary
 ## LoadOnDemand: 1
 

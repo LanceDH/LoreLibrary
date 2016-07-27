@@ -28,19 +28,11 @@ _addon.data = {
 	["q24558"] = "Return To Myralion Sunblaze",
 	["q26355"] = "Captain Sanders' Hidden Treasure",
 	["q13831"] = "A Troubling Prescription",
-	["q24496"] = "Arcane Rune",
 	["q12140"] = "All Hail Roanauk!",
 	["q11983"] = "Blood Oath of the Horde",
 	["q26640"] = "Unspeakable Atrocities",
-	["q31141"] = "Calligraphed Letter",
-	["q31165"] = "Calligraphed Note",
-	["q31156"] = "Calligraphed Parchment",
-	["q31168"] = "Calligraphed Sigil",
 	["q26691"] = "Worgen in the Woods",
 	["q333"] = "Harlan Needs a Resupply",
-	["q3101"] = "Consecrated Letter",
-	["q27015"] = "Consecrated Note",
-	["q3107"] = "Consecrated Rune",
 	["q29021"] = "Samophlange",
 	["q11650"] = "Just a Few More Things...",
 	["q24667"] = "Firestone Point",
@@ -48,19 +40,6 @@ _addon.data = {
 	["q28096"] = "Welcome to the Machine",
 	["q27218"] = "Dastardly Denizens of the Deep",
 	["q8287"] = "A Terrible Purpose",
-	["q31150"] = "Elegant Rune",
-	["q31146"] = "Scribbled Scroll",
-	["q24494"] = "Empowered Rune",
-	["q3102"] = "Encrypted Letter",
-	["q3088"] = "Encrypted Parchment",
-	["q3109"] = "Encrypted Rune",
-	["q3096"] = "Encrypted Scroll",
-	["q3118"] = "Encrypted Sigil",
-	["q26910"] = "Etched Letter",
-	["q3092"] = "Etched Note",
-	["q3087"] = "Etched Parchment",
-	["q3108"] = "Etched Rune",
-	["q3117"] = "Etched Sigil",
 	["q27106"] = "A Villain Unmasked",
 	["q38934"] = "Silas' Secret Stash",
 	["q13139"] = "Into The Frozen Heart Of Northrend",
@@ -70,12 +49,8 @@ _addon.data = {
 	["q8228"] = "Could I get a Fishing Flier?",
 	["q8229"] = "Could I get a Fishing Flier?",
 	["q8149"] = "Honoring a Hero",
-	["q26841"] = "Forbidden Sigil",
 	["q184"] = "Furlbrow's Deed",
 	["q9706"] = "Galaen's Journal - The Fate of Vindicator Saruan",
-	["q3104"] = "Glyphic Letter",
-	["q25138"] = "Glyphic Parchment",
-	["q3098"] = "Glyphic Scroll",
 	["q9821"] = "Eating Damnation",
 	["q107"] = "Note to William",
 	["q10045"] = "Material Components",
@@ -83,11 +58,6 @@ _addon.data = {
 	["q6391"] = "Ride to Ironforge",
 	["q6385"] = "Doras the Wind Rider Master",
 	["q6386"] = "Return to Razor Hill",
-	["q3103"] = "Hallowed Letter",
-	["q27014"] = "Hallowed Note",
-	["q3110"] = "Hallowed Rune",
-	["q3097"] = "Hallowed Scroll",
-	["q3119"] = "Hallowed Sigil",
 	["q13751"] = "Tell No One!",
 	["q26855"] = "A Pilot's Revenge",
 	["q30499"] = "Get Back Here!",
@@ -117,17 +87,9 @@ _addon.data = {
 	["q7161"] = "Proving Grounds",
 	["q840"] = "Conscript of the Horde",
 	["q25696"] = "The Sunveil Excursion",
-	["q3093"] = "Rune-Inscribed Note",
-	["q3089"] = "Rune-Inscribed Parchment",
 	["q31068"] = "Sacred Recipe",
 	["q32376"] = "To the Valley!",
 	["q291"] = "The Reports",
-	["q3100"] = "Simple Letter",
-	["q3091"] = "Simple Note",
-	["q2383"] = "Simple Parchment",
-	["q3106"] = "Simple Rune",
-	["q3095"] = "Simple Scroll",
-	["q3116"] = "Simple Sigil",
 	["q6341"] = "To Darnassus",
 	["q6342"] = "An Unexpected Gift",
 	["q13848"] = "Bad News Bear-er",
@@ -136,10 +98,6 @@ _addon.data = {
 	["q27244"] = "The Lost Report",
 	["q1338"] = "Stormpike's Order",
 	["q59"] = "Cloth and Leather Armor",
-	["q3105"] = "Tainted Letter",
-	["q3090"] = "Tainted Parchment",
-	["q3115"] = "Tainted Rune",
-	["q3099"] = "Tainted Scroll",
 	["q27551"] = "The Baroness' Missive",
 	["q28196"] = "The Battle for Hillsbrad",
 	["q123"] = "The Collector",
@@ -161,8 +119,6 @@ _addon.data = {
 	["q24962"] = "Trail-Worn Scroll",
 	["q9698"] = "Audience with the Prophet",
 	["q751"] = "The Ravaged Caravan",
-	["q3094"] = "Verdant Note",
-	["q3120"] = "Verdant Sigil",
 	["q35925"] = "The Gronn Strategy",
 	["q26667"] = "The Stolen Letters",
 	["q26669"] = "In A Dark Corner",
@@ -4114,15 +4070,6 @@ _addon.data = {
 		{["sourceType"] = "quest", ["areaId"] = 42, ["id"] = 13831, ["faction"] = "A", ["x"] = 57.4, ["y"] = 33.8},
 	},
 },
-["Arcane Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 49759},
-	["pages"] = {
-		"Those of us who are agile of mind, but not quite so agile of body, must find... alternative methods of self-preservation. Many such people choose to pursue a career in matters magical.\n\n&lt;name&gt;, I've been observing you, and you have a mind like a steel trap. However, to thrive in this time of upheaval, a person such as yourself will need to master the arcane arts. And to master the arcane arts, you're going to have to talk to me.\n\nCome speak with me in Anvilmar. We've much to discuss.\n\n-Teegli Merrowith",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 24496, ["faction"] = "A", ["x"] = 60.6, ["y"] = 21.2},
-	},
-},
 ["Blood Oath of the Horde"] = {
 	["info"] = {["type"] = "item", ["id"] = 35784},
 	["pages"] = {
@@ -4142,42 +4089,6 @@ _addon.data = {
 		{["sourceType"] = "quest", ["areaId"] = 36, ["id"] = 26640, ["faction"] = "A", ["x"] = 53, ["y"] = 67.6},
 	},
 },
-["Calligraphed Letter"] = {
-	["info"] = {["type"] = "item", ["id"] = 85160},
-	["pages"] = {
-		"I am glad you are interested in taking up the ways of the monk. I have come from afar to bring the wisdom of my people to your kind.\nI have taken up residence in the abbey, training any who wish to learn our arts. Come, visit, and I shall train you.\n\nYours,\nBao",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 864, ["id"] = 31141, ["faction"] = "A", ["x"] = 33.2, ["y"] = 53.2},
-	},
-},
-["Calligraphed Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 85203},
-	["pages"] = {
-		"I have been visiting with your tribe for a while now, and while some have tried to learn our arts, none have shown the promise that you have. \n\nPlease, come meet me at Camp Narache. I have learned so much from your tribe, I feel it is time I return the favor.\n\n-Shoyu",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 890, ["id"] = 31165, ["faction"] = "H", ["x"] = 30.5, ["y"] = 50},
-	},
-},
-["Calligraphed Parchment"] = {
-	["info"] = {["type"] = "item", ["id"] = 85196},
-	["pages"] = {
-		"I came here from afar to learn of your people's ways, and to teach you mine. You do me a great honor by volunteering to learn the ways of the Monk. In time, there is much I will show you, but for now, we must meet for our first lessons. Come, meet me in the Valley of Trials, and we will begin your training.\n\n-Gato",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 889, ["id"] = 31156, ["faction"] = "H", ["x"] = 42.2, ["y"] = 68.6},
-	},
-},
-["Calligraphed Sigil"] = {
-	["info"] = {["type"] = "item", ["id"] = 85205},
-	["pages"] = {
-		"Hello, &lt;class&gt;. I have seen that you are interested in learning the ways of the monk. I would be honored to begin your training, as you seem like quite an auspicious pupil. Come to Aldrassil, on the lower levels.\n\n-Laoxi",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 888, ["id"] = 31168, ["faction"] = "A", ["x"] = 45.8, ["y"] = 73},
-	},
-},
 ["Calor's Note"] = {
 	["info"] = {["type"] = "item", ["id"] = 2113},
 	["pages"] = {
@@ -4194,33 +4105,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["sourceType"] = "quest", ["areaId"] = 301, ["id"] = 333, ["faction"] = "A", ["x"] = 62.2, ["y"] = 67.8},
-	},
-},
-["Consecrated Letter"] = {
-	["info"] = {["type"] = "item", ["id"] = 9570},
-	["pages"] = {
-		"I hope this letter finds you well, &lt;class&gt;. I say that with great pride, because not many can profess such profound faith, but also know that they are among the most elite of Azeroth's protectors.\n\nAlways remember, first and foremost, it is your duty to go to battle against those who seek to harm our world and bring corruption into our homes.\n\nI have been given authority over your training for the time being. When you are ready, seek me out inside Northshire Abbey.\n\n-Brother Sammuel, Paladin Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 864, ["id"] = 3101, ["faction"] = "A", ["x"] = 33.2, ["y"] = 53.2},
-	},
-},
-["Consecrated Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 60752},
-	["pages"] = {
-		"I have been awaiting your arrival, sunwalker. Chief Hawkwind himself told me of your interest in our order and I have agreed to begin your training. Please meet with me in the circle at the center of Camp Narache when you are ready to begin your instruction.\n\nSunwalker Helaku",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 890, ["id"] = 27015, ["faction"] = "H", ["x"] = 30.5, ["y"] = 50},
-	},
-},
-["Consecrated Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 9563},
-	["pages"] = {
-		"Some fear our kind more than dragons. Some envy us more than the most skilled blacksmiths. Some praise our strength in battle. Others revel in our faith. Some are just jealous that we can drink them under the table! But know this, &lt;class&gt;, you are among the most elite protectors in all of Azeroth. The Holy Light gives us strength as much as we strengthen it.\n\nI would tell you more when you've gotten acquainted with the land some. Find me inside Anvilmar above the Valley.\n\n-Bromos Grummner, Paladin Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 3107, ["faction"] = "A", ["x"] = 60.6, ["y"] = 21.5},
 	},
 },
 ["Control Console Operating Manual"] = {
@@ -4298,123 +4182,6 @@ _addon.data = {
 		{["sourceType"] = "quest", ["areaId"] = 261, ["id"] = 8287, ["x"] = 68.6, ["y"] = 63},
 	},
 },
-["Elegant Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 85174},
-	["pages"] = {
-		"Friend, I am honored that you have chosen to learn the ways of the monk, the art of my people. Your interest heartens me, and allows me to return the hospitality that I have been shown by your kind and generous people here. Come, meet me in Anvilmar, and I will train you in our ways.\n\nYours,\nLo",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 31150, ["faction"] = "A", ["x"] = 60.6, ["y"] = 21.2},
-	},
-},
-["Elegant Scroll"] = {
-	["info"] = {["type"] = "item", ["id"] = 85164},
-	["pages"] = {
-		"Hello,\n\nI am Ting, Strong of Stomach. I come from lands far away.\n\nI may not be one of you Forsaken, but it is clear that you are strong in mind and body. Some of my people do not believe that your people can be trained in the arts of the Monk, but I do not share their prejudice. Come to me, and I will teach you to fight!\n\n-Ting, Strong of Stomach",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 892, ["id"] = 31146, ["faction"] = "H", ["x"] = 46.8, ["y"] = 58.8},
-	},
-},
-["Empowered Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 49758},
-	["pages"] = {
-		"Know this: a shaman must never demand power; to do so would arouse the anger of the elements, and a shaman without the elements' protection is nothing. Those that follow the path of the shaman must never forget this most vital tenet.\n\nHowever, a shaman that works in a respectful union with the elements wields a power rivaled by few. If you feel you have the humility to do so, come visit with me in Anvilmar. I will teach you - much like I myself was taught - how to work with the elements of fire, earth, wind, water, and the wild.\n\n~Teo Hammerstorm",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 24494, ["faction"] = "A", ["x"] = 60.6, ["y"] = 21.2},
-	},
-},
-["Encrypted Letter"] = {
-	["info"] = {["type"] = "item", ["id"] = 9555},
-	["pages"] = {
-		"Never been more proud to be part of the trade as I am in these last few years. The need for assassins, spies, and scouts has never been more prevalent. You'd think war-time would have had higher demand, but suprisingly, war isn't a time we flourish like we do now--the times after peace starts to deteriorate.\n\nI was told you'd be in the area looking to learn a few things. When you have time, come see me by the stables in back of the abbey.\n\n-Jorik Kerridan, Rogue Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 864, ["id"] = 3102, ["faction"] = "A", ["x"] = 33.2, ["y"] = 53.2},
-	},
-},
-["Encrypted Parchment"] = {
-	["info"] = {["type"] = "item", ["id"] = 9560},
-	["pages"] = {
-		"I send greetings, &lt;name&gt;. I was lost in thought when it came to my attention that I needed to write to you.\n\nMany in our culture praise our shamans for being our spiritual leaders, like our great Warchief. Others think the sword and axe are even more noble pursuits, but never forget that battles--even wars--are won on the backs of those with more specialized skills. That is what I wish to speak to you about, &lt;name&gt;. Find me among the other orcs in the Valley of Trials.\n\n-Rwag, Rogue Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 889, ["id"] = 3088, ["faction"] = "H", ["x"] = 41.8, ["y"] = 68.4},
-	},
-},
-["Encrypted Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 9550},
-	["pages"] = {
-		"&lt;Brother/Sister&gt;, I hope this rune finds you well. I wanted to take a moment to let you know that I'm inside Anvilmar above Coldridge Valley.\n\nI know how important it is we all stick together, and in this time of strained peace it's becoming even more important to have our kind around. Look for me when you have the time. \n\n-Solm Hargrin, Rogue Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 3109, ["faction"] = "A", ["x"] = 60.6, ["y"] = 21.2},
-	},
-},
-["Encrypted Scroll"] = {
-	["info"] = {["type"] = "item", ["id"] = 9559},
-	["pages"] = {
-		"Take care not to ignore my words, &lt;name&gt;. This is the time for subterfuge and deceit throughout all nations... even our great Undercity. Everyone loyal to Sylvanas is working towards creating a new era, one controlled by the Forsaken. And even though we possess no magical skills, nor will we take up weapons along our borders, we still have our own role to play.\n\nSeek me out in the inn in Deathknell. We'll speak more then.\n\n-David Trias, Rogue Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 892, ["id"] = 3096, ["faction"] = "H", ["x"] = 46.8, ["y"] = 58.8},
-	},
-},
-["Encrypted Sigil"] = {
-	["info"] = {["type"] = "item", ["id"] = 9551},
-	["pages"] = {
-		"Sael'ah, my friend. I hope this sigil finds you well. I was asked to offer you my services. I too am in Shadowglen, in the great tree of Aldrassil, and I wanted you to know that if you need any training that you could seek me out.\n\nIn these questionable times, I thought it prudent that those dealing in stealth remain even closer to one another. How else will we be able to protect Teldrassil and our ways?\n\nFind me when you can.\n\n-Frahun Shadewhisper, Rogue Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 888, ["id"] = 3118, ["faction"] = "A", ["x"] = 45.8, ["y"] = 73.4},
-	},
-},
-["Etched Letter"] = {
-	["info"] = {["type"] = "item", ["id"] = 60677},
-	["pages"] = {
-		"Northshire Valley is a dangerous place, ideally suited to the survival skills of a hunter. Needless to say I have been impressed with your contributions to the valley's defense and I look forward to meeting you. Please look for me by the entrance to the abbey.",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 864, ["id"] = 26910, ["faction"] = "A", ["x"] = 33.2, ["y"] = 53.2},
-	},
-},
-["Etched Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 9565},
-	["pages"] = {
-		"Mighty warriors defend our home. Our shamans guide our spirits and show us our ancestors' past. And our druids help us discover the Earthmother's will.\n\nBut you are one of our hunters, and our hunters learn many aspects of those roles and blend them together. You will find you represent the heart of our people--some of our tribe will look to you for guidance, some for protection. It is my duty to ensure you are prepared for that. Seek me out in Camp Narache.\n\n-Lanka Farshot, Hunter Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 9, ["id"] = 3092, ["faction"] = "H", ["x"] = 30.5, ["y"] = 50},
-	},
-},
-["Etched Parchment"] = {
-	["info"] = {["type"] = "item", ["id"] = 9553},
-	["pages"] = {
-		"I've seen you shuffling around the Valley, young one, with your flimsy bow and that shabby armor. You remind me of a young hunter I knew a long time ago...\n\nIf you're interested in learning a bit more about the trade, come visit me. The hunter's path can be a lonely one, and it helps to have allies along the way.\n\n-Karranisha, Hunter Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 889, ["id"] = 3087, ["faction"] = "H", ["x"] = 41.8, ["y"] = 68.4},
-	},
-},
-["Etched Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 9566},
-	["pages"] = {
-		"Tamer of beasts, master marskman, proven tracker--what else ya want to accomplish in this lifetime? All those things combined takes quite a bit of intelligence and a great deal of patience.\n\nThe path of the hunter ain't an easy one, that's fer sure. You're gonna need lots of training if you wanna be as good as even our lowest ranking rifleman. But that's why I'm here.\n\nFind me inside Anvilmar overlooking Coldridge Valley. I'll be waiting.\n\n-Thorgas Grimson, Hunter Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 3108, ["faction"] = "A", ["x"] = 60.6, ["y"] = 21.2},
-	},
-},
-["Etched Sigil"] = {
-	["info"] = {["type"] = "item", ["id"] = 9567},
-	["pages"] = {
-		"Elune is with you, &lt;name&gt;. The wind whispers it to me, and I'm glad I can directly take part in the shaping of our next generation of hunters.\n\nFrom what I have been told, you are close to Aldrassil. I would meet with you inside the great tree when you have time.\n\nOur elders have charged me with ensuring that new hunters are properly trained for the trials ahead. You being one of the newest students, it would behoove you to visit me. Until then, be well.\n\n-Ayanna Everstride, Hunter Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 888, ["id"] = 3117, ["faction"] = "A", ["x"] = 45.8, ["y"] = 73.4},
-	},
-},
 ["Evidence Against Samuelson"] = {
 	["info"] = {["type"] = "item", ["id"] = 60819},
 	["pages"] = {
@@ -4487,15 +4254,6 @@ _addon.data = {
 		{["sourceType"] = "quest", ["areaId"] = 27, ["id"] = 8149, ["faction"] = "A", ["x"] = 59.8, ["y"] = 34.2},
 	},
 },
-["Forbidden Sigil"] = {
-	["info"] = {["type"] = "item", ["id"] = 60400},
-	["pages"] = {
-		"I hope this sigil finds you well, &lt;name&gt;. The Archmage told me of your coming and I sent word immediately.\n\nWith all that has happened in the past years to bring arcane magic back to our race, you may find struggles and trials ahead. I can help with such things. When you are ready, find me inside Aldrassil, on the second level.\n\n-Rhyanda, Mage Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 888, ["id"] = 26841, ["faction"] = "A", ["x"] = 45.8, ["y"] = 73},
-	},
-},
 ["Furlbrow's Deed"] = {
 	["info"] = {["type"] = "item", ["id"] = 1971},
 	["pages"] = {
@@ -4516,33 +4274,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["sourceType"] = "quest", ["areaId"] = 476, ["id"] = 9706, ["faction"] = "A", ["x"] = 37.6, ["y"] = 61.3},
-	},
-},
-["Glyphic Letter"] = {
-	["info"] = {["type"] = "item", ["id"] = 9571},
-	["pages"] = {
-		"There are four rules to magic:\n\n Magic is powerful.\n Magic is corrupting.\n Magic is addicting.\n Magic draws the denizens of the Twisting Nether to those who wield the arcane.\n\nThose rules you can always guarantee. Those rules will govern your destiny if you chose to continue down the path as a mage.\n\nIf you're foolish enough to ignore this warning, then come speak to me inside the library wing of the abbey in Northshire. I'll be waiting for you upstairs.\n\n-Khelden Bremen, Mage Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 864, ["id"] = 3104, ["faction"] = "A", ["x"] = 33.2, ["y"] = 53.2},
-	},
-},
-["Glyphic Parchment"] = {
-	["info"] = {["type"] = "item", ["id"] = 52513},
-	["pages"] = {
-		"The others don't understand us. They pretend to get along with us, but they don't. Even the warlocks are afraid of us.\n\nThat's alright, because we've got each other. Orc mages unite! Me and you! Acrypha and... whatever your name is! Ha!\n\nWe'll show them what we're made of. Pay me a visit, and I'll share with you some of the secrets of the arcane that I've managed to master.",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 889, ["id"] = 25138, ["faction"] = "H", ["x"] = 42.2, ["y"] = 69.2},
-	},
-},
-["Glyphic Scroll"] = {
-	["info"] = {["type"] = "item", ["id"] = 9574},
-	["pages"] = {
-		"The corruption and evil that rumor says travels with the arcane is nothing compared to the pain we've already felt. We are no longer victims, &lt;name&gt;. We are the ones who control our fate. Sylvanas has paved the way for us--she has proven that our will is our own; that we are no longer thralls to that bastard Arthas.\n\nSeek me out in the church, I shall instruct you further... if that is your desire.\n\n- Isabella, Mage Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 892, ["id"] = 3098, ["faction"] = "H", ["x"] = 47, ["y"] = 58.4},
 	},
 },
 ["Gordawg's Imprint"] = {
@@ -4591,51 +4322,6 @@ _addon.data = {
 	["locations"] = {
 		{["sourceType"] = "quest", ["areaId"] = 321, ["id"] = 6385, ["faction"] = "H", ["x"] = 53.4, ["y"] = 78.8},
 		{["sourceType"] = "quest", ["areaId"] = 321, ["id"] = 6386, ["faction"] = "H", ["x"] = 49.4, ["y"] = 59.2},
-	},
-},
-["Hallowed Letter"] = {
-	["info"] = {["type"] = "item", ["id"] = 9548},
-	["pages"] = {
-		"Your connection to the world, and its connection to you, are paramount to your success as a priest. Wisdom and compassion will allow you to help those who have a true need. Overeagerness and clumsy decisions only prevent others from becoming stronger or cause harm.\n\nAs you begin to understand what this means, you will need new abilities and spells to help you. That is where my role begins: find me in the library wing of Northshire Abbey when you are ready to train.\n\n-Priestess Anetta, Priest Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 864, ["id"] = 3103, ["faction"] = "A", ["x"] = 33.2, ["y"] = 53.2},
-	},
-},
-["Hallowed Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 60751},
-	["pages"] = {
-		"The way of the priest is a new one for our people, but it draws on the ancient traditions of our seers. In your lessons, you will learn the wisdom of the Earthmother as illuminated by the Light. Meet with me in the circle at the center of Camp Narache and we will begin your lessons.\n\nSeer Ravenfeather",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 890, ["id"] = 27014, ["faction"] = "H", ["x"] = 30.5, ["y"] = 50},
-	},
-},
-["Hallowed Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 9556},
-	["pages"] = {
-		"With the Holy Light warmin' our backs and new discoveries being made every day, 'tis an exciting time to be one of Ironforge's &lt;sons/daughters&gt;. The Explorer's League makes headway every day in its search for long-lost answers to even older questions. And now we have you among our faithful to aid in the battle against the troggs and any other threat to our borders.\n\nFind me when ya have the time. I'll be in the back of Anvilmar, just up the hill. \n\n- Branstock Khalder, Priest Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 3110, ["faction"] = "A", ["x"] = 60.6, ["y"] = 21.2},
-	},
-},
-["Hallowed Scroll"] = {
-	["info"] = {["type"] = "item", ["id"] = 9569},
-	["pages"] = {
-		"Feel blessed that your spirit was not released to the Nether, &lt;name&gt;. Feel even more blessed that I decided you were worth the effort to write this scroll for.\n\nThe people you once knew, perhaps even cared for, are no longer! You must learn to \"live\" with that for the rest of your now unnatural life. I suggest you learn to deal with that first.\n\nIf you think you're ready for the trials ahead, then seek me out in the church in Deathknell.\n\n- Dark Cleric Duesten, Priest Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 20, ["id"] = 3097, ["faction"] = "H", ["x"] = 46.8, ["y"] = 58.8},
-	},
-},
-["Hallowed Sigil"] = {
-	["info"] = {["type"] = "item", ["id"] = 9557},
-	["pages"] = {
-		"I hope this sigil finds you well, &lt;name&gt;. The spirits told me of your coming and I sent word immediately. I look forward to sharing my experiences with you, and helping guide you as you prepare to leave Teldrassil for more important matters.\n\nWith all that has happened in the last few years, there is much we can do to aid the other races of Azeroth. When you are ready, find me inside Aldrassil, on the second level.\n\n-Shanda, Priest Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 888, ["id"] = 3119, ["faction"] = "A", ["x"] = 45.8, ["y"] = 73},
 	},
 },
 ["Hastily Written Note"] = {
@@ -4934,24 +4620,6 @@ _addon.data = {
 		{["sourceType"] = "quest", ["areaId"] = 19, ["id"] = 25696, ["faction"] = "H", ["x"] = 54.4, ["y"] = 50.4},
 	},
 },
-["Rune-Inscribed Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 9552},
-	["pages"] = {
-		"I greet you, young &lt;class&gt;. The winds told me of your coming. The earth gave praise of your strength. And now the ancient spirits whisper of your accomplishments to come. Our people always need wise and great leaders. They often turn to our kind for both virtues. If you are willing, I would teach you more of our ways.\n\nSeek me out in Camp Narache on Red Cloud Mesa--we will speak more then.\n\n-Meela Dawnstrider, Shaman Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 890, ["id"] = 3093, ["faction"] = "H", ["x"] = 30.5, ["y"] = 50},
-	},
-},
-["Rune-Inscribed Parchment"] = {
-	["info"] = {["type"] = "item", ["id"] = 9568},
-	["pages"] = {
-		"Lok'tar, &lt;brother/sister&gt;. The elements beckon you closer and bid me to show you the path of the shaman. The spirits of our ancestors watch from beyond and swell with pride knowing you have joined our ranks.\n\nWhen you are ready, seek me out near the entrance to the Den. It is there that I will be training others of our kind. Until then, may the wind be at your back.\n\n-Shikrik, Shaman Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 889, ["id"] = 3089, ["faction"] = "H", ["x"] = 41.8, ["y"] = 69.2},
-	},
-},
 ["Scroll of Auspice"] = {
 	["info"] = {["type"] = "item", ["id"] = 84586},
 	["pages"] = {
@@ -4981,60 +4649,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["sourceType"] = "quest", ["areaId"] = 27, ["id"] = 291, ["faction"] = "A", ["x"] = 53.8, ["y"] = 52},
-	},
-},
-["Simple Letter"] = {
-	["info"] = {["type"] = "item", ["id"] = 9542},
-	["pages"] = {
-		"Tell me, &lt;class&gt;, have you heard an orc scream yet? Perhaps defended your home from gnolls as they seek to tear your throat out? Yeah, sounds harsh, doesn't it?\n\nWell, you're gonna need my help if you want to protect your loved ones. You'll find me inside the abbey in Northshire. My knowledge doesn't come cheap, but if you're experienced enough, I can give you training that will help you fight off the threats to Stormwind and beyond.\n\nLlane Beshere, Warrior Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 864, ["id"] = 3100, ["faction"] = "A", ["x"] = 33.2, ["y"] = 53.2},
-	},
-},
-["Simple Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 9547},
-	["pages"] = {
-		"Many tribes claim that it is a gift to be blessed with the aptitude to use magic or to talk to our ancestors, but you should know this as well, &lt;class&gt;, you are just as gifted. Some do not have the strength in their arms to wield mighty weapons. Some do not have the skill to parry a blow from an assassin, or to even suffer the physical punishments from an arcane spellcaster, but you do. You are strong. And I will help you become stronger. Find me in Camp Narache.\n\n-Harutt Thunderhorn, Warrior Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 890, ["id"] = 3091, ["faction"] = "H", ["x"] = 30.5, ["y"] = 50},
-	},
-},
-["Simple Parchment"] = {
-	["info"] = {["type"] = "item", ["id"] = 12635},
-	["pages"] = {
-		"Throm-Ka, warrior. I won't fawn over your deeds of strength and valor. They're old news. Killed any humans lately? Not many, I wager. You're slowing down. Getting soft without a challenge.\n\nI need another pair of hands, and no matter what your toadies say, you need the training I can give you. Whenever you get that through your thick skull, I'll be waiting under the canopy just outside the Den.\n\n-Frang, Warrior Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 889, ["id"] = 2383, ["faction"] = "H", ["x"] = 43.6, ["y"] = 70.8},
-	},
-},
-["Simple Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 9543},
-	["pages"] = {
-		"By Magni's beard, there's much to discuss, and little time to do it, &lt;name&gt;. Find me in Anvilmar overlooking Coldridge Valley as soon as you can. We gotta get started.\n\nThere's a mess of things I can tell you about to get you caught up to speed, but all that's got nothing to do with us... for now. What we need to focus on is the grip of an axe, the weight of our armor, and the smell of our own sweat beadin' down our foreheads as we fight our enemies. We'll start with that.\n\n-Thran Khorman, Warrior Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 3106, ["faction"] = "A"},
-	},
-},
-["Simple Scroll"] = {
-	["info"] = {["type"] = "item", ["id"] = 9546},
-	["pages"] = {
-		"Many of our kind resort to the arcane and divine as a means to give themselves strength, but we know better, don't we, &lt;class&gt;? We know that our weapons are our holy symbols, our shield is our spell book, and our mail is our wisdom.\n\nEven in undeath we are strong, and we will only become stronger.\n\nFind me in the inn in Deathknell. I will speak to you more of these matters and other things.\n\n-Dannal Stern, Warrior Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 892, ["id"] = 3095, ["faction"] = "H", ["x"] = 60.6, ["y"] = 21.2},
-	},
-},
-["Simple Sigil"] = {
-	["info"] = {["type"] = "item", ["id"] = 9545},
-	["pages"] = {
-		"I hope my sigil finds you well, &lt;class&gt;. I write to you because our people have need for those strong with the blade, the glaive, and all other weapons. So much has happened since our people have been reintroduced to the other races of Azeroth that we have an even greater need for protectors of all kinds.\n\nThis is where you come in. I would tell you more, but I feel it should be in person. Find me inside Aldrassil... on the lower levels.\n\n-Alyissia, Warrior Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 888, ["id"] = 3116, ["faction"] = "A", ["x"] = 45.8, ["y"] = 73},
 	},
 },
 ["Sister Aquinne's Note"] = {
@@ -5087,42 +4701,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["sourceType"] = "quest", ["areaId"] = 30, ["id"] = 59, ["faction"] = "A", ["x"] = 73.8, ["y"] = 72.2},
-	},
-},
-["Tainted Letter"] = {
-	["info"] = {["type"] = "item", ["id"] = 9576},
-	["pages"] = {
-		"Too often people like the followers of the Holy Light scare those curious about true power into thinking they cannot investigate any form of the arcane--not all things from outside this world are evil. Not all entities seek to dominate or subjugate others. If you are powerful enough, those same entities can become the followers.\n\nThis is something I would like to discuss more with you. Seek me out in the graveyard on the right side of the abbey.\n\n-Drusilla La Salle, Warlock Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 864, ["id"] = 3105, ["faction"] = "A", ["x"] = 33.2, ["y"] = 53.2},
-	},
-},
-["Tainted Parchment"] = {
-	["info"] = {["type"] = "item", ["id"] = 9579},
-	["pages"] = {
-		"I write this message in the most powerful inks I can create, &lt;name&gt;. It would instantly curse anyone who would dare read it besides yourself. I am that powerful. I summon demons from the Twisting Nether at my leisure. I plague my enemies in their sleep and in the field of battle. And now you too have seen the power of my path. My brothers are pleased by that.\n\nSeek me out near the entrance to the Den once you've found your way around. I would speak to you about important matters.\n\n-Nartok, Warlock Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 889, ["id"] = 3090, ["faction"] = "H", ["x"] = 41.8, ["y"] = 65.8},
-	},
-},
-["Tainted Rune"] = {
-	["info"] = {["type"] = "item", ["id"] = 9577},
-	["pages"] = {
-		"ATTENTION:\n\nRemain Silent! Don't look around at anyone! Someone could be watching you this very moment.\n\nMy name is Saripal Smolderbrew, &lt;name&gt;. I train those willing to seek knowledge and greater power from... worlds beyond. I've been asked to get in touch with you discretely and inform you that I can train you further in a real form of magic.\n\nWhen you can, come find me in the back of Anvilmar.\n\n-Saripal Smolderbrew, Warlock Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 866, ["id"] = 3115, ["faction"] = "A", ["x"] = 60.6, ["y"] = 21.2},
-	},
-},
-["Tainted Scroll"] = {
-	["info"] = {["type"] = "item", ["id"] = 9578},
-	["pages"] = {
-		"An awful predicament to find ourselves in, isn't it, &lt;name&gt;? Plagued by the Foul Prince. Ostracized and spurned by our own loved ones. We finally have our own will thanks to the beautiful Sylvanas, but what does that afford us now? Slaves to a different master is still a slave, or so I say.\n\nBut what if we were the masters? Yes, you know what I mean, don't you?\n\nWe are even more separated from the rest of the Forsaken, &lt;name&gt;. And that is why we must speak further. Find me in the church in Deathknell.",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 892, ["id"] = 3099, ["faction"] = "H", ["x"] = 47, ["y"] = 59},
 	},
 },
 ["The Baroness' Missive"] = {
@@ -5374,24 +4952,6 @@ _addon.data = {
 	},
 	["locations"] = {
 		{["sourceType"] = "quest", ["areaId"] = 9, ["id"] = 751, ["faction"] = "H", ["x"] = 53.6, ["y"] = 48.4},
-	},
-},
-["Verdant Note"] = {
-	["info"] = {["type"] = "item", ["id"] = 9581},
-	["pages"] = {
-		"The spirits came to me in my dreams last night. They told me of your coming, and that it would be my task to aid you. We have much to go over in our short time together--discussions about nature, the spirits, the Earthmother, and even the night elves. But I will save the lessons for your arrival, and I will do all that is in my power to ensure that you are ready for the trials ahead.\n\nMay wisdom guide you. I will be waiting.\n\n-Gart Mistrunner, Druid Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 890, ["id"] = 3094, ["faction"] = "H", ["x"] = 30.5, ["y"] = 50},
-	},
-},
-["Verdant Sigil"] = {
-	["info"] = {["type"] = "item", ["id"] = 9580},
-	["pages"] = {
-		"When word reached me that you were ready, I sent this sigil immediately. All of Cenarius' druids take great satisfaction in seeing our numbers bolster. The spirits even seem to have become stronger with our enhanced presence. In time, and with some patience, hopefully our strength will return to its former grandeur. Find me within Aldrassil when you are ready. I will be your guide as long as you are in Shadowglen.\n\n- Mardant Strongoak, Druid Trainer",
-	},
-	["locations"] = {
-		{["sourceType"] = "quest", ["areaId"] = 888, ["id"] = 3120, ["faction"] = "A", ["x"] = 45.8, ["y"] = 73},
 	},
 },
 ["Weaponization Orders"] = {

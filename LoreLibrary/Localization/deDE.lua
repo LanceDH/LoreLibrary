@@ -26,19 +26,11 @@ _addon.translations = {
 	["q24558"] = "Rückkehr zu Myralion Sonnenfeuer",
 	["q26355"] = "Käpt'n Sanders' versteckter Schatz",
 	["q13831"] = "Besorgniserregende Rezepte",
-	["q24496"] = "Arkane Rune",
 	["q12140"] = "Ein Hoch auf Roanauk!",
 	["q11983"] = "Blutschwur der Horde",
 	["q26640"] = "Unaussprechliche Gräuel",
-	["q31141"] = "Kalligrafiebrief",
-	["q31165"] = "Kalligrafienotiz",
-	["q31156"] = "Kalligrafiepergament",
-	["q31168"] = "Kalligrafiesiegel",
 	["q26691"] = "Worgen in den Wäldern",
 	["q333"] = "Harlan braucht Nachschub",
-	["q3101"] = "Geweihter Brief",
-	["q27015"] = "Geweihte Notiz",
-	["q3107"] = "Geweihte Rune",
 	["q29021"] = "Samophlang",
 	["q11650"] = "Nur noch ein paar Kleinigkeiten...",
 	["q24667"] = "Flammensteinspitze",
@@ -46,19 +38,6 @@ _addon.translations = {
 	["q28096"] = "Beamtenmikado",
 	["q27218"] = "Heimtückische Bewohner der Tiefe",
 	["q8287"] = "Ein teuflischer Plan",
-	["q31150"] = "Elegante Rune",
-	["q31146"] = "Bekritzelte Schriftrolle",
-	["q24494"] = "Machterfüllte Rune",
-	["q3102"] = "Verschlüsselter Brief",
-	["q3088"] = "Verschlüsseltes Pergament",
-	["q3109"] = "Verschlüsselte Rune",
-	["q3096"] = "Verschlüsselte Rolle",
-	["q3118"] = "Verschlüsseltes Siegelzeichen",
-	["q26910"] = "Geätzter Brief",
-	["q3092"] = "Geätzte Notiz",
-	["q3087"] = "Geätztes Pergament",
-	["q3108"] = "Geätzte Rune",
-	["q3117"] = "Geätztes Siegelzeichen",
 	["q27106"] = "Entlarvung eines Schurken",
 	["q38934"] = "Silas' Geheimversteck",
 	["q13139"] = "Im gefrorenen Herzen Nordends",
@@ -68,12 +47,8 @@ _addon.translations = {
 	["q8228"] = "Könnte ich einen Flugzettel für den Angelwettbewerb bekommen?",
 	["q8229"] = "Könnte ich einen Flugzettel für den Angelwettbewerb bekommen?",
 	["q8149"] = "Die Ehrung eines Helden",
-	["q26841"] = "Das verbotene Siegelzeichen",
 	["q184"] = "Brauenwirbels Urkunde",
 	["q9706"] = "Galaens Tagebuch - Das Schicksal von Verteidiger Saruan",
-	["q3104"] = "Glyphenbrief",
-	["q25138"] = "Glyphenpergament",
-	["q3098"] = "Glyphenrolle",
 	["q9821"] = "Verdammnis schmecken",
 	["q107"] = "Nachricht an William",
 	["q10045"] = "Zutaten sammeln",
@@ -81,11 +56,6 @@ _addon.translations = {
 	["q6391"] = "Flug nach Eisenschmiede",
 	["q6385"] = "Doras der Windreitermeister",
 	["q6386"] = "Kehrt nach Klingenhügel zurück",
-	["q3103"] = "Geheiligter Brief",
-	["q27014"] = "Geheiligte Notiz",
-	["q3110"] = "Geheiligte Rune",
-	["q3097"] = "Geheiligte Rolle",
-	["q3119"] = "Geheiligtes Siegelzeichen",
 	["q13751"] = "Schweigt still wie ein Grab!",
 	["q26855"] = "Pilotenrache",
 	["q30499"] = "Kommt zurück!",
@@ -115,17 +85,9 @@ _addon.translations = {
 	["q7161"] = "Flaggenjagd",
 	["q840"] = "Freiwilliger der Horde",
 	["q25696"] = "Sonnenschleiers Exkursionstrupp",
-	["q3093"] = "Mit Runen beschriftete Notiz",
-	["q3089"] = "Mit Runen beschriftetes Pergament",
 	["q31068"] = "Heiliges Rezept",
 	["q32376"] = "Auf ins Tal!",
 	["q291"] = "Die Berichte",
-	["q3100"] = "Einfacher Brief",
-	["q3091"] = "Einfache Notiz",
-	["q2383"] = "Einfaches Pergament",
-	["q3106"] = "Einfache Rune",
-	["q3095"] = "Einfache Rolle",
-	["q3116"] = "Einfaches Siegelzeichen",
 	["q6341"] = "Auf nach Darnassus",
 	["q6342"] = "Ein unerwartetes Geschenk",
 	["q13848"] = "Überbringer schlechter Nachrichten",
@@ -134,10 +96,6 @@ _addon.translations = {
 	["q27244"] = "Der verlorene Bericht",
 	["q1338"] = "Sturmlanzes Bestellung",
 	["q59"] = "Rüstung aus Tuch und aus Leder",
-	["q3105"] = "Besudelter Brief",
-	["q3090"] = "Besudeltes Pergament",
-	["q3115"] = "Besudelte Rune",
-	["q3099"] = "Besudelte Rolle",
 	["q27551"] = "Das Schreiben der Baroness",
 	["q28196"] = "Kampf um das Hügelland",
 	["q123"] = "Der Sammler",
@@ -159,8 +117,6 @@ _addon.translations = {
 	["q24962"] = "Die mitgenommene Schriftrolle",
 	["q9698"] = "Audienz beim Propheten",
 	["q751"] = "Die Überfallene Karawane",
-	["q3094"] = "Tiefgrüne Notiz",
-	["q3120"] = "Tiefgrünes Siegelzeichen",
 	["q35925"] = "Die Gronnstrategie",
 	["q26667"] = "Die gestohlenen Briefe",
 	["q26669"] = "In einer dunklen Ecke",
@@ -2953,12 +2909,6 @@ _addon.translations = {
 			"&lt;Die Notizen des Apothekers wurden mit verkrampfter Hand aufs Papier gekritzelt, und zwischen kindlichen Zeichnungen von Schädeln und Blitzen befinden sich komplexe alchemistische Formeln. Blinzelnd könnt Ihr Teile einer neueren Passage entziffern:&gt;n\n... eine überwältigende Fäulnis, die sich tief ins Gewebe frisst. Äußerst ansteckend, wenn &lt;einige Wörter sind verschmiert&gt; über die Nahrungskette erfolgt. Die heutigen Tests haben bestätigt, dass es nur zum Teil biologischen Ursprungs ist. Faulhuf, mein &lt;unleserlich&gt; Gefährte, der von seiner Rache beseelt und blind ist gegenüber den eher \"konstruktiven\" Verwendungszwecken seiner &lt;ein grünliches Sekret hat den Rest des Absatzes bekleckert.&gt; Die Forschung schreitet langsam voran. Ich hoffe, meine Kollegen in Althalaxx haben mehr Erfolg.",
 		},
 	},
-	["Arcane Rune"] = {
-		["translation"] = "Arkane Rune",
-		["pages"] = {
-			"Jene unter uns, die mit einem behänden Geiste gesegnet sind, jedoch mit einem nicht ganz so behänden Körper, müssen... alternative Methoden der Selbsterhaltung finden. Viele solcher Personen verfolgen eine Laufbahn im Bereiche der Magie.\n\n&lt;Name&gt;, ich habe Euch beobachtet, und Ihr verfügt über einen Verstand gleich einer Stahlfeder. Um jedoch in Zeiten wie diesen gedeihen zu können, muss eine Person wie Ihr die arkanen Künste zu meistern lernen. Und um die arkanen Künste meistern zu können, werdet Ihr Euch mit mir unterhalten müssen.\n\nKommt zu mir nach Ambossar. Es gibt viel zu besprechen.\n\n-Teegli Merrowith",
-		},
-	},
 	["Blood Oath of the Horde"] = {
 		["translation"] = "Blutschwur der Horde",
 		["pages"] = {
@@ -2971,30 +2921,6 @@ _addon.translations = {
 			"Keeshan, wenn Ihr das hier lest, bin ich tot. Meine Position wurde vermutlich kompromittiert.\n\nOrcs begehen unaussprechliche Gräueltaten gegen ihre Gefangenen. Ja, Keeshan, Gefangene. Sie haben Käfige voller Kriegsgefangener. Wenn Ihr dieses Tal in die Luft jagen wollt, müsst Ihr erst die Gefangenen befreien.\n\nSagt meiner Frau, dass ich Sie liebe, und dass sie den verdammten Müll rausbringen soll.\n\n-Brubaker\n\nP.S.: Sie haben Schwarzdrachen.",
 		},
 	},
-	["Calligraphed Letter"] = {
-		["translation"] = "Kalligrafiebrief",
-		["pages"] = {
-			"Ich freue mich, dass Ihr an der Lebensweise der Mönche interessiert seid. Ich komme aus der Ferne, um die Weisheit meines Volkes dem Euren zu vermitteln.\nIch habe mich in der Abtei niedergelassen, um jeden zu unterrichten, der unsere Künste erlernen möchte. Kommt mich besuchen, und ich werde Euch ausbilden.\n\nViele Grüße,\nBao",
-		},
-	},
-	["Calligraphed Note"] = {
-		["translation"] = "Kalligrafienotiz",
-		["pages"] = {
-			"Ich habe Euren Stamm nun schon einige Male besucht und während einige versucht haben, unsere Künste zu erlernen, war niemand dabei, der so vielversprechend war wie Ihr. \n\nBitte trefft mich im Camp Narache. Ich habe so viel von Eurem Stamm gelernt - ich denke, jetzt ist es an der Zeit, sich zu revanchieren.\n\n-Shoyu",
-		},
-	},
-	["Calligraphed Parchment"] = {
-		["translation"] = "Kalligrafiepergament",
-		["pages"] = {
-			"[I came here from afar to learn of your people's ways, and to teach you mine. You do me a great honor by volunteering to learn the ways of the Monk. In time, there is much I will show you, but for now, we must meet for our first lessons. Come, meet me in the Valley of Trials, and we will begin your training.\n\n-Gato]",
-		},
-	},
-	["Calligraphed Sigil"] = {
-		["translation"] = "Kalligrafiesiegel",
-		["pages"] = {
-			"Hallo, &lt;Klasse&gt;. Wie ich mitbekommen habe, interessiert Ihr Euch für die Gebräuche der Mönche. Es wäre mir eine Ehre, mit Eurem Training zu beginnen, da Ihr viel Talent zu haben scheint. Ihr findet mich in Aldrassil, auf den unteren Ebenen.\n\n- Laoxi",
-		},
-	},
 	["Calor's Note"] = {
 		["translation"] = "Calors Notiz",
 		["pages"] = {
@@ -3005,24 +2931,6 @@ _addon.translations = {
 		["translation"] = "Stoffanforderung",
 		["pages"] = {
 			"An die Schneiders,\n\nguten Tag. Ich hoffe, die Geschäfte im Kanaldistrikt laufen gut. Wir hier am Händlerplatz können uns über mangelnde Arbeit jedenfalls nicht beklagen.\n\nWir brauchen dringend neue Strickstoff-Waren, denn unser Vorrat geht zur Neige. Bitte schickt uns schnellstmöglich die übliche Ladung.\n\nGutes Gelingen! Ich hoffe, die Studien Eures Sohnes Thurman schreiten rasch voran,\n\n- Harlan Bagley",
-		},
-	},
-	["Consecrated Letter"] = {
-		["translation"] = "Geweihter Brief",
-		["pages"] = {
-			"Ich hoffe, dieser Brief erreicht Euch bei guter Gesundheit, &lt;Klasse&gt;. Ich sage dies mit großem Stolz, da nicht viele so tiefen Glauben zeigen können, wisset jedoch auch, dass sie zu den Besten der Besten der Beschützer von Azeroth zählen.\n\nVergesst niemals, Euer erster und wichtigster Gedanke sollte stets Eurer Pflicht gelten, die zu bekämpfen, die unserer Welt schaden und Verderbnis in unsere Häuser bringen wollen.\n\nIch bin berechtigt, Euch zu unterweisen, zumindest vorläufig. Wenn Ihr bereit seid, findet Ihr mich in der Abtei von Nordhain.\n\n- Bruder Sammuel, Paladinlehrer",
-		},
-	},
-	["Consecrated Note"] = {
-		["translation"] = "Geweihte Notiz",
-		["pages"] = {
-			"Ich habe Eure Ankunft erwartet, &lt;Sonnenläufer/Sonnenläuferin&gt;. Häuptling Falkenwind höchstpersönlich hat mir von Eurem Interesse an unserem Orden erzählt und ich habe zugestimmt, mit Eurer Ausbildung zu beginnen. Trefft mich bei dem Kreis im Zentrum des Camps Narache, wenn Ihr bereit seid, mit Eurer Ausbildung zu beginnen.\n\nSonnenläufer Helaku",
-		},
-	},
-	["Consecrated Rune"] = {
-		["translation"] = "Geweihte Rune",
-		["pages"] = {
-			"Einige fürchten unsere Art mehr als die Drachen. Einige beneiden uns mehr als selbst die begnadetsten Schmiede. Einige preisen unsere Stärke im Kampf. Andere freuen sich an unserem Glauben. Einige sind einfach nur neidisch, dass wir sie unter den Tisch trinken können! Aber wisset dies, &lt;Klasse&gt;, Ihr seid unter den besten Beschützern von ganz Azeroth. Das Heilige Licht gibt uns so viel Kraft, wie wir es stärken.\n\nIch werde Euch mehr erzählen, wenn Ihr Euch ein wenig mit dem Land vertraut gemacht habt. Ihr findet mich in Ambossar über dem Klamm.\n\n- Bromos Grummler, Paladinlehrer",
 		},
 	},
 	["Control Console Operating Manual"] = {
@@ -3079,84 +2987,6 @@ _addon.translations = {
 			"Tag 15\nUnser Einsatz hat sich bezahlt gemacht. Wir sind das erste Lager, das einen Windstein errichtet hat. Wären die anderen Narren an unserer Seite geblieben, dann hätten wir das Ganze sogar in weniger als einer Woche bewältigt!\n\nMorgen werden wir mit den Ritualen beginnen, die zu der Beschwörung von Baron Kazum selbst gehören. Er wollte als Erster das System testen und wir konnten ihm nicht widersprechen, da er sehr schnell erzürnt.\n\nIch denke, dass er mit uns äußerst zufrieden sein wird.",
 		},
 	},
-	["Elegant Rune"] = {
-		["translation"] = "Elegante Rune",
-		["pages"] = {
-			"[Friend, I am honored that you have chosen to learn the ways of the monk, the art of my people. Your interest heartens me, and allows me to return the hospitality that I have been shown by your kind and generous people here. Come, meet me in Anvilmar, and I will train you in our ways.\n\nYours,\nLo]",
-		},
-	},
-	["Elegant Scroll"] = {
-		["translation"] = "Elegante Schriftrolle",
-		["pages"] = {
-			"Hallo,\n\nich bin Ting die Bauchstarke. Ich stamme aus einem fernen Land.\n\nIch gehöre vielleicht nicht zu den Verlassenen so wie Ihr, aber es ist offensichtlich, dass Ihr sowohl über einen starken Geist als auch über einen starken Körper verfügt. Einige Leute in meiner Heimat glaube nicht, dass ein Mitglied Eures Volkes zum Mönch ausgebildet werden kann, aber ich gebe nicht viel auf Ihre Vorurteile. Kommt zu mir und ich bringe Euch bei, wie man wirklich kämpft!\n\n- Ting die Bauchstarke",
-		},
-	},
-	["Empowered Rune"] = {
-		["translation"] = "Machterfüllte Rune",
-		["pages"] = {
-			"Wisset dies: ein Schamane darf nie nach Macht streben; dies zu tun würde nur den Zorn der Elemente heraufbeschwören, und ein Schamane ohne den Schutz der Elemente ist ein Nichts. Jene, die dem Pfad des Schamanen folgen, dürfen dieses grundlegende Dogma nie vergessen.\n\nEin Schamane jedoch, der sich in einem respektvollen Umgang mit den Elementen bewegt, hält eine Macht inne, der nur wenige gewachsen sind. Solltet Ihr meinen, dass Ihr über die notwendige Bescheidenheit verfügt, dann kommt und besucht mich in Ambossar. Ich werde Euch lehren - gerade so, wie ich es selbst gelehrt worden bin - wie Ihr die Elemente des Feuers, der Erde, des Windes, des Wassers und der Wildnis beherrschen könnt.\n\n~Teo Hammersturm",
-		},
-	},
-	["Encrypted Letter"] = {
-		["translation"] = "Verschlüsselter Brief",
-		["pages"] = {
-			"Ich war noch nie stolzer auf mein Handwerk als in den letzten paar Jahren. Der Bedarf an Auftragsmördern, Spionen und Spähern war noch nie größer. Man würde denken, dass in Kriegszeiten ein höherer Bedarf herrschen würde, aber überraschenderweise stehen wir in Kriegszeiten nicht so gut da wie jetzt - in einer Zeit, in der der Frieden allmählich ins Wanken gerät.\n\nMir wurde gesagt, Ihr wärt in der Gegend und wolltet einige Dinge lernen. Wenn Ihr Zeit habt, sucht mich auf. Ihr findet mich bei den Ställen auf der Rückseite der Abtei.\n\n- Jorik Kerridan, Schurkenlehrer",
-		},
-	},
-	["Encrypted Parchment"] = {
-		["translation"] = "Verschlüsseltes Pergament",
-		["pages"] = {
-			"Ich sende Grüße, &lt;Name&gt;. Ich war tief in Gedanken versunken, als mir einfiel, dass ich Euch schreiben wollte.\n\nIn unserer Kultur werden oft unsere Schamanen als spirituelle Anführer gepriesen, so wie unser großer Kriegshäuptling. Andere denken, dass die Beherrschung von Schwert und Axt ein noch erhabeneres Streben sei. Aber vergesst nie, dass Schlachten - ja, ganze Kriege - mit Hilfe derer, die über speziellere Fertigkeiten verfügen, gewonnen werden. Hierüber möchte ich mit Euch sprechen, &lt;Name&gt;. Ihr findet mich bei den anderen Orcs im Tal der Prüfungen.\n\n- Rwag, Schurkenlehrer",
-		},
-	},
-	["Encrypted Rune"] = {
-		["translation"] = "Verschlüsselte Rune",
-		["pages"] = {
-			"&lt;Bruder/Schwester&gt;, ich hoffe, diese Rune erreicht Euch bei guter Gesundheit. Ich wollte Euch nur kurz wissen lassen, dass Ihr mich in Ambossar über dem Eisklammtal findet. Ich weiß, wie wichtig es ist, dass wir alle zusammenhalten. In diesen Zeiten des bedrohten Friedens wird es immer wichtiger, von unseresgleichen umgeben zu sein. Sucht mich auf, wenn Ihr die Zeit findet. \n\n- Solm Hargrin, Schurkenlehrer",
-		},
-	},
-	["Encrypted Scroll"] = {
-		["translation"] = "Verschlüsselte Rolle",
-		["pages"] = {
-			"Seid nicht so unvorsichtig, meine Worte zu ignorieren, &lt;Name&gt;. Dies ist die Zeit der Unterdrückung und Täuschung in allen Landen... selbst in unserer großartigen Unterstadt. Jeder, der loyal zu Sylvanas steht, arbeitet an der Schaffung einer neuen, von den Verlassenen beherrschten, Ära. Und obgleich wir über keine magischen Fertigkeiten verfügen und unsere Grenzen nicht mit Waffengewalt verteidigen, haben wir unsere eigene Rolle zu spielen.\n\nSucht mich im Gasthaus von Todesend auf. Dort werden wir weiterreden.\n\n- David Trias, Schurkenlehrer",
-		},
-	},
-	["Encrypted Sigil"] = {
-		["translation"] = "Verschlüsseltes Siegelzeichen",
-		["pages"] = {
-			"Sael'ah. Ich hoffe, dieses Siegelzeichen erreicht Euch bei guter Gesundheit. Ich wurde gebeten, Euch meine Dienste anzubieten. Auch ich befinde mich im Laubschattental, in dem großen Baum von Aldrassil, und wollte Euch wissen lassen, dass Ihr, wenn Ihr irgendeine Ausbildung braucht, jederzeit zu mir kommen könnt.\n\nIn diesen unsicheren Zeiten halte ich es für klug, dass sich alle, die sich der Verstohlenheit bedienen, noch enger zusammenschließen. Wie sollten wir sonst Teldrassil und unsere Art des Lebens beschützen können?\n\nSucht mich auf, wenn Ihr könnt.\n\n- Frahun Schattenflüsterer, Schurkenlehrer",
-		},
-	},
-	["Etched Letter"] = {
-		["translation"] = "Geätzter Brief",
-		["pages"] = {
-			"Das Nordhaintal ist ein gefährlicher Ort und ideal für die Überlebenskünste eines Jägers geeignet. Ihr habt mich mit Eurem Beitrag zur Verteidigung des Tals wirklich beeindruckt und ich freue mich darauf, Eure Bekanntschaft zu machen. Bitte haltet vor dem Eingang zur Abtei nach mir Ausschau.",
-		},
-	},
-	["Etched Note"] = {
-		["translation"] = "Geätzte Notiz",
-		["pages"] = {
-			"Mächtige Krieger verteidigen unser Zuhause. Unsere Schamanen führen unsere Geister und zeigen uns die Vergangenheit unserer Vorfahren. Und unsere Druiden helfen uns, den Willen der Erdenmutter zu verstehen.\n\nIhr jedoch seid einer unserer Jäger, und unsere Jäger lernen viele Aspekte dieser verschiedenen Rollen kennen und vereinen sie in einer Person. Ihr werdet feststellen, dass Ihr das Herz unseres Volkes repräsentiert. Einige unseres Stammes werden Euch um Führung bitten, einige um Schutz ersuchen. Es ist meine Pflicht sicherzustellen, dass Ihr dafür bereit seid. Sucht mich im Camp Narache auf.\n\n- Lanka Weitschuss, Jägerlehrer",
-		},
-	},
-	["Etched Parchment"] = {
-		["translation"] = "Geätztes Pergament",
-		["pages"] = {
-			"Ich habe Euch durch das Tal streifen sehen, Kind, mit Eurem schwachen Bogen und dieser schäbigen Rüstung. Ihr erinnert mich an einen jungen Jäger, den ich vor langer Zeit kannte...\n\nWenn Ihr etwas mehr über das Handwerk lernen möchtet, kommt und besucht mich. Der Weg des Jägers kann einsam sein, und es hilft, wenn man dabei Verbündete hat.\n\n- Karranisha, Jägerlehrer",
-		},
-	},
-	["Etched Rune"] = {
-		["translation"] = "Geätzte Rune",
-		["pages"] = {
-			"Zähmer der Wildtiere, meisterlicher Schütze, erprobter Fährtenleser... was wollt Ihr sonst noch in diesem Leben erreichen? Für all dies zusammen muss man äußerst intelligent und sehr geduldig sein.\n\nDer Weg des Jägers ist kein einfacher, so viel ist sicher. Ihr benötigt viel Übung, um auch nur so gut zu werden wie unser Scharfschütze im niedersten Rang. Aber dafür bin ich ja da.\n\nIhr findet mich in Ambossar über dem Eisklammtal. Ich werde Euch erwarten.\n\n- Thorgas Grimson, Jägerlehrer",
-		},
-	},
-	["Etched Sigil"] = {
-		["translation"] = "Geätztes Siegelzeichen",
-		["pages"] = {
-			"Elune ist mit Euch, &lt;Name&gt;. Der Wind flüstert es mir zu und ich bin erfreut, dass ich bald Anteil daran habe, unsere kommende Generation von Jägern zu formen.\n\nWie mir erzählt wurde, seid Ihr Aldrassil sehr verbunden. Wir treffen uns im Inneren des großen Baumes, wenn Ihr Zeit dafür habt.\n\nUnsere Ältesten haben mich mit der Aufgabe betraut, die neuen Jäger auf die kommenden Prüfungen korrekt vorzubereiten. Da Ihr zu den neuesten Schülern zählt, wäre es angebracht, mich aufzusuchen. Bis dahin, gehabt Euch wohl.\n\n- Ayanna Immerlauf, Jägerlehrerin",
-		},
-	},
 	["Evidence Against Samuelson"] = {
 		["translation"] = "Beweise gegen Samuelson",
 		["pages"] = {
@@ -3206,12 +3036,6 @@ _addon.translations = {
 			"Die tragische Geschichte dieses so heiligen Ritters\n\nwird niemals mit seinem gottlosen Tod enden.\n\nWir verehren ihn und danken ihm!\n\nUther wird für immer Ruhm und Licht erfahren!",
 		},
 	},
-	["Forbidden Sigil"] = {
-		["translation"] = "Verbotenes Siegelzeichen",
-		["pages"] = {
-			"Ich hoffe, dieses Siegelzeichen erreicht Euch bei guter Gesundheit, &lt;Name&gt;. Der Erzmagier sagte mir, Ihr seid unterwegs und ich habe sofort Nachricht geschickt.\n\nNach allem, was in den letzten Jahren geschehen ist, um unserem Volk arkane Magie zurückzugewinnen, könnten Euch Kämpfe und Prüfungen bevorstehen. Ich kann bei solchen Dingen behilflich sein. Wenn Ihr bereit seid, sucht mich innerhalb Aldrassils auf der zweiten Ebene auf.\n\n-Rhyanda, Magierlehrerin",
-		},
-	},
 	["Furlbrow's Deed"] = {
 		["translation"] = "Brauenwirbels Urkunde",
 		["pages"] = {
@@ -3226,24 +3050,6 @@ _addon.translations = {
 			"Es erschien mir wie eine Ewigkeit, bis der Verteidiger das Bewusstsein verlor. Die Folter war einfach zu viel, selbst für jemanden wie ihn. Der Brutale - sein Name war Matis, wie ich später herausfand - versuchte Saruan zu wecken, indem er brackiges, verseuchtes Wasser auf seinen geschundenen Körper goss. Doch Saruan rührte sich nicht.",
 			"Ich wollte schreien, doch meinen Lippen entrann nur ein verzweifeltes Seufzen. Unverzüglich bestrafte man mich für diesen Akt der Rebellion. Auf dem Boden liegend sah ich, wie Matis vor Saruans Körper auf und ab schritt. Sein Gesicht zeigte sichtbare Sorge. Er murmelte etwas von einem Wesen, das er Sironas oder Sirona nannte, und dass diese Kreatur ihm das Fleisch von den Knochen brennen würde, falls Saruan durch die Folter den Tod fände.",
 			"Das Wesen Sironas hatte Pläne mit Saruan...\n\n&lt;Das Geschriebene endet abrupt in einer langen Linie aus Tinte. Der Draenei starb während er diese Zeilen schrieb.&gt;",
-		},
-	},
-	["Glyphic Letter"] = {
-		["translation"] = "Glyphenbrief",
-		["pages"] = {
-			"Es gibt vier Regeln für die Magie:\n\n  Magie ist mächtig.\n  Magie führt zu Verderbtheit.\n  Magie macht süchtig.\n  Die Magie derjenigen, die arkane Zauber wirken, zieht die Bewohner des Wirbelnden Nethers an.\n\nDiese Regeln gelten immer. Diese Regeln bestimmen Euer Schicksal, wenn Ihr weiterhin auf dem Weg des Magiers voranschreitet.\n\nSeid Ihr jedoch närrisch genug, diese Warnung zu ignorieren, sucht mich im Bibliotheksflügel der Abtei von Nordhain auf. Ich warte oben auf Euch.\n\n-Khelden Bremen, Magierlehrer",
-		},
-	},
-	["Glyphic Parchment"] = {
-		["translation"] = "Glyphenpergament",
-		["pages"] = {
-			"Die Anderen verstehen uns nicht. Sie tun so, als verstünden sie sich mit uns, aber das tun sie nicht. Selbst die Hexenmeister haben Angst vor uns.\n\nAber das ist in Ordnung, weil wir einander haben. Orcmagier, vereinigt Euch! Ich und Ihr! Acrypha und... wie auch immer Ihr heißt! Ha!\n\nWir werden es ihnen schon zeigen. Besucht mich, und ich vertraue Euch einige der Geheimnisse des Arkanen an, die ich zu beherrschen gelernt habe.",
-		},
-	},
-	["Glyphic Scroll"] = {
-		["translation"] = "Glyphenrolle",
-		["pages"] = {
-			"Die Verderbnis und das Böse, von dem behauptet wird, es gehe einher mit dem Arkanen, ist nichts im Vergleich zu dem Schmerz, den wir bereits zu spüren bekommen haben. Wir sind nicht länger Opfer, &lt;Name&gt;. Wir nehmen unser Schicksal selber in die Hand. Sylvanas hat uns den Weg geebnet - sie hat bewiesen, dass wir einen eigenen Willen haben; dass wir nicht länger die Knechte von diesem Bastard Arthas sind.\n\nSucht mich in der Kirche auf, ich werde Euch weiter unterweisen... so Ihr dies wünscht.\n\n- Isabella, Magierlehrerin",
 		},
 	},
 	["Gordawg's Imprint"] = {
@@ -3275,36 +3081,6 @@ _addon.translations = {
 		["translation"] = "Gryshkas Brief",
 		["pages"] = {
 			"Lieber Grimtak,\n\ndie Steaks, die du mir schicktest, sind köstlich. Schön marmoriert, dick geschnitten und in Ebertalg verpackt. Genau so, wie ich sie mag. Wenn ich sie nachher verzehre und die letzten Fitzelchen Knochen und Knorpel abnage, werde ich an dich denken. Ich werde meine Augen schließen und deine starken, vernarbten Hände vor mir sehen, wie sie hacken und schneiden...\n\nHa! Das erinnert mich an deinen Unfall damals, bei dem du einen Finger verlorst... Oh, Grimtak! Wenn ich an diesen Tag zurückdenke, muss ich kichern wie ein kleines Mädchen.\n\nDu bist so niedlich, wenn du blutest!\n\n-Gryshka",
-		},
-	},
-	["Hallowed Letter"] = {
-		["translation"] = "Geheiligter Brief",
-		["pages"] = {
-			"Eure Verbindung zur Welt und deren Verbindung zu Euch sind unverzichtbar für Euren Erfolg als Priester. Weisheit und Mitgefühl ermöglichen Euch, denen zu helfen, die wirklich Hilfe benötigen. Übereifer und törichte Entscheidungen verhindern nur, dass andere stärker werden, oder richten Schaden an.\n\nWenn Ihr versteht, was dies bedeutet, werdet Ihr neue Fähigkeiten und Zauber benötigen, die Euch weiterhelfen werden. Hier komme ich ins Spiel: Ihr findet mich im Bibliotheksflügel der Abtei von Nordhain, wenn Ihr für die Unterweisung bereit seid.\n\n- Priesterin Anetta, Priesterlehrerin",
-		},
-	},
-	["Hallowed Note"] = {
-		["translation"] = "Geheiligte Notiz",
-		["pages"] = {
-			"Der Weg des Priesters ist ein neuer Weg für unser Volk, aber er baut auf die uralten Traditionen unserer Seher auf. In Euren Lektionen werdet Ihr die Weisheiten der Erdenmutter kennenlernen. Trefft mich beim Kreis im Zentrum des Camps Narache und wir werden mit Euren Lektionen beginnen.\n\nSeherin Rabenfeder",
-		},
-	},
-	["Hallowed Rune"] = {
-		["translation"] = "Geheiligte Rune",
-		["pages"] = {
-			"Das Heilige Licht wärmt unsere Rücken und jeden Tag werden neue Entdeckungen gemacht... dies ist eine aufregende Zeit für die &lt;Söhne/Töchter&gt; von Eisenschmiede. Die Forscherliga macht große Fortschritte bei der Suche nach längst verlorenen Antworten auf noch ältere Fragen. Und jetzt können wir auch Euch zu unseren Getreuen zählen beim Kampf gegen die Troggs und alle anderen Bedrohungen unserer Grenzen.\n\nSucht mich auf, wenn Ihr die Zeit dazu findet. Ich bin auf der Rückseite von Ambossar zu finden, gleich den Hügel hoch. \n\n- Branstock Kahlder, Priesterlehrer",
-		},
-	},
-	["Hallowed Scroll"] = {
-		["translation"] = "Geheiligte Rolle",
-		["pages"] = {
-			"Fühlt Euch gesegnet, &lt;Name&gt;, dass Euer Geist nicht in den Nether gesogen wurde. Fühlt Euch umso mehr gesegnet, da ich entschieden habe, dass Ihr es wert seid, Empfänger dieser von mir verfassten Schriftrolle zu sein.\n\nDie Menschen, die Ihr einst kanntet und die Euch vielleicht sogar etwas bedeutet haben, sind nicht mehr! Ihr müsst lernen, damit für den Rest Eures jetzt unnatürlichen Lebens \"zu leben\". Ich schlage vor, dass Ihr zunächst lernt, damit klarzukommen.\n\nWenn Ihr meint, dass Ihr für die vor Euch liegenden Prüfungen bereit seid, sucht mich in der Kirche von Todesend auf.\n\n- Dunkler Kleriker Duesten, Priesterlehrer",
-		},
-	},
-	["Hallowed Sigil"] = {
-		["translation"] = "Geheiligtes Siegelzeichen",
-		["pages"] = {
-			"Ich hoffe, dieses Siegelzeichen erreicht Euch bei guter Gesundheit, &lt;Name&gt;. Die Geister sagten mir, dass Ihr kommen würdet, und ich habe sofort eine Nachricht gesandt. Ich freue mich darauf, meine Erfahrungen mit Euch zu teilen und bei Eurer Ausbildung behilflich sein zu können, während Ihr Euch darauf vorbereitet, Teldrassil für wichtigere Dinge zu verlassen.\n\nNach all dem, was in den letzten Jahren geschehen ist, können wir viel tun, um den anderen Völkern von Azeroth zu helfen. Wenn Ihr bereit seid, sucht mich in Aldrassil auf der zweiten Ebene auf.\n\n- Shanda, Priesterlehrerin",
 		},
 	},
 	["Hastily Written Note"] = {
@@ -3520,18 +3296,6 @@ _addon.translations = {
 			"An alle Interessierten:\n\nRohan Sonnenschleier, ein hochangesehenes Mitglied der Archäologischen Akademie und Leiter der Sonnenschleierexkursion, sucht kräftige Abenteurer, um ihm bei einer Archäologischen Studie in den südlichen Verwüsteten Landen zu assistieren. Die Arbeit der Teilnehmer wird vergütet.\n\nDie Sonnenschleierexkursion konzentriert sich auf die Beschaffung, Katalogisierung und Erhaltung jeglicher magischer Artefakte, die im Gebiet des Faulenden Waldes gefunden werden. Die Gegend war ehemals als Faulende Narbe bekannt, wurde vor kurzem von einem Worgendruiden erneuert und ist nun mit Bäumen und Unterholz bedeckt. Kontaktiert Rohan oder Clarya Sonnenschleier, um mehr Details zu erfahren.",
 		},
 	},
-	["Rune-Inscribed Note"] = {
-		["translation"] = "Mit Runen beschriftete Notiz",
-		["pages"] = {
-			"Ich grüße Euch, &lt;Klasse&gt;. Der Wind flüsterte mir zu, dass Ihr kommen würdet. Die Erde pries Eure Kraft. Und jetzt künden die alten Geister von den Leistungen, die Ihr noch vollbringen werdet. Unser Volk kann weise und große Anführer brauchen. Für beide Eigenschaften wendet es sich häufig an uns. So Ihr dies wollt, lehre ich Euch mehr von unseren Fertigkeiten.\n\nSucht mich im Camp Narache auf der Hochwolkenebene auf - dann werden wir weiterreden.\n\n- Meela Morgenwandler, Schamanenlehrerin",
-		},
-	},
-	["Rune-Inscribed Parchment"] = {
-		["translation"] = "Mit Runen beschriftetes Pergament",
-		["pages"] = {
-			"Lok'Tar, &lt;Bruder/Schwester&gt;. Die Elemente rufen Euch und bitten mich, Euch den Weg des Schamanen zu zeigen. Die Geister unserer Vorfahren sehen vom Jenseits aus zu und sind von Stolz erfüllt in dem Wissen, dass Ihr unseren Reihen beigetreten seid.\n\nWenn Ihr bereit seid, findet Ihr mich nahe dem Eingang des Höhlenbaus. Dort unterweise ich auch andere Eurer Art. Mögt Ihr bis dahin stets Rückenwind haben.\n\n- Shikrik, Schamanenlehrerin",
-		},
-	},
 	["Scroll of Auspice"] = {
 		["translation"] = "Rolle der Vorzeichen",
 		["pages"] = {
@@ -3552,42 +3316,6 @@ _addon.translations = {
 			"überzeugt, dass sie für uns keine ernsthafte Bedrohung darstellen, solange wir uns eben nicht in ihr Revier begeben. Dies mag eine für die zwergische Bevölkerung unangenehme Situation sein, aber in Ermangelung militärischer Ressourcen sollten wir die völlige Vernichtung der Trolle vielleicht einstweilen zurückstellen und uns vielmehr auf die Bedrohung durch die Troggs und die Dunkeleisenzwerge konzentrieren.\n\nAnbei auch ein Bericht meines Bruders Grelin über Ambossar.\n\nGezeichnet\nSenir Weißbart",
 			"Bericht zur Lage der Frostmähnentrolle im Gebiet des Eisklammstals\n\nVorgelegt von Grelin Weißbart, Sondergesandter des Senats\n\nNach eingehendem Studium der Bewegungen der Frostmähnentrolle im Gebiet um das Eisklammtal kann ich nun sagen, dass sie für die Zwergensiedlungen in dem Gebiet keine große Bedrohung darstellen. Mit ein wenig mehr Unterstützung durch die Armee können wir dieser Bedrohung leicht Herr werden. Mit Hilfe der bereits im",
 			"Eisklammtal stationierten Gebirgsjäger und Söldner (die aus Mitteln bezahlt werden, die der Senat vor meiner Entsendung bereitgestellt hat) kann das Problem meiner Überzeugung nach in kurzer Zeit gelöst werden. \n\nIch habe die Genehmigung von König Bronzebart, alle notwendigen Maßnahmen einzuleiten.",
-		},
-	},
-	["Simple Letter"] = {
-		["translation"] = "Einfacher Brief",
-		["pages"] = {
-			"Sagt mir, &lt;Klasse&gt;, habt Ihr jemals einen Orc schreien gehört? Oder vielleicht Euer Zuhause vor Gnollen geschützt, die Euch an die Kehle wollen? Ja, das klingt brutal, nicht wahr?\n\nTja, Ihr werdet meine Hilfe brauchen, wenn Ihr Eure Lieben schützen wollt. Ihr findet mich in der Abtei von Nordhain. Mein Wissen ist nicht billig, wenn Ihr jedoch erfahren genug seid, kann ich Euch eine ganze Reihe von Kampfstilen und Tricks beibringen, die Euch helfen werden, Gefahren von Sturmwind und Umgebung abzuwenden.\n\nLlane Beshere, Kriegerlehrer",
-		},
-	},
-	["Simple Note"] = {
-		["translation"] = "Einfache Notiz",
-		["pages"] = {
-			"Viele Stämme behaupten, es sei eine Gabe, Magie wirken oder mit unseren Vorfahren sprechen zu können, Ihr sollt jedoch wissen, &lt;Klasse&gt;, dass auch Ihr begabt seid. Einige haben nicht die Kraft in den Armen, mächtige Waffen zu schwingen. Einige haben nicht die Fertigkeit, den Schlag eines Auftragsmörders zu parieren oder den körperlichen Angriffen eines arkanen Zauberers standzuhalten, Ihr jedoch schon. Ihr seid stark. Und ich werde Euch helfen, noch stärker zu werden. Ihr findet mich im Camp Narache.\n\n- Harutt Donnerhorn, Kriegerlehrer",
-		},
-	},
-	["Simple Parchment"] = {
-		["translation"] = "Einfaches Pergament",
-		["pages"] = {
-			"Throm-ka, Krieger. Ihr braucht mir gar nicht mit Geschichten von Euren ach so großen Taten zu kommen. Das ist Schnee von gestern. In letzter Zeit ein paar Menschen umgebracht? Nicht besonders viele, jede Wette! Ihr lasst nach. Ohne eine anständige Herausforderung verweichlicht Ihr.\n\nIch brauche Hilfe und, ganz egal, was die anderen Kriecher sagen, Euch mangelt es an der Ausbildung, die ich Euch geben kann. Falls das irgendwann in Euren dicken Schädel einsickert, warte ich unter dem Vordach vor dem Höhlenbau auf Euch.\n\n- Frang, Kriegerlehrer",
-		},
-	},
-	["Simple Rune"] = {
-		["translation"] = "Einfache Rune",
-		["pages"] = {
-			"Beim Barte Magnis, es gibt so viel zu bereden, &lt;Name&gt;, und wir haben nur so wenig Zeit! Sucht mich so schnell wie möglich in Ambossar über dem Eisklammtal auf. Wir müssen unverzüglich anfangen.\n\nEs gibt so viele Dinge, von denen ich Euch berichten kann, damit Ihr Euch eilt, aber mit denen haben wir nichts zu schaffen... jedenfalls im Moment. Worauf wir uns konzentrieren müssen, ist das Halten der Axt, das Gewicht unserer Rüstung und der Geruch unseres Schweißes, der uns im Kampf gegen unsere Feinde über die Stirn läuft. Damit beginnen wir.\n\n- Thran Khorman, Kriegerlehrer",
-		},
-	},
-	["Simple Scroll"] = {
-		["translation"] = "Einfache Rolle",
-		["pages"] = {
-			"Viele Eurer Art wenden sich dem Arkanen und Göttlichen zu, um so Kraft zu gewinnen, aber wir wissen es besser, nicht wahr, &lt;Klasse&gt;? Wir wissen, dass unsere heiligen Symbole unsere Waffen sind, unser Zauberbuch unser Schild und unsere Weisheit unser Panzer.\n\nSelbst im Untod sind wir stark und wir werden nur noch stärker.\n\nIhr findet mich im Gasthaus von Todesend. Dort werde ich mit Euch diese Angelegenheiten und weitere Dinge erörtern.\n\n- Dannal Stern, Kriegerlehrer",
-		},
-	},
-	["Simple Sigil"] = {
-		["translation"] = "Einfaches Siegelzeichen",
-		["pages"] = {
-			"Ich hoffe, mein Siegelzeichen erreicht Euch bei guter Gesundheit, &lt;Klasse&gt;. Ich schreibe Euch, weil unser Volk diejenigen braucht, die gut mit der Klinge, der Gleve und allen anderen Waffen umzugehen verstehen. Es ist so viel geschehen, seit unser Volk sich wieder unter die anderen Völker von Azeroth gemischt hat, dass wir heute Beschützer aller Art dringender denn je brauchen.\n\nUnd da kommt Ihr ins Spiel. Ich würde Euch gern mehr sagen, aber dies sollte wohl besser im persönlichen Gespräch geschehen. Ihr findet mich in Aldrassil... auf den unteren Ebenen.\n\n- Alyissia, Kriegerlehrerin",
 		},
 	},
 	["Sister Aquinne's Note"] = {
@@ -3622,30 +3350,6 @@ _addon.translations = {
 		["translation"] = "Rüstungsgutschein der Armee von Sturmwind",
 		["pages"] = {
 			"Dieser Rüstungsgutschein gilt für ein Teil einer Leder- oder Stoffrüstung bei den Roderwalds im Holzfällerlager des Osttals.",
-		},
-	},
-	["Tainted Letter"] = {
-		["translation"] = "Besudelter Brief",
-		["pages"] = {
-			"Allzu häufig verunsichern Menschen wie die Anhänger des Heiligen Lichts diejenigen, die sich für die wahre Macht interessieren, derart, dass sie aus Angst nicht wagen, die Formen des Arkanen näher zu untersuchen - doch nicht alle Dinge außerhalb dieser Welt sind böse. Nicht alle Wesenheiten wollen andere beherrschen oder unterjochen. Wenn Ihr mächtig genug seid, können diese Wesenheiten auch zu Eurem Gefolge werden.\n\nDies würde ich gern näher mit Euch besprechen. Ihr findet mich auf dem Friedhof rechts von der Abtei.\n\n- Drusilla La Salle, Hexenmeisterlehrerin",
-		},
-	},
-	["Tainted Parchment"] = {
-		["translation"] = "Besudeltes Pergament",
-		["pages"] = {
-			"Ich schreibe diese Nachricht mit der mächtigsten Tinte, die ich erschaffen kann, &lt;Name&gt;. Sie verflucht augenblicklich jeden, der es wagt, diese Nachricht zu lesen - mit Ausnahme von Euch. So mächtig bin ich. Ich beschwöre Dämonen aus dem Wirbelnden Nether nur so zu meinem Vergnügen. Ich verseuche meine Feinde im Schlaf und auf dem Schlachtfeld. Und nun habt auch Ihr die Macht, die meiner Art innewohnt, gesehen. Meine Brüder sind davon sehr angetan.\n\nSucht mich vor dem Höhlenbau auf, sobald Ihr Euch mit den Gegebenheiten vertraut gemacht habt. Ich möchte mit Euch über wichtige Angelegenheiten reden.\n\n- Nartok, Hexenmeisterlehrer",
-		},
-	},
-	["Tainted Rune"] = {
-		["translation"] = "Besudelte Rune",
-		["pages"] = {
-			"ACHTUNG:\n\nKein Wort! Seht Euch nicht um! Jemand könnte Euch jetzt gerade beobachten.\n\nIch heiße Saripal Schmauchbräu, &lt;Name&gt;. Ich unterweise diejenigen, die Wissen und größere Macht aus... den jenseitigen Welten suchen. Ich wurde gebeten, diskret mit Euch Kontakt aufzunehmen und Euch darüber zu informieren, dass ich Euch in einer echten Form der Magie weiterbilden kann.\n\nWenn Ihr könnt, sucht mich auf der Rückseite von Ambossar auf.\n\n- Saripal Schmauchbräu, Hexenmeisterlehrer",
-		},
-	},
-	["Tainted Scroll"] = {
-		["translation"] = "Besudelte Rolle",
-		["pages"] = {
-			"Eine schreckliche Zwickmühle, in der wir uns befinden, nicht wahr, &lt;Name&gt;? Verseucht vom Elenden Prinzen. Verfemt und verachtet von unseren Lieben. Dank der schönen Sylvanas haben wir endlich unseren eigenen Willen, was jedoch bringt uns das? Ein Sklave eines anderen Meisters ist noch immer ein Sklave, sage ich.\n\nWas aber, wenn wir die Meister wären? Ja, Ihr wisst, was ich meine, nicht wahr?\n\nWir sind sogar noch mehr getrennt vom Rest der Verlassenen, &lt;Name&gt;. Und darüber müssen wir uns näher unterhalten. Ihr findet mich in der Kirche von Todesend.",
 		},
 	},
 	["The Baroness' Missive"] = {
@@ -3838,18 +3542,6 @@ _addon.translations = {
 		["pages"] = {
 			"Vorsteher Zischelspross, anbei eine von Präsident Razdunk genehmigte Liste der von Euch angeforderten Ausrüstung.\n\nEr hat mich zudem gebeten, Euch noch einmal in aller Deutlichkeit an die rechtmäßigen Ansprüche der Venture Company an Geschäften in ganz Kalimdor zu erinnern. Unsere Bohrungen und Bergbauaußenposten im Brachland haben sich als gewinnbringend erwiesen, doch warten wir noch immer auf zufrieden stellende Produktionszahlen aus Mulgore, Eurem Zuständigkeitsbereich.\n\nDer Beirat hat durchaus Verständnis für die Schwierigkeiten bei der Durchführung",
 			"eines Großprojekts so nah an der Grenze zur Heimat der Tauren. Aber ich habe nicht den Eindruck, als stellten diese ein größeres Hindernis für unseren langfristigen Geschäftsplan in der Gegend dar.\n\nWir sind erfreut zu hören, dass der Bergbau in den mineralienreichen Ebenen von Mulgore begonnen hat. Deshalb hat der Beirat Eurer Bitte um Ausrüstung entsprochen. Wir haben den Eindruck, dass Mulgore nicht nur Bergbau, sondern auch viel Holz zu bieten hat, deshalb werden wir Euch mehrere unserer neuesten Schredder sowie Material zum Bau einer Mühle zur Verfügung stellen.",
-		},
-	},
-	["Verdant Note"] = {
-		["translation"] = "Tiefgrüne Notiz",
-		["pages"] = {
-			"Die Geister erschienen letzte Nacht in meinen Träumen. Sie sprachen von Eurem Kommen und dass es meine Aufgabe sein würde, Euch zu helfen. Wir haben ein großes Pensum in sehr geringer Zeit abzudecken - Diskussionen über die Natur, die Geister, die Erdenmutter und sogar die Nachtelfen. Aber ich werde mit den Lektionen bis zu Eurer Ankunft warten und alles in meiner Macht Stehende tun, um Euch auf die Prüfungen, die vor Euch liegen, vorzubereiten.\n\nMöge Euch die Weisheit leiten. Ich werde Euch erwarten.\n\n- Gart Nebelläufer, Druidenlehrer",
-		},
-	},
-	["Verdant Sigil"] = {
-		["translation"] = "Tiefgrünes Siegelzeichen",
-		["pages"] = {
-			"Als ich erfuhr, dass Ihr bereit seid, sandte ich sofort dieses Siegelzeichen. Alle Druiden von Cenarius sehen mit großer Genugtuung, dass unsere Zahl anwächst. Selbst die Geister scheinen durch unsere verstärkte Präsenz mächtiger geworden zu sein. Es ist zu hoffen, dass wir mit der Zeit und genügend Geduld zu alter Stärke zurückkehren werden. Ihr findet mich in der Nähe der Spitze von Aldrassil, wenn Ihr bereit seid. Ich werde Euch anleiten, solange Ihr Euch im Laubschattental aufhaltet.\n\n- Mardant Starkeiche, Druidenlehrer",
 		},
 	},
 	["Weaponization Orders"] = {

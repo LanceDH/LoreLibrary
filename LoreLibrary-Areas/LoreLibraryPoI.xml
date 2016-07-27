@@ -337,61 +337,11 @@
 					<BarTexture file="Interface\TARGETINGFRAME\BarFill2"/>
 					<BarColor r="0.03125" g="0.85" b="0.0" />
 				</StatusBar>
-					<!--
-					<Frame parentKey="progressBar">
-						<Size x="128" y="6"/>
-						<Anchors>
-							<Anchor point="BOTTOM" y="3"/>
-						</Anchors>
-						<Layers>
-							<Layer level="BARCKGROUND">
-								<Texture parentKey="bg">
-									<Color r="0" g="0" b="0"/>
-								</Texture>
-							</Layer>
-							<Layer level="ARTWORK">
-								<Texture parentKey="progress" file="Interface\TARGETINGFRAME\BarFill2">
-									<Size x="128" y="6"/>
-									<Anchors>
-										<Anchor point="LEFT"/>
-									</Anchors>
-									<Color r="0.2" g="0.8" b="0.2"/>
-								</Texture>
-							</Layer>
-							<Layer level="OVERLAY">
-								<Texture parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorderHighlight">
-									<Anchors>
-										<Anchor point="TOPLEFT" x="-3" y="4"/>
-										<Anchor point="BOTTOMRIGHT" x="3" y="-4"/>
-									</Anchors>
-								</Texture>
-							</Layer>
-							<Layer level="OVERLAY" textureSubLevel="2">
-								<Texture parentKey="decoLeft" file="Interface\Garrison\GarrisonBuildingUI">
-									<Size x="8" y="8"/>
-									<Anchors>
-										<Anchor point="BOTTOMRIGHT" relativeKey="$parent.border" relativePoint="BOTTOMLEFT" x="2" y="3"/>
-									</Anchors>
-									<TexCoords left="0.5078125" right="0.5380859375" top="0.26171875" bottom="0.31640625"/>
-									<Color r="0.8" g="0.8" b="0.8"/>
-								</Texture>
-								<Texture parentKey="decoRight" file="Interface\Garrison\GarrisonBuildingUI">
-									<Size x="8" y="8"/>
-									<Anchors>
-										<Anchor point="BOTTOMLEFT" relativeKey="$parent.border" relativePoint="BOTTOMRIGHT" x="-2" y="3"/>
-									</Anchors>
-									<TexCoords left="0.5380859375" right="0.5078125" top="0.26171875" bottom="0.31640625"/>
-									<Color r="0.8" g="0.8" b="0.8"/>
-								</Texture>
-							</Layer>
-						</Layers>
-					</Frame>
-					-->
 				</Frames>
 			</Frame>
 		
 			<Frame name="$parentInsetRight" inherits="LOLIB_InsetTemplate">
-				<Size x="414" y="220"/>
+				<Size x="414" y="200"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="-43" x="-6"/>
 				</Anchors>

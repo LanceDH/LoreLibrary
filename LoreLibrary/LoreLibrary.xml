@@ -13,6 +13,7 @@
 	<Include file="libs\DropDownMenu\UIDropDownMenuTemplates.xml"/>
 	<Script file="Libs\DropDownMenu\UIDropDownMenu.lua"/>
 	
+	<Script file="LoreLibrary.lua"/>
 	
 	<Button name="LoreLibraryUnlockPopup" virtual="true">
 		<Size>

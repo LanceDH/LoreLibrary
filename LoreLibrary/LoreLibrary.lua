@@ -4,8 +4,18 @@ _addon.localizeds = {};
 
 local _L = _addon.locals;
 
-LoreLibraryCore.modules = {};
-local _modules = LoreLibraryCore.modules;
+-- Making globals for certain locals to use in XML
+LOLIB_TAB_LORE =				_L["S_TAB_LORE"];
+LOLIB_TAB_POI =					_L["S_TAB_POI"];
+LOLIB_LIBRARY_ADDED =			_L["S_LIBRARY_ADDED"];
+LOLIB_NEW = 					_L["S_NEW"];
+LOLIB_DAILY_SUGGESTIONS =		_L["S_DAILY_SUGGESTIONS"];
+LOLIB_LOSTPAGE_UNLOCK_INFO =	_L["S_LOSTPAGE_UNLOCK_INFO"];
+LOLIB_SUGGESTION_COMPLETE =		_L["S_SUGGESTION_COMPLETE"];
+LOLIB_MARK_WORLDMAP =			_L["S_MARK_WORLDMAP"];
+LOLIB_ZONE_COMPLETE =			_L["S_ZONE_COMPLETE"];
+LOLIB_TITLE_DOCUMENT =			_L["S_TITLE_DOCUMENT"];
+
 local LoreLibrary = LibStub("AceAddon-3.0"):NewAddon("LoreLibrary");
 
 local _LDB = LibStub("LibDataBroker-1.1"):NewDataObject(_addonName, {
@@ -142,11 +152,11 @@ function _addon:GetSuggestionTimeUntilDays(timestamp, days)
 	local t = date("!*t", sec);
 	
 	if t.day > 1 then
-		text = t.day-1 .. " days";
+		text = string.format(_L["F_TIME"], t.day-1, (t.day-1 > 1 and _L["S_TIME_DAYS"] or _L["S_TIME_DAY"]));
 	elseif t.hour >= 1 then
-		text = t.hour+1 .. " hours";
+		text = string.format(_L["F_TIME"], t.hour+1, _L["S_TIME_HOURS"]);
 	else
-		text = t.min+1 .. (t.min+1 > 1 and " minutes" or " minute");
+		text = string.format(_L["F_TIME"], t.min+1, (t.min+1 > 1 and _L["S_TIME_MINS"] or _L["S_TIME_MIN"]));
 	end
 	
 	return sec, text
@@ -848,6 +858,14 @@ function _addon:UpdateSuggestions()
 		button.remove:Hide();
 		button.new:Hide();
 	end
+	
+	-- If a suggestion no longer exists in the database, remove it
+	for i = #_suggestions, 1, -1 do
+		if not _data[_suggestions[i].key] then
+			table.remove(_suggestions, i);
+		end
+	end
+	
 	for k, suggestion in ipairs(_suggestions) do
 		if k > _L["N_MAX_SUGGESTIONS"] then break; end -- There's more than 3? VAC!
 		local lore = _data[suggestion.key];
