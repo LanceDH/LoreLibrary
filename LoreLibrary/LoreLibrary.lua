@@ -45,6 +45,7 @@ local _defaults = {
 			version = "",
 			showMapOverlay = true,
 			showTooltipText = true,
+			mapOverviewAnchor = "BOTTOMLEFT",
 			poI = {
 				sortByContinent = true;
 			},
@@ -111,6 +112,7 @@ local _achievementsToCheck = {
 		,6857 -- Heart of the Mantid Swarm
 		,6856 -- Ballad of Liu Lang
 		,7230 -- Legend of the Brewfathers
+		,9071 -- Inspector Gadgetzan
 		,11065 -- It All Makes Sense Now
 	}
 
@@ -181,6 +183,31 @@ local function SortLoreUnlockFirst(list)
 		end
 		return a.favorite ;
 	end);
+end
+
+function _addon:AnchorMapOverview(anchor)
+	local frameToMove = LoreLibraryMap.overview;
+	if not (anchor == "TOPLEFT" or anchor == "TOPRIGHT" or anchor == "BOTTOMLEFT" or anchor == "BOTTOMRIGHT")then return; end
+	_addon.options.mapOverviewAnchor = anchor;
+
+	frameToMove:ClearAllPoints();
+	local x = -200;
+	local y = 10;
+	if (anchor == "TOPLEFT") then
+		x = 10;
+		y = (WorldMapLevelDropDown:IsShown() and -40 or -10);
+	elseif (anchor == "TOPRIGHT") then
+		x = -10;
+		y = -60;
+	elseif (anchor == "BOTTOMLEFT") then
+		x = 10;
+		y = 10;
+	elseif (anchor == "BOTTOMRIGHT") then
+		x = -10;
+		y = 55;
+	end
+	
+	frameToMove:SetPoint(anchor, LoreLibraryMap, anchor, x, y);
 end
 
 function _addon:UpdateMapOverviewLore(currentProgress, maxProgress)
@@ -1517,6 +1544,18 @@ function LoreLibrary:GetUnusedMapPin()
 	return pin;
 end
 
+local function MoveMapOverview()
+	if (WorldMapDetailTile9:IsMouseOver()) then 
+		_addon:AnchorMapOverview("BOTTOMLEFT", drag)
+	elseif (WorldMapDetailTile1:IsMouseOver()) then 
+		_addon:AnchorMapOverview("TOPLEFT", drag)
+	elseif (WorldMapDetailTile4:IsMouseOver()) then 
+		_addon:AnchorMapOverview("TOPRIGHT", drag)
+	elseif (WorldMapDetailTile12:IsMouseOver()) then 
+		_addon:AnchorMapOverview("BOTTOMRIGHT", drag)
+	end
+end
+
 function _addon:InitMap()
 	LoreLibraryMap.pins = {};
 	LoreLibraryMap.pinsEnabled = true;
@@ -1537,6 +1576,22 @@ function _addon:InitMap()
 					_addon:StopPinAnimations();
 				end)	
 	
+	LoreLibraryMap.overview:SetScript("OnDragStart", function(self) 
+			self:SetScript("OnUpdate", function(drag) 
+					drag:Show();
+					MoveMapOverview(false);
+				end);
+		end );
+	
+	LoreLibraryMap.overview:SetScript("OnDragStop", function(self)
+			LoreLibraryMap.overview:SetScript("OnUpdate", nil);
+			MoveMapOverview();
+		end)
+	
+	hooksecurefunc("WorldMap_ClearTextures", function() 
+			LoreLibraryMap.overview:SetScript("OnUpdate", nil);
+		end)
+		
 	Lib_UIDropDownMenu_Initialize(LolibOptionDropDown, function(self, level) _addon:InitMapOptionsDropdown(self, level) end, "MENU");
 	-- LolibOptionDropDown.initialize = function(self, level) _addon:InitMapOptionsDropdown(self, level) end
 	
@@ -1723,7 +1778,7 @@ function LoreLibrary:OnEnable()
 	_addon:UpdateBookDisplay(LoreLibraryList.filteredList[1]);
 	
 	_addon:UpdateLostPageCount();
-
+	_addon:AnchorMapOverview(_addon.options.mapOverviewAnchor);
 end
 
 ----------
@@ -1742,6 +1797,7 @@ function _addon.events:WORLD_MAP_UPDATE(loaded_addon)
 	if WorldMapFrame:IsShown() then
 		LoreLibrary:UpdateMapPins();
 	end
+	_addon:AnchorMapOverview(_addon.options.mapOverviewAnchor);
 end
 
 function _addon.events:ITEM_TEXT_BEGIN(loaded_addon)

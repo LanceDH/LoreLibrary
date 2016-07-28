@@ -447,6 +447,7 @@ function _addon:UpdatePointDetailScroller()
 	local point = LoreLibraryPoI.point;
 	LOLIB_PoIDetailScrollChild.text:SetText("");
 	if point then
+		LoreLibraryPoIInsetDetail.titleCard.title:SetText(point.title);
 		if point.unlocked then
 			LOLIB_PoIDetailScrollChild.text:SetText(point.lore == "" and _L["S_AREA_NOLORE"] or point.lore .. "\n\n");
 			LoreLibraryPoIInsetDetail.mapButton:Hide();

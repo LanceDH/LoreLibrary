@@ -985,14 +985,79 @@
 			<Anchor point="BOTTOMRIGHT"/>
 		</Anchors>
 		<Frames>
-			<Frame name="$parentOverview" parentKey="overview">
+			<Frame name="$parentOverview" parentKey="overview" movable="true" enableMouse="true">
 				<Size x="140" y="90"/>
 				<Anchors>
 					<Anchor point="BOTTOMLEFT" x="10" y="10"/>
 				</Anchors>
 				<Layers>
 					<Layer level="BACKGROUND">
+					<!--
 						<Texture parentKey="bg" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" />
+						!-->
+						<Texture parentKey="bgTL" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Size x="16" y="16" />
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+							</Anchors>
+							<TexCoords left="0" right="0.25" top="0" bottom="0.25" />
+						</Texture>
+						<Texture parentKey="bgTR" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Size x="16" y="16" />
+							<Anchors>
+								<Anchor point="TOPRIGHT"/>
+							</Anchors>
+							<TexCoords left="0.75" right="1" top="0" bottom="0.25" />
+						</Texture>
+						<Texture parentKey="bgT" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.bgTL" relativePoint="TOPRIGHT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgTR" relativePoint="BOTTOMLEFT"/>
+							</Anchors>
+							<TexCoords left="0.25" right="0.75" top="0" bottom="0.25" />
+						</Texture>
+						<Texture parentKey="bgBL" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Size x="16" y="16" />
+							<Anchors>
+								<Anchor point="BOTTOMLEFT"/>
+							</Anchors>
+							<TexCoords left="0" right="0.25" top="0.75" bottom="1" />
+						</Texture>
+						<Texture parentKey="bgBR" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Size x="16" y="16" />
+							<Anchors>
+								<Anchor point="BOTTOMRIGHT"/>
+							</Anchors>
+							<TexCoords left="0.75" right="1" top="0.75" bottom="1" />
+						</Texture>
+						<Texture parentKey="bgB" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.bgBL" relativePoint="TOPRIGHT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgBR" relativePoint="BOTTOMLEFT"/>
+							</Anchors>
+							<TexCoords left="0.25" right="0.75" top="0.75" bottom="1" />
+						</Texture>
+						<Texture parentKey="bgL" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.bgTL" relativePoint="BOTTOMLEFT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgBL" relativePoint="TOPRIGHT"/>
+							</Anchors>
+							<TexCoords left="0" right="0.25" top="0.25" bottom="0.75" />
+						</Texture>
+						<Texture parentKey="bgR" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.bgTR" relativePoint="BOTTOMLEFT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgBR" relativePoint="TOPRIGHT"/>
+							</Anchors>
+							<TexCoords left="0.75" right="1" top="0.25" bottom="0.75" />
+						</Texture>
+						<Texture parentKey="bgC" file="Interface\GLUES\Models\UI_DeathKnight\Dark_shadow" >
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.bgTL" relativePoint="BOTTOMRIGHT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgBR" relativePoint="TOPLEFT"/>
+							</Anchors>
+							<TexCoords left="0.25" right="0.75" top="0.25" bottom="0.75" />
+						</Texture>
 					</Layer>
 				</Layers>
 				<Frames>
@@ -1007,6 +1072,12 @@
 						</Anchors>
 					</Frame>
 				</Frames>
+				<Scripts>
+					<OnLoad>
+						self:SetClampedToScreen(true);
+						self:RegisterForDrag("LeftButton");
+					</OnLoad>
+				</Scripts>
 			</Frame>
 			
 			<StatusBar name="$parentProgressBar" inherits="LOLIB_ProgressBarTemplate" parentKey="progressBar">

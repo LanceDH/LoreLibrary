@@ -341,7 +341,7 @@
 			</Frame>
 		
 			<Frame name="$parentInsetRight" inherits="LOLIB_InsetTemplate">
-				<Size x="414" y="200"/>
+				<Size x="414" y="170"/>
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" y="-43" x="-6"/>
 				</Anchors>
@@ -371,7 +371,7 @@
 			<Frame name="$parentInsetDetail" inherits="LOLIB_InsetTemplate_Light">
 				<Size x="414"/>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="$parentInsetRight" relativePoint="BOTTOM" y="-15"/>
+					<Anchor point="TOP" relativeTo="$parentInsetRight" relativePoint="BOTTOM" y="-25"/>
 					<Anchor point="BOTTOM" relativePoint="BOTTOM" y="6"/>
 				</Anchors>
 				<Layers>
@@ -386,7 +386,7 @@
 						</Texture>
 					</Layer>
 				</Layers>
-				
+
 				<Frames>
 					<Button parentKey="mapButton" hidden="true">
 						<Size x="180" y="48"/>
@@ -418,6 +418,60 @@
 						</Layers>
 						<HighlightTexture atlas="PetList-ButtonHighlight"/>
 					</Button>
+					<Frame parentKey="titleCard">
+						<Size x="180" y="25" />
+						<Anchors>
+							<Anchor point="CENTER" relativePoint="TOP" y="-2"/>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+							<!--
+								<Texture name="$parentTitleBG" atlas="_BattleSlotTitle-BG" horizTile="true">
+									
+									<Anchors>
+										<Anchor point="TOPLEFT"/>
+										<Anchor point="BOTTOMRIGHT"/>
+									</Anchors>
+								</Texture>
+								-->
+								<Texture name="$parentTitleBG" file="Interface\AUCTIONFRAME\UI-AUCTIONFRAME-BROWSE-TOPRIGHT">
+									<Anchors>
+										<Anchor point="TOPLEFT"/>
+										<Anchor point="BOTTOMRIGHT"/>
+									</Anchors>
+									<TexCoords left="0" right="0.9" top="0.3515625" bottom="0.15" horizTile="true"/>
+									
+								</Texture>
+
+							</Layer>
+							<Layer level="ARTWORK">
+								<FontString name="$parentTitle" inherits="GameFontWhite" maxLines="1" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="This is text right here">
+									<Size x="160" y="20" />
+									<Anchors>
+										<Anchor point="CENTER" relativeTo="$parentTitleBG" />
+									</Anchors>
+								</FontString>
+								<Texture name="$parentBorder" atlas="_BattleSlotTitle-Mid" horizTile="true" desaturated="false">
+									<Anchors>
+										<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parentTitleBG" x="7" y="4"/>
+										<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$parentTitleBG" x="-7" y="-4"/>
+									</Anchors>
+								</Texture>
+								<Texture name="$parentCapLeft" atlas="PetJournal-BattleSlotTitle-Left" desaturated="false">
+									<Size x="32" y="33" />
+									<Anchors>
+										<Anchor point="RIGHT" relativePoint="LEFT" relativeTo="$parentTitleBG" x="7" y="0"/>
+									</Anchors>
+								</Texture>
+								<Texture name="$parentCapRight" atlas="PetJournal-BattleSlotTitle-Right" desaturated="false">
+									<Size x="32" y="33" />
+									<Anchors>
+										<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentTitleBG" x="-7" y="0"/>
+									</Anchors>
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
 				</Frames>
 			</Frame>
 			

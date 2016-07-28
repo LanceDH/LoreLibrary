@@ -1419,7 +1419,7 @@ _addon.data = {
 		"<HTML><BODY><H1 align=\"center\">HORDE MILITARY RANKS</H1><BR/><P align=\"center\">OFFICERS</P><BR/><P align=\"center\">High Warlord</P><P align=\"center\">Warlord</P><P align=\"center\">General</P><P align=\"center\">Lieutenant General</P><P align=\"center\">Champion</P><P align=\"center\">Centurion</P><P align=\"center\">Legionnaire</P><P align=\"center\">Blood Guard</P><P align=\"center\">Stone Guard</P><BR/><P align=\"center\">ENLISTED</P><BR/><P align=\"center\">First Sergeant</P><P align=\"center\">Senior Sergeant</P><P align=\"center\">Sergeant</P><P align=\"center\">Grunt</P><P align=\"center\">Scout</P></BODY></HTML>",
 	},
 	["locations"] = {
-		{["sourceType"] = "object", ["areaId"] = 321, ["id"] = 1637, ["level"] = 1, ["x"] = 40.5, ["y"] = 68.4},
+		{["sourceType"] = "unavailable"},
 	},
 },
 ["Hozen Maturity"] = {
