@@ -1074,7 +1074,6 @@
 				</Frames>
 				<Scripts>
 					<OnLoad>
-						self:SetClampedToScreen(true);
 						self:RegisterForDrag("LeftButton");
 					</OnLoad>
 				</Scripts>

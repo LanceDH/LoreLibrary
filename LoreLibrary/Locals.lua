@@ -64,8 +64,8 @@ _addon.locals = {
 	,["S_SUGGESTION_EMPTY2"] =			"There is nothing left to suggest."
 	,["S_SUGGESTION_REMOVE"] =			"Remove this suggestion to make room for a new one."
 	,["S_TAB_LORE"] =					"Documents"
-	,["S_TAB_POI"] =					"Areas"
-	,["S_TITLE_AREA"] =					"Area Library"
+	,["S_TAB_POI"] =					"Locations"
+	,["S_TITLE_AREA"] =					"Location Library"
 	,["S_TITLE_DOCUMENT"] =				"Document Library"
 	,["S_UNAVAILABLE_DETAIL"] =			"This lore no longer has any\n available sources."
 	,["S_UNLOCK_UNTIL_NEXT"] =			"Unlocks until next:"
@@ -96,6 +96,9 @@ _addon.locals = {
 	,["N_MAX_SUGGESTIONS"] =			3
 	,["N_OVERVIEW_MARGIN"] =			15
 	,["N_PAGETEXT_WIDTH"] =				280
+	,["N_POI_INSETHEIGHT"] =			170
+	
+	,["T_MOUNT_FACTION_TEXTURES"] = 	{[0] = "MountJournalIcons-Horde",	[1] = "MountJournalIcons-Alliance"}
 
 };
 

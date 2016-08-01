@@ -72,7 +72,7 @@ function _addon:OpenToPoIPoint(point, zoneId)
 	if not point or not zoneId then return; end
 	local zone = self:GetZoneById(zoneId);
 	LoreLibraryPoI.zone = zone;
-	LoreLibraryPoI.titleCard.title:SetText(zone.name);
+	
 	LoreLibraryPoI.point = point;
 	self:UpdatePointList();
 	self:UpdateZoneList();
@@ -243,14 +243,16 @@ function _addon:ZoneIsCompleted(zone)
 	return true;
 end
 
-function _addon:UpdatePoITitleCardProgress()
-
+function _addon:UpdatePoITitleCard()
 
 	local zone = LoreLibraryPoI.zone;
 	local points = _addon.PoI["points"];
 	local bar = LoreLibraryPoI.titleCard.progressBar;
+	local loreButton = LoreLibraryPoI.titleCard.loreButton;
 	local total = #zone.pointIds;
 	local collected = 0;
+	LoreLibraryPoI.titleCard.title:SetText(zone.name);
+	
 	for k, pointId in ipairs(zone.pointIds)do
 		if (points[pointId].unlocked) then collected = collected + 1; end
 	end
@@ -259,8 +261,10 @@ function _addon:UpdatePoITitleCardProgress()
 	bar:SetValue(collected);
 	if (collected == total) then
 		bar:SetStatusBarColor(1, 0.82, 0, 1);
+		loreButton:SetEnabled(true);
 	else
 		bar:SetStatusBarColor(0.2, 0.8, 0.2);
+		loreButton:SetEnabled(false);
 	end
 end
 	
@@ -364,6 +368,7 @@ function _addon:UpdateZoneList()
 		button.title:SetJustifyH("LEFT");
 		button.bgTitle:Hide();
 		button.selectedTexture:Hide();
+		button.factionIcon:Hide()
 		if ( displayIndex <= #list) then
 			local zone = list[displayIndex];
 			button.title:SetText(zone.name);
@@ -383,11 +388,31 @@ function _addon:UpdateZoneList()
 				if (self:ZoneIsCompleted(zone)) then
 					button.completeIcon:Show();
 				end
+				
+				if (zone.faction) then
+					button.factionIcon:Show()
+					button.factionIcon:SetAtlas(_L["T_MOUNT_FACTION_TEXTURES"][zone.faction]);
+				end
+				
 			end
 		end
 	end
 	
 	HybridScrollFrame_Update(scrollFrame, #list * _L["N_LISTHEIGHT_ZONE"], scrollFrame:GetHeight());
+end
+
+function _addon:ResetZoneOverview()
+	LoreLibraryPoI.scrollFramePoints:Show();
+	LoreLibraryPoIInsetRight:Show();
+	LoreLibraryPoIInsetRight:SetHeight(_L["N_POI_INSETHEIGHT"]);
+	LoreLibraryPoIInsetDetail.mapButton:Show();
+	LoreLibraryPoIInsetDetail.titleCard:Show();
+	LoreLibraryPoIInsetDetail.backButton:Hide();
+	LoreLibraryPoIInsetDetail:SetPoint("TOP", LoreLibraryPoIInsetRight, "BOTTOM", 0, -25);
+	LoreLibraryPoIInsetDetail.bg:SetTexCoord(0, 0.953125, 0.44, 0.96875)
+	--<TexCoords left="0" right="0.953125" top="0.2" bottom="0.8"/>
+	--<Anchor point="TOP" relativeTo="$parentInsetRight" relativePoint="BOTTOM" y="-25"/>
+	_addon:UpdatePointDetailScroller();
 end
 
 function _addon:UpdatePointList()
@@ -398,7 +423,7 @@ function _addon:UpdatePointList()
 	local buttons = scrollFrame.buttons;
 	local points = _addon.PoI["points"];
 	local extra = 0;
-	
+	_addon:ResetZoneOverview();
 	if buttons == nil then return; end
 	
 	local list = zone.pointIds;
@@ -438,7 +463,25 @@ function _addon:UpdatePointList()
 		end
 	end
 	
-	self:UpdatePoITitleCardProgress();
+	self:UpdatePoITitleCard();
+end
+
+function _addon:ShowZoneLore()
+	if not LoreLibraryCore:IsShown() then return; end
+	local scrollFrame = LoreLibraryPoIDetailScroll;
+	local zone = LoreLibraryPoI.zone;
+	LoreLibraryPoI.scrollFramePoints:Hide();
+	LoreLibraryPoIInsetRight:Hide();
+	LoreLibraryPoIInsetRight:SetHeight(0.1);
+	LoreLibraryPoIInsetDetail.mapButton:Hide();
+	LoreLibraryPoIInsetDetail.titleCard:Hide();
+	LoreLibraryPoIInsetDetail.backButton:Show();
+	LoreLibraryPoIInsetDetail:SetPoint("TOP", LoreLibraryPoIInsetRight, "BOTTOM", 0, -10);
+	LoreLibraryPoIInsetDetail.bg:SetTexCoord(0, 0.953125, 0.1, 0.96875)
+	if zone then
+		LoreLibraryPoIInsetDetail.titleCard.title:SetText(zone.name);
+		LOLIB_PoIDetailScrollChild.text:SetText(zone.lore and zone.lore or "");
+	end
 end
 
 function _addon:UpdatePointDetailScroller()
@@ -446,6 +489,7 @@ function _addon:UpdatePointDetailScroller()
 	local scrollFrame = LoreLibraryPoIDetailScroll;
 	local point = LoreLibraryPoI.point;
 	LOLIB_PoIDetailScrollChild.text:SetText("");
+	scrollFrame.ScrollBar:SetValue(0);
 	if point then
 		LoreLibraryPoIInsetDetail.titleCard.title:SetText(point.title);
 		if point.unlocked then
@@ -490,8 +534,18 @@ function _addon:InitPoIFrame()
 	
 	-- add zoneid to points for later reference, also less manual work
 	for k, zone in ipairs(zones) do
-		zone.pointIds = zone.pointIds and zone.pointIds or {};
+		zone.pointIds = {};
+		local count = 1;
+		while points[(zone.id * 100) + count] do
+			table.insert(zone.pointIds, (zone.id * 100) + count);
+			count = count + 1;
+		end
+		
+		--zone.pointIds = zone.pointIds and zone.pointIds or {};
+	
 		zone.name = GetMapNameByID(zone.id);
+		
+		
 		
 		self:SortZonePointsByName(zone);
 	end
@@ -505,6 +559,8 @@ function _addon:InitPoIFrame()
 	
 	LoreLibraryPoI.searchBox:SetScript("OnTextChanged", function(self) _addon:ZoneSearchChanged(self) end);
 	LoreLibraryPoIInsetDetail.mapButton:SetScript("OnClick", function() _addon:ShowMapPoI(); end)
+	LoreLibraryPoIInsetDetail.backButton:SetScript("OnClick", function() _addon:ResetZoneOverview(); end)
+	LoreLibraryPoI.titleCard.loreButton:SetScript("OnClick", function() _addon:ShowZoneLore(); end)
 
 	-- Zone Scrollframe
 	LoreLibraryPoIZoneList.scrollBar.doNotHide = true;
@@ -650,7 +706,9 @@ function _addon:FrameUpdate(elapsed)
 		
 		output = output .. "\nZone: " .. self.updateFrame.zoneId .. "   Level: " .. mLevel .."\n# Points: " .. #self.updateFrame.relevantPoints;
 		for k, point in ipairs(self.updateFrame.relevantPoints) do
-			local distance = math.sqrt(math.pow(self.updateFrame.playerX - (point.x / 100), 2) + math.pow(self.updateFrame.playerY - (point.y / 100), 2));
+			-- get aspect ratio of the map, otherwise the region around the point is a oval
+			local aspectRatio = 0.44;
+			local distance = math.sqrt(math.pow(self.updateFrame.playerX - (point.x / 100), 2)/aspectRatio + math.pow(self.updateFrame.playerY - (point.y / 100), 2));
 			local pLevel = (point.level and point.level or 1);
 			
 			local scaledReqDistance = (point.scale and point.scale * _L["N_DISTANCE_POINT_UNLOCK"] or _L["N_DISTANCE_POINT_UNLOCK"]);
@@ -664,7 +722,6 @@ function _addon:FrameUpdate(elapsed)
 				_addon:UpdateAreaProgressBar();
 				LoreLibrary:UpdateMapPins();
 			end
-			--
 			if (distance < scaledReqDistance) then
 				output = output .. "\n" .. point.title;
 			end

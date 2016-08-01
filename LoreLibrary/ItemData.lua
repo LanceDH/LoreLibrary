@@ -1065,7 +1065,7 @@ _addon.data = {
 		"This anvil is the property of Jordan Stilwell - Please do NOT use!\n\n- Jordan",
 	},
 	["locations"] = {
-		{["sourceType"] = "object", ["areaId"] = 27, ["id"] = 1, ["level"] = 0, ["x"] = 52.6, ["y"] = 37},
+		{["sourceType"] = "object", ["areaId"] = 27, ["id"] = 1, ["level"] = 0, ["x"] = 59.7, ["y"] = 35.3},
 	},
 },
 ["Exhumer's Journal"] = {

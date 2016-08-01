@@ -1545,13 +1545,13 @@ function LoreLibrary:GetUnusedMapPin()
 end
 
 local function MoveMapOverview()
-	if (WorldMapDetailTile9:IsMouseOver()) then 
+	if (WorldMapDetailTile9:IsMouseOver(100)) then 
 		_addon:AnchorMapOverview("BOTTOMLEFT", drag)
 	elseif (WorldMapDetailTile1:IsMouseOver()) then 
 		_addon:AnchorMapOverview("TOPLEFT", drag)
 	elseif (WorldMapDetailTile4:IsMouseOver()) then 
 		_addon:AnchorMapOverview("TOPRIGHT", drag)
-	elseif (WorldMapDetailTile12:IsMouseOver()) then 
+	elseif (WorldMapDetailTile12:IsMouseOver(100)) then 
 		_addon:AnchorMapOverview("BOTTOMRIGHT", drag)
 	end
 end
@@ -1864,13 +1864,11 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	SortLore();
 
 	_addon:InitCoreFrame();
-	-- if () then
-		-- local poi = LoreLibrary:GetModule("PoI", true);
-		-- poi:Init()
-	-- end
-	LoadAddOn("LoreLibrary-Areas")
-	_addon:UpdateTabs()
 	
+	-- Load modules, only has effect when the addon is enabled
+	LoadAddOn("LoreLibrary-Areas")
+	
+	_addon:UpdateTabs()
 	_addon:InitMap();
 
 	self:UnregisterEvent("ADDON_LOADED");
@@ -1891,6 +1889,7 @@ local function slashcmd(msg, editbox)
 		ShowUIPanel(LOLIBDEBUGTHING);
 		return;
 	end
+	
 	LoreLibrary:ToggleCoreFrame();
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd

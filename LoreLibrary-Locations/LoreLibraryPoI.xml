@@ -40,6 +40,14 @@
 					<Color r="1" g="1" b="1" a="0.3"/>
 				</Texture>
 			</Layer>
+			<Layer level="BORDER">
+				<Texture parentKey="factionIcon">
+                    <Anchors>
+                        <Anchor point="BOTTOMRIGHT" x="-3" y="1"/>
+                    </Anchors>
+                    <Size x="35" y="28"/>
+                </Texture>
+			</Layer>
 			<Layer level="ARTWORK">
 				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title">
 					<Anchors>
@@ -256,6 +264,48 @@
 		<Frames>
 			<StatusBar parentKey="progressBar" inherits="LOLIB_LibraryProgressTemplate" />
 			
+			<Frame name="$parentAlphaTag">
+				<Size x="90" y="30"/>
+				<Anchors>
+					<Anchor point="LEFT" relativeKey="$parent.progressBar" relativePoint="RIGHT" x="25" y="3"/>
+				</Anchors>
+				<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background-Dark" edgeFile="Interface\FriendsFrame\UI-Toast-Border" tile="true">
+					<EdgeSize val="8"/>
+					<TileSize val="32"/>
+					<BackgroundInsets left="5" right="5" top="5" bottom="5"/>
+				</Backdrop>
+				<Layers>
+						
+					<Layer level="ARTWORK">
+						<Texture parentKey="icon" file="Interface\DialogFrame\UI-Dialog-Icon-AlertNew">
+							<Size x="16" y="16" />
+							<Anchors>
+								<Anchor point="LEFT" x="8"/>
+							</Anchors>
+						</Texture>
+						<FontString name="$parentText" inherits="QuestTitleFont" justifyH="CENTER" parentKey="text" text="Alpha">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="25" y="-5"/>
+								<Anchor point="BOTTOMRIGHT" x="-5" y="6"/>
+							</Anchors>
+							<Color r="1" g="1" b="1"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT", 0, -100);
+						GameTooltip:SetText("Alpha build");
+						GameTooltip:AddLine("You are running an alpha build where this module is still in development.", 1, 1, 1, true);
+						GameTooltip:AddLine("Some parts may still be incomplete and progress may be lost with future updates.", 1, 1, 1, true);
+						GameTooltip:Show();
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Frame>
+			
 			<Frame name="$parentTitleCard" parentKey="titleCard">
 				<Size x="414" y="50"/>
 				<Anchors>
@@ -289,13 +339,44 @@
 						<FontString name="$parentTitle" inherits="QuestFont_Shadow_Huge" maxLines="1" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="title">
 							<Size y="40"/>
 							<Anchors>
-								<Anchor point="LEFT" x="15"/>
-								<Anchor point="RIGHT" x="-15"/>
+								<Anchor point="LEFT" x="50"/>
+								<Anchor point="RIGHT" x="-50"/>
 							</Anchors>
 						</FontString>
 					</Layer>
 				</Layers>
 				<Frames>
+				
+				<Button parentKey="loreButton">
+					<Size x="30" y="30"/>
+					<Anchors>
+						<Anchor point="RIGHT" x="-35"/>
+					</Anchors>
+					<NormalTexture file="Interface\Garrison\GarrisonMissionTypeIcons" alphaMode="ADD">
+						<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
+						<Color r="1" g="1" b="1" a="0.9" />
+					</NormalTexture>
+					<DisabledTexture file="Interface\Garrison\GarrisonMissionTypeIcons" desaturated="true">
+						<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
+					</DisabledTexture>
+					<HighlightTexture file="Interface\Garrison\GarrisonMissionTypeIcons" alphaMode="ADD">
+						<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
+						<Color r="1" g="1" b="1" a="0.5" />
+					</HighlightTexture >
+					<PushedTexture file="Interface\Garrison\GarrisonMissionTypeIcons" alphaMode="ADD">
+						<Size x="30" y="30"/>
+						<Anchors>
+							<Anchor point="CENTER" x="-1" y="-1"/>
+						</Anchors>
+						<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
+						<Color r="1" g="1" b="1" a="0.9" />
+					</PushedTexture>
+					<Scripts>
+						<OnLoad>
+							self:SetEnabled(false);
+						</OnLoad>
+					</Scripts>
+				</Button>
 				<StatusBar parentKey="progressBar">
 					<Size x="128" y="6"/>
 					<Anchors>
@@ -376,18 +457,65 @@
 				</Anchors>
 				<Layers>
 					<Layer level="BACKGROUND">
-						<Texture name="$parentParchmentBg" file="Interface\ItemTextFrame\Book">
+						<Texture name="$parentParchmentBg" file="Interface\ItemTextFrame\Book" parentKey="bg">
 							<Anchors>
 								<Anchor point="TOPLEFT" x="4" y="-4"/>
 								<Anchor point="BOTTOMRIGHT" x="-4" y="3"/>
 							</Anchors>
-							<TexCoords left="0" right="0.953125" top="0.2" bottom="0.8"/>
+							<TexCoords left="0" right="0.953125" top="0.44" bottom="0.96875"/>
 							
 						</Texture>
 					</Layer>
 				</Layers>
 
 				<Frames>
+					<Button parentKey="backButton" hidden="true">
+						<Size y="10"/>
+						<Anchors>
+							<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" x="2" y="-2"/>
+							<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" y="-2"/>
+						</Anchors>
+						<HitRectInsets>
+							<AbsInset left="0" right="0" top="0" bottom="-2"/>
+						</HitRectInsets>
+						<NormalTexture file="Interface\DialogFrame\UI-DialogBox-Background-Dark">
+							<Color r="1" g="1" b="1" a="0.7" />
+							<TexCoords left="0" right="1" top="0" bottom="0.7"/>
+						</NormalTexture>
+						<!--
+						<PushedTexture file="Interface\COMMON\dark-goldframe-button-pressed">
+							<Color r="1" g="1" b="1" a="0.7" />
+							<TexCoords left="0" right="1" top="0" bottom="0.7"/>
+						</PushedTexture>
+						-->
+						
+						<Layers>
+							<Layer level="ARTWORK" textureSubLevel="1">
+								<Texture file="Interface\BUTTONS\Arrow-Down-Up">
+									<Size x="30" y="6"/>
+									<Anchors>
+										<Anchor point="CENTER" y="-2"/>
+									</Anchors>
+									<TexCoords left="0" right="0.9" top="0" bottom="0.5"/>
+									<Color r="1" g="1" b="1" a="0.6" />
+								</Texture>
+							</Layer>
+							<Layer level="HIGHLIGHT" alphaMode="ADD">
+								<Texture file="Interface\FriendsFrame\UI-FriendsFrame-HighlightBar">
+									<Color r="1" g="1" b="1" a="0.1" />
+								</Texture>
+								<Texture file="Interface\BUTTONS\Arrow-Down-Up">
+									<Size x="30" y="6"/>
+									<Anchors>
+										<Anchor point="CENTER" y="-2"/>
+									</Anchors>
+									<TexCoords left="0" right="0.9" top="0" bottom="0.5"/>
+									<Color r="1" g="1" b="1" a="0.5" />
+								</Texture>
+							</Layer>
+						</Layers>
+					</Button>
+				
 					<Button parentKey="mapButton" hidden="true">
 						<Size x="180" y="48"/>
 						<Anchors>
@@ -419,7 +547,7 @@
 						<HighlightTexture atlas="PetList-ButtonHighlight"/>
 					</Button>
 					<Frame parentKey="titleCard">
-						<Size x="180" y="25" />
+						<Size x="200" y="25" />
 						<Anchors>
 							<Anchor point="CENTER" relativePoint="TOP" y="-2"/>
 						</Anchors>
@@ -446,7 +574,7 @@
 							</Layer>
 							<Layer level="ARTWORK">
 								<FontString name="$parentTitle" inherits="GameFontWhite" maxLines="1" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="This is text right here">
-									<Size x="160" y="20" />
+									<Size x="180" y="20" />
 									<Anchors>
 										<Anchor point="CENTER" relativeTo="$parentTitleBG" />
 									</Anchors>

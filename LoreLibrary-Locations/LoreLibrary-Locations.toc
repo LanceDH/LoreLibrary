@@ -1,6 +1,6 @@
 ﻿## Interface: 70000
-## Title: LoreLibrary-Areas
-## Notes: LoreLibrary module: Discover areas in the world.
+## Title: LoreLibrary-Locations
+## Notes: LoreLibrary module: Learn about locations in the world.
 ## Author: LanceDH
 ## Dependencies: LoreLibrary
 ## LoadOnDemand: 1

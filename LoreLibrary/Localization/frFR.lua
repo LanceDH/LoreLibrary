@@ -1215,7 +1215,7 @@ _addon.translations = {
 		},
 	},
 	["Kurdran Wildhammer"] = {
-		["translation"] = "Kurdran Marteau-hardi",
+		["translation"] = "Kurdran Marteau-Hardi",
 		["pages"] = {
 			"Kurdran Marteau-Hardi\n\nChasseur de dragons réputé. Maître des griffons de Nid-de-l’Aigle. Commandant des chevaucheurs de griffons attachés à l’expédition de l’Alliance qui a marché sur le monde des orcs, Draenor. Présumé mort.\n\nNous entendrons l’appel de Ciel’ree dans le vent. Nous entendrons le tonnerre de ton marteau résonner dans les montagnes. Chevauche hardiment dans l’après-vie, frère ! Les salles de nos ancêtres t’attendent.\n\n- Haut-thane Falstad Marteau-hardi",
 		},
