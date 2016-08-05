@@ -1866,7 +1866,7 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	_addon:InitCoreFrame();
 	
 	-- Load modules, only has effect when the addon is enabled
-	LoadAddOn("LoreLibrary-Areas")
+	LoadAddOn("LoreLibrary-Locations")
 	
 	_addon:UpdateTabs()
 	_addon:InitMap();

@@ -655,11 +655,11 @@
 						<Size x="10" y="10"/>
 						<Frames>
 							<SimpleHTML parentKey="text">
-								<Size x="340" y="200"/>
+								<Size x="320" y="200"/>
 								<Anchors>
-									<Anchor point="TOPLEFT" x="20" y="-15"/>
+									<Anchor point="TOPLEFT" x="30" y="-15"/>
 								</Anchors>
-								<FontString inherits="GameFontBlack"/>
+								<FontString inherits="GameFontBlack" spacing="1"/>
 							</SimpleHTML>
 						</Frames>
 					</Frame>
