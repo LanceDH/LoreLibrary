@@ -1,0 +1,12 @@
+﻿## Interface: 70000
+## Title: LoreLibrary-NPC
+## Notes: LoreLibrary module: Learn about lore characters.
+## Author: LanceDH
+## Dependencies: LoreLibrary
+## LoadOnDemand: 1
+
+NPCData.lua
+LoreLibraryNPC.xml
+LoreLibraryNPC.lua
+
+

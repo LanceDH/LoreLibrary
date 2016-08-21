@@ -7,6 +7,7 @@ local _L = _addon.locals;
 -- Making globals for certain locals to use in XML
 LOLIB_TAB_LORE =				_L["S_TAB_LORE"];
 LOLIB_TAB_POI =					_L["S_TAB_POI"];
+LOLIB_TAB_NPC =					_L["S_TAB_NPC"];
 LOLIB_LIBRARY_ADDED =			_L["S_LIBRARY_ADDED"];
 LOLIB_NEW = 					_L["S_NEW"];
 LOLIB_DAILY_SUGGESTIONS =		_L["S_DAILY_SUGGESTIONS"];
@@ -49,6 +50,9 @@ local _defaults = {
 			poI = {
 				sortByContinent = true;
 			},
+			NPC = {
+				sortByFaction = true;
+			},
 			minimap = {
 				hide = false,
 			},
@@ -79,6 +83,7 @@ local _filter = {
 					["vendor"] = 		{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_VENDOR"]},
 					["chest"] = 		{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_CHEST"]},
 					["unavailable"] = 	{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_UNAVAILABLE"]},
+					["unknown"] = 		{["enabled"] = true, ["text"] = _L["S_SOURCETYPE_UNKNOWN"]},
 				}
 			}
 			
@@ -87,6 +92,11 @@ local _mapOptions = {
 		["showCollected"] = false,
 	}
 
+local _moduleTabs = {
+		[2] = {["name"] = "PoI", ["button"] = "tabPoI"}
+		,[3] = {["name"] = "NPC", ["button"] = "tabNPC"}
+	}
+	
 local _localization = GetLocale();
 local _data = {}
 local _suggestions = {["timeLast"] = 0};
@@ -125,6 +135,7 @@ local _sourceData = {
 				["chest"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Chest", ["tooltip"] = _L["S_SOURCEINFO_CHEST"]},
 				["quest"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Quest", ["tooltip"] = _L["S_SOURCEINFO_QUEST"]},
 				["unavailable"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Unavailable", ["tooltip"] = _L["S_SOURCEINFO_UNAVAILABLE"]},
+				["unknown"] = {["icon"] = "Interface/AddOns/LoreLibrary/Images/icon_Unknown", ["tooltip"] = _L["S_SOURCEINFO_UNKNOWN"]},
 	}
 
 ----------
@@ -759,7 +770,8 @@ function _addon:UpdateBookDisplay(lore)
 				_addon:ShowLostPages();
 			elseif location.sourceType == "quest" then
 				text = string.format(_L["F_SOURCE"], location.source, location.area);
-				
+			elseif location.sourceType == "unknown" then
+			    text = _L["S_UNKNOWN_DETAIL"];
 			end
 			
 			if (location.faction == "A") then
@@ -1007,13 +1019,17 @@ function _addon:UpdateSelectedTab(self)
 	local selected = PanelTemplates_GetSelectedTab(self);
 
 	HideUIPanel(LoreLibraryList);
-	HideUIPanel(LoreLibraryPoI:Hide());
+	HideUIPanel(LoreLibraryPoI);
+	HideUIPanel(LoreLibraryNPC);
 	if selected == 1 then
 		ShowUIPanel(LoreLibraryList);
 		self.TitleText:SetText(_L["S_TITLE_DOCUMENT"]);
 	elseif selected == 2 then
 		ShowUIPanel(LoreLibraryPoI);
 		self.TitleText:SetText(_L["S_TITLE_AREA"]);
+	elseif selected == 3 then
+		ShowUIPanel(LoreLibraryNPC);
+		self.TitleText:SetText(_L["S_TITLE_NPC"]);
 	end
 end
 
@@ -1363,15 +1379,25 @@ function _addon:InitSugestionFrame()
 end
 
 function _addon:UpdateTabs()
-	PanelTemplates_ShowTab(LoreLibraryCore, 1)
-	PanelTemplates_ShowTab(LoreLibraryCore, 2)
+	PanelTemplates_HideTab(LoreLibraryCore, 1)
+	PanelTemplates_HideTab(LoreLibraryCore, 2)
+	PanelTemplates_HideTab(LoreLibraryCore, 3)
 	
-	if not (LoreLibrary:GetModule("PoI", true)) then
-		PanelTemplates_HideTab(LoreLibraryCore, 1)
+	local prevTab = LoreLibraryCore.tabLore;
+	
+	for k, v in LoreLibrary:IterateModules() do
+		PanelTemplates_ShowTab(LoreLibraryCore, 1)
+		break;
 	end
 	
-	if not (LoreLibrary:GetModule("PoI", true)) then
-		PanelTemplates_HideTab(LoreLibraryCore, 2)
+	for k, data in pairs(_moduleTabs) do
+		if LoreLibrary:GetModule(data.name, true) then
+			local tab = LoreLibraryCore[data.button];
+			tab:ClearAllPoints();
+			tab:SetPoint("LEFT", prevTab, "RIGHT", -16, 0);
+			PanelTemplates_ShowTab(LoreLibraryCore, k)
+			prevTab = tab;
+		end
 	end
 end
 
@@ -1402,7 +1428,7 @@ function _addon:InitCoreFrame()
 	SetPortraitToTexture(LoreLibraryCorePortrait, "Interface\\ICONS\\INV_Misc_Book_07");
 	UIPanelWindows["LoreLibraryCore"] = { area = "left", pushable = 4 }
 	
-	PanelTemplates_SetNumTabs(LoreLibraryCore, 2);
+	PanelTemplates_SetNumTabs(LoreLibraryCore, 3);
 	PanelTemplates_SetTab(LoreLibraryCore, 1);
 	
 	self:UpdateFilteredLoreList();
@@ -1867,6 +1893,7 @@ function _addon.events:ADDON_LOADED(loaded_addon)
 	
 	-- Load modules, only has effect when the addon is enabled
 	LoadAddOn("LoreLibrary-Locations")
+	LoadAddOn("LoreLibrary-NPC")
 	
 	_addon:UpdateTabs()
 	_addon:InitMap();
@@ -1889,7 +1916,7 @@ local function slashcmd(msg, editbox)
 		ShowUIPanel(LOLIBDEBUGTHING);
 		return;
 	end
-	
+
 	LoreLibrary:ToggleCoreFrame();
 end
 SlashCmdList["LOLIBSLASH"] = slashcmd

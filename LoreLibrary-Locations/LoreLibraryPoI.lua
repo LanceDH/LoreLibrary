@@ -68,6 +68,38 @@ function LOLIB_ListPoint_OnClick(self, button)
 	
 end
 
+function LOLIB_PoITabOnClick(self, button)
+	local id = self:GetID();
+	_addon:ResetTabs();
+	if id == 1 then -- PoI
+		_addon:ResetZoneOverview();
+	elseif id == 2 then -- Zone
+		_addon:ShowZoneLore();
+	else 
+		print("Invalid tab id");
+		return;
+	end
+	
+	PlaySound("igAbiliityPageTurn");
+end
+
+function _addon:ResetTabs()
+	LoreLibraryPoIInsetDetail.tabPoints.selected:Hide();
+	LoreLibraryPoIInsetDetail.tabPoints.unselected:Show();
+	LoreLibraryPoIInsetDetail.tabPoints:UnlockHighlight();
+	LoreLibraryPoIInsetDetail.tabZone.selected:Hide();
+	LoreLibraryPoIInsetDetail.tabZone.unselected:Show();
+	LoreLibraryPoIInsetDetail.tabZone:UnlockHighlight();
+	
+	if self:ZoneIsCompleted(LoreLibraryPoI.zone) then
+		LoreLibraryPoIInsetDetail.tabZone:Enable();
+		LoreLibraryPoIInsetDetail.tabZone.unselected:SetDesaturated(false);
+	else
+		LoreLibraryPoIInsetDetail.tabZone:Disable();
+		LoreLibraryPoIInsetDetail.tabZone.unselected:SetDesaturated(true);
+	end
+end
+
 function _addon:OpenToPoIPoint(point, zoneId)
 	if not point or not zoneId then return; end
 	local zone = self:GetZoneById(zoneId);
@@ -261,10 +293,8 @@ function _addon:UpdatePoITitleCard()
 	bar:SetValue(collected);
 	if (collected == total) then
 		bar:SetStatusBarColor(1, 0.82, 0, 1);
-		loreButton:SetEnabled(true);
 	else
 		bar:SetStatusBarColor(0.2, 0.8, 0.2);
-		loreButton:SetEnabled(false);
 	end
 end
 	
@@ -402,16 +432,18 @@ function _addon:UpdateZoneList()
 end
 
 function _addon:ResetZoneOverview()
+	_addon:ResetTabs();
 	LoreLibraryPoI.scrollFramePoints:Show();
 	LoreLibraryPoIInsetRight:Show();
 	LoreLibraryPoIInsetRight:SetHeight(_L["N_POI_INSETHEIGHT"]);
+	LoreLibraryPoIInsetDetail.tabPoints.selected:Show();
+	LoreLibraryPoIInsetDetail.tabPoints.unselected:Hide();
+	LoreLibraryPoIInsetDetail.tabPoints:LockHighlight();
 	LoreLibraryPoIInsetDetail.mapButton:Show();
 	LoreLibraryPoIInsetDetail.titleCard:Show();
-	LoreLibraryPoIInsetDetail.backButton:Hide();
 	LoreLibraryPoIInsetDetail:SetPoint("TOP", LoreLibraryPoIInsetRight, "BOTTOM", 0, -25);
 	LoreLibraryPoIInsetDetail.bg:SetTexCoord(0, 0.953125, 0.44, 0.96875)
-	--<TexCoords left="0" right="0.953125" top="0.2" bottom="0.8"/>
-	--<Anchor point="TOP" relativeTo="$parentInsetRight" relativePoint="BOTTOM" y="-25"/>
+
 	_addon:UpdatePointDetailScroller();
 end
 
@@ -434,20 +466,39 @@ function _addon:UpdatePointList()
 		button.selectedTexture:Hide();
 		button:Show();
 		button:Disable();
+		button.iconEye:Hide();
+		button.iconLore:Hide();
+		button.iconDungeon:Hide();
 		if ( displayIndex <= #list) then
 			local point = points[list[displayIndex]];
 			assert(point, zone.name .. " has non-existing pointId " .. list[displayIndex]);
 			button:Enable();
 			button.point = point;
-			button.icon:Show();
+			--button.icon:Show();
 			
 			button.title:SetText(point.title);
 			button.title:SetFontObject((point.unlocked) and "GameFontNormal" or "GameFontDisable");
 			button.icon:SetDesaturated(not point.unlocked);
+			button.iconLore.icon:SetDesaturated(not point.unlocked);
+			button.iconEye.icon:SetDesaturated(not point.unlocked);
+			button.iconDungeon.icon:SetDesaturated(not point.unlocked);
 			
 			if (point.id == LoreLibraryPoI.point.id) then
 				button.selectedTexture:Show();
 			end
+			
+			button.tooltip = point.type
+			
+			if (point.type == _L["S_LOCATIONTYPE_LORE"]) then
+				button.iconLore:Show();
+			elseif (point.type == _L["S_LOCATIONTYPE_VIEW"]) then
+				button.iconEye:Show();
+			elseif (point.type == _L["S_LOCATIONTYPE_DUNG"]) then
+				button.iconDungeon:Show();
+			else -- if missing, just do view
+				button.iconEye:Show();
+			end
+			
 		else
 			button.title:SetText("");
 		end
@@ -470,14 +521,18 @@ function _addon:ShowZoneLore()
 	if not LoreLibraryCore:IsShown() then return; end
 	local scrollFrame = LoreLibraryPoIDetailScroll;
 	local zone = LoreLibraryPoI.zone;
+	
+	_addon:ResetTabs();
 	LoreLibraryPoI.scrollFramePoints:Hide();
 	LoreLibraryPoIInsetRight:Hide();
 	LoreLibraryPoIInsetRight:SetHeight(0.1);
+	LoreLibraryPoIInsetDetail.tabZone.selected:Show();
+	LoreLibraryPoIInsetDetail.tabZone.unselected:Hide();
+	LoreLibraryPoIInsetDetail.tabZone:LockHighlight();
 	LoreLibraryPoIInsetDetail.mapButton:Hide();
 	LoreLibraryPoIInsetDetail.titleCard:Hide();
-	LoreLibraryPoIInsetDetail.backButton:Show();
-	LoreLibraryPoIInsetDetail:SetPoint("TOP", LoreLibraryPoIInsetRight, "BOTTOM", 0, -10);
-	LoreLibraryPoIInsetDetail.bg:SetTexCoord(0, 0.953125, 0.1, 0.96875)
+	LoreLibraryPoIInsetDetail:SetPoint("TOP", LoreLibraryPoIInsetRight, "BOTTOM", 0, -2);
+	LoreLibraryPoIInsetDetail.bg:SetTexCoord(0, 0.953125, 0.09, 0.96875)
 	if zone then
 		LoreLibraryPoIInsetDetail.titleCard.title:SetText(zone.name);
 		LOLIB_PoIDetailScrollChild.text:SetText(zone.lore and zone.lore or "");
@@ -559,8 +614,9 @@ function _addon:InitPoIFrame()
 	
 	LoreLibraryPoI.searchBox:SetScript("OnTextChanged", function(self) _addon:ZoneSearchChanged(self) end);
 	LoreLibraryPoIInsetDetail.mapButton:SetScript("OnClick", function() _addon:ShowMapPoI(); end)
-	LoreLibraryPoIInsetDetail.backButton:SetScript("OnClick", function() _addon:ResetZoneOverview(); end)
-	LoreLibraryPoI.titleCard.loreButton:SetScript("OnClick", function() _addon:ShowZoneLore(); end)
+	
+	LoreLibraryPoIInsetDetail.tabPoints.tooltip = _L["S_SIDETAB_POI"];
+	LoreLibraryPoIInsetDetail.tabZone.tooltip = _L["S_SIDETAB_LORE"];
 
 	-- Zone Scrollframe
 	LoreLibraryPoIZoneList.scrollBar.doNotHide = true;
@@ -638,6 +694,17 @@ function _addon:InitPoIFrame()
 				_addon:OpenToPoIPoint(self.point, self.zoneId);
 			end
 	end);
+	
+	LOLIB_PoIDetailScrollChild.text:SetHyperlinksEnabled(true);
+	LOLIB_PoIDetailScrollChild.text:SetScript("OnHyperlinkClick", function(self, linkData, link, button)
+			local hType, id = linkData:match("(%a+):(%d+)")
+			if (hType == "journal") then
+				if (EncounterJournal == nil or not EncounterJournal:IsShown()) then
+					ToggleEncounterJournal();
+				end
+				EncounterJournal_DisplayInstance(id);
+			end
+		end)
 	
 end
 

@@ -2,6 +2,18 @@
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ../../FrameXML/UI.xsd">
 	
+	<Button name="LOLIB_PoITabTemplate" inherits="LOLIB_TabTemplate" virtual="true">
+		<Scripts>
+			<OnClick>
+				LOLIB_PoITabOnClick(self, button);
+			</OnClick>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_CURSOR_RIGHT");
+				GameTooltip:SetText(self.tooltip, nil, nil, nil, nil, true);
+			</OnEnter>
+			<OnLeave function="GameTooltip_Hide"/>
+		</Scripts>
+	</Button>
 	
 	<Button name="LOLIB_ListZoneTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
 		<Size>
@@ -130,6 +142,22 @@
 		</Scripts>
 	</Button>
 	
+	<Frame name="LOLIB_POINTTYPEICON" virtual="true">
+		<Size x="20" y="20"/>
+		<Anchors>
+			<Anchor point="LEFT" x="10"/>
+		</Anchors>
+		<Scripts>
+			<OnEnter>
+				if (self:GetParent().tooltip) then
+					GameTooltip:SetOwner(self, "ANCHOR_CURSOR_RIGHT");
+					GameTooltip:SetText(self:GetParent().tooltip, nil, nil, nil, nil, true);
+				end
+			</OnEnter>
+			<OnLeave function="GameTooltip_Hide"/>
+		</Scripts>
+	</Frame>
+	
 	<Button name="LOLIB_PoIDetailTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
 		<Size x="375" y="260"/>
 		<Layers>
@@ -173,7 +201,7 @@
 				</Texture>
 			</Layer>
 			<Layer level="ARTWORK">
-				<Texture parentKey="icon" file="Interface\AddOns\LoreLibrary\Images\icon_PoI">
+				<Texture parentKey="icon" file="Interface\AddOns\LoreLibrary\Images\icon_PoI" hidden="true">
 					<Size x="25" y="25"/>
 					<Anchors>
 						<Anchor point="LEFT" x="10"/>
@@ -213,6 +241,28 @@
 		</Layers>
 		
 		<Frames>
+			<Frame parentKey="iconEye" inherits="LOLIB_POINTTYPEICON" hidden="true">
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture file="Interface\AddOns\LoreLibrary\Images\icon_Eye" parentKey="icon"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame parentKey="iconLore" inherits="LOLIB_POINTTYPEICON" hidden="true">
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture file="Interface\AddOns\LoreLibrary\Images\icon_Lore_Unselected" parentKey="icon"/>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame parentKey="iconDungeon" inherits="LOLIB_POINTTYPEICON" hidden="false">
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture file="Interface\AddOns\LoreLibrary\Images\icon_Dungeon" parentKey="icon"/>
+					</Layer>
+				</Layers>
+			</Frame>
+		
 			<Frame parentKey="selectedTexture" hidden="true">
 				<Anchors>
 					<Anchor point="TOPLEFT"/>
@@ -346,37 +396,7 @@
 					</Layer>
 				</Layers>
 				<Frames>
-				
-				<Button parentKey="loreButton">
-					<Size x="30" y="30"/>
-					<Anchors>
-						<Anchor point="RIGHT" x="-35"/>
-					</Anchors>
-					<NormalTexture file="Interface\Garrison\GarrisonMissionTypeIcons" alphaMode="ADD">
-						<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
-						<Color r="1" g="1" b="1" a="0.9" />
-					</NormalTexture>
-					<DisabledTexture file="Interface\Garrison\GarrisonMissionTypeIcons" desaturated="true">
-						<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
-					</DisabledTexture>
-					<HighlightTexture file="Interface\Garrison\GarrisonMissionTypeIcons" alphaMode="ADD">
-						<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
-						<Color r="1" g="1" b="1" a="0.5" />
-					</HighlightTexture >
-					<PushedTexture file="Interface\Garrison\GarrisonMissionTypeIcons" alphaMode="ADD">
-						<Size x="30" y="30"/>
-						<Anchors>
-							<Anchor point="CENTER" x="-1" y="-1"/>
-						</Anchors>
-						<TexCoords left="0" right="0.12890625" top="0.775390625" bottom="0.90234375"/>
-						<Color r="1" g="1" b="1" a="0.9" />
-					</PushedTexture>
-					<Scripts>
-						<OnLoad>
-							self:SetEnabled(false);
-						</OnLoad>
-					</Scripts>
-				</Button>
+
 				<StatusBar parentKey="progressBar">
 					<Size x="128" y="6"/>
 					<Anchors>
@@ -452,8 +472,10 @@
 			<Frame name="$parentInsetDetail" inherits="LOLIB_InsetTemplate_Light">
 				<Size x="414"/>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="$parentInsetRight" relativePoint="BOTTOM" y="-25"/>
-					<Anchor point="BOTTOM" relativePoint="BOTTOM" y="6"/>
+					<Anchor point="TOP" relativeTo="$parentInsetRight" relativePoint="BOTTOM" y="0" x="0"/>
+					<!--<Anchor point="TOPRIGHT" relativeTo="$parentInsetRight" relativePoint="BOTTOMRIGHT" y="0" x="-1"/>
+					<Anchor point="TOP" relativeTo="$parentInsetRight" relativePoint="BOTTOM" y="-25"/>-->
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-6" y="5"/>
 				</Anchors>
 				<Layers>
 					<Layer level="BACKGROUND">
@@ -469,52 +491,50 @@
 				</Layers>
 
 				<Frames>
-					<Button parentKey="backButton" hidden="true">
-						<Size y="10"/>
+					<Button name="$parentPointTab" inherits="LOLIB_PoITabTemplate"  parentKey="tabPoints" id="1">
 						<Anchors>
-							<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" x="2" y="-2"/>
-							<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" y="-2"/>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="-20" y="-35"/>
 						</Anchors>
-						<HitRectInsets>
-							<AbsInset left="0" right="0" top="0" bottom="-2"/>
-						</HitRectInsets>
-						<NormalTexture file="Interface\DialogFrame\UI-DialogBox-Background-Dark">
-							<Color r="1" g="1" b="1" a="0.7" />
-							<TexCoords left="0" right="1" top="0" bottom="0.7"/>
-						</NormalTexture>
-						<!--
-						<PushedTexture file="Interface\COMMON\dark-goldframe-button-pressed">
-							<Color r="1" g="1" b="1" a="0.7" />
-							<TexCoords left="0" right="1" top="0" bottom="0.7"/>
-						</PushedTexture>
-						-->
-						
 						<Layers>
-							<Layer level="ARTWORK" textureSubLevel="1">
-								<Texture file="Interface\BUTTONS\Arrow-Down-Up">
-									<Size x="30" y="6"/>
+							<Layer level="OVERLAY">
+								<Texture name="$parentUnselect" file="Interface\AddOns\LoreLibrary\Images\icon_Location_Unselected" parentKey="unselected">
+									<Size x="32" y="32" />
 									<Anchors>
-										<Anchor point="CENTER" y="-2"/>
+										<Anchor point="RIGHT" x="-12" y="0"/>
 									</Anchors>
-									<TexCoords left="0" right="0.9" top="0" bottom="0.5"/>
-									<Color r="1" g="1" b="1" a="0.6" />
 								</Texture>
-							</Layer>
-							<Layer level="HIGHLIGHT" alphaMode="ADD">
-								<Texture file="Interface\FriendsFrame\UI-FriendsFrame-HighlightBar">
-									<Color r="1" g="1" b="1" a="0.1" />
-								</Texture>
-								<Texture file="Interface\BUTTONS\Arrow-Down-Up">
-									<Size x="30" y="6"/>
+								<Texture name="$parentSelect" file="Interface\AddOns\LoreLibrary\Images\icon_Location" parentKey="selected">
+									<Size x="32" y="32" />
 									<Anchors>
-										<Anchor point="CENTER" y="-2"/>
+										<Anchor point="RIGHT" x="-12" y="0"/>
 									</Anchors>
-									<TexCoords left="0" right="0.9" top="0" bottom="0.5"/>
-									<Color r="1" g="1" b="1" a="0.5" />
 								</Texture>
 							</Layer>
 						</Layers>
 					</Button>
+					
+					<Button name="$parentZoneTab" inherits="LOLIB_PoITabTemplate"  parentKey="tabZone" id="2">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentPointTab" relativePoint="BOTTOM" x="0" y="2"/>
+						</Anchors>
+						<Layers>
+							<Layer level="OVERLAY">
+								<Texture name="$parentUnselect" file="Interface\AddOns\LoreLibrary\Images\icon_Lore_Unselected" parentKey="unselected">
+									<Size x="32" y="32" />
+									<Anchors>
+										<Anchor point="RIGHT" x="-12" y="0"/>
+									</Anchors>
+								</Texture>
+								<Texture name="$parentSelect" file="Interface\AddOns\LoreLibrary\Images\icon_Lore" parentKey="selected">
+									<Size x="32" y="32" />
+									<Anchors>
+										<Anchor point="RIGHT" x="-12" y="0"/>
+									</Anchors>
+								</Texture>
+							</Layer>
+						</Layers>
+					</Button>
+
 				
 					<Button parentKey="mapButton" hidden="true">
 						<Size x="180" y="48"/>
@@ -611,6 +631,22 @@
 				<Frames>
 					<Slider name="$parentScrollBar" inherits="UIPanelScrollBarTemplate" parentKey="ScrollBar"> <!-- Capital S because ScrollFrame_OnLoad(self) in SharedUIPanelTemplates !-->
 						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="-5" y="-16"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-5" y="15"/>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<Texture name="$parentBG">
+									<Anchors>
+										<Anchor point="TOPLEFT" relativeKey="$parent.ScrollUpButton" x="-2"/>
+										<Anchor point="BOTTOMRIGHT" relativeKey="$parent.ScrollDownButton" x="2"/>
+									</Anchors>
+									<Color r="0.2" g="0.13" b="0.08" a=".25"/>
+								</Texture>
+							</Layer>
+						</Layers>
+						<!--
+						<Anchors>
 							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="6" y="-14"/>
 							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="6" y="13"/>
 						</Anchors>
@@ -648,6 +684,7 @@
 								</Texture>
 							</Layer>
 						</Layers>
+						-->
 					</Slider>
 				</Frames>
 				<ScrollChild>

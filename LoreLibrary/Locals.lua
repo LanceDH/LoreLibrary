@@ -49,6 +49,7 @@ _addon.locals = {
 	,["S_SOURCEINFO_QUEST"] =			"Obtained during a quest."
 	,["S_SOURCEINFO_STEALTH"] =			"Can pickpocket from an npc."
 	,["S_SOURCEINFO_UNAVAILABLE"] =		"Can no longer be obtained."
+	,["S_SOURCEINFO_UNKNOWN"] =			"Data currently missing and will be added in a later update."
 	,["S_SOURCEINFO_VENDOR"] =			"Sold by a vendor."
 	,["S_SOURCETYPE_CHEST"] =			"Chest"
 	,["S_SOURCETYPE_CONTAINER"] =		"Container"
@@ -57,17 +58,21 @@ _addon.locals = {
 	,["S_SOURCETYPE_QUEST"] =			"Quest"
 	,["S_SOURCETYPE_STEALTH"] =			"Pickpocket"
 	,["S_SOURCETYPE_UNAVAILABLE"] =		"Unavailable"
+	,["S_SOURCETYPE_UNKNOWN"] =			"Unknown"
 	,["S_SOURCETYPE_VENDOR"] =			"Vendor"
 	,["S_SOURCE_TITLE"] =				"<HTML><BODY><BR/><P align=\"center\">This lore can be obtained from:</P><BR/></BODY></HTML>"
 	,["S_SUGGESTION_COMPLETE"] =		"Suggestion completed"
 	,["S_SUGGESTION_EMPTY1"] =			"You have collected so much lore!"
 	,["S_SUGGESTION_EMPTY2"] =			"There is nothing left to suggest."
 	,["S_SUGGESTION_REMOVE"] =			"Remove this suggestion to make room for a new one."
-	,["S_TAB_LORE"] =					"Documents"
-	,["S_TAB_POI"] =					"Locations"
+	,["S_TAB_LORE"] =				"Documents"
+	,["S_TAB_POI"] =				"Locations"
+	,["S_TAB_NPC"] =					"People"
 	,["S_TITLE_AREA"] =					"Location Library"
 	,["S_TITLE_DOCUMENT"] =				"Document Library"
+	,["S_TITLE_NPC"] =					"People Library"
 	,["S_UNAVAILABLE_DETAIL"] =			"This lore no longer has any\n available sources."
+	,["S_UNKNOWN_DETAIL"] =				"Source data currently missing."
 	,["S_UNLOCK_UNTIL_NEXT"] =			"Unlocks until next:"
 	,["S_ZONE_COMPLETE"] =				"Zone completed"
 	,["S_TIME_DAYS"] =					"days"
@@ -75,7 +80,21 @@ _addon.locals = {
 	,["S_TIME_HOURS"] = 				"hours"
 	,["S_TIME_MINS"] = 					"minutes"
 	,["S_TIME_MIN"] = 					"minute"
-	
+	,["S_FACTIONS"] =					"Factions"
+	,["S_NPC_BY_FACTION"] =				"Sort by faction"
+	,["S_NPC_MET"] =					"Met"
+	,["S_NPC_NOT_MET"] =				"Not met"
+	,["S_FACTION_HORDE"] =				"Horde"
+	,["S_FACTION_ALLIANCE"] =			"Alliance"
+	,["S_FACTION_NEUTRAL"] =			"Neutral"
+	,["S_FACTION_HOSTILE"] =			"Hostile"
+	,["S_SIDETAB_POI"] =				"Locations"
+	,["S_SIDETAB_LORE"] =				"Lore"
+	,["S_SIDETAB_OVERVIEW"] =			"Overview"
+	,["S_SIDETAB_MODEL"] =				"Model"
+	,["S_LOCATIONTYPE_VIEW"] = 			"Visual"
+	,["S_LOCATIONTYPE_LORE"] = 			"Lore"
+	,["S_LOCATIONTYPE_DUNG"] = 			"Dungeon"
 	
 	,["F_LORE_CONTENT"] =				"Lore content:\nWords: %d \nPages: %d \nImages: %d"
 	,["F_LORE_UNLOCK"] = 				"Lore Library added: %s"
@@ -97,6 +116,7 @@ _addon.locals = {
 	,["N_OVERVIEW_MARGIN"] =			15
 	,["N_PAGETEXT_WIDTH"] =				280
 	,["N_POI_INSETHEIGHT"] =			170
+	,["N_MAGIC_NUMBER"] =				"0104"
 	
 	,["T_MOUNT_FACTION_TEXTURES"] = 	{[0] = "MountJournalIcons-Horde",	[1] = "MountJournalIcons-Alliance"}
 

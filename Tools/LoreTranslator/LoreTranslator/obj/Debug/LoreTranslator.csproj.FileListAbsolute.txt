@@ -24,3 +24,6 @@ D:\Program Files (x86)\World of Warcraft\Interface\AddOns\LoreLibrary\Tools\Lore
 D:\Program Files (x86)\World of Warcraft\Interface\AddOns\LoreLibrary\Tools\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.g.resources
 D:\Program Files (x86)\World of Warcraft\Interface\AddOns\LoreLibrary\Tools\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.Properties.Resources.resources
 D:\Program Files (x86)\World of Warcraft\Interface\AddOns\LoreLibrary\Tools\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.csproj.GenerateResource.Cache
+D:\UserFiles\Documents\LoreLibrary\Tools\LoreTranslator\LoreTranslator\bin\Debug\LoreTranslator.exe.config
+D:\UserFiles\Documents\LoreLibrary\Tools\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.exe
+D:\UserFiles\Documents\LoreLibrary\Tools\LoreTranslator\LoreTranslator\obj\Debug\LoreTranslator.pdb

@@ -167,6 +167,8 @@ _addon.translations = {
 	["q11886"] = "Attività insolita",
 	["q24981"] = "Una spina nel fianco",
 	["q32397"] = "Non se ne accorgerà neppure",
+	["q34341"] = "Il cuore pulsante",
+	["q34410"] = "Il cuore pulsante",
 	-- container
 	["i20676"] = "Testo del Crepuscolo Decifrato",
 	["i114116"] = "Borsa di Elementi Riciclabili",
@@ -4645,6 +4647,149 @@ _addon.translations = {
 			"PUOI SALVARE LA TUA FAMIGLIA\n\nAzeroth brucerà. Nessuno di voi può contrastare la Legione. Non tu, non la tua famiglia, non i vostri più grandi campioni.\n\nPerciò, salva quello che puoi finché puoi.\n\nUnisciti alla Legione. Adesso. Non dopo. Verrà il giorno in cui tutti gli sciocchi mortali accetteranno l'inevitabile, e ci sarà una massa di gente che implorerà la pietà della Legione. Ma oggi, sono ancora molti coloro che si aggrappano a inutili speranze. Scegli oggi il tuo posto tra le schiere demoniache prima che sia troppo tardi. Porta i tuoi amici. Porta i tuoi figli. (Abbandona pure quelli che ti danno fastidio.)\n\nIl tempo stringe.",
 		},
 	},
+
+------------------------------------------------------------------------------------------
+-- Patch 7.0
+------------------------------------------------------------------------------------------
+
+["The Fjarnskaggl Fjormula"] = {
+	["translation"] = "Formula di Fjarnskaggl",
+	["pages"] = {
+		"",
+	},
+},
+["The Tangled Beard"] = {
+	["translation"] = "Barba Aggrovigliata",
+	["pages"] = {
+		"",
+	},
+},
+["Herblore of the Ancients"] = {
+	["translation"] = "Storia dell'Erbalismo degli Antichi",
+	["pages"] = {
+		"",
+	},
+},
+["Captain's Log of the Queen's Reprisal"] = {
+	["translation"] = "Diario del Capitano della Rappresaglia della Regina",
+	["pages"] = {
+		"",
+	},
+},
+["Desiccated Journal"] = {
+	["translation"] = "Diario Essiccato",
+	["pages"] = {
+		"",
+	},
+},
+["Tiffany's Notebook"] = {
+	["translation"] = "Taccuino di Tiffany",
+	["pages"] = {
+		"",
+	},
+},
+["Valeera's Note"] = {
+	["translation"] = "Nota di Valeera",
+	["pages"] = {
+		"",
+	},
+},
+["Letter from Gul'dan"] = {
+	["translation"] = "Lettera da Gul'dan",
+	["pages"] = {
+		"",
+	},
+},
+["Prison Manifest"] = {
+	["translation"] = "Registro della Prigione",
+	["pages"] = {
+		"",
+	},
+},
+["Etching from the Raven's Eye Tablet"] = {
+	["translation"] = "Incisioni dalla Tavoletta dell'Occhio del Corvo",
+	["pages"] = {
+		"",
+	},
+},
+["Hand-Scribed Invitation"] = {
+	["translation"] = "Invito Scritto a Mano",
+	["pages"] = {
+		"",
+	},
+},
+["Absolon's Letter"] = {
+	["translation"] = "Lettera di Absolon",
+	["pages"] = {
+		"",
+	},
+},
+["Old Fillmaff's Scribbled Notes"] = {
+	["translation"] = "Nota Scritta del Vecchio Fillmaff",
+	["pages"] = {
+		"",
+	},
+},
+["Illanna Dreadmoore's Scribbled Notes"] = {
+	["translation"] = "Nota Scritta da Illanna Landacupa",
+	["pages"] = {
+		"",
+	},
+},
+["Vahu's Scribbled Notes"] = {
+	["translation"] = "Nota Scritta di Vahu",
+	["pages"] = {
+		"",
+	},
+},
+["Celadine's Scribbled Notes"] = {
+	["translation"] = "Nota Scritta di Celadine",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Note d'Esplorazione Scarabocchiate",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Note d'Esplorazione Scarabocchiate",
+	["pages"] = {
+		"",
+	},
+},
+["Juvess' Scribbled Notes"] = {
+	["translation"] = "Nota Scritta di Juvess",
+	["pages"] = {
+		"",
+	},
+},
+["Filius' Scribbled Notes"] = {
+	["translation"] = "Nota Scritta di Filius",
+	["pages"] = {
+		"",
+	},
+},
+["Gorma's Scribbled Notes"] = {
+	["translation"] = "Nota Scritta di Gorma",
+	["pages"] = {
+		"",
+	},
+},
+["Mile's Scribbled Notes"] = {
+	["translation"] = "Nota Scritta di Mile",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Note d'Esplorazione Scarabocchiate",
+	["pages"] = {
+		"",
+	},
+},
 
 }                                                                                                                                                                                                                        
 };

@@ -89,6 +89,37 @@
 		</Scripts>
 	</Frame>
 	
+	<Texture name="LOLIB_NPCTab_Highlight" file="Interface\EncounterJournal\UI-EncounterJournalTextures" virtual="true" >
+		<Size x="63" y="57"/>	
+		<TexCoords left="0.00195313" right="0.12500000" top="0.90332031" bottom="0.95898438"/>	
+	</Texture>
+	<Texture name="LOLIB_NPCTab_Selected" file="Interface\EncounterJournal\UI-EncounterJournalTextures" virtual="true" >
+		<Size x="63" y="57"/>	
+		<TexCoords left="0.12890625" right="0.25195313" top="0.90332031" bottom="0.95898438"/>	
+	</Texture>
+	<Texture name="LOLIB_NPCTab_UnSelected" file="Interface\EncounterJournal\UI-EncounterJournalTextures" virtual="true" >
+		<Size x="63" y="57"/>	
+		<TexCoords left="0.25585938" right="0.37890625" top="0.90332031" bottom="0.95898438"/>	
+	</Texture>
+	
+	<Button name="LOLIB_TabTemplate" virtual="true">
+		<Size x="63" y="57"/>	
+		<NormalTexture inherits="LOLIB_NPCTab_UnSelected"/>
+		<PushedTexture inherits="LOLIB_NPCTab_Selected"/>
+		<DisabledTexture inherits="LOLIB_NPCTab_UnSelected" desaturated="true"/>
+		<HighlightTexture inherits="LOLIB_NPCTab_Highlight" alphaMode="ADD"/>
+		<!--
+		<Scripts>
+			<OnClick function="EncounterJournal_TabClicked"/>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_CURSOR_RIGHT");
+				GameTooltip:SetText(self.tooltip, nil, nil, nil, nil, true);
+			</OnEnter>
+			<OnLeave function="GameTooltip_Hide"/>
+		</Scripts>
+		-->
+	</Button>
+	
 	<StatusBar name="LOLIB_LibraryProgressTemplate" inherits="LOLIB_ProgressBarTemplate" virtual="true">
 		<Anchors>
 			<Anchor point="BOTTOM" relativePoint="TOP" x="0" y="12"/>
@@ -562,21 +593,26 @@
 		</Scripts>
 	</Button>
 	
-	<Frame name="LoreLibraryCore" inherits="PortraitFrameTemplate" movable="tcopyListrue" toplevel="true" frameStrata="HIGH" enableMouse="true" parent="UIParent" hidden="true">
+	<Frame name="LoreLibraryCore" inherits="PortraitFrameTemplate" movable="tcopyListrue" toplevel="true" frameStrata="MEDIUM" enableMouse="true" parent="UIParent" hidden="true">
 		<Size x="703" y="606"/>
 		<Anchors>
 			<Anchor point="CENTER" x="0" y="0"/>
 		</Anchors>
 
 		<Frames>	
-			<Button name="$parentTab1" inherits="LOLIBCollectionTab" text="LOLIB_TAB_LORE" id="1">
+			<Button name="$parentTab1" parentKey="tabLore" inherits="LOLIBCollectionTab" text="LOLIB_TAB_LORE" id="1">
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="BOTTOMLEFT" x="11" y="2"/>
 				</Anchors>
 			</Button>
-			<Button name="$parentTab2" inherits="LOLIBCollectionTab" text="LOLIB_TAB_POI" id="2">
+			<Button name="$parentTab2" parentKey="tabPoI" inherits="LOLIBCollectionTab" text="LOLIB_TAB_POI" id="2">
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="$parentTab1" relativePoint="RIGHT" x="-16" y="0"/>
+				</Anchors>
+			</Button>
+			<Button name="$parentTab3" parentKey="tabNPC" inherits="LOLIBCollectionTab" text="LOLIB_TAB_NPC" id="3">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTab2" relativePoint="RIGHT" x="-16" y="0"/>
 				</Anchors>
 			</Button>
 			
@@ -752,7 +788,6 @@
 								<Anchor point="BOTTOMRIGHT" x="-4" y="3"/>
 							</Anchors>
 							<TexCoords left="0" right="0.953125" top="0" bottom="0.96875"/>
-							<Color r="0.9" g="0.9" b="0.9"/>
 						</Texture>
 					</Layer>
 					<Layer level="ARTWORK">

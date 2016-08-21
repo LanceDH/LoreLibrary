@@ -1,0 +1,696 @@
+ <Ui xmlns="http://www.blizzard.com/wow/ui/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ../../FrameXML/UI.xsd">
+	
+	<Button name="LOLIB_NPCTabTemplate" inherits="LOLIB_TabTemplate" virtual="true">
+		<Scripts>
+			<OnClick>
+				LOLIB_NPCTabOnClick(self, button);
+			</OnClick>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_CURSOR_RIGHT");
+				GameTooltip:SetText(self.tooltip, nil, nil, nil, nil, true);
+			</OnEnter>
+			<OnLeave function="GameTooltip_Hide"/>
+		</Scripts>
+	</Button>
+	
+	<Button name="LOLIB_CreatureButtonTemplate" virtual="true" hidden="true">
+		<Size x="64" y="61"/>
+		<Layers>
+			<Layer level="BACKGROUND" TextureSubLevel="6">
+				<Texture name="$parentCreature" parentKey="creature">
+					<Size x="40" y="40"/>
+					<Anchors>
+						<Anchor point="CENTER" x="0" y="0"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<NormalTexture file="Interface\EncounterJournal\UI-EncounterJournalTextures">
+			<Size x="64" y="61"/>	
+			<TexCoords left="0.50585938" right="0.63085938" top="0.02246094" bottom="0.08203125"/>	
+		</NormalTexture>
+		<HighlightTexture file="Interface\EncounterJournal\UI-EncounterJournalTextures" alphaMode="ADD">
+			<Size x="64" y="61"/>	
+			<TexCoords left="0.50585938" right="0.63085938" top="0.02246094" bottom="0.08203125"/>	
+		</HighlightTexture>
+		<Scripts>
+			<OnClick>
+				LOLIB_CreatureFrame_OnClick(self);
+				PlaySound("igMainMenuOption");
+			</OnClick>
+			<OnEnter>
+				if self.name then
+					GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+					GameTooltip:SetText(self.name,1,1,1);
+					if self.description then
+						GameTooltip:AddLine(self.description, nil, nil, nil, true);
+					end
+					GameTooltip:Show();
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+	
+	<Button name="LOLIB_ListNPCTemplate" hidden="false" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="252" y="30"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="bgLeft" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="30"/>
+					</Anchors>
+					<TexCoords left="0.498046875" right="0.591796875" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+				<Texture parentKey="bgRight" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPRIGHT"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-30"/>
+					</Anchors>
+					<TexCoords left="0.814453125" right="0.90625" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+				<Texture parentKey="bgCenter" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.bgLeft" relativePoint="TOPRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgRight" relativePoint="BOTTOMLEFT"/>
+					</Anchors>
+					<TexCoords left="0.591796875" right="0.814453125" top="0.1279296875" bottom="0.1728515625"/>
+				</Texture>
+			</Layer>
+			<Layer level="BACKGROUND" textureSubLevel="1">
+				<Texture parentKey="bgTitle" file="Interface\QUESTFRAME\UI-QuestTitleHighlight" hidden="true">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color r="1" g="1" b="1" a="0.3"/>
+				</Texture>
+			</Layer>
+			<Layer level="BORDER">
+				<Texture parentKey="factionIcon">
+                    <Anchors>
+                        <Anchor point="BOTTOMRIGHT" x="-3" y="1"/>
+                    </Anchors>
+                    <Size x="35" y="28"/>
+                </Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTitle" inherits="GameFontNormal" maxLines="1" hidden="false" justifyH="LEFT" justifyV="MIDDLE" parentKey="title">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="25"/>
+						<Anchor point="BOTTOMRIGHT" x="-25"/>
+					</Anchors>
+				</FontString>
+				<Texture parentKey="completeIcon" file="Interface\Scenarios\ScenarioIcon-Combat">
+					<Size x="10" y="10"/>
+					<Anchors>
+						<Anchor point="LEFT" x="7" y="-1"/>
+					</Anchors>
+					<Color r="1" g="1" b="1" a="0.75"/>
+				</Texture>
+			</Layer>
+			<Layer level="HIGHLIGHT">
+                <Texture parentKey="hlLeft" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="30"/>
+					</Anchors>
+					<TexCoords left="0.498046875" right="0.591796875" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+				<Texture parentKey="hlRight" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPRIGHT"/>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-30"/>
+					</Anchors>
+					<TexCoords left="0.814453125" right="0.90625" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+				<Texture parentKey="hlCenter" file="Interface\PETBATTLES\PETJOURNAL">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.hlLeft" relativePoint="TOPRIGHT"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.hlRight" relativePoint="BOTTOMLEFT"/>
+					</Anchors>
+					<TexCoords left="0.591796875" right="0.814453125" top="0.1748046875" bottom="0.2197265625"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		
+		<Frames>
+			<Frame parentKey="selectedTexture" hidden="true">
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+					<Anchor point="BOTTOMRIGHT"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="left" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="30"/>
+							</Anchors>
+							<TexCoords left="0.498046875" right="0.591796875" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+						<Texture parentKey="right" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPRIGHT"/>
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-30"/>
+							</Anchors>
+							<TexCoords left="0.814453125" right="0.90625" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+						<Texture parentKey="center" file="Interface\PETBATTLES\PETJOURNAL">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.left" relativePoint="TOPRIGHT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.right" relativePoint="BOTTOMLEFT"/>
+							</Anchors>
+							<TexCoords left="0.591796875" right="0.814453125" top="0.2216796875" bottom="0.2666015625"/>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+
+		<Scripts>
+			<OnClick function="LOLIB_ListNPC_OnClick"/>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
+		</Scripts>
+	</Button>
+	
+	<Frame name="LoreLibraryNPC" parent="LoreLibraryCore" hidden="true">
+		<Size y="541"/>
+		<Anchors>
+			<Anchor point="BOTTOMLEFT" x="0" y="0"/>
+			<Anchor point="BOTTOMRIGHT" x="0" y="0"/>
+		</Anchors>
+
+		<Frames>
+			<StatusBar parentKey="progressBar" inherits="LOLIB_LibraryProgressTemplate" />
+			
+			<Frame name="$parentAlphaTag">
+				<Size x="90" y="30"/>
+				<Anchors>
+					<Anchor point="LEFT" relativeKey="$parent.progressBar" relativePoint="RIGHT" x="25" y="3"/>
+				</Anchors>
+				<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background-Dark" edgeFile="Interface\FriendsFrame\UI-Toast-Border" tile="true">
+					<EdgeSize val="8"/>
+					<TileSize val="32"/>
+					<BackgroundInsets left="5" right="5" top="5" bottom="5"/>
+				</Backdrop>
+				<Layers>
+						
+					<Layer level="ARTWORK">
+						<Texture parentKey="icon" file="Interface\DialogFrame\UI-Dialog-Icon-AlertNew">
+							<Size x="16" y="16" />
+							<Anchors>
+								<Anchor point="LEFT" x="8"/>
+							</Anchors>
+						</Texture>
+						<FontString name="$parentText" inherits="QuestTitleFont" justifyH="CENTER" parentKey="text" text="Alpha">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="25" y="-5"/>
+								<Anchor point="BOTTOMRIGHT" x="-5" y="6"/>
+							</Anchors>
+							<Color r="1" g="1" b="1"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT", 0, -100);
+						GameTooltip:SetText("Alpha build");
+						GameTooltip:AddLine("You are running an alpha build where this module is still in development.", 1, 1, 1, true);
+						GameTooltip:AddLine("Some parts may still be incomplete and progress may be lost with future updates.", 1, 1, 1, true);
+						GameTooltip:Show();
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Frame>
+			
+			<Frame name="$parentTitleCard" parentKey="titleCard">
+				<Size x="414" y="50"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-5" y="5"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BARCKGROUND">
+						<Texture parentKey="bgLeft" file="Interface\AddOns\LoreLibrary\Images\ChallengeModeHud">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="50"/>
+							</Anchors>
+							<TexCoords left="0.4375" right="0.5546875" top="0.09765625" bottom="0.33203125"/>
+						</Texture>
+						<Texture parentKey="bgRight" file="Interface\AddOns\LoreLibrary\Images\ChallengeModeHud">
+							<Anchors>
+								<Anchor point="TOPRIGHT"/>
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-50"/>
+							</Anchors>
+							<TexCoords left="0.5546875" right="0.4375" top="0.09765625" bottom="0.33203125"/>
+						</Texture>
+						<Texture parentKey="bgCenter" file="Interface\AddOns\LoreLibrary\Images\ChallengeModeHud">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeKey="$parent.bgLeft" relativePoint="TOPRIGHT"/>
+								<Anchor point="BOTTOMRIGHT" relativeKey="$parent.bgRight" relativePoint="BOTTOMLEFT"/>
+							</Anchors>
+							<TexCoords left="0.513671875" right="0.84375" top="0.09765625" bottom="0.33203125"/>
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString name="$parentTitle" inherits="QuestFont_Shadow_Huge" maxLines="1" hidden="false" justifyH="CENTER" justifyV="MIDDLE" parentKey="title">
+							<Size y="40"/>
+							<Anchors>
+								<Anchor point="LEFT" x="50"/>
+								<Anchor point="RIGHT" x="-50"/>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			
+			<Frame name="$parentInsetDetail" inherits="LOLIB_InsetTemplate_Light">
+				<Size x="414"/>
+				<Anchors>
+					<Anchor point="TOP" relativeKey="$parent.titleCard" relativePoint="BOTTOM" y="0" x="0"/>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="-6" y="5"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentParchmentBg" file="Interface\ItemTextFrame\Book" parentKey="bg">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="4" y="-4"/>
+								<Anchor point="BOTTOMRIGHT" x="-4" y="3"/>
+							</Anchors>
+							<TexCoords left="0" right="0.953125" top="0.09" bottom="0.96875"/>
+							
+						</Texture>
+					</Layer>
+				</Layers>
+				
+				<Frames>
+					<Button name="$parentOverviewTab" inherits="LOLIB_NPCTabTemplate"  parentKey="tabOverview" id="1">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="-20" y="-35"/>
+						</Anchors>
+						<Layers>
+							<Layer level="OVERLAY">
+								<Texture name="$parentUnselect" file="Interface\AddOns\LoreLibrary\Images\icon_Person_Unselected" parentKey="unselected">
+									<Size x="32" y="32" />
+									<Anchors>
+										<Anchor point="RIGHT" x="-12" y="0"/>
+									</Anchors>
+								</Texture>
+								<Texture name="$parentSelect" file="Interface\AddOns\LoreLibrary\Images\icon_Person" parentKey="selected">
+									<Size x="32" y="32" />
+									<Anchors>
+										<Anchor point="RIGHT" x="-12" y="0"/>
+									</Anchors>
+								</Texture>
+							</Layer>
+						</Layers>
+					</Button>
+					<Button name="$parentLoreTab" inherits="LOLIB_NPCTabTemplate"  parentKey="tabLore" id="2">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentOverviewTab" relativePoint="BOTTOM" x="0" y="2"/>
+						</Anchors>
+						<Layers>
+							<Layer level="OVERLAY">
+								<Texture name="$parentUnselect" file="Interface\AddOns\LoreLibrary\Images\icon_Lore_Unselected" parentKey="unselected">
+									<Size x="32" y="32"/>
+									<Anchors>
+										<Anchor point="RIGHT" x="-12" y="0"/>
+									</Anchors>
+								</Texture>
+								<Texture name="$parentSelect" file="Interface\AddOns\LoreLibrary\Images\icon_Lore" parentKey="selected">
+									<Size x="32" y="32"/>
+									<Anchors>
+										<Anchor point="RIGHT" x="-12" y="0"/>
+									</Anchors>
+								</Texture>
+							</Layer>
+						</Layers>
+					</Button>
+					<Button name="$parentModelTab" inherits="LOLIB_NPCTabTemplate"  parentKey="tabModel" id="3">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentLoreTab" relativePoint="BOTTOM" x="0" y="2"/>
+						</Anchors>
+						<Layers>
+							<Layer level="OVERLAY">
+								<Texture name="$parentUnselect" file="Interface\AddOns\LoreLibrary\Images\icon_Model_Unselected" parentKey="unselected">
+									<Size x="32" y="32"/>
+									<Anchors>
+										<Anchor point="RIGHT" x="-12" y="0"/>
+									</Anchors>
+								</Texture>
+								<Texture name="$parentSelect" file="Interface\AddOns\LoreLibrary\Images\icon_Model" parentKey="selected">
+									<Size x="32" y="32"/>
+									<Anchors>
+										<Anchor point="RIGHT" x="-12" y="0"/>
+									</Anchors>
+
+								</Texture>
+							</Layer>
+						</Layers>
+					</Button>
+				</Frames>
+			</Frame>
+			
+			
+
+			<ScrollFrame name="$parentDetailScroll" parentKey="scrollFrameDetail" inherits="UIPanelScrollFrameCodeTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetDetail" x="10" y="-5"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetDetail" x="-25" y="5"/>
+				</Anchors>
+				<Frames>
+					<Slider name="$parentScrollBar" inherits="UIPanelScrollBarTemplate" parentKey="ScrollBar"> <!-- Capital S because ScrollFrame_OnLoad(self) in SharedUIPanelTemplates !-->
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="-5" y="-16"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-5" y="15"/>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<Texture name="$parentBG">
+									<Anchors>
+										<Anchor point="TOPLEFT" relativeKey="$parent.ScrollUpButton" x="-2"/>
+										<Anchor point="BOTTOMRIGHT" relativeKey="$parent.ScrollDownButton" x="2"/>
+									</Anchors>
+									<Color r="0.2" g="0.13" b="0.08" a=".25"/>
+								</Texture>
+							</Layer>
+						</Layers>
+					</Slider>
+				</Frames>
+				<ScrollChild>
+					<Frame name="LOLIB_NPCDetailScrollChild">
+						<Size x="10" y="10"/>
+						<Frames>
+							<Frame parentKey="info">
+								<Size x="320" y="200"/>
+								<Anchors>
+									<Anchor point="TOPLEFT" x="30" y="-10"/>
+								</Anchors>
+								<Frames>
+									<PlayerModel parentKey="modelFrame" useParentLevel="true" inherits="MouseDisabledModelTemplate">
+										<Size x="100"/>
+										<Layers>
+											<Layer level="BACKGROUND" textureSubLevel="1">
+												<Texture name="$parentDungeonBG" file="Interface\EncounterJournal\UI-EJ-JOURNALBG" parentKey="dungeonBG">
+													<Anchors>
+														<Anchor point="TOPLEFT" x="0" y="0"/>
+														<Anchor point="BOTTOMRIGHT" x="5" y="0"/>
+													</Anchors>
+													<TexCoords left="0.3857421875" right="0.7666015625" top="0" bottom="0.830078125"/>
+												</Texture>
+											</Layer>
+											<Layer level="OVERLAY">
+												<Texture name="$parentShadow" file="Interface\FontStyles\FontStyleParchment" alphaMode="ADD">
+													<Anchors>
+														<Anchor point="TOPLEFT" x="0" y="0"/>
+														<Anchor point="BOTTOMRIGHT" x="5" y="0"/>
+													</Anchors>
+													<Color r="1" g="1" b="1" a="0.1"/>
+												</Texture>
+											</Layer>
+											<Layer level="OVERLAY" textureSubLevel="1">
+												<Texture name="$parentShadow" file="Interface\EncounterJournal\UI-EJ-BossModelPaperFrame">
+													<Anchors>
+														<Anchor point="TOPLEFT" x="0" y="0"/>
+														<Anchor point="BOTTOMRIGHT" x="5" y="0"/>
+													</Anchors>
+													<TexCoords left="0.767578125" right="0" top="0" bottom="0.828125"/>
+												</Texture>
+											</Layer>
+										</Layers>
+										<Anchors>
+											<Anchor point="TOPRIGHT" x="-10" y="-10"/>
+											<Anchor point="BOTTOMRIGHT" x="-10" y="10"/>
+										</Anchors>
+									</PlayerModel>
+								</Frames>
+								
+							</Frame>
+							<SimpleHTML parentKey="text">
+								<Size x="320" y="200"/>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeKey="$parent.info" relativePoint="BOTTOMLEFT" x="0" y="-10"/>
+								</Anchors>
+								<FontString inherits="GameFontBlack" spacing="1"/>
+							</SimpleHTML>
+						</Frames>
+					</Frame>
+				</ScrollChild>
+			</ScrollFrame>
+			
+			<ScrollFrame name="$parentLoreScroll" parentKey="scrollFrameLore" inherits="UIPanelScrollFrameCodeTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetDetail" x="10" y="-5"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetDetail" x="-25" y="5"/>
+				</Anchors>
+				<Frames>
+					<Slider name="$parentScrollBar" inherits="UIPanelScrollBarTemplate" parentKey="ScrollBar"> <!-- Capital S because ScrollFrame_OnLoad(self) in SharedUIPanelTemplates !-->
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="-5" y="-16"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="-5" y="15"/>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<Texture name="$parentBG">
+									<Anchors>
+										<Anchor point="TOPLEFT" relativeKey="$parent.ScrollUpButton" x="-2"/>
+										<Anchor point="BOTTOMRIGHT" relativeKey="$parent.ScrollDownButton" x="2"/>
+									</Anchors>
+									<Color r="0.2" g="0.13" b="0.08" a=".25"/>
+								</Texture>
+							</Layer>
+						</Layers>
+					</Slider>
+				</Frames>
+				<ScrollChild>
+					<Frame name="LOLIB_NPCLoreScrollChild">
+						<Size x="10" y="10"/>
+						<Frames>
+							<Frame parentKey="info">
+								<Size x="320" y="200"/>
+								<Anchors>
+									<Anchor point="TOPLEFT" x="30" y="-10"/>
+								</Anchors>
+								
+							</Frame>
+							<SimpleHTML parentKey="text">
+								<Size x="320" y="200"/>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeKey="$parent.info" relativePoint="BOTTOMLEFT" x="0" y="-10"/>
+								</Anchors>
+								<FontString inherits="GameFontBlack" spacing="1"/>
+							</SimpleHTML>
+						</Frames>
+					</Frame>
+				</ScrollChild>
+			</ScrollFrame>
+			
+			<PlayerModel name="$parentModel" parentKey="modelFrame" inherits="ModelWithZoomTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetDetail" x="5" y="-5"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetDetail" x="-13" y="5"/>
+				</Anchors>
+				
+				<Layers>
+					<Layer level="BACKGROUND" textureSubLevel="1">
+						<Texture name="$parentDungeonBG" file="Interface\EncounterJournal\UI-EJ-JOURNALBG" parentKey="dungeonBG">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="0" y="0"/>
+								<Anchor point="BOTTOMRIGHT" x="5" y="0"/>
+							</Anchors>
+							<TexCoords left="0.3857421875" right="0.7666015625" top="0" bottom="0.830078125"/>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<Texture name="$parentShadow" file="Interface\EncounterJournal\UI-EJ-BossModelPaperFrame">
+							<Anchors>
+								<Anchor point="TOPLEFT" x="0" y="0"/>
+								<Anchor point="BOTTOMRIGHT" x="5" y="0"/>
+							</Anchors>
+							<TexCoords left="0.767578125" right="0" top="0" bottom="0.828125"/>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button parentKey="RotateLeftButton">
+						<Size x="35" y="35"/>
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativeKey="$parent" relativePoint="BOTTOM" x="-5" y="50"/>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								self:RegisterForClicks("LeftButtonDown", "LeftButtonUp");
+							</OnLoad>
+							<OnClick>
+								Model_RotateLeft(self:GetParent());
+							</OnClick>
+						</Scripts>
+						<NormalTexture file="Interface\Buttons\UI-RotationLeft-Button-Up"/>
+						<PushedTexture file="Interface\Buttons\UI-RotationLeft-Button-Down"/>
+						<HighlightTexture file="Interface\Buttons\ButtonHilight-Round" alphaMode="ADD"/>
+					</Button>
+					<Button parentKey="RotateRightButton">
+						<Size>
+							<AbsDimension x="35" y="35"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeKey="$parent" relativePoint="BOTTOM" x="5" y="50"/>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								self:RegisterForClicks("LeftButtonDown", "LeftButtonUp");
+							</OnLoad>
+							<OnClick>
+								Model_RotateRight(self:GetParent());
+							</OnClick>
+						</Scripts>
+						<NormalTexture file="Interface\Buttons\UI-RotationRight-Button-Up"/>
+						<PushedTexture file="Interface\Buttons\UI-RotationRight-Button-Down"/>
+						<HighlightTexture file="Interface\Buttons\ButtonHilight-Round" alphaMode="ADD"/>
+					</Button>
+					<Button name="$parentCreatureButton1" inherits="LOLIB_CreatureButtonTemplate" parentArray="creatureButtons">
+						<Anchors>
+							<Anchor point="TOPLEFT" x="0" y="-35"/>
+						</Anchors>
+					</Button>
+				</Frames>
+			</PlayerModel>
+			
+			
+			
+			<Frame name="$parentInsetLeft" inherits="InsetFrameTemplate" parentKey="insetLeft">
+				<Size x="260"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" y="4" x="4"/>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="4" y="5"/>
+				</Anchors>
+			</Frame>
+			
+			<ScrollFrame name="$parentList" parentKey="scrollFrame" inherits="HybridScrollFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInsetLeft" x="3" y="-34"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentInsetLeft" x="-2" y="5"/>
+				</Anchors>
+				<Frames>
+					<Slider name="$parentScrollBar" inherits="HybridScrollBarTrimTemplate" parentKey="scrollBar">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="4" y="19"/>
+							<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" x="4" y="11"/>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								self.trackBG:Show();
+								self.trackBG:SetVertexColor(0, 0, 0, 0.75);
+							</OnLoad>
+						</Scripts>
+					</Slider>
+				</Frames>
+			</ScrollFrame>
+			
+			<Frame name="$parentFavoriteMenu" inherits="Lib_UIDropDownMenuTemplate" enableMouse="true" parentKey="favoriteMenu"/>
+			
+			<EditBox parentKey="searchBox" inherits="SearchBoxTemplate" letters="40">
+				<Size x="145" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeKey="$parent.insetLeft"  x="15" y="-9"/>
+				</Anchors>
+			</EditBox>
+			
+			<Button name="$parentFilterButton" inherits="UIMenuButtonStretchTemplate" text="FILTER">
+				<Size x="93" y="22"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeKey="$parent.insetLeft" x="-5" y="-9"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture parentKey="Icon" file="Interface\ChatFrame\ChatFrameExpandArrow">
+							<Size x="10" y="12"/>
+							<Anchors>
+								<Anchor point="RIGHT" relativeKey="$parent.Right" relativePoint="RIGHT" x="-5"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick> 
+						PlaySound("igMainMenuOptionCheckBoxOn");
+						Lib_ToggleDropDownMenu(1, nil, LoreLibraryNPCFilterDropDown, "LoreLibraryNPCFilterButton", 74, 15);
+					</OnClick>	
+				</Scripts>						
+			</Button>
+			<Frame name="$parentFilterDropDown" inherits="Lib_UIDropDownMenuTemplate" />
+			
+		</Frames>
+		<Layers>
+		</Layers>
+	</Frame>
+	
+	<Button name="LoreLibraryNPCPopup" inherits="LoreLibraryUnlockPopup" toplevel="true" movable="true" parent="UIParent" enableMouse="true" hidden="true">
+		
+		<Anchors>
+			<Anchor point="CENTER" y="20"/>
+		</Anchors>
+		
+		<Layers>
+			<Layer level="BACKGROUND" textureSubLevel="2">
+				<Texture parentKey="Icon" file="Interface\Garrison\GarrisonMissionTypeIcons">
+					<Size x="16" y="16"/>
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" x="-15" y="8"/>
+					</Anchors>
+					<TexCoords left="0.12890625" right="0.2578125" top="0.12890625" bottom="0.2578125" />
+				</Texture>
+			</Layer>
+		</Layers>
+		
+		<Frames>
+			<Frame parentKey="completed" hidden="true">
+				<Size x="150" y="17"/>
+				<Anchors>
+						<Anchor point="TOP" relativePoint="BOTTOM" y="6"/>
+					</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture parentKey="BGTL" file="Interface\Garrison\GarrisonMissionUI2">
+							<TexCoords left="0.423828125" right="0.6513671875" top="0.6242578125" bottom="0.6845703125" />
+							<Color r="0.75" g="0.75" b="0.75" a="1" />
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString name="$parentTitle" inherits="GameFontNormalSmall" maxLines="1" justifyH="CENTER" justifyV="MIDDLE" parentKey="title" text="LOLIB_ZONE_COMPLETE">
+							<Size c="120" y="10"/>
+							<Anchors>
+								<Anchor point="TOP" y="-2"/>
+							</Anchors>
+							<Color r="0.9" g="0.75" b="0" a="1" />
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		
+		<Scripts>
+			<OnLoad>
+				self:SetClampedToScreen(true);
+				self:RegisterForClicks("RightButtonUp", "LeftButtonUp");
+				self:RegisterForDrag("LeftButton");
+				self:SetScript("OnDragStart", self.StartMoving );
+				self:SetScript("OnDragStop", self.StopMovingOrSizing);
+			</OnLoad>
+		</Scripts>
+	</Button>
+
+ </Ui>

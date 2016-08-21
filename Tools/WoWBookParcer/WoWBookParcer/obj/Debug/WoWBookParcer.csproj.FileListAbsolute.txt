@@ -27,3 +27,16 @@ D:\Program Files (x86)\World of Warcraft\Interface\AddOns\LoreLibrary\Tools\WoWB
 D:\Program Files (x86)\World of Warcraft Public Test\Interface\AddOns\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\bin\Debug\WoWBookParcer.exe.config
 D:\Program Files (x86)\World of Warcraft Public Test\Interface\AddOns\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer.exe
 D:\Program Files (x86)\World of Warcraft Public Test\Interface\AddOns\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer.pdb
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\bin\Debug\WoWBookParcer.exe.config
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer.exe
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer.pdb
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\bin\Debug\WoWBookParcer.exe
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\bin\Debug\WoWBookParcer.pdb
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer.csprojResolveAssemblyReference.cache
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\MainWindow.baml
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\MainWindow.g.cs
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\App.g.cs
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer_MarkupCompile.cache
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer.g.resources
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer.Properties.Resources.resources
+D:\UserFiles\Documents\LoreLibrary\Tools\WoWBookParcer\WoWBookParcer\obj\Debug\WoWBookParcer.csproj.GenerateResource.Cache

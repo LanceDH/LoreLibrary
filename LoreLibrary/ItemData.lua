@@ -169,6 +169,8 @@ _addon.data = {
 	["q11886"] = "Unusual Activity",
 	["q24981"] = "A Thorn in our Side",
 	["q32397"] = "He Won't Even Miss It",
+	["q34341"] = "The Beating Heart",
+	["q34410"] = "The Beating Heart",
 	-- container
 	["i20676"] = "Decoded Twilight Text",
 	["i114116"] = "Bag of Salvaged Goods",
@@ -593,7 +595,7 @@ _addon.data = {
 		"We call upon you, Zanza of Zuldazar.\n\nBless those that ask for your help, Loa Zanza. Bless those that would ally with the Zandalarian\npeople.\n\nAid us in this time of need. Aid us Loa. Give us the power to strike down our enemies. Give us the power to once more defeat the Blood God.",
 	},
 	["locations"] = {
-		{["sourceType"] = "object", ["areaId"] = 37, ["id"] = 5339, ["level"] = 0, ["x"] = 13.4, ["y"] = 15.1},
+		{["sourceType"] = "unavailable"},
 	},
 },
 ["Always Remember"] = {
@@ -1346,8 +1348,10 @@ _addon.data = {
 		"Inside the chest is the Heart of Gorgorek, the artifact you uncovered from the depths of Cragplume Crater.\n\nThe heart beats slowly. Each pulse rumbles deep and primordial, echoing deep into the earth.\n\nLike a slumbering beast, it waits.",
 	},
 	["locations"] = {
-		{["sourceType"] = "object", ["areaId"] = 976, ["id"] = 7004, ["level"] = 0, ["x"] = 49.9, ["y"] = 35.1},
-		{["sourceType"] = "object", ["areaId"] = 971, ["id"] = 7078, ["level"] = 0, ["x"] = 41.4, ["y"] = 47.6},
+		{["sourceType"] = "object", ["areaId"] = 976, ["id"] = 7004, ["faction"] = "H", ["level"] = 0, ["x"] = 49.9, ["y"] = 35.1},
+		{["sourceType"] = "quest", ["areaId"] = 976, ["id"] = 34341, ["faction"] = "H", ["x"] = 49.9, ["y"] = 35.1, ["faction"] = "H"},
+		{["sourceType"] = "object", ["areaId"] = 971, ["id"] = 7078, ["faction"] = "A", ["level"] = 0, ["x"] = 41.4, ["y"] = 47.6},
+		{["sourceType"] = "quest", ["areaId"] = 971, ["id"] = 34410, ["faction"] = "A", ["x"] = 41.4, ["y"] = 47.6, ["faction"] = "A"},
 	},
 },
 ["Hellscream's Command: Blood Elves"] = {
@@ -6543,5 +6547,219 @@ _addon.data = {
 		{["sourceType"] = "drop", ["areaId"] = 301, ["source"] = "Speak with Doomsayers.", ["faction"] = "A"},
 	},
 },
+
+------------------------------------------------------------------------------------------
+-- Patch 7.0
+------------------------------------------------------------------------------------------
+
+["The Fjarnskaggl Fjormula"] = {
+	["info"] = {["type"] = "item", ["id"] = 129200},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["The Tangled Beard"] = {
+	["info"] = {["type"] = "item", ["id"] = 129201},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Herblore of the Ancients"] = {
+	["info"] = {["type"] = "item", ["id"] = 129202},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Captain's Log of the Queen's Reprisal"] = {
+	["info"] = {["type"] = "item", ["id"] = 122570},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Desiccated Journal"] = {
+	["info"] = {["type"] = "item", ["id"] = 129740},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Tiffany's Notebook"] = {
+	["info"] = {["type"] = "item", ["id"] = 132925},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Valeera's Note"] = {
+	["info"] = {["type"] = "item", ["id"] = 136602},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Letter from Gul'dan"] = {
+	["info"] = {["type"] = "item", ["id"] = 139034},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Prison Manifest"] = {
+	["info"] = {["type"] = "item", ["id"] = 139181},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Etching from the Raven's Eye Tablet"] = {
+	["info"] = {["type"] = "item", ["id"] = 139302},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Hand-Scribed Invitation"] = {
+	["info"] = {["type"] = "item", ["id"] = 139513},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Absolon's Letter"] = {
+	["info"] = {["type"] = "item", ["id"] = 139779},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Old Fillmaff's Scribbled Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 139880},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Illanna Dreadmoore's Scribbled Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140135},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Vahu's Scribbled Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140137},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Celadine's Scribbled Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140138},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140139},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140140},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Juvess' Scribbled Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140142},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Filius' Scribbled Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140143},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Gorma's Scribbled Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140144},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Mile's Scribbled Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140145},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["info"] = {["type"] = "item", ["id"] = 140146},
+	["pages"] = {
+		"",
+	},
+	["locations"] = {
+		{["sourceType"] = "unknown", },
+	},
+},
+
+
 }
 };

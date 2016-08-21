@@ -250,6 +250,8 @@ _addon.translations = {
 	["q11886"] = "Необычная активность",
 	["q24981"] = "Источник неприятностей",
 	["q32397"] = "Он даже не заметит",
+	["q34341"] = "Бьющееся сердце",
+	["q34410"] = "Бьющееся сердце",
 	-- container
 	["i20676"] = "Расшифрованный текст культа Сумеречного Молота",
 	["i114116"] = "Сумка с утилем",
@@ -4728,5 +4730,149 @@ _addon.translations = {
 			"",
 		},
 	},
+
+------------------------------------------------------------------------------------------
+-- Patch 7.0
+------------------------------------------------------------------------------------------
+
+["The Fjarnskaggl Fjormula"] = {
+	["translation"] = "Фьормула фьярнскаггла",
+	["pages"] = {
+		"",
+	},
+},
+["The Tangled Beard"] = {
+	["translation"] = "Спутанная борода",
+	["pages"] = {
+		"",
+	},
+},
+["Herblore of the Ancients"] = {
+	["translation"] = "Древнее учение о травничестве",
+	["pages"] = {
+		"",
+	},
+},
+["Captain's Log of the Queen's Reprisal"] = {
+	["translation"] = "Журнал капитана \"Мести королевы\"",
+	["pages"] = {
+		"",
+	},
+},
+["Desiccated Journal"] = {
+	["translation"] = "Ссохшийся дневник",
+	["pages"] = {
+		"",
+	},
+},
+["Tiffany's Notebook"] = {
+	["translation"] = "Записная книжка Тиффани",
+	["pages"] = {
+		"",
+	},
+},
+["Valeera's Note"] = {
+	["translation"] = "Записка Валиры",
+	["pages"] = {
+		"",
+	},
+},
+["Letter from Gul'dan"] = {
+	["translation"] = "Письмо от Гул'дана",
+	["pages"] = {
+		"",
+	},
+},
+["Prison Manifest"] = {
+	["translation"] = "Список узников",
+	["pages"] = {
+		"",
+	},
+},
+["Etching from the Raven's Eye Tablet"] = {
+	["translation"] = "Копия легенды об Оке Ворона",
+	["pages"] = {
+		"",
+	},
+},
+["Hand-Scribed Invitation"] = {
+	["translation"] = "Написанное от руки приглашение",
+	["pages"] = {
+		"",
+	},
+},
+["Absolon's Letter"] = {
+	["translation"] = "Письмо Абсолона",
+	["pages"] = {
+		"",
+	},
+},
+["Old Fillmaff's Scribbled Notes"] = {
+	["translation"] = "Неразборчивые записи старика Филмаффа",
+	["pages"] = {
+		"",
+	},
+},
+["Illanna Dreadmoore's Scribbled Notes"] = {
+	["translation"] = "Неразборчивые записи Илланны Жуткой Пустоши",
+	["pages"] = {
+		"",
+	},
+},
+["Vahu's Scribbled Notes"] = {
+	["translation"] = "Неразборчивые записи Ваху",
+	["pages"] = {
+		"",
+	},
+},
+["Celadine's Scribbled Notes"] = {
+	["translation"] = "Неразборчивые записи Селадины",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Неразборчивые записи разведчицы",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Неразборчивые записи разведчицы",
+	["pages"] = {
+		"",
+	},
+},
+["Juvess' Scribbled Notes"] = {
+	["translation"] = "Неразборчивые записи Джавессы",
+	["pages"] = {
+		"",
+	},
+},
+["Filius' Scribbled Notes"] = {
+	["translation"] = "Неразборчивые записи Филия",
+	["pages"] = {
+		"",
+	},
+},
+["Gorma's Scribbled Notes"] = {
+	["translation"] = "Неразборчивые записи Гормы",
+	["pages"] = {
+		"",
+	},
+},
+["Mile's Scribbled Notes"] = {
+	["translation"] = "Неразборчивые записи Майла",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Неразборчивые записи разведчицы",
+	["pages"] = {
+		"",
+	},
+},
+
 }
 };

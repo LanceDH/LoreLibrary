@@ -1,0 +1,14 @@
+﻿
+local _addonName, _addon = ...;
+
+local _L = _addon.locals;
+
+
+_addon.NPC = {
+	[1] = {["name"] = "Lady Sylvanas Windrunner"		,["faction"] = 0	,["modelIds"] = {{["id"] = 28213}}	,["lore"] = "This is test lore"}
+	,[2] = {["name"] = "Lady Jaine Proudmoore"			,["faction"] = 1	,["modelIds"] = {{["id"] = 46819}}	,["info"] = {["title"] = "Leader of the Kirin Tor", ["status"] = "Alive", ["relatives"] = {"Daelin (father)", }}	,["lore"] = "Lady Jaina Proudmoore is a sorceress, and former leader of the Kirin Tor of Dalaran. She is the daughter of Grand Admiral Daelin Proudmoore and sister of Derek Proudmoore. Jaina is the most powerful human sorceress alive and was one of the most trusted sorceresses of Dalaran, trained as the personal agent of the Archmage Antonidas, leader of the Kirin Tor. Early in the Third War, Antonidas dispatched Jaina to discover what was happening in the northlands of Lordaeron. She was escorted by her childhood friend and one-time romantic interest, Prince Arthas Menethil, to uncover if the plague had magical origins. Jaina saw the fall of Lordaeron firsthand and — guided by a mysterious prophet — rallied what survivors she could and fled across the sea to Kalimdor.\n\nJaina swore to defeat the Burning Legion and its sinister agents any way she could. Assembling the survivors of Lordaeron, Jaina led her expedition forces to defeat the demon Archimonde and banish the Legion at the Battle of Mount Hyjal. She then gathered the human survivors in Kalimdor and founded the port city of Theramore Isle, where she ruled over the tattered remnants of the Alliance and hoped to reunite the distant human kingdoms once more.\n\nShortly after the fall of Deathwing, the Horde unleashed a devastating attack against Theramore, destroying the city. Jaina managed to escape with her life, but the experience transformed her, making her more bellicose and even altering her appearance. Following the death of Rhonin during the attack, and fulfilling a prophecy made by the dragon-mage Korialstrasz, Jaina took the fallen mage's place as leader of the Kirin Tor and head of the Council of Six."}
+	,[3] = {["name"] = "Alexstrasza the Life-Binder"	,["faction"] = 2	,["modelIds"] = {{["id"] = 28227, ["name"] = "Humanoid form"}, {["id"] = 27569, ["rotation"] = 6.14, ["name"] = "Dragon form"}}}
+	,[4] = {["name"] = "Gul'dan"						,["faction"] = 3	,["modelIds"] = {{["id"] = 68500, ["rotation"] = 0}}}
+	,[5] = {["name"] = "Arthas Menethil"				,["faction"] = 3	,["modelIds"] = {{["id"] = 22234, ["name"] = "Lich King"}, {["id"] = 23683, ["name"] = "Corrupted"}, {["id"] = 24949}}}
+	,[6] = {["name"] = "Magni Bronzebeard"				,["faction"] = 0	,["modelIds"] = {{["id"] = 71764, ["name"] = "The Speaker"}, {["id"] = 3597, ["name"] = "Lord of Ironforge"}}	,["lore"] = "His dick is now diamonds."}
+}

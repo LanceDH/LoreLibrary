@@ -167,6 +167,8 @@ _addon.translations = {
 	["q11886"] = "Une activité inhabituelle",
 	["q24981"] = "Une épine dans notre flanc",
 	["q32397"] = "Il ne lui manquera même pas",
+	["q34341"] = "Un cœur battant",
+	["q34410"] = "Un cœur battant",
 	-- container
 	["i20676"] = "Texte du Crépuscule décodé",
 	["i114116"] = "Sac de marchandises de récupération",
@@ -4644,5 +4646,149 @@ _addon.translations = {
 			"VOUS POUVEZ SAUVER VOTRE FAMILLE\n\nAzeroth finira par brûler, car nul ne peut se dresser contre la Légion. Ni vous, ni votre famille, ni même vos plus vaillants champions.\n\nAlors, sauvez ceux que vous pouvez tant que c’est encore possible.\n\nRejoignez la Légion. Maintenant ou jamais. Le jour viendra où tous les idiots de ce monde finiront par accepter l’inévitable, et alors, une marée de mortels viendra implorer la clémence de la Légion. Mais pour l’heure, beaucoup s’accrochent encore à l’espoir, aussi insensé soit-il. C’est votre chance de rallier les rangs des démons avant qu’il ne soit trop tard. Amenez vos amis. Vos enfants. (Profitez-en pour vous débarrasser de ceux qui vous insupportent.)\n\nMais faites vite, car le temps presse.",
 		},
 	},
+
+------------------------------------------------------------------------------------------
+-- Patch 7.0
+------------------------------------------------------------------------------------------
+
+["The Fjarnskaggl Fjormula"] = {
+	["translation"] = "La formule du fjarnskaggl",
+	["pages"] = {
+		"",
+	},
+},
+["The Tangled Beard"] = {
+	["translation"] = "La Barbe hirsute",
+	["pages"] = {
+		"",
+	},
+},
+["Herblore of the Ancients"] = {
+	["translation"] = "Encyclopédie des plantes des Anciens",
+	["pages"] = {
+		"",
+	},
+},
+["Captain's Log of the Queen's Reprisal"] = {
+	["translation"] = "Journal du capitaine du Représailles de la reine",
+	["pages"] = {
+		"",
+	},
+},
+["Desiccated Journal"] = {
+	["translation"] = "Journal desséché",
+	["pages"] = {
+		"",
+	},
+},
+["Tiffany's Notebook"] = {
+	["translation"] = "Carnet de Tiffany",
+	["pages"] = {
+		"",
+	},
+},
+["Valeera's Note"] = {
+	["translation"] = "Note de Valeera",
+	["pages"] = {
+		"",
+	},
+},
+["Letter from Gul'dan"] = {
+	["translation"] = "Lettre de Gul'dan",
+	["pages"] = {
+		"",
+	},
+},
+["Prison Manifest"] = {
+	["translation"] = "Manifeste de la prison",
+	["pages"] = {
+		"",
+	},
+},
+["Etching from the Raven's Eye Tablet"] = {
+	["translation"] = "Gravure de la tablette de l'œil du corbeau",
+	["pages"] = {
+		"",
+	},
+},
+["Hand-Scribed Invitation"] = {
+	["translation"] = "Invitation manuscrite",
+	["pages"] = {
+		"",
+	},
+},
+["Absolon's Letter"] = {
+	["translation"] = "Lettre d'Absolon",
+	["pages"] = {
+		"",
+	},
+},
+["Old Fillmaff's Scribbled Notes"] = {
+	["translation"] = "Notes gribouillées du vieux Fillmaff",
+	["pages"] = {
+		"",
+	},
+},
+["Illanna Dreadmoore's Scribbled Notes"] = {
+	["translation"] = "Notes d'Illanna Landesfroit gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Vahu's Scribbled Notes"] = {
+	["translation"] = "Notes de Vahu gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Celadine's Scribbled Notes"] = {
+	["translation"] = "Notes de Céladine gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Notes de reconnaissance gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Notes de reconnaissance gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Juvess' Scribbled Notes"] = {
+	["translation"] = "Notes de Juvesse gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Filius' Scribbled Notes"] = {
+	["translation"] = "Notes de Filius gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Gorma's Scribbled Notes"] = {
+	["translation"] = "Notes de Gorma gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Mile's Scribbled Notes"] = {
+	["translation"] = "Notes de Mile gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+["Scribbled Scouting Notes"] = {
+	["translation"] = "Notes de reconnaissance gribouillées",
+	["pages"] = {
+		"",
+	},
+},
+
 }
 };
