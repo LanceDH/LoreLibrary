@@ -11,4 +11,5 @@ _addon.NPC = {
 	,[4] = {["name"] = "Gul'dan"						,["faction"] = 3	,["modelIds"] = {{["id"] = 68500, ["rotation"] = 0}}}
 	,[5] = {["name"] = "Arthas Menethil"				,["faction"] = 3	,["modelIds"] = {{["id"] = 22234, ["name"] = "Lich King"}, {["id"] = 23683, ["name"] = "Corrupted"}, {["id"] = 24949}}}
 	,[6] = {["name"] = "Magni Bronzebeard"				,["faction"] = 0	,["modelIds"] = {{["id"] = 71764, ["name"] = "The Speaker"}, {["id"] = 3597, ["name"] = "Lord of Ironforge"}}	,["lore"] = "His dick is now diamonds."}
+	,[6] = {["name"] = "Deathwing"						,["faction"] = 3	,["modelIds"] = {{["id"] = 35435}, {["id"] = 35268}, {["id"] = 39783}}	,["lore"] = "His dick is now diamonds."}
 }

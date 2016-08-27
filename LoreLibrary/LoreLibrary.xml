@@ -211,12 +211,10 @@
 					<OnEnter>
 						if (self.sourceType ~= nil) then
 							GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-							GameTooltip:SetText(self.sourceType);
+							GameTooltip:SetText(self.sourceType, nil, nil, nil, nil, true);
 						end
 					</OnEnter>
-					<OnLeave>
-						GameTooltip:Hide();
-					</OnLeave>
+					<OnLeave function="GameTooltip_Hide"/>
 				</Scripts>
 			</Frame>
 			
